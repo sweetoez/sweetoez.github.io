@@ -31,6 +31,13 @@ All files exist; fonts load; every page and link works in local preview; the 3 p
 - Entity cards assemble existing KC heroes and modules (kc-components.css, boards/kc-*.html). Never rebuild a component that exists.
 - Public-safe: never put real people, brands, team names or company names from the Figma exports into the site; use the dummy names each handoff gives.
 
+## KC hero + carousel rules (#059)
+- Center the logo row on the image or band bottom edge; the hero body starts at that same edge (mobile Designer 212/196/184, Single Image 150/134, desktop Designer 280/264/240).
+- The body box is the only bordered hero element (1px #DDD). The image matches its width, and every card seam is one 1px line.
+- Mobile Carousel padding is 16px 0 16px 16px; images bleed to the inner right border.
+- Social circles use `/assets/images/kc/brands/<slug>.svg` in the Figma export's order; do not use monograms.
+- Every new entity card uses shared classes and does not override these layout rules.
+
 ## Repo + publishing (from #056)
 - Branch main, published by GitHub Pages from main / (root).
 - Finish every handoff with one commit: git add -A && git commit -m "<area> #NNN <short summary>". Justin uploads it with Sync Changes in VS Code.

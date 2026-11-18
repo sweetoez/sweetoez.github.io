@@ -21,8 +21,8 @@
   <main id="kc-hero-board"></main>
   <script>
     const bodyCopy = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut ...";
-    const socialItems = [["P", "Photo app"], ["S", "Social app"], ["F", "Friends app"], ["M", "Movie DB"], ["V", "Short video app"]];
-    const social = extraClass => `<ul class="kc-hero-social ${extraClass}" data-kc="Social Media">${socialItems.map(([letter, label]) => `<li><a href="#" class="kc-monogram kc-hero-social__badge" aria-label="${label}">${letter}</a></li>`).join("")}</ul>`;
+    const socialItems = [["Instagram", "instagram"], ["Twitter", "twitter"], ["Facebook", "facebook"], ["IMDb", "imdb"], ["TikTok", "tiktok"]];
+    const social = extraClass => `<ul class="kc-hero-social ${extraClass}" data-kc="Social Media">${socialItems.map(([label, slug]) => `<li><a href="#" class="kc-hero-social__badge" aria-label="${label}"><img src="../assets/images/kc/brands/${slug}.svg" alt="" width="32" height="32"></a></li>`).join("")}</ul>`;
     const shareSmall = extraClass => `<button class="kc-btn-on-image kc-hero-button kc-hero-button--small ${extraClass}" type="button" aria-label="Share"><img src="../assets/icons/ic_fluent_share_16_regular.svg" alt="" aria-hidden="true"></button>`;
     const shareLarge = (extraClass = "") => `<button class="kc-btn-on-image kc-hero-button kc-hero-button--large kc-hero-button--share ${extraClass}" type="button"><img src="../assets/icons/ic_fluent_share_16_regular.svg" alt="" aria-hidden="true"><span class="kc-hero-button__label">Share</span></button>`;
     const allImages = () => `<button class="kc-btn-on-image kc-hero-button kc-hero-button--large kc-hero-button--all-images" type="button"><img src="../assets/icons/ic_fluent_image_multiple_16_regular.svg" alt="" aria-hidden="true"><span class="kc-hero-button__label">All images</span></button>`;

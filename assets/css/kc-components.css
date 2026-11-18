@@ -467,8 +467,8 @@
 .kc-mobile-image-list-watch-links__item .kc-img { width:32px; height:32px; border-radius:2px; }
 .kc-mobile-image-list-watch-links__text { display:flex; width:99px; min-width:0; flex:1; flex-direction:column; }
 .kc-mobile-image-list-watch-links__sub { color:var(--kc-gray-1); font-size:11px; line-height:13px; letter-spacing:normal; }
-.kc-mobile-image-list-carousel { flex-direction:row; align-items:flex-start; gap:8px; padding:16px 0 16px 16px; }
-.kc-mobile-image-list-carousel .kc-scroll-row { width:328px; gap:8px; } /* #053 */
+.kc-mobile-image-list-carousel { flex-direction:row; align-items:flex-start; gap:8px; overflow:hidden; padding:16px 0 16px 16px; }
+.kc-mobile-image-list-carousel .kc-scroll-row { width:calc(100% - 1px); gap:8px; }
 .kc-mobile-image-list-carousel .kc-img { height:120px; border:1px solid var(--kc-gray-5); border-radius:6px; }
 .kc-mobile-image-list-carousel .kc-img:nth-child(1) { width:132px; }
 .kc-mobile-image-list-carousel .kc-img:nth-child(2) { width:119px; }
@@ -763,9 +763,11 @@
   align-items:center;
   justify-content:center;
   flex:none;
+  overflow:hidden;
   border-radius:100px;
-  background:var(--kc-gray-5);
-  box-shadow:inset 0 0 0 1px var(--kc-gray-4), var(--kc-bing-shadow);
+  background:var(--kc-placeholder);
+  box-shadow:0 0 0 1px rgba(0,0,0,.05);
+  filter:drop-shadow(0 2px 3px rgba(0,0,0,.1));
   color:var(--kc-gray-1);
   font-size:14px;
   font-weight:600;
@@ -773,6 +775,9 @@
   letter-spacing:0;
   text-decoration:none;
 }
+.kc-hero-social__badge img { display:block; width:32px; height:32px; object-fit:cover; }
+.kc-hero-social__badge:hover { filter:brightness(.96) drop-shadow(0 2px 3px rgba(0,0,0,.1)); }
+.kc-hero-social__badge:active { filter:brightness(.92) drop-shadow(0 2px 3px rgba(0,0,0,.1)); }
 .kc-hero-social__badge:focus-visible { outline:2px solid #1A1A1A; outline-offset:2px; }
 .kc-hero-button {
   display:inline-flex;
@@ -864,14 +869,14 @@
 
 /* Single Image */
 .kc-hero-single-image { align-items:flex-start; padding-top:16px; }
-.kc-hero-single-image--portrait { width:472px; height:274px; }
-.kc-hero-single-image--portrait.kc-hero-single-image--website { height:318px; }
+.kc-hero-single-image--portrait { width:472px; height:276px; }
+.kc-hero-single-image--portrait.kc-hero-single-image--website { height:320px; }
 .kc-hero-single-image--square,
 .kc-hero-single-image--landscape { width:472px; height:248px; }
 .kc-hero-single-image--square.kc-hero-single-image--website,
 .kc-hero-single-image--landscape.kc-hero-single-image--website { height:292px; }
 .kc-hero-single-image .kc-hero-header { width:472px; }
-.kc-hero-single-image--portrait .kc-hero-header { height:170px; }
+.kc-hero-single-image--portrait .kc-hero-header { height:172px; }
 .kc-hero-single-image--square .kc-hero-header,
 .kc-hero-single-image--landscape .kc-hero-header { height:144px; }
 .kc-hero-single-image__band { position:absolute; top:20px; left:0; width:472px; height:136px; background:var(--kc-gray-2); }
@@ -880,6 +885,7 @@
 .kc-hero-single-image__title__name { width:257px; height:32px; font-size:32px; font-weight:700; line-height:32px; }
 .kc-hero-single-image__title__category { width:257px; }
 .kc-hero-single-image__social { top:138px; left:20px; }
+.kc-hero-single-image--portrait .kc-hero-single-image__social { top:140px; }
 .kc-hero-single-image__share { position:absolute; top:54px; left:293px; }
 .kc-hero-single-image--square .kc-hero-single-image__band,
 .kc-hero-single-image--landscape .kc-hero-single-image__band { top:16px; height:112px; }
@@ -1016,7 +1022,7 @@
   position:absolute;
   top:0;
   right:0;
-  bottom:7.02%;
+  bottom:0;
   left:0;
   border-radius:6px 6px 0 0;
 }
@@ -1024,7 +1030,7 @@
   position:absolute;
   z-index:1;
   right:0;
-  bottom:7.02%;
+  bottom:0;
   left:0;
   top:39.04%;
   background:linear-gradient(180deg,rgba(17,17,17,0) 0%,rgba(17,17,17,.8) 100%);
@@ -1176,6 +1182,7 @@
   box-sizing:border-box;
   padding:32px 0 0 16px;
   border:1px solid var(--kc-gray-4);
+  box-shadow:none;
   background:var(--kc-white);
 }
 .kc-mobile-designer:not(.kc-mobile-designer--website) .kc-mobile-hero-text-list,
@@ -1187,6 +1194,7 @@
   width:343px;
   height:32px;
   flex:none;
+  margin-top:-1px;
   margin-left:-1px;
   overflow-x:auto;
   overflow-y:hidden;
