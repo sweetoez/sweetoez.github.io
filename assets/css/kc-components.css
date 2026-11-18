@@ -1532,3 +1532,57 @@
 .kc-country-mobile > .kc-mobile-designer--card-last .kc-mobile-hero-text-list { border-radius:0 0 6px 6px; }
 .kc-country-mobile > .kc-mobile-expansion-see-more { margin-top:-1px; }
 .kc-country-mobile .kc-mobile-expansion-see-more[hidden] { display:none; }
+
+/* ===== #061 Animal desktop ===== */
+.kc-animal-desktop-frame { height:auto; min-height:1849px; }
+.kc-animal-desktop > .kc-hero-designer--left-to-right { height:280px; z-index:1; padding-top:0; }
+.kc-animal-desktop > .kc-hero-designer--left-to-right .kc-hero-header { height:280px; }
+.kc-animal-desktop .kc-hero-designer__social { z-index:2; visibility:visible; }
+.kc-animal-desktop .kc-hero-designer__actions svg { width:16px; height:16px; flex:none; color:var(--kc-white); }
+.kc-animal-desktop .kc-modules-panel .kc-btn-outline-icon svg { display:block; width:16px; height:16px; }
+.kc-animal-desktop .kc-image-list-interesting-facts--none { height:94px; }
+.kc-animal-desktop .kc-image-list-interesting-facts--none .kc-image-list-interesting-facts__text { height:62px; align-items:center; }
+.kc-animal-desktop .kc-image-list-interesting-facts--none .kc-image-list-interesting-facts__text p {
+  width:432px;
+  height:62px;
+  color:var(--kc-accent);
+  font-size:18px;
+  font-weight:700;
+  line-height:22px;
+}
+.kc-animal-desktop .kc-image-list-interesting-facts--3-image { height:399px; gap:16px; }
+.kc-animal-desktop .kc-image-list-interesting-facts--3-image .kc-image-list-interesting-facts__row { align-items:flex-start; }
+.kc-animal-desktop .kc-image-list-interesting-facts--3-image .kc-image-list-interesting-facts__row:nth-child(1) { width:430px; height:132px; }
+.kc-animal-desktop .kc-image-list-interesting-facts--3-image .kc-image-list-interesting-facts__row:nth-child(2) { height:91px; }
+.kc-animal-desktop .kc-image-list-interesting-facts--3-image .kc-image-list-interesting-facts__row:nth-child(3) { height:112px; }
+.kc-animal-desktop .kc-image-list-interesting-facts--3-image .kc-image-list-interesting-facts__row:nth-child(1) .kc-image-list-interesting-facts__text {
+  width:245px;
+  height:132px;
+  align-items:flex-start;
+  gap:15px;
+}
+.kc-animal-desktop .kc-image-list-interesting-facts--3-image .kc-image-list-interesting-facts__row:nth-child(2) .kc-image-list-interesting-facts__text {
+  width:322px;
+  height:91px;
+  align-items:flex-start;
+  gap:16px;
+}
+.kc-animal-desktop .kc-image-list-interesting-facts--3-image .kc-image-list-interesting-facts__row:nth-child(3) .kc-image-list-interesting-facts__text {
+  width:300px;
+  height:112px;
+  align-items:flex-start;
+}
+.kc-animal-desktop .kc-image-list-interesting-facts--3-image .kc-image-list-interesting-facts__text p {
+  color:var(--kc-accent);
+  font-size:18px;
+  font-weight:700;
+  line-height:22px;
+}
+.kc-animal-desktop .kc-image-list-interesting-facts--3-image .kc-image-list-interesting-facts__row:nth-child(1) .kc-image-list-interesting-facts__text p { width:245px; height:116px; }
+.kc-animal-desktop .kc-image-list-interesting-facts--3-image .kc-image-list-interesting-facts__row:nth-child(2) .kc-image-list-interesting-facts__text p { width:322px; height:74px; text-align:right; }
+.kc-animal-desktop .kc-image-list-interesting-facts--3-image .kc-image-list-interesting-facts__row:nth-child(3) .kc-image-list-interesting-facts__text p { width:300px; height:112px; }
+.kc-animal-desktop .kc-image-list-interesting-facts--3-image .kc-image-list-interesting-facts__row:nth-child(1) .kc-img { width:165px; height:131px; }
+.kc-animal-desktop .kc-image-list-interesting-facts--3-image .kc-image-list-interesting-facts__row:nth-child(2) .kc-img { width:90px; height:90px; }
+.kc-animal-desktop .kc-image-list-interesting-facts--3-image .kc-image-list-interesting-facts__row:nth-child(3) .kc-img { width:112px; height:112px; }
+.kc-animal-desktop .kc-miscellaneous-poll-trivia__question { color:var(--kc-accent); }
+.kc-animal-desktop .kc-modules-panel .kc-btn-outline-icon svg { color:var(--kc-gray-1); }
