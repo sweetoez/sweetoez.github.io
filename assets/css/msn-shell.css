@@ -1,0 +1,543 @@
+.shell-app {
+  --shell-text: #1A1A1A;
+  --shell-surface: #F7F7F7;
+  --tab-surface: #E6E6E6;
+  --taskbar-surface: rgba(243, 243, 243, .85);
+  --panel-surface: rgba(251, 248, 245, .92);
+  --panel-text: #272320;
+  --panel-selected: rgba(0, 0, 0, .05);
+  min-height: 100vh;
+  padding: 20px;
+  overflow: hidden;
+  color: var(--shell-text);
+  font-family: "Segoe UI Variable Text", "Segoe UI", Selawik, system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+}
+
+.shell-app[data-theme="dark"] {
+  --shell-text: #FFFFFF;
+  --shell-surface: #2B2B2B;
+  --tab-surface: #1F1F1F;
+  --taskbar-surface: rgba(32, 32, 32, .85);
+  --panel-surface: rgba(20, 24, 38, .92);
+  --panel-text: #FFFFFF;
+  --panel-selected: rgba(255, 255, 255, .08);
+}
+
+.shell-controls {
+  display: flex;
+  max-width: 2222px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 16px 24px;
+  margin: 0 auto 20px;
+  color: #1A1A1A;
+}
+
+.control-group,
+.edge-width-controls,
+.width-slider,
+.segmented-control,
+.width-presets {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.control-group,
+.edge-width-controls {
+  flex-wrap: wrap;
+}
+
+.control-label,
+.width-slider > span {
+  color: #4C4642;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.segmented-control,
+.width-presets {
+  gap: 4px;
+  padding: 4px;
+  border: 1px solid #D9D9D5;
+  border-radius: 999px;
+  background: #FFFFFF;
+}
+
+.shell-controls button {
+  min-height: 32px;
+  padding: 5px 12px;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: #333333;
+  font: inherit;
+  font-size: 13px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.shell-controls button[aria-pressed="true"] {
+  background: #272320;
+  color: #FFFFFF;
+}
+
+.shell-controls button:hover:not([aria-pressed="true"]) { background: #F5F5F5; }
+.shell-controls button[aria-pressed="true"]:hover { background: #3F3935; }
+.shell-controls button:active { transform: scale(.98); }
+.shell-controls button:focus-visible { outline: 2px solid #272320; outline-offset: 2px; }
+.shell-controls button:disabled { opacity: .4; cursor: not-allowed; }
+
+.edge-width-controls { flex-basis: 100%; gap: 12px; }
+.width-presets { max-width: 100%; flex-wrap: wrap; }
+.width-slider { gap: 8px; }
+.width-slider input { width: 220px; margin: 0; accent-color: #272320; }
+.width-slider output { min-width: 64px; color: #333333; font-size: 13px; font-variant-numeric: tabular-nums; }
+
+.desktop-fit {
+  position: relative;
+  width: 2222px;
+  max-width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.desktop-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2222px;
+  height: 1302px;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #D3D3D3;
+  transform-origin: top left;
+}
+
+.desktop-wallpaper {
+  position: absolute;
+  inset: 0;
+  background: #D3D3D3;
+}
+
+.desktop-wallpaper img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.edge-window {
+  position: absolute;
+  top: 64px;
+  left: 50%;
+  z-index: 2;
+  display: flex;
+  height: 1214px;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 6px 6px 12px 12px;
+  background: #C7C7C7;
+  transform: translateX(-50%);
+}
+
+.edge-chrome-row {
+  display: flex;
+  height: 40px;
+  flex: 0 0 40px;
+  align-items: center;
+  padding: 4px;
+  color: var(--shell-text);
+}
+
+.edge-tab-row { justify-content: space-between; background: var(--tab-surface); }
+.edge-toolbar, .edge-favorites { background: var(--shell-surface); }
+.edge-active-tab {
+  display: flex;
+  width: 240px;
+  min-width: 0;
+  height: 32px;
+  align-items: center;
+  gap: 8px;
+  padding: 0 8px 0 12px;
+  overflow: hidden;
+  border-radius: 8px 8px 0 0;
+  background: var(--shell-surface);
+  color: #242424;
+  font: 400 12px/16px "Segoe UI Variable Text", "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+}
+
+.edge-active-tab > img { width: 16px; height: 16px; flex: none; }
+.edge-active-tab > span { min-width: 0; flex: 1; overflow: hidden; font-family: inherit; white-space: nowrap; text-overflow: ellipsis; }
+.edge-window-controls, .edge-navigation-icons { display: flex; flex: none; align-items: center; }
+.edge-chrome-row button {
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: 0;
+  border-radius: 4px;
+  background: transparent;
+}
+.edge-chrome-row button:hover:not(:disabled) { background: rgba(0, 0, 0, .04); }
+.edge-chrome-row button:active:not(:disabled) { background: rgba(0, 0, 0, .08); }
+.edge-chrome-row button:focus-visible { outline: 2px solid #000000; outline-offset: -2px; box-shadow: inset 0 0 0 1px #FFFFFF; }
+.edge-chrome-row button:disabled { opacity: .4; cursor: not-allowed; }
+.edge-window-controls button { width: 46px; height: 32px; }
+.edge-window-controls img { width: 16px; height: 16px; }
+.edge-tab-dismiss { width: 20px; height: 20px; }
+.edge-tab-dismiss img { width: 12px; height: 12px; }
+.edge-toolbar > button, .edge-navigation-icons button { width: 32px; height: 32px; }
+.edge-toolbar button img { width: 20px; height: 20px; }
+.edge-address {
+  display: flex;
+  height: 32px;
+  min-width: 0;
+  flex: 1 1 0;
+  align-items: center;
+  padding: 0 16px;
+  overflow: hidden;
+  border: 1px solid #E0E0E0;
+  border-radius: 16px;
+  background: #FFFFFF;
+  color: #616161;
+  font: 400 14px/20px "Segoe UI Variable Text", "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+  white-space: nowrap;
+}
+
+.edge-favorites { gap: 12px; overflow: hidden; }
+.edge-favorite { display: flex; min-width: 24px; flex: 0 1 auto; align-items: center; gap: 8px; color: #242424; font: 400 12px/16px "Segoe UI Variable Text", "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif; }
+.edge-favorite__icon { width: 16px; height: 16px; flex: none; border-radius: 3px; background: #D3D3D3; }
+.edge-favorite__label { min-width: 0; overflow: hidden; font-family: inherit; white-space: nowrap; text-overflow: ellipsis; }
+
+.edge-page {
+  display: block;
+  width: calc(100% - 8px);
+  height: 1094px;
+  flex: 0 0 1094px;
+  margin: 0 4px;
+  border: 0;
+  background: #FFFFFF;
+}
+
+.prong-panel {
+  position: absolute;
+  top: 64px;
+  left: 24px;
+  z-index: 2;
+  display: flex;
+  width: 1052px;
+  height: 1128px;
+  overflow: hidden;
+  border: 0;
+  border-radius: 16px;
+  background: var(--panel-surface);
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .08);
+  container-name: stage;
+  container-type: inline-size;
+}
+
+.p2-rail {
+  display: flex;
+  width: 80px;
+  min-width: 56px;
+  flex: 0 0 80px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 4px 12px 0;
+  color: #242424;
+}
+
+.p2-rail__navigation { display: flex; flex-direction: column; gap: 4px; }
+.p2-rail__item {
+  position: relative;
+  display: flex;
+  width: 60px;
+  min-height: 48px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  padding: 0;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  background: transparent;
+  color: #242424;
+  font-family: "Segoe UI Variable Text", "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 14px;
+}
+
+.p2-rail__item span { font-family: inherit; }
+.p2-rail__item[aria-current="page"] {
+  border-color: rgba(0, 0, 0, .06);
+  background: rgba(255, 255, 255, .70);
+  backdrop-filter: blur(120px);
+}
+.p2-rail__item[aria-current="page"]::before {
+  position: absolute;
+  top: 50%;
+  left: -1px;
+  width: 3px;
+  height: 16px;
+  border-radius: 2px;
+  background: #0F6CBD;
+  content: "";
+  transform: translateY(-50%);
+}
+.p2-rail__item img, .p2-rail__settings img { display: block; width: 24px; height: 24px; }
+.p2-rail__logo { display: block; width: 24px; height: 24px; border-radius: 4px; background: #D3D3D3; overflow: hidden; }
+.p2-rail__settings {
+  display: flex;
+  width: 76px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: 0;
+  border-radius: 4px;
+  background: transparent;
+}
+
+.prong-content {
+  position: relative;
+  display: flex;
+  min-width: 0;
+  height: 100%;
+  flex: 1 1 0;
+  flex-direction: column;
+  color: var(--panel-text);
+}
+
+.p2-header {
+  display: flex;
+  height: 72px;
+  flex: 0 0 72px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 24px 8px;
+  color: #242424;
+}
+
+.p2-header h1 {
+  margin: 0;
+  color: #242424;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: -.2px;
+  line-height: 28px;
+}
+
+.p2-header__controls { display: flex; height: 40px; align-items: center; gap: 8px; }
+.p2-header__toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #242424;
+  font: 400 14px/20px "Segoe UI Variable Text", "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+  cursor: pointer;
+}
+.p2-header__toggle span { font-family: inherit; }
+.p2-header__toggle input {
+  position: relative;
+  width: 40px;
+  height: 24px;
+  flex: 0 0 40px;
+  appearance: none;
+  margin: 0;
+  padding: 2px;
+  border: 1px solid #616161;
+  border-radius: 9999px;
+  background: transparent;
+  cursor: pointer;
+}
+.p2-header__toggle input::before {
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #616161;
+  content: "";
+  transition: transform 150ms ease;
+}
+.p2-header__toggle input:checked { border-color: transparent; background: #32AD52; }
+.p2-header__toggle input:checked::before { background: #FFFFFF; transform: translateX(16px); }
+.p2-header__button, .p2-header__profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  background: transparent;
+  color: #242424;
+}
+.p2-header__button { width: 48px; height: 32px; padding: 0; }
+.p2-header__button img { display: block; width: 20px; height: 20px; }
+.p2-header__profile { width: 40px; height: 40px; padding: 7px; }
+.p2-header__avatar { display: block; width: 24px; height: 24px; overflow: hidden; border: 1px solid rgba(0, 0, 0, .08); border-radius: 50%; background: #D3D3D3; }
+.p2-header__avatar img { display: block; width: 100%; height: 100%; object-fit: cover; }
+
+.p2-rail__item:not([aria-current="page"]):hover:not(:disabled),
+.p2-rail__settings:hover:not(:disabled),
+.p2-header__button:hover:not(:disabled),
+.p2-header__profile:hover:not(:disabled) { background: rgba(0, 0, 0, .04); }
+.p2-rail__item:active:not(:disabled),
+.p2-rail__settings:active:not(:disabled),
+.p2-header__button:active:not(:disabled),
+.p2-header__profile:active:not(:disabled) { background: rgba(0, 0, 0, .08); }
+.p2-rail button:focus-visible,
+.p2-header button:focus-visible,
+.p2-header__toggle input:focus-visible,
+.p2-refresh__button:focus-visible { outline: 2px solid #000000; outline-offset: 1px; box-shadow: 0 0 0 1px #FFFFFF; }
+.p2-rail button:disabled, .p2-header button:disabled, .p2-header__toggle input:disabled, .p2-refresh__button:disabled { opacity: .4; cursor: not-allowed; }
+
+.prong-scroll {
+  min-height: 0;
+  flex: 1 1 0;
+  overflow-y: auto;
+  scrollbar-color: rgba(0, 0, 0, .25) transparent;
+  scrollbar-width: thin;
+}
+
+.prong-widget-section,
+.prong-feed-section {
+  padding: 16px 20px;
+}
+
+.prong-widget-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 300px);
+  align-items: stretch;
+  gap: 16px;
+}
+
+.prong-widget-grid > .span-2 { grid-column: span 2; }
+
+.prong-widget-grid > .digest {
+  width: auto;
+  min-width: 0;
+  max-width: none;
+  height: 368px;
+}
+
+.prong-widget-grid > .prong-weather {
+  width: 300px;
+  min-width: 0;
+  max-width: none;
+  height: 368px;
+  background: #ACD1F2;
+}
+
+.prong-widget-grid > .prong-half-widget {
+  width: 300px;
+  min-width: 0;
+  max-width: none;
+  height: 176px;
+  min-height: 176px;
+  max-height: 176px;
+}
+
+.prong-section-title {
+  margin: 0 0 16px;
+  color: #272320;
+  font-size: 20px;
+  font-weight: 650;
+  line-height: 26px;
+}
+
+.prong-feed-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 16px;
+}
+
+.prong-feed-grid > .article-1u,
+.prong-feed-grid > .ad-card {
+  width: 100%;
+  min-width: 0;
+  max-width: none;
+}
+
+.p2-refresh {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  width: 971px;
+  height: 176px;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 16px 0 12px;
+  border-radius: 0 0 7px 0;
+  background: linear-gradient(to bottom, rgba(243, 243, 243, 0) 0%, rgba(243, 243, 243, .92) 55%, #F3F3F3 100%);
+  pointer-events: none;
+}
+
+.p2-refresh__button {
+  display: inline-flex;
+  height: 40px;
+  min-width: 40px;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 0 10px;
+  border: 1px solid transparent;
+  border-radius: 20px;
+  background: #272320;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .14);
+  color: #FFFFFF;
+  font: 600 14px/20px "Segoe UI Variable Text", "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.p2-refresh__button span { font-family: inherit; }
+.p2-refresh__button img { display: block; width: 16px; height: 16px; filter: brightness(0) invert(1); }
+.p2-refresh__button:hover:not(:disabled) { background: #3B3633; }
+.p2-refresh__button:active:not(:disabled) { background: #1A1715; }
+
+.taskbar {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 4;
+  display: flex;
+  height: 48px;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid rgba(0, 0, 0, .06);
+  background: var(--taskbar-surface);
+  backdrop-filter: blur(30px);
+}
+
+.taskbar-apps { display: flex; align-items: center; gap: 4px; }
+.taskbar-slot { display: flex; width: 40px; height: 40px; align-items: center; justify-content: center; }
+.taskbar-item { display: block; width: 24px; height: 24px; flex: 0 0 24px; border-radius: 4px; background: #D3D3D3; }
+.taskbar-clock { position: absolute; right: 12px; display: flex; flex-direction: column; align-items: flex-end; color: #242424; font: 400 12px/16px "Segoe UI Variable Text", "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif; }
+.taskbar-clock span { font-family: inherit; }
+
+.shell-app[data-scenario="prong"] .edge-window { display: none; }
+.shell-app[data-scenario="edge"] .prong-panel { display: none; }
+.shell-app[data-scenario="prong"] .edge-width-controls { display: none; }
+
+@media (max-width: 700px) {
+  .shell-app { padding: 12px; }
+  .shell-controls { gap: 12px; }
+  .edge-width-controls { align-items: flex-start; }
+  .width-slider { flex-wrap: wrap; }
+  .width-slider input { width: 180px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; }
+  .p2-header__toggle input::before { transition: none; }
+}

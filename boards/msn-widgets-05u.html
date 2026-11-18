@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MSN widgets 0.5u</title>
+  <style>
+    @font-face {
+      font-family: "Selawik";
+      src: url("/fonts/selawik/selawk.ttf") format("truetype");
+      font-display: swap;
+      font-style: normal;
+      font-weight: 400;
+    }
+
+    @font-face {
+      font-family: "Selawik";
+      src: url("/fonts/selawik/selawksl.ttf") format("truetype");
+      font-display: swap;
+      font-style: normal;
+      font-weight: 300;
+    }
+
+    @font-face {
+      font-family: "Selawik";
+      src: url("/fonts/selawik/selawksb.ttf") format("truetype");
+      font-display: swap;
+      font-style: normal;
+      font-weight: 600;
+    }
+
+    @font-face {
+      font-family: "Selawik";
+      src: url("/fonts/selawik/selawkb.ttf") format("truetype");
+      font-display: swap;
+      font-style: normal;
+      font-weight: 700;
+    }
+
+    * {
+      box-sizing: border-box;
+      font-family: "Segoe UI Variable Text", "Segoe UI", Selawik, system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+    }
+
+    body {
+      margin: 0;
+      background: #EDEDEA;
+      color: #1A1A1A;
+      font-family: "Segoe UI Variable Text", "Segoe UI", Selawik, system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+    }
+
+    .w05-board {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      padding: 48px;
+      align-items: flex-start;
+    }
+
+    .w05 { position: relative; box-sizing: border-box; display: flex; flex-direction: column; justify-content: flex-end; align-items: flex-start; width: 336px; min-width: 300px; max-width: 360px; height: 176px; min-height: 176px; max-height: 176px; padding: 12px; border-radius: 24px; overflow: hidden; }
+    .w05-std { background: rgba(255,255,255,0.80); box-shadow: inset 0 0 0 1px rgba(0,0,0,0.10); }
+    .w05-area { position: relative; z-index: 1; box-sizing: border-box; align-self: stretch; flex: 1 1 0; min-height: 0; display: flex; flex-direction: column; justify-content: space-between; align-items: flex-start; padding: 18px; }
+    .cr05-creator { box-sizing: border-box; align-self: stretch; height: 56px; padding: 2px; overflow: hidden; display: flex; justify-content: flex-start; align-items: center; gap: 12px; }
+    .cr05-avatar { width: 52px; height: 52px; flex: 0 0 52px; border-radius: 9999px; overflow: hidden; background: lightgray; }
+    .cr05-avatar img { width: 52px; height: 52px; object-fit: cover; display: block; }
+    .cr05-text { flex: 1 1 0; min-width: 0; align-self: stretch; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; }
+    .cr05-name { margin: 0; align-self: stretch; font-size: 20px; line-height: 26px; font-weight: 650; color: #272320; }
+    .cr05-cat { margin: 0; display: inline-flex; align-items: center; gap: 4px; font-size: 14px; line-height: 20px; font-weight: 450; color: #4C4642; }
+    .cr05-cta { align-self: stretch; display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 10px; padding: 0 2px 2px 2px; }
+    .cr05-follow { box-sizing: border-box; align-self: stretch; min-width: 40px; min-height: 40px; padding: 0 10px; display: flex; justify-content: center; align-items: center; gap: 2px; border: 0; margin: 0; cursor: pointer; background: rgba(255,255,255,0.70); border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.15), inset 0 0.5px 0.5px 0.5px #FFFFFF, inset 0 0 0 1px #FFFFFF; color: #272320; }
+    .cr05-follow:active { transform: scale(0.98); }
+    .cr05-follow:focus-visible { outline: 2px solid #272320; outline-offset: 2px; }
+    .cr05-ic { width: 24px; height: 24px; display: flex; justify-content: center; align-items: center; color: #272320; }
+    .cr05-ic svg { width: 20px; height: 20px; display: block; }
+    .cr05-label { padding: 10px 2px; font-size: 15px; line-height: 20px; font-weight: 410; color: #272320; }
+    .w05-titlewrap { align-self: stretch; display: flex; justify-content: center; align-items: center; gap: 10px; padding: 2px 2px 0 2px; }
+    .w05-title { flex: 1 1 0; margin: 0; font-size: 20px; line-height: 26px; font-weight: 650; color: #272320; }
+    .gm05-area { position: relative; z-index: 1; box-sizing: border-box; align-self: stretch; flex: 1 1 0; min-height: 0; display: flex; flex-direction: column; justify-content: space-between; align-items: flex-start; padding: 20px; }
+    .gm05-row { align-self: stretch; min-height: 80px; display: flex; justify-content: flex-start; align-items: center; gap: 12px; padding: 0 2px 2px 2px; }
+    .gm05-img { width: 80px; height: 80px; flex: 0 0 80px; border-radius: 12px; object-fit: cover; background: lightgray; display: block; }
+    .gm05-text { flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 4px; }
+    .gm05-name { margin: 0; align-self: stretch; font-size: 18px; line-height: 26px; font-weight: 650; color: #272320; }
+    .gm05-sub { margin: 0; align-self: stretch; font-size: 14px; line-height: 20px; font-weight: 450; color: #4C4642; }
+    .trd05-area { position: relative; z-index: 1; box-sizing: border-box; align-self: stretch; flex: 1 1 0; min-height: 0; display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 4px; padding: 18px; }
+    .trd05-stage { position: relative; align-self: stretch; flex: 1 1 0; min-height: 0; display: flex; flex-direction: column; justify-content: flex-end; align-items: flex-start; padding: 0 2px 2px 2px; }
+    .trd05-img { position: absolute; top: 0; right: 2px; width: 94.29px; height: 66px; border-radius: 12px; object-fit: cover; background: lightgray; display: block; z-index: 0; }
+    .trd05-bubble-area { position: relative; z-index: 1; box-sizing: border-box; align-self: stretch; display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 10px; padding-right: 36px; }
+    .trd05-bubble { margin: 0; box-sizing: border-box; width: 100%; max-width: 260px; padding: 12px; background: #FEE6D4; border-radius: 12px; box-shadow: inset 0 0 0 1px rgba(0,0,0,0.10); font-size: 14px; line-height: 20px; font-weight: 450; color: #322D29; }
+    .ev05-row { align-self: stretch; display: flex; justify-content: flex-start; align-items: center; gap: 16px; padding: 0 2px 2px 2px; }
+    .ev05-cal { box-sizing: border-box; width: 76px; height: 76px; flex: 0 0 76px; padding-bottom: 2.45px; background: #DFECFF; border-radius: 12px; overflow: hidden; display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start; }
+    .ev05-month { box-sizing: border-box; align-self: stretch; height: 29.42px; padding-top: 0.99px; background: #AACDFF; overflow: hidden; display: flex; justify-content: center; align-items: center; gap: 7.33px; font-size: 14px; line-height: 20px; font-weight: 650; color: #0159BA; text-align: center; }
+    .ev05-date { align-self: stretch; flex: 1 1 0; display: flex; flex-direction: column; justify-content: center; text-align: center; font-size: 24px; line-height: 32px; font-weight: 650; color: #0159BA; }
+    .ev05-text { flex: 1 1 0; align-self: stretch; min-width: 0; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; gap: 4px; }
+    .ev05-name { margin: 0; align-self: stretch; font-size: 18px; line-height: 26px; font-weight: 650; color: #272320; }
+    .ev05-venue { margin: 0; align-self: stretch; font-size: 16px; line-height: 22px; font-weight: 450; color: #4C4642; }
+    .stk05-body { align-self: stretch; flex: 1 1 0; min-height: 0; display: flex; flex-direction: column; justify-content: space-between; padding: 0 2px 2px 2px; }
+    .stk05-info { align-self: stretch; display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 2px; }
+    .stk05-ticker { margin: 0; font-size: 16px; line-height: 22px; font-weight: 450; color: #4C4642; }
+    .stk05-price { display: inline-flex; align-items: center; gap: 4px; }
+    .stk05-val { font-size: 20px; line-height: 26px; font-weight: 650; color: #272320; }
+    .stk05-chg { font-size: 14px; line-height: 20px; font-weight: 650; color: #01712B; }
+    .stk05-graph { position: relative; align-self: stretch; height: 31px; overflow: hidden; }
+    .stk05-graph svg { position: absolute; left: 0; top: 0; width: calc(100% - 2px); height: 31px; display: block; }
+    .stk05-line { fill: none; stroke: #127323; stroke-width: 2; stroke-linejoin: round; stroke-linecap: round; vector-effect: non-scaling-stroke; }
+    .stk05-dot { position: absolute; left: calc((100% - 2px) * 265 / 270); top: 4px; width: 6px; height: 6px; border-radius: 9999px; background: #127323; }
+    .stk05-drop { position: absolute; left: calc((100% - 2px) * 268 / 270 - 0.5px); top: 10px; bottom: 0; width: 1px; background: repeating-linear-gradient(180deg, #127323 0 2px, transparent 2px 4px); }
+    .w05-btn { box-sizing: border-box; display: inline-flex; justify-content: center; align-items: center; border: 0; margin: 0; background: transparent; color: #272320; cursor: pointer; }
+    .w05-btn:active { transform: scale(0.98); }
+    .w05-btn:focus-visible { outline: 2px solid #272320; outline-offset: 2px; }
+    .w05-btn svg { display: block; }
+    .w05-wx { background: #ACD1F2; }
+    .wx05-art { position: absolute; left: 190px; top: -7px; z-index: 0; width: 138px; height: 108px; max-width: none; pointer-events: none; display: block; }
+    .wx05-area { position: relative; z-index: 1; box-sizing: border-box; align-self: stretch; flex: 1 1 0; min-height: 0; display: flex; flex-direction: column; justify-content: space-between; align-items: flex-start; padding: 18px; }
+    .wx05-loc { display: inline-flex; justify-content: center; align-items: center; gap: 10px; padding: 2px 2px 0 2px; }
+    .wx05-city { margin: 0; font-size: 20px; line-height: 26px; font-weight: 650; color: #272320; }
+    .wx05-row { align-self: stretch; display: flex; justify-content: flex-start; align-items: center; gap: 20px; padding: 0 2px 2px 2px; }
+    .wx05-temp { display: flex; align-items: flex-start; gap: 2px; }
+    .wx05-num, .wx05-deg { font-size: 48px; line-height: 32px; font-weight: 550; color: #322D29; }
+    .wx05-side { flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; justify-content: flex-end; align-items: flex-end; gap: 4px; }
+    .wx05-cond { margin: 0; align-self: stretch; text-align: right; font-size: 16px; line-height: 22px; font-weight: 450; color: #272320; }
+    .wx05-hilo { align-self: stretch; display: flex; justify-content: flex-end; align-items: flex-end; gap: 12px; }
+    .wx05-hl { display: flex; align-items: center; gap: 4px; }
+    .wx05-ic { box-sizing: border-box; width: 12px; height: 12px; display: flex; justify-content: center; align-items: center; overflow: hidden; color: #4C4642; }
+    .wx05-ic svg { width: 12px; height: 12px; display: block; }
+    .wx05-v { font-size: 16px; line-height: 22px; font-weight: 450; color: #4C4642; }
+    .w05-pod { justify-content: space-between; }
+    .pod05-row { align-self: stretch; display: flex; justify-content: flex-start; align-items: flex-end; gap: 12px; padding: 0 0 0 18px; }
+    .pod05-text { flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; align-items: flex-start; gap: 8px; padding-left: 2px; }
+    .pod05-title { margin: 0; align-self: stretch; font-size: 20px; line-height: 26px; font-weight: 650; color: #272320; }
+    .pod05-meta { margin: 0; align-self: stretch; font-size: 12px; line-height: 16px; font-weight: 450; color: #272320; }
+    .pod05-img { width: 116px; height: 66px; flex: 0 0 116px; border-radius: 12px; object-fit: cover; background: lightgray; display: block; }
+    .pod05-controls { align-self: stretch; display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 0 18px 4px 18px; }
+    .pod05-progress { align-self: stretch; display: flex; justify-content: flex-start; align-items: center; gap: 6px; padding: 0 2px; }
+    .pod05-time { font-size: 12px; line-height: 16px; font-weight: 450; color: #272320; text-align: right; }
+    .pod05-bars { flex: 1 1 0; min-width: 0; display: flex; justify-content: flex-start; align-items: center; gap: 3px; }
+    .pod05-bar { position: relative; height: 4px; border-radius: 2px; overflow: hidden; background: #CFC9C5; }
+    .pod05-bar i { position: absolute; left: 0; top: 0; height: 4px; background: #3F3935; }
+    .pod05-b1 { width: 21px; flex: 0 0 21px; }
+    .pod05-b2 { flex: 1 1 0; }
+    .pod05-b3 { width: 26px; flex: 0 0 26px; }
+    .pod05-b4 { flex: 1 1 0; }
+    .pod05-player { display: inline-flex; justify-content: center; align-items: center; gap: 8px; }
+    .pod05-skip { width: 48px; height: 48px; padding: 0 12px; border-radius: 16px; }
+    .pod05-skip svg { width: 24px; height: 24px; }
+    .pod05-play { width: 48px; height: 48px; padding: 0 8px; border-radius: 16px; }
+    .pod05-play svg { width: 32px; height: 32px; }
+    .sp05-content { align-self: stretch; display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 10px; padding: 0 2px 2px 2px; }
+    .sp05-row { align-self: stretch; box-sizing: border-box; height: 77px; display: flex; justify-content: flex-start; align-items: center; gap: 8px; padding: 0 8px; border-radius: 12px; background: transparent; }
+    .sp05-team { display: flex; flex-direction: column; justify-content: flex-start; align-items: center; gap: 4px; }
+    .sp05-team > :first-child { width: 40px; height: 40px; }
+    .sp05-badge { border-radius: 9999px; background: var(--b); color: #FFFFFF; display: flex; align-items: center; justify-content: center; font-size: 10px; line-height: 12px; font-weight: 650; }
+    .sp05-abbr { width: 48px; text-align: center; font-size: 14px; line-height: 20px; font-weight: 650; color: #272320; }
+    .sp05-mid { flex: 1 1 0; align-self: stretch; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 4px; }
+    .sp05-status { margin: 0; text-align: center; font-size: 14px; line-height: 20px; font-weight: 450; color: #272320; }
+    .sp05-score { align-self: stretch; display: flex; justify-content: center; align-items: center; gap: 4px; }
+    .sp05-num { font-size: 24px; line-height: 32px; font-weight: 650; color: #272320; }
+    .sp05-arrow { width: 12px; display: flex; justify-content: center; align-items: center; color: #272320; }
+    .sp05-arrow-hidden { opacity: 0; }
+    .sp05-link { align-self: stretch; height: 21px; display: flex; justify-content: center; align-items: center; gap: 4px; text-align: center; font-size: 14px; line-height: 20px; font-weight: 450; color: #272320; text-decoration: none; }
+    .sp05-link:hover { text-decoration: underline; }
+    .sp05-link:focus-visible { outline: 2px solid #272320; outline-offset: 2px; border-radius: 4px; }
+    .art05-examples { display: flex; flex-wrap: wrap; align-items: flex-start; gap: 24px; }
+    .art05-section { width: 100%; flex: 0 0 100%; margin-top: 24px; }
+    .art05-section > .dg-section-title { margin: 0 0 16px; color: #272320; font-size: 20px; line-height: 26px; font-weight: 650; font-feature-settings: "calt" 0; }
+    .art05-example { display: flex; min-width: 300px; max-width: 360px; flex: 1 1 336px; flex-direction: column; }
+    .art05-caption { margin: 0 0 16px; padding: 10px 2px; color: #272320; font-size: 15px; line-height: 20px; font-weight: 410; font-feature-settings: "calt" 0; }
+    .art05 { position: relative; display: flex; width: 336px; min-width: 300px; max-width: 360px; height: 176px; flex: none; align-items: center; justify-content: center; padding: 12px; overflow: hidden; border-radius: 24px; background: rgba(255,255,255,.80); box-shadow: inset 0 0 0 1px rgba(0,0,0,.10); color: #272320; font-family: "Segoe UI Variable Text","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif; }
+    .art05 * { box-sizing: border-box; margin: 0; font-feature-settings: "calt" 0; }
+    .art05-content { display: flex; width: 100%; height: 152px; flex-direction: column; justify-content: center; gap: 4px; padding: 8px 18px; }
+    .art05-pub { display: flex; height: 28px; flex: none; align-items: center; gap: 4px; padding: 0 2px; white-space: nowrap; }
+    .art05-brand { display: inline-flex; align-items: center; gap: 2px; }
+    .art05-fav { display: block; width: 16px; height: 16px; flex: none; overflow: hidden; border-radius: 6px; background: #D3D3D3; }
+    .art05-fav img { display: block; width: 16px; height: 16px; }
+    .art05-pub span:not(.art05-fav), .art05-pub time { color: #272320; font-size: 14px; line-height: 20px; font-weight: 550; }
+    .art05-row { display: flex; min-height: 0; flex: 1; align-items: flex-end; gap: 12px; padding-left: 2px; }
+    .art05-text { display: flex; min-width: 0; flex: 1; flex-direction: column; justify-content: flex-end; gap: 4px; }
+    .art05-title { display: -webkit-box; overflow: hidden; color: #272320; font-size: 20px; line-height: 26px; font-weight: 650; text-overflow: ellipsis; -webkit-box-orient: vertical; -webkit-line-clamp: 3; }
+    .art05-subtitle .art05-title { -webkit-line-clamp: 2; }
+    .art05-body { display: -webkit-box; overflow: hidden; color: #272320; font-size: 16px; line-height: 22px; font-weight: 450; text-overflow: ellipsis; -webkit-box-orient: vertical; -webkit-line-clamp: 2; }
+    .art05-image { position: relative; width: 94px; height: 94px; flex: 0 0 94px; overflow: hidden; border-radius: 12px; background: #D3D3D3; }
+    .art05-image img { display: block; width: 100%; height: 100%; object-fit: cover; }
+    .art05-image .hover-actions { top: 12px; right: 12px; }
+    .art05 .hover-actions { position: absolute; z-index: 2; display: flex; min-width: 36px; min-height: 36px; align-items: center; justify-content: center; padding: 0 6px; border: 0; border-radius: 12px; background: rgba(0,0,0,.55); color: #FFFFFF; cursor: pointer; visibility: hidden; }
+    .art05:hover .hover-actions, .art05:focus-within .hover-actions { visibility: visible; }
+    .art05 .hover-actions svg { display: block; width: 24px; height: 24px; }
+    .art05 .hover-actions:focus-visible { outline: 2px solid #272320; outline-offset: 2px; }
+    @media (max-width: 360px) {
+      .w05-board { padding: 24px 0; }
+      .art05-section { width: 100vw; flex-basis: 100vw; margin-left: 0; }
+      .art05 { width: 100%; }
+    }
+    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+  </style>
+</head>
+<body>
+  <main class="w05-board">
+    <article class="w05 w05-wx" aria-label="Weather, Seattle">
+      <img class="wx05-art" src="/assets/images/msn/widgets/wx-sun.svg" alt="" aria-hidden="true" width="138" height="108">
+      <div class="wx05-area">
+        <div class="wx05-loc"><h3 class="wx05-city">Seattle</h3></div>
+        <div class="wx05-row">
+          <div class="wx05-temp"><span class="wx05-num">42</span><span class="wx05-deg">°</span></div>
+          <div class="wx05-side">
+            <p class="wx05-cond">Mostly sunny</p>
+            <div class="wx05-hilo">
+              <span class="wx05-hl"><span class="wx05-ic" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 10.5C6.27614 10.5 6.5 10.2761 6.5 10V3.20711L9.14645 5.85355C9.34171 6.04882 9.65829 6.04882 9.85355 5.85355C10.0488 5.65829 10.0488 5.34171 9.85355 5.14645L6.35355 1.64645C6.15829 1.45118 5.84171 1.45118 5.64645 1.64645L2.14645 5.14645C1.95118 5.34171 1.95118 5.65829 2.14645 5.85355C2.34171 6.04882 2.65829 6.04882 2.85355 5.85355L5.5 3.20711V10C5.5 10.2761 5.72386 10.5 6 10.5Z" fill="currentColor"/></svg></span><span class="wx05-v"><span class="sr-only">High </span>55°</span></span>
+              <span class="wx05-hl"><span class="wx05-ic" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 1.5C6.27614 1.5 6.5 1.72386 6.5 2V8.79289L9.14645 6.14645C9.34171 5.95118 9.65829 5.95118 9.85355 6.14645C10.0488 6.34171 10.0488 6.65829 9.85355 6.85355L6.35355 10.3536C6.15829 10.5488 5.84171 10.5488 5.64645 10.3536L2.14645 6.85355C1.95118 6.65829 1.95118 6.34171 2.14645 6.14645C2.34171 5.95118 2.65829 5.95118 2.85355 6.14645L5.5 8.79289V2C5.5 1.72386 5.72386 1.5 6 1.5Z" fill="currentColor"/></svg></span><span class="wx05-v"><span class="sr-only">Low </span>32°</span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+    <article class="w05 w05-std w05-pod" aria-label="Podcast">
+      <div class="pod05-row">
+        <div class="pod05-text">
+          <h3 class="pod05-title">Copilot Daily</h3>
+          <p class="pod05-meta">Nov 4 · 5 min</p>
+        </div>
+        <img class="pod05-img" src="/assets/images/msn/widgets/pod-1.jpg" alt="" width="116" height="66">
+      </div>
+      <div class="pod05-controls">
+        <div class="pod05-progress">
+          <span class="pod05-time">0:00</span>
+          <div class="pod05-bars" aria-hidden="true">
+            <span class="pod05-bar pod05-b1"><i style="width:21px"></i></span>
+            <span class="pod05-bar pod05-b2"><i style="width:67.66px"></i></span>
+            <span class="pod05-bar pod05-b3"></span>
+            <span class="pod05-bar pod05-b4"></span>
+          </div>
+          <span class="pod05-time">2:34</span>
+        </div>
+        <div class="pod05-player">
+          <button class="w05-btn pod05-skip" type="button" aria-label="Previous"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M5.75 3C5.3703 3 5.05651 3.28215 5.00685 3.64823L5 3.75V20.25C5 20.6642 5.33579 21 5.75 21C6.1297 21 6.44349 20.7178 6.49315 20.3518L6.5 20.25V3.75C6.5 3.33579 6.16421 3 5.75 3ZM18.7803 3.21967C18.5141 2.9534 18.0974 2.9292 17.8038 3.14705L17.7197 3.21967L9.46967 11.4697C9.2034 11.7359 9.1792 12.1526 9.39705 12.4462L9.46967 12.5303L17.7197 20.7803C18.0126 21.0732 18.4874 21.0732 18.7803 20.7803C19.0466 20.5141 19.0708 20.0974 18.8529 19.8038L18.7803 19.7197L11.0607 12L18.7803 4.28033C19.0732 3.98744 19.0732 3.51256 18.7803 3.21967Z"/></svg></button>
+          <button class="w05-btn pod05-play" type="button" aria-label="Pause"><svg width="32" height="32" viewBox="0 0 32 32" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M7.25 3C5.45507 3 4 4.45507 4 6.25V24.75C4 26.5449 5.45507 28 7.25 28H10.75C12.5449 28 14 26.5449 14 24.75V6.25C14 4.45507 12.5449 3 10.75 3H7.25ZM21.25 3C19.4551 3 18 4.45507 18 6.25V24.75C18 26.5449 19.4551 28 21.25 28H24.75C26.5449 28 28 26.5449 28 24.75V6.25C28 4.45507 26.5449 3 24.75 3H21.25Z"/></svg></button>
+          <button class="w05-btn pod05-skip" type="button" aria-label="Next"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M18.25 3C18.6297 3 18.9435 3.28215 18.9932 3.64823L19 3.75V20.25C19 20.6642 18.6642 21 18.25 21C17.8703 21 17.5565 20.7178 17.5068 20.3518L17.5 20.25V3.75C17.5 3.33579 17.8358 3 18.25 3ZM5.21967 3.21967C5.48594 2.9534 5.9026 2.9292 6.19621 3.14705L6.28033 3.21967L14.5303 11.4697C14.7966 11.7359 14.8208 12.1526 14.6029 12.4462L14.5303 12.5303L6.28033 20.7803C5.98744 21.0732 5.51256 21.0732 5.21967 20.7803C4.9534 20.5141 4.9292 20.0974 5.14705 19.8038L5.21967 19.7197L12.9393 12L5.21967 4.28033C4.92678 3.98744 4.92678 3.51256 5.21967 3.21967Z"/></svg></button>
+        </div>
+      </div>
+    </article>
+    <article class="w05 w05-std" aria-label="Sports score">
+      <div class="w05-area">
+        <div class="w05-titlewrap"><h3 class="w05-title">Coastal Soccer League</h3></div>
+        <div class="sp05-content">
+          <div class="sp05-row">
+            <div class="sp05-team"><span class="sp05-badge" style="--b:#4C4642">HBR</span><span class="sp05-abbr">HBR</span></div>
+            <div class="sp05-mid">
+              <p class="sp05-status">Final · Jun 10</p>
+              <div class="sp05-score">
+                <span class="sp05-arrow sp05-arrow-hidden" aria-hidden="true"><svg width="8" height="10" viewBox="0 0 8 10"><polygon points="0,0 8,5 0,10" fill="currentColor"/></svg></span>
+                <span class="sp05-num">2 - 1</span>
+                <span class="sp05-arrow" aria-hidden="true"><svg width="8" height="10" viewBox="0 0 8 10"><polygon points="0,0 8,5 0,10" fill="currentColor"/></svg></span>
+              </div>
+              <a class="sp05-link" href="#">View game stats</a>
+            </div>
+            <div class="sp05-team"><span class="sp05-badge" style="--b:#8A817B">RDG</span><span class="sp05-abbr">RDG</span></div>
+          </div>
+        </div>
+      </div>
+    </article>
+    <article class="w05 w05-std" aria-label="Stock, NVIDIA Corp">
+      <div class="w05-area">
+        <div class="w05-titlewrap"><h3 class="w05-title">NVIDIA Corp</h3></div>
+        <div class="stk05-body">
+          <div class="stk05-info">
+            <p class="stk05-ticker">(NVDA)</p>
+            <div class="stk05-price"><span class="stk05-val">136.75</span><span class="stk05-chg">+3.97%</span></div>
+          </div>
+          <div class="stk05-graph" aria-hidden="true">
+            <svg viewBox="0 0 270 31" preserveAspectRatio="none">
+              <defs><linearGradient id="stk05Fill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#01712B" stop-opacity="0.20"/><stop offset="1" stop-color="#01712B" stop-opacity="0"/></linearGradient></defs>
+              <polygon fill="url(#stk05Fill)" points="0,31 5,29 8,28 10,25 13,25.5 16,23 19,22 22,19.5 25,20 28,22 32,24 36,22 40,19 44,17.5 47,15.5 51,15 53,18 57,17 61,16 65,15 69,14 73,13 76,10 79,11 83,16 86,14 89,15.5 93,19 96,18 100,20 104,21.5 108,19 112,20.5 115,21 118,21 121,20 125,16 128,18 132,15 136,12.5 139,14 143,16 146,18 149,19 153,17 157,17 161,18.5 165,17 169,16 173,14.5 177,15.5 180,14.5 183,10 186,8.5 190,12 193,17 197,18.5 201,18 204,16 207,10 211,9 216,5 220,3 225,2 230,4 233,10 236,16 240,21 244,25 247,25 250,28 253,28 255,23 259,17 263,12 268,8 268,31 0,31"/>
+              <polyline class="stk05-line" points="0,31 5,29 8,28 10,25 13,25.5 16,23 19,22 22,19.5 25,20 28,22 32,24 36,22 40,19 44,17.5 47,15.5 51,15 53,18 57,17 61,16 65,15 69,14 73,13 76,10 79,11 83,16 86,14 89,15.5 93,19 96,18 100,20 104,21.5 108,19 112,20.5 115,21 118,21 121,20 125,16 128,18 132,15 136,12.5 139,14 143,16 146,18 149,19 153,17 157,17 161,18.5 165,17 169,16 173,14.5 177,15.5 180,14.5 183,10 186,8.5 190,12 193,17 197,18.5 201,18 204,16 207,10 211,9 216,5 220,3 225,2 230,4 233,10 236,16 240,21 244,25 247,25 250,28 253,28 255,23 259,17 263,12 268,8"/>
+            </svg>
+            <i class="stk05-drop"></i>
+            <i class="stk05-dot"></i>
+          </div>
+        </div>
+      </div>
+    </article>
+    <article class="w05 w05-std" aria-label="Local event">
+      <div class="w05-area">
+        <div class="w05-titlewrap"><h3 class="w05-title">Next week in Seattle, WA</h3></div>
+        <div class="ev05-row">
+          <div class="ev05-cal" aria-label="October 24">
+            <div class="ev05-month">OCT</div>
+            <div class="ev05-date">24</div>
+          </div>
+          <div class="ev05-text">
+            <p class="ev05-name">Dinosaur Exhibit</p>
+            <p class="ev05-venue">Convention Center</p>
+          </div>
+        </div>
+      </div>
+    </article>
+    <article class="w05 w05-std" aria-label="Trending on Copilot">
+      <div class="trd05-area">
+        <div class="w05-titlewrap"><h3 class="w05-title">Trending on Copilot</h3></div>
+        <div class="trd05-stage">
+          <img class="trd05-img" src="/assets/images/msn/widgets/trd-1.jpg" alt="" width="94" height="66">
+          <div class="trd05-bubble-area"><p class="trd05-bubble">How can I reduce plastic waste to take my trash out less often?</p></div>
+        </div>
+      </div>
+    </article>
+    <article class="w05 w05-std" aria-label="Creator spotlight">
+      <div class="w05-area">
+        <div class="cr05-creator">
+          <div class="cr05-avatar"><img src="/assets/images/msn/widgets/crt-avatar.jpg" alt="" width="52" height="52"></div>
+          <div class="cr05-text">
+            <h3 class="cr05-name">Alex Rivera</h3>
+            <p class="cr05-cat"><span>Technology</span><span aria-hidden="true">·</span><span>Review</span></p>
+          </div>
+        </div>
+        <div class="cr05-cta">
+          <button class="cr05-follow" type="button"><span class="cr05-ic" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M10 2.5C10.2761 2.5 10.5 2.72386 10.5 3V9.5H17C17.2761 9.5 17.5 9.72386 17.5 10C17.5 10.2761 17.2761 10.5 17 10.5H10.5V17C10.5 17.2761 10.2761 17.5 10 17.5C9.72386 17.5 9.5 17.2761 9.5 17V10.5H3C2.72386 10.5 2.5 10.2761 2.5 10C2.5 9.72386 2.72386 9.5 3 9.5H9.5V3C9.5 2.72386 9.72386 2.5 10 2.5Z"/></svg></span><span class="cr05-label">Follow</span></button>
+        </div>
+      </div>
+    </article>
+    <article class="w05 w05-std" aria-label="Recommended games">
+      <div class="gm05-area">
+        <div class="w05-titlewrap"><h3 class="w05-title">Recommended games</h3></div>
+        <div class="gm05-row">
+          <img class="gm05-img" src="/assets/images/msn/widgets/game-1.jpg" alt="" width="80" height="80">
+          <div class="gm05-text">
+            <p class="gm05-name">Tile Garden</p>
+            <p class="gm05-sub">Recently played</p>
+          </div>
+        </div>
+      </div>
+    </article>
+    <section class="art05-section" aria-labelledby="art05-heading">
+      <h2 id="art05-heading" class="dg-section-title">Article 0.5u</h2>
+      <div class="art05-examples">
+        <div class="art05-example">
+          <p class="art05-caption">Article · 0.5u · Publisher</p>
+          <article class="art05">
+            <div class="art05-content">
+              <div class="art05-pub">
+                <span class="art05-brand"><span class="art05-fav"><img src="../assets/images/msn/widgets/art-fav-1.svg" alt="" width="16" height="16" onerror="this.style.visibility='hidden'"></span><span>Quantis</span></span>
+                <span aria-hidden="true">·</span><time>1d</time>
+              </div>
+              <div class="art05-row">
+                <h3 class="art05-title">A Symbol of Beauty: Exploring the Secret Lives of Peacocks</h3>
+                <div class="art05-image">
+                  <img src="../assets/images/msn/widgets/art-img-1.png" alt="" width="94" height="94" onerror="this.style.visibility='hidden'">
+                  <button class="hover-actions" type="button" aria-label="More options"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="6" cy="12" r="1.75" fill="currentColor"/><circle cx="12" cy="12" r="1.75" fill="currentColor"/><circle cx="18" cy="12" r="1.75" fill="currentColor"/></svg></button>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="art05-example">
+          <p class="art05-caption">Article · 0.5u · Subtitle</p>
+          <article class="art05 art05-subtitle">
+            <div class="art05-content">
+              <div class="art05-pub">
+                <span class="art05-brand"><span class="art05-fav"><img src="../assets/images/msn/widgets/art-fav-1.svg" alt="" width="16" height="16" onerror="this.style.visibility='hidden'"></span><span>Quantis</span></span>
+                <span aria-hidden="true">·</span><time>1d</time>
+              </div>
+              <div class="art05-row">
+                <div class="art05-text">
+                  <h3 class="art05-title">Feature name</h3>
+                  <p class="art05-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+                </div>
+                <div class="art05-image">
+                  <img src="../assets/images/msn/widgets/art-img-2.png" alt="" width="94" height="94" onerror="this.style.visibility='hidden'">
+                  <button class="hover-actions" type="button" aria-label="More options"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="6" cy="12" r="1.75" fill="currentColor"/><circle cx="12" cy="12" r="1.75" fill="currentColor"/><circle cx="18" cy="12" r="1.75" fill="currentColor"/></svg></button>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script>
+    const weatherArt = document.querySelector(".wx05-art");
+    weatherArt.addEventListener("error", () => {
+      weatherArt.hidden = true;
+    });
+  </script>
+</body>
+</html>

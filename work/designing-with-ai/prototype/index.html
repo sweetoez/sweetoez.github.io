@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Token Playground Prototype</title>
+    <link rel="stylesheet" href="proto.css" />
+  </head>
+  <body class="proto proto--ai">
+    <div class="prototype-shell">
+      <aside class="controls" aria-label="Token controls">
+        <div class="control-group"><label for="hueRange">Accent hue</label><div class="range-row"><input id="hueRange" type="range" min="0" max="360" step="1" value="220" /><span id="hueValue">220°</span></div></div>
+        <div class="control-group"><label for="radiusRange">Corner radius</label><div class="range-row"><input id="radiusRange" type="range" min="0" max="28" step="1" value="12" /><span id="radiusValue">12px</span></div></div>
+        <div class="control-group"><label for="typeSelect">Type scale</label><select id="typeSelect"><option value="small">Small</option><option value="default" selected>Default</option><option value="large">Large</option></select></div>
+        <div class="control-group"><label for="modeSelect">Mode</label><select id="modeSelect"><option value="light" selected>Light</option><option value="dark">Dark</option></select></div>
+        <button id="copyTokens" type="button" class="primary-btn">Copy tokens</button>
+      </aside>
+      <section class="preview-panel" aria-live="polite">
+        <div class="preview-header"><span class="mini-tag">Live preview</span><span id="contrastReadout" class="contrast-pill">Contrast 7.2: PASS</span></div>
+        <div id="chatSurface" class="chat-surface">
+          <div class="chat-header"><div class="avatar">AI</div><div><strong>Studio</strong><small>Design assistant</small></div></div>
+          <div class="chat-body">
+            <div class="bubble bubble--left">Map the tone for a quiet product launch.</div>
+            <div class="bubble bubble--right">I can refine the interaction cues and keep the palette calm.</div>
+            <div class="bubble bubble--left">Let's lock in a softer contrast and rounded motion.</div>
+          </div>
+          <div class="prompt-row"><input aria-label="Prompt input" value="Refine the launch story" /><button type="button">Send</button></div>
+          <div class="suggestions"><button type="button">Warm contrast</button><button type="button">Calm motion</button></div>
+        </div>
+      </section>
+    </div>
+    <script src="proto.js"></script>
+  </body>
+</html>

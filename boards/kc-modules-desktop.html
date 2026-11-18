@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Knowledge Card modules — Desktop</title>
+  <link rel="stylesheet" href="../assets/css/msn-components.css">
+  <link rel="stylesheet" href="../assets/css/kc-components.css">
+  <style>
+    * { box-sizing:border-box; }
+    body { min-width:1136px; margin:0; padding:32px; background:#F2F2F2; color:#444; font-family:var(--kc-font); }
+    main { width:1072px; margin:0 auto; }
+    .kc-board-section { margin:0 0 48px; }
+    .kc-board-section h2 { margin:0 0 16px; color:#444; font-size:18px; font-weight:700; line-height:24px; letter-spacing:-.015em; }
+    .kc-board-grid { display:grid; grid-template-columns:472px 472px; column-gap:128px; row-gap:40px; align-items:start; }
+    .kc-board-item { width:max-content; }
+    .kc-board-label { margin:0 0 8px; color:#666; font-size:12px; line-height:16px; }
+    .kc-module-title a { display:flex; flex:none; }
+  </style>
+</head>
+<body>
+  <main id="kc-board"></main>
+  <script>
+    const board = document.querySelector("#kc-board");
+    const modules = [];
+    const add = (section, label, cls, content, aria = "") => modules.push({ section, label, cls, content, aria });
+    const title = (text, chevron = true, width = "") => {
+      const widthAttr = width ? `style="width:${width}px"` : "";
+      const arrow = chevron ? '<a class="kc-link" href="#" aria-label="See all ' + text + '"><span class="kc-title-chevron"><img src="../assets/icons/ic_fluent_chevron_right_16_regular.svg" alt="" aria-hidden="true"></span></a>' : "";
+      return '<div class="kc-module-title" ' + widthAttr + '><h3>' + text + '</h3>' + arrow + '</div>';
+    };
+    const image = (slug, n, w, h, r = 6, alt = "") =>
+      `<span class="kc-img" style="width:${w}px;height:${h}px;border-radius:${typeof r === "number" ? `${r}px` : r}"><img src="../assets/images/kc/modules/${slug}-${n}.jpg" alt="${alt}" onerror="this.style.display='none'"></span>`;
+    const mono = (letter, label, w, h, round = false) =>
+      `<span class="kc-monogram${round ? " kc-monogram--round" : ""}" style="width:${w}px;height:${h}px;font-size:${Math.round(h * .45)}px" role="img" aria-label="${label}">${letter}</span>`;
+    const stars = (score, pattern = [1, 1, 1, 0, 0]) =>
+      `<span class="kc-stars" role="img" aria-label="${score} out of 5 stars">${pattern.map(v => `<span class="kc-star-icon kc-star--${v === 1 ? "on" : v === .5 ? "half" : "off"}"></span>`).join("")}</span>`;
+    const sectionNames = ["Image List", "Ratings", "Reviews", "Text List", "Videos", "Miscellaneous"];
+    const longCopy = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.";
+    const longCopy2 = `${longCopy} Ut enim ad minim veniam, quis nostrud exercitation.`;
+    const names = ["Jordan Reyes", "Sam Okafor", "Riley Chen", "Morgan Patel", "Casey Brooks", "Taylor Kim"];
+
+    ["Circle", "Square", "Rectangle"].forEach(shape => {
+      const circle = shape === "Circle";
+      const rectangle = shape === "Rectangle";
+      const slug = "image-list-main";
+      const tiles = Array.from({ length: 5 }, (_, i) =>
+        `<div class="kc-image-list-main__tile">${image(slug, i + 1, 80, rectangle ? 120 : 80, circle ? 100 : 6, `Module image ${i + 1}`)}<div class="kc-image-list-main__tile-text"><span class="kc-copy-bold">Title</span><span class="kc-copy-small">Sub-title</span></div></div>`).join("");
+      add("Image List", `Image List / Main — Shape=${shape}`, `kc-image-list-main kc-image-list-main--${shape.toLowerCase()}`,
+        `${title("Module title")}<div class="kc-image-list-main__tiles">${tiles}</div>`);
+    });
+
+    add("Image List", "Image List / Related Songs", "kc-image-list-related-songs",
+      `${title("Related songs")}<div class="kc-image-list-related-songs__list">${[1, 2, 3].map((n) => `<div class="kc-image-list-related-songs__song"><div class="kc-image-list-related-songs__row"><div class="kc-image-list-related-songs__text"><span class="kc-copy-bold">Name of Related Song ${n}</span><span class="kc-copy">Title of Album · Year of Album</span></div>${image("image-list-related-songs", n, 100, 56, 4, `Related song image ${n}`)}</div>${n < 3 ? '<span class="kc-divider"></span>' : ""}</div>`).join("")}</div>`);
+
+    add("Image List", "Image List / Places to Visit", "kc-image-list-places-to-visit",
+      `${title("Top places to visit", false)}<div class="kc-image-list-places-to-visit__items">${["Lantern Bridge", "Harbor Market", "Cedar Falls"].map((name, i) => `<div class="kc-image-list-places-to-visit__item">${image("image-list-places-to-visit", i + 1, 100, i === 1 ? 100 : 116, 6, `${name} image`)}<span class="kc-copy">${name}</span></div>`).join("")}</div>`);
+
+    add("Image List", "Image List / Element Uses", "kc-image-list-element-uses",
+      `${title("Module Title")}<div class="kc-image-list-element-uses__list">${[1, 2, 3].map(n => `<div class="kc-image-list-element-uses__use"><div class="kc-image-list-element-uses__row"><p class="kc-copy">${longCopy}</p>${image("image-list-element-uses", n, 60, 60, 6, `Module image ${n}`)}</div>${n < 3 ? '<span class="kc-divider"></span>' : ""}</div>`).join("")}</div>`);
+
+    add("Image List", "Image List / Played By", "kc-image-list-played-by",
+      `${title("Played by")}<div class="kc-image-list-played-by__row">${["Jordan Reyes", "Sam Okafor"].map((name, i) => `<div class="kc-image-list-played-by__actor">${image("image-list-played-by", i + 1, 60, 60, 50, name)}<div class="kc-col"><span class="kc-copy-bold">${name}</span><span class="kc-copy">Date/Character</span></div></div>`).join("")}</div>`);
+
+    add("Image List", "Image List / Carousel", "kc-image-list-carousel",
+      Array.from({ length: 5 }, (_, i) => image("image-list-carousel", i + 1, [103, 90, 77, 130, 76][i], 100, 6, `Carousel image ${i + 1}`)).join(""), "Image carousel");
+
+    const topSongs = ["Paper Lanterns", "Slow Tide", "Glass Garden", "Morning Static", "Silver Line", "Paper Lanterns (Live)"];
+    add("Image List", "Image List / Top Songs", "kc-image-list-top-songs",
+      `${title("Top Songs")}<div class="kc-image-list-top-songs__columns">${[0, 1].map(col => `<div class="kc-image-list-top-songs__column">${topSongs.slice(col * 3, col * 3 + 3).map((song, i) => `<div class="kc-image-list-top-songs__song">${image("image-list-top-songs", col * 3 + i + 1, 48, 48, 6, `${song} image`)}<div class="kc-image-list-top-songs__song-text"><span class="kc-copy-bold">${song}</span><span class="kc-copy-small">${["Album · Year", "Album · Year", "Album · Year"][i]}</span></div></div>`).join("")}</div>`).join("")}</div>`);
+
+    add("Image List", "Image List / Featured In", "kc-image-list-featured-in",
+      `${title("Featured in")}<div class="kc-image-list-featured-in__list">${[1, 2, 3].map(n => `<div class="kc-image-list-featured-in__row">${image("image-list-featured-in", n, 32, 32, 20, `Featured in image ${n}`)}<div class="kc-image-list-featured-in__text"><span class="kc-copy-bold">Name of List</span><span class="kc-copy-small">List Publisher</span></div></div>`).join("")}</div>`);
+
+    add("Image List", "Image List / Watch Links", "kc-image-list-watch-links",
+      `${title("Watch", false)}<div class="kc-image-list-watch-links__list">${[1, 2].map(n => `<div class="kc-image-list-watch-links__row">${[1, 2, 3].map(i => `<a class="kc-link kc-image-list-watch-links__item" href="#">${image("image-list-watch-links", (n - 1) * 3 + i, 32, 32, 2, `Watch link ${i}`)}<span class="kc-image-list-watch-links__text"><span class="kc-copy-bold">Title</span><span class="kc-copy-small kc-no-ls">Sub-title</span></span></a>`).join("")}</div>`).join("")}</div>`);
+
+    const largeCardRow = row => [1, 2].map(col => [
+      '<div class="kc-card kc-image-list-carded-large__card">',
+      image("image-list-carded-large", (row - 1) * 2 + col, 69, 69, "6px 0 0 6px", "List item image"),
+      '<div class="kc-image-list-carded-large__text"><span class="kc-copy-bold kc-clamp-2">Duis aute irure dolor reprehenderit</span><span class="kc-copy-small">Lorem ipsum</span></div></div>'
+    ].join("")).join("");
+    add("Image List", "Image List / Carded / Large", "kc-image-list-carded-large",
+      title("List Title") + '<div class="kc-image-list-carded-large__cards">' + [1, 2].map(row => '<div class="kc-image-list-carded-large__row">' + largeCardRow(row) + '</div>').join("") + '</div>');
+
+    add("Image List", "Image List / Top Fact", "kc-image-list-top-fact",
+      `<div class="kc-image-list-top-fact__fact"><div class="kc-image-list-top-fact__text"><span class="kc-copy-bold">Life Span</span><strong class="kc-t-highlight-l kc-gray-copy">12 - 17</strong></div>${image("image-list-top-fact", 1, 64, 80, 0, "Top fact image 1")}</div><span class="kc-divider--v"></span><div class="kc-image-list-top-fact__fact"><div class="kc-image-list-top-fact__text"><span class="kc-copy-bold">Life Span</span><strong class="kc-t-highlight-l kc-gray-copy">12 - 17</strong></div>${image("image-list-top-fact", 2, 64, 80, 0, "Top fact image 2")}</div>`, "Top facts");
+
+    add("Image List", "Image List / Carded / Small / Vertical", "kc-image-list-carded-small-vertical",
+      `${title("List Title")}<div class="kc-image-list-carded-small-vertical__cards">${[0, 1].map(col => `<div class="kc-image-list-carded-small-vertical__column">${[1, 2].map(row => { const n = col * 2 + row; return `<div class="kc-card kc-image-list-carded-small-vertical__card"><div class="kc-image-list-carded-small-vertical__inner">${image("image-list-carded-small-vertical", n, 48, 48, "6px 0 0 6px", "Image,Title / Horizontal")}<span class="kc-copy-bold">Lorem ipsum</span></div></div>`; }).join("")}</div>`).join("")}</div>`);
+
+    add("Image List", "Image List / Carded / Small / Horizontal", "kc-image-list-carded-small-horizontal",
+      `${title("List Title")}<div class="kc-image-list-carded-small-horizontal__clip"><div class="kc-image-list-carded-small-horizontal__cards">${[1, 2, 3, 4].map(n => `<div class="kc-card kc-image-list-carded-small-horizontal__card"><div class="kc-image-list-carded-small-horizontal__inner">${image("image-list-carded-small-horizontal", n, 36, 36, 2, "Image,Title / Vertical")}<span class="kc-copy-bold">Lorem ipsum</span></div></div>`).join("")}</div></div><button class="kc-btn-flipper kc-image-list-carded-small-horizontal__next" type="button" aria-label="Next"><img src="../assets/icons/ic_fluent_chevron_right_16_regular.svg" alt="" aria-hidden="true"></button>`);
+
+    add("Image List", "Image List / Entity List", "kc-image-list-entity-list",
+      `${title("Module title")}<div class="kc-image-list-entity-list__list">${[0, 1, 2].map(row => `<div class="kc-image-list-entity-list__row">${names.slice(row * 2, row * 2 + 2).map((name, i) => `<div class="kc-image-list-entity-list__person">${image("image-list-entity-list", row * 2 + i + 1, 32, 32, 20, name)}<span class="kc-copy-bold">${name}</span></div>`).join("")}</div>`).join("")}</div>`);
+
+    add("Image List", "Image List / Ingredients", "kc-image-list-ingredients",
+      `${title("Common ingredients")}<div class="kc-image-list-ingredients__list">${[0, 1].map(row => `<div class="kc-image-list-ingredients__row">${["Flour", "Butter", "Sugar", "Eggs", "Milk", "Salt"].slice(row * 3, row * 3 + 3).map((name, i) => `<div class="kc-image-list-ingredients__item">${image("image-list-ingredients", row * 3 + i + 1, 32, 32, 20, name)}<span class="kc-copy-bold">${name}</span></div>`).join("")}</div>`).join("")}</div>`);
+
+    add("Image List", "Image List / Products", "kc-image-list-products",
+      Array.from({ length: 6 }, (_, i) => `<div class="kc-image-list-products__item">${image("image-list-products", i + 1, 32, 32, 6, `Product ${i + 1}`)}<span class="kc-copy-bold">Product</span></div>`).join(""), "Products");
+
+    const factVariants = [
+      { variant:"1-image", label:"Image Amount=1-Image", rows:[`<div class="kc-image-list-interesting-facts__text" style="width:287px;height:193px"><p class="kc-copy" style="width:287px;height:62px">${longCopy}</p><span class="kc-divider"></span><p class="kc-copy" style="width:287px;height:98px">${longCopy2}</p></div>${image("image-list-interesting-facts", 1, 125, 193, 6, "Interesting fact image 1")}`] },
+      { variant:"3-image", label:"Image Amount=3-Image", rows:[`<div class="kc-image-list-interesting-facts__row"><div class="kc-image-list-interesting-facts__text" style="width:323px;height:132px;gap:15px"><p class="kc-copy" style="width:323px;height:116px">${longCopy2} Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p><span class="kc-divider"></span></div>${image("image-list-interesting-facts", 1, 89, 131, 6, "Interesting fact image 1")}</div>`,`<div class="kc-image-list-interesting-facts__row">${image("image-list-interesting-facts", 2, 90, 133, 6, "Interesting fact image 2")}<div class="kc-image-list-interesting-facts__text" style="width:322px;height:133px;gap:16px"><p class="kc-copy" style="width:322px;height:116px;text-align:right">${longCopy2} Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p><span class="kc-divider"></span></div></div>`,`<div class="kc-image-list-interesting-facts__row"><p class="kc-copy" style="width:266px;height:94px">${longCopy2}</p>${image("image-list-interesting-facts", 3, 146, 93, 6, "Interesting fact image 3")}</div>`] },
+      { variant:"2-image", label:"Image Amount=2-Image", rows:[`<div class="kc-image-list-interesting-facts__row"><div class="kc-image-list-interesting-facts__text" style="width:282px;height:193px;gap:16px"><p class="kc-copy" style="width:282px;height:98px">${longCopy2}</p><span class="kc-divider"></span><p class="kc-copy" style="width:282px;height:62px">${longCopy}</p></div>${image("image-list-interesting-facts", 1, 130, 193, 6, "Interesting fact image 1")}</div>`,`<div class="kc-image-list-interesting-facts__row">${image("image-list-interesting-facts", 2, 146, 93, 6, "Interesting fact image 2")}<div class="kc-image-list-interesting-facts__text" style="width:266px;height:93px;gap:16px"><span class="kc-divider"></span><p class="kc-copy" style="width:266px;height:76px;text-align:right">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et. Ut enim ad minim veniam, quis.</p></div></div>`] },
+      { variant:"none", label:"Image Amount=None", rows:[`<div class="kc-image-list-interesting-facts__text"><p class="kc-copy" style="width:432px;height:40px">${longCopy}</p></div>`] }
+    ];
+    factVariants.forEach(({ variant, label, rows }) =>
+      add("Image List", `Image List / Interesting Facts — ${label}`, `kc-image-list-interesting-facts kc-image-list-interesting-facts--${variant}`,
+        rows.join(""), "Interesting facts"));
+
+    add("Ratings", "Ratings / Movie Critics", "kc-ratings-movie-critics",
+      ["8.1/10|M|Movie DB", "92%|C|Critic Score", "81%|A|Audience Score"].map(v => {
+        const [score, letter, name] = v.split("|");
+        return `<div class="kc-ratings-movie-critics__col"><div class="kc-ratings-movie-critics__score"><span>${score}</span>${mono(letter, name, 20, 20)}</div><span class="kc-ratings-movie-critics__label">${name}</span></div>`;
+      }).join(""), "Critic ratings");
+    add("Ratings", "Ratings / Stars", "kc-ratings-stars",
+      `<div class="kc-ratings-stars__col"><span class="kc-copy kc-ratings-stars__company">Brand/Company</span><strong class="kc-t-highlight-l">3.85</strong>${stars("3.5", [1, 1, 1, .5, 0])}</div><span class="kc-divider--v"></span><div class="kc-ratings-stars__col"><span class="kc-copy kc-ratings-stars__company">Brand/Company</span><strong class="kc-t-highlight-l">4.4</strong>${stars("4", [1, 1, 1, 1, 0])}</div>`, "Ratings");
+
+    add("Reviews", "Reviews / Critics", "kc-reviews-critics",
+      `${title("Critic reviews")}${["Film Weekly", "Screen Notes", "The Daily Reel"].map((name, i) => `<div class="kc-reviews-critics__review"><p class="kc-copy kc-reviews-critics__copy kc-clamp-2">${longCopy} <a class="kc-link" href="#">Full review</a></p><div class="kc-reviews-critics__reviewer">${image("reviews-critics", i + 1, 16, 16, 2, "Publisher logo")}<span class="kc-copy">${name}</span></div>${i < 2 ? '<span class="kc-divider"></span>' : ""}</div>`).join("")}`);
+    add("Reviews", "Reviews / Articles", "kc-reviews-articles",
+      `${title("Article reviews")}${["Film Weekly", "Screen Notes", "The Daily Reel"].map((name, i) => `<div class="kc-reviews-articles__article">${image("reviews-articles", i + 1, 32, 32, 41, "Article publisher logo")}<div class="kc-reviews-articles__text"><div class="kc-reviews-articles__body"><span class="kc-copy-bold">Title of Article</span><p class="kc-copy kc-clamp-3">${longCopy} <a class="kc-link" href="#">Full review</a></p></div><span class="kc-reviews-articles__source">${name}</span></div></div>`).join("")}`);
+    add("Reviews", "Reviews / Customers", "kc-reviews-customers",
+      `${title("Customer reviews")}<div class="kc-reviews-customers__row">${["Jordan Reyes", "Sam Okafor", "Riley Chen"].map((name, i) => `<div class="kc-card kc-reviews-customers__card"><div class="kc-reviews-customers__inner"><div class="kc-reviews-customers__meta"><div class="kc-reviews-customers__profile">${stars("3.5", [1, 1, 1, .5, 0])}<span class="kc-copy-small kc-gray-copy">Month XX, Year</span></div>${image("reviews-customers", i + 1, 32, 32, 100, name)}</div><p class="kc-copy kc-reviews-customers__copy kc-clamp-3">Lorem ipsum dolor sit amet, we consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p></div></div>`).join("")}</div><button class="kc-btn-flipper kc-reviews-customers__next" type="button" aria-label="Next"><img src="../assets/icons/ic_fluent_chevron_right_16_regular.svg" alt="" aria-hidden="true"></button>`);
+
+    add("Text List", "Text List / Accolades", "kc-text-list-accolades",
+      `${title("Accolades")}${["5x", "10x", "15x"].map(count => `<div class="kc-text-list-accolades__item"><div class="kc-text-list-accolades__title"><span>Accolade Title</span><span class="kc-text-list-accolades__pill">${count}</span></div><div class="kc-text-list-accolades__dates"><span class="kc-copy">2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, ...</span><button class="kc-btn-reset kc-link" type="button" aria-label="Show all years"><img src="../assets/icons/ic_fluent_add_24_regular.svg" alt="" aria-hidden="true"></button></div></div>`).join("")}`);
+    add("Text List", "Text List / Awards", "kc-text-list-awards",
+      `${title("Awards")}<div class="kc-text-list-awards__list">${[1, 2, 3].map(() => `<div class="kc-text-list-awards__award"><strong class="kc-t-highlight-s">Award Title</strong><span class="kc-copy">Wins: Year 1, Year 2. Nominations: X</span></div>`).join("")}</div>`);
+    const songPairs = [
+      [["Paper Lanterns", "3:42"], ["Slow Tide", "4:05"]],
+      [["Glass Garden", "3:18"], ["Morning Static", "2:57"]],
+      [["Silver Line", "4:23"], ["Northern Lights", "3:36"]]
+    ];
+    add("Text List", "Text List / Songs", "kc-text-list-songs",
+      `${title("Songs")}<div class="kc-text-list-songs__list">${songPairs.map(row => `<div class="kc-text-list-songs__row">${row.map(([name, time]) => `<div class="kc-text-list-songs__option"><span class="kc-copy-bold">${name}</span><span class="kc-copy" style="width:60px;text-align:right">${time}</span></div>`).join("")}</div>`).join("")}</div>`);
+
+    ["2", "3"].forEach(quantity => add("Text List", `Text List / Top Fact — Quantity=${quantity}`, `kc-text-list-top-fact kc-text-list-top-fact--quantity-${quantity}`,
+      Array.from({ length: Number(quantity) }, (_, i) => `${i ? '<span class="kc-divider--v"></span>' : ""}<div class="kc-text-list-top-fact__item"><span class="kc-copy-bold">Life Span</span><strong class="kc-t-highlight-l kc-gray-copy">12 - 17</strong><span class="kc-copy">years</span></div>`).join(""), "Top facts"));
+
+    add("Text List", "Text List / Top Fact/Text List/Attributions", "kc-text-list-top-fact-text-list-attributions",
+      `<p>Images: Stock Images. Data: Open Encyclopedia&nbsp; example.org&nbsp; example.net Hero image: Riverside Old Town at Lantern Bridge</p>`, "Attributions");
+
+    const quickFacts = `<div class="kc-text-list-quick-facts__fact"><dt class="kc-copy-bold">Fact title</dt><dd class="kc-copy">Lorem ipsum Dolor sit amet</dd></div>`;
+    add("Text List", "Text List / Quick Facts — Elements=Text Only, See more=No", "kc-text-list-quick-facts kc-text-list-quick-facts--text-only",
+      `<dl class="kc-text-list-quick-facts__list">${quickFacts.repeat(4)}</dl>`, "Quick facts");
+    add("Text List", "Text List / Quick Facts — Elements=Text Only, See more=Yes", "kc-text-list-quick-facts kc-text-list-quick-facts--text-only kc-text-list-quick-facts--see-more",
+      `<dl class="kc-text-list-quick-facts__list">${quickFacts.repeat(4)}</dl><div class="kc-text-list-quick-facts__more"><button class="kc-btn-reset kc-link" type="button" aria-expanded="false">See more</button><img src="../assets/icons/ic_fluent_chevron_down_12_regular.svg" alt="" aria-hidden="true"></div>`, "Quick facts");
+    add("Text List", "Text List / Quick Facts — Elements=Image, See more=No", "kc-text-list-quick-facts kc-text-list-quick-facts--image",
+      `<div class="kc-text-list-quick-facts__frame"><div class="kc-text-list-quick-facts__image-row"><div class="kc-text-list-quick-facts__artist">${image("text-list-quick-facts", 1, 40, 40, 50, "Avery Lane")}<div class="kc-text-list-quick-facts__pair"><span class="kc-copy-bold">Artist</span><span class="kc-copy">Avery Lane</span></div></div>${[["Album", "Northern Lights"], ["Genre", "Pop"], ["Released", "2019"], ["Duration", "4:23"]].map(x => `<div class="kc-text-list-quick-facts__pair"><span class="kc-copy-bold">${x[0]}</span><span class="kc-copy">${x[1]}</span></div>`).join("")}</div></div>`, "Quick facts");
+    add("Text List", "Text List / Attribution", "kc-text-list-attribution",
+      `<p class="kc-copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut ...</p>`, "Attribution");
+
+    add("Videos", "Videos / Trailer", "kc-videos-trailer",
+      `${title("Movie trailer")}<div class="kc-videos-trailer__frame">${image("videos-trailer", 1, 432, 242, 6, "The Long Field trailer")}<button class="kc-btn-on-image kc-videos-trailer__play" type="button" aria-label="Play trailer"><img src="../assets/icons/ic_fluent_play_24_filled.svg" alt="" aria-hidden="true"></button></div>`);
+    add("Videos", "Videos / Tik Toks", "kc-videos-tik-toks",
+      `${title("Popular short videos")}<div class="kc-videos-tik-toks__row">${[1, 2, 3, 4].map(n => `<div class="kc-card kc-videos-tik-toks__tile">${image("videos-tik-toks", n, 112, 206, 6, `Short video ${n}`)}<div class="kc-videos-tik-toks__gradient"></div><div class="kc-videos-tik-toks__copy"><strong class="kc-copy-bold kc-white-copy">XX weeks ago</strong><span class="kc-copy-small kc-white-copy">400K likes</span></div></div>`).join("")}</div><button class="kc-btn-flipper kc-videos-tik-toks__next" type="button" aria-label="Next"><img src="../assets/icons/ic_fluent_chevron_right_16_regular.svg" alt="" aria-hidden="true"></button>`);
+    add("Videos", "Videos / Landscape", "kc-videos-landscape",
+      `${title("Video Title")}<div class="kc-videos-landscape__row">${[1, 2, 3].map(n => `<div class="kc-card kc-videos-landscape__tile">${image("videos-landscape", n, 180, 100, 6, `Video ${n}`)}<div class="kc-videos-landscape__gradient"></div><div class="kc-videos-landscape__copy"><strong class="kc-copy-bold kc-white-copy">Video Title</strong><span class="kc-copy-small kc-white-copy">Northern Lights · 2019</span></div></div>`).join("")}</div><button class="kc-btn-flipper kc-videos-landscape__next" type="button" aria-label="Next"><img src="../assets/icons/ic_fluent_chevron_right_16_regular.svg" alt="" aria-hidden="true"></button>`);
+
+    const options = [["A", "Lorem Ipsum"], ["B", "Lorem Ipsum"], ["C", "Lorem Ipsum"], ["D", "Lorem Ipsum"]];
+    const pollRow = ([letter, text]) => `<button class="kc-miscellaneous-poll-trivia__option" type="button" aria-label="${letter}: ${text}"><span class="kc-btn-outline kc-miscellaneous-poll-trivia__letter" aria-hidden="true">${letter}</span><span class="kc-btn-outline kc-miscellaneous-poll-trivia__choice" aria-hidden="true">${text}</span></button>`;
+    ["quantity-3-columns-1", "quantity-4-columns-1", "quantity-4-columns-2"].forEach(variant => {
+      const twoCols = variant.endsWith("2");
+      const count = variant.includes("quantity-3") ? 3 : 4;
+      const labels = twoCols ? [["A", "Jordan &amp; Sam"], ["C", "Jordan &amp; Riley"], ["B", "Jordan &amp; Morgan"], ["D", "No opinion"]] : options.slice(0, count);
+      const choices = twoCols ? `<div class="kc-miscellaneous-poll-trivia__columns"><div class="kc-col">${pollRow(labels[0])}${pollRow(labels[1])}</div><div class="kc-col">${pollRow(labels[2])}${pollRow(labels[3])}</div></div>` : `<div class="kc-miscellaneous-poll-trivia__options">${labels.map(pollRow).join("")}</div>`;
+      const label = twoCols ? "Quantity=4, Columns=2" : `Quantity=${count}, Columns=1`;
+      add("Miscellaneous", `Miscellaneous / Poll & Trivia — ${label}`, `kc-miscellaneous-poll-trivia kc-miscellaneous-poll-trivia--${variant}`,
+        `<fieldset style="border:0;margin:0;padding:0"><legend class="kc-miscellaneous-poll-trivia__question">Trivia Question</legend>${choices}</fieldset>`, "Poll and trivia");
+    });
+
+    add("Miscellaneous", "Miscellaneous / Donate", "kc-miscellaneous-donate",
+      `<div class="kc-miscellaneous-donate__copy"><div class="kc-miscellaneous-donate__text"><strong>Donate with Contoso</strong><p>Your gift will support [company]</p></div><button class="kc-btn-outline kc-miscellaneous-donate__button" type="button">Donate</button></div><div class="kc-miscellaneous-donate__image">${mono("C", "Contoso", 104, 22)}</div>`, "Donate");
+    add("Miscellaneous", "Miscellaneous / Timeline", "kc-miscellaneous-timeline",
+      `${title("Timeline title", false)}<ol class="kc-miscellaneous-timeline__list" style="list-style:none;padding:0">${[1901, 1902, 1903, 1904, 1905].map(year => `<li class="kc-miscellaneous-timeline__entry"><span class="kc-miscellaneous-timeline__rail"></span><div class="kc-miscellaneous-timeline__content"><strong class="kc-miscellaneous-timeline__year">${year}</strong><p class="kc-miscellaneous-timeline__quote">${longCopy}</p></div></li>`).join("")}</ol>`);
+    add("Miscellaneous", "Miscellaneous / Quote", "kc-miscellaneous-quote",
+      `<figure class="kc-miscellaneous-quote__frame"><img class="kc-miscellaneous-quote__glyph" src="../assets/icons/ic_fluent_text_quote_24_filled.svg" alt="" aria-hidden="true"><img class="kc-miscellaneous-quote__glyph kc-miscellaneous-quote__glyph--close" src="../assets/icons/ic_fluent_text_quote_24_filled.svg" alt="" aria-hidden="true"><blockquote class="kc-miscellaneous-quote__text">${longCopy}</blockquote></figure>`, "Quote");
+    add("Miscellaneous", "Miscellaneous / Serving Size", "kc-miscellaneous-serving-size",
+      `<strong class="kc-miscellaneous-serving-size__label">Serving Size: Food (size)</strong><div class="kc-miscellaneous-serving-size__content"><div class="kc-miscellaneous-serving-size__circles">${["Calories", "Fat", "Carbs", "Sugar"].map(name => `<div class="kc-miscellaneous-serving-size__circle"><span class="kc-copy-bold">${name}</span><strong>000</strong><span class="kc-copy-small">XX%</span></div>`).join("")}</div><span class="kc-miscellaneous-serving-size__foot">% Daily value*</span></div>`, "Serving size");
+    add("Miscellaneous", "Miscellaneous / Visit Times", "kc-miscellaneous-visit-times",
+      `${title("Best times to visit")}<div class="kc-miscellaneous-visit-times__graph" role="img" aria-label="Visitor numbers 2015–2026, highest 2020–2023">${[0, 40, 80].map(y => `<span class="kc-miscellaneous-visit-times__grid" style="top:${y}px"></span>`).join("")}${[29, 29, 29, 52, 52, 79, 79, 79, 79, 52, 19, 19].map((h, i) => `<span class="kc-miscellaneous-visit-times__bar" style="left:${[12, 48.01, 84.01, 120.01, 156.01, 192.01, 228.01, 264.01, 300.01, 336.01, 372.01, 408.01][i]}px;top:${79 - h}px;height:${h}px"></span>`).join("")}${Array.from({ length:12 }, (_, i) => `<span class="kc-miscellaneous-visit-times__year" style="left:${i * 35.97}px;top:${i > 7 ? 84 : 83}px">${2015 + i}</span>`).join("")}</div>`);
+    add("Miscellaneous", "Miscellaneous / Travel", "kc-miscellaneous-travel",
+      [["book_globe", "Travel guide"], ["airplane", "Book flights"], ["bed", "Book hotels"]].map(([icon, text]) => `<a class="kc-btn-outline kc-miscellaneous-travel__action" href="#"><img src="../assets/icons/ic_fluent_${icon}_20_regular.svg" alt="" aria-hidden="true"><span>${text}</span></a>`).join(""), "Travel");
+    add("Miscellaneous", "Miscellaneous / Listen", "kc-miscellaneous-listen",
+      `<div class="kc-module-title kc-miscellaneous-listen__title"><h3>Listen</h3></div><div class="kc-miscellaneous-listen__row">${[["1", "Stream One", true], ["2", "Radio Two"], ["3", "Tune Three"], ["4", "Wave Four"]].map(([letter, name, round]) => `<a class="kc-btn-outline kc-miscellaneous-listen__service" href="#">${mono(letter, name, 32, 32, round)}<span class="kc-copy-bold">${name}</span></a>`).join("")}</div>`, "Listen");
+    add("Miscellaneous", "Miscellaneous / Company Details", "kc-miscellaneous-company-details",
+      [true, false].map(shadow => `<div class="kc-card kc-miscellaneous-company-details__card"><div class="kc-miscellaneous-company-details__inner${shadow ? " kc-miscellaneous-company-details__inner--shadow" : ""}">${image("miscellaneous-company-details", shadow ? 1 : 2, 24, 24, 100, "Company")}<div class="kc-miscellaneous-company-details__text"><span class="kc-copy-bold">Lorem ipsum</span><span class="kc-copy">Lorem ipsum</span></div></div></div>`).join(""), "Company details");
+    add("Miscellaneous", "Miscellaneous / Social Media", "kc-miscellaneous-social-media",
+      [["E", "Open Encyclopedia"], ["F", "Friends app"], ["M", "Movie DB"], ["P", "Photo app"], ["T", "Video app"]].map(([letter, text]) => `<a class="kc-btn-outline kc-miscellaneous-social-media__pill" href="#">${mono(letter, text, 28, 28, true)}<span class="kc-copy-small">${text}</span></a>`).join("") + `<button class="kc-btn-flipper kc-miscellaneous-social-media__next" type="button" aria-label="Next"><img src="../assets/icons/ic_fluent_chevron_right_16_regular.svg" alt="" aria-hidden="true"></button>`, "Social media");
+    add("Miscellaneous", "Miscellaneous / Map", "kc-miscellaneous-map",
+      `<div class="kc-miscellaneous-map__frame" role="img" aria-label="Map"><button class="kc-btn-on-image kc-miscellaneous-map__expand" type="button" aria-label="Expand map"><img src="../assets/icons/ic_fluent_arrow_maximize_20_regular.svg" alt="" aria-hidden="true"></button></div>`, "Map");
+    add("Miscellaneous", "Miscellaneous / Products", "kc-miscellaneous-products",
+      `${title("Shop related products")}<div class="kc-miscellaneous-products__row">${[1, 2, 3].map(n => `<article class="kc-card kc-miscellaneous-products__card">${image("miscellaneous-products", n, 120, 120, 6, `Product ${n} image`)}<div class="kc-miscellaneous-products__text"><span class="kc-copy kc-no-ls">Product title</span><strong class="kc-copy-bold kc-no-ls">${n === 1 ? "$10.00 $100.00" : "$10.00"}</strong><span class="kc-copy kc-no-ls kc-miscellaneous-products__store">Store</span></div></article>`).join("")}</div>`);
+
+    for (const sectionName of sectionNames) {
+      const section = document.createElement("section");
+      section.className = "kc-board-section";
+      const heading = document.createElement("h2");
+      heading.textContent = sectionName;
+      const grid = document.createElement("div");
+      grid.className = "kc-board-grid";
+      for (const item of modules.filter(entry => entry.section === sectionName)) {
+        const wrapper = document.createElement("div");
+        wrapper.className = "kc-board-item";
+        const label = document.createElement("p");
+        label.className = "kc-board-label";
+        label.textContent = item.label;
+        const root = document.createElement("section");
+        root.className = `kc-module ${item.cls}`;
+        root.dataset.kc = item.label.split(" — ")[0];
+        if (item.aria) root.setAttribute("aria-label", item.aria);
+        root.innerHTML = item.content;
+        wrapper.append(label, root);
+        grid.append(wrapper);
+      }
+      section.append(heading, grid);
+      board.append(section);
+    }
+  </script>
+</body>
+</html>

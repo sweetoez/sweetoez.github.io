@@ -1,0 +1,1267 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>One card system, every screen</title>
+  <style>
+    @font-face {
+      font-family: "Selawik";
+      src: url("/fonts/selawik/selawk.ttf") format("truetype");
+      font-display: swap;
+      font-style: normal;
+      font-weight: 400;
+    }
+
+    @font-face {
+      font-family: "Selawik";
+      src: url("/fonts/selawik/selawksl.ttf") format("truetype");
+      font-display: swap;
+      font-style: normal;
+      font-weight: 300;
+    }
+
+    @font-face {
+      font-family: "Selawik";
+      src: url("/fonts/selawik/selawksb.ttf") format("truetype");
+      font-display: swap;
+      font-style: normal;
+      font-weight: 600;
+    }
+
+    @font-face {
+      font-family: "Selawik";
+      src: url("/fonts/selawik/selawkb.ttf") format("truetype");
+      font-display: swap;
+      font-style: normal;
+      font-weight: 700;
+    }
+
+    * {
+      box-sizing: border-box;
+      font-family: "Segoe UI Variable Text", "Segoe UI", Selawik, system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+    }
+
+    body {
+      margin: 0;
+      background: #EDEDEA;
+      color: #1A1A1A;
+      font-family: "Segoe UI Variable Text", "Segoe UI", Selawik, system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+    }
+
+    .page-shell {
+      padding: 48px 32px;
+    }
+
+    .eyebrow {
+      margin: 0;
+      color: #6B6B6B;
+      font-size: 13px;
+      letter-spacing: 0.12em;
+      line-height: 1.2;
+    }
+
+    h1 {
+      margin: 12px 0 0;
+      color: #1A1A1A;
+      font-size: 40px;
+      font-weight: 600;
+      line-height: 48px;
+    }
+
+    .subtitle {
+      max-width: 760px;
+      margin: 16px 0 0;
+      color: #4A4A4A;
+      font-size: 20px;
+      line-height: 1.4;
+    }
+
+    .controls {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 16px;
+      margin: 32px 0 24px;
+      color: #333333;
+      font-size: 14px;
+    }
+
+    .width-control,
+    .column-control,
+    .presets {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    #w {
+      width: 220px;
+      margin: 0;
+      accent-color: #1A1A1A;
+    }
+
+    .presets {
+      gap: 8px;
+    }
+
+    button {
+      padding: 6px 14px;
+      border: 1px solid #BDBDB8;
+      border-radius: 999px;
+      background: #FFFFFF;
+      color: #333333;
+      font: inherit;
+      cursor: pointer;
+    }
+
+    button[aria-pressed="true"] {
+      border-color: #1A1A1A;
+      background: #1A1A1A;
+      color: #FFFFFF;
+    }
+
+    .column-control {
+      gap: 8px;
+    }
+
+    .column-control input {
+      width: 16px;
+      height: 16px;
+      margin: 0;
+      accent-color: #1A1A1A;
+    }
+
+    output {
+      color: #333333;
+      font-size: 14px;
+      font-variant-numeric: tabular-nums;
+    }
+
+    :focus-visible {
+      outline: 2px solid #1A1A1A;
+      outline-offset: 2px;
+    }
+
+    .stage-scroll {
+      width: 100%;
+      overflow-x: auto;
+    }
+
+    .stage {
+      position: relative;
+      width: 1447px;
+      margin: 0 auto;
+      padding: 24px;
+      border: 1px solid #D9D9D5;
+      border-radius: 16px;
+      background: #F5F5F5;
+      container-name: stage;
+      container-type: inline-size;
+    }
+
+    .feed {
+      position: relative;
+      display: grid;
+      width: 100%;
+      max-width: 360px;
+      margin-inline: auto;
+      align-items: stretch;
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+      justify-content: center;
+      column-gap: 16px;
+      row-gap: 16px;
+    }
+
+    .card {
+      display: flex;
+      min-width: 0;
+      height: 100%;
+      flex-direction: column;
+      gap: 16px;
+      overflow: hidden;
+      padding: 12px;
+      border: none;
+      border-radius: 24px;
+      background: #FFFFFF;
+      box-shadow: inset 0 0 0 1px #E0E0E0;
+      box-sizing: border-box;
+    }
+
+    .media {
+      width: 100%;
+      order: -1;
+      height: auto;
+      aspect-ratio: 312 / 172;
+      border-radius: 12px;
+      background-color: #D6D6D6;
+      background-position: center;
+      background-size: cover;
+    }
+
+    .text {
+      display: flex;
+      min-width: 0;
+      flex: 1;
+      flex-direction: column;
+      gap: 4px;
+      padding: 0 18px 18px;
+    }
+
+    .publisher-row {
+      display: flex;
+      height: 28px;
+      flex: none;
+      align-items: center;
+      gap: 2px;
+      white-space: nowrap;
+    }
+
+    .publisher-logo {
+      display: flex;
+      width: 16px;
+      height: 16px;
+      flex: none;
+      align-items: center;
+      justify-content: center;
+      border-radius: 4px;
+      background: #616161;
+      color: #FFFFFF;
+      font-size: 10px;
+      font-weight: 600;
+      line-height: 16px;
+    }
+
+    .publisher-name {
+      overflow: hidden;
+      color: #424242;
+      padding: 0 2px;
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 16px;
+      text-overflow: ellipsis;
+    }
+
+    .publisher-time {
+      flex: none;
+      color: #616161;
+      padding: 0 2px;
+      font-size: 12px;
+      line-height: 16px;
+    }
+
+    .title-container {
+      padding: 2px;
+    }
+
+    h3 {
+      display: -webkit-box;
+      overflow: hidden;
+      margin: 0;
+      color: #272320;
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 26px;
+      text-overflow: ellipsis;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 3;
+    }
+
+    .title-container {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .title-container h3,
+    .ad-card__title {
+      min-height: 78px;
+    }
+
+    .u1,
+    .ad-card {
+      grid-column: span 1;
+    }
+
+    .cols,
+    .subcols {
+      position: absolute;
+      z-index: 1;
+      display: none;
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+      grid-auto-rows: 1fr;
+      justify-content: center;
+      column-gap: 16px;
+      row-gap: 16px;
+      pointer-events: none;
+      inset: 0;
+    }
+
+    .cols > div {
+      border-radius: 24px;
+      outline: 1px dashed rgba(0, 0, 0, 0.25);
+      background: rgba(0, 0, 0, 0.05);
+    }
+
+    .cols > :nth-child(n + 2),
+    .subcols > :nth-child(n + 2) {
+      display: none;
+    }
+
+    .stage.show-columns .cols {
+      display: grid;
+    }
+
+    .stage.show-subcolumns .subcols {
+      display: grid;
+    }
+
+    .subcolumn-group {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      overflow: hidden;
+      border-radius: 24px;
+    }
+
+    .subcolumn-group > div {
+      background: rgba(0, 0, 0, 0.035);
+      outline: 1px dashed rgba(0, 0, 0, 0.2);
+    }
+
+    .ad-card {
+      position: relative;
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 24px;
+      box-shadow: inset 0 0 0 1px #E0E0E0;
+      background: #FFFFFF;
+    }
+
+    .ad-card__content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+      flex: 1 0 0;
+      align-self: stretch;
+      min-width: 0;
+    }
+
+    .ad-card__media {
+      box-sizing: border-box;
+      position: relative;
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-start;
+      gap: 8px;
+      padding: 12px;
+      align-self: stretch;
+      flex: none;
+      aspect-ratio: 312 / 172;
+      border-radius: 12px;
+      overflow: hidden;
+      background: #BDBDBD url("/assets/images/msn/ad-1.jpg") center / cover no-repeat;
+    }
+
+    .ad-card__text {
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 4px;
+      padding: 0 18px 18px 18px;
+      flex: 1 0 0;
+      align-self: stretch;
+      min-width: 0;
+    }
+
+    .ad-card__publisher {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 0;
+      align-self: stretch;
+      min-width: 0;
+    }
+
+    .ad-card__base {
+      display: flex;
+      align-items: center;
+      gap: 2px;
+      width: 100%;
+      min-width: 0;
+      height: 28px;
+    }
+
+    .ad-card__attribution {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 2px;
+      min-width: 0;
+      flex: 0 1 auto;
+    }
+
+    .ad-card__icon {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 6px 0;
+    }
+
+    .ad-card__favicon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 16px;
+      height: 16px;
+      border-radius: 4px;
+      background: #616161;
+      color: #FFFFFF;
+      font-size: 10px;
+      line-height: 16px;
+      font-weight: 600;
+    }
+
+    .ad-card__name-wrap {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-width: 0;
+      padding: 0;
+    }
+
+    .ad-card__name {
+      overflow: hidden;
+      color: #424242;
+      padding: 0 2px;
+      font-size: 12px;
+      line-height: 16px;
+      font-weight: 600;
+      font-style: normal;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .ad-card__meta {
+      display: flex;
+      align-items: center;
+      gap: 2px;
+      height: 28px;
+      flex: none;
+    }
+
+    .ad-card__dot {
+      color: #616161;
+      padding: 0 2px;
+      font-size: 12px;
+      line-height: 16px;
+      font-weight: 400;
+    }
+
+    .ad-card__sponsored {
+      color: #616161;
+      padding: 0 2px;
+      font-size: 12px;
+      line-height: 16px;
+      font-weight: 400;
+      white-space: nowrap;
+    }
+
+    .ad-card__title-wrap {
+      box-sizing: border-box;
+      display: flex;
+      padding: 2px;
+      flex: 1 0 0;
+      align-self: stretch;
+      min-width: 0;
+    }
+
+    .ad-card__title {
+      flex: 1 0 0;
+      align-self: stretch;
+      margin: 0;
+      min-height: 78px;
+      color: #272320;
+      font-size: 20px;
+      line-height: 26px;
+      font-weight: 600;
+      font-style: normal;
+      letter-spacing: 0;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 3;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .ad-card__link {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .ad-card__link::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: 24px;
+      z-index: 1;
+    }
+
+    .ad-card__link:focus-visible {
+      outline: none;
+    }
+
+    .ad-card:has(.ad-card__link:focus-visible) {
+      outline: 2px solid #272320;
+      outline-offset: 2px;
+    }
+
+    .ad-card__more {
+      position: relative;
+      z-index: 2;
+      box-sizing: border-box;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 4px;
+      min-width: 36px;
+      min-height: 36px;
+      padding: 0 6px;
+      border: none;
+      border-radius: 12px;
+      background: rgba(0, 0, 0, 0.55);
+      color: #FFFFFF;
+      cursor: pointer;
+      visibility: hidden;
+    }
+
+    .ad-card:hover .ad-card__more,
+    .ad-card:focus-within .ad-card__more {
+      visibility: visible;
+    }
+
+    .ad-card__more:focus-visible {
+      outline: 2px solid #272320;
+      outline-offset: 2px;
+    }
+
+    .gem-section {
+      width: 100%;
+      margin: 48px auto 0;
+    }
+
+    .gem-section-title {
+      margin: 0 0 16px;
+      color: #272320;
+      font-size: 24px;
+      font-weight: 650;
+      line-height: 32px;
+    }
+
+    .gem-size-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      width: 100%;
+      margin-bottom: 32px;
+    }
+
+    .gem-size-row--1u {
+      flex-wrap: wrap;
+    }
+
+    .gem-size-row--scroll {
+      overflow-x: auto;
+      overscroll-behavior-x: contain;
+      padding-bottom: 8px;
+    }
+
+    .gem-example {
+      display: flex;
+      flex-direction: column;
+      flex: none;
+    }
+
+    .gem-example--1u {
+      min-width: 300px;
+      max-width: 360px;
+      flex: 0 1 336px;
+    }
+
+    .gem-example--2u {
+      width: 688px;
+    }
+
+    .gem-example--3u {
+      width: 1040px;
+    }
+
+    .gem-caption {
+      margin: 0 0 16px;
+      padding: 10px 2px;
+      color: #272320;
+      font-size: 15px;
+      font-weight: 410;
+      line-height: 20px;
+      font-feature-settings: "calt" 0;
+    }
+
+    .gem-card {
+      flex: none;
+      overflow: hidden;
+      color: #272320;
+    }
+
+    .gem-card--1u {
+      width: 100%;
+      min-width: 300px;
+      max-width: 360px;
+      aspect-ratio: 28 / 29;
+      min-height: 310.714px;
+      max-height: 372.857px;
+      flex-direction: column;
+    }
+
+    .gem-card--2u {
+      width: 688px;
+      min-width: 616px;
+      max-width: 736px;
+      aspect-ratio: 172 / 87;
+      min-height: 311.581px;
+      max-height: 372.279px;
+    }
+
+    .gem-card--3u {
+      width: 1040px;
+      min-width: 932px;
+      max-width: 1112px;
+      aspect-ratio: 260 / 87;
+      min-height: 311.862px;
+      max-height: 372.092px;
+    }
+
+    .gem-content {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      min-width: 0;
+      min-height: 0;
+    }
+
+    .gem-content--1u {
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .gem-content--row {
+      align-items: stretch;
+      gap: 32px;
+    }
+
+    .gem-image {
+      position: relative;
+      box-sizing: border-box;
+      display: flex;
+      flex: none;
+      align-items: flex-start;
+      justify-content: flex-end;
+      overflow: hidden;
+      padding: 12px;
+      border-radius: 12px;
+      background: #D3D3D3;
+    }
+
+    .gem-image--1u {
+      width: 100%;
+      aspect-ratio: 78 / 43;
+    }
+
+    .gem-image--2u,
+    .gem-image--3u {
+      height: 100%;
+      width: auto;
+    }
+
+    .gem-image--2u {
+      aspect-ratio: 107 / 80;
+    }
+
+    .gem-image--3u {
+      aspect-ratio: 8 / 5;
+    }
+
+    .gem-image > img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .gem-card .ad-card__more {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+    }
+
+    .gem-card:hover .ad-card__more,
+    .gem-card:focus-within .ad-card__more,
+    .gem-card.is-hover .ad-card__more {
+      visibility: visible;
+    }
+
+    .gem-text {
+      display: flex;
+      min-width: 0;
+      min-height: 0;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .gem-text--1u {
+      gap: 4px;
+      margin: 0 18px 18px;
+      padding: 2px;
+    }
+
+    .gem-text--2u {
+      gap: 4px;
+      padding: 18px 8px 0 18px;
+    }
+
+    .gem-text--3u {
+      gap: 8px;
+      padding: 18px 8px 0 18px;
+    }
+
+    .gem-attribution {
+      display: flex;
+      min-width: 0;
+      align-items: center;
+      color: #272320;
+      font-size: 14px;
+      font-weight: 550;
+      line-height: 20px;
+      white-space: nowrap;
+    }
+
+    .gem-attribution--inline {
+      gap: 2px;
+    }
+
+    .gem-attribution--split {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+
+    .gem-favline {
+      display: inline-flex;
+      align-items: center;
+      gap: 2px;
+      flex: none;
+    }
+
+    .gem-fav-stack {
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .gem-favicon {
+      display: block;
+      box-sizing: border-box;
+      width: 16px;
+      height: 16px;
+      flex: none;
+      overflow: hidden;
+      border: 0.5px solid rgba(0, 0, 0, 0.10);
+      border-radius: 6px;
+      background: #D3D3D3;
+    }
+
+    .gem-favicon + .gem-favicon {
+      margin-left: -2px;
+    }
+
+    .gem-favicon img {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    .gem-count,
+    .gem-meta {
+      flex: none;
+    }
+
+    .gem-title-wrap {
+      min-width: 0;
+      padding-left: 2px;
+    }
+
+    .gem-title {
+      display: -webkit-box;
+      overflow: hidden;
+      margin: 0;
+      color: #272320;
+      font-size: 20px;
+      font-weight: 650;
+      line-height: 26px;
+      text-overflow: ellipsis;
+      -webkit-box-orient: vertical;
+    }
+
+    .gem-title--1u {
+      -webkit-line-clamp: 3;
+    }
+
+    .gem-title--2u {
+      -webkit-line-clamp: 4;
+    }
+
+    .gem-title--3u {
+      -webkit-line-clamp: 2;
+    }
+
+    .gem-bullets {
+      display: flex;
+      min-height: 0;
+      flex-direction: column;
+      gap: 4px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .gem-bullets li {
+      display: flex;
+      min-width: 0;
+      align-items: flex-start;
+      gap: 12px;
+      color: #272320;
+      font-size: 14px;
+      font-weight: 450;
+      line-height: 20px;
+      font-feature-settings: "calt" 0;
+    }
+
+    .gem-bullet-marker {
+      flex: 0 0 12px;
+    }
+
+    .gem-bullet-text {
+      display: -webkit-box;
+      min-width: 0;
+      overflow: hidden;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+    }
+
+    @media (max-width: 720px) {
+      .gem-section {
+        width: calc(100% + 64px);
+        margin-right: -32px;
+        margin-left: -32px;
+      }
+
+      .gem-section-title {
+        margin-right: 32px;
+        margin-left: 32px;
+      }
+    }
+
+    .footer-note {
+      margin: 40px 0 0;
+      color: #4A4A4A;
+      font-size: 16px;
+      line-height: 1.4;
+    }
+
+    @container stage (min-width: 614px) {
+      .feed,
+      .cols,
+      .subcols {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .feed {
+        max-width: 736px;
+      }
+
+      .cols > :nth-child(2) {
+        display: block;
+      }
+
+      .subcols > :nth-child(2) {
+        display: grid;
+      }
+    }
+
+    @container stage (min-width: 930px) {
+      .feed,
+      .cols,
+      .subcols {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .feed {
+        max-width: 1040px;
+      }
+
+      .cols > :nth-child(3) {
+        display: block;
+      }
+
+      .subcols > :nth-child(3) {
+        display: grid;
+      }
+    }
+
+    @container stage (max-width: 613px) {
+      .cols > :nth-child(n + 2),
+      .subcols > :nth-child(n + 2) {
+        display: none;
+      }
+    }
+
+    .stage.show-columns .card {
+      position: relative;
+      z-index: 0;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto;
+        transition: none;
+        animation: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-shell">
+    <header>
+      <p class="eyebrow">COMPONENT SYSTEM</p>
+      <h1>One card system, every screen</h1>
+      <p class="subtitle">Drag the width. Cards flex between their min and max, then the grid steps from 3 to 2 to 1 columns.</p>
+    </header>
+
+    <div class="controls">
+      <div class="width-control">
+        <label for="w">Screen width</label>
+        <input type="range" id="w" min="320" max="1447" step="1" value="1447">
+      </div>
+      <div class="presets" role="group" aria-label="Screen width presets">
+        <button type="button" data-preset="Desktop" data-width="1447" aria-pressed="false">Desktop</button>
+        <button type="button" data-preset="Tablet" data-width="800" aria-pressed="false">Tablet</button>
+        <button type="button" data-preset="Mobile" data-width="375" aria-pressed="false">Mobile</button>
+      </div>
+      <label class="column-control" for="show-columns">
+        <input type="checkbox" id="show-columns">
+        Show columns
+      </label>
+      <label class="column-control" for="show-subcolumns">
+        <input type="checkbox" id="show-subcolumns">
+        Sub-columns
+      </label>
+      <output id="readout" aria-live="polite"></output>
+    </div>
+
+    <div class="stage-scroll">
+      <div class="stage">
+        <div class="feed">
+          <article class="ad-card">
+            <div class="ad-card__content">
+              <div class="ad-card__media">
+                <button class="ad-card__more" type="button" aria-label="More options">
+                  <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="6" cy="12" r="1.75" fill="currentColor"/><circle cx="12" cy="12" r="1.75" fill="currentColor"/><circle cx="18" cy="12" r="1.75" fill="currentColor"/></svg>
+                </button>
+              </div>
+              <div class="ad-card__text">
+                <div class="ad-card__publisher">
+                  <div class="ad-card__base">
+                    <div class="ad-card__attribution">
+                      <span class="ad-card__icon"><span class="ad-card__favicon" aria-hidden="true">N</span></span>
+                      <span class="ad-card__name-wrap"><span class="ad-card__name">Northwind Mobile</span></span>
+                    </div>
+                    <div class="ad-card__meta">
+                      <span class="ad-card__dot" aria-hidden="true">·</span>
+                      <span class="ad-card__sponsored">Sponsored</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="ad-card__title-wrap">
+                  <h3 class="ad-card__title"><a class="ad-card__link" href="#">Get mobile coverage that moves with you, wherever you go.</a></h3>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="card u1">
+            <div class="text">
+              <div class="publisher-row">
+                <span class="publisher-logo" aria-hidden="true">D</span>
+                <span class="publisher-name">The Daily Grain</span>
+                <span class="publisher-time">· 2h</span>
+              </div>
+              <div class="title-container">
+                <h3>Fresh pantry staples that make busy weeknights easier</h3>
+              </div>
+            </div>
+            <div class="media" aria-hidden="true" style="background-image:url('/assets/images/msn/card-2.jpg')"></div>
+          </article>
+
+          <article class="card u1">
+            <div class="text">
+              <div class="publisher-row">
+                <span class="publisher-logo" aria-hidden="true">S</span>
+                <span class="publisher-name">Signal &amp; Noise</span>
+                <span class="publisher-time">· 2h</span>
+              </div>
+              <div class="title-container">
+                <h3>Build a tidy, reliable home network without the stress</h3>
+              </div>
+            </div>
+            <div class="media" aria-hidden="true" style="background-image:url('/assets/images/msn/card-3.jpg')"></div>
+          </article>
+
+          <article class="card u1">
+            <div class="text">
+              <div class="publisher-row">
+                <span class="publisher-logo" aria-hidden="true">T</span>
+                <span class="publisher-name">Trailhead</span>
+                <span class="publisher-time">· 2h</span>
+              </div>
+              <div class="title-container">
+                <h3>The quiet return of overnight trains is changing travel</h3>
+              </div>
+            </div>
+            <div class="media" aria-hidden="true" style="background-image:url('/assets/images/msn/card-4.jpg')"></div>
+          </article>
+
+          <article class="card u1">
+            <div class="text">
+              <div class="publisher-row">
+                <span class="publisher-logo" aria-hidden="true">O</span>
+                <span class="publisher-name">Open Studio</span>
+                <span class="publisher-time">· 2h</span>
+              </div>
+              <div class="title-container">
+                <h3>Flexible design systems help growing product teams scale</h3>
+              </div>
+            </div>
+            <div class="media" aria-hidden="true" style="background-image:url('/assets/images/msn/card-5.jpg')"></div>
+          </article>
+
+          <article class="card u1">
+            <div class="text">
+              <div class="publisher-row">
+                <span class="publisher-logo" aria-hidden="true">N</span>
+                <span class="publisher-name">Night Market</span>
+                <span class="publisher-time">· 2h</span>
+              </div>
+              <div class="title-container">
+                <h3>Easy weekend meals made with just one great pan</h3>
+              </div>
+            </div>
+            <div class="media" aria-hidden="true" style="background-image:url('/assets/images/msn/card-7.jpg')"></div>
+          </article>
+
+          <div class="cols" aria-hidden="true">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+          <div class="subcols" aria-hidden="true">
+            <div class="subcolumn-group"><div></div><div></div><div></div><div></div></div>
+            <div class="subcolumn-group"><div></div><div></div><div></div><div></div></div>
+            <div class="subcolumn-group"><div></div><div></div><div></div><div></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="gem-section" aria-labelledby="gem-heading">
+      <h2 id="gem-heading" class="gem-section-title">Gem cards</h2>
+      <div class="gem-size-row gem-size-row--1u">
+        <div class="gem-example gem-example--1u">
+          <p class="gem-caption">Gem · 1u · Rest</p>
+          <article class="ad-card gem-card gem-card--1u" aria-label="Gem card, 1u, rest">
+            <div class="gem-content gem-content--1u">
+              <div class="gem-image gem-image--1u">
+                <img src="../assets/images/msn/cards/gem-img-1.png" alt="" aria-hidden="true" onerror="this.style.visibility='hidden'">
+                <button class="ad-card__more" type="button" aria-label="More options">
+                  <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="6" cy="12" r="1.75" fill="currentColor"/><circle cx="12" cy="12" r="1.75" fill="currentColor"/><circle cx="18" cy="12" r="1.75" fill="currentColor"/></svg>
+                </button>
+              </div>
+              <div class="gem-text gem-text--1u">
+                <div class="gem-attribution gem-attribution--inline">
+                  <span class="gem-fav-stack" aria-hidden="true"><span class="gem-favicon"><img src="../assets/images/msn/cards/gem-fav-1.svg" alt="" onerror="this.style.visibility='hidden'"></span><span class="gem-favicon"><img src="../assets/images/msn/cards/gem-fav-2.svg" alt="" onerror="this.style.visibility='hidden'"></span><span class="gem-favicon"><img src="../assets/images/msn/cards/gem-fav-3.svg" alt="" onerror="this.style.visibility='hidden'"></span></span>
+                  <span class="gem-count">+5</span>
+                  <span class="gem-meta"> · Curated by Copilot · 30m</span>
+                </div>
+                <div class="gem-title-wrap"><h3 class="gem-title gem-title--1u">Oscars Introduce Updated Viewing Guidelines and AI Rules</h3></div>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="gem-example gem-example--1u">
+          <p class="gem-caption">Gem · 1u · Hover</p>
+          <article class="ad-card gem-card gem-card--1u is-hover" aria-label="Gem card, 1u, hover">
+            <div class="gem-content gem-content--1u">
+              <div class="gem-image gem-image--1u">
+                <img src="../assets/images/msn/cards/gem-img-1.png" alt="" aria-hidden="true" onerror="this.style.visibility='hidden'">
+                <button class="ad-card__more" type="button" aria-label="More options">
+                  <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="6" cy="12" r="1.75" fill="currentColor"/><circle cx="12" cy="12" r="1.75" fill="currentColor"/><circle cx="18" cy="12" r="1.75" fill="currentColor"/></svg>
+                </button>
+              </div>
+              <div class="gem-text gem-text--1u">
+                <div class="gem-attribution gem-attribution--inline">
+                  <span class="gem-fav-stack" aria-hidden="true"><span class="gem-favicon"><img src="../assets/images/msn/cards/gem-fav-1.svg" alt="" onerror="this.style.visibility='hidden'"></span><span class="gem-favicon"><img src="../assets/images/msn/cards/gem-fav-2.svg" alt="" onerror="this.style.visibility='hidden'"></span><span class="gem-favicon"><img src="../assets/images/msn/cards/gem-fav-3.svg" alt="" onerror="this.style.visibility='hidden'"></span></span>
+                  <span class="gem-count">+5</span>
+                  <span class="gem-meta"> · Curated by Copilot · 30m</span>
+                </div>
+                <div class="gem-title-wrap"><h3 class="gem-title gem-title--1u">Oscars Introduce Updated Viewing Guidelines and AI Rules</h3></div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+      <div class="gem-size-row gem-size-row--scroll">
+        <div class="gem-example gem-example--2u">
+          <p class="gem-caption">Gem · 2u · Rest</p>
+          <article class="ad-card gem-card gem-card--2u" aria-label="Gem card, 2u, rest">
+            <div class="gem-content gem-content--row">
+              <div class="gem-text gem-text--2u">
+                <div class="gem-attribution gem-attribution--split">
+                  <span class="gem-favline"><span class="gem-fav-stack" aria-hidden="true"><span class="gem-favicon"><img src="../assets/images/msn/cards/gem-fav-1.svg" alt="" onerror="this.style.visibility='hidden'"></span><span class="gem-favicon"><img src="../assets/images/msn/cards/gem-fav-2.svg" alt="" onerror="this.style.visibility='hidden'"></span><span class="gem-favicon"><img src="../assets/images/msn/cards/gem-fav-3.svg" alt="" onerror="this.style.visibility='hidden'"></span></span><span class="gem-count">+5</span></span>
+                  <span class="gem-meta">Curated by Copilot · 30m</span>
+                </div>
+                <div class="gem-title-wrap"><h3 class="gem-title gem-title--2u">Oscars Introduce Updated Viewing Guidelines and AI Rules</h3></div>
+              </div>
+              <div class="gem-image gem-image--2u">
+                <img src="../assets/images/msn/cards/gem-img-1.png" alt="" aria-hidden="true" onerror="this.style.visibility='hidden'">
+                <button class="ad-card__more" type="button" aria-label="More options">
+                  <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="6" cy="12" r="1.75" fill="currentColor"/><circle cx="12" cy="12" r="1.75" fill="currentColor"/><circle cx="18" cy="12" r="1.75" fill="currentColor"/></svg>
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="gem-example gem-example--2u">
+          <p class="gem-caption">Gem · 2u · Hover</p>
+          <article class="ad-card gem-card gem-card--2u is-hover" aria-label="Gem card, 2u, hover">
+            <div class="gem-content gem-content--row">
+              <div class="gem-text gem-text--2u">
+                <div class="gem-attribution gem-attribution--split">
+                  <span class="gem-favline"><span class="gem-fav-stack" aria-hidden="true"><span class="gem-favicon"><img src="../assets/images/msn/cards/gem-fav-1.svg" alt="" onerror="this.style.visibility='hidden'"></span><span class="gem-favicon"><img src="../assets/images/msn/cards/gem-fav-2.svg" alt="" onerror="this.style.visibility='hidden'"></span><span class="gem-favicon"><img src="../assets/images/msn/cards/gem-fav-3.svg" alt="" onerror="this.style.visibility='hidden'"></span></span><span class="gem-count">+5</span></span>
+                  <span class="gem-meta">Curated by Copilot · 30m</span>
+                </div>
+                <div class="gem-title-wrap"><h3 class="gem-title gem-title--2u">Oscars Introduce Updated Viewing Guidelines and AI Rules</h3></div>
+              </div>
+              <div class="gem-image gem-image--2u">
+                <img src="../assets/images/msn/cards/gem-img-1.png" alt="" aria-hidden="true" onerror="this.style.visibility='hidden'">
+                <button class="ad-card__more" type="button" aria-label="More options">
+                  <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="6" cy="12" r="1.75" fill="currentColor"/><circle cx="12" cy="12" r="1.75" fill="currentColor"/><circle cx="18" cy="12" r="1.75" fill="currentColor"/></svg>
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+      <div class="gem-size-row gem-size-row--scroll">
+        <div class="gem-example gem-example--3u">
+          <p class="gem-caption">Gem · 3u · Rest</p>
+          <article class="ad-card gem-card gem-card--3u" aria-label="Gem card, 3u, rest">
+            <div class="gem-content gem-content--row">
+              <div class="gem-text gem-text--3u">
+                <div class="gem-attribution gem-attribution--inline">
+                  <span class="gem-fav-stack" aria-hidden="true"><span class="gem-favicon"><img src="../assets/images/msn/cards/gem-fav-1.svg" alt="" onerror="this.style.visibility='hidden'"></span><span class="gem-favicon"><img src="../assets/images/msn/cards/gem-fav-2.svg" alt="" onerror="this.style.visibility='hidden'"></span><span class="gem-favicon"><img src="../assets/images/msn/cards/gem-fav-3.svg" alt="" onerror="this.style.visibility='hidden'"></span></span>
+                  <span class="gem-count">+5</span>
+                  <span class="gem-meta"> · Curated by Copilot · 30m</span>
+                </div>
+                <div class="gem-title-wrap"><h3 class="gem-title gem-title--3u">Oscars Introduce Updated Viewing Guidelines and AI Rules</h3></div>
+                <ul class="gem-bullets">
+                  <li><span class="gem-bullet-marker" aria-hidden="true">•</span><span class="gem-bullet-text">Highlights the potential for AI to drive innovation in film</span></li>
+                  <li><span class="gem-bullet-marker" aria-hidden="true">•</span><span class="gem-bullet-text">Original demo was recorded by John Lennon in the 1970s</span></li>
+                  <li><span class="gem-bullet-marker" aria-hidden="true">•</span><span class="gem-bullet-text">Won the Best Rock Performance at the 2025 Grammys</span></li>
+                  <li><span class="gem-bullet-marker" aria-hidden="true">•</span><span class="gem-bullet-text">Released in November 2023, nearly 55 years after the Beatles disbanded</span></li>
+                </ul>
+              </div>
+              <div class="gem-image gem-image--3u">
+                <img src="../assets/images/msn/cards/gem-img-1.png" alt="" aria-hidden="true" onerror="this.style.visibility='hidden'">
+                <button class="ad-card__more" type="button" aria-label="More options">
+                  <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="6" cy="12" r="1.75" fill="currentColor"/><circle cx="12" cy="12" r="1.75" fill="currentColor"/><circle cx="18" cy="12" r="1.75" fill="currentColor"/></svg>
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="gem-example gem-example--3u">
+          <p class="gem-caption">Gem · 3u · Hover</p>
+          <article class="ad-card gem-card gem-card--3u is-hover" aria-label="Gem card, 3u, hover">
+            <div class="gem-content gem-content--row">
+              <div class="gem-text gem-text--3u">
+                <div class="gem-attribution gem-attribution--inline">
+                  <span class="gem-fav-stack" aria-hidden="true"><span class="gem-favicon"><img src="../assets/images/msn/cards/gem-fav-1.svg" alt="" onerror="this.style.visibility='hidden'"></span><span class="gem-favicon"><img src="../assets/images/msn/cards/gem-fav-2.svg" alt="" onerror="this.style.visibility='hidden'"></span><span class="gem-favicon"><img src="../assets/images/msn/cards/gem-fav-3.svg" alt="" onerror="this.style.visibility='hidden'"></span></span>
+                  <span class="gem-count">+5</span>
+                  <span class="gem-meta"> · Curated by Copilot · 30m</span>
+                </div>
+                <div class="gem-title-wrap"><h3 class="gem-title gem-title--3u">Oscars Introduce Updated Viewing Guidelines and AI Rules</h3></div>
+                <ul class="gem-bullets">
+                  <li><span class="gem-bullet-marker" aria-hidden="true">•</span><span class="gem-bullet-text">Highlights the potential for AI to drive innovation in film</span></li>
+                  <li><span class="gem-bullet-marker" aria-hidden="true">•</span><span class="gem-bullet-text">Original demo was recorded by John Lennon in the 1970s</span></li>
+                  <li><span class="gem-bullet-marker" aria-hidden="true">•</span><span class="gem-bullet-text">Won the Best Rock Performance at the 2025 Grammys</span></li>
+                  <li><span class="gem-bullet-marker" aria-hidden="true">•</span><span class="gem-bullet-text">Released in November 2023, nearly 55 years after the Beatles disbanded</span></li>
+                </ul>
+              </div>
+              <div class="gem-image gem-image--3u">
+                <img src="../assets/images/msn/cards/gem-img-1.png" alt="" aria-hidden="true" onerror="this.style.visibility='hidden'">
+                <button class="ad-card__more" type="button" aria-label="More options">
+                  <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="6" cy="12" r="1.75" fill="currentColor"/><circle cx="12" cy="12" r="1.75" fill="currentColor"/><circle cx="18" cy="12" r="1.75" fill="currentColor"/></svg>
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <p class="footer-note">Same component, same tokens. Width is a property, not a new design.</p>
+  </div>
+
+  <script>
+    const slider = document.getElementById("w");
+    const stage = document.querySelector(".stage");
+    const readout = document.getElementById("readout");
+    const showColumns = document.getElementById("show-columns");
+    const showSubcolumns = document.getElementById("show-subcolumns");
+    const presets = [...document.querySelectorAll("[data-width]")];
+    function updateLayout() {
+      const width = Number(slider.value);
+      const columns = width >= 980 ? 3 : width >= 664 ? 2 : 1;
+      stage.style.width = width + "px";
+      stage.classList.toggle("show-columns", showColumns.checked || showSubcolumns.checked);
+      stage.classList.toggle("show-subcolumns", showSubcolumns.checked);
+      presets.forEach(button => button.setAttribute("aria-pressed", String(button.dataset.preset === (columns === 3 ? "Desktop" : columns === 2 ? "Tablet" : "Mobile"))));
+      const cardWidth = Math.round(stage.querySelector(".u1").getBoundingClientRect().width);
+      readout.textContent = `${width}px · ${columns} ${columns === 1 ? "column" : "columns"} · ${columns * 4} sub-columns · card ${cardWidth}px`;
+    }
+
+    slider.addEventListener("input", updateLayout);
+    showColumns.addEventListener("change", updateLayout);
+    showSubcolumns.addEventListener("change", updateLayout);
+    presets.forEach(button => button.addEventListener("click", () => {
+      slider.value = button.dataset.width;
+      updateLayout();
+    }));
+    updateLayout();
+  </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MSN Design System Prototype</title>
+    <link rel="stylesheet" href="proto.css" />
+  </head>
+  <body class="proto proto--msn">
+    <div class="prototype-shell">
+      <header class="toolbar" aria-label="Feed controls">
+        <div class="toolbar-group"><label for="themeSelect">Theme</label><select id="themeSelect"><option value="light">Light</option><option value="dark">Dark</option></select></div>
+        <div class="toolbar-group"><label for="densitySelect">Density</label><select id="densitySelect"><option value="comfortable">Comfortable</option><option value="compact">Compact</option></select></div>
+        <div class="toolbar-group"><label for="columnSelect">Columns</label><select id="columnSelect"><option value="auto">Auto</option><option value="1">1</option><option value="2">2</option><option value="3">3</option></select></div>
+        <label class="inspect-toggle"><input type="checkbox" id="inspectToggle" /><span>Inspect</span></label>
+      </header>
+      <main class="feed" id="feed" aria-live="polite">
+        <article class="story-card" data-token="surface/card"><div class="story-image image-one"></div><div class="story-body"><span class="source">City Notes</span><h2>Early morning gardens keep the city awake</h2><time>8 min ago</time></div></article>
+        <article class="story-card" data-token="surface/card"><div class="story-image image-two"></div><div class="story-body"><span class="source">Culture Desk</span><h2>Shared spaces are designed for long conversations</h2><time>18 min ago</time></div></article>
+        <article class="story-card" data-token="surface/card"><div class="story-image image-three"></div><div class="story-body"><span class="source">Field Guide</span><h2>Coastal systems are more resilient than they look</h2><time>32 min ago</time></div></article>
+        <article class="story-card" data-token="surface/card"><div class="story-image image-four"></div><div class="story-body"><span class="source">Design Journal</span><h2>Systems thinking helps teams move with less friction</h2><time>46 min ago</time></div></article>
+        <article class="story-card" data-token="surface/card"><div class="story-image image-five"></div><div class="story-body"><span class="source">Riverside</span><h2>Small signals can map the shape of a larger network</h2><time>1 hr ago</time></div></article>
+        <article class="story-card" data-token="surface/card"><div class="story-image image-six"></div><div class="story-body"><span class="source">Signal Lab</span><h2>Warm interfaces feel calmer when the rhythm is clear</h2><time>2 hr ago</time></div></article>
+        <article class="story-card" data-token="surface/card"><div class="story-image image-seven"></div><div class="story-body"><span class="source">North Meadow</span><h2>Nature-led patterns make complex pages easier to read</h2><time>3 hr ago</time></div></article>
+        <article class="story-card" data-token="surface/card"><div class="story-image image-eight"></div><div class="story-body"><span class="source">Property</span><h2>Viewing systems from multiple scales reveals the hidden order</h2><time>5 hr ago</time></div></article>
+        <article class="story-card" data-token="surface/card"><div class="story-image image-nine"></div><div class="story-body"><span class="source">Workshop</span><h2>Composed motion can guide attention without shouting</h2><time>6 hr ago</time></div></article>
+      </main>
+    </div>
+    <script src="proto.js"></script>
+  </body>
+</html>

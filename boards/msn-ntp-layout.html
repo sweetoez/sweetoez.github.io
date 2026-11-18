@@ -1,0 +1,1114 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MSN responsive NTP layout</title>
+  <link rel="stylesheet" href="../assets/css/msn-components.css">
+  <style>
+    .page-shell {
+      padding: 24px;
+    }
+
+    .controls {
+      margin: 0 auto 24px;
+      max-width: 1440px;
+    }
+
+    #stage-width {
+      width: 240px;
+    }
+
+    .widget-layout-control {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .widget-layout-control select {
+      min-width: 220px;
+      padding: 6px 36px 6px 12px;
+      appearance: none;
+      border: 1px solid #BDBDB8;
+      border-radius: 8px;
+      background: #FFFFFF url("../assets/icons/ic_fluent_chevron_down_16_regular.svg") no-repeat right 12px center;
+      color: #333333;
+      font: inherit;
+      cursor: pointer;
+    }
+
+    .widget-layout-control select:hover {
+      background-color: #F5F5F5;
+    }
+
+    .widget-layout-control select:active {
+      background-color: #E3DDD8;
+    }
+
+    .widget-layout-control select:disabled {
+      cursor: not-allowed;
+      opacity: 0.5;
+    }
+
+    .controls button:hover {
+      background: #F5F5F5;
+    }
+
+    .controls button[aria-pressed="true"]:hover {
+      background: #333333;
+    }
+
+    .controls button:active {
+      background: #E3DDD8;
+    }
+
+    .controls button[aria-pressed="true"]:active {
+      background: #272320;
+    }
+
+    .controls button:disabled {
+      cursor: not-allowed;
+      opacity: 0.5;
+    }
+
+    .stage {
+      width: 1440px;
+      padding: 0;
+      border: 0;
+      border-radius: 0;
+      background: transparent;
+    }
+
+    .layout-section {
+      display: flex;
+      width: 100%;
+      max-width: 408px;
+      flex-direction: column;
+      margin: 0 auto;
+    }
+
+    .widget-section {
+      gap: 24px;
+      padding: 32px 24px 0;
+      border-radius: 60px;
+      background: none;
+    }
+
+    .widget-header {
+      display: flex;
+      height: 36px;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 8px;
+    }
+
+    .greeting,
+    .section-title {
+      margin: 0;
+      color: #272320;
+      font-size: 28px;
+      font-weight: 650;
+      line-height: 32px;
+      letter-spacing: -0.28px;
+      font-feature-settings: "calt" 0;
+    }
+
+    .greeting {
+      white-space: nowrap;
+    }
+
+    .chip-list {
+      display: flex;
+      max-width: 100%;
+      align-items: center;
+      gap: 8px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .chip {
+      display: flex;
+      max-width: 300px;
+      height: 36px;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+      padding: 8px;
+      overflow: hidden;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.80);
+      box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.10);
+      color: #272320;
+      font-size: 14px;
+      font-weight: 450;
+      line-height: 20px;
+      white-space: nowrap;
+    }
+
+    .chip-image {
+      display: block;
+      width: 16px;
+      height: 16px;
+      flex: 0 0 16px;
+      overflow: hidden;
+      border-radius: 0;
+      background: #D3D3D3;
+    }
+
+    .chip-image img {
+      display: block;
+      width: 16px;
+      height: 16px;
+      object-fit: cover;
+    }
+
+    .chip-live {
+      color: #AC1922;
+      font-weight: 650;
+    }
+
+    .chip-market,
+    .chip-market img,
+    .chip-market strong {
+      color: #01712B;
+      font-weight: 450;
+    }
+
+    .layout-grid {
+      position: relative;
+      display: grid;
+      width: 100%;
+      max-width: 360px;
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+      gap: 16px;
+      margin-inline: auto;
+      align-items: stretch;
+    }
+
+    .span-1 {
+      grid-column: span 1;
+    }
+
+    .span-2 {
+      grid-column: span 2;
+    }
+
+    .widget-grid > .seg-widget,
+    .widget-grid > .digest {
+      width: 100%;
+      min-width: 0;
+      max-width: none;
+      height: 368px;
+    }
+
+    .widget-grid .digest {
+      min-width: 0;
+    }
+
+    .widget-grid > .seg-widget {
+      min-height: 368px;
+    }
+
+    .widget-grid > .gem-widget--2u {
+      width: 100%;
+      min-width: 616px;
+      max-width: none;
+    }
+
+    .widget-grid > .gem-widget--1u {
+      width: 100%;
+      min-width: 0;
+      max-width: none;
+    }
+
+    .half-stack {
+      display: flex;
+      height: 368px;
+      min-width: 0;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .half-stack > .w05 {
+      width: 100%;
+      min-width: 0;
+      max-width: none;
+      height: 176px;
+      min-height: 176px;
+      max-height: 176px;
+      flex: none;
+    }
+
+    .widget-grid:not([data-layout="default"]) > .seg-widget.seg-trend {
+      display: flex;
+    }
+
+    .card-section {
+      gap: 24px;
+      padding: 32px 24px;
+      align-items: center;
+      border-radius: 60px;
+      background: none;
+    }
+
+    .section-heading {
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+      text-align: center;
+    }
+
+    .section-title {
+      height: 32px;
+      text-align: center;
+    }
+
+    .section-subtitle {
+      height: 24px;
+      margin: 0;
+      color: #4C4642;
+      font-size: 16px;
+      font-weight: 450;
+      line-height: 26px;
+      font-feature-settings: "calt" 0;
+      text-align: center;
+    }
+
+    .section-subtitle[hidden] {
+      display: none;
+    }
+
+    .card-grid {
+      width: 100%;
+      max-width: none;
+    }
+
+    .card-grid > .article-1u {
+      width: 100%;
+      min-width: 0;
+      max-width: none;
+      height: auto;
+      min-height: 310.714px;
+      max-height: 372.857px;
+      aspect-ratio: 28 / 29;
+    }
+
+    .card-grid > .ad-card {
+      min-height: 310.714px;
+      max-height: 372.857px;
+    }
+
+    .column-overlay {
+      position: absolute;
+      z-index: 3;
+      display: none;
+      inset: 0;
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+      gap: 16px;
+      pointer-events: none;
+    }
+
+    .column-overlay > span {
+      border-radius: 24px;
+      outline: 1px dashed rgba(0, 0, 0, 0.25);
+      background: rgba(0, 0, 0, 0.05);
+    }
+
+    .stage.show-columns .column-overlay {
+      display: grid;
+    }
+
+    .ntp-topnav,
+    .ntp-hero,
+    .shorts-section,
+    .feeds-button {
+      display: none;
+    }
+
+    .ntp-topnav {
+      display: flex;
+      height: 80px;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 32px;
+    }
+
+    .ntp-brand { display: flex; align-items: center; gap: 8px; color: #242424; font: 600 14px/20px "Segoe UI Variable Text", "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif; }
+    .ntp-brand span { font-family: inherit; }
+    .ntp-brand-logo { width: 24px; height: 24px; overflow: hidden; border-radius: 4px; background: #D3D3D3; }
+    .ntp-brand-logo img { display: block; width: 24px; height: 24px; }
+    .ntp-actions { display: flex; align-items: center; }
+    .ntp-action {
+      display: flex;
+      width: 40px;
+      height: 40px;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+      border: 0;
+      border-radius: 20px;
+      background: transparent;
+    }
+    .ntp-action > img { display: block; width: 20px; height: 20px; }
+    .ntp-avatar { display: block; width: 32px; height: 32px; overflow: hidden; border-radius: 50%; background: #D3D3D3; }
+    .ntp-avatar img { display: block; width: 100%; height: 100%; object-fit: cover; }
+    .ntp-action:hover:not(:disabled) { background: rgba(0, 0, 0, .04); }
+    .ntp-action:active:not(:disabled) { background: rgba(0, 0, 0, .08); }
+
+    .ntp-hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+      padding: 32px;
+    }
+
+    .ntp-search-slot {
+      display: flex;
+      width: 716px;
+      max-width: 100%;
+      height: 62px;
+      align-items: center;
+      gap: 8px;
+      padding: 6px;
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      border-radius: 32px;
+      background: #FFFFFF;
+      box-shadow: 0 0 0 4px rgba(15, 108, 189, .08), 0 8px 32px rgba(15, 108, 189, .16);
+    }
+    .ntp-search-slot:hover { border-color: rgba(0, 0, 0, .16); }
+    .ntp-search-slot:focus-within { border-color: #0F6CBD; }
+    .ntp-search-icon { display: block; width: 20px; height: 20px; flex: none; margin-left: 9px; }
+    .ntp-search-slot input {
+      min-width: 0;
+      height: 100%;
+      flex: 1;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      color: #242424;
+      font: 400 16px/24px "Segoe UI Variable Text", "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+    }
+    .ntp-search-slot input::placeholder { color: #616161; opacity: 1; }
+    .ntp-search-submit { display: flex; width: 36px; height: 36px; flex: none; align-items: center; justify-content: center; padding: 0; border: 0; border-radius: 50%; background: #272320; }
+    .ntp-search-submit img { width: 20px; height: 20px; filter: brightness(0) invert(1); }
+    .ntp-search-submit:hover:not(:disabled) { background: #3B3633; }
+    .ntp-search-submit:active:not(:disabled) { background: #1A1715; }
+
+    .ntp-shortcuts {
+      display: flex;
+      max-width: 100%;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 16px;
+    }
+
+    .ntp-shortcut {
+      display: flex;
+      width: 64px;
+      flex: 0 0 64px;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .ntp-shortcut-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 999px;
+      background: #D3D3D3;
+    }
+
+    .ntp-shortcut-label {
+      width: 48px;
+      height: 8px;
+      border-radius: 4px;
+      background: #D3D3D3;
+    }
+
+    .shorts-grid {
+      display: grid;
+      width: 100%;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .shorts-section .section-title { height: auto; }
+    .shorts-card {
+      position: relative;
+      min-width: 0;
+      aspect-ratio: 9 / 16;
+      overflow: hidden;
+      border-radius: 16px;
+      background: #D3D3D3;
+      transition: transform 150ms ease, box-shadow 150ms ease;
+    }
+    .shorts-card:nth-child(n+3) { display: none; }
+    .shorts-card:hover { transform: translateY(-2px); box-shadow: 0 8px 16px rgba(0, 0, 0, .14); }
+    .shorts-card__image { display: block; width: 100%; height: 100%; object-fit: cover; }
+    .shorts-card__caption {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      display: flex;
+      height: 40%;
+      align-items: flex-end;
+      padding: 12px;
+      background: linear-gradient(to top, rgba(0, 0, 0, .6), rgba(0, 0, 0, 0));
+      color: #FFFFFF;
+      font: 600 14px/20px "Segoe UI Variable Text", "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+    }
+    .shorts-card__caption span { display: -webkit-box; overflow: hidden; font-family: inherit; -webkit-box-orient: vertical; -webkit-line-clamp: 2; }
+    .shorts-card__play { position: absolute; top: 8px; right: 8px; display: flex; width: 32px; height: 32px; align-items: center; justify-content: center; border-radius: 50%; background: rgba(0, 0, 0, .5); }
+    .shorts-card__play img { width: 20px; height: 20px; filter: brightness(0) invert(1); }
+
+    .feeds-button {
+      position: fixed;
+      right: 50px;
+      bottom: 32px;
+      z-index: 5;
+      display: inline-flex;
+      height: 48px;
+      min-width: 72px;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 0 16px;
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      border-radius: 20px;
+      background: #FFFFFF;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, .14);
+      color: #242424;
+      font: 600 14px/20px "Segoe UI Variable Text", "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+    }
+    .feeds-button span { font-family: inherit; }
+    .feeds-button img { width: 20px; height: 20px; }
+    .feeds-button:hover:not(:disabled) { background: #F5F5F5; }
+    .feeds-button:active:not(:disabled) { background: #EBEBEB; }
+    .ntp-action:focus-visible, .ntp-search-submit:focus-visible, .ntp-search-slot input:focus-visible, .feeds-button:focus-visible { outline: 2px solid #000000; outline-offset: 1px; box-shadow: 0 0 0 1px #FFFFFF; }
+    .ntp-action:disabled, .ntp-search-submit:disabled, .feeds-button:disabled { opacity: .4; cursor: not-allowed; }
+
+    html[data-embed="true"] body {
+      overflow-x: hidden;
+      background: transparent;
+    }
+
+    html[data-embed="true"] .page-shell { padding: 0; }
+    html[data-embed="true"] .controls { display: none; }
+    html[data-embed="true"] .stage-scroll { overflow: visible; }
+    html[data-embed="true"] .ntp-topnav { display: flex; }
+    html[data-embed="true"] .ntp-hero { display: flex; }
+    html[data-embed="true"] .shorts-section { display: flex; }
+    html[data-embed="true"] .feeds-button { display: inline-flex; }
+
+    html[data-embed="true"] .stage {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      border: 0;
+      border-radius: 0;
+      background: transparent;
+    }
+
+    html[data-embed="true"] .widget-section { padding-top: 0; }
+
+    @container stage (min-width: 664px) {
+      .shorts-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .shorts-card:nth-child(3) { display: block; }
+    }
+
+    @container stage (min-width: 980px) {
+      .shorts-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+      .shorts-card:nth-child(4) { display: block; }
+    }
+
+    @container stage (min-width: 1448px) {
+      .shorts-grid { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+      .shorts-card:nth-child(5) { display: block; }
+    }
+
+    @container stage (min-width: 1296px) and (max-width: 1447px) {
+      .stage.is-embed .layout-section { max-width: 1088px; }
+      .stage.is-embed .layout-grid {
+        max-width: 1040px;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+      .stage.is-embed .column-overlay {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+    }
+
+    @container stage (max-width: 663px) {
+      .ntp-hero { padding-right: 16px; padding-left: 16px; }
+    }
+
+    @container stage (max-width: 347px) {
+      .layout-section {
+        max-width: 320px;
+        min-width: 0;
+      }
+
+      .widget-header {
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+        gap: 22px;
+        padding: 0 8px;
+      }
+
+      .widget-header .greeting {
+        white-space: normal;
+        text-align: center;
+      }
+
+      .chip-list {
+        width: calc(100% + 1px);
+        max-width: none;
+        justify-content: center;
+        flex-wrap: wrap;
+        row-gap: 8px;
+      }
+
+      .widget-grid > .digest {
+        grid-column: span 1;
+      }
+
+      .card-grid > .article-1u {
+        min-width: 0;
+      }
+    }
+
+    @container stage (min-width: 348px) and (max-width: 663px) {
+      .layout-section {
+        max-width: 408px;
+        min-width: 348px;
+      }
+
+      .widget-header {
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+        gap: 22px;
+        padding: 0 8px;
+      }
+
+      .chip-list {
+        justify-content: center;
+      }
+
+      .widget-grid,
+      .card-grid {
+        max-width: 360px;
+      }
+
+      .widget-grid > .digest {
+        min-width: 0;
+        grid-column: span 1;
+        max-width: none;
+        background: #FFFFFF;
+      }
+
+      .widget-grid > .digest .digest-1u {
+        display: flex;
+      }
+
+      .widget-grid > .digest .digest-2u-inner,
+      .widget-grid > .digest .digest-2u-paddles {
+        display: none;
+      }
+
+      .chip-list {
+        flex-wrap: wrap;
+        row-gap: 8px;
+      }
+    }
+
+    @container stage (min-width: 664px) {
+      .layout-section {
+        max-width: 784px;
+      }
+
+      .layout-grid {
+        max-width: 736px;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .column-overlay {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .widget-header {
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+        gap: 22px;
+        padding: 0 8px;
+      }
+
+      .chip-list {
+        justify-content: center;
+      }
+
+      .widget-grid > .digest {
+        min-width: 616px;
+      }
+    }
+
+    @container stage (min-width: 980px) {
+      .layout-section {
+        max-width: 1088px;
+      }
+
+      .layout-grid {
+        max-width: 1040px;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .column-overlay {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .widget-header {
+        height: 36px;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 0;
+        padding: 0 8px;
+      }
+
+      .widget-grid > .digest {
+        min-width: 616px;
+      }
+
+      .widget-grid[data-layout="default"] > .seg-widget.seg-trend {
+        display: none;
+      }
+    }
+
+    @container stage (min-width: 1296px) {
+      .layout-section {
+        max-width: 1440px;
+      }
+
+      .layout-grid {
+        max-width: 1392px;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+      }
+
+      .column-overlay {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+      }
+
+      .widget-header {
+        height: 36px;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 0;
+      }
+
+      .widget-grid > .digest {
+        min-width: 616px;
+      }
+
+      .widget-grid[data-layout="default"] > .seg-widget.seg-trend {
+        display: flex;
+      }
+    }
+
+    @container stage (max-width: 347px) {
+      .widget-header {
+        gap: 22px;
+      }
+    }
+
+    html:not([data-embed="true"]) .ntp-topnav,
+    html:not([data-embed="true"]) .ntp-hero,
+    html:not([data-embed="true"]) .shorts-section,
+    html:not([data-embed="true"]) .feeds-button {
+      display: none;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto;
+        transition: none;
+        animation: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page-shell">
+    <div class="controls" aria-label="Layout controls">
+      <div class="width-control">
+        <label for="stage-width">Stage width</label>
+        <input type="range" id="stage-width" min="320" max="1447" step="1" value="1440">
+      </div>
+      <div class="presets" role="group" aria-label="Stage width presets">
+        <button type="button" data-width="1440" aria-pressed="true">4 col 1440</button>
+        <button type="button" data-width="1088" aria-pressed="false">3 col 1088</button>
+        <button type="button" data-width="784" aria-pressed="false">2 col 784</button>
+        <button type="button" data-width="408" aria-pressed="false">1 col 408</button>
+      </div>
+      <label class="column-control" for="show-columns">
+        <input type="checkbox" id="show-columns">
+        Show columns
+      </label>
+      <div class="widget-layout-control">
+        <label for="widget-layout">Widget layout</label>
+        <select id="widget-layout">
+          <option value="default">Default</option>
+          <option value="three-1u">3 × 1u</option>
+          <option value="two-1u-half">2 × 1u + half stack</option>
+          <option value="gem-2u-half">Gem 2u + half stack</option>
+          <option value="gem-2u-1u">Gem 2u + 1u</option>
+        </select>
+      </div>
+      <output id="layout-readout" aria-live="polite"></output>
+    </div>
+
+    <div class="stage-scroll">
+      <div class="stage">
+        <nav class="ntp-topnav" aria-label="New tab navigation">
+          <div class="ntp-brand"><span class="ntp-brand-logo"><img src="../assets/images/msn/shell/msn-logo-24.svg" alt="" onerror="this.style.visibility='hidden'"></span><span>Discover</span></div>
+          <div class="ntp-actions">
+            <button class="ntp-action" type="button" aria-label="Settings"><img src="../assets/icons/settings_20_regular.svg" alt="" aria-hidden="true"></button>
+            <button class="ntp-action" type="button" aria-label="Notifications"><img src="../assets/icons/alert_20_regular.svg" alt="" aria-hidden="true"></button>
+            <button class="ntp-action" type="button" aria-label="Profile"><span class="ntp-avatar"><img src="../assets/images/msn/shell/avatar-32.jpg" alt="" onerror="this.style.visibility='hidden'"></span></button>
+          </div>
+        </nav>
+        <section class="ntp-hero" aria-label="Search and shortcuts">
+          <form class="ntp-search-slot" role="search">
+            <img class="ntp-search-icon" src="../assets/icons/search_20_regular.svg" alt="" aria-hidden="true">
+            <input type="search" aria-label="Ask Copilot" placeholder="Ask Copilot">
+            <button class="ntp-search-submit" type="submit" aria-label="Submit search"><img src="../assets/icons/arrow_up_20_regular.svg" alt="" aria-hidden="true"></button>
+          </form>
+          <div class="ntp-shortcuts" aria-label="Shortcuts">
+            <div class="ntp-shortcut" aria-hidden="true"><span class="ntp-shortcut-icon"></span><span class="ntp-shortcut-label"></span></div>
+            <div class="ntp-shortcut" aria-hidden="true"><span class="ntp-shortcut-icon"></span><span class="ntp-shortcut-label"></span></div>
+            <div class="ntp-shortcut" aria-hidden="true"><span class="ntp-shortcut-icon"></span><span class="ntp-shortcut-label"></span></div>
+            <div class="ntp-shortcut" aria-hidden="true"><span class="ntp-shortcut-icon"></span><span class="ntp-shortcut-label"></span></div>
+            <div class="ntp-shortcut" aria-hidden="true"><span class="ntp-shortcut-icon"></span><span class="ntp-shortcut-label"></span></div>
+            <div class="ntp-shortcut" aria-hidden="true"><span class="ntp-shortcut-icon"></span><span class="ntp-shortcut-label"></span></div>
+          </div>
+        </section>
+        <section class="layout-section widget-section" aria-labelledby="widget-heading">
+          <header class="widget-header">
+            <h2 id="widget-heading" class="greeting">Good morning, Olivia</h2>
+            <ul class="chip-list" aria-label="Quick information">
+              <li class="chip">
+                <span class="chip-image"><img src="../assets/images/msn/widgets/chip-f1.png" alt="" width="16" height="16" onerror="this.style.visibility='hidden'"></span>
+                <span>F1 Belgian Grand Prix</span>
+                <span class="chip-live">LIVE</span>
+              </li>
+              <li class="chip chip-market">
+                <span>MSFT</span>
+                <img src="../assets/icons/ic_fluent_caret_up_12_filled.svg" alt="" width="12" height="12" onerror="this.style.visibility='hidden'">
+                <strong>+3.97%</strong>
+              </li>
+              <li class="chip">
+                <span>Seattle, WA</span>
+                <span class="chip-image chip-image--weather"><img src="../assets/images/msn/widgets/chip-wx.png" alt="" width="16" height="16" onerror="this.style.visibility='hidden'"></span>
+                <span>71°</span>
+              </li>
+            </ul>
+          </header>
+
+          <div class="layout-grid widget-grid">
+            <article class="card digest span-2 widget-item" tabindex="0" aria-label="Digest stories">
+              <div class="digest-2u-inner">
+                <div class="digest-2u-content">
+                  <div class="digest-publisher">
+                    <span class="digest-monogram" aria-hidden="true" data-digest-monogram>T</span>
+                    <span data-digest-publisher>Trailhead</span>
+                    <span data-digest-time>· 1h</span>
+                  </div>
+                  <h3 class="digest-title" data-digest-title>Five quiet trails worth the early alarm this weekend</h3>
+                </div>
+                <div class="digest-pagination" aria-hidden="true">
+                  <span class="digest-bar is-active" data-segment="0"></span>
+                  <span class="digest-bar" data-segment="1"></span>
+                  <span class="digest-bar" data-segment="2"></span>
+                  <span class="digest-bar" data-segment="3"></span>
+                  <span class="digest-bar" data-segment="4"></span>
+                </div>
+              </div>
+              <div class="digest-2u-paddles">
+                <button type="button" aria-label="Previous story" data-digest-nav="-1">
+                  <svg class="digest-chevron" viewBox="4.5 2.5 7 11" preserveAspectRatio="none" aria-hidden="true"><path d="M10.3536 3.14645C10.5488 3.34171 10.5488 3.65829 10.3536 3.85355L6.20711 8L10.3536 12.1464C10.5488 12.3417 10.5488 12.6583 10.3536 12.8536C10.1583 13.0488 9.84171 13.0488 9.64645 12.8536L5.14645 8.35355C4.95118 8.15829 4.95118 7.84171 5.14645 7.64645L9.64645 3.14645C9.84171 2.95118 10.1583 2.95118 10.3536 3.14645Z" fill="currentColor"></path></svg>
+                </button>
+                <button type="button" aria-label="Next story" data-digest-nav="1">
+                  <svg class="digest-chevron" viewBox="4.5 2.5 7 11" preserveAspectRatio="none" aria-hidden="true"><path d="M5.64645 3.14645C5.45118 3.14645 5.04882 3.14645 4.85355 3.85355L9.79289 8L5.64645 12.1464C5.45118 12.3417 5.45118 12.6583 5.64645 12.8536C5.84171 13.0488 6.15829 13.0488 6.35355 12.8536L10.8536 8.35355C11.0488 8.15829 11.0488 7.84171 10.8536 7.64645L6.35355 3.14645C6.15829 2.95118 5.84171 2.95118 5.64645 3.14645Z" fill="currentColor"></path></svg>
+                </button>
+              </div>
+              <div class="digest-1u">
+                <div class="digest-1u-frame">
+                  <img class="digest-1u-image" src="../assets/images/msn/digest-1.jpg" alt="" aria-hidden="true" data-digest-image onerror="this.style.visibility='hidden'">
+                </div>
+                <div class="digest-1u-text">
+                  <div class="digest-publisher">
+                    <span class="digest-monogram" aria-hidden="true" data-digest-monogram>T</span>
+                    <span data-digest-publisher>Trailhead</span>
+                    <span data-digest-time>· 1h</span>
+                  </div>
+                  <h3 class="digest-title" data-digest-title>Five quiet trails worth the early alarm this weekend</h3>
+                  <div class="digest-1u-controls">
+                    <div class="digest-pagination" aria-hidden="true">
+                      <span class="digest-bar is-active" data-segment="0"></span>
+                      <span class="digest-bar" data-segment="1"></span>
+                      <span class="digest-bar" data-segment="2"></span>
+                      <span class="digest-bar" data-segment="3"></span>
+                      <span class="digest-bar" data-segment="4"></span>
+                    </div>
+                    <div class="digest-1u-paddles">
+                      <button type="button" aria-label="Previous story" data-digest-nav="-1"><svg class="digest-chevron" viewBox="4.5 2.5 7 11" preserveAspectRatio="none" aria-hidden="true"><path d="M10.3536 3.14645C10.5488 3.34171 10.5488 3.6583 10.3536 3.85355L6.20711 8L10.3536 12.1464C10.5488 12.3417 10.5488 12.6583 10.3536 12.8536C10.1583 13.0488 9.84171 13.0488 9.64645 12.8536L5.14645 8.35355C4.95118 8.15829 4.95118 7.84171 5.14645 7.64645L9.64645 3.14645C9.84171 2.95118 10.1583 2.95118 10.3536 3.14645Z" fill="currentColor"></path></svg></button>
+                      <button type="button" aria-label="Next story" data-digest-nav="1"><svg class="digest-chevron" viewBox="4.5 2.5 7 11" preserveAspectRatio="none" aria-hidden="true"><path d="M5.64645 3.14645C5.45118 2.85355 5.04882 2.85355 4.85355 3.14645L9.79289 8L5.64645 12.1464C5.45118 12.3417 5.45118 12.6583 5.64645 12.8536C5.84171 13.0488 6.15829 13.0488 6.35355 12.8536L10.8536 8.35355C11.0488 8.15829 11.0488 7.84171 10.8536 7.64645L6.35355 3.14645C6.15829 2.95118 5.84171 2.95118 5.64645 3.14645Z" fill="currentColor"></path></svg></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="card u1 seg-widget seg-sports span-1 widget-item" aria-label="Coastal Soccer League scores">
+              <button class="seg-more" type="button" aria-label="More options"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="12" r="1.75" fill="currentColor"/><circle cx="12" cy="12" r="1.75" fill="currentColor"/><circle cx="18" cy="12" r="1.75" fill="currentColor"/></svg></button>
+              <div class="spt">
+                <h3 class="spt-title">Coastal Soccer League</h3>
+                <ul class="spt-list">
+                  <li class="spt-row">
+                    <span class="spt-team"><span class="spt-badge" style="--b:#3F3935">BAY</span><span class="spt-abbr">BAY</span></span>
+                    <span class="spt-mid"><span class="spt-live"><i></i>LIVE</span><span class="spt-score">1 - 1</span></span>
+                    <span class="spt-team"><span class="spt-badge" style="--b:#6B625C">PNW</span><span class="spt-abbr">PNW</span></span>
+                  </li>
+                  <li class="spt-row">
+                    <span class="spt-team"><span class="spt-badge" style="--b:#4C4642">HBR</span><span class="spt-abbr">HBR</span></span>
+                    <span class="spt-mid"><span class="spt-status">Final · Jun 10</span><span class="spt-score">2 - 1<svg class="spt-play" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 1.5v9l7-4.5z" fill="currentColor"/></svg></span><a class="spt-link" href="#">View game stats</a></span>
+                    <span class="spt-team"><span class="spt-badge" style="--b:#8A817B">RDG</span><span class="spt-abbr">RDG</span></span>
+                  </li>
+                  <li class="spt-row">
+                    <span class="spt-team"><span class="spt-badge" style="--b:#272320">MTN</span><span class="spt-abbr">MTN</span></span>
+                    <span class="spt-mid"><span class="spt-status">Final · Jun 9</span><span class="spt-score">1 - 1<svg class="spt-play" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 1.5v9l7-4.5z" fill="currentColor"/></svg></span><a class="spt-link" href="#">View game stats</a></span>
+                    <span class="spt-team"><span class="spt-badge" style="--b:#5A524D">VLY</span><span class="spt-abbr">VLY</span></span>
+                  </li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="card u1 seg-widget seg-trend span-1 widget-item" aria-label="Trending on Copilot">
+              <button class="seg-more" type="button" aria-label="More options"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="12" r="1.75" fill="currentColor"/><circle cx="12" cy="12" r="1.75" fill="currentColor"/><circle cx="18" cy="12" r="1.75" fill="currentColor"/></svg></button>
+              <div class="trd">
+                <h3 class="trd-title">Trending on Copilot</h3>
+                <div class="trd-stage">
+                  <div class="trd-img-area">
+                    <img class="trd-img" src="../assets/images/msn/widgets/trd-1.jpg" alt="" width="256" height="250" onerror="this.style.visibility='hidden'">
+                  </div>
+                  <div class="trd-bubble-area">
+                    <p class="trd-bubble">How can I reduce plastic waste to take my trash out less often?</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <div class="column-overlay" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+          </div>
+        </section>
+
+        <section class="layout-section card-section" data-title="Trending articles" data-articles="6" data-headlines="Five pantry staples that last longer than you think|A beginner's guide to tidy home networks|The quiet comeback of the overnight train|Why small design systems scale better than big ones|Weekend recipes built around one great pan|A Symbol of Beauty: Exploring the Secret Lives of Peacocks" aria-labelledby="trending-heading">
+          <header class="section-heading">
+            <h2 class="section-title" id="trending-heading">Trending articles</h2>
+            <p class="section-subtitle" hidden></p>
+          </header>
+          <div class="layout-grid card-grid">
+            <div class="column-overlay" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+          </div>
+        </section>
+
+        <section class="layout-section card-section" data-title="Sports" data-articles="4" data-headlines="Coastal Soccer League's late winning goal|Five quiet trails worth the early alarm this weekend|A weekend guide to Seattle's waterfront|How local clubs are growing the game" aria-labelledby="sports-heading">
+          <header class="section-heading">
+            <h2 class="section-title" id="sports-heading">Sports</h2>
+            <p class="section-subtitle" hidden></p>
+          </header>
+          <div class="layout-grid card-grid">
+            <div class="column-overlay" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+          </div>
+        </section>
+
+        <section class="layout-section card-section shorts-section" aria-labelledby="shorts-heading">
+          <header class="section-heading">
+            <h2 class="section-title" id="shorts-heading">From your favorite creator</h2>
+          </header>
+          <div class="shorts-grid">
+            <article class="shorts-card"><img class="shorts-card__image" src="../assets/images/msn/shorts/short-1.jpg" alt="" onerror="this.style.visibility='hidden'"><span class="shorts-card__play" aria-hidden="true"><img src="../assets/icons/play_20_filled.svg" alt=""></span><div class="shorts-card__caption"><span>Simple ideas for a brighter morning</span></div></article>
+            <article class="shorts-card"><img class="shorts-card__image" src="../assets/images/msn/shorts/short-2.jpg" alt="" onerror="this.style.visibility='hidden'"><span class="shorts-card__play" aria-hidden="true"><img src="../assets/icons/play_20_filled.svg" alt=""></span><div class="shorts-card__caption"><span>A favorite recipe in under a minute</span></div></article>
+            <article class="shorts-card"><img class="shorts-card__image" src="../assets/images/msn/shorts/short-3.jpg" alt="" onerror="this.style.visibility='hidden'"><span class="shorts-card__play" aria-hidden="true"><img src="../assets/icons/play_20_filled.svg" alt=""></span><div class="shorts-card__caption"><span>Explore a quiet corner of the city</span></div></article>
+            <article class="shorts-card"><img class="shorts-card__image" src="../assets/images/msn/shorts/short-4.jpg" alt="" onerror="this.style.visibility='hidden'"><span class="shorts-card__play" aria-hidden="true"><img src="../assets/icons/play_20_filled.svg" alt=""></span><div class="shorts-card__caption"><span>Small changes for a more welcoming space</span></div></article>
+            <article class="shorts-card"><img class="shorts-card__image" src="../assets/images/msn/shorts/short-5.jpg" alt="" onerror="this.style.visibility='hidden'"><span class="shorts-card__play" aria-hidden="true"><img src="../assets/icons/play_20_filled.svg" alt=""></span><div class="shorts-card__caption"><span>Find a little inspiration outdoors</span></div></article>
+          </div>
+        </section>
+        <section class="layout-section card-section" data-title="Technology" data-articles="5" data-headlines="A beginner's guide to tidy home networks|Why small design systems scale better than big ones|A closer look at tomorrow's personal devices|The next wave of useful AI tools|Five ideas for a more thoughtful digital workspace" aria-labelledby="technology-heading">
+          <header class="section-heading">
+            <h2 class="section-title" id="technology-heading">Technology</h2>
+            <p class="section-subtitle" hidden></p>
+          </header>
+          <div class="layout-grid card-grid">
+            <div class="column-overlay" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+          </div>
+        </section>
+        <button class="feeds-button" type="button"><img src="../assets/icons/text_bullet_list_square_20_regular.svg" alt="" aria-hidden="true"><span>Feeds</span></button>
+      </div>
+    </div>
+  </main>
+
+  <template id="podcast-template">
+    <article class="card u1 seg-widget seg-pod widget-item span-1" data-state="rest" aria-label="Copilot Daily podcast">
+      <button class="seg-more" type="button" aria-label="More options"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="12" r="1.75" fill="currentColor"/><circle cx="12" cy="12" r="1.75" fill="currentColor"/><circle cx="18" cy="12" r="1.75" fill="currentColor"/></svg></button>
+      <div class="pod">
+        <img class="pod-img" src="../assets/images/msn/widgets/pod-1.jpg" alt="" onerror="this.style.visibility='hidden'">
+        <div class="pod-area pod-rest">
+          <div class="pod-head"><span class="pod-name">Copilot Daily</span><span class="pod-meta">Nov 4 · 5 min</span></div>
+          <div class="pod-playrow">
+            <p class="pod-desc">Markets steady ahead of a rate decision, a new waterfront park opens, and a local team clinches the title</p>
+            <button class="pod-play" type="button" aria-label="Play episode" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15a1 1 0 0 0 1.52.85l12-7.5a1 1 0 0 0 0-1.7l-12-7.5A1 1 0 0 0 7 4.5z" fill="currentColor"/></svg></button>
+          </div>
+        </div>
+        <div class="pod-area pod-playing" hidden>
+          <p class="pod-now">Markets steady ahead of a rate decision</p>
+          <div class="pod-controls">
+            <div class="pod-progress"><span class="pod-t">0:00</span>
+              <span class="pod-bars"><i class="s1"><b style="width:100%"></b></i><i class="s2"><b style="width:67.66px"></b></i><i class="s3"></i><i class="s4"></i></span>
+              <span class="pod-t">2:34</span></div>
+            <div class="pod-btns">
+              <button class="pod-btn pod-prev" type="button" aria-label="Previous"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+              <button class="pod-btn pod-pause" type="button" aria-label="Pause"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="4" width="4" height="16" rx="1.5" fill="currentColor"/><rect x="14" y="4" width="4" height="16" rx="1.5" fill="currentColor"/></svg></button>
+              <button class="pod-btn pod-next" type="button" aria-label="Next"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+  </template>
+
+  <template id="gem-2u-template">
+    <article class="gem-widget gem-widget--2u widget-item span-2" aria-label="Gem widget, 2u, Standard">
+      <div class="gem-widget-text gem-widget-text--2u">
+        <div class="gem-widget-attribution gem-widget-attribution--split">
+          <span class="gem-widget-favline"><span class="gem-widget-fav-stack" aria-hidden="true"><span class="gem-widget-favicon"><img src="../assets/images/msn/widgets/gem-fav-1.svg" alt="" onerror="this.style.visibility='hidden'"></span><span class="gem-widget-favicon"><img src="../assets/images/msn/widgets/gem-fav-2.svg" alt="" onerror="this.style.visibility='hidden'"></span><span class="gem-widget-favicon"><img src="../assets/images/msn/widgets/gem-fav-3.svg" alt="" onerror="this.style.visibility='hidden'"></span></span><span class="gem-widget-count">+5</span></span>
+          <span class="gem-widget-meta">Curated by Copilot · 30m</span>
+        </div>
+        <div class="gem-widget-title-wrap"><h3 class="gem-widget-title">Oscars Introduce Updated Viewing Guidelines and AI Rules</h3></div>
+      </div>
+      <div class="gem-widget-image gem-widget-image--2u">
+        <img src="../assets/images/msn/widgets/gem-img-1.png" alt="" aria-hidden="true" onerror="this.style.visibility='hidden'">
+        <button class="hover-actions" type="button" aria-label="More options"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="6" cy="12" r="1.75" fill="currentColor"/><circle cx="12" cy="12" r="1.75" fill="currentColor"/><circle cx="18" cy="12" r="1.75" fill="currentColor"/></svg></button>
+      </div>
+    </article>
+  </template>
+
+  <template id="gem-1u-template">
+    <article class="gem-widget gem-widget--1u widget-item span-1" aria-label="Gem widget, 1u, Standard">
+      <div class="gem-widget-image gem-widget-image--1u">
+        <img src="../assets/images/msn/widgets/gem-img-1.png" alt="" aria-hidden="true" onerror="this.style.visibility='hidden'">
+        <button class="hover-actions" type="button" aria-label="More options"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="6" cy="12" r="1.75" fill="currentColor"/><circle cx="12" cy="12" r="1.75" fill="currentColor"/><circle cx="18" cy="12" r="1.75" fill="currentColor"/></svg></button>
+      </div>
+      <div class="gem-widget-text gem-widget-text--1u">
+        <div class="gem-widget-attribution gem-widget-attribution--inline">
+          <span class="gem-widget-fav-stack" aria-hidden="true"><span class="gem-widget-favicon"><img src="../assets/images/msn/widgets/gem-fav-1.svg" alt="" onerror="this.style.visibility='hidden'"></span><span class="gem-widget-favicon"><img src="../assets/images/msn/widgets/gem-fav-2.svg" alt="" onerror="this.style.visibility='hidden'"></span><span class="gem-widget-favicon"><img src="../assets/images/msn/widgets/gem-fav-3.svg" alt="" onerror="this.style.visibility='hidden'"></span></span>
+          <span class="gem-widget-count">+5</span>
+          <span class="gem-widget-meta"> · Curated by Copilot · 30m</span>
+        </div>
+        <div class="gem-widget-title-wrap"><h3 class="gem-widget-title">Oscars Introduce Updated Viewing Guidelines and AI Rules</h3></div>
+      </div>
+    </article>
+  </template>
+
+  <template id="half-stack-template">
+    <div class="half-stack widget-item span-1" aria-label="Stock and weather">
+      <article class="w05 w05-std" aria-label="Stock, NVIDIA Corp">
+        <div class="w05-area">
+          <div class="w05-titlewrap"><h3 class="w05-title">NVIDIA Corp</h3></div>
+          <div class="stk05-body">
+            <div class="stk05-info">
+              <p class="stk05-ticker">(NVDA)</p>
+              <div class="stk05-price"><span class="stk05-val">136.75</span><span class="stk05-chg">+3.97%</span></div>
+            </div>
+            <div class="stk05-graph" aria-hidden="true">
+              <svg viewBox="0 0 270 31" preserveAspectRatio="none">
+                <defs><linearGradient id="stk05Fill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#01712B" stop-opacity="0.20"/><stop offset="1" stop-color="#01712B" stop-opacity="0"/></linearGradient></defs>
+                <polygon fill="url(#stk05Fill)" points="0,31 5,29 8,28 10,25 13,25.5 16,23 19,22 22,19.5 25,20 28,22 32,24 36,22 40,19 44,17.5 47,15.5 51,15 53,18 57,17 61,16 65,15 69,14 73,13 76,10 79,11 83,16 86,14 89,15.5 93,19 96,18 100,20 104,21.5 108,19 112,20.5 115,21 118,21 121,20 125,16 128,18 132,15 136,12.5 139,14 143,16 146,18 149,19 153,17 157,17 161,18.5 165,17 169,16 173,14.5 177,15.5 180,14.5 183,10 186,8.5 190,12 193,17 197,18.5 201,18 204,16 207,10 211,9 216,5 220,3 225,2 230,4 233,10 236,16 240,21 244,25 247,25 250,28 253,28 255,23 259,17 263,12 268,8 268,31 0,31"/>
+                <polyline class="stk05-line" points="0,31 5,29 8,28 10,25 13,25.5 16,23 19,22 22,19.5 25,20 28,22 32,24 36,22 40,19 44,17.5 47,15.5 51,15 53,18 57,17 61,16 65,15 69,14 73,13 76,10 79,11 83,16 86,14 89,15.5 93,19 96,18 100,20 104,21.5 108,19 112,20.5 115,21 118,21 121,20 125,16 128,18 132,15 136,12.5 139,14 143,16 146,18 149,19 153,17 157,17 161,18.5 165,17 169,16 173,14.5 177,15.5 180,14.5 183,10 186,8.5 190,12 193,17 197,18.5 201,18 204,16 207,10 211,9 216,5 220,3 225,2 230,4 233,10 236,16 240,21 244,25 247,25 250,28 253,28 255,23 259,17 263,12 268,8"/>
+              </svg>
+              <i class="stk05-drop"></i>
+              <i class="stk05-dot"></i>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="w05 w05-wx" aria-label="Weather, Seattle">
+        <img class="wx05-art" src="../assets/images/msn/widgets/wx-sun.svg" alt="" aria-hidden="true" width="138" height="108" onerror="this.style.visibility='hidden'">
+        <div class="wx05-area">
+          <div class="wx05-loc"><h3 class="wx05-city">Seattle</h3></div>
+          <div class="wx05-row">
+            <div class="wx05-temp"><span class="wx05-num">42</span><span class="wx05-deg">°</span></div>
+            <div class="wx05-side">
+              <p class="wx05-cond">Mostly sunny</p>
+              <div class="wx05-hilo">
+                <span class="wx05-hl"><span class="wx05-ic" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 10.5C6.27614 10.5 6.5 10.2761 6.5 10V3.20711L9.14645 5.85355C9.34171 6.04882 9.65829 6.04882 9.85355 5.85355C10.0488 5.65829 10.0488 5.34171 9.85355 5.14645L6.35355 1.64645C6.15829 1.45118 5.84171 1.45118 5.64645 1.64645L2.14645 5.14645C1.95118 5.34171 1.95118 5.65829 2.14645 5.85355C2.34171 6.04882 2.65829 6.04882 2.85355 5.85355L5.5 3.20711V10C5.5 10.2761 5.72386 10.5 6 10.5Z" fill="currentColor"/></svg></span><span class="wx05-v"><span class="sr-only">High </span>55°</span></span>
+                <span class="wx05-hl"><span class="wx05-ic" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 1.5C6.27614 1.5 6.5 1.72386 6.5 2V8.79289L9.14645 6.14645C9.34171 5.95118 9.65829 5.95118 9.85355 6.14645C10.0488 6.34171 10.0488 6.65829 9.85355 6.85355L6.35355 10.3536C6.15829 10.5488 5.84171 10.5488 5.64645 10.3536L2.14645 6.85355C1.95118 6.65829 1.95118 6.34171 2.14645 6.14645C2.34171 5.95118 2.65829 5.95118 2.85355 6.14645L5.5 8.79289V2C5.5 1.72386 5.72386 1.5 6 1.5Z" fill="currentColor"/></svg></span><span class="wx05-v"><span class="sr-only">Low </span>32°</span></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </template>
+
+  <template id="article-template">
+    <article class="article-1u span-1" data-variant="subtitle">
+      <div class="article-media article-media--standard">
+        <img src="../assets/images/msn/widgets/art-img-1.png" alt="" width="288" height="172" onerror="this.style.visibility='hidden'">
+        <button class="hover-actions" type="button" aria-label="More options"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="6" cy="12" r="1.75" fill="currentColor"/><circle cx="12" cy="12" r="1.75" fill="currentColor"/><circle cx="18" cy="12" r="1.75" fill="currentColor"/></svg></button>
+      </div>
+      <div class="article-text">
+        <div class="cg-pub"><span class="cg-pub-brand"><span class="cg-fav-frame"><img src="../assets/images/msn/widgets/art-fav-1.svg" alt="" width="16" height="16" onerror="this.style.visibility='hidden'"></span><span class="cg-pub-name">Quantis</span></span><span class="cg-pub-dot" aria-hidden="true">·</span><span class="cg-pub-time">1d</span></div>
+        <h3 class="article-title">A Symbol of Beauty: Exploring the Secret Lives of Peacocks</h3>
+      </div>
+    </article>
+  </template>
+
+  <template id="ad-template">
+    <article class="ad-card span-1">
+      <div class="ad-card__content">
+        <div class="ad-card__media">
+          <button class="ad-card__more" type="button" aria-label="More options">
+            <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="6" cy="12" r="1.75" fill="currentColor"/><circle cx="12" cy="12" r="1.75" fill="currentColor"/><circle cx="18" cy="12" r="1.75" fill="currentColor"/></svg>
+          </button>
+        </div>
+        <div class="ad-card__text">
+          <div class="ad-card__publisher">
+            <div class="ad-card__base">
+              <div class="ad-card__attribution">
+                <span class="ad-card__icon"><span class="ad-card__favicon" aria-hidden="true">N</span></span>
+                <span class="ad-card__name-wrap"><span class="ad-card__name">Northwind Mobile</span></span>
+              </div>
+              <div class="ad-card__meta">
+                <span class="ad-card__dot" aria-hidden="true">·</span>
+                <span class="ad-card__sponsored">Sponsored</span>
+              </div>
+            </div>
+          </div>
+          <div class="ad-card__title-wrap">
+            <h3 class="ad-card__title"><a class="ad-card__link" href="#">Switch plans in seconds. Northwind Mobile gives you coverage that moves with you, wherever you go.</a></h3>
+          </div>
+        </div>
+      </div>
+    </article>
+  </template>
+
+  <script src="../assets/js/msn-ntp-layout.js"></script>
+</body>
+</html>

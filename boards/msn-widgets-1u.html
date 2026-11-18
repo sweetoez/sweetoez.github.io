@@ -1,0 +1,1956 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MSN 1u segment widgets</title>
+  <style>
+    @font-face {
+      font-family: "Selawik";
+      src: url("/fonts/selawik/selawk.ttf") format("truetype");
+      font-display: swap;
+      font-style: normal;
+      font-weight: 400;
+    }
+
+    @font-face {
+      font-family: "Selawik";
+      src: url("/fonts/selawik/selawksl.ttf") format("truetype");
+      font-display: swap;
+      font-style: normal;
+      font-weight: 300;
+    }
+
+    @font-face {
+      font-family: "Selawik";
+      src: url("/fonts/selawik/selawksb.ttf") format("truetype");
+      font-display: swap;
+      font-style: normal;
+      font-weight: 600;
+    }
+
+    @font-face {
+      font-family: "Selawik";
+      src: url("/fonts/selawik/selawkb.ttf") format("truetype");
+      font-display: swap;
+      font-style: normal;
+      font-weight: 700;
+    }
+
+    * {
+      box-sizing: border-box;
+      font-family: "Segoe UI Variable Text", "Segoe UI", Selawik, system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+    }
+
+    body {
+      margin: 0;
+      background: #EDEDEA;
+      color: #1A1A1A;
+      font-family: "Segoe UI Variable Text", "Segoe UI", Selawik, system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+    }
+
+    .page-shell {
+      padding: 48px 32px;
+    }
+
+    .eyebrow {
+      margin: 0;
+      color: #6B6B6B;
+      font-size: 13px;
+      letter-spacing: 0.12em;
+      line-height: 1.2;
+    }
+
+    h1 {
+      margin: 12px 0 0;
+      color: #1A1A1A;
+      font-size: 40px;
+      font-weight: 600;
+      line-height: 48px;
+    }
+
+    .subtitle {
+      max-width: 760px;
+      margin: 16px 0 0;
+      color: #4A4A4A;
+      font-size: 20px;
+      line-height: 1.4;
+    }
+
+    .controls {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 16px;
+      margin: 32px 0 24px;
+      color: #333333;
+      font-size: 14px;
+    }
+
+    .width-control,
+    .column-control,
+    .presets {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    #w {
+      width: 220px;
+      margin: 0;
+      accent-color: #1A1A1A;
+    }
+
+    .presets {
+      gap: 8px;
+    }
+
+    button {
+      padding: 6px 14px;
+      border: 1px solid #BDBDB8;
+      border-radius: 999px;
+      background: #FFFFFF;
+      color: #333333;
+      font: inherit;
+      cursor: pointer;
+    }
+
+    button[aria-pressed="true"] {
+      border-color: #1A1A1A;
+      background: #1A1A1A;
+      color: #FFFFFF;
+    }
+
+    .column-control {
+      gap: 8px;
+    }
+
+    .column-control input {
+      width: 16px;
+      height: 16px;
+      margin: 0;
+      accent-color: #1A1A1A;
+    }
+
+    output {
+      color: #333333;
+      font-size: 14px;
+      font-variant-numeric: tabular-nums;
+    }
+
+    :focus-visible {
+      outline: 2px solid #1A1A1A;
+      outline-offset: 2px;
+    }
+
+    .stage-scroll {
+      width: 100%;
+      overflow-x: auto;
+    }
+
+    .stage {
+      position: relative;
+      width: 1447px;
+      margin: 0 auto;
+      padding: 24px;
+      border: 1px solid #D9D9D5;
+      border-radius: 16px;
+      background: #F5F5F5;
+      container-name: stage;
+      container-type: inline-size;
+    }
+
+    .feed {
+      position: relative;
+      display: grid;
+      width: 100%;
+      max-width: 360px;
+      margin-inline: auto;
+      align-items: stretch;
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+      justify-content: center;
+      column-gap: 16px;
+      row-gap: 16px;
+    }
+
+    .u1 {
+      grid-column: span 1;
+    }
+
+    .cols,
+    .subcols {
+      position: absolute;
+      z-index: 1;
+      display: none;
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+      grid-auto-rows: 1fr;
+      justify-content: center;
+      column-gap: 16px;
+      row-gap: 16px;
+      pointer-events: none;
+      inset: 0;
+    }
+
+    .cols > div {
+      border-radius: 24px;
+      outline: 1px dashed rgba(0, 0, 0, 0.25);
+      background: rgba(0, 0, 0, 0.05);
+    }
+
+    .cols > :nth-child(n + 2),
+    .subcols > :nth-child(n + 2) {
+      display: none;
+    }
+
+    .stage.show-columns .cols {
+      display: grid;
+    }
+
+    .stage.show-subcolumns .subcols {
+      display: grid;
+    }
+
+    .subcolumn-group {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      overflow: hidden;
+      border-radius: 24px;
+    }
+
+    .subcolumn-group > div {
+      background: rgba(0, 0, 0, 0.035);
+      outline: 1px dashed rgba(0, 0, 0, 0.2);
+    }
+
+    @container stage (min-width: 614px) {
+      .feed,
+      .cols,
+      .subcols {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .feed {
+        max-width: 736px;
+      }
+
+      .cols > :nth-child(2) {
+        display: block;
+      }
+
+      .subcols > :nth-child(2) {
+        display: grid;
+      }
+    }
+
+    @container stage (min-width: 930px) {
+      .feed,
+      .cols,
+      .subcols {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .feed {
+        max-width: 1040px;
+      }
+
+      .cols > :nth-child(3) {
+        display: block;
+      }
+
+      .subcols > :nth-child(3) {
+        display: grid;
+      }
+    }
+
+    .stage.show-columns .card {
+      position: relative;
+      z-index: 0;
+    }
+
+    :root{
+      --w-ink:#272320;
+      --w-ink-2:#4C4642;
+      --w-green:#01712B;
+      --w-surface:rgba(255,255,255,0.80);
+      --w-stroke:rgba(0,0,0,0.10);
+      --w-font:"Segoe Sans","Segoe UI Variable Text","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;
+      --dg-icon: #242424;
+      --dg-1u-track: #E0E0E0;
+      --dg-1u-fill: #242424;
+      --dg-1u-img-radius: 12px;
+      --dg-1u-meta: #616161;
+    }
+    .seg-widget{box-sizing:border-box;position:relative;display:flex;align-items:stretch;width:100%;min-height:368px;padding:12px;border-radius:24px;background:var(--w-surface);box-shadow:inset 0 0 0 1px var(--w-stroke);overflow:hidden;font-family:var(--w-font);color:var(--w-ink);}
+    .seg-widget *{box-sizing:border-box;margin:0;}
+    .seg-more{position:absolute;top:24px;right:24px;z-index:2;width:36px;height:36px;padding:0 6px;display:flex;align-items:center;justify-content:center;border-radius:12px;border:1px solid rgba(255,255,255,0);background:rgba(255,255,255,0.70);box-shadow:0 0 1px rgba(0,0,0,0.15);cursor:pointer;visibility:hidden;}
+    .seg-more{color:var(--w-ink);}
+    .seg-widget:hover .seg-more,.seg-widget:focus-within .seg-more{visibility:visible;}
+    .seg-more:focus-visible{outline:2px solid var(--w-ink);outline-offset:2px;}
+    .seg-more svg{width:24px;height:24px;display:block;}
+
+    .seg-weather{background:#ACD1F2;}
+    .fin{flex:1 1 0;min-width:0;display:flex;flex-direction:column;align-items:flex-start;padding:18px;}
+    .fin-body{align-self:stretch;flex:1 1 0;display:flex;flex-direction:column;gap:12px;min-height:0;}
+    .fin-title{display:flex;flex-direction:column;align-items:flex-start;gap:2px;padding:2px 2px 0 2px;}
+    .fin-name{font-size:20px;line-height:26px;font-weight:650;color:var(--w-ink);}
+    .fin-tick{font-size:17px;line-height:26px;font-weight:410;color:var(--w-ink-2);}
+    .fin-area{flex:1 1 0;min-height:0;display:flex;flex-direction:column;gap:24px;padding:0 2px 2px 2px;}
+    .fin-price{display:flex;align-items:baseline;gap:4px;}
+    .fin-val{font-size:38px;line-height:40px;font-weight:480;}
+    .fin-chg{font-size:14px;line-height:20px;font-weight:650;color:var(--w-green);}
+    .stk-chart { display: flex; align-self: stretch; flex: 1 1 0; min-height: 0; gap: 4px; }
+    .stk-yaxis { position: relative; flex: 0 0 15px; width: 15px; height: 165px; }
+    .stk-yaxis span { position: absolute; left: 0; width: 15px; height: 14px; text-align: center; font-size: 10px; line-height: 14px; font-weight: 410; color: #4C4642; }
+    .stk-plot { position: relative; flex: 1 1 0; min-width: 0; height: 165px; }
+    .stk-grid i { position: absolute; left: 0; right: 0; height: 0; border-top: 0.5px solid rgba(0,0,0,0.08); }
+    .stk-graph { position: absolute; top: 0; left: 0; width: calc(100% - 4.57px); height: 150px; overflow: hidden; }
+    .stk-svg { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+    .stk-area { stroke: none; }
+    .stk-line { fill: none; stroke: #01712B; stroke-width: 2; stroke-linejoin: round; stroke-linecap: round; vector-effect: non-scaling-stroke; }
+    .stk-base { position: absolute; top: 73.47px; left: 1px; right: 0; height: 1px; background: repeating-linear-gradient(90deg, #01712B 0 2.4px, transparent 2.4px 4.8px); }
+    .stk-dot { position: absolute; top: 33.1px; left: calc(98.26% - 3px); width: 6px; height: 6px; border-radius: 9999px; background: #01712B; }
+    .stk-badge { position: absolute; top: 51px; right: 0; height: 19px; min-width: 20px; box-sizing: border-box; padding: 0 4px; display: inline-flex; align-items: center; background: #EFEAE7; border-radius: 8px; }
+    .stk-badge span { padding: 1px 2px 2px 2px; font-size: 12px; line-height: 16px; font-weight: 450; color: #272320; white-space: nowrap; }
+    .stk-xaxis { position: absolute; left: 0; right: 0; top: 143px; display: flex; padding-left: 30px; box-sizing: border-box; }
+    .stk-xcol { flex: 1 1 0; display: flex; flex-direction: column; align-items: flex-start; gap: 2px; }
+    .stk-tick { display: block; width: 0; height: 6px; border-left: 0.5px solid rgba(0,0,0,0.08); }
+    .stk-xcol span { font-size: 10px; line-height: 14px; font-weight: 410; color: #4C4642; white-space: nowrap; }
+
+    .spt{flex:1 1 0;min-width:0;display:flex;flex-direction:column;align-items:stretch;gap:12px;padding:18px;}
+    .spt-title{font-size:20px;line-height:26px;font-weight:650;color:var(--w-ink);}
+    .spt-list{list-style:none;padding:0 2px 2px 2px;flex:1 1 0;display:flex;flex-direction:column;justify-content:center;gap:16px;}
+    .spt-row{min-height:77px;display:flex;align-items:center;gap:8px;padding:0 8px;border-radius:12px;background:rgba(0,0,0,0);}
+    .spt-team{width:48px;flex:0 0 48px;display:flex;flex-direction:column;align-items:center;gap:4px;}
+    .spt-badge{width:40px;height:40px;border-radius:9999px;background:var(--b);color:#FFFFFF;display:flex;align-items:center;justify-content:center;font-size:10px;line-height:12px;font-weight:650;}
+    .spt-abbr{font-size:14px;line-height:20px;font-weight:650;color:var(--w-ink);}
+    .spt-mid{flex:1 1 0;min-width:0;display:flex;flex-direction:column;align-items:center;gap:4px;text-align:center;}
+    .spt-live{display:inline-flex;align-items:center;gap:6px;height:28px;padding:0 8px;border-radius:8px;background:rgba(1,113,43,0.10);font-size:14px;line-height:20px;font-weight:450;color:var(--w-green);}
+    .spt-live i{width:8px;height:8px;border-radius:9999px;background:var(--w-green);}
+    .spt-status{font-size:14px;line-height:20px;font-weight:450;color:var(--w-ink);}
+    .spt-score{display:inline-flex;align-items:center;gap:4px;font-size:24px;line-height:32px;font-weight:650;color:var(--w-ink);}
+    .spt-play{width:12px;height:12px;color:var(--w-ink);}
+    .spt-link{font-size:14px;line-height:20px;font-weight:450;color:var(--w-ink);text-decoration:none;}
+    .spt-link:hover{text-decoration:underline;}
+
+    .evt{flex:1 1 0;min-width:0;display:flex;flex-direction:column;align-items:center;gap:16px;}
+    .evt-media{align-self:stretch;aspect-ratio:312/196;flex:0 0 auto;padding:12px;display:flex;justify-content:flex-end;align-items:flex-start;border-radius:12px;overflow:hidden;background-color:#BDBDBD;background-size:cover;background-position:center;}
+    .evt-more{min-width:36px;min-height:36px;padding:0 6px;display:flex;align-items:center;justify-content:center;border:0;border-radius:12px;background:rgba(0,0,0,0.55);color:#FFFFFF;cursor:pointer;}
+    .evt-more svg{width:24px;height:24px;display:block;}
+    .evt-more:focus-visible{outline:2px solid #FFFFFF;outline-offset:2px;}
+    .evt-area{align-self:stretch;flex:1 1 0;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:12px;padding:0 18px 18px 18px;}
+    .evt-when{align-self:stretch;padding:0 2px;font-size:16px;line-height:22px;font-weight:650;color:var(--w-ink);}
+    .evt-row{align-self:stretch;height:62px;display:flex;align-items:center;gap:16px;padding:0 2px;}
+    .evt-cal{width:62px;height:62px;flex:0 0 62px;padding-bottom:2px;display:flex;flex-direction:column;border-radius:12px;overflow:hidden;background:#DFECFF;}
+    .evt-mon{height:24px;display:flex;align-items:center;justify-content:center;background:#AACDFF;font-size:12px;line-height:16px;font-weight:650;color:#0159BA;}
+    .evt-day{flex:1 1 0;display:flex;align-items:center;justify-content:center;font-size:24px;line-height:32px;font-weight:650;color:#0159BA;}
+    .evt-text{flex:1 1 0;min-width:0;display:flex;flex-direction:column;justify-content:center;gap:4px;}
+    .evt-name{font-size:20px;line-height:26px;font-weight:650;color:var(--w-ink);}
+    .evt-place{font-size:16px;line-height:22px;font-weight:450;color:var(--w-ink-2);}
+
+    .trd{flex:1 1 0;min-width:0;display:flex;flex-direction:column;align-items:center;gap:12px;padding:18px;}
+    .trd-title{align-self:stretch;padding:2px 2px 0 2px;font-size:20px;line-height:26px;font-weight:650;color:var(--w-ink);}
+    .trd-stage { position: relative; display: flex; flex-direction: column; flex: 1 1 0; align-self: stretch; min-height: 0; padding: 0 2px 2px 2px; box-sizing: border-box; }
+    .trd-img-area { display: flex; flex-direction: column; flex: 1 1 0; min-height: 0; padding: 16px 16px 0 0; box-sizing: border-box; }
+    .trd-img { display: block; flex: 1 1 0; width: 100%; height: auto; min-height: 0; object-fit: cover; border-radius: 12px; background: lightgray; }
+    .trd-bubble-area { position: absolute; top: 0; left: 2px; right: 2px; z-index: 1; display: flex; flex-direction: column; justify-content: center; align-items: flex-end; gap: 10px; padding-left: 30px; box-sizing: border-box; pointer-events: none; }
+    .trd-bubble { margin: 0; width: 100%; max-width: 260px; box-sizing: border-box; padding: 16px; background: #FEE6D4; border-radius: 12px; box-shadow: inset 0 0 0 1px rgba(0,0,0,0.10); color: #322D29; font-size: 14px; line-height: 20px; font-weight: 450; font-family: inherit; }
+
+    .crt{flex:1 1 0;min-width:0;display:flex;flex-direction:column;align-items:center;gap:16px;}
+    .crt-media{position:relative;align-self:stretch;aspect-ratio:312/196;flex:0 0 auto;padding:12px;border-radius:12px;overflow:hidden;background-color:#BDBDBD;background-size:cover;background-position:center;}
+    .crt-play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:48px;height:46px;padding:6px;display:flex;align-items:center;justify-content:center;border:0;border-radius:20px;background:#272320;color:#E3DDD8;cursor:pointer;}
+    .crt-play svg{width:24px;height:24px;display:block;}
+    .crt-area{align-self:stretch;flex:1 1 0;display:flex;flex-direction:column;justify-content:flex-end;align-items:flex-start;gap:16px;padding:0 18px 18px 18px;}
+    .crt-who{align-self:stretch;flex:1 1 0;display:flex;align-items:center;gap:12px;padding:2px;overflow:hidden;}
+    .crt-avatar{width:52px;height:52px;flex:0 0 52px;border-radius:9999px;object-fit:cover;background:#BDBDBD;}
+    .crt-text{flex:1 1 0;min-width:0;display:flex;flex-direction:column;justify-content:center;gap:4px;}
+    .crt-name{font-size:20px;line-height:26px;font-weight:650;color:var(--w-ink);}
+    .crt-meta{display:inline-flex;align-items:center;gap:4px;font-size:14px;line-height:20px;font-weight:450;color:var(--w-ink-2);}
+    .crt-cta{align-self:stretch;padding:0 2px 2px 2px;}
+    .crt-follow{width:100%;min-width:40px;min-height:40px;padding:0 10px;display:flex;align-items:center;justify-content:center;gap:2px;border:1px solid rgba(0,0,0,0.10);border-radius:12px;background:#FFFFFF;box-shadow:0 1px 3px rgba(0,0,0,0.15),inset 0 0.5px 0.5px 0.5px #FFFFFF;color:var(--w-ink);font-family:var(--w-font);cursor:pointer;}
+    .crt-follow svg{width:20px;height:20px;display:block;}
+    .crt-follow span{padding:10px 2px;font-size:15px;line-height:20px;font-weight:600;}
+    .crt-follow:focus-visible,.crt-play:focus-visible{outline:2px solid var(--w-ink);outline-offset:2px;}
+
+    .gm{flex:1 1 0;min-width:0;display:flex;flex-direction:column;align-items:center;gap:12px;padding:18px;}
+    .gm-title{align-self:stretch;padding:2px 2px 0 2px;font-size:20px;line-height:26px;font-weight:650;color:var(--w-ink);}
+    .gm-list{list-style:none;align-self:stretch;flex:1 1 0;display:flex;flex-direction:column;justify-content:flex-start;gap:12px;padding:0 2px 2px 2px;}
+    .gm-row{min-height:80px;display:flex;align-items:center;gap:12px;}
+    .gm-art{width:80px;height:80px;flex:0 0 80px;border-radius:12px;object-fit:cover;background:#BDBDBD;}
+    .gm-text{flex:1 1 0;min-width:0;display:flex;flex-direction:column;align-items:flex-start;gap:4px;}
+    .gm-name{font-size:18px;line-height:26px;font-weight:650;color:var(--w-ink);}
+    .gm-sub{font-size:14px;line-height:20px;font-weight:450;color:var(--w-ink-2);}
+
+    .pod{flex:1 1 0;min-width:0;display:flex;flex-direction:column;align-items:center;gap:16px;}
+    .pod-img{align-self:stretch;width:100%;aspect-ratio:312/196;object-fit:cover;border-radius:12px;background:#BDBDBD;flex:0 0 auto;}
+    .pod-area{align-self:stretch;flex:1 1 0;display:flex;flex-direction:column;padding:0 18px 18px 18px;}
+    .pod-area[hidden]{display:none;}
+    .pod-rest{gap:8px;}
+    .pod-head{display:flex;flex-direction:column;align-items:flex-start;gap:4px;padding:0 2px;}
+    .pod-name{font-size:20px;line-height:26px;font-weight:650;color:var(--w-ink);}
+    .pod-meta{font-size:12px;line-height:16px;font-weight:450;color:var(--w-ink);}
+    .pod-playrow{flex:1 1 0;display:flex;align-items:flex-end;gap:8px;padding:0 2px 2px 2px;}
+    .pod-desc{flex:1 1 0;min-width:0;font-size:14px;line-height:20px;font-weight:450;color:var(--w-ink);display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;}
+    .pod-play{width:48px;height:48px;flex:0 0 48px;padding:6px;display:flex;align-items:center;justify-content:center;border:0;border-radius:9999px;background:#272320;color:#E3DDD8;cursor:pointer;}
+    .pod-play svg{width:24px;height:24px;display:block;}
+    .pod-playing{gap:16px;align-items:center;}
+    .pod-now{align-self:stretch;padding:0 2px;font-size:14px;line-height:20px;font-weight:450;color:var(--w-ink);}
+    .pod-controls{align-self:stretch;display:flex;flex-direction:column;align-items:center;gap:8px;}
+    .pod-progress{align-self:stretch;display:flex;align-items:center;gap:6px;}
+    .pod-t{font-size:12px;line-height:16px;font-weight:450;color:var(--w-ink);}
+    .pod-bars{flex:1 1 0;display:flex;align-items:center;gap:4px;}
+    .pod-bars i{display:block;height:4px;border-radius:2px;background:#CFC9C5;overflow:hidden;position:relative;}
+    .pod-bars i b{position:absolute;left:0;top:0;bottom:0;background:#3F3935;}
+    .pod-bars .s1{width:21px;flex:0 0 21px;}
+    .pod-bars .s2{flex:1 1 0;}
+    .pod-bars .s3{width:26px;flex:0 0 26px;}
+    .pod-bars .s4{flex:1 1 0;}
+    .pod-btns{display:flex;align-items:center;justify-content:center;gap:8px;}
+    .pod-btn{display:flex;align-items:center;justify-content:center;border:0;background:transparent;color:var(--w-ink);cursor:pointer;}
+    .pod-prev,.pod-next{padding:3px 5px;}
+    .pod-prev svg,.pod-next svg{width:24px;height:24px;}
+    .pod-pause{padding:4px;}
+    .pod-pause svg{width:32px;height:32px;}
+    .pod-play:focus-visible,.pod-btn:focus-visible{outline:2px solid var(--w-ink);outline-offset:2px;}
+
+    .wx-content{position:relative;flex:1 1 0;min-width:0;display:flex;flex-direction:column;align-items:center;gap:20px;}
+    .wx-sun{position:absolute;left:31.83px;top:10px;z-index:0;width:138px;height:108px;pointer-events:none;display:block;}
+    .wx-area{position:relative;z-index:1;align-self:stretch;display:flex;flex-direction:column;align-items:flex-start;gap:22px;padding:18px 18px 0 18px;}
+    .wx-loc{align-self:stretch;display:flex;align-items:center;gap:16px;padding:0 2px;}
+    .wx-city{font-size:20px;line-height:26px;font-weight:650;}
+    .wx-now{align-self:stretch;height:62px;display:flex;align-items:center;gap:20px;padding:0 2px;}
+    .wx-temp{display:flex;align-items:center;gap:2px;}
+    .wx-deg-num{font-size:56px;line-height:40px;font-weight:600;}
+    .wx-deg{width:16px;height:48px;font-size:38px;line-height:40px;font-weight:480;}
+    .wx-cond{flex:1 1 0;min-width:0;display:flex;flex-direction:column;justify-content:flex-end;align-items:flex-end;gap:4px;}
+    .wx-cond-text{align-self:stretch;text-align:right;font-size:14px;line-height:20px;font-weight:650;}
+    .wx-hl{align-self:stretch;display:flex;justify-content:flex-end;align-items:flex-end;gap:12px;font-size:14px;line-height:20px;font-weight:410;}
+    .wx-graph{position:relative;z-index:1;list-style:none;padding:0 4px;align-self:stretch;height:194px;display:flex;justify-content:space-between;align-items:center;border-radius:12px;background:rgba(255,255,255,0.45);}
+    .wx-hour{flex:1 0 0;min-width:0;height:194px;min-height:176px;padding:24px 0 32px 0;display:flex;flex-direction:column;justify-content:space-between;align-items:center;overflow:hidden;border-radius:32px 32px 48px 48px;}
+    .wx-time{font-size:14px;line-height:20px;font-weight:410;white-space:nowrap;}
+    .wx-hbot{display:flex;flex-direction:column;align-items:center;gap:16px;}
+    .wx-icon{width:24px;height:24px;flex-shrink:0;display:flex;align-items:center;justify-content:center;overflow:visible;}
+    .wx-icon img{display:block;max-width:none;flex:none;}
+    .wx-data{display:flex;flex-direction:column;align-items:center;gap:18px;}
+    .wx-htemp{font-size:14px;line-height:20px;font-weight:650;}
+    .wx-rain{display:inline-flex;align-items:center;gap:2px;font-size:12px;line-height:16px;font-weight:410;}
+    .wx-drop{width:12px;height:12px;display:block;color:#272320;}
+    .wx-drop svg{width:12px;height:12px;display:block;}
+
+    .cg-section {
+      width: 100%;
+      max-width: 1040px;
+      margin: 48px auto 0;
+    }
+
+    .cg-pair {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      gap: 16px;
+      width: 100%;
+      max-width: 736px;
+      margin: 0 auto 24px;
+    }
+
+    .cg-example {
+      display: flex;
+      min-width: 300px;
+      max-width: 360px;
+      flex: 1 1 336px;
+      flex-direction: column;
+    }
+
+    .cg-copy-label {
+      font-feature-settings: "calt" 0;
+    }
+
+    .cg-section > .dg-section-title {
+      font-feature-settings: "calt" 0;
+    }
+
+    .cg1 {
+      position: relative;
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      min-width: 300px;
+      max-width: 360px;
+      height: 368px;
+      flex: none;
+      padding: 12px;
+      overflow: hidden;
+      border: 1px solid rgba(0, 0, 0, 0.10);
+      border-radius: 24px;
+      background: rgba(255, 255, 255, 0.80);
+    }
+
+    .cg1-body {
+      display: flex;
+      flex: 1 0 0;
+      flex-direction: column;
+      align-items: center;
+      align-self: stretch;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 18px;
+      box-sizing: border-box;
+    }
+
+    .cg-stack {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-self: stretch;
+    }
+
+    .cg-stack--no-title {
+      flex: 1 0 0;
+      align-items: center;
+      gap: 12px;
+      padding: 2px;
+    }
+
+    .cg-stack--three {
+      align-items: flex-start;
+      gap: 12px;
+      height: 266px;
+      flex-shrink: 0;
+      padding: 0 2px 2px;
+      box-sizing: border-box;
+    }
+
+    .cg-stack--two {
+      align-items: flex-start;
+      gap: 24px;
+      padding: 0 2px 2px;
+      box-sizing: border-box;
+    }
+
+    .cg-title-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      align-self: stretch;
+      height: 26px;
+      padding: 2px 2px 0;
+      box-sizing: border-box;
+    }
+
+    .cg-title {
+      flex: 1 0 0;
+      overflow: hidden;
+      margin: 0;
+      color: #272320;
+      font-size: 18px;
+      line-height: 26px;
+      font-weight: 650;
+      font-feature-settings: "calt" 0;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+
+    .cg-row {
+      display: flex;
+      align-items: center;
+      align-self: stretch;
+      gap: 12px;
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .cg-row:focus-visible {
+      outline: 2px solid #272320;
+      outline-offset: 2px;
+      border-radius: 12px;
+    }
+
+    .cg-text {
+      display: flex;
+      min-width: 0;
+      flex: 1 0 0;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 4px;
+    }
+
+    .cg-pub {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      height: 28px;
+      white-space: nowrap;
+    }
+
+    .cg-pub-brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 2px;
+    }
+
+    .cg-fav-frame {
+      display: block;
+      width: 16px;
+      height: 16px;
+      flex-shrink: 0;
+      overflow: hidden;
+      border-radius: 6px;
+      background: #D3D3D3;
+    }
+
+    .cg-fav-frame img {
+      display: block;
+      width: 16px;
+      height: 16px;
+    }
+
+    .cg-pub-name,
+    .cg-pub-dot,
+    .cg-pub-time {
+      color: #272320;
+      font-size: 14px;
+      line-height: 20px;
+      font-weight: 550;
+      font-feature-settings: "calt" 0;
+    }
+
+    .cg-head {
+      display: -webkit-box;
+      align-self: stretch;
+      overflow: hidden;
+      margin: 0;
+      color: #272320;
+      font-size: 18px;
+      line-height: 22px;
+      font-weight: 600;
+      font-feature-settings: "calt" 0;
+      text-overflow: ellipsis;
+      -webkit-box-orient: vertical;
+    }
+
+    .cg-img-frame {
+      display: block;
+      width: 80px;
+      height: 80px;
+      flex-shrink: 0;
+      overflow: hidden;
+      border-radius: 12px;
+      background: #D3D3D3;
+    }
+
+    .cg-img-frame img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .cg1[data-variant="no-title"] .cg-row {
+      min-height: 92px;
+    }
+
+    .cg1[data-variant="no-title"] .cg-head {
+      -webkit-line-clamp: 3;
+    }
+
+    .cg1[data-variant="three"] .cg-row {
+      min-height: 80px;
+    }
+
+    .cg1[data-variant="three"] .cg-head {
+      -webkit-line-clamp: 2;
+    }
+
+    .cg1[data-variant="two"] .cg-head {
+      -webkit-line-clamp: 4;
+    }
+
+    .cg1[data-variant="two"] .cg-img-frame {
+      width: 112px;
+      height: 112px;
+      border-radius: 36px;
+    }
+
+    .article-section { width: 100%; max-width: 1040px; margin: 48px auto 0; }
+    .article-section > .dg-section-title { font-feature-settings: "calt" 0; }
+    .article-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 16px; margin: 0 auto 16px; color: #333333; font-size: 14px; }
+    .article-controls label { display: inline-flex; align-items: center; gap: 8px; }
+    .article-controls input { width: 16px; height: 16px; margin: 0; accent-color: #1A1A1A; }
+    .article-pair { display: flex; flex-wrap: wrap; align-items: flex-start; gap: 16px; width: 100%; max-width: 736px; margin: 0 auto 24px; }
+    .article-example { display: flex; min-width: 300px; max-width: 360px; flex: 1 1 336px; flex-direction: column; }
+    .article-caption { margin: 0 0 16px; padding: 10px 2px; color: #272320; font-size: 15px; line-height: 20px; font-weight: 410; font-feature-settings: "calt" 0; }
+    .article-1u, .article-2u { position: relative; box-sizing: border-box; display: flex; width: 100%; min-width: 300px; max-width: 360px; height: 368px; flex: none; padding: 12px; overflow: hidden; border: 0; border-radius: 24px; background: rgba(255,255,255,.80); box-shadow: inset 0 0 0 1px rgba(0,0,0,.10); color: #272320; font-family: "Segoe UI Variable Text","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif; }
+    .article-1u *, .article-2u * { box-sizing: border-box; margin: 0; font-feature-settings: "calt" 0; }
+    .article-1u { flex-direction: column; gap: 16px; }
+    .article-media { position: relative; display: flex; width: 100%; flex: none; align-items: flex-end; justify-content: flex-end; padding: 12px; overflow: hidden; border-radius: 12px; background: #D3D3D3; }
+    .article-media--standard { height: 196px; }
+    .article-media--square { height: 258px; }
+    .article-media > img { display: block; width: 100%; height: 100%; object-fit: cover; }
+    .article-media .hover-actions, .article-2u-image .hover-actions { top: 12px; right: 12px; }
+    .article-1u .hover-actions, .article-2u .hover-actions { position: absolute; z-index: 2; display: flex; min-width: 36px; min-height: 36px; align-items: center; justify-content: center; padding: 0 6px; border: 0; border-radius: 12px; background: rgba(0,0,0,.55); color: #FFFFFF; cursor: pointer; visibility: hidden; }
+    .article-1u:hover .hover-actions, .article-1u:focus-within .hover-actions, .article-2u:hover .hover-actions, .article-2u:focus-within .hover-actions { visibility: visible; }
+    .article-1u .hover-actions svg, .article-2u .hover-actions svg { display: block; width: 24px; height: 24px; }
+    .article-1u .hover-actions:focus-visible, .article-2u .hover-actions:focus-visible { outline: 2px solid #272320; outline-offset: 2px; }
+    .article-badge { position: absolute; top: 8px; left: 8px; display: none; min-width: 20px; height: 19px; align-items: center; justify-content: center; padding: 0 6px; border-radius: 8px; background: #EFEAE7; color: #272320; font-size: 12px; line-height: 16px; font-weight: 550; }
+    .article-section[data-image-badge="true"] .article-badge { display: inline-flex; }
+    .article-video { position: absolute; top: 50%; left: 50%; display: none; width: 36px; height: 36px; align-items: center; justify-content: center; transform: translate(-50%,-50%); border-radius: 50%; background: rgba(0,0,0,.50); }
+    .article-section[data-video="true"] .article-video { display: flex; }
+    .article-video img { display: block; width: 20px; height: 20px; filter: brightness(0) invert(1); }
+    .article-text { display: flex; min-width: 0; flex: 1; flex-direction: column; gap: 4px; padding: 0 18px 18px; }
+    .article-text--square { min-height: 0; }
+    .article-text .cg-pub, .article-2u-text .cg-pub { padding: 0 2px; }
+    .article-title { display: -webkit-box; overflow: hidden; padding: 2px; color: #272320; font-size: 20px; line-height: 26px; font-weight: 650; text-overflow: ellipsis; -webkit-box-orient: vertical; -webkit-line-clamp: 3; }
+    .article-2u-text .article-title { padding: 0; }
+    .article-title--one { -webkit-line-clamp: 1; }
+    .article-title--two { -webkit-line-clamp: 2; }
+    .article-body { display: -webkit-box; min-height: 0; overflow: hidden; color: #272320; font-size: 16px; line-height: 22px; font-weight: 450; text-overflow: ellipsis; -webkit-box-orient: vertical; -webkit-line-clamp: 3; }
+    .article-1u[data-variant="subtitle"] .article-text { gap: 4px; }
+    .article-1u[data-variant="image"] .article-text { padding-bottom: 18px; }
+    .article-2u-section { width: 100%; max-width: 736px; margin: 48px auto 0; overflow-x: auto; }
+    .article-2u-pair { display: flex; flex-wrap: wrap; align-items: flex-start; gap: 16px; width: 100%; max-width: 688px; margin: 0 auto 24px; }
+    .article-2u-example { display: flex; min-width: 616px; max-width: 736px; flex: 1 1 688px; flex-direction: column; }
+    .article-2u { min-width: 616px; max-width: 736px; flex-direction: row; align-items: stretch; gap: 20px; }
+    .article-2u-image { position: relative; height: 100%; flex: 0 0 auto; overflow: hidden; padding: 12px; border-radius: 12px; background: #D3D3D3; }
+    .article-2u-image--square { width: 344px; }
+    .article-2u-image--four-three { width: auto; aspect-ratio: 4 / 3; }
+    .article-2u-image > img { display: block; width: 100%; height: 100%; object-fit: cover; }
+    .article-2u-text { display: flex; min-width: 0; flex: 1; flex-direction: column; gap: 8px; padding: 18px 18px 0 0; }
+    .article-2u-text .article-body { flex: 1; -webkit-line-clamp: 6; }
+    .article-2u-section[data-image-badge="true"] .article-badge { display: inline-flex; }
+    .article-2u-section[data-video="true"] .article-video { display: flex; }
+
+    .gem-widget-section { width: 100%; max-width: 1040px; margin: 48px auto 0; }
+    .gem-widget-section > .dg-section-title { margin-bottom: 16px; }
+    .gem-widget-row { display: flex; align-items: flex-start; gap: 16px; margin: 0 auto 24px; }
+    .gem-widget-row--1u { max-width: 688px; flex-wrap: wrap; }
+    .gem-widget-row--2u { max-width: 736px; overflow-x: auto; overscroll-behavior-x: contain; padding-bottom: 8px; }
+    .gem-widget-example { display: flex; flex: none; flex-direction: column; }
+    .gem-widget-example--1u { width: 336px; }
+    .gem-widget-example--2u { width: 688px; }
+    .gem-widget-caption { margin: 0 0 16px; padding: 10px 2px; color: #272320; font-size: 15px; line-height: 20px; font-weight: 410; font-feature-settings: "calt" 0; }
+    .gem-widget { position: relative; box-sizing: border-box; display: flex; height: 368px; flex: none; overflow: hidden; padding: 12px; border: 0; border-radius: 24px; background: rgba(255,255,255,.80); box-shadow: inset 0 0 0 1px rgba(0,0,0,.10); color: #272320; }
+    .gem-widget, .gem-widget * { box-sizing: border-box; font-feature-settings: "calt" 0; }
+    .gem-widget--1u { width: 100%; min-width: 300px; max-width: 360px; flex-direction: column; gap: 16px; }
+    .gem-widget--2u { width: 688px; min-width: 616px; max-width: 736px; flex-direction: row; align-items: stretch; gap: 20px; }
+    .gem-widget-image { position: relative; display: flex; flex: none; align-items: flex-start; justify-content: flex-end; overflow: hidden; padding: 12px; border-radius: 12px; background: #D3D3D3; }
+    .gem-widget-image--1u { width: 100%; height: 196px; }
+    .gem-widget-image--2u { min-width: 412px; flex: 1; padding: 10px; height: 344px; }
+    .gem-widget-image > img { display: block; width: 100%; height: 100%; object-fit: cover; }
+    .gem-widget .hover-actions { top: 12px; right: 12px; visibility: hidden; }
+    .gem-widget:hover .hover-actions, .gem-widget:focus-within .hover-actions, .gem-widget.is-hover .hover-actions { visibility: visible; }
+    .gem-widget .hover-actions:focus-visible { outline: 2px solid #272320; outline-offset: 2px; }
+    .gem-widget-text { display: flex; min-width: 0; min-height: 0; flex-direction: column; flex: 1; gap: 4px; }
+    .gem-widget-text--1u { margin: 0 18px 18px; padding: 2px; }
+    .gem-widget-text--2u { min-width: 0; flex: 0 1 166px; }
+    .gem-widget-attribution { display: flex; min-width: 0; align-items: center; color: #272320; font-size: 14px; font-weight: 550; line-height: 20px; white-space: nowrap; }
+    .gem-widget-attribution--inline { gap: 2px; }
+    .gem-widget-attribution--split { align-items: flex-start; flex-direction: column; }
+    .gem-widget-favline { display: inline-flex; flex: none; align-items: center; gap: 2px; }
+    .gem-widget-fav-stack { display: inline-flex; align-items: center; }
+    .gem-widget-favicon { display: block; width: 16px; height: 16px; flex: none; overflow: hidden; border: .5px solid rgba(0,0,0,.10); border-radius: 6px; background: #D3D3D3; }
+    .gem-widget-favicon + .gem-widget-favicon { margin-left: -2px; }
+    .gem-widget-favicon img { display: block; width: 100%; height: 100%; }
+    .gem-widget-count, .gem-widget-meta { flex: none; }
+    .gem-widget-title-wrap { min-width: 0; padding: 0 2px; }
+    .gem-widget-title { display: -webkit-box; overflow: hidden; margin: 0; color: #272320; font-size: 20px; font-weight: 650; line-height: 26px; text-overflow: ellipsis; -webkit-box-orient: vertical; -webkit-line-clamp: 3; }
+    .gem-widget--2u .gem-widget-title { -webkit-line-clamp: 4; }
+    .gem-widget--immersive { padding: 0; border: 0; background: linear-gradient(180deg, rgba(40,37,35,0.00) 0%, rgba(40,37,35,0.20) 40%, rgba(40,37,35,0.80) 70%), url("../assets/images/msn/widgets/gem-img-1.png") #D3D3D3 50% / cover no-repeat; box-shadow: none; color: #FFFFFF; }
+    .gem-widget--immersive .gem-widget-text { justify-content: flex-end; align-items: flex-start; gap: 4px; padding: 0 18px 18px; color: #FFFFFF; }
+    .gem-widget--immersive .gem-widget-attribution, .gem-widget--immersive .gem-widget-title { color: #FFFFFF; }
+    .gem-widget--immersive .gem-widget-title-wrap { width: 100%; }
+    .gem-widget--immersive.gem-widget--2u .gem-widget-title { display: block; overflow: hidden; white-space: nowrap; }
+
+    @media (min-width: 600px) and (max-width: 800px) {
+      .article-2u-section { width: calc(100% + 64px); margin-right: -32px; margin-left: -32px; }
+    }
+
+    @media (max-width: 360px) {
+      #w { width: calc(100vw - 160px); }
+    }
+
+    .hover-actions {
+      position: absolute;
+      z-index: 2;
+      top: 24px;
+      right: 24px;
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+      min-width: 36px;
+      min-height: 36px;
+      padding: 0 6px;
+      border: none;
+      border-radius: 12px;
+      background: rgba(0, 0, 0, 0.55);
+      color: #FFFFFF;
+      cursor: pointer;
+      visibility: hidden;
+    }
+
+    .cg1:hover .hover-actions,
+    .cg1:focus-within .hover-actions,
+    .cg1.is-hover .hover-actions {
+      visibility: visible;
+    }
+
+    .hover-actions:focus-visible {
+      outline: 2px solid #272320;
+      outline-offset: 2px;
+    }
+
+    .hover-actions svg {
+      width: 24px;
+      height: 24px;
+      display: block;
+    }
+
+    @container stage (min-width: 930px) {
+      .cg-pair {
+        max-width: 688px;
+      }
+    }
+
+    .dg-section {
+      width: 100%;
+      max-width: 360px;
+      margin: 48px auto 0;
+    }
+
+    .dg-section-title {
+      margin: 0 0 16px 0;
+      font-size: 20px;
+      line-height: 26px;
+      font-weight: 650;
+      color: #272320;
+    }
+
+    .digest {
+      position: relative;
+      width: 100%;
+      max-width: 360px;
+      height: 368px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      overflow: hidden;
+      padding: 12px;
+      border: 1px solid #E0E0E0;
+      border-radius: 24px;
+      background: #FFFFFF;
+      font-family: "Segoe UI Variable Text", "Segoe UI", Selawik, system-ui, -apple-system, "Helvetica Neue", Arial;
+    }
+
+    .digest-2u-inner,
+    .digest-2u-paddles {
+      display: none;
+    }
+
+    .digest-1u {
+      display: flex;
+      min-height: 0;
+      flex: 1;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .digest-1u-frame {
+      position: relative;
+      width: 100%;
+      flex: none;
+      aspect-ratio: 312 / 172;
+      overflow: hidden;
+      border-radius: var(--dg-1u-img-radius);
+      background: #BDBDBD;
+    }
+
+    .digest-1u-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .digest[data-image-missing="true"] .digest-1u-image {
+      visibility: hidden;
+    }
+
+    .digest-1u-text {
+      display: flex;
+      min-height: 0;
+      flex: 1;
+      flex-direction: column;
+      padding: 0 18px 18px;
+      color: #242424;
+    }
+
+    .digest-publisher {
+      display: flex;
+      height: 28px;
+      flex: none;
+      align-items: center;
+      gap: 4px;
+      font-size: 12px;
+      line-height: 16px;
+      white-space: nowrap;
+    }
+
+    .digest-1u .digest-publisher {
+      color: var(--dg-1u-meta);
+    }
+
+    .digest-2u-inner .digest-publisher {
+      color: #FFFFFF;
+    }
+
+    .digest-monogram {
+      display: flex;
+      width: 16px;
+      height: 16px;
+      flex: none;
+      align-items: center;
+      justify-content: center;
+      border-radius: 4px;
+      background: #E0E0E0;
+      color: #424242;
+      font-size: 10px;
+      font-weight: 600;
+      line-height: 16px;
+    }
+
+    .digest-2u-inner .digest-monogram {
+      background: rgba(255, 255, 255, 0.2);
+      color: #FFFFFF;
+    }
+
+    .digest-title {
+      display: -webkit-box;
+      overflow: hidden;
+      margin: 0;
+      font-size: 20px;
+      font-weight: 650;
+      line-height: 26px;
+      letter-spacing: 0;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+    }
+
+    .digest-1u .digest-title {
+      margin-top: 4px;
+      color: #242424;
+    }
+
+    .digest-2u-inner .digest-title {
+      color: #FFFFFF;
+    }
+
+    .digest-1u-controls {
+      display: flex;
+      height: 36px;
+      flex: none;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: auto;
+    }
+
+    .digest-2u-inner {
+      height: 100%;
+      flex-direction: column;
+      justify-content: flex-end;
+      gap: 12px;
+      padding: 18px;
+    }
+
+    .digest-2u-content {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      padding: 0 100px 0 2px;
+    }
+
+    .digest-pagination {
+      display: flex;
+      width: 138px;
+      height: 12px;
+      flex: none;
+      align-items: center;
+      gap: 3px;
+      padding: 4px;
+      box-sizing: border-box;
+    }
+
+    .digest-bar {
+      height: 4px;
+      flex: 1 1 0;
+      border-radius: 2px;
+    }
+
+    .digest-2u-inner .digest-bar {
+      background: rgba(255, 255, 255, 0.30);
+    }
+
+    .digest-2u-inner .digest-bar.is-active {
+      background: #E5EBFA;
+    }
+
+    .digest-1u .digest-bar {
+      background: var(--dg-1u-track);
+    }
+
+    .digest-1u .digest-bar.is-active {
+      background: var(--dg-1u-fill);
+    }
+
+    .digest-2u-paddles {
+      position: absolute;
+      right: 32px;
+      bottom: 32px;
+      gap: 8px;
+    }
+
+    .digest-1u-paddles {
+      display: flex;
+      gap: 8px;
+    }
+
+    .digest button {
+      display: flex;
+      width: 36px;
+      height: 36px;
+      flex: none;
+      align-items: center;
+      justify-content: center;
+      border-radius: 12px;
+      color: var(--dg-icon);
+    }
+
+    .digest-2u-paddles button {
+      padding: 0;
+      border: none;
+      background: #FFFFFF;
+      box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.08), 0 1px 3px 0 rgba(0, 0, 0, 0.08);
+    }
+
+    .digest-1u-paddles button {
+      padding: 0 6px;
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      background: transparent;
+      box-shadow: none;
+    }
+
+    .digest button:focus-visible {
+      outline: 2px solid #242424;
+      outline-offset: 2px;
+    }
+
+    .digest-chevron {
+      display: block;
+      width: 6.5px;
+      height: 12px;
+      fill: var(--dg-icon);
+    }
+
+    @container stage (min-width: 614px) {
+      .dg-section {
+        max-width: 736px;
+      }
+
+      .digest {
+        width: 100%;
+        min-width: 616px;
+        max-width: 736px;
+        height: 368px;
+        display: block;
+        border: none;
+        background: linear-gradient(180deg, rgba(40, 37, 35, 0.00) 0%, rgba(40, 37, 35, 0.20) 40%, rgba(40, 37, 35, 0.80) 70%), url("/assets/images/msn/digest-1.jpg") lightgray 50% / cover no-repeat;
+      }
+
+      .digest-2u-inner {
+        display: flex;
+        height: 100%;
+      }
+
+      .digest-2u-paddles {
+        display: flex;
+      }
+
+      .digest-1u {
+        display: none;
+      }
+    }
+
+    @container stage (min-width: 930px) {
+      .dg-section {
+        width: calc(66.666667% - 5.333333px);
+        max-width: 688px;
+      }
+    }
+
+    @container stage (max-width: 613px) {
+      .dg-section {
+        max-width: 360px;
+      }
+
+      .digest {
+        width: 100%;
+        min-width: 0;
+        max-width: 360px;
+        display: flex;
+        border: 1px solid #E0E0E0;
+        background: #FFFFFF;
+        background-image: none !important;
+      }
+
+      .digest-1u {
+        display: flex;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-shell">
+    <header>
+      <p class="eyebrow">COMPONENT SYSTEM</p>
+      <h1>MSN 1u segment widgets</h1>
+      <p class="subtitle">A responsive board for MSN 1u segment widgets.</p>
+    </header>
+
+    <div class="controls">
+      <div class="width-control">
+        <label for="w">Screen width</label>
+        <input type="range" id="w" min="320" max="1447" step="1" value="1447">
+      </div>
+      <div class="presets" role="group" aria-label="Screen width presets">
+        <button type="button" data-preset="Desktop" data-width="1447" aria-pressed="false">Desktop</button>
+        <button type="button" data-preset="Tablet" data-width="800" aria-pressed="false">Tablet</button>
+        <button type="button" data-preset="Mobile" data-width="375" aria-pressed="false">Mobile</button>
+      </div>
+      <label class="column-control" for="show-columns">
+        <input type="checkbox" id="show-columns">
+        Show columns
+      </label>
+      <label class="column-control" for="show-subcolumns">
+        <input type="checkbox" id="show-subcolumns">
+        Sub-columns
+      </label>
+      <output id="readout" aria-live="polite"></output>
+    </div>
+
+    <div class="stage-scroll">
+      <div class="stage">
+        <div class="feed">
+          <article class="card u1 seg-widget seg-weather" aria-label="Weather, Seattle">
+            <button class="seg-more" type="button" aria-label="More options"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="12" r="1.75" fill="currentColor"/><circle cx="12" cy="12" r="1.75" fill="currentColor"/><circle cx="18" cy="12" r="1.75" fill="currentColor"/></svg></button>
+            <div class="wx-content">
+              <img class="wx-sun" src="/assets/images/msn/widgets/wx-sun.svg" alt="" aria-hidden="true" width="138" height="108">
+              <div class="wx-area">
+                <div class="wx-loc"><span class="wx-city">Seattle</span></div>
+                <div class="wx-now">
+                  <div class="wx-temp"><span class="wx-deg-num">42</span><span class="wx-deg">°</span></div>
+                  <div class="wx-cond"><span class="wx-cond-text">Mostly sunny</span><span class="wx-hl"><span>H 55°</span><span>L 32°</span></span></div>
+                </div>
+              </div>
+              <ol class="wx-graph">
+                <li class="wx-hour"><span class="wx-time">Now</span><span class="wx-hbot"><span class="wx-icon"><img src="/assets/images/msn/widgets/wx-hr-1.svg" alt="Partly sunny"></span><span class="wx-data"><span class="wx-htemp">42°</span><span class="wx-rain"><span class="wx-drop" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 1C6.13261 1 6.25978 1.05268 6.35355 1.14645L6.35479 1.14768C6.61026 1.40316 7.38601 2.1789 8.09952 3.21674C8.80557 4.24372 9.5 5.59712 9.5 7C9.5 8.33709 9.13964 9.35239 8.48109 10.0347C7.82158 10.7181 6.92808 11 6 11C5.07192 11 4.17842 10.7181 3.51891 10.0347C2.86036 9.35239 2.5 8.33709 2.5 7C2.5 5.59712 3.19443 4.24372 3.90048 3.21674C4.61398 2.17892 5.3897 1.40319 5.64519 1.1477L5.64645 1.14645C5.74021 1.05268 5.86739 1 6 1Z" fill="currentColor"/></svg></span><span>0%</span></span></span></span></li>
+                <li class="wx-hour"><span class="wx-time">10AM</span><span class="wx-hbot"><span class="wx-icon"><img src="/assets/images/msn/widgets/wx-hr-2.svg" alt="Light snow"></span><span class="wx-data"><span class="wx-htemp">43°</span><span class="wx-rain"><span class="wx-drop" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 1C6.13261 1 6.25978 1.05268 6.35355 1.14645L6.35479 1.14768C6.61026 1.40316 7.38601 2.1789 8.09952 3.21674C8.80557 4.24372 9.5 5.59712 9.5 7C9.5 8.33709 9.13964 9.35239 8.48109 10.0347C7.82158 10.7181 6.92808 11 6 11C5.07192 11 4.17842 10.7181 3.51891 10.0347C2.86036 9.35239 2.5 8.33709 2.5 7C2.5 5.59712 3.19443 4.24372 3.90048 3.21674C4.61398 2.17892 5.3897 1.40319 5.64519 1.1477L5.64645 1.14645C5.74021 1.05268 5.86739 1 6 1Z" fill="currentColor"/></svg></span><span>0%</span></span></span></span></li>
+                <li class="wx-hour"><span class="wx-time">11AM</span><span class="wx-hbot"><span class="wx-icon"><img src="/assets/images/msn/widgets/wx-hr-3.svg" alt="Windy"></span><span class="wx-data"><span class="wx-htemp">45°</span><span class="wx-rain"><span class="wx-drop" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 1C6.13261 1 6.25978 1.05268 6.35355 1.14645L6.35479 1.14768C6.61026 1.40316 7.38601 2.1789 8.09952 3.21674C8.80557 4.24372 9.5 5.59712 9.5 7C9.5 8.33709 9.13964 9.35239 8.48109 10.0347C7.82158 10.7181 6.92808 11 6 11C5.07192 11 4.17842 10.7181 3.51891 10.0347C2.86036 9.35239 2.5 8.33709 2.5 7C2.5 5.59712 3.19443 4.24372 3.90048 3.21674C4.61398 2.17892 5.3897 1.40319 5.64519 1.1477L5.64645 1.14645C5.74021 1.05268 5.86739 1 6 1Z" fill="currentColor"/></svg></span><span>0%</span></span></span></span></li>
+                <li class="wx-hour"><span class="wx-time">12PM</span><span class="wx-hbot"><span class="wx-icon"><img src="/assets/images/msn/widgets/wx-hr-2.svg" alt="Light snow"></span><span class="wx-data"><span class="wx-htemp">48°</span><span class="wx-rain"><span class="wx-drop" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 1C6.13261 1 6.25978 1.05268 6.35355 1.14645L6.35479 1.14768C6.61026 1.40316 7.38601 2.1789 8.09952 3.21674C8.80557 4.24372 9.5 5.59712 9.5 7C9.5 8.33709 9.13964 9.35239 8.48109 10.0347C7.82158 10.7181 6.92808 11 6 11C5.07192 11 4.17842 10.7181 3.51891 10.0347C2.86036 9.35239 2.5 8.33709 2.5 7C2.5 5.59712 3.19443 4.24372 3.90048 3.21674C4.61398 2.17892 5.3897 1.40319 5.64519 1.1477L5.64645 1.14645C5.74021 1.05268 5.86739 1 6 1Z" fill="currentColor"/></svg></span><span>0%</span></span></span></span></li>
+                <li class="wx-hour"><span class="wx-time">1PM</span><span class="wx-hbot"><span class="wx-icon"><img src="/assets/images/msn/widgets/wx-hr-5.svg" alt="Sunny"></span><span class="wx-data"><span class="wx-htemp">51°</span><span class="wx-rain"><span class="wx-drop" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 1C6.13261 1 6.25978 1.05268 6.35355 1.14645L6.35479 1.14768C6.61026 1.40316 7.38601 2.1789 8.09952 3.21674C8.80557 4.24372 9.5 5.59712 9.5 7C9.5 8.33709 9.13964 9.35239 8.48109 10.0347C7.82158 10.7181 6.92808 11 6 11C5.07192 11 4.17842 10.7181 3.51891 10.0347C2.86036 9.35239 2.5 8.33709 2.5 7C2.5 5.59712 3.19443 4.24372 3.90048 3.21674C4.61398 2.17892 5.3897 1.40319 5.64519 1.1477L5.64645 1.14645C5.74021 1.05268 5.86739 1 6 1Z" fill="currentColor"/></svg></span><span>0%</span></span></span></span></li>
+              </ol>
+            </div>
+          </article>
+          <article class="card u1 seg-widget seg-fin" aria-label="Stock, Contoso Ltd">
+            <button class="seg-more" type="button" aria-label="More options"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="12" r="1.75" fill="currentColor"/><circle cx="12" cy="12" r="1.75" fill="currentColor"/><circle cx="18" cy="12" r="1.75" fill="currentColor"/></svg></button>
+            <div class="fin">
+              <div class="fin-body">
+                <div class="fin-title"><span class="fin-name">Contoso Ltd</span><span class="fin-tick">CNTS</span></div>
+                <div class="fin-area">
+                  <div class="fin-price"><span class="fin-val">136.75</span><span class="fin-chg">+3.97%</span></div>
+                  <div class="stk-chart">
+                    <div class="stk-yaxis" aria-hidden="true">
+                      <span style="top:0">140</span><span style="top:34px">135</span><span style="top:68px">130</span><span style="top:102px">125</span><span style="top:136px">120</span>
+                    </div>
+                    <div class="stk-plot">
+                      <div class="stk-grid" aria-hidden="true"><i style="top:7px"></i><i style="top:41px"></i><i style="top:75px"></i><i style="top:109px"></i><i style="top:143px"></i></div>
+                      <div class="stk-graph">
+                        <svg class="stk-svg" viewBox="0 0 248.43 150" preserveAspectRatio="none" aria-hidden="true">
+                          <defs>
+                            <linearGradient id="stkFill" x1="0" y1="0" x2="0" y2="1">
+                              <stop offset="0" stop-color="#01712B" stop-opacity="0.30"/>
+                              <stop offset="1" stop-color="#01712B" stop-opacity="0"/>
+                            </linearGradient>
+                          </defs>
+                          <polygon class="stk-area" fill="url(#stkFill)" points="2.5,123.9 6.0,118.6 8.0,109.0 11.2,109.0 12.8,96.2 14.8,91.0 18.0,94.6 19.6,93.0 21.2,85.0 25.2,96.6 29.2,106.2 33.6,97.0 36.8,82.6 39.6,79.4 42.4,69.4 46.8,67.4 48.4,81.0 55.2,71.8 61.6,65.0 63.6,56.2 73.6,45.8 74.8,70.2 78.0,75.4 79.2,85.0 84.4,81.8 88.8,62.2 90.4,66.6 93.6,64.2 96.8,71.8 99.2,76.2 102.4,98.6 108.0,98.6 115.2,73.8 123.6,56.2 128.0,69.4 132.8,61.0 139.2,81.0 142.8,83.4 146.4,91.0 149.6,81.0 157.6,65.0 162.0,67.8 163.6,75.4 169.2,44.6 173.6,59.8 175.2,77.4 179.6,83.4 183.2,71.0 185.2,56.2 187.2,46.6 190.0,50.6 193.6,49.0 196.0,27.0 200.0,24.2 204.1,18.9 208.4,31.0 216.8,87.0 220.8,93.0 223.6,107.4 227.2,107.4 228.4,117.0 230.4,115.4 234.0,87.8 244.1,36.1 244.1,129.5 2.5,129.5"/>
+                          <polyline class="stk-line" points="2.5,123.9 6.0,118.6 8.0,109.0 11.2,109.0 12.8,96.2 14.8,91.0 18.0,94.6 19.6,93.0 21.2,85.0 25.2,96.6 29.2,106.2 33.6,97.0 36.8,82.6 39.6,79.4 42.4,69.4 46.8,67.4 48.4,81.0 55.2,71.8 61.6,65.0 63.6,56.2 73.6,45.8 74.8,70.2 78.0,75.4 79.2,85.0 84.4,81.8 88.8,62.2 90.4,66.6 93.6,64.2 96.8,71.8 99.2,76.2 102.4,98.6 108.0,98.6 115.2,73.8 123.6,56.2 128.0,69.4 132.8,61.0 139.2,81.0 142.8,83.4 146.4,91.0 149.6,81.0 157.6,65.0 162.0,67.8 163.6,75.4 169.2,44.6 173.6,59.8 175.2,77.4 179.6,83.4 183.2,71.0 185.2,56.2 187.2,46.6 190.0,50.6 193.6,49.0 196.0,27.0 200.0,24.2 204.1,18.9 208.4,31.0 216.8,87.0 220.8,93.0 223.6,107.4 227.2,107.4 228.4,117.0 230.4,115.4 234.0,87.8 244.1,36.1"/>
+                        </svg>
+                        <div class="stk-base" aria-hidden="true"></div>
+                        <div class="stk-dot" aria-hidden="true"></div>
+                        <div class="stk-badge"><span>128.35</span></div>
+                      </div>
+                      <div class="stk-xaxis" aria-hidden="true">
+                        <div class="stk-xcol"><i class="stk-tick"></i><span>10:00 am</span></div>
+                        <div class="stk-xcol"><i class="stk-tick"></i><span>12:00 pm</span></div>
+                        <div class="stk-xcol"><i class="stk-tick"></i><span>2:00 pm</span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="card u1 seg-widget seg-sports" aria-label="Coastal Soccer League scores">
+            <button class="seg-more" type="button" aria-label="More options"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="12" r="1.75" fill="currentColor"/><circle cx="12" cy="12" r="1.75" fill="currentColor"/><circle cx="18" cy="12" r="1.75" fill="currentColor"/></svg></button>
+            <div class="spt">
+              <h3 class="spt-title">Coastal Soccer League</h3>
+              <ul class="spt-list">
+                <li class="spt-row">
+                  <span class="spt-team"><span class="spt-badge" style="--b:#3F3935">BAY</span><span class="spt-abbr">BAY</span></span>
+                  <span class="spt-mid"><span class="spt-live"><i></i>LIVE</span><span class="spt-score">1 - 1</span></span>
+                  <span class="spt-team"><span class="spt-badge" style="--b:#6B625C">PNW</span><span class="spt-abbr">PNW</span></span>
+                </li>
+                <li class="spt-row">
+                  <span class="spt-team"><span class="spt-badge" style="--b:#4C4642">HBR</span><span class="spt-abbr">HBR</span></span>
+                  <span class="spt-mid"><span class="spt-status">Final · Jun 10</span><span class="spt-score">2 - 1<svg class="spt-play" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 1.5v9l7-4.5z" fill="currentColor"/></svg></span><a class="spt-link" href="#">View game stats</a></span>
+                  <span class="spt-team"><span class="spt-badge" style="--b:#8A817B">RDG</span><span class="spt-abbr">RDG</span></span>
+                </li>
+                <li class="spt-row">
+                  <span class="spt-team"><span class="spt-badge" style="--b:#272320">MTN</span><span class="spt-abbr">MTN</span></span>
+                  <span class="spt-mid"><span class="spt-status">Final · Jun 9</span><span class="spt-score">1 - 1<svg class="spt-play" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 1.5v9l7-4.5z" fill="currentColor"/></svg></span><a class="spt-link" href="#">View game stats</a></span>
+                  <span class="spt-team"><span class="spt-badge" style="--b:#5A524D">VLY</span><span class="spt-abbr">VLY</span></span>
+                </li>
+              </ul>
+            </div>
+          </article>
+          <article class="card u1 seg-widget seg-event" aria-label="Local event">
+            <div class="evt">
+              <div class="evt-media" style="background-image:url('/assets/images/msn/widgets/evt-1.jpg')">
+                <button class="evt-more" type="button" aria-label="More options"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="12" r="1.75" fill="currentColor"/><circle cx="12" cy="12" r="1.75" fill="currentColor"/><circle cx="18" cy="12" r="1.75" fill="currentColor"/></svg></button>
+              </div>
+              <div class="evt-area">
+                <p class="evt-when">Next week in Seattle, WA</p>
+                <div class="evt-row">
+                  <div class="evt-cal" aria-label="October 24"><span class="evt-mon">OCT</span><span class="evt-day">24</span></div>
+                  <div class="evt-text"><span class="evt-name">Dinosaur Exhibit</span><span class="evt-place">Convention Center</span></div>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="card u1 seg-widget seg-trend" aria-label="Trending on Copilot">
+            <button class="seg-more" type="button" aria-label="More options"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="12" r="1.75" fill="currentColor"/><circle cx="12" cy="12" r="1.75" fill="currentColor"/><circle cx="18" cy="12" r="1.75" fill="currentColor"/></svg></button>
+            <div class="trd">
+              <h3 class="trd-title">Trending on Copilot</h3>
+              <div class="trd-stage">
+                <div class="trd-img-area">
+                  <img class="trd-img" src="/assets/images/msn/widgets/trd-1.jpg" alt="" width="256" height="250">
+                </div>
+                <div class="trd-bubble-area">
+                  <p class="trd-bubble">How can I reduce plastic waste to take my trash out less often?</p>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="card u1 seg-widget seg-creator" aria-label="Creator spotlight, Alex Rivera">
+            <button class="seg-more" type="button" aria-label="More options"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="12" r="1.75" fill="currentColor"/><circle cx="12" cy="12" r="1.75" fill="currentColor"/><circle cx="18" cy="12" r="1.75" fill="currentColor"/></svg></button>
+            <div class="crt">
+              <div class="crt-media" style="background-image:url('/assets/images/msn/widgets/crt-video.jpg')">
+                <button class="crt-play" type="button" aria-label="Play video"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15a1 1 0 0 0 1.52.85l12-7.5a1 1 0 0 0 0-1.7l-12-7.5A1 1 0 0 0 7 4.5z" fill="currentColor"/></svg></button>
+              </div>
+              <div class="crt-area">
+                <div class="crt-who">
+                  <img class="crt-avatar" src="/assets/images/msn/widgets/crt-avatar.jpg" alt="" width="52" height="52">
+                  <div class="crt-text"><span class="crt-name">Alex Rivera</span><span class="crt-meta"><span>Technology</span><span aria-hidden="true">·</span><span>Review</span></span></div>
+                </div>
+                <div class="crt-cta"><button class="crt-follow" type="button"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 3.25v13.5M3.25 10h13.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" fill="none"/></svg><span>Follow</span></button></div>
+              </div>
+            </div>
+          </article>
+          <article class="card u1 seg-widget seg-games" aria-label="Recommended games">
+            <button class="seg-more" type="button" aria-label="More options"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="12" r="1.75" fill="currentColor"/><circle cx="12" cy="12" r="1.75" fill="currentColor"/><circle cx="18" cy="12" r="1.75" fill="currentColor"/></svg></button>
+            <div class="gm">
+              <h3 class="gm-title">Recommended games</h3>
+              <ul class="gm-list">
+                <li class="gm-row"><img class="gm-art" src="/assets/images/msn/widgets/game-1.jpg" alt="" width="80" height="80"><span class="gm-text"><span class="gm-name">Tile Garden</span><span class="gm-sub">Recently played</span></span></li>
+                <li class="gm-row"><img class="gm-art" src="/assets/images/msn/widgets/game-2.jpg" alt="" width="80" height="80"><span class="gm-text"><span class="gm-name">Night Drift</span><span class="gm-sub">Weekly trending</span></span></li>
+                <li class="gm-row"><img class="gm-art" src="/assets/images/msn/widgets/game-3.jpg" alt="" width="80" height="80"><span class="gm-text"><span class="gm-name">Four Up</span><span class="gm-sub">Hot puzzle game</span></span></li>
+              </ul>
+            </div>
+          </article>
+          <article class="card u1 seg-widget seg-pod" data-state="rest" aria-label="Copilot Daily podcast">
+            <button class="seg-more" type="button" aria-label="More options"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="12" r="1.75" fill="currentColor"/><circle cx="12" cy="12" r="1.75" fill="currentColor"/><circle cx="18" cy="12" r="1.75" fill="currentColor"/></svg></button>
+            <div class="pod">
+              <img class="pod-img" src="/assets/images/msn/widgets/pod-1.jpg" alt="">
+              <div class="pod-area pod-rest">
+                <div class="pod-head"><span class="pod-name">Copilot Daily</span><span class="pod-meta">Nov 4 · 5 min</span></div>
+                <div class="pod-playrow">
+                  <p class="pod-desc">Markets steady ahead of a rate decision, a new waterfront park opens, and a local team clinches the title</p>
+                  <button class="pod-play" type="button" aria-label="Play episode" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15a1 1 0 0 0 1.52.85l12-7.5a1 1 0 0 0 0-1.7l-12-7.5A1 1 0 0 0 7 4.5z" fill="currentColor"/></svg></button>
+                </div>
+              </div>
+              <div class="pod-area pod-playing" hidden>
+                <p class="pod-now">Markets steady ahead of a rate decision</p>
+                <div class="pod-controls">
+                  <div class="pod-progress"><span class="pod-t">0:00</span>
+                    <span class="pod-bars"><i class="s1"><b style="width:100%"></b></i><i class="s2"><b style="width:67.66px"></b></i><i class="s3"></i><i class="s4"></i></span>
+                    <span class="pod-t">2:34</span></div>
+                  <div class="pod-btns">
+                    <button class="pod-btn pod-prev" type="button" aria-label="Previous"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                    <button class="pod-btn pod-pause" type="button" aria-label="Pause"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="4" width="4" height="16" rx="1.5" fill="currentColor"/><rect x="14" y="4" width="4" height="16" rx="1.5" fill="currentColor"/></svg></button>
+                    <button class="pod-btn pod-next" type="button" aria-label="Next"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+          <div class="cols" aria-hidden="true">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+          <div class="subcols" aria-hidden="true">
+            <div class="subcolumn-group"><div></div><div></div><div></div><div></div></div>
+            <div class="subcolumn-group"><div></div><div></div><div></div><div></div></div>
+            <div class="subcolumn-group"><div></div><div></div><div></div><div></div></div>
+          </div>
+        </div>
+        <section class="cg-section" aria-labelledby="cg-heading">
+          <h2 id="cg-heading" class="dg-section-title">Content Group 1u</h2>
+          <div class="cg-pair">
+            <div class="cg-example">
+              <p class="dg-section-title cg-copy-label">No Title · Rest</p>
+              <article class="cg1" data-variant="no-title" aria-label="Content group">
+                <button class="hover-actions" type="button" aria-label="More options">
+                  <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="6" cy="12" r="1.75" fill="currentColor"/><circle cx="12" cy="12" r="1.75" fill="currentColor"/><circle cx="18" cy="12" r="1.75" fill="currentColor"/></svg>
+                </button>
+                <div class="cg1-body">
+                  <div class="cg-stack cg-stack--no-title">
+                    <a class="cg-row" href="#">
+                      <div class="cg-text">
+                        <div class="cg-pub">
+                          <span class="cg-pub-brand"><span class="cg-fav-frame"><img src="../assets/images/msn/widgets/cg-fav-1.svg" alt="" width="16" height="16" onerror="this.style.visibility='hidden'"></span><span class="cg-pub-name">Quantis</span></span>
+                          <span class="cg-pub-dot" aria-hidden="true">·</span><span class="cg-pub-time">1d</span>
+                        </div>
+                        <p class="cg-head">A Symbol of Beauty: Exploring the Secret Lives of Peacocks</p>
+                      </div>
+                      <span class="cg-img-frame"><img src="../assets/images/msn/widgets/cg-img-1.png" alt="" width="80" height="80" onerror="this.style.visibility='hidden'"></span>
+                    </a>
+                    <a class="cg-row" href="#">
+                      <div class="cg-text">
+                        <div class="cg-pub">
+                          <span class="cg-pub-brand"><span class="cg-fav-frame"><img src="../assets/images/msn/widgets/cg-fav-2.svg" alt="" width="16" height="16" onerror="this.style.visibility='hidden'"></span><span class="cg-pub-name">Metro Post</span></span>
+                          <span class="cg-pub-dot" aria-hidden="true">·</span><span class="cg-pub-time">1d</span>
+                        </div>
+                        <p class="cg-head">The Ethics of AI: Balancing Innovation and Responsibility</p>
+                      </div>
+                      <span class="cg-img-frame"><img src="../assets/images/msn/widgets/cg-img-2.png" alt="" width="80" height="80" onerror="this.style.visibility='hidden'"></span>
+                    </a>
+                    <a class="cg-row" href="#">
+                      <div class="cg-text">
+                        <div class="cg-pub">
+                          <span class="cg-pub-brand"><span class="cg-fav-frame"><img src="../assets/images/msn/widgets/cg-fav-3.svg" alt="" width="16" height="16" onerror="this.style.visibility='hidden'"></span><span class="cg-pub-name">Metro Sports</span></span>
+                          <span class="cg-pub-dot" aria-hidden="true">·</span><span class="cg-pub-time">1d</span>
+                        </div>
+                        <p class="cg-head">The Evolution of Formula 1: From Classic Cars to Hybrid Power</p>
+                      </div>
+                      <span class="cg-img-frame"><img src="../assets/images/msn/widgets/cg-img-3.png" alt="" width="80" height="80" onerror="this.style.visibility='hidden'"></span>
+                    </a>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="cg-example">
+              <p class="dg-section-title cg-copy-label">No Title · Hover</p>
+              <article class="cg1 is-hover" data-variant="no-title" aria-label="Content group">
+                <button class="hover-actions" type="button" aria-label="More options">
+                  <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="6" cy="12" r="1.75" fill="currentColor"/><circle cx="12" cy="12" r="1.75" fill="currentColor"/><circle cx="18" cy="12" r="1.75" fill="currentColor"/></svg>
+                </button>
+                <div class="cg1-body">
+                  <div class="cg-stack cg-stack--no-title">
+                    <a class="cg-row" href="#">
+                      <div class="cg-text">
+                        <div class="cg-pub">
+                          <span class="cg-pub-brand"><span class="cg-fav-frame"><img src="../assets/images/msn/widgets/cg-fav-1.svg" alt="" width="16" height="16" onerror="this.style.visibility='hidden'"></span><span class="cg-pub-name">Quantis</span></span>
+                          <span class="cg-pub-dot" aria-hidden="true">·</span><span class="cg-pub-time">1d</span>
+                        </div>
+                        <p class="cg-head">A Symbol of Beauty: Exploring the Secret Lives of Peacocks</p>
+                      </div>
+                      <span class="cg-img-frame"><img src="../assets/images/msn/widgets/cg-img-1.png" alt="" width="80" height="80" onerror="this.style.visibility='hidden'"></span>
+                    </a>
+                    <a class="cg-row" href="#">
+                      <div class="cg-text">
+                        <div class="cg-pub">
+                          <span class="cg-pub-brand"><span class="cg-fav-frame"><img src="../assets/images/msn/widgets/cg-fav-2.svg" alt="" width="16" height="16" onerror="this.style.visibility='hidden'"></span><span class="cg-pub-name">Metro Post</span></span>
+                          <span class="cg-pub-dot" aria-hidden="true">·</span><span class="cg-pub-time">1d</span>
+                        </div>
+                        <p class="cg-head">The Ethics of AI: Balancing Innovation and Responsibility</p>
+                      </div>
+                      <span class="cg-img-frame"><img src="../assets/images/msn/widgets/cg-img-2.png" alt="" width="80" height="80" onerror="this.style.visibility='hidden'"></span>
+                    </a>
+                    <a class="cg-row" href="#">
+                      <div class="cg-text">
+                        <div class="cg-pub">
+                          <span class="cg-pub-brand"><span class="cg-fav-frame"><img src="../assets/images/msn/widgets/cg-fav-3.svg" alt="" width="16" height="16" onerror="this.style.visibility='hidden'"></span><span class="cg-pub-name">Metro Sports</span></span>
+                          <span class="cg-pub-dot" aria-hidden="true">·</span><span class="cg-pub-time">1d</span>
+                        </div>
+                        <p class="cg-head">The Evolution of Formula 1: From Classic Cars to Hybrid Power</p>
+                      </div>
+                      <span class="cg-img-frame"><img src="../assets/images/msn/widgets/cg-img-3.png" alt="" width="80" height="80" onerror="this.style.visibility='hidden'"></span>
+                    </a>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="cg-pair">
+            <div class="cg-example">
+              <p class="dg-section-title cg-copy-label">3 Articles · Rest</p>
+              <article class="cg1" data-variant="three" aria-label="Content group">
+                <button class="hover-actions" type="button" aria-label="More options">
+                  <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="6" cy="12" r="1.75" fill="currentColor"/><circle cx="12" cy="12" r="1.75" fill="currentColor"/><circle cx="18" cy="12" r="1.75" fill="currentColor"/></svg>
+                </button>
+                <div class="cg1-body">
+                  <div class="cg-title-wrap"><p class="cg-title">Feature name</p></div>
+                  <div class="cg-stack cg-stack--three">
+                    <a class="cg-row" href="#">
+                      <div class="cg-text">
+                        <div class="cg-pub">
+                          <span class="cg-pub-brand"><span class="cg-fav-frame"><img src="../assets/images/msn/widgets/cg-fav-1.svg" alt="" width="16" height="16" onerror="this.style.visibility='hidden'"></span><span class="cg-pub-name">Quantis</span></span>
+                          <span class="cg-pub-dot" aria-hidden="true">·</span><span class="cg-pub-time">1d</span>
+                        </div>
+                        <p class="cg-head">A Symbol of Beauty: Exploring the Secret Lives of Peacocks</p>
+                      </div>
+                      <span class="cg-img-frame"><img src="../assets/images/msn/widgets/cg-img-1.png" alt="" width="80" height="80" onerror="this.style.visibility='hidden'"></span>
+                    </a>
+                    <a class="cg-row" href="#">
+                      <div class="cg-text">
+                        <div class="cg-pub">
+                          <span class="cg-pub-brand"><span class="cg-fav-frame"><img src="../assets/images/msn/widgets/cg-fav-2.svg" alt="" width="16" height="16" onerror="this.style.visibility='hidden'"></span><span class="cg-pub-name">Metro Post</span></span>
+                          <span class="cg-pub-dot" aria-hidden="true">·</span><span class="cg-pub-time">1d</span>
+                        </div>
+                        <p class="cg-head">The Ethics of AI: Balancing Innovation and Responsibility</p>
+                      </div>
+                      <span class="cg-img-frame"><img src="../assets/images/msn/widgets/cg-img-2.png" alt="" width="80" height="80" onerror="this.style.visibility='hidden'"></span>
+                    </a>
+                    <a class="cg-row" href="#">
+                      <div class="cg-text">
+                        <div class="cg-pub">
+                          <span class="cg-pub-brand"><span class="cg-fav-frame"><img src="../assets/images/msn/widgets/cg-fav-3.svg" alt="" width="16" height="16" onerror="this.style.visibility='hidden'"></span><span class="cg-pub-name">Metro Sports</span></span>
+                          <span class="cg-pub-dot" aria-hidden="true">·</span><span class="cg-pub-time">1d</span>
+                        </div>
+                        <p class="cg-head">The Evolution of Formula 1: From Classic Cars to Hybrid Power</p>
+                      </div>
+                      <span class="cg-img-frame"><img src="../assets/images/msn/widgets/cg-img-3.png" alt="" width="80" height="80" onerror="this.style.visibility='hidden'"></span>
+                    </a>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="cg-example">
+              <p class="dg-section-title cg-copy-label">3 Articles · Hover</p>
+              <article class="cg1 is-hover" data-variant="three" aria-label="Content group">
+                <button class="hover-actions" type="button" aria-label="More options">
+                  <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="6" cy="12" r="1.75" fill="currentColor"/><circle cx="12" cy="12" r="1.75" fill="currentColor"/><circle cx="18" cy="12" r="1.75" fill="currentColor"/></svg>
+                </button>
+                <div class="cg1-body">
+                  <div class="cg-title-wrap"><p class="cg-title">Feature name</p></div>
+                  <div class="cg-stack cg-stack--three">
+                    <a class="cg-row" href="#">
+                      <div class="cg-text">
+                        <div class="cg-pub">
+                          <span class="cg-pub-brand"><span class="cg-fav-frame"><img src="../assets/images/msn/widgets/cg-fav-1.svg" alt="" width="16" height="16" onerror="this.style.visibility='hidden'"></span><span class="cg-pub-name">Quantis</span></span>
+                          <span class="cg-pub-dot" aria-hidden="true">·</span><span class="cg-pub-time">1d</span>
+                        </div>
+                        <p class="cg-head">A Symbol of Beauty: Exploring the Secret Lives of Peacocks</p>
+                      </div>
+                      <span class="cg-img-frame"><img src="../assets/images/msn/widgets/cg-img-1.png" alt="" width="80" height="80" onerror="this.style.visibility='hidden'"></span>
+                    </a>
+                    <a class="cg-row" href="#">
+                      <div class="cg-text">
+                        <div class="cg-pub">
+                          <span class="cg-pub-brand"><span class="cg-fav-frame"><img src="../assets/images/msn/widgets/cg-fav-2.svg" alt="" width="16" height="16" onerror="this.style.visibility='hidden'"></span><span class="cg-pub-name">Metro Post</span></span>
+                          <span class="cg-pub-dot" aria-hidden="true">·</span><span class="cg-pub-time">1d</span>
+                        </div>
+                        <p class="cg-head">The Ethics of AI: Balancing Innovation and Responsibility</p>
+                      </div>
+                      <span class="cg-img-frame"><img src="../assets/images/msn/widgets/cg-img-2.png" alt="" width="80" height="80" onerror="this.style.visibility='hidden'"></span>
+                    </a>
+                    <a class="cg-row" href="#">
+                      <div class="cg-text">
+                        <div class="cg-pub">
+                          <span class="cg-pub-brand"><span class="cg-fav-frame"><img src="../assets/images/msn/widgets/cg-fav-3.svg" alt="" width="16" height="16" onerror="this.style.visibility='hidden'"></span><span class="cg-pub-name">Metro Sports</span></span>
+                          <span class="cg-pub-dot" aria-hidden="true">·</span><span class="cg-pub-time">1d</span>
+                        </div>
+                        <p class="cg-head">The Evolution of Formula 1: From Classic Cars to Hybrid Power</p>
+                      </div>
+                      <span class="cg-img-frame"><img src="../assets/images/msn/widgets/cg-img-3.png" alt="" width="80" height="80" onerror="this.style.visibility='hidden'"></span>
+                    </a>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="cg-pair">
+            <div class="cg-example">
+              <p class="dg-section-title cg-copy-label">2 Articles · Rest</p>
+              <article class="cg1" data-variant="two" aria-label="Content group">
+                <button class="hover-actions" type="button" aria-label="More options">
+                  <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="6" cy="12" r="1.75" fill="currentColor"/><circle cx="12" cy="12" r="1.75" fill="currentColor"/><circle cx="18" cy="12" r="1.75" fill="currentColor"/></svg>
+                </button>
+                <div class="cg1-body">
+                  <div class="cg-title-wrap"><p class="cg-title">Feature name</p></div>
+                  <div class="cg-stack cg-stack--two">
+                    <a class="cg-row" href="#">
+                      <div class="cg-text">
+                        <div class="cg-pub">
+                          <span class="cg-pub-brand"><span class="cg-fav-frame"><img src="../assets/images/msn/widgets/cg-fav-1.svg" alt="" width="16" height="16" onerror="this.style.visibility='hidden'"></span><span class="cg-pub-name">Quantis</span></span>
+                          <span class="cg-pub-dot" aria-hidden="true">·</span><span class="cg-pub-time">1d</span>
+                        </div>
+                        <p class="cg-head">A Symbol of Beauty: Exploring the Secret Lives of Peacocks</p>
+                      </div>
+                      <span class="cg-img-frame"><img src="../assets/images/msn/widgets/cg-img-1.png" alt="" width="112" height="112" onerror="this.style.visibility='hidden'"></span>
+                    </a>
+                    <a class="cg-row" href="#">
+                      <div class="cg-text">
+                        <div class="cg-pub">
+                          <span class="cg-pub-brand"><span class="cg-fav-frame"><img src="../assets/images/msn/widgets/cg-fav-2.svg" alt="" width="16" height="16" onerror="this.style.visibility='hidden'"></span><span class="cg-pub-name">Metro Post</span></span>
+                          <span class="cg-pub-dot" aria-hidden="true">·</span><span class="cg-pub-time">1d</span>
+                        </div>
+                        <p class="cg-head">The Ethics of AI: Balancing Innovation and Responsibility</p>
+                      </div>
+                      <span class="cg-img-frame"><img src="../assets/images/msn/widgets/cg-img-2.png" alt="" width="112" height="112" onerror="this.style.visibility='hidden'"></span>
+                    </a>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="cg-example">
+              <p class="dg-section-title cg-copy-label">2 Articles · Hover</p>
+              <article class="cg1 is-hover" data-variant="two" aria-label="Content group">
+                <button class="hover-actions" type="button" aria-label="More options">
+                  <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="6" cy="12" r="1.75" fill="currentColor"/><circle cx="12" cy="12" r="1.75" fill="currentColor"/><circle cx="18" cy="12" r="1.75" fill="currentColor"/></svg>
+                </button>
+                <div class="cg1-body">
+                  <div class="cg-title-wrap"><p class="cg-title">Feature name</p></div>
+                  <div class="cg-stack cg-stack--two">
+                    <a class="cg-row" href="#">
+                      <div class="cg-text">
+                        <div class="cg-pub">
+                          <span class="cg-pub-brand"><span class="cg-fav-frame"><img src="../assets/images/msn/widgets/cg-fav-1.svg" alt="" width="16" height="16" onerror="this.style.visibility='hidden'"></span><span class="cg-pub-name">Quantis</span></span>
+                          <span class="cg-pub-dot" aria-hidden="true">·</span><span class="cg-pub-time">1d</span>
+                        </div>
+                        <p class="cg-head">A Symbol of Beauty: Exploring the Secret Lives of Peacocks</p>
+                      </div>
+                      <span class="cg-img-frame"><img src="../assets/images/msn/widgets/cg-img-1.png" alt="" width="112" height="112" onerror="this.style.visibility='hidden'"></span>
+                    </a>
+                    <a class="cg-row" href="#">
+                      <div class="cg-text">
+                        <div class="cg-pub">
+                          <span class="cg-pub-brand"><span class="cg-fav-frame"><img src="../assets/images/msn/widgets/cg-fav-2.svg" alt="" width="16" height="16" onerror="this.style.visibility='hidden'"></span><span class="cg-pub-name">Metro Post</span></span>
+                          <span class="cg-pub-dot" aria-hidden="true">·</span><span class="cg-pub-time">1d</span>
+                        </div>
+                        <p class="cg-head">The Ethics of AI: Balancing Innovation and Responsibility</p>
+                      </div>
+                      <span class="cg-img-frame"><img src="../assets/images/msn/widgets/cg-img-2.png" alt="" width="112" height="112" onerror="this.style.visibility='hidden'"></span>
+                    </a>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+        <section class="article-section" data-image-badge="false" data-video="false" aria-labelledby="article-1u-heading">
+          <h2 id="article-1u-heading" class="dg-section-title">Article 1u</h2>
+          <div class="article-controls" aria-label="Article 1u options">
+            <label><input type="checkbox" data-article-toggle="image-badge">Image badge</label>
+            <label><input type="checkbox" data-article-toggle="video">Video</label>
+          </div>
+          <div class="article-pair">
+            <div class="article-example">
+              <p class="article-caption">Article · 1u · Publisher</p>
+              <article class="article-1u" aria-label="Article, publisher">
+                <div class="article-media article-media--standard">
+                  <img src="../assets/images/msn/widgets/art-img-3.png" alt="" width="288" height="172" onerror="this.style.visibility='hidden'">
+                  <span class="article-badge">Badge</span><span class="article-video"><img src="../assets/icons/ic_fluent_play_20_filled.svg" alt=""></span>
+                  <button class="hover-actions" type="button" aria-label="More options"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="6" cy="12" r="1.75" fill="currentColor"/><circle cx="12" cy="12" r="1.75" fill="currentColor"/><circle cx="18" cy="12" r="1.75" fill="currentColor"/></svg></button>
+                </div>
+                <div class="article-text">
+                  <div class="cg-pub"><span class="cg-pub-brand"><span class="cg-fav-frame"><img src="../assets/images/msn/widgets/art-fav-1.svg" alt="" width="16" height="16" onerror="this.style.visibility='hidden'"></span><span class="cg-pub-name">Quantis</span></span><span class="cg-pub-dot" aria-hidden="true">·</span><span class="cg-pub-time">1d</span></div>
+                  <h3 class="article-title">A Symbol of Beauty: Exploring the Secret Lives of Peacocks</h3>
+                </div>
+              </article>
+            </div>
+            <div class="article-example">
+              <p class="article-caption">Article · 1u · Subtitle</p>
+              <article class="article-1u" data-variant="subtitle" aria-label="Article, subtitle">
+                <div class="article-media article-media--standard">
+                  <img src="../assets/images/msn/widgets/art-img-4.png" alt="" width="288" height="172" onerror="this.style.visibility='hidden'">
+                  <span class="article-badge">Badge</span><span class="article-video"><img src="../assets/icons/ic_fluent_play_20_filled.svg" alt=""></span>
+                  <button class="hover-actions" type="button" aria-label="More options"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="6" cy="12" r="1.75" fill="currentColor"/><circle cx="12" cy="12" r="1.75" fill="currentColor"/><circle cx="18" cy="12" r="1.75" fill="currentColor"/></svg></button>
+                </div>
+                <div class="article-text">
+                  <div class="cg-pub"><span class="cg-pub-brand"><span class="cg-fav-frame"><img src="../assets/images/msn/widgets/art-fav-1.svg" alt="" width="16" height="16" onerror="this.style.visibility='hidden'"></span><span class="cg-pub-name">Quantis</span></span><span class="cg-pub-dot" aria-hidden="true">·</span><span class="cg-pub-time">1d</span></div>
+                  <h3 class="article-title article-title--one">Feature name</h3>
+                  <p class="article-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+                </div>
+              </article>
+            </div>
+            <div class="article-example">
+              <p class="article-caption">Article · 1u · 1:1 Image</p>
+              <article class="article-1u" data-variant="image" aria-label="Article, 1:1 image">
+                <div class="article-media article-media--square">
+                  <img src="../assets/images/msn/widgets/art-img-5.png" alt="" width="288" height="234" onerror="this.style.visibility='hidden'">
+                  <span class="article-badge">Badge</span><span class="article-video"><img src="../assets/icons/ic_fluent_play_20_filled.svg" alt=""></span>
+                  <button class="hover-actions" type="button" aria-label="More options"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="6" cy="12" r="1.75" fill="currentColor"/><circle cx="12" cy="12" r="1.75" fill="currentColor"/><circle cx="18" cy="12" r="1.75" fill="currentColor"/></svg></button>
+                </div>
+                <div class="article-text">
+                  <div class="cg-pub"><span class="cg-pub-brand"><span class="cg-fav-frame"><img src="../assets/images/msn/widgets/art-fav-1.svg" alt="" width="16" height="16" onerror="this.style.visibility='hidden'"></span><span class="cg-pub-name">Quantis</span></span><span class="cg-pub-dot" aria-hidden="true">·</span><span class="cg-pub-time">1d</span></div>
+                  <h3 class="article-title article-title--one">A Symbol of Beauty: Exploring the Secret Lives of Peacocks</h3>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+        <section class="dg-section" aria-labelledby="dg-heading">
+          <h2 id="dg-heading" class="dg-section-title">Digest widget (2u desktop/tablet, 1u mobile)</h2>
+          <article class="card digest" tabindex="0" aria-label="Digest stories">
+            <div class="digest-2u-inner">
+              <div class="digest-2u-content">
+                <div class="digest-publisher">
+                  <span class="digest-monogram" aria-hidden="true" data-digest-monogram>T</span>
+                  <span data-digest-publisher>Trailhead</span>
+                  <span data-digest-time>· 1h</span>
+                </div>
+                <h3 class="digest-title" data-digest-title>Five quiet trails worth the early alarm this weekend</h3>
+              </div>
+              <div class="digest-pagination" aria-hidden="true">
+                <span class="digest-bar is-active" data-segment="0"></span>
+                <span class="digest-bar" data-segment="1"></span>
+                <span class="digest-bar" data-segment="2"></span>
+                <span class="digest-bar" data-segment="3"></span>
+                <span class="digest-bar" data-segment="4"></span>
+              </div>
+            </div>
+            <div class="digest-2u-paddles">
+                <button type="button" aria-label="Previous story" data-digest-nav="-1">
+                  <svg class="digest-chevron" viewBox="4.5 2.5 7 11" preserveAspectRatio="none" aria-hidden="true"><path d="M10.3536 3.14645C10.5488 3.34171 10.5488 3.65829 10.3536 3.85355L6.20711 8L10.3536 12.1464C10.5488 12.3417 10.5488 12.6583 10.3536 12.8536C10.1583 13.0488 9.84171 13.0488 9.64645 12.8536L5.14645 8.35355C4.95118 8.15829 4.95118 7.84171 5.14645 7.64645L9.64645 3.14645C9.84171 2.95118 10.1583 2.95118 10.3536 3.14645Z" fill="currentColor"></path></svg>
+                </button>
+                <button type="button" aria-label="Next story" data-digest-nav="1">
+                  <svg class="digest-chevron" viewBox="4.5 2.5 7 11" preserveAspectRatio="none" aria-hidden="true"><path d="M5.64645 3.14645C5.45118 3.34171 5.45118 3.65829 5.64645 3.85355L9.79289 8L5.64645 12.1464C5.45118 12.3417 5.45118 12.6583 5.64645 12.8536C5.84171 13.0488 6.15829 13.0488 6.35355 12.8536L10.8536 8.35355C11.0488 8.15829 11.0488 7.84171 10.8536 7.64645L6.35355 3.14645C6.15829 2.95118 5.84171 2.95118 5.64645 3.14645Z" fill="currentColor"></path></svg>
+                </button>
+            </div>
+            <div class="digest-1u">
+              <div class="digest-1u-frame">
+                <img class="digest-1u-image" src="/assets/images/msn/digest-1.jpg" alt="" aria-hidden="true" data-digest-image>
+              </div>
+              <div class="digest-1u-text">
+                <div class="digest-publisher">
+                  <span class="digest-monogram" aria-hidden="true" data-digest-monogram>T</span>
+                  <span data-digest-publisher>Trailhead</span>
+                  <span data-digest-time>· 1h</span>
+                </div>
+                <h3 class="digest-title" data-digest-title>Five quiet trails worth the early alarm this weekend</h3>
+                <div class="digest-1u-controls">
+                  <div class="digest-pagination" aria-hidden="true">
+                    <span class="digest-bar is-active" data-segment="0"></span>
+                    <span class="digest-bar" data-segment="1"></span>
+                    <span class="digest-bar" data-segment="2"></span>
+                    <span class="digest-bar" data-segment="3"></span>
+                    <span class="digest-bar" data-segment="4"></span>
+                  </div>
+                  <div class="digest-1u-paddles">
+                    <button type="button" aria-label="Previous story" data-digest-nav="-1">
+                      <svg class="digest-chevron" viewBox="4.5 2.5 7 11" preserveAspectRatio="none" aria-hidden="true"><path d="M10.3536 3.14645C10.5488 3.34171 10.5488 3.65829 10.3536 3.85355L6.20711 8L10.3536 12.1464C10.5488 12.3417 10.5488 12.6583 10.3536 12.8536C10.1583 13.0488 9.84171 13.0488 9.64645 12.8536L5.14645 8.35355C4.95118 8.15829 4.95118 7.84171 5.14645 7.64645L9.64645 3.14645C9.84171 2.95118 10.1583 2.95118 10.3536 3.14645Z" fill="currentColor"></path></svg>
+                    </button>
+                    <button type="button" aria-label="Next story" data-digest-nav="1">
+                      <svg class="digest-chevron" viewBox="4.5 2.5 7 11" preserveAspectRatio="none" aria-hidden="true"><path d="M5.64645 3.14645C5.45118 3.34171 5.45118 3.65829 5.64645 3.85355L9.79289 8L5.64645 12.1464C5.45118 12.3417 5.45118 12.6583 5.64645 12.8536C5.84171 13.0488 6.15829 13.0488 6.35355 12.8536L10.8536 8.35355C11.0488 8.15829 11.0488 7.84171 10.8536 7.64645L6.35355 3.14645C6.15829 2.95118 5.84171 2.95118 5.64645 3.14645Z" fill="currentColor"></path></svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </section>
+      </div>
+    </div>
+    <section class="article-2u-section" data-image-badge="false" data-video="false" aria-labelledby="article-2u-heading">
+      <h2 id="article-2u-heading" class="dg-section-title">Article 2u</h2>
+      <div class="article-controls" aria-label="Article 2u options">
+        <label><input type="checkbox" data-article-toggle="image-badge">Image badge</label>
+        <label><input type="checkbox" data-article-toggle="video">Video</label>
+      </div>
+      <div class="article-2u-pair">
+        <div class="article-2u-example">
+          <p class="article-caption">Article · 2u · Image Ratio 1:1</p>
+          <article class="article-2u" aria-label="Article, image ratio 1:1">
+            <div class="article-2u-image article-2u-image--square">
+              <img src="../assets/images/msn/widgets/art-img-6.png" alt="" width="344" height="344" onerror="this.style.visibility='hidden'">
+              <span class="article-badge">Badge</span><span class="article-video"><img src="../assets/icons/ic_fluent_play_20_filled.svg" alt=""></span>
+              <button class="hover-actions" type="button" aria-label="More options"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="6" cy="12" r="1.75" fill="currentColor"/><circle cx="12" cy="12" r="1.75" fill="currentColor"/><circle cx="18" cy="12" r="1.75" fill="currentColor"/></svg></button>
+            </div>
+            <div class="article-2u-text">
+              <div class="cg-pub"><span class="cg-pub-brand"><span class="cg-fav-frame"><img src="../assets/images/msn/widgets/art-fav-1.svg" alt="" width="16" height="16" onerror="this.style.visibility='hidden'"></span><span class="cg-pub-name">Quantis</span></span><span class="cg-pub-dot" aria-hidden="true">·</span><span class="cg-pub-time">1d</span></div>
+              <h3 class="article-title">A Symbol of Beauty: Exploring the Secret Lives of Peacocks</h3>
+              <p class="article-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+            </div>
+          </article>
+        </div>
+        <div class="article-2u-example">
+          <p class="article-caption">Article · 2u · Image Ratio 4:3</p>
+          <article class="article-2u" aria-label="Article, image ratio 4:3">
+            <div class="article-2u-image article-2u-image--four-three">
+              <img src="../assets/images/msn/widgets/art-img-7.png" alt="" width="459" height="344" onerror="this.style.visibility='hidden'">
+              <span class="article-badge">Badge</span><span class="article-video"><img src="../assets/icons/ic_fluent_play_20_filled.svg" alt=""></span>
+              <button class="hover-actions" type="button" aria-label="More options"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="6" cy="12" r="1.75" fill="currentColor"/><circle cx="12" cy="12" r="1.75" fill="currentColor"/><circle cx="18" cy="12" r="1.75" fill="currentColor"/></svg></button>
+            </div>
+            <div class="article-2u-text">
+              <div class="cg-pub"><span class="cg-pub-brand"><span class="cg-fav-frame"><img src="../assets/images/msn/widgets/art-fav-1.svg" alt="" width="16" height="16" onerror="this.style.visibility='hidden'"></span><span class="cg-pub-name">Quantis</span></span><span class="cg-pub-dot" aria-hidden="true">·</span><span class="cg-pub-time">1d</span></div>
+              <h3 class="article-title">A Symbol of Beauty: Exploring the Secret Lives of Peacocks</h3>
+              <p class="article-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="gem-widget-section" aria-labelledby="gem-widget-heading">
+      <h2 id="gem-widget-heading" class="dg-section-title">Gem widget</h2>
+      <div class="gem-widget-row gem-widget-row--1u">
+        <div class="gem-widget-example gem-widget-example--1u">
+          <p class="gem-widget-caption">Gem widget · 1u · Standard · Rest</p>
+          <article class="gem-widget gem-widget--1u" aria-label="Gem widget, 1u, Standard, Rest">
+            <div class="gem-widget-image gem-widget-image--1u">
+              <img src="../assets/images/msn/widgets/gem-img-1.png" alt="" aria-hidden="true" onerror="this.style.visibility='hidden'">
+              <button class="hover-actions" type="button" aria-label="More options"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="6" cy="12" r="1.75" fill="currentColor"/><circle cx="12" cy="12" r="1.75" fill="currentColor"/><circle cx="18" cy="12" r="1.75" fill="currentColor"/></svg></button>
+            </div>
+            <div class="gem-widget-text gem-widget-text--1u">
+              <div class="gem-widget-attribution gem-widget-attribution--inline">
+                <span class="gem-widget-fav-stack" aria-hidden="true"><span class="gem-widget-favicon"><img src="../assets/images/msn/widgets/gem-fav-1.svg" alt="" onerror="this.style.visibility='hidden'"></span><span class="gem-widget-favicon"><img src="../assets/images/msn/widgets/gem-fav-2.svg" alt="" onerror="this.style.visibility='hidden'"></span><span class="gem-widget-favicon"><img src="../assets/images/msn/widgets/gem-fav-3.svg" alt="" onerror="this.style.visibility='hidden'"></span></span>
+                <span class="gem-widget-count">+5</span>
+                <span class="gem-widget-meta"> · Curated by Copilot · 30m</span>
+              </div>
+              <div class="gem-widget-title-wrap"><h3 class="gem-widget-title">Oscars Introduce Updated Viewing Guidelines and AI Rules</h3></div>
+            </div>
+          </article>
+        </div>
+        <div class="gem-widget-example gem-widget-example--1u">
+          <p class="gem-widget-caption">Gem widget · 1u · Standard · Hover</p>
+          <article class="gem-widget gem-widget--1u is-hover" aria-label="Gem widget, 1u, Standard, Hover">
+            <div class="gem-widget-image gem-widget-image--1u">
+              <img src="../assets/images/msn/widgets/gem-img-1.png" alt="" aria-hidden="true" onerror="this.style.visibility='hidden'">
+              <button class="hover-actions" type="button" aria-label="More options"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="6" cy="12" r="1.75" fill="currentColor"/><circle cx="12" cy="12" r="1.75" fill="currentColor"/><circle cx="18" cy="12" r="1.75" fill="currentColor"/></svg></button>
+            </div>
+            <div class="gem-widget-text gem-widget-text--1u">
+              <div class="gem-widget-attribution gem-widget-attribution--inline">
+                <span class="gem-widget-fav-stack" aria-hidden="true"><span class="gem-widget-favicon"><img src="../assets/images/msn/widgets/gem-fav-1.svg" alt="" onerror="this.style.visibility='hidden'"></span><span class="gem-widget-favicon"><img src="../assets/images/msn/widgets/gem-fav-2.svg" alt="" onerror="this.style.visibility='hidden'"></span><span class="gem-widget-favicon"><img src="../assets/images/msn/widgets/gem-fav-3.svg" alt="" onerror="this.style.visibility='hidden'"></span></span>
+                <span class="gem-widget-count">+5</span>
+                <span class="gem-widget-meta"> · Curated by Copilot · 30m</span>
+              </div>
+              <div class="gem-widget-title-wrap"><h3 class="gem-widget-title">Oscars Introduce Updated Viewing Guidelines and AI Rules</h3></div>
+            </div>
+          </article>
+        </div>
+        <div class="gem-widget-example gem-widget-example--1u">
+          <p class="gem-widget-caption">Gem widget · 1u · Immersive · Rest</p>
+          <article class="gem-widget gem-widget--1u gem-widget--immersive" aria-label="Gem widget, 1u, Immersive, Rest">
+            <button class="hover-actions" type="button" aria-label="More options"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="6" cy="12" r="1.75" fill="currentColor"/><circle cx="12" cy="12" r="1.75" fill="currentColor"/><circle cx="18" cy="12" r="1.75" fill="currentColor"/></svg></button>
+            <div class="gem-widget-text">
+              <div class="gem-widget-attribution gem-widget-meta">Curated by Copilot · 30m</div>
+              <div class="gem-widget-title-wrap"><h3 class="gem-widget-title">Oscars Introduce Updated Viewing Guidelines and AI Rules</h3></div>
+              <div class="gem-widget-attribution">
+                <span class="gem-widget-fav-stack" aria-hidden="true"><span class="gem-widget-favicon"><img src="../assets/images/msn/widgets/gem-fav-1.svg" alt="" onerror="this.style.visibility='hidden'"></span><span class="gem-widget-favicon"><img src="../assets/images/msn/widgets/gem-fav-2.svg" alt="" onerror="this.style.visibility='hidden'"></span><span class="gem-widget-favicon"><img src="../assets/images/msn/widgets/gem-fav-3.svg" alt="" onerror="this.style.visibility='hidden'"></span></span>
+                <span class="gem-widget-count">+5</span>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="gem-widget-example gem-widget-example--1u">
+          <p class="gem-widget-caption">Gem widget · 1u · Immersive · Hover</p>
+          <article class="gem-widget gem-widget--1u gem-widget--immersive is-hover" aria-label="Gem widget, 1u, Immersive, Hover">
+            <button class="hover-actions" type="button" aria-label="More options"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="6" cy="12" r="1.75" fill="currentColor"/><circle cx="12" cy="12" r="1.75" fill="currentColor"/><circle cx="18" cy="12" r="1.75" fill="currentColor"/></svg></button>
+            <div class="gem-widget-text">
+              <div class="gem-widget-attribution gem-widget-meta">Curated by Copilot · 30m</div>
+              <div class="gem-widget-title-wrap"><h3 class="gem-widget-title">Oscars Introduce Updated Viewing Guidelines and AI Rules</h3></div>
+              <div class="gem-widget-attribution">
+                <span class="gem-widget-fav-stack" aria-hidden="true"><span class="gem-widget-favicon"><img src="../assets/images/msn/widgets/gem-fav-1.svg" alt="" onerror="this.style.visibility='hidden'"></span><span class="gem-widget-favicon"><img src="../assets/images/msn/widgets/gem-fav-2.svg" alt="" onerror="this.style.visibility='hidden'"></span><span class="gem-widget-favicon"><img src="../assets/images/msn/widgets/gem-fav-3.svg" alt="" onerror="this.style.visibility='hidden'"></span></span>
+                <span class="gem-widget-count">+5</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+      <div class="gem-widget-row gem-widget-row--2u">
+        <div class="gem-widget-example gem-widget-example--2u">
+          <p class="gem-widget-caption">Gem widget · 2u · Standard · Rest</p>
+          <article class="gem-widget gem-widget--2u" aria-label="Gem widget, 2u, Standard, Rest">
+            <div class="gem-widget-text gem-widget-text--2u">
+              <div class="gem-widget-attribution gem-widget-attribution--split">
+                <span class="gem-widget-favline"><span class="gem-widget-fav-stack" aria-hidden="true"><span class="gem-widget-favicon"><img src="../assets/images/msn/widgets/gem-fav-1.svg" alt="" onerror="this.style.visibility='hidden'"></span><span class="gem-widget-favicon"><img src="../assets/images/msn/widgets/gem-fav-2.svg" alt="" onerror="this.style.visibility='hidden'"></span><span class="gem-widget-favicon"><img src="../assets/images/msn/widgets/gem-fav-3.svg" alt="" onerror="this.style.visibility='hidden'"></span></span><span class="gem-widget-count">+5</span></span>
+                <span class="gem-widget-meta">Curated by Copilot · 30m</span>
+              </div>
+              <div class="gem-widget-title-wrap"><h3 class="gem-widget-title">Oscars Introduce Updated Viewing Guidelines and AI Rules</h3></div>
+            </div>
+            <div class="gem-widget-image gem-widget-image--2u">
+              <img src="../assets/images/msn/widgets/gem-img-1.png" alt="" aria-hidden="true" onerror="this.style.visibility='hidden'">
+              <button class="hover-actions" type="button" aria-label="More options"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="6" cy="12" r="1.75" fill="currentColor"/><circle cx="12" cy="12" r="1.75" fill="currentColor"/><circle cx="18" cy="12" r="1.75" fill="currentColor"/></svg></button>
+            </div>
+          </article>
+        </div>
+        <div class="gem-widget-example gem-widget-example--2u">
+          <p class="gem-widget-caption">Gem widget · 2u · Standard · Hover</p>
+          <article class="gem-widget gem-widget--2u is-hover" aria-label="Gem widget, 2u, Standard, Hover">
+            <div class="gem-widget-text gem-widget-text--2u">
+              <div class="gem-widget-attribution gem-widget-attribution--split">
+                <span class="gem-widget-favline"><span class="gem-widget-fav-stack" aria-hidden="true"><span class="gem-widget-favicon"><img src="../assets/images/msn/widgets/gem-fav-1.svg" alt="" onerror="this.style.visibility='hidden'"></span><span class="gem-widget-favicon"><img src="../assets/images/msn/widgets/gem-fav-2.svg" alt="" onerror="this.style.visibility='hidden'"></span><span class="gem-widget-favicon"><img src="../assets/images/msn/widgets/gem-fav-3.svg" alt="" onerror="this.style.visibility='hidden'"></span></span><span class="gem-widget-count">+5</span></span>
+                <span class="gem-widget-meta">Curated by Copilot · 30m</span>
+              </div>
+              <div class="gem-widget-title-wrap"><h3 class="gem-widget-title">Oscars Introduce Updated Viewing Guidelines and AI Rules</h3></div>
+            </div>
+            <div class="gem-widget-image gem-widget-image--2u">
+              <img src="../assets/images/msn/widgets/gem-img-1.png" alt="" aria-hidden="true" onerror="this.style.visibility='hidden'">
+              <button class="hover-actions" type="button" aria-label="More options"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="6" cy="12" r="1.75" fill="currentColor"/><circle cx="12" cy="12" r="1.75" fill="currentColor"/><circle cx="18" cy="12" r="1.75" fill="currentColor"/></svg></button>
+            </div>
+          </article>
+        </div>
+      </div>
+      <div class="gem-widget-row gem-widget-row--2u">
+        <div class="gem-widget-example gem-widget-example--2u">
+          <p class="gem-widget-caption">Gem widget · 2u · Immersive · Rest</p>
+          <article class="gem-widget gem-widget--2u gem-widget--immersive" aria-label="Gem widget, 2u, Immersive, Rest">
+            <button class="hover-actions" type="button" aria-label="More options"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="6" cy="12" r="1.75" fill="currentColor"/><circle cx="12" cy="12" r="1.75" fill="currentColor"/><circle cx="18" cy="12" r="1.75" fill="currentColor"/></svg></button>
+            <div class="gem-widget-text">
+              <div class="gem-widget-attribution gem-widget-meta">Curated by Copilot · 30m</div>
+              <div class="gem-widget-title-wrap"><h3 class="gem-widget-title">Oscars Introduce Updated Viewing Guidelines and AI Rules</h3></div>
+              <div class="gem-widget-attribution">
+                <span class="gem-widget-fav-stack" aria-hidden="true"><span class="gem-widget-favicon"><img src="../assets/images/msn/widgets/gem-fav-1.svg" alt="" onerror="this.style.visibility='hidden'"></span><span class="gem-widget-favicon"><img src="../assets/images/msn/widgets/gem-fav-2.svg" alt="" onerror="this.style.visibility='hidden'"></span><span class="gem-widget-favicon"><img src="../assets/images/msn/widgets/gem-fav-3.svg" alt="" onerror="this.style.visibility='hidden'"></span></span>
+                <span class="gem-widget-count">+5</span>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="gem-widget-example gem-widget-example--2u">
+          <p class="gem-widget-caption">Gem widget · 2u · Immersive · Hover</p>
+          <article class="gem-widget gem-widget--2u gem-widget--immersive is-hover" aria-label="Gem widget, 2u, Immersive, Hover">
+            <button class="hover-actions" type="button" aria-label="More options"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="6" cy="12" r="1.75" fill="currentColor"/><circle cx="12" cy="12" r="1.75" fill="currentColor"/><circle cx="18" cy="12" r="1.75" fill="currentColor"/></svg></button>
+            <div class="gem-widget-text">
+              <div class="gem-widget-attribution gem-widget-meta">Curated by Copilot · 30m</div>
+              <div class="gem-widget-title-wrap"><h3 class="gem-widget-title">Oscars Introduce Updated Viewing Guidelines and AI Rules</h3></div>
+              <div class="gem-widget-attribution">
+                <span class="gem-widget-fav-stack" aria-hidden="true"><span class="gem-widget-favicon"><img src="../assets/images/msn/widgets/gem-fav-1.svg" alt="" onerror="this.style.visibility='hidden'"></span><span class="gem-widget-favicon"><img src="../assets/images/msn/widgets/gem-fav-2.svg" alt="" onerror="this.style.visibility='hidden'"></span><span class="gem-widget-favicon"><img src="../assets/images/msn/widgets/gem-fav-3.svg" alt="" onerror="this.style.visibility='hidden'"></span></span>
+                <span class="gem-widget-count">+5</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    const slider = document.getElementById("w");
+    const stage = document.querySelector(".stage");
+    const readout = document.getElementById("readout");
+    const showColumns = document.getElementById("show-columns");
+    const showSubcolumns = document.getElementById("show-subcolumns");
+    const presets = [...document.querySelectorAll("[data-width]")];
+
+    function updateLayout() {
+      const width = Number(slider.value);
+      const columns = width >= 980 ? 3 : width >= 664 ? 2 : 1;
+      stage.style.width = width + "px";
+      stage.classList.toggle("show-columns", showColumns.checked || showSubcolumns.checked);
+      stage.classList.toggle("show-subcolumns", showSubcolumns.checked);
+      presets.forEach(button => button.setAttribute("aria-pressed", String(button.dataset.preset === (columns === 3 ? "Desktop" : columns === 2 ? "Tablet" : "Mobile"))));
+      const cardWidth = Math.round(stage.querySelector(".u1").getBoundingClientRect().width);
+      readout.textContent = `${width}px · ${columns} ${columns === 1 ? "column" : "columns"} · ${columns * 4} sub-columns · card ${cardWidth}px`;
+    }
+
+    slider.addEventListener("input", updateLayout);
+    showColumns.addEventListener("change", updateLayout);
+    showSubcolumns.addEventListener("change", updateLayout);
+    presets.forEach(button => button.addEventListener("click", () => {
+      slider.value = button.dataset.width;
+      updateLayout();
+    }));
+    updateLayout();
+
+    const podcast = document.querySelector(".seg-pod");
+    const podcastRest = podcast.querySelector(".pod-rest");
+    const podcastPlaying = podcast.querySelector(".pod-playing");
+    const podcastPlay = podcast.querySelector(".pod-play");
+    const podcastPause = podcast.querySelector(".pod-pause");
+
+    podcastPlay.addEventListener("click", () => {
+      podcast.dataset.state = "play";
+      podcastRest.hidden = true;
+      podcastPlaying.hidden = false;
+      podcastPause.focus();
+    });
+
+    podcastPause.addEventListener("click", () => {
+      podcast.dataset.state = "rest";
+      podcastRest.hidden = false;
+      podcastPlaying.hidden = true;
+      podcastPlay.focus();
+    });
+  </script>
+  <script>
+    const digest = document.querySelector(".digest");
+    const digestImage = document.querySelector("[data-digest-image]");
+    const stories = [
+      {publisher: "Trailhead", monogram: "T", title: "Five quiet trails worth the early alarm this weekend", image: "/assets/images/msn/digest-1.jpg"},
+      {publisher: "Tide Report", monogram: "R", title: "Why coastal towns are redesigning their seawalls", image: "/assets/images/msn/digest-2.jpg"},
+      {publisher: "Night Market", monogram: "N", title: "The late-night food scene rewriting city maps", image: "/assets/images/msn/digest-3.jpg"},
+      {publisher: "Field Notes", monogram: "F", title: "What a year of rooftop gardens taught one city block", image: "/assets/images/msn/digest-4.jpg"},
+      {publisher: "Open Studio", monogram: "O", title: "Inside the small workshops reviving hand-set type", image: "/assets/images/msn/digest-5.jpg"}
+    ];
+    let activeStory = 0;
+
+    function showStory(index) {
+      activeStory = (index + stories.length) % stories.length;
+      const story = stories[activeStory];
+      document.querySelectorAll("[data-segment]").forEach(segment => {
+        segment.classList.toggle("is-active", Number(segment.dataset.segment) === activeStory);
+      });
+      document.querySelectorAll("[data-digest-monogram]").forEach(monogram => {
+        monogram.textContent = story.monogram;
+      });
+      document.querySelectorAll("[data-digest-publisher]").forEach(publisher => {
+        publisher.textContent = story.publisher;
+      });
+      document.querySelectorAll("[data-digest-title]").forEach(title => {
+        title.textContent = story.title;
+      });
+      digest.dataset.imageMissing = "false";
+      digest.style.backgroundImage = `linear-gradient(180deg, rgba(40, 37, 35, 0) 0%, rgba(40, 37, 35, 0.20) 40%, rgba(40, 37, 35, 0.80) 70%), url("${story.image}")`;
+      digestImage.src = story.image;
+    }
+
+    digestImage.addEventListener("error", () => {
+      digest.dataset.imageMissing = "true";
+    });
+    digestImage.addEventListener("load", () => {
+      digest.dataset.imageMissing = "false";
+    });
+
+    document.querySelectorAll("[data-digest-nav]").forEach(button => {
+      button.addEventListener("click", () => showStory(activeStory + Number(button.dataset.digestNav)));
+    });
+
+    digest.addEventListener("keydown", event => {
+      if (event.key === "ArrowLeft" || event.key === "ArrowRight") {
+        event.preventDefault();
+        showStory(activeStory + (event.key === "ArrowRight" ? 1 : -1));
+      }
+    });
+
+    showStory(0);
+  </script>
+  <script>
+    document.querySelectorAll(".article-section, .article-2u-section").forEach(section => {
+      section.querySelectorAll("[data-article-toggle]").forEach(toggle => {
+        toggle.addEventListener("change", () => {
+          section.dataset[toggle.dataset.articleToggle === "image-badge" ? "imageBadge" : "video"] = String(toggle.checked);
+        });
+      });
+    });
+  </script>
+</body>
+</html>

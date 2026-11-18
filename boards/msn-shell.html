@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MSN shell scenarios</title>
+  <link rel="stylesheet" href="../assets/css/msn-components.css">
+  <link rel="stylesheet" href="../assets/css/msn-shell.css">
+  <script defer src="../assets/js/msn-shell.js"></script>
+</head>
+<body>
+  <main class="shell-app" data-theme="light">
+    <header class="shell-controls" aria-label="Demo controls">
+      <div class="control-group" role="group" aria-label="Scenario">
+        <span class="control-label">Scenario</span>
+        <div class="segmented-control">
+          <button type="button" data-scenario="edge" aria-pressed="true">Edge new tab page</button>
+          <button type="button" data-scenario="prong" aria-pressed="false">Windows panel (Prong 2)</button>
+        </div>
+      </div>
+
+      <div class="control-group" role="group" aria-label="Theme">
+        <span class="control-label">Theme</span>
+        <div class="segmented-control">
+          <button type="button" data-theme-choice="light" aria-pressed="true">Light</button>
+          <button type="button" data-theme-choice="dark" aria-pressed="false">Dark</button>
+        </div>
+      </div>
+
+      <div class="edge-width-controls" aria-label="Edge window width">
+        <div class="width-presets" role="group" aria-label="Width presets">
+          <button type="button" data-width="1978" aria-pressed="true">1978 · 4 col</button>
+          <button type="button" data-width="1447" aria-pressed="false">1447 · 3 col</button>
+          <button type="button" data-width="979" aria-pressed="false">979 · 2 col</button>
+          <button type="button" data-width="663" aria-pressed="false">663 · 1 col</button>
+        </div>
+        <label class="width-slider">
+          <span>Width</span>
+          <input id="edge-width" type="range" min="320" max="1978" step="1" value="1978">
+          <output id="edge-width-readout" for="edge-width">1978 px</output>
+        </label>
+      </div>
+    </header>
+
+    <div class="desktop-fit">
+      <section class="desktop-canvas" aria-label="Windows desktop">
+        <div class="desktop-wallpaper">
+          <img src="../assets/images/msn/shell/wallpaper-light.jpg" alt="" aria-hidden="true" onerror="this.style.visibility='hidden'">
+        </div>
+
+        <section class="edge-window" aria-label="Edge new tab page">
+          <div class="edge-chrome-row edge-tab-row">
+            <div class="edge-active-tab">
+              <img src="../assets/icons/globe_16_regular.svg" alt="" aria-hidden="true">
+              <span>New tab</span>
+              <button class="edge-tab-dismiss" type="button" aria-label="Close tab"><img src="../assets/icons/dismiss_12_regular.svg" alt="" aria-hidden="true"></button>
+            </div>
+            <div class="edge-window-controls">
+              <button type="button" aria-label="Minimize"><img src="../assets/icons/subtract_16_regular.svg" alt="" aria-hidden="true"></button>
+              <button type="button" aria-label="Maximize"><img src="../assets/icons/square_16_regular.svg" alt="" aria-hidden="true"></button>
+              <button type="button" aria-label="Close window"><img src="../assets/icons/dismiss_16_regular.svg" alt="" aria-hidden="true"></button>
+            </div>
+          </div>
+          <div class="edge-chrome-row edge-toolbar">
+            <div class="edge-navigation-icons">
+              <button type="button" aria-label="Back"><img src="../assets/icons/arrow_left_20_regular.svg" alt="" aria-hidden="true"></button>
+              <button type="button" aria-label="Reload"><img src="../assets/icons/arrow_clockwise_20_regular.svg" alt="" aria-hidden="true"></button>
+              <button type="button" aria-label="Home"><img src="../assets/icons/home_20_regular.svg" alt="" aria-hidden="true"></button>
+            </div>
+            <div class="edge-address">Search or enter web address</div>
+            <button type="button" aria-label="Favorites"><img src="../assets/icons/star_20_regular.svg" alt="" aria-hidden="true"></button>
+            <button type="button" aria-label="More options"><img src="../assets/icons/more_horizontal_20_regular.svg" alt="" aria-hidden="true"></button>
+          </div>
+          <div class="edge-chrome-row edge-favorites" aria-label="Favorites">
+            <div class="edge-favorite"><span class="edge-favorite__icon"></span><span class="edge-favorite__label">News</span></div>
+            <div class="edge-favorite"><span class="edge-favorite__icon"></span><span class="edge-favorite__label">Weather</span></div>
+            <div class="edge-favorite"><span class="edge-favorite__icon"></span><span class="edge-favorite__label">Money</span></div>
+            <div class="edge-favorite"><span class="edge-favorite__icon"></span><span class="edge-favorite__label">Sports</span></div>
+            <div class="edge-favorite"><span class="edge-favorite__icon"></span><span class="edge-favorite__label">Shopping</span></div>
+          </div>
+          <iframe class="edge-page" src="msn-ntp-layout.html?embed=1&amp;theme=light" title="Edge new tab page content"></iframe>
+        </section>
+
+        <section class="prong-panel" aria-label="Windows panel (Prong 2)">
+          <nav class="p2-rail" aria-label="Panel navigation">
+            <div class="p2-rail__navigation">
+              <button class="p2-rail__item" type="button" aria-current="page">
+                <span class="p2-rail__logo"><img src="../assets/images/msn/shell/msn-logo-24.svg" alt="" onerror="this.style.visibility='hidden'"></span>
+                <span>Discover</span>
+              </button>
+              <button class="p2-rail__item" type="button">
+                <img src="../assets/icons/apps_24_regular.svg" alt="" aria-hidden="true">
+                <span>Widgets</span>
+              </button>
+            </div>
+            <button class="p2-rail__settings" type="button" aria-label="Settings">
+              <img src="../assets/icons/settings_24_regular.svg" alt="" aria-hidden="true">
+            </button>
+          </nav>
+
+          <div class="prong-content">
+            <header class="p2-header">
+              <h1>Good morning, Olivia</h1>
+              <div class="p2-header__controls">
+                <label class="p2-header__toggle">
+                  <span>Personalized</span>
+                  <input type="checkbox" role="switch" checked>
+                </label>
+                <button class="p2-header__button" type="button" aria-label="Refresh"><img src="../assets/icons/arrow_clockwise_20_regular.svg" alt="" aria-hidden="true"></button>
+                <button class="p2-header__button" type="button" aria-label="Notifications"><img src="../assets/icons/alert_20_regular.svg" alt="" aria-hidden="true"></button>
+                <button class="p2-header__button" type="button" aria-label="More options"><img src="../assets/icons/more_horizontal_20_regular.svg" alt="" aria-hidden="true"></button>
+                <button class="p2-header__profile" type="button" aria-label="Profile">
+                  <span class="p2-header__avatar"><img src="../assets/images/msn/shell/avatar-24.jpg" alt="" onerror="this.style.visibility='hidden'"></span>
+                </button>
+              </div>
+            </header>
+            <div class="prong-scroll">
+              <section class="prong-widget-section" aria-label="Widgets">
+                <div class="prong-widget-grid">
+                  <article class="card digest span-2" aria-label="Digest stories">
+                    <div class="digest-2u-inner">
+                      <div class="digest-2u-content">
+                        <div class="digest-publisher"><span class="digest-monogram" aria-hidden="true">T</span><span>Trailhead</span><span>· 1h</span></div>
+                        <h2 class="digest-title">Five quiet trails worth the early alarm this weekend</h2>
+                      </div>
+                      <div class="digest-pagination" aria-hidden="true">
+                        <span class="digest-bar is-active"></span><span class="digest-bar"></span><span class="digest-bar"></span><span class="digest-bar"></span><span class="digest-bar"></span>
+                      </div>
+                    </div>
+                    <div class="digest-2u-paddles" aria-hidden="true">
+                      <span><svg class="digest-chevron" viewBox="4.5 2.5 7 11"><path d="M10.3536 3.14645C10.5488 3.34171 10.5488 3.65829 10.3536 3.85355L6.20711 8L10.3536 12.1464C10.5488 12.3417 10.5488 12.6583 10.3536 12.8536C10.1583 13.0488 9.84171 13.0488 9.64645 12.8536L5.14645 8.35355C4.95118 8.15829 4.95118 7.84171 5.14645 7.64645L9.64645 3.14645C9.84171 2.95118 10.1583 2.95118 10.3536 3.14645Z" fill="currentColor"></path></svg></span>
+                      <span><svg class="digest-chevron" viewBox="4.5 2.5 7 11"><path d="M5.64645 3.14645C5.45118 3.34171 5.45118 3.65829 5.64645 3.85355L9.79289 8L5.64645 12.1464C5.45118 12.3417 5.45118 12.6583 5.64645 12.8536C5.84171 13.0488 6.15829 13.0488 6.35355 12.8536L10.8536 8.35355C11.0488 8.1583 11.0488 7.8417 10.8536 7.64645L6.35355 3.14645C6.15829 2.95118 5.84171 2.95118 5.64645 3.14645Z" fill="currentColor"></path></svg></span>
+                    </div>
+                  </article>
+                  <article class="card u1 seg-widget seg-weather prong-weather" aria-label="Weather, Seattle">
+                    <div class="wx-content">
+                      <img class="wx-sun" src="../assets/images/msn/widgets/wx-sun.svg" alt="" aria-hidden="true" onerror="this.style.visibility='hidden'">
+                      <div class="wx-area">
+                        <div class="wx-loc"><span class="wx-city">Seattle</span></div>
+                        <div class="wx-now"><div class="wx-temp"><span class="wx-deg-num">42</span><span class="wx-deg">°</span></div><div class="wx-cond"><span class="wx-cond-text">Mostly sunny</span><span class="wx-hl"><span>H 55°</span><span>L 32°</span></span></div></div>
+                      </div>
+                      <ol class="wx-graph" aria-label="Hourly forecast">
+                        <li class="wx-hour"><span class="wx-time">Now</span><span class="wx-hbot"><span class="wx-icon"><img src="../assets/images/msn/widgets/wx-hr-1.svg" alt="Partly sunny"></span><span class="wx-data"><span class="wx-htemp">42°</span></span></span></li>
+                        <li class="wx-hour"><span class="wx-time">10AM</span><span class="wx-hbot"><span class="wx-icon"><img src="../assets/images/msn/widgets/wx-hr-2.svg" alt="Light snow"></span><span class="wx-data"><span class="wx-htemp">43°</span></span></span></li>
+                        <li class="wx-hour"><span class="wx-time">11AM</span><span class="wx-hbot"><span class="wx-icon"><img src="../assets/images/msn/widgets/wx-hr-3.svg" alt="Windy"></span><span class="wx-data"><span class="wx-htemp">45°</span></span></span></li>
+                        <li class="wx-hour"><span class="wx-time">12PM</span><span class="wx-hbot"><span class="wx-icon"><img src="../assets/images/msn/widgets/wx-hr-2.svg" alt="Light snow"></span><span class="wx-data"><span class="wx-htemp">48°</span></span></span></li>
+                        <li class="wx-hour"><span class="wx-time">1PM</span><span class="wx-hbot"><span class="wx-icon"><img src="../assets/images/msn/widgets/wx-hr-5.svg" alt="Sunny"></span><span class="wx-data"><span class="wx-htemp">51°</span></span></span></li>
+                      </ol>
+                    </div>
+                  </article>
+
+                  <article class="w05 w05-std prong-half-widget" aria-label="Sports score">
+                    <div class="w05-area">
+                      <div class="w05-titlewrap"><h3 class="w05-title">Coastal Soccer League</h3></div>
+                      <div class="sp05-content">
+                        <div class="sp05-row">
+                          <div class="sp05-team"><span class="sp05-badge" style="--b:#4C4642">HBR</span><span class="sp05-abbr">HBR</span></div>
+                          <div class="sp05-mid"><p class="sp05-status">Final · Jun 10</p><div class="sp05-score"><span class="sp05-num">2 - 1</span></div><a class="sp05-link" href="#">View game stats</a></div>
+                          <div class="sp05-team"><span class="sp05-badge" style="--b:#8A817B">RDG</span><span class="sp05-abbr">RDG</span></div>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                  <article class="w05 w05-std prong-half-widget" aria-label="Stock, NVIDIA Corp">
+                    <div class="w05-area">
+                      <div class="w05-titlewrap"><h3 class="w05-title">NVIDIA Corp</h3></div>
+                      <div class="stk05-body">
+                        <div class="stk05-info"><p class="stk05-ticker">(NVDA)</p><div class="stk05-price"><span class="stk05-val">136.75</span><span class="stk05-chg">+3.97%</span></div></div>
+                        <div class="stk05-graph" aria-hidden="true">
+                          <svg viewBox="0 0 270 31" preserveAspectRatio="none"><polyline class="stk05-line" points="0,31 5,29 10,25 16,23 22,19 28,22 36,22 44,17 51,15 57,17 65,15 73,13 79,11 86,14 93,19 100,20 108,19 118,21 125,16 136,12 149,19 157,17 169,16 183,10 193,17 204,16 216,5 225,2 236,16 247,25 255,23 268,8"></polyline></svg>
+                          <i class="stk05-drop"></i><i class="stk05-dot"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                  <article class="w05 w05-std prong-half-widget" aria-label="Local event">
+                    <div class="w05-area">
+                      <div class="w05-titlewrap"><h3 class="w05-title">Next week in Seattle, WA</h3></div>
+                      <div class="ev05-row"><div class="ev05-cal" aria-label="October 24"><div class="ev05-month">OCT</div><div class="ev05-date">24</div></div><div class="ev05-text"><p class="ev05-name">Dinosaur Exhibit</p><p class="ev05-venue">Convention Center</p></div></div>
+                    </div>
+                  </article>
+                </div>
+              </section>
+
+              <section class="prong-feed-section" aria-labelledby="prong-feed-title">
+                <h2 class="prong-section-title" id="prong-feed-title">Trending articles</h2>
+                <div class="prong-feed-grid" id="prong-feed-grid"></div>
+              </section>
+            </div>
+            <div class="p2-refresh">
+              <button class="p2-refresh__button" type="button">
+                <img src="../assets/icons/arrow_clockwise_16_regular.svg" alt="" aria-hidden="true">
+                <span>Refresh stories</span>
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <div class="taskbar" aria-label="Windows taskbar">
+          <div class="taskbar-apps" aria-hidden="true">
+            <span class="taskbar-slot"><span class="taskbar-item"></span></span><span class="taskbar-slot"><span class="taskbar-item"></span></span><span class="taskbar-slot"><span class="taskbar-item"></span></span>
+            <span class="taskbar-slot"><span class="taskbar-item"></span></span><span class="taskbar-slot"><span class="taskbar-item"></span></span><span class="taskbar-slot"><span class="taskbar-item"></span></span>
+          </div>
+          <div class="taskbar-clock"><span>10:30 AM</span><span>11/17/2026</span></div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <template id="prong-article-template">
+    <article class="article-1u" data-variant="subtitle">
+      <div class="article-media article-media--standard">
+        <img src="../assets/images/msn/widgets/art-img-1.png" alt="" width="288" height="172" onerror="this.style.visibility='hidden'">
+        <button class="hover-actions" type="button" aria-label="More options"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="6" cy="12" r="1.75" fill="currentColor"/><circle cx="12" cy="12" r="1.75" fill="currentColor"/><circle cx="18" cy="12" r="1.75" fill="currentColor"/></svg></button>
+      </div>
+      <div class="article-text">
+        <div class="cg-pub"><span class="cg-pub-brand"><span class="cg-fav-frame"><img src="../assets/images/msn/widgets/art-fav-1.svg" alt="" width="16" height="16" onerror="this.style.visibility='hidden'"></span><span class="cg-pub-name">Quantis</span></span><span class="cg-pub-dot" aria-hidden="true">·</span><span class="cg-pub-time">1d</span></div>
+        <h3 class="article-title"></h3>
+      </div>
+    </article>
+  </template>
+  <template id="prong-ad-template">
+    <article class="ad-card">
+      <div class="ad-card__content">
+        <div class="ad-card__media"><button class="ad-card__more" type="button" aria-label="More options"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="12" r="1.75" fill="currentColor"/><circle cx="12" cy="12" r="1.75" fill="currentColor"/><circle cx="18" cy="12" r="1.75" fill="currentColor"/></svg></button></div>
+        <div class="ad-card__text">
+          <div class="ad-card__publisher"><div class="ad-card__base"><div class="ad-card__attribution"><span class="ad-card__icon"><span class="ad-card__favicon" aria-hidden="true">N</span></span><span class="ad-card__name-wrap"><span class="ad-card__name">Northwind Mobile</span></span></div><div class="ad-card__meta"><span class="ad-card__dot" aria-hidden="true">·</span><span class="ad-card__sponsored">Sponsored</span></div></div></div>
+          <div class="ad-card__title-wrap"><h3 class="ad-card__title"><a class="ad-card__link" href="#">Switch plans in seconds. Northwind Mobile gives you coverage that moves with you, wherever you go.</a></h3></div>
+        </div>
+      </div>
+    </article>
+  </template>
+</body>
+</html>

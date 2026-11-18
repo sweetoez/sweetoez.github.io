@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Knowledge Cards Prototype</title>
+    <link rel="stylesheet" href="proto.css" />
+  </head>
+  <body class="proto proto--knowledge">
+    <div class="prototype-shell">
+      <header class="search-head">
+        <label class="search-label" for="query">Search</label>
+        <div class="search-bar">
+          <input id="query" type="search" value="axolotl" aria-label="Search results" />
+          <button type="button" class="ghost-btn" id="search-button">Search</button>
+        </div>
+      </header>
+      <main class="results-layout" aria-live="polite">
+        <section class="results-list" aria-label="Search results">
+          <h1>Axolotl</h1>
+          <ul>
+            <li><span class="result-tag">Science</span><strong>Axolotl biology</strong><small>1 min read</small></li>
+            <li><span class="result-tag">Care</span><strong>Axolotl tank setup</strong><small>3 min read</small></li>
+            <li><span class="result-tag">Habitat</span><strong>North American lake systems</strong><small>2 min read</small></li>
+            <li><span class="result-tag">Conservation</span><strong>Species recovery</strong><small>4 min read</small></li>
+          </ul>
+        </section>
+        <aside class="answer-card" aria-label="Answer card">
+          <div class="photo-track" id="photoTrack">
+            <div class="slide active" data-photo="moss"></div>
+            <div class="slide" data-photo="lagoon"></div>
+            <div class="slide" data-photo="petal"></div>
+            <div class="slide" data-photo="meadow"></div>
+          </div>
+          <div class="card-toolbar">
+            <button type="button" class="nav-btn" id="prevPhoto" aria-label="Previous photo">←</button>
+            <span id="photoCount">1 / 4</span>
+            <button type="button" class="nav-btn" id="nextPhoto" aria-label="Next photo">→</button>
+          </div>
+          <div class="text-block">
+            <div class="eyebrow-row"><span class="kicker">Amphibian</span><span class="badge">Live</span></div>
+            <h2 id="cardTitle">Axolotl</h2>
+            <div class="tabs" role="tablist" aria-label="Answer content tabs">
+              <button class="tab is-selected" role="tab" aria-selected="true" aria-controls="panel-overview" id="tab-overview" tabindex="0" data-tab="overview">Overview</button>
+              <button class="tab" role="tab" aria-selected="false" aria-controls="panel-habitat" id="tab-habitat" tabindex="-1" data-tab="habitat">Habitat</button>
+              <button class="tab" role="tab" aria-selected="false" aria-controls="panel-care" id="tab-care" tabindex="-1" data-tab="care">Care</button>
+            </div>
+            <div class="panel is-visible" id="panel-overview" role="tabpanel" aria-labelledby="tab-overview">
+              <ul class="fact-list">
+                <li><span>Native range</span><strong>Mexico</strong></li>
+                <li><span>Lifespan</span><strong>10–15 years</strong></li>
+                <li><span>Diet</span><strong>Worms, shrimp, pellets</strong></li>
+                <li><span>Size</span><strong>15–30 cm</strong></li>
+              </ul>
+              <button type="button" class="see-more" aria-expanded="false">See more</button>
+              <div class="more-panel" hidden><p>These salamanders stay in a neotenic stage, keeping aquatic features for life.</p></div>
+            </div>
+            <div class="panel" id="panel-habitat" role="tabpanel" aria-labelledby="tab-habitat" hidden>
+              <ul class="fact-list">
+                <li><span>Water</span><strong>Clean, cool</strong></li>
+                <li><span>Ground</span><strong>Soft substrate</strong></li>
+                <li><span>Light</span><strong>Low-glare</strong></li>
+              </ul>
+            </div>
+            <div class="panel" id="panel-care" role="tabpanel" aria-labelledby="tab-care" hidden>
+              <ul class="fact-list">
+                <li><span>Feed</span><strong>Daily, small meals</strong></li>
+                <li><span>Filter</span><strong>Gentle flow</strong></li>
+                <li><span>Check</span><strong>Water quality</strong></li>
+              </ul>
+            </div>
+          </div>
+          <div class="chip-row" aria-label="Related species">
+            <button type="button" class="chip is-selected" data-species="axolotl">Axolotl</button>
+            <button type="button" class="chip" data-species="newt">Newt</button>
+            <button type="button" class="chip" data-species="salamander">Salamander</button>
+            <button type="button" class="chip" data-species="frog">Frog</button>
+            <button type="button" class="chip" data-species="aquatic-plants">Aquarium plants</button>
+          </div>
+        </aside>
+      </main>
+    </div>
+    <script src="proto.js"></script>
+  </body>
+</html>
