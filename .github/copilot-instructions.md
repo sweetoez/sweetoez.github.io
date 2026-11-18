@@ -26,6 +26,7 @@ All files exist; fonts load; every page and link works in local preview; the 3 p
 
 ## KC entity cards (from #055)
 - Hero images: /assets/images/kc/hero/desktop/<slug>.<ext> and /assets/images/kc/hero/mobile/<slug>.<ext>.
+- All KC hero image layers use transparent backgrounds; do not show the gray module placeholder behind them.
 - Figma exports (local only, git-ignored, never commit, never copy into the site): /_kc-source/figma/... ; index = /_kc-source/manifest.md.
 - Entity cards assemble existing KC heroes and modules (kc-components.css, boards/kc-*.html). Never rebuild a component that exists.
 - Public-safe: never put real people, brands, team names or company names from the Figma exports into the site; use the dummy names each handoff gives.

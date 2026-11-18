@@ -1470,3 +1470,56 @@
 .kc-country-desktop .kc-miscellaneous-timeline__year { color:var(--kc-accent); }
 .kc-country-desktop .kc-miscellaneous-timeline__quote { font-weight:400; }
 .kc-country-desktop .kc-miscellaneous-timeline__entry:nth-child(n+2) .kc-miscellaneous-timeline__quote { font-weight:700; }
+
+/* KC hero image layers stay transparent; module placeholders remain gray. */
+.kc-hero-img,
+.kc-mobile-designer__image-fill { background:transparent; }
+
+/* ===== #058 Country mobile + hero tabs ===== */
+.kc-country-mobile-frame { height:auto; min-height:1849px; padding-bottom:109px; }
+.kc-country-mobile { position:relative; top:auto; left:auto; width:360px; margin:280px 0 0 403px; }
+.kc-country-mobile .kc-mobile-hero-tabs {
+  width:344px;
+  border-radius:100px 0 0 100px;
+}
+.kc-country-mobile .kc-mobile-hero-tabs-container { width:max-content; }
+.kc-country-mobile .kc-mobile-hero-tab {
+  width:auto;
+  background:var(--kc-accent-soft);
+  color:var(--kc-accent);
+}
+.kc-country-mobile .kc-mobile-hero-tab:first-child { width:auto; }
+.kc-country-mobile .kc-mobile-hero-tab--selected { background:var(--kc-accent); color:var(--kc-white); }
+.kc-country-mobile .kc-mobile-hero-tab:not(.kc-mobile-hero-tab--selected):hover { background:var(--kc-accent-soft); filter:brightness(.96); }
+.kc-country-mobile .kc-mobile-hero-tab:not(.kc-mobile-hero-tab--selected):active { background:var(--kc-accent-soft); filter:brightness(.92); }
+.kc-country-mobile .kc-mobile-hero-tab--selected:hover { background:var(--kc-accent); filter:brightness(.96); }
+.kc-country-mobile .kc-mobile-hero-tab--selected:active { background:var(--kc-accent); filter:brightness(.92); }
+.kc-country-mobile .kc-mobile-hero-text { width:344px; }
+.kc-country-mobile .kc-mobile-hero-text p { width:328px; }
+.kc-country-mobile .kc-mobile-hero-website__globe { background-color:var(--kc-accent); }
+.kc-country-mobile .kc-mobile-image-list-carousel { height:152px; overflow:hidden; }
+.kc-country-mobile .kc-country-carousel__previous { position:absolute; z-index:2; top:60px; left:8px; }
+.kc-country-mobile .kc-country-carousel__next { position:absolute; z-index:2; top:60px; right:8px; }
+.kc-country-mobile .kc-mobile-text-list-top-fact--2 { height:100px; padding:0 16px; }
+.kc-country-mobile > .kc-mobile-image-list-places-to-visit {
+  height:180px;
+  background:var(--kc-accent-soft);
+}
+.kc-country-mobile .kc-mobile-image-list-places-to-visit .kc-module-title h3 { color:var(--kc-black); }
+.kc-country-mobile .kc-country-top-fact__sub-label--uppercase { font-size:13px; line-height:20px; text-transform:uppercase; }
+.kc-country-mobile .kc-mobile-miscellaneous-timeline__list { height:auto; }
+.kc-country-mobile .kc-mobile-miscellaneous-timeline__entry { height:auto; align-items:stretch; }
+.kc-country-mobile .kc-mobile-miscellaneous-timeline__rail { height:auto; min-height:28px; }
+.kc-country-mobile .kc-mobile-miscellaneous-timeline__rail::before { height:calc(100% - 1px); background:var(--kc-accent); }
+.kc-country-mobile .kc-mobile-miscellaneous-timeline__rail::after { border-color:var(--kc-accent); }
+.kc-country-mobile .kc-mobile-miscellaneous-timeline__content { height:auto; }
+.kc-country-mobile .kc-mobile-miscellaneous-timeline__year { color:var(--kc-accent); }
+.kc-country-mobile .kc-mobile-miscellaneous-timeline__quote { font-weight:400; }
+.kc-country-mobile .kc-mobile-miscellaneous-timeline__entry:nth-child(n+2) .kc-mobile-miscellaneous-timeline__quote { font-weight:700; }
+.kc-country-mobile > .kc-card-more .kc-module--mobile { margin-top:-1px; }
+.kc-country-mobile .kc-module--mobile { border-radius:0; }
+.kc-country-mobile .kc-module--mobile[hidden] { display:none !important; }
+.kc-country-mobile .kc-module--card-last { border-radius:0 0 6px 6px; }
+.kc-country-mobile > .kc-mobile-designer--card-last .kc-mobile-hero-text-list { border-radius:0 0 6px 6px; }
+.kc-country-mobile > .kc-mobile-expansion-see-more { margin-top:-1px; }
+.kc-country-mobile .kc-mobile-expansion-see-more[hidden] { display:none; }
