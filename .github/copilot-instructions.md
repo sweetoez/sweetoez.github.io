@@ -29,3 +29,10 @@ All files exist; fonts load; every page and link works in local preview; the 3 p
 - Figma exports (local only, git-ignored, never commit, never copy into the site): /_kc-source/figma/... ; index = /_kc-source/manifest.md.
 - Entity cards assemble existing KC heroes and modules (kc-components.css, boards/kc-*.html). Never rebuild a component that exists.
 - Public-safe: never put real people, brands, team names or company names from the Figma exports into the site; use the dummy names each handoff gives.
+
+## Repo + publishing (from #056)
+- Branch main, published by GitHub Pages from main / (root).
+- Finish every handoff with one commit: git add -A && git commit -m "<area> #NNN <short summary>". Justin uploads it with Sync Changes in VS Code.
+- Never commit /_kc-source/. Never run git init or recreate .git.
+- Paths are case-sensitive on GitHub Pages: keep file names lowercase-kebab and match them exactly.
+- .nojekyll and 404.html stay at the root. Add a CNAME file only when Justin says the custom domain is ready.

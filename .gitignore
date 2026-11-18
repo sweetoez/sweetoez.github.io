@@ -1,1 +1,10 @@
 /_kc-source/
+.DS_Store
+._*
+.vscode/*
+!.vscode/settings.json
+*.swp
+node_modules/
+*.log
+.env
+.env.*
