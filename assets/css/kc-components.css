@@ -134,7 +134,8 @@
 .kc-image-list-played-by__actor { display:flex; width:206px; height:60px; align-items:center; gap:12px; }
 .kc-image-list-played-by__actor .kc-img { width:60px; height:60px; border-radius:50%; }
 /* Image List / Carousel */
-.kc-image-list-carousel { height:132px; flex-direction:row; align-items:flex-start; gap:8px; overflow:hidden; padding:16px 0 16px 20px; }
+.kc-image-list-carousel { height:132px; flex-direction:row; align-items:flex-start; gap:8px; overflow-x:auto; overflow-y:hidden; padding:16px 0 16px 20px; scrollbar-width:none; }
+.kc-image-list-carousel::-webkit-scrollbar { display:none; }
 .kc-image-list-carousel .kc-img { height:100px; border:1px solid var(--kc-gray-5); border-radius:6px; }
 .kc-image-list-carousel .kc-img:nth-child(1) { width:103px; }
 .kc-image-list-carousel .kc-img:nth-child(2) { width:90px; }
@@ -467,8 +468,8 @@
 .kc-mobile-image-list-watch-links__item .kc-img { width:32px; height:32px; border-radius:2px; }
 .kc-mobile-image-list-watch-links__text { display:flex; width:99px; min-width:0; flex:1; flex-direction:column; }
 .kc-mobile-image-list-watch-links__sub { color:var(--kc-gray-1); font-size:11px; line-height:13px; letter-spacing:normal; }
-.kc-mobile-image-list-carousel { flex-direction:row; align-items:flex-start; gap:8px; overflow:hidden; padding:16px 0 16px 16px; }
-.kc-mobile-image-list-carousel .kc-scroll-row { width:calc(100% - 1px); gap:8px; }
+.kc-mobile-image-list-carousel { box-sizing:border-box; flex-direction:row; align-items:flex-start; gap:8px; overflow:hidden; padding:16px 0; border:1px solid var(--kc-gray-4); box-shadow:none; }
+.kc-mobile-image-list-carousel .kc-scroll-row { width:100%; margin:0; padding:0 0 0 16px; gap:8px; }
 .kc-mobile-image-list-carousel .kc-img { height:120px; border:1px solid var(--kc-gray-5); border-radius:6px; }
 .kc-mobile-image-list-carousel .kc-img:nth-child(1) { width:132px; }
 .kc-mobile-image-list-carousel .kc-img:nth-child(2) { width:119px; }
@@ -1191,11 +1192,12 @@
 .kc-mobile-single-image--website .kc-mobile-hero-text-list { height:194px; }
 .kc-mobile-hero-tabs {
   position:relative;
-  width:343px;
+  width:calc(100% + 16px);
   height:32px;
   flex:none;
   margin-top:-1px;
-  margin-left:-1px;
+  margin-left:-16px;
+  padding-left:16px;
   overflow-x:auto;
   overflow-y:hidden;
   scrollbar-width:none;
@@ -1204,7 +1206,7 @@
 .kc-mobile-hero-tabs-container {
   position:absolute;
   top:0;
-  left:0;
+  left:16px;
   display:flex;
   width:619px;
   height:32px;
@@ -1487,7 +1489,6 @@
 .kc-country-mobile-frame { height:auto; min-height:1849px; padding-bottom:109px; }
 .kc-country-mobile { position:relative; top:auto; left:auto; width:360px; margin:280px 0 0 403px; }
 .kc-country-mobile .kc-mobile-hero-tabs {
-  width:344px;
   border-radius:100px 0 0 100px;
 }
 .kc-country-mobile .kc-mobile-hero-tabs-container { width:max-content; }

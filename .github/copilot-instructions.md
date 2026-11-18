@@ -35,6 +35,7 @@ All files exist; fonts load; every page and link works in local preview; the 3 p
 - Center the logo row on the image or band bottom edge; the hero body starts at that same edge (mobile Designer 212/196/184, Single Image 150/134, desktop Designer 280/264/240).
 - The body box is the only bordered hero element (1px #DDD). The image matches its width, and every card seam is one 1px line.
 - Mobile Carousel padding is 16px 0 16px 16px; images bleed to the inner right border.
+- Scrolling rows (#060): the scroll viewport spans border to border. The start inset (16px) is padding inside the scroller, plus scroll-padding-left if snapping. No right padding. Content must never clip before the card border on either side.
 - Social circles use `/assets/images/kc/brands/<slug>.svg` in the Figma export's order; do not use monograms.
 - Every new entity card uses shared classes and does not override these layout rules.
 
