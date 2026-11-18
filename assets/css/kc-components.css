@@ -1586,3 +1586,55 @@
 .kc-animal-desktop .kc-image-list-interesting-facts--3-image .kc-image-list-interesting-facts__row:nth-child(3) .kc-img { width:112px; height:112px; }
 .kc-animal-desktop .kc-miscellaneous-poll-trivia__question { color:var(--kc-accent); }
 .kc-animal-desktop .kc-modules-panel .kc-btn-outline-icon svg { color:var(--kc-gray-1); }
+
+/* ===== #062 Animal mobile ===== */
+.kc-animal-mobile-frame { height:auto; min-height:1849px; padding-bottom:109px; }
+.kc-animal-mobile { position:relative; top:auto; left:auto; width:360px; margin:280px 0 0 403px; }
+.kc-animal-mobile .kc-mobile-hero-tabs { border-radius:100px 0 0 100px; }
+.kc-animal-mobile .kc-mobile-hero-tabs-container { width:max-content; }
+.kc-animal-mobile .kc-mobile-hero-tab {
+  width:auto;
+  background:var(--kc-accent-soft);
+  color:var(--kc-accent);
+}
+.kc-animal-mobile .kc-mobile-hero-tab:first-child { width:auto; }
+.kc-animal-mobile .kc-mobile-hero-tab--selected { background:var(--kc-accent); color:var(--kc-white); }
+.kc-animal-mobile .kc-mobile-hero-tab:not(.kc-mobile-hero-tab--selected):hover { background:var(--kc-accent-soft); filter:brightness(.96); }
+.kc-animal-mobile .kc-mobile-hero-tab:not(.kc-mobile-hero-tab--selected):active { background:var(--kc-accent-soft); filter:brightness(.92); }
+.kc-animal-mobile .kc-mobile-hero-tab--selected:hover { background:var(--kc-accent); filter:brightness(.96); }
+.kc-animal-mobile .kc-mobile-hero-tab--selected:active { background:var(--kc-accent); filter:brightness(.92); }
+.kc-animal-mobile .kc-mobile-designer__top-actions svg { display:block; width:12px; height:12px; flex:none; color:var(--kc-white); }
+.kc-animal-mobile .kc-mobile-designer__social { visibility:visible; }
+.kc-animal-mobile .kc-mobile-image-list-carousel { height:152px; overflow:hidden; }
+.kc-animal-mobile .kc-mobile-image-list-carousel .kc-scroll-row { width:100%; margin:0; padding:0 0 0 16px; }
+.kc-animal-mobile .kc-mobile-text-list-top-fact--2 { height:100px; padding:0 16px; }
+.kc-animal-mobile .kc-animal-mobile__facts-intro { height:251px; }
+.kc-animal-mobile .kc-animal-mobile__facts-ending { height:204px; }
+.kc-animal-mobile .kc-animal-mobile__facts-intro .kc-mobile-image-list-interesting-facts__text,
+.kc-animal-mobile .kc-animal-mobile__facts-ending .kc-mobile-image-list-interesting-facts__text { gap:16px; }
+.kc-animal-mobile .kc-animal-mobile__facts-intro .kc-mobile-image-list-interesting-facts__text p:first-child,
+.kc-animal-mobile .kc-animal-mobile__facts-ending .kc-mobile-image-list-interesting-facts__text p:first-child {
+  width:209px;
+  height:98px;
+}
+.kc-animal-mobile .kc-animal-mobile__facts-intro .kc-mobile-image-list-interesting-facts__text p:last-child { width:319px; height:88px; }
+.kc-animal-mobile .kc-animal-mobile__facts-ending .kc-mobile-image-list-interesting-facts__text p:last-child { width:319px; height:41px; }
+.kc-animal-mobile .kc-mobile-videos-landscape { height:313px; }
+.kc-animal-mobile .kc-mobile-videos-landscape__row {
+  width:360px;
+  margin-left:-16px;
+  padding:0 0 0 16px;
+}
+.kc-animal-mobile .kc-mobile-video__play svg { width:24px; height:24px; color:var(--kc-white); }
+.kc-animal-mobile .kc-mobile-videos-landscape__next svg { display:block; width:16px; height:16px; }
+.kc-animal-mobile .kc-mobile-miscellaneous-poll-trivia { height:198px; }
+.kc-animal-mobile .kc-mobile-expansion-see-more__circle { background:var(--kc-accent); color:var(--kc-white); }
+.kc-animal-mobile .kc-mobile-expansion-see-more__circle svg { position:absolute; top:13px; left:12px; display:block; width:16px; height:16px; }
+.kc-animal-mobile .kc-modules-panel .kc-btn-outline-icon svg { display:block; width:16px; height:16px; color:var(--kc-gray-1); }
+.kc-animal-mobile > .kc-card-more .kc-module--mobile { margin-top:-1px; }
+.kc-animal-mobile .kc-module--mobile { border-radius:0; }
+.kc-animal-mobile .kc-module--mobile[hidden] { display:none !important; }
+.kc-animal-mobile .kc-module--card-last { border-radius:0 0 6px 6px; }
+.kc-animal-mobile > .kc-mobile-designer--card-last .kc-mobile-hero-text-list { border-radius:0 0 6px 6px; }
+.kc-animal-mobile > .kc-mobile-expansion-see-more { margin-top:-1px; }
+.kc-animal-mobile .kc-mobile-expansion-see-more[hidden] { display:none; }
