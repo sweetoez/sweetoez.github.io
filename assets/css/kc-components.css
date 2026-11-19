@@ -1756,3 +1756,70 @@
 .kc-actor-mobile > .kc-mobile-designer--card-last .kc-mobile-hero-text-list { border-radius:0 0 6px 6px; }
 .kc-actor-mobile > .kc-mobile-expansion-see-more { margin-top:-1px; }
 .kc-actor-mobile .kc-mobile-expansion-see-more[hidden] { display:none; }
+
+/* ===== #067 Artist desktop ===== */
+.kc-theme-green { --kc-accent:#34740A; --kc-accent-soft:#F7FAF5; }
+.kc-artist-desktop-frame { height:auto; min-height:1933px; }
+.kc-artist-desktop > .kc-hero-designer--top-to-bottom.kc-hero-designer--website { height:426px; z-index:1; }
+.kc-artist-desktop .kc-hero .kc-text-list-website { height:146px; }
+.kc-artist-desktop .kc-hero-body { height:54px; }
+.kc-artist-desktop .kc-hero-designer__social { z-index:2; visibility:visible; }
+.kc-artist-desktop .kc-hero-designer__actions svg { display:block; width:16px; height:16px; flex:none; color:var(--kc-white); }
+.kc-artist-desktop .kc-hero-website__globe { background-color:var(--kc-accent); }
+.kc-artist-desktop .kc-hero-website a { color:var(--kc-accent); }
+.kc-artist-desktop .kc-text-list-quick-facts__fact { width:auto; }
+.kc-artist-desktop .kc-text-list-quick-facts__fact:nth-child(1) { width:292px; }
+.kc-artist-desktop .kc-text-list-quick-facts__fact:nth-child(2) { width:206px; }
+.kc-artist-desktop .kc-text-list-quick-facts__fact:nth-child(3) { width:342px; }
+.kc-artist-desktop .kc-text-list-quick-facts__fact:nth-child(4) { width:294px; }
+.kc-artist-desktop .kc-text-list-quick-facts__fact:nth-child(1) dt { width:31px; }
+.kc-artist-desktop .kc-text-list-quick-facts__fact:nth-child(2) dt { width:43px; }
+.kc-artist-desktop .kc-text-list-quick-facts__fact:nth-child(3) dt { width:64px; }
+.kc-artist-desktop .kc-text-list-quick-facts__fact:nth-child(4) dt { width:50px; }
+.kc-artist-desktop .kc-text-list-quick-facts__fact:nth-child(1) dd { width:249px; }
+.kc-artist-desktop .kc-text-list-quick-facts__fact:nth-child(2) dd { width:151px; }
+.kc-artist-desktop .kc-text-list-quick-facts__fact:nth-child(3) dd { width:266px; color:var(--kc-accent); }
+.kc-artist-desktop .kc-text-list-quick-facts__fact:nth-child(4) dd { width:232px; color:var(--kc-accent); }
+.kc-artist-desktop .kc-miscellaneous-listen__service img { width:32px; height:32px; flex:none; object-fit:contain; }
+.kc-artist-desktop .kc-miscellaneous-quote__glyph { filter:none; opacity:1; color:var(--kc-accent-soft); }
+.kc-artist-desktop .kc-image-list-main--square { height:225px; background:var(--kc-accent-soft); }
+.kc-artist-desktop .kc-image-list-main--square .kc-image-list-main__tiles { height:155px; }
+.kc-artist-desktop .kc-image-list-main--rectangle { height:247px; }
+.kc-artist-desktop .kc-image-list-main--rectangle .kc-image-list-main__tiles { height:177px; }
+.kc-artist-desktop .kc-image-list-interesting-facts--2-image {
+  height:395px;
+  gap:16px;
+  padding:16px 10px 16px 20px;
+  background:var(--kc-accent-soft);
+}
+.kc-artist-desktop .kc-artist-fact-row--first { width:430px; height:149px; align-items:flex-start; }
+.kc-artist-desktop .kc-artist-fact-row--first > .kc-img { width:154px; height:149px; }
+.kc-artist-desktop .kc-artist-fact-row--first .kc-image-list-interesting-facts__text {
+  width:256px;
+  height:149px;
+  align-items:flex-start;
+  justify-content:flex-start;
+  gap:24px;
+  padding-top:12px;
+}
+.kc-artist-desktop .kc-artist-fact-row--first .kc-image-list-interesting-facts__text p { width:256px; height:112px; }
+.kc-artist-desktop .kc-artist-fact-row--first .kc-divider { width:256px; }
+.kc-artist-desktop .kc-image-list-interesting-facts--2-image > p {
+  width:432px;
+  height:58px;
+  align-items:center;
+  text-align:right;
+}
+.kc-artist-desktop .kc-artist-fact-row--second { width:438px; height:97px; align-items:flex-start; }
+.kc-artist-desktop .kc-artist-fact-row--second .kc-image-list-interesting-facts__text {
+  width:314px;
+  height:93px;
+  align-items:flex-start;
+  justify-content:flex-start;
+  gap:16px;
+}
+.kc-artist-desktop .kc-artist-fact-row--second .kc-divider { width:314px; }
+.kc-artist-desktop .kc-artist-fact-row--second .kc-image-list-interesting-facts__text p { width:314px; height:76px; }
+.kc-artist-desktop .kc-artist-fact-row--second > .kc-img { width:86px; height:104px; }
+.kc-artist-desktop .kc-modules-panel .kc-btn-outline-icon svg { display:block; width:16px; height:16px; color:var(--kc-gray-1); }
+.kc-artist-desktop .kc-module--card-last { border-radius:0 0 6px 6px; }
