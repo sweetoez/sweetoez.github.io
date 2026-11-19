@@ -1683,3 +1683,76 @@
 .kc-actor-desktop .kc-miscellaneous-listen__service img { width:32px; height:32px; flex:none; object-fit:contain; }
 .kc-actor-desktop .kc-modules-panel .kc-btn-outline-icon svg { display:block; width:16px; height:16px; color:var(--kc-gray-1); }
 .kc-actor-desktop .kc-module--card-last { border-radius:0 0 6px 6px; }
+
+/* ===== #070 Actor mobile ===== */
+.kc-actor-mobile-frame { height:auto; min-height:1849px; padding-bottom:109px; }
+.kc-actor-mobile { position:relative; top:auto; left:auto; width:360px; margin:280px 0 0 403px; }
+.kc-actor-mobile .kc-mobile-designer__entity { overflow:hidden; font-size:36px; line-height:40px; text-overflow:ellipsis; white-space:nowrap; }
+.kc-actor-mobile .kc-mobile-designer__social { visibility:visible; }
+.kc-actor-mobile .kc-mobile-designer__top-actions svg { display:block; width:12px; height:12px; flex:none; color:var(--kc-white); }
+.kc-actor-mobile .kc-mobile-hero-text-list { padding-top:16px; }
+.kc-actor-mobile .kc-mobile-hero-tabs { border-radius:100px 0 0 100px; }
+.kc-actor-mobile .kc-mobile-hero-tabs-container { width:max-content; }
+.kc-actor-mobile .kc-mobile-hero-tab {
+  width:auto;
+  background:var(--kc-accent-soft);
+  color:var(--kc-accent);
+}
+.kc-actor-mobile .kc-mobile-hero-tab:first-child { width:auto; }
+.kc-actor-mobile .kc-mobile-hero-tab--selected { background:var(--kc-accent); color:var(--kc-white); }
+.kc-actor-mobile .kc-mobile-hero-tab:not(.kc-mobile-hero-tab--selected):hover { background:var(--kc-accent-soft); filter:brightness(.96); }
+.kc-actor-mobile .kc-mobile-hero-tab:not(.kc-mobile-hero-tab--selected):active { background:var(--kc-accent-soft); filter:brightness(.92); }
+.kc-actor-mobile .kc-mobile-hero-tab--selected:hover { background:var(--kc-accent); filter:brightness(.96); }
+.kc-actor-mobile .kc-mobile-hero-tab--selected:active { background:var(--kc-accent); filter:brightness(.92); }
+.kc-actor-mobile .kc-mobile-image-list-carousel {
+  height:132px;
+  overflow:hidden;
+  padding:15px 0;
+  border:1px solid var(--kc-gray-4);
+  box-shadow:none;
+}
+.kc-actor-mobile .kc-mobile-image-list-carousel .kc-scroll-row { width:100%; margin:0; padding:0 0 0 15px; }
+.kc-actor-mobile .kc-mobile-image-list-carousel .kc-img { height:100px; border:1px solid var(--kc-gray-5); border-radius:6px; }
+.kc-actor-mobile .kc-mobile-image-list-carousel .kc-img:nth-child(1) { width:103px; }
+.kc-actor-mobile .kc-mobile-image-list-carousel .kc-img:nth-child(2) { width:90px; }
+.kc-actor-mobile .kc-mobile-image-list-carousel .kc-img:nth-child(3) { width:77px; }
+.kc-actor-mobile .kc-mobile-image-list-carousel .kc-img:nth-child(4) { width:130px; }
+.kc-actor-mobile .kc-mobile-image-list-carousel .kc-img:nth-child(5) { width:76px; }
+.kc-actor-mobile .kc-mobile-image-list-carousel .kc-scroll-row:focus-visible { outline:2px solid #272320; outline-offset:-2px; }
+.kc-actor-mobile .kc-actor-mobile-carousel__previous { position:absolute; z-index:2; top:50px; left:8px; }
+.kc-actor-mobile .kc-actor-mobile-carousel__next { position:absolute; z-index:2; top:50px; right:8px; }
+.kc-actor-mobile .kc-mobile-image-list-carousel .kc-btn-flipper:active { transform:scale(.98); }
+.kc-actor-mobile .kc-mobile-image-list-carousel .kc-btn-flipper:focus-visible { outline:2px solid #272320; outline-offset:2px; }
+.kc-actor-mobile .kc-mobile-text-list-quick-facts { height:186px; }
+.kc-actor-mobile .kc-mobile-text-list-quick-facts__fact:nth-child(1) > span:first-child { width:31px; }
+.kc-actor-mobile .kc-mobile-text-list-quick-facts__fact:nth-child(3) > span:first-child { width:64px; }
+.kc-actor-mobile .kc-mobile-text-list-quick-facts__fact:nth-child(5) > span:first-child { width:48px; }
+.kc-actor-mobile .kc-mobile-text-list-quick-facts__fact:nth-child(7) > span:first-child { width:72px; }
+.kc-actor-mobile .kc-actor-mobile__fact--highlight span:last-child { color:var(--kc-accent); }
+.kc-actor-mobile .kc-mobile-miscellaneous-listen { height:149px; }
+.kc-actor-mobile .kc-mobile-miscellaneous-listen__service img { display:block; width:32px; height:32px; flex:none; object-fit:contain; }
+.kc-actor-mobile .kc-mobile-image-list-main { height:227px; }
+.kc-actor-mobile .kc-mobile-image-list-main .kc-scroll-row { width:calc(100% + 16px); margin-right:-16px; padding:0; }
+.kc-actor-mobile .kc-mobile-image-title-sub-title { height:161px; border-radius:6px; }
+.kc-actor-mobile .kc-mobile-image-list-interesting-facts--2-image {
+  height:321px;
+  background:var(--kc-accent-soft);
+}
+.kc-actor-mobile .kc-mobile-image-list-interesting-facts__row:first-child { height:176px; }
+.kc-actor-mobile .kc-mobile-image-list-interesting-facts__row:last-child { height:97px; }
+.kc-actor-mobile .kc-mobile-image-list-interesting-facts__text { gap:16px; }
+.kc-actor-mobile .kc-mobile-image-list-interesting-facts__text p { margin:0; }
+.kc-actor-mobile .kc-mobile-image-list-interesting-facts__row:first-child .kc-mobile-image-list-interesting-facts__text { width:203px; flex:none; }
+.kc-actor-mobile .kc-mobile-image-list-interesting-facts__row:last-child .kc-mobile-image-list-interesting-facts__text { width:201px; flex:none; text-align:right; }
+.kc-actor-mobile .kc-mobile-expansion-see-more__circle { background:var(--kc-accent); color:var(--kc-white); }
+.kc-actor-mobile .kc-mobile-expansion-see-more__circle svg { position:absolute; top:13px; left:12px; display:block; width:16px; height:16px; }
+.kc-actor-mobile .kc-mobile-expansion-see-more:active { transform:scale(.98); }
+.kc-actor-mobile .kc-mobile-expansion-see-more:focus-visible { outline:2px solid #272320; outline-offset:2px; }
+.kc-actor-mobile .kc-modules-panel .kc-btn-outline-icon svg { display:block; width:16px; height:16px; color:var(--kc-gray-1); }
+.kc-actor-mobile .kc-module--mobile { border-radius:0; }
+.kc-actor-mobile .kc-module--mobile[hidden] { display:none !important; }
+.kc-actor-mobile > .kc-card-more .kc-module--mobile { margin-top:-1px; }
+.kc-actor-mobile .kc-module--card-last { border-radius:0 0 6px 6px; }
+.kc-actor-mobile > .kc-mobile-designer--card-last .kc-mobile-hero-text-list { border-radius:0 0 6px 6px; }
+.kc-actor-mobile > .kc-mobile-expansion-see-more { margin-top:-1px; }
+.kc-actor-mobile .kc-mobile-expansion-see-more[hidden] { display:none; }
