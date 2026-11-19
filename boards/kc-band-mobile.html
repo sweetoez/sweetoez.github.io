@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Band Knowledge Card — Mobile</title>
+  <link rel="stylesheet" href="../assets/css/msn-components.css">
+  <link rel="stylesheet" href="../assets/css/kc-components.css">
+  <style>
+    * { box-sizing:border-box; }
+    body { min-width:1344px; margin:0; padding:32px; background:var(--kc-gray-5); color:var(--kc-gray-1); font-family:var(--kc-font); }
+    main { width:max-content; }
+    .kc-card-board-item { width:max-content; }
+    .kc-card-board-label { margin:0 0 8px; color:var(--kc-gray-2); font-size:12px; line-height:16px; }
+    .kc-icon-defs { position:absolute; width:0; height:0; overflow:hidden; }
+
+    .kc-band-mobile-frame { height:auto; min-height:1813px; }
+    .kc-band-mobile { --kc-accent:#11428C; --kc-accent-soft:#F5F7FA; position:relative; top:auto; left:auto; width:360px; margin:280px 0 0 403px; }
+    .kc-band-mobile .kc-mobile-designer { height:auto; }
+    .kc-band-mobile .kc-mobile-designer__entity { font-size:32px; line-height:32px; }
+    .kc-band-mobile .kc-mobile-designer__top-actions svg { display:block; width:12px; height:12px; flex:none; color:var(--kc-white); }
+    .kc-band-mobile .kc-mobile-designer__social { visibility:visible; }
+    .kc-band-mobile .kc-mobile-hero-text-list { height:194px; padding-top:32px; padding-bottom:0; }
+    .kc-band-mobile .kc-mobile-hero-tabs { border-radius:100px 0 0 100px; }
+    .kc-band-mobile .kc-mobile-hero-tabs-container { width:max-content; }
+    .kc-band-mobile .kc-mobile-hero-tab { background:var(--kc-accent-soft); color:var(--kc-accent); }
+    .kc-band-mobile .kc-mobile-hero-tab:nth-child(1) { width:89px; }
+    .kc-band-mobile .kc-mobile-hero-tab:nth-child(2) { width:99px; }
+    .kc-band-mobile .kc-mobile-hero-tab:nth-child(3) { width:80px; }
+    .kc-band-mobile .kc-mobile-hero-tab:nth-child(4) { width:92px; }
+    .kc-band-mobile .kc-mobile-hero-tab:nth-child(5) { width:108px; }
+    .kc-band-mobile .kc-mobile-hero-tab--selected { background:var(--kc-accent); color:var(--kc-white); }
+    .kc-band-mobile .kc-mobile-hero-tab:not(.kc-mobile-hero-tab--selected):hover { filter:brightness(.96); }
+    .kc-band-mobile .kc-mobile-hero-tab:active { filter:brightness(.92); transform:scale(.98); }
+    .kc-band-mobile .kc-mobile-hero-tab:focus-visible { outline:2px solid #272320; outline-offset:2px; }
+    .kc-band-mobile .kc-band-mobile__tab-label { display:block; height:14px; border-radius:4px; background:var(--kc-placeholder); }
+    .kc-band-mobile .kc-mobile-hero-text { width:344px; height:auto; }
+    .kc-band-mobile .kc-mobile-designer--website .kc-mobile-hero-text { gap:16px; }
+    .kc-band-mobile .kc-mobile-hero-text p { width:319px; height:auto; overflow:visible; display:block; }
+    .kc-band-mobile .kc-mobile-hero-website__globe { background-color:var(--kc-accent); }
+    .kc-band-mobile .kc-mobile-hero-website a { color:var(--kc-accent); }
+
+    .kc-band-mobile .kc-module--mobile { border-radius:0; }
+    .kc-band-mobile .kc-module--mobile[hidden] { display:none !important; }
+    .kc-band-mobile > .kc-module--mobile + .kc-module--mobile,
+    .kc-band-mobile > .kc-mobile-image-list-carousel,
+    .kc-band-mobile > .kc-card-more .kc-module--mobile,
+    .kc-band-mobile > .kc-mobile-expansion-see-more { margin-top:-1px; }
+    .kc-band-mobile .kc-module--card-last { border-radius:0 0 6px 6px; }
+
+    .kc-band-mobile .kc-mobile-image-list-carousel { height:152px; overflow:hidden; }
+    .kc-band-mobile .kc-band-mobile-carousel__previous { position:absolute; z-index:2; top:60px; left:8px; }
+    .kc-band-mobile .kc-band-mobile-carousel__next { position:absolute; z-index:2; top:60px; right:8px; }
+    .kc-band-mobile .kc-mobile-image-list-carousel .kc-scroll-row:focus-visible,
+    .kc-band-mobile .kc-mobile-videos-landscape__row:focus-visible { outline:2px solid #272320; outline-offset:-2px; }
+    .kc-band-mobile .kc-btn-flipper:active { transform:scale(.98); }
+    .kc-band-mobile .kc-btn-flipper:focus-visible { outline:2px solid #272320; outline-offset:2px; }
+
+    .kc-band-mobile .kc-mobile-text-list-quick-facts { height:auto; min-height:0; }
+    .kc-band-mobile .kc-mobile-text-list-quick-facts__fact:nth-child(3) > span:last-child { color:var(--kc-accent); }
+
+    .kc-band-mobile .kc-mobile-miscellaneous-listen { height:149px; }
+    .kc-band-mobile .kc-mobile-miscellaneous-listen__service img { display:block; width:32px; height:32px; flex:none; object-fit:contain; }
+
+    .kc-band-mobile .kc-mobile-videos-landscape { height:313px; overflow:hidden; }
+    .kc-band-mobile .kc-mobile-videos-landscape .kc-module-title h3 { text-transform:none; }
+    .kc-band-mobile .kc-mobile-videos-landscape__row { width:360px; margin-left:-16px; padding:0 0 0 16px; }
+    .kc-band-mobile .kc-mobile-videos-landscape__previous { position:absolute; z-index:2; top:141px; left:8px; }
+    .kc-band-mobile .kc-mobile-videos-landscape__next { position:absolute; z-index:2; top:141px; right:8px; left:auto; }
+    .kc-band-mobile .kc-mobile-video__play svg { width:24px; height:24px; color:var(--kc-white); }
+    .kc-band-mobile .kc-mobile-video__meta p:last-child { color:#006621; }
+
+    .kc-band-mobile .kc-mobile-text-list-attribution { height:79px; }
+    .kc-band-mobile > .kc-mobile-expansion-see-more .kc-mobile-expansion-see-more__circle { background:var(--kc-accent); color:var(--kc-white); }
+    .kc-band-mobile .kc-mobile-expansion-see-more__circle svg { position:absolute; top:13px; left:12px; display:block; width:16px; height:16px; }
+    .kc-band-mobile .kc-mobile-expansion-see-more:active { transform:scale(.98); }
+    .kc-band-mobile .kc-mobile-expansion-see-more:focus-visible { outline:2px solid #272320; outline-offset:2px; }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="kc-card-board-item">
+      <h1 class="kc-card-board-label">Band — Mobile</h1>
+      <div class="kc-full-knowledge-card kc-band-mobile-frame" data-kc="Full Knowledge Card">
+        <article class="kc-card-stack kc-mobile-designer-card kc-band-mobile" data-kc="Segment / Band" aria-label="Red Hot Chili Peppers knowledge card">
+          <article class="kc-mobile-designer kc-mobile-designer--top-to-bottom kc-mobile-designer--website" data-kc="Mobile / Designer / Gradient=Top to Bottom, Website=Yes">
+            <div class="kc-mobile-designer__header">
+              <div class="kc-mobile-designer__image">
+                <span class="kc-img kc-mobile-designer__image-fill"><img src="../assets/images/kc/hero/mobile/band.png" alt="Red Hot Chili Peppers" width="360" height="212"></span>
+                <div class="kc-mobile-designer__gradient" aria-hidden="true"></div>
+              </div>
+              <div class="kc-mobile-designer__title">
+                <h2 class="kc-mobile-designer__entity">Red Hot Chili Peppers</h2>
+                <p class="kc-mobile-designer__category">American rock band</p>
+              </div>
+              <div class="kc-mobile-designer__top-actions">
+                <button class="kc-btn-on-image kc-hero-button kc-hero-button--small" type="button" aria-label="Share">
+                  <svg width="12" height="12" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><use href="#kc-band-icon-share"></use></svg>
+                </button>
+                <button class="kc-btn-on-image kc-hero-button kc-hero-button--small" type="button" aria-label="See all images">
+                  <svg width="12" height="12" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><use href="#kc-band-icon-images"></use></svg>
+                </button>
+              </div>
+              <ul class="kc-hero-social kc-mobile-designer__social" aria-label="Social profiles">
+                <li><span class="kc-hero-social__badge" role="img" aria-label="Instagram"><img src="../assets/images/kc/brands/instagram.svg" alt="" width="32" height="32"></span></li>
+                <li><span class="kc-hero-social__badge" role="img" aria-label="Twitter"><img src="../assets/images/kc/brands/twitter.svg" alt="" width="32" height="32"></span></li>
+                <li><span class="kc-hero-social__badge" role="img" aria-label="Facebook"><img src="../assets/images/kc/brands/facebook.svg" alt="" width="32" height="32"></span></li>
+                <li><span class="kc-hero-social__badge" role="img" aria-label="IMDb"><img src="../assets/images/kc/brands/imdb.svg" alt="" width="32" height="32"></span></li>
+                <li><span class="kc-hero-social__badge" role="img" aria-label="TikTok"><img src="../assets/images/kc/brands/tiktok.svg" alt="" width="32" height="32"></span></li>
+              </ul>
+            </div>
+            <section class="kc-module kc-module--mobile kc-mobile-hero-text-list">
+              <div class="kc-mobile-hero-tabs" data-kc="Tabs">
+                <div class="kc-mobile-hero-tabs-container" role="tablist" aria-label="Red Hot Chili Peppers information">
+                  <button class="kc-mobile-hero-tab kc-mobile-hero-tab--selected" type="button" role="tab" aria-selected="true" aria-label="Tab 1"><span class="kc-band-mobile__tab-label" style="width:57px"></span></button>
+                  <button class="kc-mobile-hero-tab" type="button" role="tab" aria-selected="false" aria-label="Tab 2"><span class="kc-band-mobile__tab-label" style="width:67px"></span></button>
+                  <button class="kc-mobile-hero-tab" type="button" role="tab" aria-selected="false" aria-label="Tab 3"><span class="kc-band-mobile__tab-label" style="width:48px"></span></button>
+                  <button class="kc-mobile-hero-tab" type="button" role="tab" aria-selected="false" aria-label="Tab 4"><span class="kc-band-mobile__tab-label" style="width:60px"></span></button>
+                  <button class="kc-mobile-hero-tab" type="button" role="tab" aria-selected="false" aria-label="Tab 5"><span class="kc-band-mobile__tab-label" style="width:76px"></span></button>
+                </div>
+              </div>
+              <div class="kc-mobile-hero-text">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad ...</p>
+                <div class="kc-mobile-hero-website"><span class="kc-mobile-hero-website__globe" aria-hidden="true"></span><a href="#">website</a></div>
+              </div>
+            </section>
+          </article>
+
+          <section class="kc-module kc-module--mobile kc-mobile-image-list-carousel" id="kc-band-mobile-carousel" data-kc="Mobile / Image List / Carousel" aria-label="Red Hot Chili Peppers photos">
+            <div class="kc-scroll-row" tabindex="0" aria-label="Red Hot Chili Peppers photos, use left and right arrow keys to scroll">
+              <span class="kc-img kc-img--cover" style="width:132px;height:120px;border-radius:6px"><img src="../assets/images/kc/modules/band/band-mobile-carousel-01.png" alt="Red Hot Chili Peppers photo 1" onerror="this.style.display='none'"></span>
+              <span class="kc-img kc-img--cover" style="width:119px;height:120px;border-radius:6px"><img src="../assets/images/kc/modules/band/band-mobile-carousel-02.png" alt="Red Hot Chili Peppers photo 2" onerror="this.style.display='none'"></span>
+              <span class="kc-img kc-img--crop-edge" style="width:106px;height:120px;border-radius:6px"><img src="../assets/images/kc/modules/band/band-mobile-carousel-03.png" alt="Red Hot Chili Peppers photo 3" onerror="this.style.display='none'"></span>
+              <span class="kc-img" style="width:159px;height:120px;border-radius:6px"></span>
+              <span class="kc-img" style="width:105px;height:120px;border-radius:6px"></span>
+            </div>
+            <button class="kc-btn-flipper kc-band-mobile-carousel__previous" type="button" aria-label="Previous carousel images" disabled><svg width="16" height="16" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><use href="#kc-band-icon-arrow-left"></use></svg></button>
+            <button class="kc-btn-flipper kc-band-mobile-carousel__next" type="button" aria-label="Next carousel images"><svg width="16" height="16" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><use href="#kc-band-icon-arrow-right"></use></svg></button>
+          </section>
+
+          <section class="kc-module kc-module--mobile kc-mobile-text-list-quick-facts kc-mobile-text-list-quick-facts--see-more" id="kc-band-mobile-facts" data-kc="Mobile / Text List / Quick Facts" data-kc-variant="See more=Yes" aria-label="Quick facts about Red Hot Chili Peppers">
+            <div class="kc-mobile-text-list-quick-facts__list" role="list">
+              <div class="kc-mobile-text-list-quick-facts__fact" role="listitem"><span class="kc-m-bold">Fact title</span><span class="kc-m-reg">Lorem ipsum · Dolor sit amet</span></div>
+              <span class="kc-mobile-text-list-quick-facts__line" role="presentation"></span>
+              <div class="kc-mobile-text-list-quick-facts__fact" role="listitem"><span class="kc-m-bold">Fact title</span><span class="kc-m-reg">Lorem ipsum · Dolor sit amet</span></div>
+              <span class="kc-mobile-text-list-quick-facts__line" role="presentation"></span>
+              <div class="kc-mobile-text-list-quick-facts__fact" role="listitem"><span class="kc-m-bold">Fact title</span><span class="kc-m-reg">Lorem ipsum · Dolor sit amet</span></div>
+              <span class="kc-mobile-text-list-quick-facts__line" role="presentation"></span>
+              <div class="kc-mobile-text-list-quick-facts__fact" role="listitem"><span class="kc-m-bold">Fact title</span><span class="kc-m-reg">Lorem ipsum · Dolor sit amet</span></div>
+              <span class="kc-mobile-text-list-quick-facts__line" role="presentation"></span>
+            </div>
+            <div class="kc-mobile-text-list-quick-facts__more">
+              <button class="kc-btn-reset kc-m-text-button" type="button">See more</button>
+              <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true" focusable="false"><use href="#kc-band-icon-chevron-down"></use></svg>
+            </div>
+          </section>
+
+          <section class="kc-module kc-module--mobile kc-mobile-miscellaneous-listen" id="kc-band-mobile-listen" data-kc="Mobile / Miscellaneous / Listen" aria-label="Listen to Red Hot Chili Peppers">
+            <div class="kc-module-title"><h3>Listen</h3></div>
+            <div class="kc-mobile-miscellaneous-listen__row">
+              <div class="kc-mobile-miscellaneous-listen__items">
+                <a class="kc-mobile-miscellaneous-listen__service" href="https://open.spotify.com" aria-label="Spotify"><img src="../assets/images/kc/brands/spotify.svg" alt="" width="32" height="32"><span class="kc-m-bold">Spotify</span></a>
+                <a class="kc-mobile-miscellaneous-listen__service" href="https://www.iheart.com" aria-label="iHeart Radio"><img src="../assets/images/kc/brands/iheart-radio.svg" alt="" width="32" height="32"><span class="kc-m-bold">iHeart Radio</span></a>
+              </div>
+              <div class="kc-mobile-miscellaneous-listen__items">
+                <a class="kc-mobile-miscellaneous-listen__service" href="https://www.deezer.com" aria-label="Deezer"><img src="../assets/images/kc/brands/deezer.svg" alt="" width="32" height="32"><span class="kc-m-bold">Deezer</span></a>
+                <a class="kc-mobile-miscellaneous-listen__service" href="https://tunein.com" aria-label="TuneIn"><img src="../assets/images/kc/brands/tunein.svg" alt="" width="32" height="32"><span class="kc-m-bold">TuneIn</span></a>
+              </div>
+            </div>
+          </section>
+
+          <section class="kc-module kc-module--mobile kc-mobile-videos-landscape" id="kc-band-mobile-videos" data-kc="Mobile / Videos / Landscape" aria-label="Videos">
+            <div class="kc-module-title"><h3>Videos</h3></div>
+            <div class="kc-scroll-row kc-mobile-videos-landscape__row" tabindex="0" aria-label="Videos, use left and right arrow keys to scroll">
+              <article class="kc-mobile-video">
+                <div class="kc-mobile-video__media"><span class="kc-img kc-img--cover"><img src="../assets/images/kc/modules/band/band-mobile-video-01.png" alt="Video thumbnail of a Red Hot Chili Peppers performance" onerror="this.style.display='none'"></span><span class="kc-mobile-video__timestamp">1:23</span><button class="kc-mobile-video__play kc-btn-reset" type="button" aria-label="Play video"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#kc-band-icon-play"></use></svg></button></div>
+                <div class="kc-mobile-video__text"><p class="kc-mobile-video__title">Red</p><div class="kc-mobile-video__meta"><p>Views · Date</p><p>YouTube</p></div></div>
+              </article>
+              <article class="kc-mobile-video">
+                <div class="kc-mobile-video__media"><span class="kc-img kc-img--crop-edge"><img src="../assets/images/kc/modules/band/band-mobile-video-02.png" alt="Video thumbnail of a Red Hot Chili Peppers video" onerror="this.style.display='none'"></span><span class="kc-mobile-video__timestamp">1:23</span><button class="kc-mobile-video__play kc-btn-reset" type="button" aria-label="Play video"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#kc-band-icon-play"></use></svg></button></div>
+                <div class="kc-mobile-video__text"><p class="kc-mobile-video__title">Video Title Two Lines</p><div class="kc-mobile-video__meta"><p>Views · Date</p><p>YouTube</p></div></div>
+              </article>
+              <article class="kc-mobile-video">
+                <div class="kc-mobile-video__media"><span class="kc-img"></span><span class="kc-mobile-video__timestamp">1:23</span><button class="kc-mobile-video__play kc-btn-reset" type="button" aria-label="Play video"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#kc-band-icon-play"></use></svg></button></div>
+                <div class="kc-mobile-video__text"><p class="kc-mobile-video__title">Video Title Two Lines</p><div class="kc-mobile-video__meta"><p>Views · Date</p><p>YouTube</p></div></div>
+              </article>
+            </div>
+            <button class="kc-btn-flipper kc-mobile-videos-landscape__previous" type="button" aria-label="Previous videos" disabled><svg width="16" height="16" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><use href="#kc-band-icon-arrow-left"></use></svg></button>
+            <button class="kc-btn-flipper kc-mobile-videos-landscape__next" type="button" aria-label="Next videos"><svg width="16" height="16" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><use href="#kc-band-icon-arrow-right"></use></svg></button>
+          </section>
+
+          <div class="kc-card-more" id="kc-band-mobile-more" hidden>
+            <section class="kc-module kc-module--mobile kc-mobile-text-list-attribution" id="kc-band-mobile-attribution" data-kc="Mobile / Text List / Attribution" aria-label="Attribution">
+              <p>Images: Getty Images. Data: en.wikipedia.org · anothersite.com · coolfacts.com Hero image: Holy town Varanasi and the river Ganges</p>
+            </section>
+          </div>
+
+          <button class="kc-mobile-expansion-see-more" type="button" aria-expanded="false" aria-controls="kc-band-mobile-more">
+            <span class="kc-mobile-expansion-see-more__line" aria-hidden="true"></span>
+            <span class="kc-mobile-expansion-see-more__circle" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 12 12" aria-hidden="true" focusable="false"><use href="#kc-band-icon-chevron-down"></use></svg></span>
+            <span class="kc-mobile-expansion-see-more__label">See more</span>
+          </button>
+        </article>
+        <svg class="kc-icon-defs" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+          <symbol id="kc-band-icon-share" viewBox="0 0 16 16"><path d="M7.5 2C7.77614 2 8 2.22386 8 2.5C7.99992 2.77608 7.77609 3 7.5 3H4.5C3.67157 3 3 3.67157 3 4.5V11.5C3.00008 12.3284 3.67162 13 4.5 13H11.5C12.3284 13 12.9999 12.3284 13 11.5V9.5C13 9.22386 13.2239 9 13.5 9C13.7761 9 14 9.22386 14 9.5V11.5C13.9999 12.8806 12.8807 14 11.5 14H4.5C3.11934 14 2.00008 12.8806 2 11.5V4.5C2 3.11929 3.11929 2 4.5 2H7.5ZM10.7803 1.05078C10.9518 0.966903 11.1559 0.988317 11.3066 1.10547L15.8066 4.60547C15.9284 4.7002 16 4.84573 16 5C16 5.15424 15.9284 5.29983 15.8066 5.39453L11.3066 8.89453C11.1559 9.01162 10.9517 9.03305 10.7803 8.94922C10.6088 8.86533 10.5001 8.6909 10.5 8.5V7.02539C8.26802 7.25505 6.87621 8.99835 6.10352 10.4238L5.94727 10.7236C5.84354 10.931 5.6104 11.0396 5.38477 10.9863C5.15934 10.9329 5.00007 10.7317 5 10.5C5 8.42356 5.51823 6.55894 6.53711 5.20019C7.47545 3.94908 8.82277 3.15337 10.5 3.02148V1.5C10.5 1.30906 10.6088 1.13469 10.7803 1.05078ZM11.5 3.5C11.4999 3.77608 11.2761 4 11 4C9.41093 4 8.18302 4.67315 7.33789 5.7998C6.80109 6.51557 6.41018 7.42583 6.19434 8.47949C7.22177 7.19865 8.77537 6 11 6C11.2761 6 11.5 6.22386 11.5 6.5V7.47754L14.6855 5L11.5 2.52148V3.5Z" fill="currentColor"/></symbol>
+          <symbol id="kc-band-icon-images" viewBox="0 0 16 16"><path d="M10 5C10 5.55228 9.55228 6 9 6C8.44772 6 8 5.55228 8 5C8 4.44772 8.44772 4 9 4C9.55228 4 10 4.44772 10 5ZM4.5 2C3.11929 2 2 3.11929 2 4.5V9.5C2 10.8807 3.11929 12 4.5 12H9.5C10.8807 12 12 10.8807 12 9.5V4.5C12 3.11929 10.8807 2 9.5 2H4.5ZM3 4.5C3 3.67157 3.67157 3 4.5 3H9.5C10.3284 3 11 3.67157 11 4.5V9.5C11 9.73157 10.9475 9.95088 10.8538 10.1467L8.20919 7.50207C7.54139 6.83427 6.45868 6.83427 5.79089 7.50207L3.1462 10.1467C3.05248 9.95092 3 9.73159 3 9.5V4.5ZM3.85333 10.8538L6.49799 8.20917C6.77526 7.9319 7.22481 7.9319 7.50208 8.20918L10.1467 10.8538C9.9509 10.9475 9.73158 11 9.5 11H4.5C4.26844 11 4.04914 10.9475 3.85333 10.8538ZM6.99994 14C6.18203 14 5.45586 13.6072 4.99976 13H9.49994C11.4329 13 12.9999 11.433 12.9999 9.5V3.99982C13.6072 4.45592 13.9999 5.18209 13.9999 6V9.5C13.9999 11.9853 11.9852 14 9.49994 14H6.99994Z" fill="currentColor"/></symbol>
+          <symbol id="kc-band-icon-arrow-left" viewBox="0 0 20 20"><path d="M9.15898 16.8666C9.36292 17.0528 9.67918 17.0384 9.86536 16.8345C10.0515 16.6305 10.0371 16.3143 9.8332 16.1281L3.66535 10.4974H17.4961C17.7722 10.4974 17.9961 10.2735 17.9961 9.99736C17.9961 9.72122 17.7722 9.49736 17.4961 9.49736H3.66824L9.8332 3.86927C10.0371 3.68309 10.0515 3.36684 9.86536 3.16289C9.67918 2.95895 9.36292 2.94456 9.15898 3.13074L2.24263 9.44478C2.10268 9.57254 2.02285 9.74008 2.00314 9.91323C1.99851 9.94058 1.99609 9.96869 1.99609 9.99736C1.99609 10.0242 1.99821 10.0506 2.00229 10.0763C2.02047 10.2522 2.10058 10.4229 2.24263 10.5526L9.15898 16.8666Z" fill="currentColor"/></symbol>
+          <symbol id="kc-band-icon-arrow-right" viewBox="0 0 20 20"><path d="M10.8371 3.13074C10.6332 2.94456 10.3169 2.95895 10.1307 3.16289C9.94456 3.36683 9.95895 3.68309 10.1629 3.86927L16.3307 9.5H2.5C2.22386 9.5 2 9.72386 2 10C2 10.2761 2.22386 10.5 2.5 10.5H16.3279L10.1629 16.1281C9.95895 16.3143 9.94456 16.6305 10.1307 16.8345C10.3169 17.0384 10.6332 17.0528 10.8371 16.8666L17.7535 10.5526C17.8934 10.4248 17.9732 10.2573 17.993 10.0841C17.9976 10.0568 18 10.0287 18 10C18 9.97313 17.9979 9.94675 17.9938 9.92103C17.9756 9.74512 17.8955 9.57446 17.7535 9.44478L10.8371 3.13074Z" fill="currentColor"/></symbol>
+          <symbol id="kc-band-icon-chevron-down" viewBox="0 0 12 12"><path d="M2.14645 4.64645C2.34171 4.45118 2.65829 4.45118 2.85355 4.64645L6 7.79289L9.14645 4.64645C9.34171 4.45118 9.65829 4.45118 9.85355 4.64645C10.0488 4.84171 10.0488 5.15829 9.85355 5.35355L6.35355 8.85355C6.15829 9.04882 5.84171 9.04882 5.64645 8.85355L2.14645 5.35355C1.95118 5.15829 1.95118 4.84171 2.14645 4.64645Z" fill="currentColor"/></symbol>
+          <symbol id="kc-band-icon-play" viewBox="0 0 24 24"><path d="M5 5.27368C5 3.56682 6.82609 2.48151 8.32538 3.2973L20.687 10.0235C22.2531 10.8756 22.2531 13.124 20.687 13.9762L8.32538 20.7024C6.82609 21.5181 5 20.4328 5 18.726V5.27368Z" fill="currentColor"/></symbol>
+        </svg>
+      </div>
+    </div>
+  </main>
+  <script>
+    const stack = document.querySelector(".kc-band-mobile");
+    const expansion = stack.querySelector(".kc-mobile-expansion-see-more");
+    const more = document.getElementById("kc-band-mobile-more");
+    const expansionLabel = expansion.querySelector(".kc-mobile-expansion-see-more__label");
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    let expanded = false;
+
+    function syncLast() {
+      const modules = Array.from(stack.querySelectorAll(":scope > .kc-module, :scope > .kc-card-more:not([hidden]) > .kc-module"));
+      modules.forEach(module => module.classList.remove("kc-module--card-last"));
+      if (expanded) modules.at(-1).classList.add("kc-module--card-last");
+    }
+
+    function syncScroller(row, previous, next) {
+      previous.disabled = row.scrollLeft <= 0;
+      next.disabled = row.scrollLeft + row.clientWidth >= row.scrollWidth - 1;
+    }
+
+    function scrollRow(row, direction, distance) {
+      row.scrollBy({ left:direction * distance, behavior:reduceMotion.matches ? "instant" : "smooth" });
+    }
+
+    expansion.addEventListener("click", () => {
+      expanded = !expanded;
+      more.hidden = !expanded;
+      expansion.setAttribute("aria-expanded", String(expanded));
+      expansionLabel.textContent = expanded ? "See less" : "See more";
+      syncLast();
+    });
+
+    for (const [selector, distance] of [
+      ["#kc-band-mobile-carousel .kc-scroll-row", 140],
+      ["#kc-band-mobile-videos .kc-mobile-videos-landscape__row", 248]
+    ]) {
+      const row = stack.querySelector(selector);
+      const previous = row.parentElement.querySelector("button[aria-label^='Previous']");
+      const next = row.parentElement.querySelector("button[aria-label^='Next']");
+      row.addEventListener("scroll", () => syncScroller(row, previous, next), { passive:true });
+      row.addEventListener("keydown", event => {
+        if (event.key !== "ArrowLeft" && event.key !== "ArrowRight") return;
+        event.preventDefault();
+        scrollRow(row, event.key === "ArrowLeft" ? -1 : 1, distance);
+      });
+      previous.addEventListener("click", () => scrollRow(row, -1, distance));
+      next.addEventListener("click", () => scrollRow(row, 1, distance));
+      syncScroller(row, previous, next);
+    }
+
+    const tabs = Array.from(stack.querySelectorAll(".kc-mobile-hero-tab"));
+    const tablist = stack.querySelector(".kc-mobile-hero-tabs-container");
+    tablist.addEventListener("click", event => {
+      const tab = event.target.closest(".kc-mobile-hero-tab");
+      if (!tab) return;
+      tabs.forEach(item => {
+        const selected = item === tab;
+        item.classList.toggle("kc-mobile-hero-tab--selected", selected);
+        item.setAttribute("aria-selected", String(selected));
+      });
+    });
+    tablist.addEventListener("keydown", event => {
+      if (!["ArrowLeft", "ArrowRight", "Home", "End"].includes(event.key)) return;
+      const currentIndex = tabs.indexOf(event.target.closest(".kc-mobile-hero-tab"));
+      if (currentIndex < 0) return;
+      event.preventDefault();
+      const nextIndex = event.key === "Home" ? 0
+        : event.key === "End" ? tabs.length - 1
+          : (currentIndex + (event.key === "ArrowRight" ? 1 : -1) + tabs.length) % tabs.length;
+      tabs[nextIndex].focus();
+      tabs[nextIndex].click();
+    });
+  </script>
+</body>
+</html>

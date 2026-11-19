@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ingredient Knowledge Card — Desktop</title>
+  <link rel="stylesheet" href="../assets/css/msn-components.css">
+  <link rel="stylesheet" href="../assets/css/kc-components.css">
+  <style>
+    * { box-sizing:border-box; }
+    body { min-width:1344px; margin:0; padding:32px; background:var(--kc-gray-5); color:var(--kc-gray-1); font-family:var(--kc-font); }
+    main { width:max-content; }
+    .kc-card-board-item { width:max-content; }
+    .kc-card-board-label { margin:0 0 8px; color:var(--kc-gray-2); font-size:12px; line-height:16px; font-weight:400; }
+
+    .kc-ingredient-desktop-frame { height:auto; min-height:1500px; }
+    .kc-ingredient-desktop > .kc-hero-designer--top-to-bottom { height:382px; }
+    .kc-ingredient-desktop .kc-hero .kc-text-list { height:102px; padding:32px 20px 16px; }
+    .kc-ingredient-desktop .kc-hero-body { height:54px; font-weight:600; }
+    .kc-ingredient-desktop > .kc-hero-designer--card-last .kc-text-list { border-radius:0 0 6px 6px; }
+    .kc-ingredient-desktop .kc-module--card-last { border-radius:0 0 6px 6px; }
+    .kc-ingredient-desktop [hidden] { display:none !important; }
+
+    .kc-ingredient-desktop .kc-miscellaneous-serving-size,
+    .kc-ingredient-desktop .kc-ingredient-facts { padding-block:15px; }
+    .kc-ingredient-desktop .kc-miscellaneous-serving-size__circle { background:var(--kc-accent-soft); }
+
+    .kc-ingredient-desktop .kc-ingredient-facts { height:392px; gap:16px; background:var(--kc-accent-soft); }
+    .kc-ingredient-desktop .kc-ingredient-facts__row { display:flex; gap:20px; }
+    .kc-ingredient-desktop .kc-ingredient-facts__row--first { width:432px; height:225px; align-items:flex-start; }
+    .kc-ingredient-desktop .kc-ingredient-facts__row--second { width:405px; height:119px; align-items:center; }
+    .kc-ingredient-desktop .kc-ingredient-facts__col { display:flex; flex-direction:column; gap:16px; flex:none; }
+    .kc-ingredient-desktop .kc-ingredient-facts__row--first .kc-ingredient-facts__col { width:282px; height:225px; }
+    .kc-ingredient-desktop .kc-ingredient-facts__row--second .kc-ingredient-facts__col { width:266px; height:93px; }
+    .kc-ingredient-desktop .kc-ingredient-facts__col p { display:flex; align-items:center; margin:0; color:var(--kc-gray-2); font-size:14px; line-height:18px; }
+    .kc-ingredient-desktop .kc-ingredient-facts__row--first .kc-ingredient-facts__col p:first-child { height:94px; }
+    .kc-ingredient-desktop .kc-ingredient-facts__row--first .kc-ingredient-facts__col p:last-child { height:98px; }
+    .kc-ingredient-desktop .kc-ingredient-facts__row--second .kc-ingredient-facts__col p { height:76px; justify-content:flex-end; text-align:right; }
+    .kc-ingredient-desktop .kc-ingredient-facts .kc-divider { display:block; width:100%; height:1px; flex:none; background:var(--kc-border, #DDD); }
+    .kc-ingredient-desktop .kc-ingredient-facts__row--first .kc-img { width:130px; height:193px; flex:none; }
+    .kc-ingredient-desktop .kc-ingredient-facts__row--second .kc-img { width:119px; height:119px; flex:none; }
+
+    .kc-ingredient-desktop .kc-image-list-ingredients { height:106px; gap:16px; align-items:flex-start; justify-content:flex-start; }
+    .kc-ingredient-desktop .kc-image-list-ingredients__list { gap:0; }
+    .kc-ingredient-desktop .kc-image-list-ingredients__row { height:36px; }
+    .kc-ingredient-desktop .kc-image-list-ingredients__item { height:36px; flex:none; }
+    .kc-ingredient-desktop .kc-image-list-ingredients__item:nth-child(1) { width:139px; }
+    .kc-ingredient-desktop .kc-image-list-ingredients__item:nth-child(2) { width:138px; }
+    .kc-ingredient-desktop .kc-image-list-ingredients__item:nth-child(3) { width:139px; }
+
+    .kc-ingredient-desktop .kc-text-list-top-fact-text-list-attributions { height:66px; }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="kc-card-board-item">
+      <h1 class="kc-card-board-label">Ingredient — Desktop</h1>
+      <div class="kc-full-knowledge-card kc-ingredient-desktop-frame" data-kc="Full Knowledge Card">
+        <article class="kc-card-stack kc-ingredient-desktop kc-theme-green" data-kc="Segment / Ingredient" aria-label="Summer squash knowledge card">
+          <article class="kc-hero kc-hero-designer kc-hero-designer--non-cutout kc-hero-designer--top-to-bottom" data-kc="Designer">
+            <div class="kc-hero-header">
+              <span class="kc-img kc-hero-img kc-hero-designer__image"><img src="../assets/images/kc/hero/desktop/ingredient.png" alt="Summer squash"></span>
+              <div class="kc-hero-title kc-hero-designer__title">
+                <div class="kc-hero-title__text kc-hero-designer__title__text">
+                  <h2 class="kc-hero-designer__title__name">Summer Squash</h2>
+                  <p class="kc-hero-designer__title__category">Vegetable</p>
+                </div>
+              </div>
+              <ul class="kc-hero-social kc-hero-designer__social" data-kc="Social Media">
+                <li><a href="https://en.wikipedia.org/wiki/Summer_squash" class="kc-hero-social__badge" aria-label="Summer squash on Wikipedia"><img src="../assets/images/kc/brands/wikipedia.svg" alt="" width="32" height="32"></a></li>
+              </ul>
+              <div class="kc-hero-top-actions kc-hero-designer__actions" data-kc="Top Actions">
+                <button class="kc-btn-on-image kc-hero-button kc-hero-button--large kc-hero-button--share" type="button">
+                  <img src="../assets/icons/ic_fluent_share_16_regular.svg" alt="" aria-hidden="true">
+                  <span class="kc-hero-button__label">Share</span>
+                </button>
+                <button class="kc-btn-on-image kc-hero-button kc-hero-button--large kc-hero-button--all-images" type="button">
+                  <img src="../assets/icons/ic_fluent_image_multiple_16_regular.svg" alt="" aria-hidden="true">
+                  <span class="kc-hero-button__label">All images</span>
+                </button>
+              </div>
+            </div>
+            <div class="kc-text-list">
+              <p class="kc-hero-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut</p>
+            </div>
+          </article>
+
+          <section class="kc-module kc-miscellaneous-serving-size" id="kc-ingredient-mod-1" data-kc="Miscellaneous / Serving Size" aria-label="Serving size">
+            <strong class="kc-miscellaneous-serving-size__label">Serving Size: Food (size)</strong>
+            <div class="kc-miscellaneous-serving-size__content">
+              <div class="kc-miscellaneous-serving-size__circles">
+                <div class="kc-miscellaneous-serving-size__circle"><span class="kc-copy-bold">Title</span><strong>000</strong></div>
+                <div class="kc-miscellaneous-serving-size__circle"><span class="kc-copy-bold">Title</span><strong>000</strong><span class="kc-copy-small">XX%</span></div>
+                <div class="kc-miscellaneous-serving-size__circle"><span class="kc-copy-bold">Title</span><strong>000</strong></div>
+                <div class="kc-miscellaneous-serving-size__circle"><span class="kc-copy-bold">Title</span><strong>000</strong><span class="kc-copy-small">XX%</span></div>
+              </div>
+              <span class="kc-miscellaneous-serving-size__foot">% Daily value*</span>
+            </div>
+          </section>
+
+          <section class="kc-module kc-image-list-interesting-facts kc-image-list-interesting-facts--2-image kc-ingredient-facts" id="kc-ingredient-mod-2" data-kc="Image List / Interesting Facts" aria-label="Interesting facts about summer squash">
+            <div class="kc-ingredient-facts__row kc-ingredient-facts__row--first">
+              <div class="kc-ingredient-facts__col">
+                <p>Summer squash is a tender squash, picked young and immature so that its skin is thin and edible. They aren’t able to be stored as long as winter squash and are best picked and eaten young.</p>
+                <span class="kc-divider" aria-hidden="true"></span>
+                <p>Summer squash is a wonderful vegetable to grow in the home vegetable garden. Summer squash can be planted in rows or in raised beds. They can even be planted in large containers.</p>
+              </div>
+              <span class="kc-img kc-img--cover"><img src="../assets/images/kc/modules/ingredient/ingredient-desktop-facts-01.png" alt="Image for interesting fact about summer squash, 1" onerror="this.style.display='none'"></span>
+            </div>
+            <div class="kc-ingredient-facts__row kc-ingredient-facts__row--second">
+              <span class="kc-img kc-img--cover"><img src="../assets/images/kc/modules/ingredient/ingredient-desktop-facts-02.png" alt="Image for interesting fact about summer squash, 2" onerror="this.style.display='none'"></span>
+              <div class="kc-ingredient-facts__col">
+                <span class="kc-divider" aria-hidden="true"></span>
+                <p>The darling of summer squashes, zucchini is one of the most widely-known and popular squashes available. It flourishes in almost any circumstance, producing a huge bounty off just one plant.</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="kc-module kc-image-list-ingredients" id="kc-ingredient-mod-3" data-kc="Image List / Ingredients" aria-labelledby="kc-ingredient-title-ingredients">
+            <div class="kc-module-title kc-module-title--no-chevron"><h3 id="kc-ingredient-title-ingredients">Common Ingredients</h3></div>
+            <div class="kc-image-list-ingredients__list">
+              <div class="kc-image-list-ingredients__row">
+                <div class="kc-image-list-ingredients__item">
+                  <span class="kc-img kc-img--cover"><img src="../assets/images/kc/modules/ingredient/ingredient-desktop-ingredients-01.png" alt="" onerror="this.style.display='none'"></span>
+                  <span class="kc-copy-bold">Ingredient</span>
+                </div>
+                <div class="kc-image-list-ingredients__item">
+                  <span class="kc-img kc-img--cover"><img src="../assets/images/kc/modules/ingredient/ingredient-desktop-ingredients-02.png" alt="" onerror="this.style.display='none'"></span>
+                  <span class="kc-copy-bold">Ingredient</span>
+                </div>
+                <div class="kc-image-list-ingredients__item">
+                  <span class="kc-img kc-img--cover"><img src="../assets/images/kc/modules/ingredient/ingredient-desktop-ingredients-03.png" alt="" onerror="this.style.display='none'"></span>
+                  <span class="kc-copy-bold">Ingredient</span>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="kc-module kc-text-list-top-fact-text-list-attributions" id="kc-ingredient-mod-4" data-kc="Text List / Top Fact/Text List/Attributions" aria-label="Attributions">
+            <p>Images: Getty Images. Data: en.wikipedia.org · anothersite.com · coolfacts.com Hero image: Holy town Varanasi and the river Ganges</p>
+          </section>
+        </article>
+
+        <form class="kc-modules-panel" data-portfolio="Modules panel (not in Figma)" aria-label="Modules">
+          <h2>Modules</h2>
+          <p class="kc-modules-panel__hero">Designer (hero) — always on top</p>
+          <ol>
+            <li>
+              <input type="checkbox" checked id="kc-ingredient-toggle-1" aria-controls="kc-ingredient-mod-1">
+              <label for="kc-ingredient-toggle-1">Miscellaneous / Serving Size</label>
+              <button class="kc-btn-outline kc-btn-outline-icon" type="button" aria-label="Move Miscellaneous / Serving Size up" data-move="up"><img src="../assets/icons/ic_fluent_arrow_up_16_regular.svg" alt="" aria-hidden="true"></button>
+              <button class="kc-btn-outline kc-btn-outline-icon" type="button" aria-label="Move Miscellaneous / Serving Size down" data-move="down"><img src="../assets/icons/ic_fluent_arrow_down_16_regular.svg" alt="" aria-hidden="true"></button>
+            </li>
+            <li>
+              <input type="checkbox" checked id="kc-ingredient-toggle-2" aria-controls="kc-ingredient-mod-2">
+              <label for="kc-ingredient-toggle-2">Image List / Interesting Facts</label>
+              <button class="kc-btn-outline kc-btn-outline-icon" type="button" aria-label="Move Image List / Interesting Facts up" data-move="up"><img src="../assets/icons/ic_fluent_arrow_up_16_regular.svg" alt="" aria-hidden="true"></button>
+              <button class="kc-btn-outline kc-btn-outline-icon" type="button" aria-label="Move Image List / Interesting Facts down" data-move="down"><img src="../assets/icons/ic_fluent_arrow_down_16_regular.svg" alt="" aria-hidden="true"></button>
+            </li>
+            <li>
+              <input type="checkbox" checked id="kc-ingredient-toggle-3" aria-controls="kc-ingredient-mod-3">
+              <label for="kc-ingredient-toggle-3">Image List / Ingredients</label>
+              <button class="kc-btn-outline kc-btn-outline-icon" type="button" aria-label="Move Image List / Ingredients up" data-move="up"><img src="../assets/icons/ic_fluent_arrow_up_16_regular.svg" alt="" aria-hidden="true"></button>
+              <button class="kc-btn-outline kc-btn-outline-icon" type="button" aria-label="Move Image List / Ingredients down" data-move="down"><img src="../assets/icons/ic_fluent_arrow_down_16_regular.svg" alt="" aria-hidden="true"></button>
+            </li>
+            <li>
+              <input type="checkbox" checked id="kc-ingredient-toggle-4" aria-controls="kc-ingredient-mod-4">
+              <label for="kc-ingredient-toggle-4">Text List / Top Fact/Text List/Attributions</label>
+              <button class="kc-btn-outline kc-btn-outline-icon" type="button" aria-label="Move Attributions up" data-move="up"><img src="../assets/icons/ic_fluent_arrow_up_16_regular.svg" alt="" aria-hidden="true"></button>
+              <button class="kc-btn-outline kc-btn-outline-icon" type="button" aria-label="Move Attributions down" data-move="down"><img src="../assets/icons/ic_fluent_arrow_down_16_regular.svg" alt="" aria-hidden="true"></button>
+            </li>
+          </ol>
+          <p class="kc-modules-panel__status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </main>
+  <script>
+    const stack = document.querySelector(".kc-ingredient-desktop");
+    const panel = document.querySelector(".kc-modules-panel");
+    const rows = Array.from(panel.querySelectorAll("li"));
+    const modules = new Map(rows.map(row => {
+      const checkbox = row.querySelector('input[type="checkbox"]');
+      return [row, document.getElementById(checkbox.getAttribute("aria-controls"))];
+    }));
+    const status = panel.querySelector(".kc-modules-panel__status");
+    const hero = stack.querySelector(".kc-hero-designer");
+
+    function sync() {
+      for (const [row, module] of modules) {
+        module.hidden = !row.querySelector('input[type="checkbox"]').checked;
+      }
+
+      const orderedRows = Array.from(panel.querySelectorAll("li"));
+      orderedRows.forEach((row, index) => {
+        row.querySelector('[data-move="up"]').disabled = index === 0;
+        row.querySelector('[data-move="down"]').disabled = index === orderedRows.length - 1;
+      });
+
+      const cardModules = Array.from(stack.querySelectorAll(":scope > .kc-module"));
+      cardModules.forEach(module => module.classList.remove("kc-module--card-last"));
+      const lastVisible = cardModules.filter(module => !module.hidden).at(-1);
+      hero.classList.toggle("kc-hero-designer--card-last", !lastVisible);
+      lastVisible?.classList.add("kc-module--card-last");
+    }
+
+    for (const row of rows) {
+      const checkbox = row.querySelector('input[type="checkbox"]');
+      const module = modules.get(row);
+      checkbox.addEventListener("change", sync);
+
+      row.querySelectorAll("[data-move]").forEach(button => {
+        button.addEventListener("click", event => {
+          const direction = button.dataset.move;
+          const neighbor = direction === "up" ? row.previousElementSibling : row.nextElementSibling;
+          if (!neighbor) return;
+
+          if (direction === "up") {
+            panel.querySelector("ol").insertBefore(row, neighbor);
+            stack.insertBefore(module, module.previousElementSibling);
+          } else {
+            panel.querySelector("ol").insertBefore(neighbor, row);
+            stack.insertBefore(modules.get(neighbor), module);
+          }
+
+          const orderedRows = Array.from(panel.querySelectorAll("li"));
+          const position = orderedRows.indexOf(row) + 1;
+          status.textContent = `${row.querySelector("label").textContent} moved to position ${position} of ${orderedRows.length}`;
+          sync();
+
+          const focusedButton = event.currentTarget;
+          if (focusedButton.disabled) {
+            row.querySelector(`[data-move="${direction === "up" ? "down" : "up"}"]:not(:disabled)`).focus();
+          } else {
+            focusedButton.focus();
+          }
+        });
+      });
+    }
+
+    sync();
+  </script>
+</body>
+</html>

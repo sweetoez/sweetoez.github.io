@@ -11,44 +11,56 @@
     body { min-width:1344px; margin:0; padding:32px; background:var(--kc-gray-5); color:var(--kc-gray-1); font-family:var(--kc-font); }
     main,.kc-card-board-item { width:max-content; }
     .kc-card-board-label { margin:0 0 8px; color:var(--kc-gray-2); font-size:12px; line-height:16px; }
+    body .kc-full-knowledge-card :focus-visible { outline:2px solid #272320; outline-offset:2px; }
+    body button:active:not(:disabled) { transform:scale(.98); }
+    body button:disabled { opacity:.4; cursor:not-allowed; }
     .kc-planet-desktop > .kc-hero-designer--top-to-bottom { height:346px; z-index:1; padding-top:0; }
+    .kc-planet-desktop .kc-hero-header { margin:0 0 -16px; }
     .kc-planet-desktop .kc-hero .kc-text-list { height:66px; padding:32px 20px 16px; }
+    .kc-planet-desktop > .kc-hero-designer--card-last .kc-text-list { border-radius:0 0 6px 6px; }
+    .kc-planet-desktop .kc-hero-designer__image { background:transparent; }
+    .kc-planet-desktop .kc-hero-designer--top-to-bottom .kc-hero-designer__title__name { display:flex; flex:none; align-items:flex-end; height:100px; margin:0; padding-bottom:6px; color:var(--kc-white); font-size:50px; line-height:50px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
     .kc-planet-desktop .kc-hero-designer__social { z-index:2; visibility:visible; }
     .kc-planet-desktop .kc-hero-designer__actions svg { display:block; width:16px; height:16px; flex:none; color:var(--kc-white); }
-    .kc-planet-desktop .kc-image-list-interesting-facts--2-image { height:383px; background:var(--kc-accent-soft); }
-    .kc-planet-desktop .kc-image-list-interesting-facts--2-image .kc-image-list-interesting-facts__row:first-child { height:216px; align-items:flex-start; }
-    .kc-planet-desktop .kc-image-list-interesting-facts--2-image .kc-image-list-interesting-facts__row:last-child { height:119px; align-items:flex-start; }
-    .kc-planet-desktop .kc-planet-fact-row--first .kc-image-list-interesting-facts__text { width:216px; height:216px; gap:16px; }
-    .kc-planet-desktop .kc-planet-fact-row--first .kc-image-list-interesting-facts__text p { display:block; width:216px; }
+    .kc-planet-desktop .kc-module.kc-text-list-top-fact { height:100px; padding:0 20px; }
+    .kc-planet-desktop .kc-module.kc-image-list-interesting-facts { height:383px; background:var(--kc-accent-soft); }
+    .kc-planet-desktop .kc-module.kc-image-list-interesting-facts .kc-image-list-interesting-facts__row:first-child { height:216px; align-items:flex-start; }
+    .kc-planet-desktop .kc-module.kc-image-list-interesting-facts .kc-image-list-interesting-facts__row:last-child { height:119px; align-items:flex-start; }
+    .kc-planet-desktop .kc-module.kc-image-list-interesting-facts .kc-planet-fact-row--first .kc-image-list-interesting-facts__text { width:216px; height:216px; gap:16px; }
+    .kc-planet-desktop .kc-module.kc-image-list-interesting-facts .kc-planet-fact-row--first .kc-image-list-interesting-facts__text p { display:flex; width:216px; }
+    .kc-planet-desktop .kc-module.kc-image-list-interesting-facts .kc-planet-fact-row--first .kc-image-list-interesting-facts__text p:first-child { height:98px; }
+    .kc-planet-desktop .kc-module.kc-image-list-interesting-facts .kc-planet-fact-row--first .kc-image-list-interesting-facts__text p:last-child { height:85px; }
     .kc-planet-desktop .kc-planet-fact-row--first .kc-img { width:196px; height:200px; }
-    .kc-planet-desktop .kc-planet-fact-row--second .kc-image-list-interesting-facts__text { width:266px; height:93px; gap:16px; }
-    .kc-planet-desktop .kc-planet-fact-row--second .kc-image-list-interesting-facts__text p { display:block; width:266px; text-align:right; }
+    .kc-planet-desktop .kc-module.kc-image-list-interesting-facts .kc-planet-fact-row--second .kc-image-list-interesting-facts__text { width:266px; height:93px; gap:16px; }
+    .kc-planet-desktop .kc-module.kc-image-list-interesting-facts .kc-planet-fact-row--second .kc-image-list-interesting-facts__text p { display:flex; width:266px; height:76px; text-align:right; }
     .kc-planet-desktop .kc-planet-fact-row--second .kc-img { width:119px; height:119px; }
-    .kc-planet-desktop .kc-miscellaneous-timeline { height:371px; }
-    .kc-planet-desktop .kc-miscellaneous-timeline__list { height:301px; }
+    .kc-planet-desktop .kc-module.kc-miscellaneous-timeline { height:371px; }
+    .kc-planet-desktop .kc-miscellaneous-timeline__list { height:301px; margin:0; padding:0; list-style:none; }
     .kc-planet-desktop .kc-miscellaneous-timeline__entry { min-height:0; }
     .kc-planet-desktop .kc-miscellaneous-timeline__entry:nth-child(1) { height:92px; }
     .kc-planet-desktop .kc-miscellaneous-timeline__entry:nth-child(2) { height:74px; }
     .kc-planet-desktop .kc-miscellaneous-timeline__entry:nth-child(3) { height:61px; }
     .kc-planet-desktop .kc-miscellaneous-timeline__entry:nth-child(4) { height:74px; }
-    .kc-planet-desktop .kc-miscellaneous-timeline__content { min-height:0; }
+    .kc-planet-desktop .kc-miscellaneous-timeline__rail { height:100%; }
+    .kc-planet-desktop .kc-miscellaneous-timeline__rail::before { height:calc(100% - 1px); }
+    .kc-planet-desktop .kc-miscellaneous-timeline__entry:last-child .kc-miscellaneous-timeline__rail::before { display:none; }
+    .kc-planet-desktop .kc-miscellaneous-timeline__content { height:auto; min-height:0; }
     .kc-planet-desktop .kc-miscellaneous-timeline__year { color:var(--kc-accent); }
-    .kc-planet-desktop .kc-miscellaneous-timeline__quote { color:var(--kc-placeholder); }
-    .kc-planet-desktop .kc-text-list-top-fact-text-list-attributions { border-radius:0 0 6px 6px; }
+    .kc-planet-desktop .kc-module.kc-text-list-top-fact-text-list-attributions { height:66px; padding:20px; }
   </style>
 </head>
 <body>
   <main>
     <div class="kc-card-board-item">
-      <h1 class="kc-card-board-label">Planet — Desktop</h1>
+      <p class="kc-card-board-label">Planet — Desktop</p>
       <div class="kc-full-knowledge-card" data-kc="Full Knowledge Card">
         <article class="kc-card-stack kc-planet-desktop kc-theme-orange" data-kc="Segment / Celestial Body" aria-label="Jupiter knowledge card">
           <article class="kc-hero kc-hero-designer kc-hero-designer--non-cutout kc-hero-designer--top-to-bottom" data-kc="Designer">
             <div class="kc-hero-header">
-              <span class="kc-img kc-hero-img kc-hero-designer__image"><img src="../assets/images/kc/hero/desktop/planet.png" alt="Jupiter"></span>
+              <span class="kc-img kc-hero-img kc-hero-designer__image"><img src="../assets/images/kc/hero/desktop/planet.png" alt="Jupiter" onerror="this.style.display='none'"></span>
               <div class="kc-hero-title kc-hero-designer__title">
                 <div class="kc-hero-title__text kc-hero-designer__title__text">
-                  <h2 class="kc-hero-designer__title__name">Jupiter</h2>
+                  <h1 class="kc-hero-designer__title__name">Jupiter</h1>
                   <p class="kc-hero-designer__title__category">Fifth planet from the Sun</p>
                 </div>
               </div>
@@ -57,22 +69,24 @@
               </ul>
               <div class="kc-hero-top-actions kc-hero-designer__actions" data-kc="Top Actions">
                 <button class="kc-btn-on-image kc-hero-button kc-hero-button--large kc-hero-button--share" type="button" aria-label="Share">
-                  <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M7.5 2C7.77614 2 8 2.22386 8 2.5C7.99992 2.77608 7.77609 3 7.5 3H4.5C3.67157 3 3 3.67157 3 4.5V11.5C3.00008 12.3284 3.67162 13 4.5 13H11.5C12.3284 13 12.9999 12.3284 13 11.5V9.5C13 9.22386 13.2239 9 13.5 9C13.7761 9 14 9.22386 14 9.5V11.5C13.9999 12.8806 12.8807 14 11.5 14H4.5C3.11934 14 2.00008 12.8806 2 11.5V4.5C2 3.11929 3.11929 2 4.5 2H7.5ZM10.7803 1.05078C10.9518 0.966903 11.1559 0.988317 11.3066 1.10547L15.8066 4.60547C15.9284 4.7002 16 4.84573 16 5C16 5.15424 15.9284 5.29983 15.8066 5.39453L11.3066 8.89453C11.1559 9.01162 10.9517 9.03305 10.7803 8.94922C10.6088 8.86533 10.5001 8.6909 10.5 8.5V7.02539C8.26802 7.25505 6.87621 8.99835 6.10352 10.4238L5.94727 10.7236C5.84354 10.931 5.6104 11.0396 5.38477 10.9863C5.15934 10.9329 5.00007 10.7317 5 10.5C5 8.42356 5.51823 6.55894 6.53711 5.20019C7.47545 3.94908 8.82277 3.15337 10.5 3.02148V1.5C10.5 1.30906 10.6088 1.13469 10.7803 1.05078ZM11.5 3.5C11.4999 3.77608 11.2761 4 11 4C9.41093 4 8.18302 4.67315 7.33789 5.7998C6.80109 6.51557 6.41018 7.42583 6.19434 8.47949C7.22177 7.19865 8.77537 6 11 6C11.2761 6.22386 11.5 6.5V7.47754L14.6855 5L11.5 2.52148V3.5Z" fill="currentColor"/></svg>
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M7.5 2C7.77614 2 8 2.22386 8 2.5C7.99992 2.77608 7.77609 3 7.5 3H4.5C3.67157 3 3 3.67157 3 4.5V11.5C3.00008 12.3284 3.67162 13 4.5 13H11.5C12.3284 13 12.9999 12.3284 13 11.5V9.5C13 9.22386 13.2239 9 13.5 9C13.7761 9 14 9.22386 14 9.5V11.5C13.9999 12.8806 12.8807 14 11.5 14H4.5C3.11934 14 2.00008 12.8806 2 11.5V4.5C2 3.11929 3.11929 2 4.5 2H7.5ZM10.7803 1.05078C10.9518 0.966903 11.1559 0.988317 11.3066 1.10547L15.8066 4.60547C15.9284 4.7002 16 4.84573 16 5C16 5.15424 15.9284 5.29983 15.8066 5.39453L11.3066 8.89453C11.1559 9.01162 10.9517 9.03305 10.7803 8.94922C10.6088 8.86533 10.5001 8.6909 10.5 8.5V7.02539C8.26802 7.25505 6.87621 8.99835 6.10352 10.4238L5.94727 10.7236C5.84354 10.931 5.6104 11.0396 5.38477 10.9863C5.15934 10.9329 5.00007 10.7317 5 10.5C5 8.42356 5.51823 6.55894 6.53711 5.20019C7.47545 3.94908 8.82277 3.15337 10.5 3.02148V1.5C10.5 1.30906 10.6088 1.13469 10.7803 1.05078ZM11.5 3.5C11.4999 3.77608 11.2761 4 11 4C9.41093 4 8.18302 4.67315 7.33789 5.7998C6.80109 6.51557 6.41018 7.42583 6.19434 8.47949C7.22177 7.19865 8.77537 6 11 6C11.2761 6 11.5 6.22386 11.5 6.5V7.47754L14.6855 5L11.5 2.52148V3.5Z" fill="currentColor"/></svg>
                   <span class="kc-hero-button__label">Share</span>
                 </button>
                 <button class="kc-btn-on-image kc-hero-button kc-hero-button--large kc-hero-button--all-images" type="button" aria-label="All images">
-                  <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M10 5C10 5.55228 9.55228 6 9 6C8.44772 6 8 5.55228 8 5C8 4.44772 8 4 9 4C9.55228 4 10 4 10 5ZM4.5 2C3.11929 2 2 3.11929 2 4.5V9.5C2 10.8807 3.11929 12 4.5 12H9.5C10.8807 12 12 10.8807 12 9.5V4.5C12 3.11929 10.8807 2 9.5 2H4.5ZM3 4.5C3 3.67157 3.67157 3 4.5 3H9.5C10.3284 3 11 3.67157 11 4.5V9.5C11 9.73157 10.9475 9.95088 10.8538 10.1467L8.20919 7.50207C7.54139 6.83427 6.45868 6.83427 5.79089 7.50207L3.1462 10.1467C3.05248 9.95092 3 9.73159 3 9.5V4.5ZM3.85333 10.8538L6.49799 8.20917C6.77526 7.9319 7.22481 7.9319 7.50208 8.20918L10.1467 10.8538C9.9509 10.9475 9.73158 11 9.5 11H4.5C4.26844 11 4.04914 10.9475 3.85333 10.8538 3.85333 10.8538ZM6.99994 14C6.18203 14 5.45586 13.6072 4.99976 13H9.49994C11.4329 13 12.9999 11.433 12.9999 9.5V3.99982C13.6072 4.45592 13.9999 5.18209 13.9999 6V9.5C13.9999 11.9853 11.9852 14 9.49994 14H6.99994Z" fill="currentColor"/></svg>
-                  <span class="kc-hero-button__label">All images</span>
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M10 5C10 5.55228 9.55228 6 9 6C8.44772 6 8 5.55228 8 5C8 4.44772 8.44772 4 9 4C9.55228 4 10 4.44772 10 5ZM4.5 2C3.11929 2 2 3.11929 2 4.5V9.5C2 10.8807 3.11929 12 4.5 12H9.5C10.8807 12 12 10.8807 12 9.5V4.5C12 3.11929 10.8807 2 9.5 2H4.5ZM3 4.5C3 3.67157 3.67157 3 4.5 3H9.5C10.3284 3 11 3.67157 11 4.5V9.5C11 9.73157 10.9475 9.95088 10.8538 10.1467L8.20919 7.50207C7.54139 6.83427 6.45868 6.83427 5.79089 7.50207L3.1462 10.1467C3.05248 9.95092 3 9.73159 3 9.5V4.5ZM3.85333 10.8538L6.49799 8.20917C6.77526 7.9319 7.22481 7.9319 7.50208 8.20918L10.1467 10.8538C9.9509 10.9475 9.73158 11 9.5 11H4.5C4.26844 11 4.04914 10.9475 3.85333 10.8538ZM6.99994 14C6.18203 14 5.45586 13.6072 4.99976 13H9.49994C11.4329 13 12.9999 11.433 12.9999 9.5V3.99982C13.6072 4.45592 13.9999 5.18209 13.9999 6V9.5C13.9999 11.9853 11.9852 14 9.49994 14H6.99994Z" fill="currentColor"/></svg>
+                  <span class="kc-hero-button__label">All Images</span>
                 </button>
               </div>
             </div>
-            <div class="kc-text-list"><p class="kc-hero-body">Jupiter is the fifth planet from the Sun and the largest planet in the Solar System.</p></div>
+            <div class="kc-text-list"><p class="kc-hero-body">Fifth planet from the Sun</p></div>
           </article>
 
-          <section class="kc-module kc-text-list-top-fact kc-text-list-top-fact--quantity-2" id="kc-planet-desktop-mod-fact-one" data-kc="Text List / Top Fact" aria-label="Jupiter lifespan and moons">
-            <div class="kc-text-list-top-fact__item"><span class="kc-copy-bold">Diameter</span><strong class="kc-t-highlight-l kc-gray-copy">139,820</strong><span class="kc-copy">km</span></div>
+          <section class="kc-module kc-text-list-top-fact kc-text-list-top-fact--quantity-3" id="kc-planet-desktop-mod-fact-one" data-kc="Text List / Top Fact" aria-label="Jupiter day, year, and mass">
+            <div class="kc-text-list-top-fact__item"><span class="kc-copy-bold">Day</span><strong class="kc-t-highlight-l kc-gray-copy">9 h 56</strong><span class="kc-copy">min</span></div>
             <span class="kc-divider--v" aria-hidden="true"></span>
-            <div class="kc-text-list-top-fact__item"><span class="kc-copy-bold">Moons</span><strong class="kc-t-highlight-l kc-gray-copy">95</strong></div>
+            <div class="kc-text-list-top-fact__item"><span class="kc-copy-bold">Year</span><strong class="kc-t-highlight-l kc-gray-copy">11.86</strong><span class="kc-copy">Earth years</span></div>
+            <span class="kc-divider--v" aria-hidden="true"></span>
+            <div class="kc-text-list-top-fact__item"><span class="kc-copy-bold">Mass</span><strong class="kc-t-highlight-l kc-gray-copy">318</strong><span class="kc-copy">Earths</span></div>
           </section>
 
           <section class="kc-module kc-image-list-interesting-facts kc-image-list-interesting-facts--2-image" id="kc-planet-desktop-mod-interesting" data-kc="Image List / Interesting Facts" aria-label="Interesting facts about Jupiter">
@@ -82,16 +96,16 @@
                 <span class="kc-divider" aria-hidden="true"></span>
                 <p class="kc-copy">Jupiter is the third-brightest natural object in the Earth's night sky after the Moon and Venus.</p>
               </div>
-              <span class="kc-img kc-img--cover"><img src="../assets/images/kc/modules/planet/planet-desktop-facts-01.png" alt="Jupiter's Great Red Spot" onerror="this.style.display='none'"></span>
+              <span class="kc-img kc-img--cover"><img src="../assets/images/kc/modules/planet/planet-desktop-facts-01.png" alt="Illustration of Jupiter and a spacecraft" onerror="this.style.display='none'"></span>
             </div>
             <div class="kc-image-list-interesting-facts__row kc-planet-fact-row--second">
-              <span class="kc-img kc-img--cover"><img src="../assets/images/kc/modules/planet/planet-desktop-facts-02.png" alt="Cloud formations on Jupiter" onerror="this.style.display='none'"></span>
-              <div class="kc-image-list-interesting-facts__text"><span class="kc-divider" aria-hidden="true"></span><p class="kc-copy">Jupiter has a very strong magnetic field. This is around 14 times stronger than the magnetic field found on Earth — the largest of any planet in the solar system.</p></div>
+              <span class="kc-img kc-img--cover"><img src="../assets/images/kc/modules/planet/planet-desktop-facts-02.png" alt="View of Jupiter" onerror="this.style.display='none'"></span>
+              <div class="kc-image-list-interesting-facts__text"><span class="kc-divider" aria-hidden="true"></span><p class="kc-copy">Jupiter has a very strong magnetic field. This is around 14 times stronger than the magnetic field found on Earth – the largest of any planet in the solar system.</p></div>
             </div>
           </section>
 
-          <section class="kc-module kc-text-list-top-fact kc-text-list-top-fact--quantity-3" id="kc-planet-desktop-mod-fact-two" data-kc="Text List / Top Fact" aria-label="Jupiter day, year, and mass">
-            <div class="kc-text-list-top-fact__item"><span class="kc-copy-bold">Day</span><strong class="kc-t-highlight-l kc-gray-copy">9 h 56</strong><span class="kc-copy">min</span></div>
+          <section class="kc-module kc-text-list-top-fact kc-text-list-top-fact--quantity-3" id="kc-planet-desktop-mod-fact-two" data-kc="Text List / Top Fact" aria-label="Jupiter distance, year, and mass">
+            <div class="kc-text-list-top-fact__item"><span class="kc-copy-bold">Distance from Sun</span><strong class="kc-t-highlight-l kc-gray-copy">5.2</strong><span class="kc-copy">AU</span></div>
             <span class="kc-divider--v" aria-hidden="true"></span>
             <div class="kc-text-list-top-fact__item"><span class="kc-copy-bold">Year</span><strong class="kc-t-highlight-l kc-gray-copy">11.86</strong><span class="kc-copy">Earth years</span></div>
             <span class="kc-divider--v" aria-hidden="true"></span>
@@ -101,15 +115,15 @@
           <section class="kc-module kc-miscellaneous-timeline" id="kc-planet-desktop-mod-timeline" data-kc="Miscellaneous / Timeline" aria-label="Jupiter timeline">
             <div class="kc-module-title kc-module-title--no-chevron"><h3>Timeline</h3></div>
             <ol class="kc-miscellaneous-timeline__list">
-              <li class="kc-miscellaneous-timeline__entry"><span class="kc-miscellaneous-timeline__rail" aria-hidden="true"></span><div class="kc-miscellaneous-timeline__content"><strong class="kc-miscellaneous-timeline__year">1901</strong><p class="kc-miscellaneous-timeline__quote">Timeline description unavailable in the Figma export.</p></div></li>
-              <li class="kc-miscellaneous-timeline__entry"><span class="kc-miscellaneous-timeline__rail" aria-hidden="true"></span><div class="kc-miscellaneous-timeline__content"><strong class="kc-miscellaneous-timeline__year">1902</strong><p class="kc-miscellaneous-timeline__quote">Timeline description unavailable in the Figma export.</p></div></li>
-              <li class="kc-miscellaneous-timeline__entry"><span class="kc-miscellaneous-timeline__rail" aria-hidden="true"></span><div class="kc-miscellaneous-timeline__content"><strong class="kc-miscellaneous-timeline__year">1903</strong><p class="kc-miscellaneous-timeline__quote">Timeline description unavailable in the Figma export.</p></div></li>
-              <li class="kc-miscellaneous-timeline__entry"><span class="kc-miscellaneous-timeline__rail" aria-hidden="true"></span><div class="kc-miscellaneous-timeline__content"><strong class="kc-miscellaneous-timeline__year">1904</strong><p class="kc-miscellaneous-timeline__quote">Timeline description unavailable in the Figma export.</p></div></li>
+              <li class="kc-miscellaneous-timeline__entry"><span class="kc-miscellaneous-timeline__rail" aria-hidden="true"></span><div class="kc-miscellaneous-timeline__content"><strong class="kc-miscellaneous-timeline__year">1610</strong><p class="kc-miscellaneous-timeline__quote">Galileo spots Jupiter's four largest moons.</p></div></li>
+              <li class="kc-miscellaneous-timeline__entry"><span class="kc-miscellaneous-timeline__rail" aria-hidden="true"></span><div class="kc-miscellaneous-timeline__content"><strong class="kc-miscellaneous-timeline__year">1979</strong><p class="kc-miscellaneous-timeline__quote">Voyager 1 and 2 fly by Jupiter.</p></div></li>
+              <li class="kc-miscellaneous-timeline__entry"><span class="kc-miscellaneous-timeline__rail" aria-hidden="true"></span><div class="kc-miscellaneous-timeline__content"><strong class="kc-miscellaneous-timeline__year">1995</strong><p class="kc-miscellaneous-timeline__quote">Galileo probe enters Jupiter's atmosphere.</p></div></li>
+              <li class="kc-miscellaneous-timeline__entry"><span class="kc-miscellaneous-timeline__rail" aria-hidden="true"></span><div class="kc-miscellaneous-timeline__content"><strong class="kc-miscellaneous-timeline__year">2016</strong><p class="kc-miscellaneous-timeline__quote">Juno arrives at Jupiter.</p></div></li>
             </ol>
           </section>
 
           <section class="kc-module kc-text-list-top-fact-text-list-attributions kc-module--card-last" id="kc-planet-desktop-mod-attributions" data-kc="Text List / Top Fact/Text List/Attributions" aria-label="Attributions">
-            <p>Images: Getty Images. Data: <a href="https://en.wikipedia.org/wiki/Jupiter">en.wikipedia.org</a> · anothersite.com · coolfacts.com. Hero image: Jupiter.</p>
+            <p>Hero image: Jupiter</p>
           </section>
         </article>
 
@@ -131,30 +145,65 @@
     const stack = document.querySelector(".kc-planet-desktop");
     const panel = document.querySelector(".kc-modules-panel");
     const rows = Array.from(panel.querySelectorAll("li"));
-    const modules = new Map(rows.map(row => [row, document.getElementById(row.querySelector("input").getAttribute("aria-controls"))]));
+    const modules = new Map(rows.map(row => {
+      const checkbox = row.querySelector('input[type="checkbox"]');
+      return [row, document.getElementById(checkbox.getAttribute("aria-controls"))];
+    }));
+    const status = panel.querySelector(".kc-modules-panel__status");
     const hero = stack.querySelector(".kc-hero-designer");
+
     function sync() {
-      for (const [row, module] of modules) module.hidden = !row.querySelector("input").checked;
+      for (const [row, module] of modules) {
+        module.hidden = !row.querySelector('input[type="checkbox"]').checked;
+      }
+
       const orderedRows = Array.from(panel.querySelectorAll("li"));
       orderedRows.forEach((row, index) => {
         row.querySelector('[data-move="up"]').disabled = index === 0;
         row.querySelector('[data-move="down"]').disabled = index === orderedRows.length - 1;
       });
-      const visible = Array.from(stack.querySelectorAll(":scope > .kc-module")).filter(module => !module.hidden);
-      stack.querySelectorAll(":scope > .kc-module").forEach(module => module.classList.remove("kc-module--card-last"));
-      visible.at(-1)?.classList.add("kc-module--card-last");
-      hero.classList.toggle("kc-hero-designer--card-last", visible.length === 0);
+
+      const cardModules = Array.from(stack.querySelectorAll(":scope > .kc-module"));
+      cardModules.forEach(module => module.classList.remove("kc-module--card-last"));
+      const lastVisible = cardModules.filter(module => !module.hidden).at(-1);
+      hero.classList.toggle("kc-hero-designer--card-last", !lastVisible);
+      lastVisible?.classList.add("kc-module--card-last");
     }
+
     for (const row of rows) {
-      row.querySelector("input").addEventListener("change", sync);
-      row.querySelectorAll("[data-move]").forEach(button => button.addEventListener("click", () => {
-        const neighbor = button.dataset.move === "up" ? row.previousElementSibling : row.nextElementSibling;
-        if (!neighbor) return;
-        panel.querySelector("ol").insertBefore(button.dataset.move === "up" ? row : neighbor, button.dataset.move === "up" ? neighbor : row);
-        stack.insertBefore(modules.get(button.dataset.move === "up" ? row : neighbor), modules.get(button.dataset.move === "up" ? neighbor : row));
-        sync();
-      }));
+      const checkbox = row.querySelector('input[type="checkbox"]');
+      const module = modules.get(row);
+      checkbox.addEventListener("change", sync);
+
+      row.querySelectorAll("[data-move]").forEach(button => {
+        button.addEventListener("click", event => {
+          const direction = button.dataset.move;
+          const neighbor = direction === "up" ? row.previousElementSibling : row.nextElementSibling;
+          if (!neighbor) return;
+
+          if (direction === "up") {
+            panel.querySelector("ol").insertBefore(row, neighbor);
+            stack.insertBefore(module, module.previousElementSibling);
+          } else {
+            panel.querySelector("ol").insertBefore(neighbor, row);
+            stack.insertBefore(modules.get(neighbor), module);
+          }
+
+          const orderedRows = Array.from(panel.querySelectorAll("li"));
+          const position = orderedRows.indexOf(row) + 1;
+          status.textContent = `${row.querySelector("label").textContent} moved to position ${position} of ${orderedRows.length}`;
+          sync();
+
+          const focusedButton = event.currentTarget;
+          if (focusedButton.disabled) {
+            row.querySelector(`[data-move="${direction === "up" ? "down" : "up"}"]:not(:disabled)`).focus();
+          } else {
+            focusedButton.focus();
+          }
+        });
+      });
     }
+
     sync();
   </script>
 </body>

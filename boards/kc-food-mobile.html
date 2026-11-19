@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Food Knowledge Card — Mobile</title>
+  <link rel="stylesheet" href="../assets/css/msn-components.css">
+  <link rel="stylesheet" href="../assets/css/kc-components.css">
+  <style>
+    * { box-sizing:border-box; }
+    body { min-width:1344px; margin:0; padding:32px; background:var(--kc-gray-5); color:var(--kc-gray-1); font-family:var(--kc-font); }
+    main { width:max-content; }
+    .kc-card-board-item { width:max-content; }
+    .kc-card-board-label { margin:0 0 8px; color:var(--kc-gray-2); font-size:12px; line-height:16px; }
+
+    .kc-food-mobile-frame { height:auto; min-height:1500px; padding-bottom:109px; }
+    .kc-food-mobile { position:relative; top:auto; left:auto; width:360px; margin:280px 0 0 403px; }
+    .kc-food-mobile .kc-mobile-designer { height:362px; }
+    .kc-food-mobile .kc-mobile-designer__top-actions svg { display:block; width:12px; height:12px; flex:none; color:var(--kc-white); }
+    .kc-food-mobile .kc-mobile-designer__entity { white-space:normal; }
+    .kc-food-mobile .kc-mobile-hero-text-list { height:150px; }
+    .kc-food-mobile .kc-mobile-hero-tabs { border-radius:100px 0 0 100px; }
+    .kc-food-mobile .kc-mobile-hero-tabs-container { width:max-content; }
+    .kc-food-mobile .kc-mobile-hero-tab { background:var(--kc-accent-soft); color:var(--kc-accent); }
+    .kc-food-mobile .kc-mobile-hero-tab--selected { background:var(--kc-accent); color:var(--kc-white); }
+    .kc-food-mobile .kc-mobile-hero-tab:not(.kc-mobile-hero-tab--selected):hover { background:var(--kc-accent-soft); filter:brightness(.96); }
+    .kc-food-mobile .kc-mobile-hero-tab:not(.kc-mobile-hero-tab--selected):active { background:var(--kc-accent-soft); filter:brightness(.92); }
+    .kc-food-mobile .kc-mobile-hero-tab--selected:hover { background:var(--kc-accent); filter:brightness(.96); }
+    .kc-food-mobile .kc-mobile-hero-tab--selected:active { background:var(--kc-accent); filter:brightness(.92); }
+    .kc-food-mobile .kc-mobile-hero-text p { width:319px; height:54px; margin:0; }
+
+    .kc-food-mobile > #kc-food-mobile-serving { height:186px; }
+    .kc-food-mobile > #kc-food-mobile-facts { height:389px; gap:16px; }
+    .kc-food-mobile > #kc-food-mobile-ingredients { height:142px; }
+    .kc-food-mobile .kc-mobile-miscellaneous-serving-size__circle { background:var(--kc-accent-soft); justify-content:flex-start; }
+    .kc-food-mobile .kc-mobile-miscellaneous-serving-size__circle:nth-child(-n+2) { justify-content:center; }
+    .kc-food-mobile .kc-mobile-miscellaneous-serving-size__circle .kc-m-bold { color:var(--kc-gray-1); }
+    .kc-food-mobile .kc-mobile-miscellaneous-serving-size__circle .kc-m-foot { color:var(--kc-gray-1); }
+    .kc-food-mobile .kc-food-mobile-facts__row { display:flex; width:328px; gap:20px; align-items:flex-start; }
+    .kc-food-mobile .kc-food-mobile-facts__row--first { height:190px; }
+    .kc-food-mobile .kc-food-mobile-facts__row--second { height:151px; align-items:center; }
+    .kc-food-mobile .kc-food-mobile-facts__col { display:flex; width:203px; height:190px; flex:none; flex-direction:column; gap:16px; }
+    .kc-food-mobile .kc-food-mobile-facts__col p { display:flex; width:203px; align-items:center; margin:0; color:var(--kc-gray-1); font-size:14px; line-height:18px; letter-spacing:var(--kc-ls); }
+    .kc-food-mobile .kc-food-mobile-facts__col p:first-child { height:94px; }
+    .kc-food-mobile .kc-food-mobile-facts__col p:last-child { height:63px; }
+    .kc-food-mobile .kc-food-mobile-facts__col .kc-m-divider { width:203px; height:1px; }
+    .kc-food-mobile .kc-food-mobile-facts__side { display:flex; width:167px; height:151px; flex:none; flex-direction:column; gap:16px; }
+    .kc-food-mobile .kc-food-mobile-facts__side p { display:flex; width:167px; height:134px; align-items:center; margin:0; color:var(--kc-gray-1); font-size:14px; line-height:18px; letter-spacing:var(--kc-ls); text-align:right; }
+    .kc-food-mobile .kc-food-mobile-facts__side .kc-m-divider { width:167px; height:1px; }
+    .kc-food-mobile .kc-food-mobile-facts__img-1 { width:104px; height:163px; }
+    .kc-food-mobile .kc-food-mobile-facts__img-2 { width:140px; height:93px; }
+    .kc-food-mobile .kc-module-title h3 { text-transform:none; }
+    .kc-food-mobile .kc-mobile-image-list-ingredients__item .kc-m-bold { color:var(--kc-gray-1); }
+    .kc-food-mobile .kc-mobile-text-list-attribution { height:auto; }
+
+    .kc-food-mobile > .kc-card-more .kc-module--mobile { margin-top:-1px; }
+    .kc-food-mobile .kc-module--mobile { border-radius:0; }
+    .kc-food-mobile .kc-module--mobile[hidden] { display:none !important; }
+    .kc-food-mobile .kc-module--card-last { border-radius:0 0 6px 6px; }
+    .kc-food-mobile > .kc-mobile-expansion-see-more { margin-top:-1px; }
+    .kc-food-mobile .kc-mobile-expansion-see-more__circle { background:var(--kc-accent); color:var(--kc-white); }
+    .kc-food-mobile .kc-mobile-expansion-see-more__circle svg { position:absolute; top:13px; left:12px; display:block; width:16px; height:16px; }
+    .kc-food-mobile .kc-mobile-expansion-see-more:active { transform:scale(.98); }
+    .kc-food-mobile .kc-mobile-expansion-see-more:focus-visible { outline:2px solid #272320; outline-offset:2px; }
+    @media (prefers-reduced-motion: reduce) { .kc-food-mobile * { transition:none !important; } }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="kc-card-board-item">
+      <h1 class="kc-card-board-label">Food — Mobile</h1>
+      <div class="kc-full-knowledge-card kc-food-mobile-frame" data-kc="Full Knowledge Card">
+        <article class="kc-card-stack kc-mobile-designer-card kc-food-mobile kc-theme-orange" data-kc="Segment / Food" aria-label="Pizza Margherita knowledge card">
+          <article class="kc-mobile-designer kc-mobile-designer--top-to-bottom" data-kc="Mobile / Designer / Gradient=Top to Bottom / Website=No">
+            <div class="kc-mobile-designer__header">
+              <div class="kc-mobile-designer__image">
+                <span class="kc-img kc-mobile-designer__image-fill"><img src="../assets/images/kc/hero/mobile/food.png" alt="Pizza Margherita"></span>
+                <div class="kc-mobile-designer__gradient" aria-hidden="true"></div>
+              </div>
+              <div class="kc-mobile-designer__title">
+                <h2 class="kc-mobile-designer__entity">Pizza Margherita</h2>
+                <p class="kc-mobile-designer__category">Italian pizza</p>
+              </div>
+              <div class="kc-mobile-designer__top-actions">
+                <button class="kc-btn-on-image kc-hero-button kc-hero-button--small" type="button" aria-label="Share">
+                  <svg width="12" height="12" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M7.5 2C7.77614 2 8 2.22386 8 2.5C7.99992 2.77608 7.77609 3 7.5 3H4.5C3.67157 3 3 3.67157 3 4.5V11.5C3.00008 12.3284 3.67162 13 4.5 13H11.5C12.3284 13 12.9999 12.3284 13 11.5V9.5C13 9.22386 13.2239 9 13.5 9C13.7761 9 14 9.22386 14 9.5V11.5C13.9999 12.8806 12.8807 14 11.5 14H4.5C3.11934 14 2.00008 12.8806 2 11.5V4.5C2 3.11929 3.11929 2 4.5 2H7.5ZM10.7803 1.05078C10.9518 0.966903 11.1559 0.988317 11.3066 1.10547L15.8066 4.60547C15.9284 4.7002 16 4.84573 16 5C16 5.15424 15.9284 5.29983 15.8066 5.39453L11.3066 8.89453C11.1559 9.01162 10.9517 9.03305 10.7803 8.94922C10.6088 8.86533 10.5001 8.6909 10.5 8.5V7.02539C8.26802 7.25505 6.87621 8.99835 6.10352 10.4238L5.94727 10.7236C5.84354 10.931 5.6104 11.0396 5.38477 10.9863C5.15934 10.9329 5.00007 10.7317 5 10.5C5 8.42356 5.51823 6.55894 6.53711 5.20019C7.47545 3.94908 8.82277 3.15337 10.5 3.02148V1.5C10.5 1.30906 10.6088 1.13469 10.7803 1.05078ZM11.5 3.5C11.4999 3.77608 11.2761 4 11 4C9.41093 4 8.18302 4.67315 7.33789 5.7998C6.80109 6.51557 6.41018 7.42583 6.19434 8.47949C7.22177 7.19865 8.77537 6 11 6C11.2761 6 11.5 6.22386 11.5 6.5V7.47754L14.6855 5L11.5 2.52148V3.5Z" fill="currentColor"/></svg>
+                </button>
+                <button class="kc-btn-on-image kc-hero-button kc-hero-button--small" type="button" aria-label="See all images">
+                  <svg width="12" height="12" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M10 5C10 5.55228 9.55228 6 9 6C8.44772 6 8 5.55228 8 5C8 4.44772 8.44772 4 9 4C9.55228 4 10 4.44772 10 5ZM4.5 2C3.11929 2 2 3.11929 2 4.5V9.5C2 10.8807 3.11929 12 4.5 12H9.5C10.8807 12 12 10.8807 12 9.5V4.5C12 3.11929 10.8807 2 9.5 2H4.5ZM3 4.5C3 3.67157 3.67157 3 4.5 3H9.5C10.3284 3 11 3.67157 11 4.5V9.5C11 9.73157 10.9475 9.95088 10.8538 10.1467L8.20919 7.50207C7.54139 6.83427 6.45868 6.83427 5.79089 7.50207L3.1462 10.1467C3.05248 9.95092 3 9.73159 3 9.5V4.5ZM3.85333 10.8538L6.49799 8.20917C6.77526 7.9319 7.22481 7.9319 7.50208 8.20918L10.1467 10.8538C9.9509 10.9475 9.73158 11 9.5 11H4.5C4.26844 11 4.04914 10.9475 3.85333 10.8538ZM6.99994 14C6.18203 14 5.45586 13.6072 4.99976 13H9.49994C11.4329 13 12.9999 11.433 12.9999 9.5V3.99982C13.6072 4.45592 13.9999 5.18209 13.9999 6V9.5C13.9999 11.9853 11.9852 14 9.49994 14H6.99994Z" fill="currentColor"/></svg>
+                </button>
+              </div>
+            </div>
+            <section class="kc-module kc-module--mobile kc-mobile-hero-text-list">
+              <div class="kc-mobile-hero-tabs" data-kc="Tabs">
+                <div class="kc-mobile-hero-tabs-container" role="tablist" aria-label="Pizza Margherita topics">
+                  <button class="kc-mobile-hero-tab kc-mobile-hero-tab--selected" type="button" role="tab" aria-selected="true" tabindex="0">Growing tab</button>
+                  <button class="kc-mobile-hero-tab" type="button" role="tab" aria-selected="false" tabindex="-1">Growing tab</button>
+                  <button class="kc-mobile-hero-tab" type="button" role="tab" aria-selected="false" tabindex="-1">Growing tab</button>
+                  <button class="kc-mobile-hero-tab" type="button" role="tab" aria-selected="false" tabindex="-1">Growing tab</button>
+                  <button class="kc-mobile-hero-tab" type="button" role="tab" aria-selected="false" tabindex="-1">Growing tab</button>
+                </div>
+              </div>
+              <div class="kc-mobile-hero-text">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad ...</p>
+              </div>
+            </section>
+          </article>
+
+          <section class="kc-module kc-module--mobile kc-mobile-miscellaneous-serving-size" id="kc-food-mobile-serving" data-kc="Mobile / Miscellaneous / Serving Size" aria-labelledby="kc-food-mobile-serving-title">
+            <div class="kc-module-title">
+              <h3 id="kc-food-mobile-serving-title">Serving Size: Food (100g)</h3>
+            </div>
+            <div class="kc-mobile-miscellaneous-serving-size__content">
+              <div class="kc-mobile-miscellaneous-serving-size__circles kc-theme-red-2">
+                <div class="kc-mobile-miscellaneous-serving-size__circle"><span class="kc-m-bold">Calories</span><strong>000</strong></div>
+                <div class="kc-mobile-miscellaneous-serving-size__circle"><span class="kc-m-bold">Fat</span><strong>000</strong></div>
+                <div class="kc-mobile-miscellaneous-serving-size__circle"><span class="kc-m-bold">Carbs</span><strong>000</strong><span class="kc-m-foot">XX%</span></div>
+                <div class="kc-mobile-miscellaneous-serving-size__circle"><span class="kc-m-bold">Sugar</span><strong>000</strong><span class="kc-m-foot">XX%</span></div>
+              </div>
+              <span class="kc-mobile-miscellaneous-serving-size__foot">% Daily value*</span>
+            </div>
+          </section>
+
+          <section class="kc-module kc-module--mobile kc-mobile-image-list-interesting-facts kc-mobile-image-list-interesting-facts--2-image" id="kc-food-mobile-facts" data-kc="Mobile / Image List / Interesting Facts" data-kc-variant="Image Amount=2-Image" aria-label="Interesting facts about Pizza Margherita">
+            <div class="kc-food-mobile-facts__row kc-food-mobile-facts__row--first">
+              <div class="kc-food-mobile-facts__col">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+                <span class="kc-m-divider" aria-hidden="true"></span>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+              </div>
+              <span class="kc-img kc-img--cover kc-food-mobile-facts__img-1"><img src="../assets/images/kc/modules/food/food-mobile-facts-01.png" alt="Pizza Margherita" onerror="this.style.display='none'"></span>
+            </div>
+            <div class="kc-food-mobile-facts__row kc-food-mobile-facts__row--second">
+              <span class="kc-img kc-img--cover kc-food-mobile-facts__img-2"><img src="../assets/images/kc/modules/food/food-mobile-facts-02.png" alt="Very large pizza" onerror="this.style.display='none'"></span>
+              <div class="kc-food-mobile-facts__side">
+                <span class="kc-m-divider" aria-hidden="true"></span>
+                <p>A pizza named 'Ottavia' is the largest pizza that has a total surface area of 1,261.65 m² (13,580.28 ft²) and was prepared in Rome, Italy, on 13 December 2012.</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="kc-module kc-module--mobile kc-mobile-image-list-ingredients" id="kc-food-mobile-ingredients" data-kc="Mobile / Image List / Ingredients" aria-labelledby="kc-food-mobile-ingredients-title">
+            <div class="kc-module-title">
+              <h3 id="kc-food-mobile-ingredients-title">Common Ingredients</h3>
+            </div>
+            <div class="kc-mobile-image-list-ingredients__list">
+              <div class="kc-mobile-image-list-ingredients__row">
+                <div class="kc-mobile-image-list-ingredients__item"><span class="kc-img" style="width:32px;height:32px;border-radius:20px"><img src="../assets/images/kc/modules/food/food-mobile-ingredients-01.png" alt="" onerror="this.style.display='none'"></span><span class="kc-m-bold">Ingredient</span></div>
+                <div class="kc-mobile-image-list-ingredients__item"><span class="kc-img" style="width:32px;height:32px;border-radius:20px"><img src="../assets/images/kc/modules/food/food-mobile-ingredients-02.png" alt="" onerror="this.style.display='none'"></span><span class="kc-m-bold">Ingredient</span></div>
+              </div>
+              <div class="kc-mobile-image-list-ingredients__row">
+                <div class="kc-mobile-image-list-ingredients__item"><span class="kc-img" style="width:32px;height:32px;border-radius:20px"><img src="../assets/images/kc/modules/food/food-mobile-ingredients-03.png" alt="" onerror="this.style.display='none'"></span><span class="kc-m-bold">Ingredient</span></div>
+                <div class="kc-mobile-image-list-ingredients__item"><span class="kc-img" style="width:32px;height:32px;border-radius:20px"><img src="../assets/images/kc/modules/food/food-mobile-ingredients-04.png" alt="" onerror="this.style.display='none'"></span><span class="kc-m-bold">Ingredient</span></div>
+              </div>
+            </div>
+          </section>
+
+          <div class="kc-card-more" id="kc-food-mobile-more" hidden>
+            <section class="kc-module kc-module--mobile kc-mobile-text-list-attribution kc-module--card-last" id="kc-food-mobile-attribution" data-kc="Mobile / Text List / Attribution" aria-label="Attribution">
+              <p>Images: Getty Images. Data: en.wikipedia.org · anothersite.com · coolfacts.com Hero image: Holy town Varanasi and the river Ganges</p>
+            </section>
+          </div>
+          <button class="kc-mobile-expansion-see-more" type="button" data-kc="Mobile / Expansion / See more" aria-expanded="false" aria-controls="kc-food-mobile-more">
+            <span class="kc-mobile-expansion-see-more__line" aria-hidden="true"></span>
+            <span class="kc-mobile-expansion-see-more__circle" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3.14645 5.14645C3.34171 4.95118 3.65829 4.95118 3.85355 5.14645L8 9.29289L12.1464 5.14645C12.3417 4.95118 12.6583 4.95118 12.8536 5.14645C13.0488 5.34171 13.0488 5.65829 12.8536 5.85355L8.35355 10.3536C8.15829 10.5488 7.84171 10.5488 7.64645 10.3536L3.14645 5.85355C2.95118 5.65829 2.95118 5.34171 3.14645 5.14645Z" fill="currentColor"/></svg></span>
+            <span class="kc-mobile-expansion-see-more__label">See more</span>
+          </button>
+        </article>
+      </div>
+    </div>
+  </main>
+  <script>
+    const stack = document.querySelector(".kc-food-mobile");
+    const cardExpansion = stack.querySelector(".kc-mobile-expansion-see-more");
+    const cardMore = document.getElementById("kc-food-mobile-more");
+    const cardExpansionLabel = cardExpansion.querySelector(".kc-mobile-expansion-see-more__label");
+    const tablist = stack.querySelector(".kc-mobile-hero-tabs-container");
+
+    function selectTab(tab, focus = false) {
+      const tabs = Array.from(tablist.querySelectorAll('[role="tab"]'));
+      for (const item of tabs) {
+        const selected = item === tab;
+        item.classList.toggle("kc-mobile-hero-tab--selected", selected);
+        item.setAttribute("aria-selected", String(selected));
+        item.tabIndex = selected ? 0 : -1;
+      }
+      if (focus) tab.focus();
+    }
+
+    tablist.addEventListener("click", event => {
+      const tab = event.target.closest('[role="tab"]');
+      if (tab && tablist.contains(tab)) selectTab(tab);
+    });
+    tablist.addEventListener("keydown", event => {
+      const tabs = Array.from(tablist.querySelectorAll('[role="tab"]'));
+      const activeIndex = tabs.indexOf(document.activeElement);
+      const nextIndex = event.key === "ArrowRight" ? (activeIndex + 1) % tabs.length
+        : event.key === "ArrowLeft" ? (activeIndex - 1 + tabs.length) % tabs.length
+        : event.key === "Home" ? 0
+        : event.key === "End" ? tabs.length - 1
+        : -1;
+      if (nextIndex < 0) return;
+      event.preventDefault();
+      selectTab(tabs[nextIndex], true);
+    });
+
+    cardExpansion.addEventListener("click", () => {
+      const expanded = cardExpansion.getAttribute("aria-expanded") !== "true";
+      cardMore.hidden = !expanded;
+      cardExpansion.setAttribute("aria-expanded", String(expanded));
+      cardExpansionLabel.textContent = expanded ? "See less" : "See more";
+    });
+  </script>
+</body>
+</html>
