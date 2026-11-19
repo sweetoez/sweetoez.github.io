@@ -38,6 +38,7 @@ All files exist; fonts load; every page and link works in local preview; the 3 p
 - Scrolling rows (#060): the scroll viewport spans border to border. The start inset (16px) is padding inside the scroller, plus scroll-padding-left if snapping. No right padding. Content must never clip before the card border on either side.
 - Social circles use `/assets/images/kc/brands/<slug>.svg` in the Figma export's order; do not use monograms.
 - Every new entity card uses shared classes and does not override these layout rules.
+- KC module images: /assets/images/kc/modules/<slug>/<slug>-<platform>-<module>-<NN>.png. The map is /_kc-source/kc-image-map.csv (local). When building or rebuilding any kc-<slug> page, fill image slots from this folder by module and order. Files narrower than 85% of their slot are scroll-edge crops: show them left-aligned at natural size over the gray placeholder. Empty slots stay #D3D3D3.
 
 ## Repo + publishing (from #056)
 - Branch main, published by GitHub Pages from main / (root).
