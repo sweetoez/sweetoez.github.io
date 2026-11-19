@@ -1536,7 +1536,7 @@
 /* ===== #061 Animal desktop ===== */
 .kc-animal-desktop-frame { height:auto; min-height:1849px; }
 .kc-animal-desktop > .kc-hero-designer--left-to-right { height:280px; z-index:1; padding-top:0; }
-.kc-animal-desktop > .kc-hero-designer--left-to-right .kc-hero-header { height:280px; }
+.kc-animal-desktop > .kc-hero-designer--left-to-right .kc-hero-header { height:280px; margin:0; }
 .kc-animal-desktop .kc-hero-designer__social { z-index:2; visibility:visible; }
 .kc-animal-desktop .kc-hero-designer__actions svg { width:16px; height:16px; flex:none; color:var(--kc-white); }
 .kc-animal-desktop .kc-modules-panel .kc-btn-outline-icon svg { display:block; width:16px; height:16px; }
