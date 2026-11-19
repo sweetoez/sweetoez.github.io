@@ -1929,6 +1929,48 @@
 .kc-team-mobile .kc-mobile-expansion-see-more__circle svg { position:absolute; top:13px; left:12px; display:block; width:16px; height:16px; }
 .kc-team-mobile .kc-mobile-expansion-see-more:active { transform:scale(.98); }
 .kc-team-mobile .kc-mobile-expansion-see-more:focus-visible { outline:2px solid #272320; outline-offset:2px; }
+
+/* ===== #081 Team desktop ===== */
+.kc-team-desktop-frame { height:auto; min-height:1337px; }
+.kc-team-desktop { position:relative; top:auto; left:auto; width:472px; margin:280px 0 0 403px; }
+.kc-team-desktop > .kc-hero-designer--top-to-bottom.kc-hero-designer--website { height:426px; z-index:1; }
+.kc-team-desktop .kc-hero .kc-text-list-website { height:146px; }
+.kc-team-desktop .kc-hero-body { height:54px; }
+.kc-team-desktop .kc-hero-designer__title__name { overflow:hidden; font-size:32px; line-height:40px; text-overflow:ellipsis; white-space:nowrap; }
+.kc-team-desktop .kc-hero-designer__social { z-index:2; visibility:visible; }
+.kc-team-desktop .kc-hero-designer__actions svg { display:block; width:16px; height:16px; flex:none; color:var(--kc-white); }
+.kc-team-desktop .kc-hero-website__globe { background-color:var(--kc-accent); }
+.kc-team-desktop .kc-hero-website a { color:var(--kc-accent); }
+.kc-team-desktop .kc-text-list-quick-facts--image { height:72px; flex-direction:row; align-items:center; gap:16px; padding:16px 20px; }
+.kc-team-desktop__image { width:40px; height:40px; flex:none; border-radius:6px; background:#D3D3D3; }
+.kc-team-desktop .kc-text-list-quick-facts__list { display:flex; width:376px; flex-direction:row; justify-content:space-between; gap:12px; }
+.kc-team-desktop .kc-text-list-quick-facts__list { margin:0; }
+.kc-team-desktop .kc-text-list-quick-facts__fact { width:auto; height:36px; flex:1 1 0; flex-direction:column; align-items:flex-start; gap:0; }
+.kc-team-desktop .kc-text-list-quick-facts__fact dt { width:auto; }
+.kc-team-desktop .kc-text-list-quick-facts__fact dd { width:auto; margin:0; }
+.kc-team-desktop .kc-image-list-main--square { height:194px; background:var(--kc-accent-soft); }
+.kc-team-desktop .kc-image-list-main--square .kc-image-list-main__tiles { display:flex; width:432px; height:124px; gap:8px; }
+.kc-team-desktop .kc-image-list-main__tile { width:80px; flex:none; }
+.kc-team-desktop .kc-image-list-main__tile .kc-img { width:80px; height:80px; border-radius:6px; }
+.kc-team-desktop .kc-image-list-main__tile-text { display:flex; width:80px; flex-direction:column; gap:4px; }
+.kc-team-desktop .kc-image-list-main__tile-text > span { overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.kc-team-desktop .kc-image-list-interesting-facts--3-image { height:439px; gap:16px; }
+.kc-team-desktop .kc-image-list-interesting-facts--3-image .kc-image-list-interesting-facts__row { align-items:flex-start; }
+.kc-team-desktop .kc-image-list-interesting-facts--3-image .kc-image-list-interesting-facts__row:nth-child(1) { height:131px; }
+.kc-team-desktop .kc-image-list-interesting-facts--3-image .kc-image-list-interesting-facts__row:nth-child(2) { height:133px; }
+.kc-team-desktop .kc-image-list-interesting-facts--3-image .kc-image-list-interesting-facts__row:nth-child(3) { height:111px; }
+.kc-team-desktop .kc-image-list-interesting-facts--3-image .kc-image-list-interesting-facts__row:nth-child(1) .kc-image-list-interesting-facts__text { width:244px; flex:none; }
+.kc-team-desktop .kc-image-list-interesting-facts--3-image .kc-image-list-interesting-facts__row:nth-child(2) .kc-image-list-interesting-facts__text { width:249px; flex:none; text-align:right; }
+.kc-team-desktop .kc-image-list-interesting-facts--3-image .kc-image-list-interesting-facts__row:nth-child(3) .kc-image-list-interesting-facts__text { width:266px; flex:none; }
+.kc-team-desktop .kc-image-list-interesting-facts--3-image .kc-image-list-interesting-facts__row:nth-child(1) .kc-img { width:168px; height:131px; }
+.kc-team-desktop .kc-image-list-interesting-facts--3-image .kc-image-list-interesting-facts__row:nth-child(2) .kc-img { width:163px; height:132px; }
+.kc-team-desktop .kc-image-list-interesting-facts--3-image .kc-image-list-interesting-facts__row:nth-child(3) .kc-img { width:146px; height:111px; }
+.kc-team-desktop .kc-image-list-interesting-facts__text p { margin:0; }
+.kc-team-desktop .kc-text-list-awards { height:114px; }
+.kc-team-desktop .kc-text-list-awards__award[hidden] { display:none !important; }
+.kc-team-desktop .kc-text-list-top-fact-text-list-attributions { height:92px; }
+.kc-team-desktop > .kc-module { margin-top:-1px; }
+.kc-team-desktop .kc-module[hidden] { display:none !important; }
 .kc-artist-mobile .kc-modules-panel .kc-btn-outline-icon svg { display:block; width:16px; height:16px; color:var(--kc-gray-1); }
 .kc-artist-desktop .kc-image-list-interesting-facts--2-image {
   height:395px;
