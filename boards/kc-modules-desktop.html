@@ -11,7 +11,7 @@
     body { min-width:1136px; margin:0; padding:32px; background:#F2F2F2; color:#444; font-family:var(--kc-font); }
     main { width:1072px; margin:0 auto; }
     .kc-board-section { margin:0 0 48px; }
-    .kc-board-section h2 { margin:0 0 16px; color:#444; font-size:18px; font-weight:700; line-height:24px; letter-spacing:-.015em; }
+    .kc-board-section h2 { margin:0 0 16px; color:#444; font-size:18px; font-weight:600; line-height:24px; letter-spacing:-.015em; }
     .kc-board-grid { display:grid; grid-template-columns:472px 472px; column-gap:128px; row-gap:40px; align-items:start; }
     .kc-board-item { width:max-content; }
     .kc-board-label { margin:0 0 8px; color:#666; font-size:12px; line-height:16px; }
@@ -29,8 +29,77 @@
       const arrow = chevron ? '<a class="kc-link" href="#" aria-label="See all ' + text + '"><span class="kc-title-chevron"><img src="../assets/icons/ic_fluent_chevron_right_16_regular.svg" alt="" aria-hidden="true"></span></a>' : "";
       return '<div class="kc-module-title" ' + widthAttr + '><h3>' + text + '</h3>' + arrow + '</div>';
     };
-    const image = (slug, n, w, h, r = 6, alt = "") =>
-      `<span class="kc-img" style="width:${w}px;height:${h}px;border-radius:${typeof r === "number" ? `${r}px` : r}"><img src="../assets/images/kc/modules/${slug}-${n}.jpg" alt="${alt}" onerror="this.style.display='none'"></span>`;
+    const stockPhotos = {
+      "taj-mahal": "Taj Mahal monument with a reflecting pool",
+      "jaipur": "Hawa Mahal palace facade in Jaipur",
+      "kerala": "Houseboat on Kerala backwaters",
+      "mountain-lake": "Mountain lake beside a forest and cabin",
+      "city": "City skyline at sunset",
+      "forest": "Evergreen forest at sunset",
+      "maple-green": "Green Japanese maple leaves",
+      "potted-plant": "Ferns filling a shaded frame",
+      "foliage-dark": "Close-up of overlapping green leaves",
+      "salad": "Bowl of salad with vegetables",
+      "basketball-court": "Basketball resting on an outdoor court",
+      "music-studio": "Audio mixing console in a recording studio",
+      "guitar": "Hands playing an acoustic guitar",
+      "concert": "Crowd at a live music performance",
+      "headphones": "Over-ear headphones on a yellow background",
+      "cinema": "Rows of red seats in a dark cinema",
+      "earth": "Earth viewed from orbit",
+      "jupiter": "Jupiter's Great Red Spot",
+      "koi": "Orange koi swimming in a canal",
+      "koi-feeding": "Colorful koi swimming in a dark pond",
+      "portrait-a": "Illustrative stock portrait of a person in a gray sweater",
+      "portrait-b": "Illustrative stock portrait of a person against a blue background",
+      "portrait-c": "Illustrative stock portrait of a person in a dark sweater",
+      "portrait-d": "Illustrative stock portrait of a person in a white shirt",
+      "portrait-e": "Illustrative stock portrait of a person against a red wall"
+    };
+    const stockSets = {
+      "image-list-places-to-visit": ["taj-mahal", "jaipur", "kerala"],
+      "image-list-top-songs": ["music-studio", "guitar", "headphones"],
+      "image-list-related-songs": ["guitar", "music-studio", "concert"],
+      "image-list-played-by": ["portrait-a", "portrait-b"],
+      "image-list-entity-list": ["portrait-c", "portrait-d", "portrait-e"],
+      "image-list-ingredients": ["salad", "foliage-dark", "potted-plant"],
+      "image-list-top-fact": ["koi", "maple-green"],
+      "image-list-featured-in": ["cinema", "city", "concert"],
+      "image-list-watch-links": ["cinema", "headphones", "music-studio"],
+      "image-list-carded-large": ["portrait-a", "portrait-b", "portrait-c", "portrait-d"],
+      "image-list-carded-small-vertical": ["portrait-a", "portrait-b", "portrait-c", "portrait-d"],
+      "image-list-carded-small-horizontal": ["portrait-a", "portrait-b", "portrait-c", "portrait-d"],
+      "image-list-main": ["portrait-a", "portrait-b", "portrait-c", "portrait-d", "portrait-e"],
+      "image-list-carousel": ["taj-mahal", "jaipur", "kerala", "mountain-lake", "city"],
+      "image-list-interesting-facts": ["mountain-lake", "maple-green", "earth"],
+      "reviews-critics": ["cinema", "city", "forest"],
+      "reviews-articles": ["city", "concert", "cinema"],
+      "reviews-customers": ["portrait-a", "portrait-b", "portrait-c"],
+      "text-list-quick-facts": ["portrait-e"],
+      "videos-trailer": ["cinema"],
+      "videos-tik-toks": ["concert", "guitar", "music-studio", "headphones"],
+      "videos-landscape": ["concert", "city", "guitar"],
+      "miscellaneous-company-details": ["city", "mountain-lake"],
+      "miscellaneous-products": ["headphones", "salad", "music-studio"]
+    };
+    const stockLabels = {
+      "portrait-a": "Portrait in gray sweater",
+      "portrait-b": "Portrait against blue background",
+      "portrait-c": "Portrait in dark sweater",
+      "portrait-d": "Portrait in white shirt",
+      "portrait-e": "Portrait against red wall",
+      "cinema": "Cinema seats",
+      "headphones": "Headphones",
+      "music-studio": "Recording studio"
+    };
+    const stockFile = (slug, n) => {
+      const set = stockSets[slug] || ["mountain-lake", "city", "forest"];
+      return set[(n - 1) % set.length];
+    };
+    const image = (slug, n, w, h, r = 6) => {
+      const file = stockFile(slug, n);
+      return `<span class="kc-img" style="width:${w}px;height:${h}px;border-radius:${typeof r === "number" ? `${r}px` : r}"><img src="../assets/images/kc/stock/${file}.jpg" alt="${stockPhotos[file]}"></span>`;
+    };
     const mono = (letter, label, w, h, round = false) =>
       `<span class="kc-monogram${round ? " kc-monogram--round" : ""}" style="width:${w}px;height:${h}px;font-size:${Math.round(h * .45)}px" role="img" aria-label="${label}">${letter}</span>`;
     const stars = (score, pattern = [1, 1, 1, 0, 0]) =>
@@ -44,20 +113,22 @@
       const circle = shape === "Circle";
       const rectangle = shape === "Rectangle";
       const slug = "image-list-main";
-      const tiles = Array.from({ length: 5 }, (_, i) =>
-        `<div class="kc-image-list-main__tile">${image(slug, i + 1, 80, rectangle ? 120 : 80, circle ? 100 : 6, `Module image ${i + 1}`)}<div class="kc-image-list-main__tile-text"><span class="kc-copy-bold">Title</span><span class="kc-copy-small">Sub-title</span></div></div>`).join("");
+      const tiles = Array.from({ length: 5 }, (_, i) => {
+        const label = stockLabels[stockFile(slug, i + 1)];
+        return `<div class="kc-image-list-main__tile">${image(slug, i + 1, 80, rectangle ? 120 : 80, circle ? 100 : 6)}<div class="kc-image-list-main__tile-text"><span class="kc-copy-bold">${label}</span><span class="kc-copy-small">Stock portrait</span></div></div>`;
+      }).join("");
       add("Image List", `Image List / Main — Shape=${shape}`, `kc-image-list-main kc-image-list-main--${shape.toLowerCase()}`,
-        `${title("Module title")}<div class="kc-image-list-main__tiles">${tiles}</div>`);
+        `${title("Stock portraits")}<div class="kc-image-list-main__tiles">${tiles}</div>`);
     });
 
     add("Image List", "Image List / Related Songs", "kc-image-list-related-songs",
       `${title("Related songs")}<div class="kc-image-list-related-songs__list">${[1, 2, 3].map((n) => `<div class="kc-image-list-related-songs__song"><div class="kc-image-list-related-songs__row"><div class="kc-image-list-related-songs__text"><span class="kc-copy-bold">Name of Related Song ${n}</span><span class="kc-copy">Title of Album · Year of Album</span></div>${image("image-list-related-songs", n, 100, 56, 4, `Related song image ${n}`)}</div>${n < 3 ? '<span class="kc-divider"></span>' : ""}</div>`).join("")}</div>`);
 
     add("Image List", "Image List / Places to Visit", "kc-image-list-places-to-visit",
-      `${title("Top places to visit", false)}<div class="kc-image-list-places-to-visit__items">${["Lantern Bridge", "Harbor Market", "Cedar Falls"].map((name, i) => `<div class="kc-image-list-places-to-visit__item">${image("image-list-places-to-visit", i + 1, 100, i === 1 ? 100 : 116, 6, `${name} image`)}<span class="kc-copy">${name}</span></div>`).join("")}</div>`);
+      `${title("Top places to visit", false)}<div class="kc-image-list-places-to-visit__items">${["Taj Mahal", "Hawa Mahal", "Kerala"].map((name, i) => `<div class="kc-image-list-places-to-visit__item">${image("image-list-places-to-visit", i + 1, 100, i === 1 ? 100 : 116, 6, `${name} image`)}<span class="kc-copy">${name}</span></div>`).join("")}</div>`);
 
     add("Image List", "Image List / Element Uses", "kc-image-list-element-uses",
-      `${title("Module Title")}<div class="kc-image-list-element-uses__list">${[1, 2, 3].map(n => `<div class="kc-image-list-element-uses__use"><div class="kc-image-list-element-uses__row"><p class="kc-copy">${longCopy}</p>${image("image-list-element-uses", n, 60, 60, 6, `Module image ${n}`)}</div>${n < 3 ? '<span class="kc-divider"></span>' : ""}</div>`).join("")}</div>`);
+      `${title("Image examples")}<div class="kc-image-list-element-uses__list">${[1, 2, 3].map(n => `<div class="kc-image-list-element-uses__use"><div class="kc-image-list-element-uses__row"><p class="kc-copy">${longCopy}</p>${image("image-list-element-uses", n, 60, 60, 6, `Module image ${n}`)}</div>${n < 3 ? '<span class="kc-divider"></span>' : ""}</div>`).join("")}</div>`);
 
     add("Image List", "Image List / Played By", "kc-image-list-played-by",
       `${title("Played by")}<div class="kc-image-list-played-by__row">${["Jordan Reyes", "Sam Okafor"].map((name, i) => `<div class="kc-image-list-played-by__actor">${image("image-list-played-by", i + 1, 60, 60, 50, name)}<div class="kc-col"><span class="kc-copy-bold">${name}</span><span class="kc-copy">Date/Character</span></div></div>`).join("")}</div>`);
@@ -73,7 +144,10 @@
       `${title("Featured in")}<div class="kc-image-list-featured-in__list">${[1, 2, 3].map(n => `<div class="kc-image-list-featured-in__row">${image("image-list-featured-in", n, 32, 32, 20, `Featured in image ${n}`)}<div class="kc-image-list-featured-in__text"><span class="kc-copy-bold">Name of List</span><span class="kc-copy-small">List Publisher</span></div></div>`).join("")}</div>`);
 
     add("Image List", "Image List / Watch Links", "kc-image-list-watch-links",
-      `${title("Watch", false)}<div class="kc-image-list-watch-links__list">${[1, 2].map(n => `<div class="kc-image-list-watch-links__row">${[1, 2, 3].map(i => `<a class="kc-link kc-image-list-watch-links__item" href="#">${image("image-list-watch-links", (n - 1) * 3 + i, 32, 32, 2, `Watch link ${i}`)}<span class="kc-image-list-watch-links__text"><span class="kc-copy-bold">Title</span><span class="kc-copy-small kc-no-ls">Sub-title</span></span></a>`).join("")}</div>`).join("")}</div>`);
+      `${title("Watch", false)}<div class="kc-image-list-watch-links__list">${[1, 2].map(n => `<div class="kc-image-list-watch-links__row">${[1, 2, 3].map(i => {
+        const file = stockFile("image-list-watch-links", (n - 1) * 3 + i);
+        return `<a class="kc-link kc-image-list-watch-links__item" href="#">${image("image-list-watch-links", (n - 1) * 3 + i, 32, 32, 2)}<span class="kc-image-list-watch-links__text"><span class="kc-copy-bold">${stockLabels[file]}</span><span class="kc-copy-small kc-no-ls">Stock photo</span></span></a>`;
+      }).join("")}</div>`).join("")}</div>`);
 
     const largeCardRow = row => [1, 2].map(col => [
       '<div class="kc-card kc-image-list-carded-large__card">',
@@ -93,7 +167,7 @@
       `${title("List Title")}<div class="kc-image-list-carded-small-horizontal__clip"><div class="kc-image-list-carded-small-horizontal__cards">${[1, 2, 3, 4].map(n => `<div class="kc-card kc-image-list-carded-small-horizontal__card"><div class="kc-image-list-carded-small-horizontal__inner">${image("image-list-carded-small-horizontal", n, 36, 36, 2, "Image,Title / Vertical")}<span class="kc-copy-bold">Lorem ipsum</span></div></div>`).join("")}</div></div><button class="kc-btn-flipper kc-image-list-carded-small-horizontal__next" type="button" aria-label="Next"><img src="../assets/icons/ic_fluent_chevron_right_16_regular.svg" alt="" aria-hidden="true"></button>`);
 
     add("Image List", "Image List / Entity List", "kc-image-list-entity-list",
-      `${title("Module title")}<div class="kc-image-list-entity-list__list">${[0, 1, 2].map(row => `<div class="kc-image-list-entity-list__row">${names.slice(row * 2, row * 2 + 2).map((name, i) => `<div class="kc-image-list-entity-list__person">${image("image-list-entity-list", row * 2 + i + 1, 32, 32, 20, name)}<span class="kc-copy-bold">${name}</span></div>`).join("")}</div>`).join("")}</div>`);
+      `${title("Stock portraits")}<div class="kc-image-list-entity-list__list">${[0, 1, 2].map(row => `<div class="kc-image-list-entity-list__row">${names.slice(row * 2, row * 2 + 2).map((name, i) => `<div class="kc-image-list-entity-list__person">${image("image-list-entity-list", row * 2 + i + 1, 32, 32, 20, name)}<span class="kc-copy-bold">${name}</span></div>`).join("")}</div>`).join("")}</div>`);
 
     add("Image List", "Image List / Ingredients", "kc-image-list-ingredients",
       `${title("Common ingredients")}<div class="kc-image-list-ingredients__list">${[0, 1].map(row => `<div class="kc-image-list-ingredients__row">${["Flour", "Butter", "Sugar", "Eggs", "Milk", "Salt"].slice(row * 3, row * 3 + 3).map((name, i) => `<div class="kc-image-list-ingredients__item">${image("image-list-ingredients", row * 3 + i + 1, 32, 32, 20, name)}<span class="kc-copy-bold">${name}</span></div>`).join("")}</div>`).join("")}</div>`);
@@ -142,7 +216,7 @@
       Array.from({ length: Number(quantity) }, (_, i) => `${i ? '<span class="kc-divider--v"></span>' : ""}<div class="kc-text-list-top-fact__item"><span class="kc-copy-bold">Life Span</span><strong class="kc-t-highlight-l kc-gray-copy">12 - 17</strong><span class="kc-copy">years</span></div>`).join(""), "Top facts"));
 
     add("Text List", "Text List / Top Fact/Text List/Attributions", "kc-text-list-top-fact-text-list-attributions",
-      `<p>Images: Stock Images. Data: Open Encyclopedia&nbsp; example.org&nbsp; example.net Hero image: Riverside Old Town at Lantern Bridge</p>`, "Attributions");
+      `<p>Module images: <a href="https://unsplash.com/license">Unsplash License</a>. Data: Open Encyclopedia&nbsp; example.org&nbsp; example.net Hero image: City skyline at sunset</p>`, "Attributions");
 
     const quickFacts = `<div class="kc-text-list-quick-facts__fact"><dt class="kc-copy-bold">Fact title</dt><dd class="kc-copy">Lorem ipsum Dolor sit amet</dd></div>`;
     add("Text List", "Text List / Quick Facts — Elements=Text Only, See more=No", "kc-text-list-quick-facts kc-text-list-quick-facts--text-only",
@@ -192,7 +266,7 @@
     add("Miscellaneous", "Miscellaneous / Social Media", "kc-miscellaneous-social-media",
       [["E", "Open Encyclopedia"], ["F", "Friends app"], ["M", "Movie DB"], ["P", "Photo app"], ["T", "Video app"]].map(([letter, text]) => `<a class="kc-btn-outline kc-miscellaneous-social-media__pill" href="#">${mono(letter, text, 28, 28, true)}<span class="kc-copy-small">${text}</span></a>`).join("") + `<button class="kc-btn-flipper kc-miscellaneous-social-media__next" type="button" aria-label="Next"><img src="../assets/icons/ic_fluent_chevron_right_16_regular.svg" alt="" aria-hidden="true"></button>`, "Social media");
     add("Miscellaneous", "Miscellaneous / Map", "kc-miscellaneous-map",
-      `<div class="kc-miscellaneous-map__frame" role="img" aria-label="Map"><button class="kc-btn-on-image kc-miscellaneous-map__expand" type="button" aria-label="Expand map"><img src="../assets/icons/ic_fluent_arrow_maximize_20_regular.svg" alt="" aria-hidden="true"></button></div>`, "Map");
+      `<div class="kc-miscellaneous-map__frame"><img src="../assets/images/kc/maps/new-delhi.png" alt="Map of New Delhi, India"><a class="kc-btn-on-image kc-miscellaneous-map__expand" href="https://commons.wikimedia.org/wiki/File:New_Delhi_map_no_titles.png" aria-label="Open map of New Delhi"><img src="../assets/icons/ic_fluent_arrow_maximize_20_regular.svg" alt="" aria-hidden="true"></a><span class="kc-miscellaneous-map__credit"><a href="https://commons.wikimedia.org/wiki/File:New_Delhi_map_no_titles.png">Winston Samuel</a> · <a href="https://www.openstreetmap.org/copyright">© OpenStreetMap contributors</a> · <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></span></div>`, "Map");
     add("Miscellaneous", "Miscellaneous / Products", "kc-miscellaneous-products",
       `${title("Shop related products")}<div class="kc-miscellaneous-products__row">${[1, 2, 3].map(n => `<article class="kc-card kc-miscellaneous-products__card">${image("miscellaneous-products", n, 120, 120, 6, `Product ${n} image`)}<div class="kc-miscellaneous-products__text"><span class="kc-copy kc-no-ls">Product title</span><strong class="kc-copy-bold kc-no-ls">${n === 1 ? "$10.00 $100.00" : "$10.00"}</strong><span class="kc-copy kc-no-ls kc-miscellaneous-products__store">Store</span></div></article>`).join("")}</div>`);
 

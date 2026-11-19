@@ -1,0 +1,13 @@
+* { box-sizing:border-box; }
+body { margin:0; padding:32px; background:var(--kc-gray-5); color:var(--kc-gray-1); font-family:var(--kc-font); }
+a { color:inherit; }
+a:focus-visible, .kc-entity-board__scroll:focus-visible { outline:2px solid #272320; outline-offset:2px; }
+.kc-entity-board { display:grid; grid-template-columns:repeat(auto-fit, minmax(0, 1344px)); align-items:start; gap:32px; }
+.kc-entity-board section { min-width:0; }
+.kc-entity-board h2 { margin:0 0 8px; font-size:16px; }
+.kc-entity-board__scroll { max-width:100%; overflow-x:auto; }
+.kc-entity-board iframe { display:block; width:1344px; height:2100px; border:0; }
+.kc-entity-board__hint { display:none; }
+@media (max-width:1407px) {
+  .kc-entity-board__hint { display:block; }
+}

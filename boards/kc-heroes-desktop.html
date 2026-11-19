@@ -11,7 +11,7 @@
     body { min-width:560px; margin:0; padding:32px 48px; background:var(--kc-gray-5); color:var(--kc-gray-1); font-family:var(--kc-font); }
     main { width:max-content; }
     .kc-hero-board-section { margin:0 0 40px; }
-    .kc-hero-board-section h2 { margin:0 0 16px; color:var(--kc-black); font-size:20px; font-weight:700; line-height:24px; }
+    .kc-hero-board-section h2 { margin:0 0 16px; color:var(--kc-black); font-size:20px; font-weight:600; line-height:24px; }
     .kc-hero-board-items { display:flex; flex-direction:column; gap:40px; }
     .kc-hero-board-item { width:max-content; }
     .kc-hero-board-label { margin:0 0 8px; color:var(--kc-gray-2); font-size:12px; line-height:16px; }
@@ -27,7 +27,28 @@
     const shareLarge = (extraClass = "") => `<button class="kc-btn-on-image kc-hero-button kc-hero-button--large kc-hero-button--share ${extraClass}" type="button"><img src="../assets/icons/ic_fluent_share_16_regular.svg" alt="" aria-hidden="true"><span class="kc-hero-button__label">Share</span></button>`;
     const allImages = () => `<button class="kc-btn-on-image kc-hero-button kc-hero-button--large kc-hero-button--all-images" type="button"><img src="../assets/icons/ic_fluent_image_multiple_16_regular.svg" alt="" aria-hidden="true"><span class="kc-hero-button__label">All images</span></button>`;
     const topActions = extraClass => `<div class="kc-hero-top-actions ${extraClass}" data-kc="Top Actions">${shareLarge()}${allImages()}</div>`;
-    const image = (path, alt, classes) => `<span class="kc-img kc-hero-img ${classes}"><img src="../assets/images/kc/heroes/${path}" alt="${alt}" onerror="this.style.display='none'"></span>`;
+    const heroPhotos = {
+      cinema: "Rows of red seats in a dark cinema, used as illustrative film artwork",
+      city: "City skyline at sunset",
+      concert: "Crowd at a live music performance",
+      guitar: "Hands playing an acoustic guitar",
+      lake: "Mountain lake beside a forest and cabin",
+      portrait: "Illustrative stock portrait of a person in a gray sweater",
+      portraitColor: "Illustrative stock portrait of a person against a blue background"
+    };
+    const heroPhoto = path => {
+      if (path.includes("video-image")) return ["cinema", heroPhotos.cinema];
+      if (path.includes("single-image-portrait")) return ["portrait-a", heroPhotos.portrait];
+      if (path.includes("single-image-square")) return ["guitar", heroPhotos.guitar];
+      if (path.includes("single-image-landscape")) return ["mountain-lake", heroPhotos.lake];
+      if (path.includes("designer-cutout")) return ["portrait-b", heroPhotos.portraitColor];
+      if (path.includes("designer-main")) return ["concert", heroPhotos.concert];
+      return ["city", heroPhotos.city];
+    };
+    const image = (path, alt, classes) => {
+      const [file, description] = heroPhoto(path);
+      return `<span class="kc-img kc-hero-img ${classes}"><img src="../assets/images/kc/stock/${file}.jpg" alt="${description}"></span>`;
+    };
     const title = (entity, category, classes) => `<div class="kc-hero-title ${classes}"><h2 class="${classes}__name">${entity}</h2><p class="${classes}__category">${category}</p></div>`;
     const textModule = website => `<div class="${website ? "kc-text-list-website" : "kc-text-list"}"><p class="kc-hero-body">${bodyCopy}</p>${website ? '<div class="kc-hero-website"><span class="kc-hero-website__globe" aria-hidden="true"></span><a href="#">contoso.com</a></div>' : ""}</div>`;
 
@@ -75,8 +96,8 @@
           return `<article class="kc-hero kc-hero-single-image kc-hero-single-image--${layout}${website ? " kc-hero-single-image--website" : ""}" data-kc="${variant}">
             <div class="kc-hero-header">
               <div class="kc-hero-single-image__band"></div>
-              ${image(imageFile, "Cedar Falls", "kc-hero-single-image__image")}
-              ${title("Cedar Falls", "City in Northland", "kc-hero-single-image__title")}
+              ${image(imageFile, "Mountain lake beside a forest and cabin", "kc-hero-single-image__image")}
+              ${title("Mountain Lake", "Alpine landscape", "kc-hero-single-image__title")}
               ${social("kc-hero-single-image__social")}
               ${shareSmall("kc-hero-single-image__share")}
             </div>
