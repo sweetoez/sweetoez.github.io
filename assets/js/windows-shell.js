@@ -59,9 +59,10 @@ const storySections = [
     ],
   },
 ];
-const digestTitle = document.querySelector(".digest-title");
+const digest = document.querySelector(".digest");
+const digestTitles = [...digest.querySelectorAll("[data-digest-title]")];
 const digestBars = [...document.querySelectorAll(".digest-bar")];
-const digestButtons = [...document.querySelectorAll(".digest-2u-paddles button")];
+const digestButtons = [...digest.querySelectorAll("[data-digest-nav]")];
 let scaleMode = "fit";
 let digestIndex = 0;
 
@@ -112,9 +113,11 @@ function populateStories() {
 
 function moveDigest(direction) {
   digestIndex = (digestIndex + direction + digestStories.length) % digestStories.length;
-  digestTitle.textContent = digestStories[digestIndex];
-  digestBars.forEach((bar, index) => {
-    bar.classList.toggle("is-active", index === digestIndex);
+  digestTitles.forEach((title) => {
+    title.textContent = digestStories[digestIndex];
+  });
+  digestBars.forEach((bar) => {
+    bar.classList.toggle("is-active", Number(bar.dataset.segment) === digestIndex);
   });
 }
 
@@ -176,8 +179,15 @@ outlinesToggle.addEventListener("click", () => {
   outlinesToggle.setAttribute("aria-pressed", String(enabled));
 });
 
-digestButtons.forEach((button, index) => {
-  button.addEventListener("click", () => moveDigest(index === 0 ? -1 : 1));
+digestButtons.forEach((button) => {
+  button.addEventListener("click", () => moveDigest(Number(button.dataset.digestNav)));
+});
+
+digest.addEventListener("keydown", (event) => {
+  if (event.key === "ArrowLeft" || event.key === "ArrowRight") {
+    event.preventDefault();
+    moveDigest(event.key === "ArrowRight" ? 1 : -1);
+  }
 });
 
 document.querySelector(".p2-refresh__button").addEventListener("click", () => {

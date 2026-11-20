@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>MSN 1u segment widgets</title>
+  <link rel="stylesheet" href="../assets/css/msn-components.css">
   <style>
     @font-face {
       font-family: "Selawik";
@@ -280,15 +281,6 @@
       --dg-1u-img-radius: 12px;
       --dg-1u-meta: #616161;
     }
-    .seg-widget{box-sizing:border-box;position:relative;display:flex;align-items:stretch;width:100%;min-height:368px;padding:12px;border-radius:24px;background:var(--w-surface);box-shadow:inset 0 0 0 1px var(--w-stroke);overflow:hidden;font-family:var(--w-font);color:var(--w-ink);}
-    .seg-widget *{box-sizing:border-box;margin:0;}
-    .seg-more{position:absolute;top:24px;right:24px;z-index:2;width:36px;height:36px;padding:0 6px;display:flex;align-items:center;justify-content:center;border-radius:12px;border:1px solid rgba(255,255,255,0);background:rgba(255,255,255,0.70);box-shadow:0 0 1px rgba(0,0,0,0.15);cursor:pointer;visibility:hidden;}
-    .seg-more{color:var(--w-ink);}
-    .seg-widget:hover .seg-more,.seg-widget:focus-within .seg-more{visibility:visible;}
-    .seg-more:focus-visible{outline:2px solid var(--w-ink);outline-offset:2px;}
-    .seg-more svg{width:24px;height:24px;display:block;}
-
-    .seg-weather{background:#ACD1F2;}
     .fin{flex:1 1 0;min-width:0;display:flex;flex-direction:column;align-items:flex-start;padding:18px;}
     .fin-body{align-self:stretch;flex:1 1 0;display:flex;flex-direction:column;gap:12px;min-height:0;}
     .fin-title{display:flex;flex-direction:column;align-items:flex-start;gap:2px;padding:2px 2px 0 2px;}
@@ -412,29 +404,6 @@
     .pod-pause svg{width:32px;height:32px;}
     .pod-play:focus-visible,.pod-btn:focus-visible{outline:2px solid var(--w-ink);outline-offset:2px;}
 
-    .wx-content{position:relative;flex:1 1 0;min-width:0;display:flex;flex-direction:column;align-items:center;gap:20px;}
-    .wx-sun{position:absolute;left:31.83px;top:10px;z-index:0;width:138px;height:108px;pointer-events:none;display:block;}
-    .wx-area{position:relative;z-index:1;align-self:stretch;display:flex;flex-direction:column;align-items:flex-start;gap:22px;padding:18px 18px 0 18px;}
-    .wx-loc{align-self:stretch;display:flex;align-items:center;gap:16px;padding:0 2px;}
-    .wx-city{font-size:20px;line-height:26px;font-weight:650;}
-    .wx-now{align-self:stretch;height:62px;display:flex;align-items:center;gap:20px;padding:0 2px;}
-    .wx-temp{display:flex;align-items:center;gap:2px;}
-    .wx-deg-num{font-size:56px;line-height:40px;font-weight:600;}
-    .wx-deg{width:16px;height:48px;font-size:38px;line-height:40px;font-weight:480;}
-    .wx-cond{flex:1 1 0;min-width:0;display:flex;flex-direction:column;justify-content:flex-end;align-items:flex-end;gap:4px;}
-    .wx-cond-text{align-self:stretch;text-align:right;font-size:14px;line-height:20px;font-weight:650;}
-    .wx-hl{align-self:stretch;display:flex;justify-content:flex-end;align-items:flex-end;gap:12px;font-size:14px;line-height:20px;font-weight:410;}
-    .wx-graph{position:relative;z-index:1;list-style:none;padding:0 4px;align-self:stretch;height:194px;display:flex;justify-content:space-between;align-items:center;border-radius:12px;background:rgba(255,255,255,0.45);}
-    .wx-hour{flex:1 0 0;min-width:0;height:194px;min-height:176px;padding:24px 0 32px 0;display:flex;flex-direction:column;justify-content:space-between;align-items:center;overflow:hidden;border-radius:32px 32px 48px 48px;}
-    .wx-time{font-size:14px;line-height:20px;font-weight:410;white-space:nowrap;}
-    .wx-hbot{display:flex;flex-direction:column;align-items:center;gap:16px;}
-    .wx-icon{width:24px;height:24px;flex-shrink:0;display:flex;align-items:center;justify-content:center;overflow:visible;}
-    .wx-icon img{display:block;max-width:none;flex:none;}
-    .wx-data{display:flex;flex-direction:column;align-items:center;gap:18px;}
-    .wx-htemp{font-size:14px;line-height:20px;font-weight:650;}
-    .wx-rain{display:inline-flex;align-items:center;gap:2px;font-size:12px;line-height:16px;font-weight:410;}
-    .wx-drop{width:12px;height:12px;display:block;color:#272320;}
-    .wx-drop svg{width:12px;height:12px;display:block;}
 
     .cg-section {
       width: 100%;
@@ -812,299 +781,6 @@
       }
     }
 
-    .dg-section {
-      width: 100%;
-      max-width: 360px;
-      margin: 48px auto 0;
-    }
-
-    .dg-section-title {
-      margin: 0 0 16px 0;
-      font-size: 20px;
-      line-height: 26px;
-      font-weight: 650;
-      color: #272320;
-    }
-
-    .digest {
-      position: relative;
-      width: 100%;
-      max-width: 360px;
-      height: 368px;
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-      overflow: hidden;
-      padding: 12px;
-      border: 1px solid #E0E0E0;
-      border-radius: 24px;
-      background: #FFFFFF;
-      font-family: "Segoe UI Variable Text", "Segoe UI", Selawik, system-ui, -apple-system, "Helvetica Neue", Arial;
-    }
-
-    .digest-2u-inner,
-    .digest-2u-paddles {
-      display: none;
-    }
-
-    .digest-1u {
-      display: flex;
-      min-height: 0;
-      flex: 1;
-      flex-direction: column;
-      gap: 16px;
-    }
-
-    .digest-1u-frame {
-      position: relative;
-      width: 100%;
-      flex: none;
-      aspect-ratio: 312 / 172;
-      overflow: hidden;
-      border-radius: var(--dg-1u-img-radius);
-      background: #BDBDBD;
-    }
-
-    .digest-1u-image {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .digest[data-image-missing="true"] .digest-1u-image {
-      visibility: hidden;
-    }
-
-    .digest-1u-text {
-      display: flex;
-      min-height: 0;
-      flex: 1;
-      flex-direction: column;
-      padding: 0 18px 18px;
-      color: #242424;
-    }
-
-    .digest-publisher {
-      display: flex;
-      height: 28px;
-      flex: none;
-      align-items: center;
-      gap: 4px;
-      font-size: 12px;
-      line-height: 16px;
-      white-space: nowrap;
-    }
-
-    .digest-1u .digest-publisher {
-      color: var(--dg-1u-meta);
-    }
-
-    .digest-2u-inner .digest-publisher {
-      color: #FFFFFF;
-    }
-
-    .digest-monogram {
-      display: flex;
-      width: 16px;
-      height: 16px;
-      flex: none;
-      align-items: center;
-      justify-content: center;
-      border-radius: 4px;
-      background: #E0E0E0;
-      color: #424242;
-      font-size: 10px;
-      font-weight: 600;
-      line-height: 16px;
-    }
-
-    .digest-2u-inner .digest-monogram {
-      background: rgba(255, 255, 255, 0.2);
-      color: #FFFFFF;
-    }
-
-    .digest-title {
-      display: -webkit-box;
-      overflow: hidden;
-      margin: 0;
-      font-size: 20px;
-      font-weight: 650;
-      line-height: 26px;
-      letter-spacing: 0;
-      -webkit-box-orient: vertical;
-      -webkit-line-clamp: 2;
-    }
-
-    .digest-1u .digest-title {
-      margin-top: 4px;
-      color: #242424;
-    }
-
-    .digest-2u-inner .digest-title {
-      color: #FFFFFF;
-    }
-
-    .digest-1u-controls {
-      display: flex;
-      height: 36px;
-      flex: none;
-      align-items: center;
-      justify-content: space-between;
-      margin-top: auto;
-    }
-
-    .digest-2u-inner {
-      height: 100%;
-      flex-direction: column;
-      justify-content: flex-end;
-      gap: 12px;
-      padding: 18px;
-    }
-
-    .digest-2u-content {
-      display: flex;
-      flex-direction: column;
-      gap: 4px;
-      padding: 0 100px 0 2px;
-    }
-
-    .digest-pagination {
-      display: flex;
-      width: 138px;
-      height: 12px;
-      flex: none;
-      align-items: center;
-      gap: 3px;
-      padding: 4px;
-      box-sizing: border-box;
-    }
-
-    .digest-bar {
-      height: 4px;
-      flex: 1 1 0;
-      border-radius: 2px;
-    }
-
-    .digest-2u-inner .digest-bar {
-      background: rgba(255, 255, 255, 0.30);
-    }
-
-    .digest-2u-inner .digest-bar.is-active {
-      background: #E5EBFA;
-    }
-
-    .digest-1u .digest-bar {
-      background: var(--dg-1u-track);
-    }
-
-    .digest-1u .digest-bar.is-active {
-      background: var(--dg-1u-fill);
-    }
-
-    .digest-2u-paddles {
-      position: absolute;
-      right: 32px;
-      bottom: 32px;
-      gap: 8px;
-    }
-
-    .digest-1u-paddles {
-      display: flex;
-      gap: 8px;
-    }
-
-    .digest button {
-      display: flex;
-      width: 36px;
-      height: 36px;
-      flex: none;
-      align-items: center;
-      justify-content: center;
-      border-radius: 12px;
-      color: var(--dg-icon);
-    }
-
-    .digest-2u-paddles button {
-      padding: 0;
-      border: none;
-      background: #FFFFFF;
-      box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.08), 0 1px 3px 0 rgba(0, 0, 0, 0.08);
-    }
-
-    .digest-1u-paddles button {
-      padding: 0 6px;
-      border: 1px solid rgba(0, 0, 0, 0.08);
-      background: transparent;
-      box-shadow: none;
-    }
-
-    .digest button:focus-visible {
-      outline: 2px solid #242424;
-      outline-offset: 2px;
-    }
-
-    .digest-chevron {
-      display: block;
-      width: 6.5px;
-      height: 12px;
-      fill: var(--dg-icon);
-    }
-
-    @container stage (min-width: 614px) {
-      .dg-section {
-        max-width: 736px;
-      }
-
-      .digest {
-        width: 100%;
-        min-width: 616px;
-        max-width: 736px;
-        height: 368px;
-        display: block;
-        border: none;
-        background: linear-gradient(180deg, rgba(40, 37, 35, 0.00) 0%, rgba(40, 37, 35, 0.20) 40%, rgba(40, 37, 35, 0.80) 70%), url("/assets/images/msn/digest-1.jpg") lightgray 50% / cover no-repeat;
-      }
-
-      .digest-2u-inner {
-        display: flex;
-        height: 100%;
-      }
-
-      .digest-2u-paddles {
-        display: flex;
-      }
-
-      .digest-1u {
-        display: none;
-      }
-    }
-
-    @container stage (min-width: 930px) {
-      .dg-section {
-        width: calc(66.666667% - 5.333333px);
-        max-width: 688px;
-      }
-    }
-
-    @container stage (max-width: 613px) {
-      .dg-section {
-        max-width: 360px;
-      }
-
-      .digest {
-        width: 100%;
-        min-width: 0;
-        max-width: 360px;
-        display: flex;
-        border: 1px solid #E0E0E0;
-        background: #FFFFFF;
-        background-image: none !important;
-      }
-
-      .digest-1u {
-        display: flex;
-      }
-    }
   </style>
 </head>
 <body>
@@ -1150,7 +826,7 @@
                   <div class="wx-cond"><span class="wx-cond-text">Mostly sunny</span><span class="wx-hl"><span>H 55°</span><span>L 32°</span></span></div>
                 </div>
               </div>
-              <ol class="wx-graph">
+              <ol class="wx-graph" aria-label="Hourly forecast">
                 <li class="wx-hour"><span class="wx-time">Now</span><span class="wx-hbot"><span class="wx-icon"><img src="/assets/images/msn/widgets/wx-hr-1.svg" alt="Partly sunny"></span><span class="wx-data"><span class="wx-htemp">42°</span><span class="wx-rain"><span class="wx-drop" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 1C6.13261 1 6.25978 1.05268 6.35355 1.14645L6.35479 1.14768C6.61026 1.40316 7.38601 2.1789 8.09952 3.21674C8.80557 4.24372 9.5 5.59712 9.5 7C9.5 8.33709 9.13964 9.35239 8.48109 10.0347C7.82158 10.7181 6.92808 11 6 11C5.07192 11 4.17842 10.7181 3.51891 10.0347C2.86036 9.35239 2.5 8.33709 2.5 7C2.5 5.59712 3.19443 4.24372 3.90048 3.21674C4.61398 2.17892 5.3897 1.40319 5.64519 1.1477L5.64645 1.14645C5.74021 1.05268 5.86739 1 6 1Z" fill="currentColor"/></svg></span><span>0%</span></span></span></span></li>
                 <li class="wx-hour"><span class="wx-time">10AM</span><span class="wx-hbot"><span class="wx-icon"><img src="/assets/images/msn/widgets/wx-hr-2.svg" alt="Light snow"></span><span class="wx-data"><span class="wx-htemp">43°</span><span class="wx-rain"><span class="wx-drop" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 1C6.13261 1 6.25978 1.05268 6.35355 1.14645L6.35479 1.14768C6.61026 1.40316 7.38601 2.1789 8.09952 3.21674C8.80557 4.24372 9.5 5.59712 9.5 7C9.5 8.33709 9.13964 9.35239 8.48109 10.0347C7.82158 10.7181 6.92808 11 6 11C5.07192 11 4.17842 10.7181 3.51891 10.0347C2.86036 9.35239 2.5 8.33709 2.5 7C2.5 5.59712 3.19443 4.24372 3.90048 3.21674C4.61398 2.17892 5.3897 1.40319 5.64519 1.1477L5.64645 1.14645C5.74021 1.05268 5.86739 1 6 1Z" fill="currentColor"/></svg></span><span>0%</span></span></span></span></li>
                 <li class="wx-hour"><span class="wx-time">11AM</span><span class="wx-hbot"><span class="wx-icon"><img src="/assets/images/msn/widgets/wx-hr-3.svg" alt="Windy"></span><span class="wx-data"><span class="wx-htemp">45°</span><span class="wx-rain"><span class="wx-drop" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 1C6.13261 1 6.25978 1.05268 6.35355 1.14645L6.35479 1.14768C6.61026 1.40316 7.38601 2.1789 8.09952 3.21674C8.80557 4.24372 9.5 5.59712 9.5 7C9.5 8.33709 9.13964 9.35239 8.48109 10.0347C7.82158 10.7181 6.92808 11 6 11C5.07192 11 4.17842 10.7181 3.51891 10.0347C2.86036 9.35239 2.5 8.33709 2.5 7C2.5 5.59712 3.19443 4.24372 3.90048 3.21674C4.61398 2.17892 5.3897 1.40319 5.64519 1.1477L5.64645 1.14645C5.74021 1.05268 5.86739 1 6 1Z" fill="currentColor"/></svg></span><span>0%</span></span></span></span></li>
@@ -1639,7 +1315,7 @@
             </div>
             <div class="digest-1u">
               <div class="digest-1u-frame">
-                <img class="digest-1u-image" src="/assets/images/msn/digest-1.jpg" alt="" aria-hidden="true" data-digest-image>
+                <img class="digest-1u-image" src="/assets/images/msn/digest-1.jpg" alt="" aria-hidden="true" data-digest-image onerror="this.style.visibility='hidden'" onload="this.style.visibility='visible'">
               </div>
               <div class="digest-1u-text">
                 <div class="digest-publisher">

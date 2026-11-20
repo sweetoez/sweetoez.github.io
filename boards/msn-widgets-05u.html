@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>MSN widgets 0.5u</title>
+  <link rel="stylesheet" href="../assets/css/msn-components.css">
   <style>
     @font-face {
       font-family: "Selawik";
@@ -57,108 +58,6 @@
       align-items: flex-start;
     }
 
-    .w05 { position: relative; box-sizing: border-box; display: flex; flex-direction: column; justify-content: flex-end; align-items: flex-start; width: 336px; min-width: 300px; max-width: 360px; height: 176px; min-height: 176px; max-height: 176px; padding: 12px; border-radius: 24px; overflow: hidden; }
-    .w05-std { background: rgba(255,255,255,0.80); box-shadow: inset 0 0 0 1px rgba(0,0,0,0.10); }
-    .w05-area { position: relative; z-index: 1; box-sizing: border-box; align-self: stretch; flex: 1 1 0; min-height: 0; display: flex; flex-direction: column; justify-content: space-between; align-items: flex-start; padding: 18px; }
-    .cr05-creator { box-sizing: border-box; align-self: stretch; height: 56px; padding: 2px; overflow: hidden; display: flex; justify-content: flex-start; align-items: center; gap: 12px; }
-    .cr05-avatar { width: 52px; height: 52px; flex: 0 0 52px; border-radius: 9999px; overflow: hidden; background: lightgray; }
-    .cr05-avatar img { width: 52px; height: 52px; object-fit: cover; display: block; }
-    .cr05-text { flex: 1 1 0; min-width: 0; align-self: stretch; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; }
-    .cr05-name { margin: 0; align-self: stretch; font-size: 20px; line-height: 26px; font-weight: 650; color: #272320; }
-    .cr05-cat { margin: 0; display: inline-flex; align-items: center; gap: 4px; font-size: 14px; line-height: 20px; font-weight: 450; color: #4C4642; }
-    .cr05-cta { align-self: stretch; display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 10px; padding: 0 2px 2px 2px; }
-    .cr05-follow { box-sizing: border-box; align-self: stretch; min-width: 40px; min-height: 40px; padding: 0 10px; display: flex; justify-content: center; align-items: center; gap: 2px; border: 0; margin: 0; cursor: pointer; background: rgba(255,255,255,0.70); border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.15), inset 0 0.5px 0.5px 0.5px #FFFFFF, inset 0 0 0 1px #FFFFFF; color: #272320; }
-    .cr05-follow:active { transform: scale(0.98); }
-    .cr05-follow:focus-visible { outline: 2px solid #272320; outline-offset: 2px; }
-    .cr05-ic { width: 24px; height: 24px; display: flex; justify-content: center; align-items: center; color: #272320; }
-    .cr05-ic svg { width: 20px; height: 20px; display: block; }
-    .cr05-label { padding: 10px 2px; font-size: 15px; line-height: 20px; font-weight: 410; color: #272320; }
-    .w05-titlewrap { align-self: stretch; display: flex; justify-content: center; align-items: center; gap: 10px; padding: 2px 2px 0 2px; }
-    .w05-title { flex: 1 1 0; margin: 0; font-size: 20px; line-height: 26px; font-weight: 650; color: #272320; }
-    .gm05-area { position: relative; z-index: 1; box-sizing: border-box; align-self: stretch; flex: 1 1 0; min-height: 0; display: flex; flex-direction: column; justify-content: space-between; align-items: flex-start; padding: 20px; }
-    .gm05-row { align-self: stretch; min-height: 80px; display: flex; justify-content: flex-start; align-items: center; gap: 12px; padding: 0 2px 2px 2px; }
-    .gm05-img { width: 80px; height: 80px; flex: 0 0 80px; border-radius: 12px; object-fit: cover; background: lightgray; display: block; }
-    .gm05-text { flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 4px; }
-    .gm05-name { margin: 0; align-self: stretch; font-size: 18px; line-height: 26px; font-weight: 650; color: #272320; }
-    .gm05-sub { margin: 0; align-self: stretch; font-size: 14px; line-height: 20px; font-weight: 450; color: #4C4642; }
-    .trd05-area { position: relative; z-index: 1; box-sizing: border-box; align-self: stretch; flex: 1 1 0; min-height: 0; display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 4px; padding: 18px; }
-    .trd05-stage { position: relative; align-self: stretch; flex: 1 1 0; min-height: 0; display: flex; flex-direction: column; justify-content: flex-end; align-items: flex-start; padding: 0 2px 2px 2px; }
-    .trd05-img { position: absolute; top: 0; right: 2px; width: 94.29px; height: 66px; border-radius: 12px; object-fit: cover; background: lightgray; display: block; z-index: 0; }
-    .trd05-bubble-area { position: relative; z-index: 1; box-sizing: border-box; align-self: stretch; display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 10px; padding-right: 36px; }
-    .trd05-bubble { margin: 0; box-sizing: border-box; width: 100%; max-width: 260px; padding: 12px; background: #FEE6D4; border-radius: 12px; box-shadow: inset 0 0 0 1px rgba(0,0,0,0.10); font-size: 14px; line-height: 20px; font-weight: 450; color: #322D29; }
-    .ev05-row { align-self: stretch; display: flex; justify-content: flex-start; align-items: center; gap: 16px; padding: 0 2px 2px 2px; }
-    .ev05-cal { box-sizing: border-box; width: 76px; height: 76px; flex: 0 0 76px; padding-bottom: 2.45px; background: #DFECFF; border-radius: 12px; overflow: hidden; display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start; }
-    .ev05-month { box-sizing: border-box; align-self: stretch; height: 29.42px; padding-top: 0.99px; background: #AACDFF; overflow: hidden; display: flex; justify-content: center; align-items: center; gap: 7.33px; font-size: 14px; line-height: 20px; font-weight: 650; color: #0159BA; text-align: center; }
-    .ev05-date { align-self: stretch; flex: 1 1 0; display: flex; flex-direction: column; justify-content: center; text-align: center; font-size: 24px; line-height: 32px; font-weight: 650; color: #0159BA; }
-    .ev05-text { flex: 1 1 0; align-self: stretch; min-width: 0; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; gap: 4px; }
-    .ev05-name { margin: 0; align-self: stretch; font-size: 18px; line-height: 26px; font-weight: 650; color: #272320; }
-    .ev05-venue { margin: 0; align-self: stretch; font-size: 16px; line-height: 22px; font-weight: 450; color: #4C4642; }
-    .stk05-body { align-self: stretch; flex: 1 1 0; min-height: 0; display: flex; flex-direction: column; justify-content: space-between; padding: 0 2px 2px 2px; }
-    .stk05-info { align-self: stretch; display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 2px; }
-    .stk05-ticker { margin: 0; font-size: 16px; line-height: 22px; font-weight: 450; color: #4C4642; }
-    .stk05-price { display: inline-flex; align-items: center; gap: 4px; }
-    .stk05-val { font-size: 20px; line-height: 26px; font-weight: 650; color: #272320; }
-    .stk05-chg { font-size: 14px; line-height: 20px; font-weight: 650; color: #01712B; }
-    .stk05-graph { position: relative; align-self: stretch; height: 31px; overflow: hidden; }
-    .stk05-graph svg { position: absolute; left: 0; top: 0; width: calc(100% - 2px); height: 31px; display: block; }
-    .stk05-line { fill: none; stroke: #127323; stroke-width: 2; stroke-linejoin: round; stroke-linecap: round; vector-effect: non-scaling-stroke; }
-    .stk05-dot { position: absolute; left: calc((100% - 2px) * 265 / 270); top: 4px; width: 6px; height: 6px; border-radius: 9999px; background: #127323; }
-    .stk05-drop { position: absolute; left: calc((100% - 2px) * 268 / 270 - 0.5px); top: 10px; bottom: 0; width: 1px; background: repeating-linear-gradient(180deg, #127323 0 2px, transparent 2px 4px); }
-    .w05-btn { box-sizing: border-box; display: inline-flex; justify-content: center; align-items: center; border: 0; margin: 0; background: transparent; color: #272320; cursor: pointer; }
-    .w05-btn:active { transform: scale(0.98); }
-    .w05-btn:focus-visible { outline: 2px solid #272320; outline-offset: 2px; }
-    .w05-btn svg { display: block; }
-    .w05-wx { background: #ACD1F2; }
-    .wx05-art { position: absolute; left: 190px; top: -7px; z-index: 0; width: 138px; height: 108px; max-width: none; pointer-events: none; display: block; }
-    .wx05-area { position: relative; z-index: 1; box-sizing: border-box; align-self: stretch; flex: 1 1 0; min-height: 0; display: flex; flex-direction: column; justify-content: space-between; align-items: flex-start; padding: 18px; }
-    .wx05-loc { display: inline-flex; justify-content: center; align-items: center; gap: 10px; padding: 2px 2px 0 2px; }
-    .wx05-city { margin: 0; font-size: 20px; line-height: 26px; font-weight: 650; color: #272320; }
-    .wx05-row { align-self: stretch; display: flex; justify-content: flex-start; align-items: center; gap: 20px; padding: 0 2px 2px 2px; }
-    .wx05-temp { display: flex; align-items: flex-start; gap: 2px; }
-    .wx05-num, .wx05-deg { font-size: 48px; line-height: 32px; font-weight: 550; color: #322D29; }
-    .wx05-side { flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; justify-content: flex-end; align-items: flex-end; gap: 4px; }
-    .wx05-cond { margin: 0; align-self: stretch; text-align: right; font-size: 16px; line-height: 22px; font-weight: 450; color: #272320; }
-    .wx05-hilo { align-self: stretch; display: flex; justify-content: flex-end; align-items: flex-end; gap: 12px; }
-    .wx05-hl { display: flex; align-items: center; gap: 4px; }
-    .wx05-ic { box-sizing: border-box; width: 12px; height: 12px; display: flex; justify-content: center; align-items: center; overflow: hidden; color: #4C4642; }
-    .wx05-ic svg { width: 12px; height: 12px; display: block; }
-    .wx05-v { font-size: 16px; line-height: 22px; font-weight: 450; color: #4C4642; }
-    .w05-pod { justify-content: space-between; }
-    .pod05-row { align-self: stretch; display: flex; justify-content: flex-start; align-items: flex-end; gap: 12px; padding: 0 0 0 18px; }
-    .pod05-text { flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; align-items: flex-start; gap: 8px; padding-left: 2px; }
-    .pod05-title { margin: 0; align-self: stretch; font-size: 20px; line-height: 26px; font-weight: 650; color: #272320; }
-    .pod05-meta { margin: 0; align-self: stretch; font-size: 12px; line-height: 16px; font-weight: 450; color: #272320; }
-    .pod05-img { width: 116px; height: 66px; flex: 0 0 116px; border-radius: 12px; object-fit: cover; background: lightgray; display: block; }
-    .pod05-controls { align-self: stretch; display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 0 18px 4px 18px; }
-    .pod05-progress { align-self: stretch; display: flex; justify-content: flex-start; align-items: center; gap: 6px; padding: 0 2px; }
-    .pod05-time { font-size: 12px; line-height: 16px; font-weight: 450; color: #272320; text-align: right; }
-    .pod05-bars { flex: 1 1 0; min-width: 0; display: flex; justify-content: flex-start; align-items: center; gap: 3px; }
-    .pod05-bar { position: relative; height: 4px; border-radius: 2px; overflow: hidden; background: #CFC9C5; }
-    .pod05-bar i { position: absolute; left: 0; top: 0; height: 4px; background: #3F3935; }
-    .pod05-b1 { width: 21px; flex: 0 0 21px; }
-    .pod05-b2 { flex: 1 1 0; }
-    .pod05-b3 { width: 26px; flex: 0 0 26px; }
-    .pod05-b4 { flex: 1 1 0; }
-    .pod05-player { display: inline-flex; justify-content: center; align-items: center; gap: 8px; }
-    .pod05-skip { width: 48px; height: 48px; padding: 0 12px; border-radius: 16px; }
-    .pod05-skip svg { width: 24px; height: 24px; }
-    .pod05-play { width: 48px; height: 48px; padding: 0 8px; border-radius: 16px; }
-    .pod05-play svg { width: 32px; height: 32px; }
-    .sp05-content { align-self: stretch; display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 10px; padding: 0 2px 2px 2px; }
-    .sp05-row { align-self: stretch; box-sizing: border-box; height: 77px; display: flex; justify-content: flex-start; align-items: center; gap: 8px; padding: 0 8px; border-radius: 12px; background: transparent; }
-    .sp05-team { display: flex; flex-direction: column; justify-content: flex-start; align-items: center; gap: 4px; }
-    .sp05-team > :first-child { width: 40px; height: 40px; }
-    .sp05-badge { border-radius: 9999px; background: var(--b); color: #FFFFFF; display: flex; align-items: center; justify-content: center; font-size: 10px; line-height: 12px; font-weight: 650; }
-    .sp05-abbr { width: 48px; text-align: center; font-size: 14px; line-height: 20px; font-weight: 650; color: #272320; }
-    .sp05-mid { flex: 1 1 0; align-self: stretch; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 4px; }
-    .sp05-status { margin: 0; text-align: center; font-size: 14px; line-height: 20px; font-weight: 450; color: #272320; }
-    .sp05-score { align-self: stretch; display: flex; justify-content: center; align-items: center; gap: 4px; }
-    .sp05-num { font-size: 24px; line-height: 32px; font-weight: 650; color: #272320; }
-    .sp05-arrow { width: 12px; display: flex; justify-content: center; align-items: center; color: #272320; }
-    .sp05-arrow-hidden { opacity: 0; }
-    .sp05-link { align-self: stretch; height: 21px; display: flex; justify-content: center; align-items: center; gap: 4px; text-align: center; font-size: 14px; line-height: 20px; font-weight: 450; color: #272320; text-decoration: none; }
-    .sp05-link:hover { text-decoration: underline; }
-    .sp05-link:focus-visible { outline: 2px solid #272320; outline-offset: 2px; border-radius: 4px; }
     .art05-examples { display: flex; flex-wrap: wrap; align-items: flex-start; gap: 24px; }
     .art05-section { width: 100%; flex: 0 0 100%; margin-top: 24px; }
     .art05-section > .dg-section-title { margin: 0 0 16px; color: #272320; font-size: 20px; line-height: 26px; font-weight: 650; font-feature-settings: "calt" 0; }
@@ -256,12 +155,12 @@
         </div>
       </div>
     </article>
-    <article class="w05 w05-std" aria-label="Stock, NVIDIA Corp">
+    <article class="w05 w05-std" aria-label="Stock market">
       <div class="w05-area">
-        <div class="w05-titlewrap"><h3 class="w05-title">NVIDIA Corp</h3></div>
+        <div class="w05-titlewrap"><h3 class="w05-title">Market index</h3></div>
         <div class="stk05-body">
           <div class="stk05-info">
-            <p class="stk05-ticker">(NVDA)</p>
+            <p class="stk05-ticker">(TECH)</p>
             <div class="stk05-price"><span class="stk05-val">136.75</span><span class="stk05-chg">+3.97%</span></div>
           </div>
           <div class="stk05-graph" aria-hidden="true">
@@ -278,7 +177,7 @@
     </article>
     <article class="w05 w05-std" aria-label="Local event">
       <div class="w05-area">
-        <div class="w05-titlewrap"><h3 class="w05-title">Next week in Seattle, WA</h3></div>
+        <div class="w05-titlewrap"><h3 class="w05-title">Next week in Seattle</h3></div>
         <div class="ev05-row">
           <div class="ev05-cal" aria-label="October 24">
             <div class="ev05-month">OCT</div>

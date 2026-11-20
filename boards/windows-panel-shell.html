@@ -83,82 +83,142 @@
           <div class="prong-scroll win-feed-scroll">
             <section class="prong-widget-section win-widget-section" aria-label="Widgets">
               <div class="prong-widget-grid">
-                <article class="card digest span-2" aria-label="Daily digest">
-                  <img class="win-digest-image" src="../assets/images/msn/digest-1.jpg" alt="" aria-hidden="true" onerror="this.style.visibility='hidden'">
-                  <div class="digest-2u-inner">
-                    <div class="digest-2u-content">
-                      <div class="digest-publisher"><span class="digest-monogram" aria-hidden="true">D</span><span>Daily stories</span><span>· 1h</span></div>
-                      <h2 class="digest-title">Five quiet trails worth the early alarm this weekend</h2>
+                <article class="card digest span-2" tabindex="0" aria-label="Digest stories">
+                <div class="digest-2u-inner">
+                  <div class="digest-2u-content">
+                    <div class="digest-publisher">
+                      <span class="digest-monogram" aria-hidden="true" data-digest-monogram>D</span>
+                      <span data-digest-publisher>Daily stories</span>
+                      <span data-digest-time>· 1h</span>
                     </div>
-                    <div class="digest-pagination" aria-hidden="true">
-                      <span class="digest-bar is-active"></span><span class="digest-bar"></span><span class="digest-bar"></span><span class="digest-bar"></span><span class="digest-bar"></span>
+                    <h3 class="digest-title" data-digest-title>Five quiet trails worth the early alarm this weekend</h3>
+                  </div>
+                  <div class="digest-pagination" aria-hidden="true">
+                    <span class="digest-bar is-active" data-segment="0"></span>
+                    <span class="digest-bar" data-segment="1"></span>
+                    <span class="digest-bar" data-segment="2"></span>
+                    <span class="digest-bar" data-segment="3"></span>
+                    <span class="digest-bar" data-segment="4"></span>
+                  </div>
+                </div>
+                <div class="digest-2u-paddles">
+                    <button type="button" aria-label="Previous story" data-digest-nav="-1">
+                      <svg class="digest-chevron" viewBox="4.5 2.5 7 11" preserveAspectRatio="none" aria-hidden="true"><path d="M10.3536 3.14645C10.5488 3.34171 10.5488 3.65829 10.3536 3.85355L6.20711 8L10.3536 12.1464C10.5488 12.3417 10.5488 12.6583 10.3536 12.8536C10.1583 13.0488 9.84171 13.0488 9.64645 12.8536L5.14645 8.35355C4.95118 8.15829 4.95118 7.84171 5.14645 7.64645L9.64645 3.14645C9.84171 2.95118 10.1583 2.95118 10.3536 3.14645Z" fill="currentColor"></path></svg>
+                    </button>
+                    <button type="button" aria-label="Next story" data-digest-nav="1">
+                      <svg class="digest-chevron" viewBox="4.5 2.5 7 11" preserveAspectRatio="none" aria-hidden="true"><path d="M5.64645 3.14645C5.45118 3.34171 5.45118 3.65829 5.64645 3.85355L9.79289 8L5.64645 12.1464C5.45118 12.3417 5.45118 12.6583 5.64645 12.8536C5.84171 13.0488 6.15829 13.0488 6.35355 12.8536L10.8536 8.35355C11.0488 8.15829 11.0488 7.84171 10.8536 7.64645L6.35355 3.14645C6.15829 2.95118 5.84171 2.95118 5.64645 3.14645Z" fill="currentColor"></path></svg>
+                    </button>
+                </div>
+                <div class="digest-1u">
+                  <div class="digest-1u-frame">
+                    <img class="digest-1u-image" src="../assets/images/msn/digest-1.jpg" alt="" aria-hidden="true" data-digest-image onerror="this.style.visibility='hidden'" onload="this.style.visibility='visible'">
+                  </div>
+                  <div class="digest-1u-text">
+                    <div class="digest-publisher">
+                      <span class="digest-monogram" aria-hidden="true" data-digest-monogram>D</span>
+                      <span data-digest-publisher>Daily stories</span>
+                      <span data-digest-time>· 1h</span>
+                    </div>
+                    <h3 class="digest-title" data-digest-title>Five quiet trails worth the early alarm this weekend</h3>
+                    <div class="digest-1u-controls">
+                      <div class="digest-pagination" aria-hidden="true">
+                        <span class="digest-bar is-active" data-segment="0"></span>
+                        <span class="digest-bar" data-segment="1"></span>
+                        <span class="digest-bar" data-segment="2"></span>
+                        <span class="digest-bar" data-segment="3"></span>
+                        <span class="digest-bar" data-segment="4"></span>
+                      </div>
+                      <div class="digest-1u-paddles">
+                        <button type="button" aria-label="Previous story" data-digest-nav="-1">
+                          <svg class="digest-chevron" viewBox="4.5 2.5 7 11" preserveAspectRatio="none" aria-hidden="true"><path d="M10.3536 3.14645C10.5488 3.34171 10.5488 3.65829 10.3536 3.85355L6.20711 8L10.3536 12.1464C10.5488 12.3417 10.5488 12.6583 10.3536 12.8536C10.1583 13.0488 9.84171 13.0488 9.64645 12.8536L5.14645 8.35355C4.95118 8.15829 4.95118 7.84171 5.14645 7.64645L9.64645 3.14645C9.84171 2.95118 10.1583 2.95118 10.3536 3.14645Z" fill="currentColor"></path></svg>
+                        </button>
+                        <button type="button" aria-label="Next story" data-digest-nav="1">
+                          <svg class="digest-chevron" viewBox="4.5 2.5 7 11" preserveAspectRatio="none" aria-hidden="true"><path d="M5.64645 3.14645C5.45118 3.34171 5.45118 3.65829 5.64645 3.85355L9.79289 8L5.64645 12.1464C5.45118 12.3417 5.45118 12.6583 5.64645 12.8536C5.84171 13.0488 6.15829 13.0488 6.35355 12.8536L10.8536 8.35355C11.0488 8.15829 11.0488 7.84171 10.8536 7.64645L6.35355 3.14645C6.15829 2.95118 5.84171 2.95118 5.64645 3.14645Z" fill="currentColor"></path></svg>
+                        </button>
+                      </div>
                     </div>
                   </div>
-                  <div class="digest-2u-paddles">
-                    <button type="button" aria-label="Previous digest story">
-                      <span class="win-icon win-icon--20" data-icon="arrowLeft20" aria-hidden="true"></span>
-                    </button>
-                    <button type="button" aria-label="Next digest story">
-                      <span class="win-icon win-icon--20" data-icon="arrowRight20" aria-hidden="true"></span>
-                    </button>
-                  </div>
-                </article>
+                </div>
+              </article>
 
                 <article class="card u1 seg-widget seg-weather prong-weather" aria-label="Weather, Seattle">
-                  <div class="wx-content">
-                    <img class="wx-sun" src="../assets/images/msn/widgets/wx-sun.svg" alt="" aria-hidden="true" onerror="this.style.visibility='hidden'">
-                    <div class="wx-area">
-                      <div class="wx-loc"><span class="wx-city">Seattle</span></div>
-                      <div class="wx-now">
-                        <div class="wx-temp"><span class="wx-deg-num">42</span><span class="wx-deg">°</span></div>
-                        <div class="wx-cond"><span class="wx-cond-text">Mostly sunny</span><span class="wx-hl"><span>H 55°</span><span>L 32°</span></span></div>
-                      </div>
+                <button class="seg-more" type="button" aria-label="More options"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="12" r="1.75" fill="currentColor"/><circle cx="12" cy="12" r="1.75" fill="currentColor"/><circle cx="18" cy="12" r="1.75" fill="currentColor"/></svg></button>
+                <div class="wx-content">
+                  <img class="wx-sun" src="../assets/images/msn/widgets/wx-sun.svg" alt="" aria-hidden="true" width="138" height="108">
+                  <div class="wx-area">
+                    <div class="wx-loc"><span class="wx-city">Seattle</span></div>
+                    <div class="wx-now">
+                      <div class="wx-temp"><span class="wx-deg-num">42</span><span class="wx-deg">°</span></div>
+                      <div class="wx-cond"><span class="wx-cond-text">Mostly sunny</span><span class="wx-hl"><span>H 55°</span><span>L 32°</span></span></div>
                     </div>
-                    <ol class="wx-graph" aria-label="Hourly forecast">
-                      <li class="wx-hour"><span class="wx-time">Now</span><span class="wx-hbot"><span class="wx-icon"><img src="../assets/images/msn/widgets/wx-hr-1.svg" alt="Partly sunny"></span><span class="wx-data"><span class="wx-htemp">42°</span></span></span></li>
-                      <li class="wx-hour"><span class="wx-time">10AM</span><span class="wx-hbot"><span class="wx-icon"><img src="../assets/images/msn/widgets/wx-hr-2.svg" alt="Light snow"></span><span class="wx-data"><span class="wx-htemp">43°</span></span></span></li>
-                      <li class="wx-hour"><span class="wx-time">11AM</span><span class="wx-hbot"><span class="wx-icon"><img src="../assets/images/msn/widgets/wx-hr-3.svg" alt="Windy"></span><span class="wx-data"><span class="wx-htemp">45°</span></span></span></li>
-                      <li class="wx-hour"><span class="wx-time">12PM</span><span class="wx-hbot"><span class="wx-icon"><img src="../assets/images/msn/widgets/wx-hr-2.svg" alt="Light snow"></span><span class="wx-data"><span class="wx-htemp">48°</span></span></span></li>
-                      <li class="wx-hour"><span class="wx-time">1PM</span><span class="wx-hbot"><span class="wx-icon"><img src="../assets/images/msn/widgets/wx-hr-5.svg" alt="Sunny"></span><span class="wx-data"><span class="wx-htemp">51°</span></span></span></li>
-                    </ol>
                   </div>
-                </article>
+                  <ol class="wx-graph" aria-label="Hourly forecast">
+                    <li class="wx-hour"><span class="wx-time">Now</span><span class="wx-hbot"><span class="wx-icon"><img src="../assets/images/msn/widgets/wx-hr-1.svg" alt="Partly sunny"></span><span class="wx-data"><span class="wx-htemp">42°</span><span class="wx-rain"><span class="wx-drop" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 1C6.13261 1 6.25978 1.05268 6.35355 1.14645L6.35479 1.14768C6.61026 1.40316 7.38601 2.1789 8.09952 3.21674C8.80557 4.24372 9.5 5.59712 9.5 7C9.5 8.33709 9.13964 9.35239 8.48109 10.0347C7.82158 10.7181 6.92808 11 6 11C5.07192 11 4.17842 10.7181 3.51891 10.0347C2.86036 9.35239 2.5 8.33709 2.5 7C2.5 5.59712 3.19443 4.24372 3.90048 3.21674C4.61398 2.17892 5.3897 1.40319 5.64519 1.1477L5.64645 1.14645C5.74021 1.05268 5.86739 1 6 1Z" fill="currentColor"/></svg></span><span>0%</span></span></span></span></li>
+                    <li class="wx-hour"><span class="wx-time">10AM</span><span class="wx-hbot"><span class="wx-icon"><img src="../assets/images/msn/widgets/wx-hr-2.svg" alt="Light snow"></span><span class="wx-data"><span class="wx-htemp">43°</span><span class="wx-rain"><span class="wx-drop" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 1C6.13261 1 6.25978 1.05268 6.35355 1.14645L6.35479 1.14768C6.61026 1.40316 7.38601 2.1789 8.09952 3.21674C8.80557 4.24372 9.5 5.59712 9.5 7C9.5 8.33709 9.13964 9.35239 8.48109 10.0347C7.82158 10.7181 6.92808 11 6 11C5.07192 11 4.17842 10.7181 3.51891 10.0347C2.86036 9.35239 2.5 8.33709 2.5 7C2.5 5.59712 3.19443 4.24372 3.90048 3.21674C4.61398 2.17892 5.3897 1.40319 5.64519 1.1477L5.64645 1.14645C5.74021 1.05268 5.86739 1 6 1Z" fill="currentColor"/></svg></span><span>0%</span></span></span></span></li>
+                    <li class="wx-hour"><span class="wx-time">11AM</span><span class="wx-hbot"><span class="wx-icon"><img src="../assets/images/msn/widgets/wx-hr-3.svg" alt="Windy"></span><span class="wx-data"><span class="wx-htemp">45°</span><span class="wx-rain"><span class="wx-drop" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 1C6.13261 1 6.25978 1.05268 6.35355 1.14645L6.35479 1.14768C6.61026 1.40316 7.38601 2.1789 8.09952 3.21674C8.80557 4.24372 9.5 5.59712 9.5 7C9.5 8.33709 9.13964 9.35239 8.48109 10.0347C7.82158 10.7181 6.92808 11 6 11C5.07192 11 4.17842 10.7181 3.51891 10.0347C2.86036 9.35239 2.5 8.33709 2.5 7C2.5 5.59712 3.19443 4.24372 3.90048 3.21674C4.61398 2.17892 5.3897 1.40319 5.64519 1.1477L5.64645 1.14645C5.74021 1.05268 5.86739 1 6 1Z" fill="currentColor"/></svg></span><span>0%</span></span></span></span></li>
+                    <li class="wx-hour"><span class="wx-time">12PM</span><span class="wx-hbot"><span class="wx-icon"><img src="../assets/images/msn/widgets/wx-hr-2.svg" alt="Light snow"></span><span class="wx-data"><span class="wx-htemp">48°</span><span class="wx-rain"><span class="wx-drop" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 1C6.13261 1 6.25978 1.05268 6.35355 1.14645L6.35479 1.14768C6.61026 1.40316 7.38601 2.1789 8.09952 3.21674C8.80557 4.24372 9.5 5.59712 9.5 7C9.5 8.33709 9.13964 9.35239 8.48109 10.0347C7.82158 10.7181 6.92808 11 6 11C5.07192 11 4.17842 10.7181 3.51891 10.0347C2.86036 9.35239 2.5 8.33709 2.5 7C2.5 5.59712 3.19443 4.24372 3.90048 3.21674C4.61398 2.17892 5.3897 1.40319 5.64519 1.1477L5.64645 1.14645C5.74021 1.05268 5.86739 1 6 1Z" fill="currentColor"/></svg></span><span>0%</span></span></span></span></li>
+                    <li class="wx-hour"><span class="wx-time">1PM</span><span class="wx-hbot"><span class="wx-icon"><img src="../assets/images/msn/widgets/wx-hr-5.svg" alt="Sunny"></span><span class="wx-data"><span class="wx-htemp">51°</span><span class="wx-rain"><span class="wx-drop" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 1C6.13261 1 6.25978 1.05268 6.35355 1.14645L6.35479 1.14768C6.61026 1.40316 7.38601 2.1789 8.09952 3.21674C8.80557 4.24372 9.5 5.59712 9.5 7C9.5 8.33709 9.13964 9.35239 8.48109 10.0347C7.82158 10.7181 6.92808 11 6 11C5.07192 11 4.17842 10.7181 3.51891 10.0347C2.86036 9.35239 2.5 8.33709 2.5 7C2.5 5.59712 3.19443 4.24372 3.90048 3.21674C4.61398 2.17892 5.3897 1.40319 5.64519 1.1477L5.64645 1.14645C5.74021 1.05268 5.86739 1 6 1Z" fill="currentColor"/></svg></span><span>0%</span></span></span></span></li>
+                  </ol>
+                </div>
+              </article>
 
                 <article class="w05 w05-std prong-half-widget" aria-label="Stock market">
-                  <div class="w05-area">
-                    <div class="w05-titlewrap"><h3 class="w05-title">Market index</h3></div>
-                    <div class="stk05-body">
-                      <div class="stk05-info"><p class="stk05-ticker">(TECH)</p><div class="stk05-price"><span class="stk05-val">136.75</span><span class="stk05-chg">+3.97%</span></div></div>
-                      <div class="stk05-graph" aria-hidden="true">
-                        <svg viewBox="0 0 270 31" preserveAspectRatio="none"><polyline class="stk05-line" points="0,31 5,29 10,25 16,23 22,19 28,22 36,22 44,17 51,15 57,17 65,15 73,13 79,11 86,14 93,19 100,20 108,19 118,21 125,16 136,12 149,19 157,17 169,16 183,10 193,17 204,16 216,5 225,2 236,16 247,25 255,23 268,8"></polyline></svg>
-                        <i class="stk05-drop"></i><i class="stk05-dot"></i>
-                      </div>
+                <div class="w05-area">
+                  <div class="w05-titlewrap"><h3 class="w05-title">Market index</h3></div>
+                  <div class="stk05-body">
+                    <div class="stk05-info">
+                      <p class="stk05-ticker">(TECH)</p>
+                      <div class="stk05-price"><span class="stk05-val">136.75</span><span class="stk05-chg">+3.97%</span></div>
+                    </div>
+                    <div class="stk05-graph" aria-hidden="true">
+                      <svg viewBox="0 0 270 31" preserveAspectRatio="none">
+                        <defs><linearGradient id="stk05Fill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#01712B" stop-opacity="0.20"/><stop offset="1" stop-color="#01712B" stop-opacity="0"/></linearGradient></defs>
+                        <polygon fill="url(#stk05Fill)" points="0,31 5,29 8,28 10,25 13,25.5 16,23 19,22 22,19.5 25,20 28,22 32,24 36,22 40,19 44,17.5 47,15.5 51,15 53,18 57,17 61,16 65,15 69,14 73,13 76,10 79,11 83,16 86,14 89,15.5 93,19 96,18 100,20 104,21.5 108,19 112,20.5 115,21 118,21 121,20 125,16 128,18 132,15 136,12.5 139,14 143,16 146,18 149,19 153,17 157,17 161,18.5 165,17 169,16 173,14.5 177,15.5 180,14.5 183,10 186,8.5 190,12 193,17 197,18.5 201,18 204,16 207,10 211,9 216,5 220,3 225,2 230,4 233,10 236,16 240,21 244,25 247,25 250,28 253,28 255,23 259,17 263,12 268,8 268,31 0,31"/>
+                        <polyline class="stk05-line" points="0,31 5,29 8,28 10,25 13,25.5 16,23 19,22 22,19.5 25,20 28,22 32,24 36,22 40,19 44,17.5 47,15.5 51,15 53,18 57,17 61,16 65,15 69,14 73,13 76,10 79,11 83,16 86,14 89,15.5 93,19 96,18 100,20 104,21.5 108,19 112,20.5 115,21 118,21 121,20 125,16 128,18 132,15 136,12.5 139,14 143,16 146,18 149,19 153,17 157,17 161,18.5 165,17 169,16 173,14.5 177,15.5 180,14.5 183,10 186,8.5 190,12 193,17 197,18.5 201,18 204,16 207,10 211,9 216,5 220,3 225,2 230,4 233,10 236,16 240,21 244,25 247,25 250,28 253,28 255,23 259,17 263,12 268,8"/>
+                      </svg>
+                      <i class="stk05-drop"></i>
+                      <i class="stk05-dot"></i>
                     </div>
                   </div>
-                </article>
+                </div>
+              </article>
 
                 <article class="w05 w05-std prong-half-widget" aria-label="Sports score">
-                  <div class="w05-area">
-                    <div class="w05-titlewrap"><h3 class="w05-title">Coastal Soccer League</h3></div>
-                    <div class="sp05-content">
-                      <div class="sp05-row">
-                        <div class="sp05-team"><span class="sp05-badge" style="--b:#4C4642">HBR</span><span class="sp05-abbr">HBR</span></div>
-                        <div class="sp05-mid"><p class="sp05-status">Final · Jun 10</p><div class="sp05-score"><span class="sp05-num">2 - 1</span></div><span class="sp05-link">View game stats</span></div>
-                        <div class="sp05-team"><span class="sp05-badge" style="--b:#8A817B">RDG</span><span class="sp05-abbr">RDG</span></div>
+                <div class="w05-area">
+                  <div class="w05-titlewrap"><h3 class="w05-title">Coastal Soccer League</h3></div>
+                  <div class="sp05-content">
+                    <div class="sp05-row">
+                      <div class="sp05-team"><span class="sp05-badge" style="--b:#4C4642">HBR</span><span class="sp05-abbr">HBR</span></div>
+                      <div class="sp05-mid">
+                        <p class="sp05-status">Final · Jun 10</p>
+                        <div class="sp05-score">
+                          <span class="sp05-arrow sp05-arrow-hidden" aria-hidden="true"><svg width="8" height="10" viewBox="0 0 8 10"><polygon points="0,0 8,5 0,10" fill="currentColor"/></svg></span>
+                          <span class="sp05-num">2 - 1</span>
+                          <span class="sp05-arrow" aria-hidden="true"><svg width="8" height="10" viewBox="0 0 8 10"><polygon points="0,0 8,5 0,10" fill="currentColor"/></svg></span>
+                        </div>
+                        <a class="sp05-link" href="#">View game stats</a>
                       </div>
+                      <div class="sp05-team"><span class="sp05-badge" style="--b:#8A817B">RDG</span><span class="sp05-abbr">RDG</span></div>
                     </div>
                   </div>
-                </article>
+                </div>
+              </article>
 
-                <article class="w05 w05-std prong-half-widget" aria-label="Trending topic">
-                  <div class="trd05-area">
-                    <div class="w05-titlewrap"><h3 class="w05-title">Trending now</h3></div>
-                    <div class="trd05-stage">
-                      <img class="trd05-img" src="../assets/images/msn/widgets/trd-1.jpg" alt="" width="94" height="66" onerror="this.style.visibility='hidden'">
-                      <div class="trd05-bubble-area"><p class="trd05-bubble">How can I reduce plastic waste to take my trash out less often?</p></div>
+                <article class="w05 w05-std prong-half-widget" aria-label="Local event">
+                <div class="w05-area">
+                  <div class="w05-titlewrap"><h3 class="w05-title">Next week in Seattle</h3></div>
+                  <div class="ev05-row">
+                    <div class="ev05-cal" aria-label="October 24">
+                      <div class="ev05-month">OCT</div>
+                      <div class="ev05-date">24</div>
+                    </div>
+                    <div class="ev05-text">
+                      <p class="ev05-name">Dinosaur Exhibit</p>
+                      <p class="ev05-venue">Convention Center</p>
                     </div>
                   </div>
-                </article>
+                </div>
+              </article>
               </div>
             </section>
 

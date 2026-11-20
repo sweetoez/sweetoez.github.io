@@ -49,3 +49,6 @@ Controls are native HTML in plain CSS with Fluent states (rest, hover, pressed, 
 - Never commit /_kc-source/. Never run git init or recreate .git.
 - Paths are case-sensitive on GitHub Pages: keep file names lowercase-kebab and match them exactly.
 - .nojekyll and 404.html stay at the root. Add a CNAME file only when Justin says the custom domain is ready.
+
+## One component, one source
+Every card and widget exists once: markup pattern on its component board, styles in msn-components.css. Shells and pages (Windows panel, Edge new tab page, case studies) reuse that exact markup and those classes. They may add only layout (grid placement) and theme overrides scoped to the shell. Never re-create a component's styles inside a shell. If a component needs a new detail, add it to the shared component so every use gets it.
