@@ -39,17 +39,21 @@
 
         <nav class="p2-rail win-panel__rail" aria-label="Panel navigation">
           <div class="p2-rail__navigation">
-            <button class="p2-rail__item" type="button" aria-label="Home" aria-current="page">
-              <span class="win-icon win-icon--24" data-icon="home" aria-hidden="true"></span>
+            <button class="p2-rail__item" type="button" aria-current="page">
+              <span class="win-panel__rail-content">
+                <img src="../assets/images/brand/msn.svg" alt="" aria-hidden="true">
+                <span class="win-panel__rail-label">Discover</span>
+              </span>
             </button>
-            <button class="p2-rail__item" type="button" aria-label="Apps">
-              <span class="win-icon win-icon--24" aria-hidden="true">
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M4.5 16.9999C3.7203 16.9999 3.07955 16.4051 3.00687 15.6444L3 15.4999V4.49994C3 3.72024 3.59489 3.07949 4.35554 3.00681L4.5 2.99994H9C9.7797 2.99994 10.4204 3.59483 10.4931 4.35548L10.5 4.49994V4.75437L12.6886 2.48512C13.2276 1.92593 14.0959 1.87562 14.6956 2.347L14.8118 2.44824L17.5694 5.17289C18.1219 5.71878 18.1614 6.58763 17.68 7.18407L17.5767 7.29955L15.266 9.49937L15.5 9.49994C16.2797 9.49994 16.9204 10.0948 16.9931 10.8555L17 10.9999V15.4999C17 16.2796 16.4051 16.9204 15.6445 16.9931L15.5 16.9999H4.5ZM9.5 10.4999H4V15.4999C4 15.7147 4.13542 15.8979 4.32553 15.9687L4.41012 15.9919L4.5 15.9999H9.5V10.4999ZM15.5 10.4999H10.5V15.9999H15.5C15.7455 15.9999 15.9496 15.8231 15.9919 15.5898L16 15.4999V10.9999C16 10.7545 15.8231 10.5503 15.5899 10.508L15.5 10.4999ZM10.5 7.70937V9.49937H12.29L10.5 7.70937ZM9 3.99994H4.5C4.25454 3.99994 4.05039 4.17681 4.00806 4.41006L4 4.49994V9.49994H9.5V4.49994C9.5 4.28516 9.36458 4.10201 9.17447 4.03122L9.08988 4.008L9 3.99994ZM14.1222 3.17259C13.9396 2.99646 13.6692 2.98149 13.4768 3.11998L13.4086 3.17909L10.7926 5.89323C10.6271 6.06494 10.6086 6.32495 10.7356 6.51638L10.799 6.59377L13.4147 9.20949C13.5826 9.3774 13.8409 9.40129 14.0345 9.27924L14.1131 9.218L16.8708 6.59133C17.0433 6.41673 17.061 6.14719 16.9248 5.95313L16.8665 5.88423L14.1222 3.17259Z" fill="currentColor" fill-opacity="0.6063"/></svg>
+            <button class="p2-rail__item" type="button">
+              <span class="win-panel__rail-content">
+                <span class="win-icon win-icon--20" data-icon="apps" aria-hidden="true"></span>
+                <span class="win-panel__rail-label">Widgets</span>
               </span>
             </button>
           </div>
           <button class="p2-rail__settings" type="button" aria-label="Settings">
-            <span class="win-icon win-icon--24" data-icon="settings" aria-hidden="true"></span>
+            <span class="win-icon win-icon--16" data-icon="settings" aria-hidden="true"></span>
           </button>
         </nav>
 
@@ -58,21 +62,17 @@
             <h1>Good morning, Olivia</h1>
             <div class="p2-header__controls">
               <label class="p2-header__toggle">
-                <span>Personalized</span>
-                <input type="checkbox" role="switch" checked aria-label="Personalized">
+                <span class="win-panel__toggle-label"><span class="win-panel__toggle-title">Copilot Discover</span><span class="win-panel__toggle-preview"> (Preview)</span></span>
+                <input type="checkbox" role="switch" checked aria-label="Copilot Discover (Preview)">
               </label>
               <button class="p2-header__button" type="button" aria-label="Refresh">
-                <span class="win-icon win-icon--20" aria-hidden="true">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M6 12C6 8.68629 8.68629 6 12 6C13.7766 6 15.3732 6.77191 16.4723 8H14.5C14.2239 8 14 8.22386 14 8.5C14 8.77614 14.2239 9 14.5 9H17.5C17.7761 9 18 8.77614 18 8.5V5.5C18 5.22386 17.7761 5 17.5 5C17.2239 5 17 5.22386 17 5.5V7.10109C15.7299 5.80499 13.9591 5 12 5C8.13401 5 5 8.13401 5 12C5 15.866 8.13401 19 12 19C15.866 19 19 15.866 19 12C19 11.8191 18.9931 11.6397 18.9796 11.4621C18.9587 11.1867 18.7185 10.9805 18.4431 11.0014C18.1678 11.0224 17.9615 11.2626 17.9825 11.5379C17.9941 11.6903 18 11.8444 18 12C18 15.3137 15.3137 18 12 18C8.68629 18 6 15.3137 6 12Z" fill="currentColor"/></svg>
-                </span>
+                <span class="win-icon win-icon--24" data-icon="refresh" aria-hidden="true"></span>
               </button>
               <button class="p2-header__button" type="button" aria-label="Notifications">
-                <span class="win-icon win-icon--20" aria-hidden="true">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M11.9977 4C15.1466 4 17.7416 6.33488 17.9821 9.3554L17.9955 9.57762L18 9.80214L17.999 13.398L18.9244 15.6202C18.947 15.6743 18.9647 15.7302 18.9774 15.7871L18.9926 15.8733L19.0013 16.0046C19.0013 16.4526 18.7048 16.8387 18.2521 16.9677L18.1358 16.9945L18.0013 17.0046L14.4996 17.004L14.4946 17.1653C14.4095 18.469 13.3252 19.5 12 19.5C10.6745 19.5 9.58998 18.4685 9.50533 17.1644L9.49962 17.004L5.99891 17.0046C5.91096 17.0046 5.82358 16.993 5.73902 16.9702L5.61456 16.9277C5.20378 16.7567 4.96181 16.3392 5.01221 15.8757L5.0333 15.7483L5.07572 15.6202L5.99902 13.401L6.0001 9.79281L6.0044 9.56824C6.12702 6.45115 8.77104 4 11.9977 4ZM13.4996 17.004H10.4996L10.507 17.1454C10.5755 17.8581 11.1428 18.425 11.8556 18.4931L12 18.5C12.7797 18.5 13.4205 17.9051 13.4931 17.1445L13.4996 17.004ZM11.9977 5C9.37511 5 7.22717 6.92372 7.01715 9.38498L7.00393 9.59723L7.00002 9.80214V13.5L6.96161 13.6922L5.9989 16.0046L17.9566 16.0066L18.0019 16.0045L17.0384 13.6922L17 13.5L17.0001 9.81241L16.996 9.60831C16.8909 7.0349 14.6947 5 11.9977 5Z" fill="currentColor"/></svg>
-                </span>
+                <span class="win-icon win-icon--24" data-icon="notifications" aria-hidden="true"></span>
               </button>
-              <button class="p2-header__button" type="button" aria-label="More options">
-                <span class="win-icon win-icon--20" data-icon="moreHorizontal" aria-hidden="true"></span>
+              <button class="p2-header__button" type="button" aria-label="Feedback">
+                <span class="win-icon win-icon--24" data-icon="feedback" aria-hidden="true"></span>
               </button>
               <button class="p2-header__profile" type="button" aria-label="Olivia profile">
                 <span class="p2-header__avatar"><img src="../assets/images/windows/avatar.png" alt="" aria-hidden="true" onerror="this.remove()"><span>OL</span></span>

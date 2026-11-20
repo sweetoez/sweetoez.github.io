@@ -7,6 +7,7 @@ const wallpaper = document.querySelector(".win-wallpaper img");
 const storyTemplate = document.querySelector("#win-story-template");
 const themeStorageKey = "windows-panel-theme";
 const iconPaths = {
+  apps: "../assets/icons/ic_fluent_apps_20_regular.svg",
   grid: "../assets/icons/ic_fluent_grid_24_filled.svg",
   search: "../assets/icons/ic_fluent_search_16_regular.svg",
   windowMultiple: "../assets/icons/ic_fluent_window_multiple_24_regular.svg",
@@ -17,8 +18,10 @@ const iconPaths = {
   chatSparkle: "../assets/icons/ic_fluent_chat_sparkle_24_regular.svg",
   mail: "../assets/icons/ic_fluent_mail_24_regular.svg",
   people: "../assets/icons/ic_fluent_people_24_regular.svg",
-  home: "../assets/icons/ic_fluent_home_24_filled.svg",
-  settings: "../assets/icons/settings_24_regular.svg",
+  settings: "../assets/icons/ic_fluent_settings_20_regular.svg",
+  refresh: "../assets/icons/ic_fluent_arrow_clockwise_24_regular.svg",
+  notifications: "../assets/icons/ic_fluent_alert_24_regular.svg",
+  feedback: "../assets/icons/ic_fluent_person_feedback_24_regular.svg",
   arrowClockwise16: "../assets/icons/arrow_clockwise_16_regular.svg",
   arrowLeft20: "../assets/icons/arrow_left_20_regular.svg",
   arrowRight20: "../assets/icons/ic_fluent_arrow_right_20_regular.svg",
