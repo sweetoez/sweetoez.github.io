@@ -4,14 +4,12 @@ const themeSelect = document.querySelector("#win-theme");
 const scaleToggle = document.querySelector("[data-scale-toggle]");
 const outlinesToggle = document.querySelector("[data-outlines-toggle]");
 const wallpaper = document.querySelector(".win-wallpaper img");
-const storyGrid = document.querySelector("#win-feed-grid");
 const storyTemplate = document.querySelector("#win-story-template");
 const themeStorageKey = "windows-panel-theme";
 const iconPaths = {
   grid: "../assets/icons/ic_fluent_grid_24_filled.svg",
   search: "../assets/icons/ic_fluent_search_16_regular.svg",
   windowMultiple: "../assets/icons/ic_fluent_window_multiple_24_regular.svg",
-  weatherPartlyCloudyDay: "../assets/icons/ic_fluent_weather_partly_cloudy_day_24_regular.svg",
   sparkle: "../assets/icons/ic_fluent_sparkle_24_regular.svg",
   folder: "../assets/icons/ic_fluent_folder_24_regular.svg",
   globe: "../assets/icons/ic_fluent_globe_24_regular.svg",
@@ -19,32 +17,44 @@ const iconPaths = {
   chatSparkle: "../assets/icons/ic_fluent_chat_sparkle_24_regular.svg",
   mail: "../assets/icons/ic_fluent_mail_24_regular.svg",
   people: "../assets/icons/ic_fluent_people_24_regular.svg",
-  chevronUp: "../assets/icons/ic_fluent_chevron_up_16_regular.svg",
-  wifi1: "../assets/icons/ic_fluent_wifi_1_20_regular.svg",
-  speaker2: "../assets/icons/ic_fluent_speaker_2_16_regular.svg",
-  battery9: "../assets/icons/ic_fluent_battery_9_20_regular.svg",
   home: "../assets/icons/ic_fluent_home_24_filled.svg",
-  apps: "../assets/icons/apps_24_regular.svg",
   settings: "../assets/icons/settings_24_regular.svg",
-  arrowClockwise20: "../assets/icons/arrow_clockwise_20_regular.svg",
   arrowClockwise16: "../assets/icons/arrow_clockwise_16_regular.svg",
   arrowLeft20: "../assets/icons/arrow_left_20_regular.svg",
   arrowRight20: "../assets/icons/ic_fluent_arrow_right_20_regular.svg",
-  alert: "../assets/icons/alert_20_regular.svg",
   moreHorizontal: "../assets/icons/more_horizontal_20_regular.svg",
 };
 const iconCache = new Map();
-const headlines = [
-  "Five pantry staples that last longer than you think",
-  "A beginner's guide to tidy home networks",
-  "The quiet comeback of the overnight train",
-  "Why small design systems scale better than big ones",
-  "Weekend recipes built around one great pan",
-  "A Symbol of Beauty: Exploring the Secret Lives of Peacocks",
-];
 const digestStories = [
   "Five quiet trails worth the early alarm this weekend",
-  ...headlines.slice(0, 4),
+  "Five pantry staples that stay fresh well beyond their printed dates",
+  "A beginner's guide to keeping your home network fast and secure",
+  "The quiet comeback of overnight trains is changing weekend travel",
+  "Why small design systems help growing teams move with confidence",
+];
+const storySections = [
+  {
+    gridId: "win-feed-grid",
+    stories: [
+      { title: "Five pantry staples that stay fresh well beyond their printed dates", publisher: "Morning Brief", time: "24m" },
+      { title: "A beginner's guide to keeping your home network fast and secure", publisher: "Home Notes", time: "1h" },
+      { title: "The quiet comeback of overnight trains is changing weekend travel", publisher: "Transit Journal", time: "3h" },
+      { title: "Why small design systems help growing teams work better", publisher: "Studio Weekly", time: "5h" },
+      { title: "Weekend recipes with one pan and fresh seasonal ingredients", publisher: "Table Stories", time: "7h" },
+      { title: "How community gardens are reshaping city blocks each season", publisher: "Neighborhood Post", time: "9h" },
+    ],
+  },
+  {
+    gridId: "win-feed-grid-more",
+    stories: [
+      { title: "Five neighborhood trails to explore before the next sunny weekend", publisher: "Field Notes", time: "12h" },
+      { title: "Ways to make an older apartment brighter and more spacious", publisher: "City Ledger", time: "18h" },
+      { title: "What new local transit plans could mean for your daily commute", publisher: "Local Outlook", time: "1d" },
+      { title: "A practical guide to better screen habits throughout the week", publisher: "Everyday Guide", time: "1d" },
+      { title: "The small kitchen tools that make weeknight cooking easier", publisher: "Weekend Edit", time: "2d" },
+      { title: "How designers are making public spaces work for more people", publisher: "Design Dispatch", time: "2d" },
+    ],
+  },
 ];
 const digestTitle = document.querySelector(".digest-title");
 const digestBars = [...document.querySelectorAll(".digest-bar")];
@@ -85,12 +95,16 @@ function updateScale() {
 }
 
 function populateStories() {
-  const stories = headlines.map((headline) => {
-    const story = storyTemplate.content.firstElementChild.cloneNode(true);
-    story.querySelector(".article-title").textContent = headline;
-    return story;
+  storySections.forEach(({ gridId, stories }) => {
+    const cards = stories.map(({ title, publisher, time }) => {
+      const card = storyTemplate.content.firstElementChild.cloneNode(true);
+      card.querySelector(".article-title").textContent = title;
+      card.querySelector(".cg-pub-name").textContent = publisher;
+      card.querySelector(".cg-pub-time").textContent = time;
+      return card;
+    });
+    document.getElementById(gridId).replaceChildren(...cards);
   });
-  storyGrid.replaceChildren(...stories);
 }
 
 function moveDigest(direction) {

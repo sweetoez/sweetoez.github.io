@@ -17,12 +17,15 @@ DONE WHEN
 All files exist; fonts load; every page and link works in local preview; the 3 prototypes are clickable in Desktop and Mobile frames; no console errors; layouts hold at 375 / 768 / 1440.
 
 ## Fluent UI rule
-- Icons, buttons and UI details follow Microsoft Fluent ([https://developer.microsoft.com/en-us/fluentui](https://developer.microsoft.com/en-us/fluentui)).
-- Icons come only from Fluent UI System Icons ([https://github.com/microsoft/fluentui-system-icons](https://github.com/microsoft/fluentui-system-icons), MIT license). Save each SVG to /assets/icons/, paste it inline, change fill="#212121" to fill="currentColor", and add aria-hidden="true". Put aria-label on the parent button.
-- Never hand-draw icons. Never use an icon CDN, icon font, emoji or another icon set. If an icon can't be downloaded, stop and report the missing file names.
-- Buttons are native <button> elements in plain CSS. Never install or load any Fluent package (no React, no Web Components, no build step).
-- Button states: :active transform scale(0.98); :focus-visible outline 2px solid #272320 with outline-offset 2px; disabled opacity 0.4 with cursor not-allowed.
-- Exact values in a handoff (size, shape, radius, padding, color, font) override every Fluent default. Never change a shape.
+Microsoft Fluent is the source for buttons and UI details. Icons follow the ICONS rule below (the delivered files are the source of truth).
+
+ICONS: Icons are exported by hand from the design files. They are the source of truth.
+- Fluent icons: /assets/icons/.
+- Windows taskbar and tray icons: /assets/images/windows/taskbar/.
+- Brand logos: /assets/images/brand/.
+Use each file exactly as delivered. Never redraw, swap, simplify or source icons elsewhere. Icons that contain currentColor are placed inline so they follow the theme; multicolor icons use <img>. If an icon is missing, keep the coded fallback, list it, and keep building. Never stop the build for an icon.
+
+Controls are native HTML in plain CSS with Fluent states (rest, hover, pressed, focus-visible ring, disabled). Exact design values win over Fluent defaults.
 
 ## KC entity cards (from #055)
 - Hero images: /assets/images/kc/hero/desktop/<slug>.<ext> and /assets/images/kc/hero/mobile/<slug>.<ext>.

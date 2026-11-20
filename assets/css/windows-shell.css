@@ -251,6 +251,7 @@ html[data-theme="dark-navy"] .win-desktop {
 .win-app-surface .p2-header__profile { color: var(--win-foreground); }
 .win-app-surface .p2-header__profile { width: 40px; height: 40px; padding: 3px; }
 .win-app-surface .p2-header__avatar {
+  position: relative;
   display: flex;
   width: 32px;
   height: 32px;
@@ -263,6 +264,15 @@ html[data-theme="dark-navy"] .win-desktop {
   font-size: 12px;
   font-weight: 600;
   line-height: 16px;
+}
+
+.win-app-surface .p2-header__avatar img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 .win-feed-scroll {
@@ -311,18 +321,19 @@ html[data-theme="dark-navy"] .win-desktop {
 .win-desktop .digest-2u-paddles button:active { transform: scale(.98); }
 .win-desktop .digest-2u-paddles button:focus-visible { outline: 2px solid #272320; outline-offset: 2px; }
 
-.win-feed-section { width: 980px; margin-left: -4px; padding: 16px 24px 200px; }
+.win-feed-section { width: 980px; margin-left: -4px; padding: 16px 24px 0; }
+.win-feed-section:last-child { padding-bottom: 200px; }
 .win-feed-section .prong-feed-grid { grid-template-columns: repeat(3, 300px); gap: 16px; }
 .win-feed-section .prong-feed-grid > .article-1u {
   width: 300px;
   min-width: 300px;
   max-width: none;
-  height: 310.714px;
+  height: 368px;
 }
 
 .win-story-card .article-media { background: #D3D3D3; }
 .win-story-card .article-text { padding-bottom: 14px; }
-.win-story-card .article-title { -webkit-line-clamp: 1; }
+.win-story-card .article-title { min-height: 82px; -webkit-line-clamp: 3; }
 .win-story-card .hover-actions { cursor: pointer; }
 .win-story-card .hover-actions:active { transform: scale(.98); }
 .win-story-card .hover-actions:focus-visible { outline: 2px solid #272320; outline-offset: 2px; }
@@ -516,6 +527,7 @@ html[data-theme="dark-navy"] .win-desktop {
 }
 
 .win-taskbar__search {
+  position: relative;
   width: 220px;
   height: 32px;
   justify-content: flex-start;
@@ -529,18 +541,43 @@ html[data-theme="dark-navy"] .win-desktop {
   line-height: 20px;
 }
 
-.win-taskbar__app .win-taskbar__fallback,
-.win-taskbar__image {
+.win-taskbar__app .win-taskbar__fallback {
   position: absolute;
   inset: 8px;
   width: 24px;
   height: 24px;
 }
 
-.win-taskbar__image { z-index: 1; object-fit: contain; }
+.win-taskbar__image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  width: 44px;
+  height: 44px;
+  max-width: none;
+  transform: translate(-50%, -50%);
+  object-fit: contain;
+}
+
+.win-taskbar__search-highlight {
+  position: absolute;
+  top: 50%;
+  right: 4px;
+  width: 41px;
+  height: 24px;
+  transform: translateY(-50%);
+}
+
 .win-taskbar__right { right: 12px; gap: 12px; }
-.win-taskbar__status { display: flex; align-items: center; gap: 8px; }
+.win-taskbar__status { display: flex; height: 48px; align-items: center; gap: 0; }
+.win-taskbar__status .win-taskbar__tray-icon { display: block; width: 32px; height: 48px; flex: none; }
+.win-taskbar__status .win-taskbar__quick-settings { display: block; width: 80px; height: 48px; flex: none; }
+.win-taskbar__right { color: #1B1B1B; }
 .win-taskbar__clock { align-items: flex-end; text-align: right; white-space: nowrap; }
+
+html[data-theme="dark"] .win-desktop .win-taskbar__right,
+html[data-theme="dark-navy"] .win-desktop .win-taskbar__right { color: #FFFFFF; }
 
 html[data-theme="dark"] .win-desktop .win-taskbar__search,
 html[data-theme="dark-navy"] .win-desktop .win-taskbar__search {
