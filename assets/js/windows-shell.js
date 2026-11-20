@@ -1,0 +1,175 @@
+const desktop = document.querySelector(".win-desktop");
+const stageFit = document.querySelector(".win-stage-fit");
+const themeSelect = document.querySelector("#win-theme");
+const scaleToggle = document.querySelector("[data-scale-toggle]");
+const outlinesToggle = document.querySelector("[data-outlines-toggle]");
+const wallpaper = document.querySelector(".win-wallpaper img");
+const storyGrid = document.querySelector("#win-feed-grid");
+const storyTemplate = document.querySelector("#win-story-template");
+const themeStorageKey = "windows-panel-theme";
+const iconPaths = {
+  grid: "../assets/icons/ic_fluent_grid_24_filled.svg",
+  search: "../assets/icons/ic_fluent_search_16_regular.svg",
+  windowMultiple: "../assets/icons/ic_fluent_window_multiple_24_regular.svg",
+  weatherPartlyCloudyDay: "../assets/icons/ic_fluent_weather_partly_cloudy_day_24_regular.svg",
+  sparkle: "../assets/icons/ic_fluent_sparkle_24_regular.svg",
+  folder: "../assets/icons/ic_fluent_folder_24_regular.svg",
+  globe: "../assets/icons/ic_fluent_globe_24_regular.svg",
+  buildingShop: "../assets/icons/ic_fluent_building_shop_24_regular.svg",
+  chatSparkle: "../assets/icons/ic_fluent_chat_sparkle_24_regular.svg",
+  mail: "../assets/icons/ic_fluent_mail_24_regular.svg",
+  people: "../assets/icons/ic_fluent_people_24_regular.svg",
+  chevronUp: "../assets/icons/ic_fluent_chevron_up_16_regular.svg",
+  wifi1: "../assets/icons/ic_fluent_wifi_1_20_regular.svg",
+  speaker2: "../assets/icons/ic_fluent_speaker_2_16_regular.svg",
+  battery9: "../assets/icons/ic_fluent_battery_9_20_regular.svg",
+  home: "../assets/icons/ic_fluent_home_24_filled.svg",
+  apps: "../assets/icons/apps_24_regular.svg",
+  settings: "../assets/icons/settings_24_regular.svg",
+  arrowClockwise20: "../assets/icons/arrow_clockwise_20_regular.svg",
+  arrowClockwise16: "../assets/icons/arrow_clockwise_16_regular.svg",
+  arrowLeft20: "../assets/icons/arrow_left_20_regular.svg",
+  arrowRight20: "../assets/icons/ic_fluent_arrow_right_20_regular.svg",
+  alert: "../assets/icons/alert_20_regular.svg",
+  moreHorizontal: "../assets/icons/more_horizontal_20_regular.svg",
+};
+const iconCache = new Map();
+const headlines = [
+  "Five pantry staples that last longer than you think",
+  "A beginner's guide to tidy home networks",
+  "The quiet comeback of the overnight train",
+  "Why small design systems scale better than big ones",
+  "Weekend recipes built around one great pan",
+  "A Symbol of Beauty: Exploring the Secret Lives of Peacocks",
+];
+const digestStories = [
+  "Five quiet trails worth the early alarm this weekend",
+  ...headlines.slice(0, 4),
+];
+const digestTitle = document.querySelector(".digest-title");
+const digestBars = [...document.querySelectorAll(".digest-bar")];
+const digestButtons = [...document.querySelectorAll(".digest-2u-paddles button")];
+let scaleMode = "fit";
+let digestIndex = 0;
+
+function readSavedTheme() {
+  try {
+    const savedTheme = localStorage.getItem(themeStorageKey);
+    return ["light", "dark", "light-warm", "dark-navy"].includes(savedTheme) ? savedTheme : "light";
+  } catch (error) {
+    console.error("Could not read the Windows panel theme preference.", error);
+    return "light";
+  }
+}
+
+function applyTheme(theme, save = false) {
+  document.documentElement.dataset.theme = theme;
+  themeSelect.value = theme;
+  wallpaper.src = `../assets/images/windows/wallpaper-${theme === "dark" || theme === "dark-navy" ? "dark" : "light"}.jpg`;
+
+  if (!save) return;
+
+  try {
+    localStorage.setItem(themeStorageKey, theme);
+  } catch (error) {
+    console.error("Could not save the Windows panel theme preference.", error);
+  }
+}
+
+function updateScale() {
+  const scale = scaleMode === "fit"
+    ? Math.min((window.innerWidth - 32) / 1920, (window.innerHeight - 88) / 1200)
+    : 1;
+  stageFit.style.transform = `translate(-50%, -50%) scale(${Math.max(.01, scale)})`;
+  scaleToggle.setAttribute("aria-pressed", String(scaleMode === "fit"));
+}
+
+function populateStories() {
+  const stories = headlines.map((headline) => {
+    const story = storyTemplate.content.firstElementChild.cloneNode(true);
+    story.querySelector(".article-title").textContent = headline;
+    return story;
+  });
+  storyGrid.replaceChildren(...stories);
+}
+
+function moveDigest(direction) {
+  digestIndex = (digestIndex + direction + digestStories.length) % digestStories.length;
+  digestTitle.textContent = digestStories[digestIndex];
+  digestBars.forEach((bar, index) => {
+    bar.classList.toggle("is-active", index === digestIndex);
+  });
+}
+
+async function inlineIcon(slot) {
+  const path = iconPaths[slot.dataset.icon];
+  if (!path) {
+    throw new Error(`Unknown Windows panel icon: ${slot.dataset.icon}`);
+  }
+
+  if (!iconCache.has(path)) {
+    iconCache.set(path, (async () => {
+      const response = await fetch(path);
+      if (!response.ok) {
+        throw new Error(`Could not load Windows panel icon: ${path} (${response.status})`);
+      }
+
+      const source = new DOMParser().parseFromString(await response.text(), "image/svg+xml");
+      const svg = source.documentElement;
+      if (svg.localName !== "svg") {
+        throw new Error(`Invalid SVG returned for Windows panel icon: ${path}`);
+      }
+
+      svg.setAttribute("aria-hidden", "true");
+      svg.setAttribute("focusable", "false");
+      svg.querySelectorAll('[fill="#212121"]').forEach((shape) => shape.setAttribute("fill", "currentColor"));
+      return svg;
+    })());
+  }
+
+  slot.replaceChildren(document.importNode(await iconCache.get(path), true));
+}
+
+function hydrateIcons() {
+  document.querySelectorAll("[data-icon]").forEach((slot) => {
+    inlineIcon(slot).catch((error) => {
+      slot.dataset.iconError = "true";
+      console.error(error);
+    });
+  });
+}
+
+document.querySelectorAll(".p2-rail__item").forEach((button) => {
+  button.addEventListener("click", () => {
+    document.querySelectorAll(".p2-rail__item").forEach((item) => item.removeAttribute("aria-current"));
+    button.setAttribute("aria-current", "page");
+  });
+});
+
+themeSelect.addEventListener("change", () => applyTheme(themeSelect.value, true));
+
+scaleToggle.addEventListener("click", () => {
+  scaleMode = scaleMode === "fit" ? "100" : "fit";
+  updateScale();
+});
+
+outlinesToggle.addEventListener("click", () => {
+  const enabled = document.documentElement.dataset.outlines !== "true";
+  document.documentElement.dataset.outlines = String(enabled);
+  outlinesToggle.setAttribute("aria-pressed", String(enabled));
+});
+
+digestButtons.forEach((button, index) => {
+  button.addEventListener("click", () => moveDigest(index === 0 ? -1 : 1));
+});
+
+document.querySelector(".p2-refresh__button").addEventListener("click", () => {
+  const behavior = window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth";
+  document.querySelector(".win-feed-scroll").scrollTo({ top: 0, behavior });
+});
+
+window.addEventListener("resize", updateScale);
+populateStories();
+applyTheme(readSavedTheme());
+updateScale();
+hydrateIcons();
