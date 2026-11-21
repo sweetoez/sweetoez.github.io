@@ -139,6 +139,8 @@ output {
   --dg-icon: #242424;
   --dg-1u-track: #E0E0E0;
   --dg-1u-fill: #242424;
+  --dg-surface: #FFFFFF;
+  --dg-border: #E0E0E0;
   --dg-1u-img-radius: 12px;
   --dg-1u-meta: #616161;
 }
@@ -1292,3 +1294,113 @@ output {
 .wx-htemp { font-size: 14px; line-height: 20px; font-weight: 400; }
 .wx-rain { display: inline-flex; align-items: center; gap: 2px; font-size: 12px; line-height: 16px; font-weight: 410; }
 .wx-drop, .wx-drop svg { display: block; width: 12px; height: 12px; }
+
+html:is([data-theme="dark"], [data-theme="dark-navy"]) .msn-surface {
+  --w-ink: #E5EBFA;
+  --w-ink-2: #C2CADF;
+  --w-green: #6CC57B;
+  --w-surface: rgba(157, 168, 217, .10);
+  --w-stroke: rgba(255, 255, 255, .10);
+  --dg-icon: #E5EBFA;
+  --dg-1u-track: rgba(255, 255, 255, .30);
+  --dg-1u-fill: #E5EBFA;
+  --dg-surface: var(--w-surface);
+  --dg-border: var(--w-stroke);
+  --dg-1u-meta: #C2CADF;
+  color: var(--w-ink);
+}
+
+html:is([data-theme="dark"], [data-theme="dark-navy"]) .msn-surface .digest,
+html:is([data-theme="dark"], [data-theme="dark-navy"]) .msn-surface .article-1u,
+html:is([data-theme="dark"], [data-theme="dark-navy"]) .msn-surface .ad-card,
+html:is([data-theme="dark"], [data-theme="dark-navy"]) .msn-surface .w05-std {
+  border-color: var(--w-stroke);
+  background-color: var(--w-surface);
+  box-shadow: inset 0 0 0 1px var(--w-stroke);
+  color: var(--w-ink);
+}
+
+html:is([data-theme="dark"], [data-theme="dark-navy"]) .msn-surface .digest-title,
+html:is([data-theme="dark"], [data-theme="dark-navy"]) .msn-surface .article-title,
+html:is([data-theme="dark"], [data-theme="dark-navy"]) .msn-surface .article-body,
+html:is([data-theme="dark"], [data-theme="dark-navy"]) .msn-surface .ad-card__name,
+html:is([data-theme="dark"], [data-theme="dark-navy"]) .msn-surface .ad-card__dot,
+html:is([data-theme="dark"], [data-theme="dark-navy"]) .msn-surface .ad-card__sponsored,
+html:is([data-theme="dark"], [data-theme="dark-navy"]) .msn-surface .ad-card__title,
+html:is([data-theme="dark"], [data-theme="dark-navy"]) .msn-surface .w05-title,
+html:is([data-theme="dark"], [data-theme="dark-navy"]) .msn-surface .sp05-abbr,
+html:is([data-theme="dark"], [data-theme="dark-navy"]) .msn-surface .sp05-status,
+html:is([data-theme="dark"], [data-theme="dark-navy"]) .msn-surface .sp05-num,
+html:is([data-theme="dark"], [data-theme="dark-navy"]) .msn-surface .sp05-arrow,
+html:is([data-theme="dark"], [data-theme="dark-navy"]) .msn-surface .stk05-val,
+html:is([data-theme="dark"], [data-theme="dark-navy"]) .msn-surface .ev05-name,
+html:is([data-theme="dark"], [data-theme="dark-navy"]) .msn-surface .trd05-bubble {
+  color: var(--w-ink);
+}
+
+html:is([data-theme="dark"], [data-theme="dark-navy"]) .msn-surface .digest-publisher,
+html:is([data-theme="dark"], [data-theme="dark-navy"]) .msn-surface .cg-pub-name,
+html:is([data-theme="dark"], [data-theme="dark-navy"]) .msn-surface .cg-pub-dot,
+html:is([data-theme="dark"], [data-theme="dark-navy"]) .msn-surface .cg-pub-time,
+html:is([data-theme="dark"], [data-theme="dark-navy"]) .msn-surface .ad-card__meta,
+html:is([data-theme="dark"], [data-theme="dark-navy"]) .msn-surface .stk05-ticker,
+html:is([data-theme="dark"], [data-theme="dark-navy"]) .msn-surface .stk05-chg,
+html:is([data-theme="dark"], [data-theme="dark-navy"]) .msn-surface .ev05-venue,
+html:is([data-theme="dark"], [data-theme="dark-navy"]) .msn-surface .sp05-link {
+  color: var(--w-ink-2);
+}
+
+html:is([data-theme="dark"], [data-theme="dark-navy"]) .msn-surface .stk05-chg {
+  color: var(--w-green);
+}
+
+html:is([data-theme="dark"], [data-theme="dark-navy"]) .msn-surface .digest-monogram {
+  background: rgba(255, 255, 255, .12);
+  color: var(--w-ink);
+}
+
+html:is([data-theme="dark"], [data-theme="dark-navy"]) .msn-surface .digest-2u-inner .digest-monogram {
+  background: rgba(255, 255, 255, .12);
+}
+
+html:is([data-theme="dark"], [data-theme="dark-navy"]) .msn-surface .prong-weather {
+  background: #0E4173;
+}
+
+html:is([data-theme="dark"], [data-theme="dark-navy"]) .msn-surface .wx-graph {
+  background: rgba(157, 168, 217, .10);
+}
+
+html:is([data-theme="dark"], [data-theme="dark-navy"]) .msn-surface .article-media,
+html:is([data-theme="dark"], [data-theme="dark-navy"]) .msn-surface .ad-card__media,
+html:is([data-theme="dark"], [data-theme="dark-navy"]) .msn-surface .digest-slide-media,
+html:is([data-theme="dark"], [data-theme="dark-navy"]) .msn-surface .digest-1u-frame,
+html:is([data-theme="dark"], [data-theme="dark-navy"]) .msn-surface .cg-fav-frame,
+html:is([data-theme="dark"], [data-theme="dark-navy"]) .msn-surface .trd05-img {
+  background-color: #3A3A3A;
+}
+
+html:is([data-theme="dark"], [data-theme="dark-navy"]) .msn-surface .trd05-bubble {
+  background: rgba(255, 255, 255, .10);
+  box-shadow: inset 0 0 0 1px var(--w-stroke);
+}
+
+html:is([data-theme="dark"], [data-theme="dark-navy"]) .msn-surface .digest-2u-paddles button {
+  background: #272320;
+  color: var(--w-ink);
+}
+
+html:is([data-theme="dark"], [data-theme="dark-navy"]) .msn-surface .digest--carousel .digest-transport button {
+  border-color: var(--w-stroke);
+  background: #272320;
+  color: var(--dg-icon);
+}
+
+html:is([data-theme="dark"], [data-theme="dark-navy"]) .msn-surface :focus-visible {
+  outline-color: var(--w-ink);
+}
+
+html:is([data-theme="dark"], [data-theme="dark-navy"]) .msn-surface .p2-rail :focus-visible,
+html:is([data-theme="dark"], [data-theme="dark-navy"]) .msn-surface .p2-header :focus-visible {
+  outline-color: var(--w-ink);
+}

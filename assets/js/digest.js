@@ -37,6 +37,7 @@
     image.className = "digest-slide-image";
     image.src = `../assets/images/msn/digest-${index + 1}.jpg`;
     image.alt = "";
+    image.loading = "lazy";
     image.setAttribute("aria-hidden", "true");
     image.onerror = () => { image.hidden = true; };
     media.append(image);
