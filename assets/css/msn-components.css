@@ -567,7 +567,10 @@ output {
   border: none;
   background: #FFFFFF;
   box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.08), 0 1px 3px 0 rgba(0, 0, 0, 0.08);
+  color: #272320;
 }
+
+.digest-2u-paddles .digest-chevron { fill: currentColor; }
 
 .digest-1u-paddles button {
   padding: 0 6px;
@@ -771,6 +774,7 @@ output {
   .demo .digest.digest--carousel {
     display: block;
     align-self: start;
+    height: 368px;
     padding: 0;
     background: #D3D3D3;
   }
@@ -778,12 +782,16 @@ output {
   .demo .digest--carousel .digest-track {
     position: relative;
     width: 100%;
-    height: auto;
+    height: 100%;
+  }
+
+  .demo .digest--carousel .digest-track__slides {
+    height: 100%;
   }
 
   .demo .digest--carousel .digest-slide {
     display: flex;
-    height: auto;
+    height: 100%;
     flex-direction: column;
     background: #D3D3D3;
   }
@@ -805,11 +813,16 @@ output {
     content: "";
   }
 
+  .demo .digest--carousel .digest-slide-media:has(.digest-slide-image[hidden])::after {
+    background: none;
+  }
+
   .demo .digest--carousel .digest-slide-content {
     position: relative;
     z-index: 1;
-    flex: none;
-    padding: 18px 128px 0 20px;
+    flex: 1;
+    justify-content: flex-end;
+    padding: 18px 128px 52px 20px;
     color: #FFFFFF;
   }
 
@@ -836,16 +849,21 @@ output {
   }
 
   .demo .digest--carousel .digest-controls {
-    position: relative;
+    position: absolute;
+    right: 32px;
+    bottom: 32px;
+    left: 20px;
     display: flex;
     height: 36px;
-    margin: 12px 32px 0 20px;
+    margin: 0;
   }
 
   .demo .digest--carousel .digest-pagination {
     position: relative;
     width: 138px;
     height: 12px;
+    align-self: flex-end;
+    margin-bottom: -4px;
     padding: 4px;
   }
 
@@ -858,7 +876,10 @@ output {
     border: 0;
     background: #FFFFFF;
     box-shadow: 0 4px 6px 0 rgba(0, 0, 0, .08), 0 1px 3px 0 rgba(0, 0, 0, .08);
+    color: #272320;
   }
+
+  .demo .digest--carousel .digest-transport .digest-chevron { fill: currentColor; }
 
   .digest-2u-inner {
     display: flex;
@@ -941,13 +962,14 @@ output {
   font-feature-settings: "calt" 0;
 }
 
-.article-1u, .article-2u { position: relative; box-sizing: border-box; display: flex; width: 100%; min-width: 300px; max-width: 360px; height: 368px; flex: none; padding: 12px; overflow: hidden; border: 0; border-radius: 24px; background: rgba(255,255,255,.80); box-shadow: inset 0 0 0 1px rgba(0,0,0,.10); color: #272320; font-family: "Segoe UI Variable Text","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif; }
+.article-1u, .article-2u { position: relative; box-sizing: border-box; display: flex; width: 100%; min-width: 300px; max-width: 360px; flex: none; padding: 12px; overflow: hidden; border: 0; border-radius: 24px; background: rgba(255,255,255,.80); box-shadow: inset 0 0 0 1px rgba(0,0,0,.10); color: #272320; font-family: "Segoe UI Variable Text","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif; }
 .article-1u *, .article-2u * { box-sizing: border-box; margin: 0; font-feature-settings: "calt" 0; }
 .article-1u { flex-direction: column; gap: 16px; }
+.article-2u { height: 368px; }
 .article-media { position: relative; display: flex; width: 100%; flex: none; align-items: flex-end; justify-content: flex-end; padding: 12px; overflow: hidden; border-radius: 12px; background: #D3D3D3; }
-.article-media--standard { height: 196px; }
+.article-media--standard { height: auto; aspect-ratio: 69 / 38; }
 .article-media--square { height: 258px; }
-.article-media > img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.article-media > img { position: absolute; inset: 0; display: block; width: 100%; height: 100%; object-fit: cover; }
 .article-media .hover-actions, .article-2u-image .hover-actions { top: 12px; right: 12px; }
 .article-1u .hover-actions, .article-2u .hover-actions { position: absolute; z-index: 2; display: flex; min-width: 36px; min-height: 36px; align-items: center; justify-content: center; padding: 0 6px; border: 0; border-radius: 12px; background: rgba(0,0,0,.55); color: #FFFFFF; cursor: pointer; visibility: hidden; }
 .article-1u:hover .hover-actions, .article-1u:focus-within .hover-actions, .article-2u:hover .hover-actions, .article-2u:focus-within .hover-actions { visibility: visible; }
@@ -959,15 +981,16 @@ output {
 .article-section[data-video="true"] .article-video { display: flex; }
 .article-video img { display: block; width: 20px; height: 20px; filter: brightness(0) invert(1); }
 .article-text { display: flex; min-width: 0; flex: 1; flex-direction: column; gap: 4px; padding: 0 18px 18px; }
+.article-1u .article-text { padding-bottom: 20px; }
 .article-text--square { min-height: 0; }
 .article-text .cg-pub, .article-2u-text .cg-pub { padding: 0 2px; }
 .article-title { display: -webkit-box; overflow: hidden; padding: 2px; color: #272320; font-size: 20px; line-height: 26px; font-weight: 650; text-overflow: ellipsis; -webkit-box-orient: vertical; -webkit-line-clamp: 3; }
+.article-1u .article-title { padding-bottom: 0; }
 .article-2u-text .article-title { padding: 0; }
 .article-title--one { -webkit-line-clamp: 1; }
 .article-title--two { -webkit-line-clamp: 2; }
 .article-body { display: -webkit-box; min-height: 0; overflow: hidden; color: #272320; font-size: 16px; line-height: 22px; font-weight: 450; text-overflow: ellipsis; -webkit-box-orient: vertical; -webkit-line-clamp: 3; }
 .article-1u[data-variant="subtitle"] .article-text { gap: 4px; }
-.article-1u[data-variant="image"] .article-text { padding-bottom: 18px; }
 
 .hover-actions {
   position: absolute;
@@ -1257,7 +1280,7 @@ output {
 .wx-deg-num { font-size: 56px; line-height: 40px; font-weight: 600; }
 .wx-deg { width: 16px; height: 48px; font-size: 38px; line-height: 40px; font-weight: 480; }
 .wx-cond { display: flex; min-width: 0; flex: 1 1 0; flex-direction: column; justify-content: flex-end; align-items: flex-end; gap: 4px; }
-.wx-cond-text { align-self: stretch; text-align: right; font-size: 14px; line-height: 20px; font-weight: 650; }
+.wx-cond-text { align-self: stretch; text-align: right; font-size: 14px; line-height: 20px; font-weight: 600; }
 .wx-hl { display: flex; align-self: stretch; justify-content: flex-end; align-items: flex-end; gap: 12px; font-size: 14px; line-height: 20px; font-weight: 410; }
 .wx-graph { position: relative; z-index: 1; display: flex; height: 194px; align-self: stretch; justify-content: space-between; align-items: center; padding: 0 4px; border-radius: 12px; background: rgba(255,255,255,.45); list-style: none; }
 .wx-hour { display: flex; height: 194px; min-height: 176px; min-width: 0; flex: 1 0 0; flex-direction: column; justify-content: space-between; align-items: center; overflow: hidden; padding: 24px 0 32px; border-radius: 32px 32px 48px 48px; }
@@ -1266,6 +1289,6 @@ output {
 .wx-icon { display: flex; width: 24px; height: 24px; flex-shrink: 0; justify-content: center; align-items: center; overflow: visible; }
 .wx-icon img { display: block; max-width: none; flex: none; }
 .wx-data { display: flex; flex-direction: column; align-items: center; gap: 18px; }
-.wx-htemp { font-size: 14px; line-height: 20px; font-weight: 650; }
+.wx-htemp { font-size: 14px; line-height: 20px; font-weight: 400; }
 .wx-rain { display: inline-flex; align-items: center; gap: 2px; font-size: 12px; line-height: 16px; font-weight: 410; }
 .wx-drop, .wx-drop svg { display: block; width: 12px; height: 12px; }

@@ -465,6 +465,8 @@
   max-width: none;
 }
 
+.prong-feed-grid .article-media--standard > img { position: absolute; inset: 0; }
+
 .p2-refresh {
   position: absolute;
   bottom: 0;

@@ -28,13 +28,6 @@ const iconPaths = {
   moreHorizontal: "../assets/icons/more_horizontal_20_regular.svg",
 };
 const iconCache = new Map();
-const digestStories = [
-  "Five quiet trails worth the early alarm this weekend",
-  "Five pantry staples that stay fresh well beyond their printed dates",
-  "A beginner's guide to keeping your home network fast and secure",
-  "The quiet comeback of overnight trains is changing weekend travel",
-  "Why small design systems help growing teams move with confidence",
-];
 const storySections = [
   {
     gridId: "win-feed-grid",
@@ -59,12 +52,7 @@ const storySections = [
     ],
   },
 ];
-const digest = document.querySelector(".digest");
-const digestTitles = [...digest.querySelectorAll("[data-digest-title]")];
-const digestBars = [...document.querySelectorAll(".digest-bar")];
-const digestButtons = [...digest.querySelectorAll("[data-digest-nav]")];
 let scaleMode = "fit";
-let digestIndex = 0;
 
 function readSavedTheme() {
   try {
@@ -108,16 +96,6 @@ function populateStories() {
       return card;
     });
     document.getElementById(gridId).replaceChildren(...cards);
-  });
-}
-
-function moveDigest(direction) {
-  digestIndex = (digestIndex + direction + digestStories.length) % digestStories.length;
-  digestTitles.forEach((title) => {
-    title.textContent = digestStories[digestIndex];
-  });
-  digestBars.forEach((bar) => {
-    bar.classList.toggle("is-active", Number(bar.dataset.segment) === digestIndex);
   });
 }
 
@@ -177,17 +155,6 @@ outlinesToggle.addEventListener("click", () => {
   const enabled = document.documentElement.dataset.outlines !== "true";
   document.documentElement.dataset.outlines = String(enabled);
   outlinesToggle.setAttribute("aria-pressed", String(enabled));
-});
-
-digestButtons.forEach((button) => {
-  button.addEventListener("click", () => moveDigest(Number(button.dataset.digestNav)));
-});
-
-digest.addEventListener("keydown", (event) => {
-  if (event.key === "ArrowLeft" || event.key === "ArrowRight") {
-    event.preventDefault();
-    moveDigest(event.key === "ArrowRight" ? 1 : -1);
-  }
 });
 
 document.querySelector(".p2-refresh__button").addEventListener("click", () => {
