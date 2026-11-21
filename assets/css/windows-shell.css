@@ -167,7 +167,7 @@ html[data-theme="dark-navy"] .win-desktop {
   isolation: isolate;
 }
 
-.win-noise {
+.win-noise-legacy {
   position: absolute;
   inset: 1px;
   z-index: 0;
@@ -179,16 +179,51 @@ html[data-theme="dark-navy"] .win-desktop {
 
 html[data-theme="light"] .win-desktop .win-acrylic-light,
 html[data-theme="light-warm"] .win-desktop .win-acrylic-light {
-  background-color: transparent;
-  background-image: var(--win-noise), linear-gradient(rgba(243, 243, 243, .90), rgba(243, 243, 243, .90));
-  background-size: 100px 100px, 100% 100%;
-  background-repeat: repeat, no-repeat;
-  -webkit-backdrop-filter: blur(30px) saturate(125%);
-  backdrop-filter: blur(30px) saturate(125%);
+  isolation: isolate;
+  background: none;
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+}
+
+html[data-theme="light"] .win-desktop .win-acrylic-light::before,
+html[data-theme="light-warm"] .win-desktop .win-acrylic-light::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -3;
+  border-radius: inherit;
+  -webkit-backdrop-filter: blur(30px) saturate(140%);
+  backdrop-filter: blur(30px) saturate(140%);
+}
+
+html[data-theme="light"] .win-desktop .win-acrylic-light::after,
+html[data-theme="light-warm"] .win-desktop .win-acrylic-light::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  border-radius: inherit;
+  background: rgba(243, 243, 243, .90);
+  mix-blend-mode: luminosity;
 }
 
 html[data-theme="light"] .win-desktop .win-noise,
-html[data-theme="light-warm"] .win-desktop .win-noise { display: none; }
+html[data-theme="light-warm"] .win-desktop .win-noise {
+  display: block;
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: inherit;
+  background: var(--win-noise) repeat;
+  background-size: 100px 100px;
+  pointer-events: none;
+}
+
+html[data-theme="light"] .win-desktop .win-noise-legacy,
+html[data-theme="light-warm"] .win-desktop .win-noise-legacy { display: none; }
+
+html[data-theme="light"] .win-desktop .win-panel__rail,
+html[data-theme="light-warm"] .win-desktop .win-panel__rail { background: transparent; }
 
 .win-panel__rail {
   position: absolute;
