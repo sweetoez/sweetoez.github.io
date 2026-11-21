@@ -1,0 +1,219 @@
+.win-stage-fit {
+  position: absolute;
+  top: calc(50% + 28px);
+  left: 50%;
+  width: 1920px;
+  height: 1200px;
+  overflow: hidden;
+  border-radius: 12px;
+  transform: translate(-50%, -50%) scale(1);
+  transform-origin: center;
+}
+
+.win-desktop {
+  --win-noise: url("../images/windows/noise.svg");
+  --win-shell-bg: rgba(243, 243, 243, .9);
+  --win-app-bg: #F8F4F1;
+  --win-app-stroke: rgba(0, 0, 0, .06);
+  --win-shell-stroke: rgba(117, 117, 117, .4);
+  --win-shell-shadow: 0 9px 18px rgba(0, 0, 0, .19), 0 2px 6px rgba(0, 0, 0, .15);
+  --win-wallpaper: linear-gradient(180deg, #B9C3DB 0%, #D9D2E0 45%, #EFD9D3 62%, #C9CDE0 100%);
+  --win-taskbar-bg: rgba(243, 243, 243, .9);
+  --win-taskbar-hover: rgba(0, 0, 0, .05);
+  --win-taskbar-pressed: rgba(0, 0, 0, .03);
+  --win-foreground: #1B1B1B;
+  --win-header-text: #272320;
+  --win-selected-fill: rgba(255, 255, 255, .3);
+  --win-scrollbar-thumb: rgba(0, 0, 0, .4);
+  position: relative;
+  width: 1920px;
+  height: 1200px;
+  overflow: hidden;
+  border-radius: 12px;
+  background: #D3D3D3;
+  color: var(--win-foreground);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.4;
+  isolation: isolate;
+}
+
+html[data-theme="dark"] .win-desktop {
+  --win-shell-bg: rgba(32, 32, 32, .9);
+  --win-app-bg: #151A28;
+  --win-app-stroke: rgba(255, 255, 255, .06);
+  --win-shell-shadow: 0 9px 18px rgba(0, 0, 0, .37), 0 2px 6px rgba(0, 0, 0, .37);
+  --win-wallpaper: linear-gradient(180deg, #24303D 0%, #3A4E5C 45%, #6A6470 62%, #1B2530 100%);
+  --win-taskbar-bg: rgba(32, 32, 32, .9);
+  --win-taskbar-hover: rgba(255, 255, 255, .06);
+  --win-taskbar-pressed: rgba(255, 255, 255, .04);
+  --win-foreground: #FFFFFF;
+  --win-header-text: #E5EBFA;
+  --win-selected-fill: rgba(255, 255, 255, .12);
+  --win-scrollbar-thumb: rgba(255, 255, 255, .3);
+  --w-surface: #9DA8D91A;
+  --w-stroke: #FFFFFF1A;
+  --w-ink: #E5EBFA;
+  --w-ink-2: #C2CADF;
+  --dg-icon: #D7DEEF;
+  --dg-1u-meta: #C2CADF;
+  --dg-1u-track: #FFFFFF1A;
+  --dg-1u-fill: #E5EBFA;
+}
+
+.win-wallpaper {
+  position: absolute;
+  inset: 0;
+  background: var(--win-wallpaper);
+}
+
+.win-wallpaper img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.win-taskbar {
+  position: absolute;
+  top: 1152px;
+  left: 0;
+  z-index: 4;
+  display: flex;
+  width: 1920px;
+  height: 48px;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid rgba(117, 117, 117, .4);
+  background: var(--win-taskbar-bg);
+  backdrop-filter: blur(30px);
+  color: var(--win-foreground);
+}
+
+html[data-theme="dark"] .win-desktop .win-taskbar {
+  background:
+    linear-gradient(rgba(32, 32, 32, .5), rgba(32, 32, 32, .5)),
+    linear-gradient(rgba(32, 32, 32, .96), rgba(32, 32, 32, .96));
+}
+
+.win-taskbar__left,
+.win-taskbar__right {
+  position: absolute;
+  top: 0;
+  display: flex;
+  height: 47px;
+  align-items: center;
+}
+
+.win-taskbar__left { left: 12px; gap: 8px; }
+.win-taskbar__weather-copy,
+.win-taskbar__clock { display: flex; flex-direction: column; font-size: 12px; line-height: 16px; }
+.win-taskbar__weather-copy span:first-child { font-weight: 600; }
+
+.win-taskbar__center {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.win-taskbar__button,
+.win-taskbar__search {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 4px;
+  background: transparent;
+  color: var(--win-foreground);
+  cursor: pointer;
+}
+
+.win-taskbar__button {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+}
+
+.win-taskbar__start { color: #0078D4; }
+.win-taskbar__button:hover:not(:disabled),
+.win-taskbar__search:hover:not(:disabled) { background: var(--win-taskbar-hover); }
+.win-taskbar__button:active:not(:disabled),
+.win-taskbar__search:active:not(:disabled) { background: var(--win-taskbar-pressed); transform: scale(.98); }
+.win-taskbar__button:focus-visible,
+.win-taskbar__search:focus-visible { outline: 2px solid #272320; outline-offset: 2px; }
+.win-taskbar__button:disabled,
+.win-taskbar__search:disabled { opacity: .4; cursor: not-allowed; }
+
+.win-taskbar__search-wrap {
+  display: flex;
+  width: 220px;
+  height: 44px;
+  align-items: center;
+  padding: 6px 0;
+}
+
+.win-taskbar__search {
+  position: relative;
+  width: 220px;
+  height: 32px;
+  justify-content: flex-start;
+  gap: 8px;
+  padding: 0 12px;
+  border: 1px solid rgba(0, 0, 0, .06);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, .7);
+  color: rgba(0, 0, 0, .6);
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.win-taskbar__app .win-taskbar__fallback {
+  position: absolute;
+  inset: 8px;
+  width: 24px;
+  height: 24px;
+}
+
+.win-taskbar__image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  width: 44px;
+  height: 44px;
+  max-width: none;
+  transform: translate(-50%, -50%);
+  object-fit: contain;
+}
+
+.win-taskbar__search-highlight {
+  position: absolute;
+  top: 50%;
+  right: 4px;
+  width: 41px;
+  height: 24px;
+  transform: translateY(-50%);
+}
+
+.win-taskbar__right { right: 12px; gap: 12px; }
+.win-taskbar__status { display: flex; height: 48px; align-items: center; gap: 0; }
+.win-taskbar__status .win-taskbar__tray-icon { display: block; width: 32px; height: 48px; flex: none; }
+.win-taskbar__status .win-taskbar__recall-dark,
+html[data-theme="dark"] .win-desktop .win-taskbar__status .win-taskbar__recall-light { display: none; }
+html[data-theme="dark"] .win-desktop .win-taskbar__status .win-taskbar__recall-dark { display: block; }
+.win-taskbar__status .win-taskbar__quick-settings { display: block; width: 80px; height: 48px; flex: none; }
+.win-taskbar__right { color: #1B1B1B; }
+.win-taskbar__clock { align-items: flex-end; text-align: right; white-space: nowrap; }
+
+html[data-theme="dark"] .win-desktop .win-taskbar__right { color: #FFFFFF; }
+
+html[data-theme="dark"] .win-desktop .win-taskbar__search {
+  border-color: rgba(255, 255, 255, .08);
+  background: rgba(255, 255, 255, .06);
+  color: rgba(255, 255, 255, .7);
+}
+
+html[data-theme="dark"] .win-desktop .win-taskbar__search .win-icon { color: #FFFFFF; }
+html[data-theme="dark"] .win-desktop .win-taskbar__battery-fill { fill: #6CCB5F; }

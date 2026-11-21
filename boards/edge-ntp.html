@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Edge new tab page</title>
+  <link rel="stylesheet" href="../css/site.css">
+  <link rel="stylesheet" href="../assets/css/msn-components.css">
+  <link rel="stylesheet" href="../assets/css/msn-shell.css">
+  <link rel="stylesheet" href="../assets/css/windows-desktop.css">
+  <link rel="stylesheet" href="../assets/css/windows-shell.css">
+  <link rel="stylesheet" href="../assets/css/edge-ntp.css">
+  <link rel="stylesheet" href="../assets/css/fluent-motion.css">
+  <script defer src="../assets/js/fluent-motion.js"></script>
+  <script defer src="../assets/js/digest.js"></script>
+  <script defer src="../assets/js/edge-ntp.js"></script>
+</head>
+<body class="demo">
+  <div class="shell-app edge-ntp-app" data-theme="light">
+    <header class="shell-controls" aria-label="Edge new tab page demo controls">
+      <div class="control-group" role="group" aria-label="Theme">
+        <span class="control-label">Theme</span>
+        <div class="segmented-control">
+          <button type="button" data-theme-choice="light" aria-pressed="true">Light</button>
+          <button type="button" data-theme-choice="dark" aria-pressed="false">Dark</button>
+        </div>
+      </div>
+      <div class="edge-width-controls" aria-label="Edge window width">
+        <div class="width-presets" role="group" aria-label="Width presets">
+          <button type="button" data-width="1978" aria-pressed="true">4 col · 1978</button>
+          <button type="button" data-width="1447" aria-pressed="false">3 col · 1447</button>
+          <button type="button" data-width="979" aria-pressed="false">2 col · 979</button>
+          <button type="button" data-width="663" aria-pressed="false">1 col · 663</button>
+        </div>
+        <label class="width-slider" for="edge-width">
+          <span>Width</span>
+          <input id="edge-width" type="range" min="663" max="1978" step="1" value="1978">
+          <output id="edge-width-readout" for="edge-width">1978 px</output>
+        </label>
+      </div>
+    </header>
+
+    <div class="edge-stage-viewport">
+      <div class="win-stage-fit edge-stage-fit">
+        <section class="win-desktop edge-desktop" aria-label="Windows desktop">
+          <div class="win-wallpaper">
+            <img src="../assets/images/windows/wallpaper-light.jpg" alt="" aria-hidden="true">
+          </div>
+
+          <section class="edge-window" aria-label="Edge new tab page">
+            <div class="edge-chrome-row edge-tab-row">
+              <div class="edge-active-tab">
+                <img src="../assets/icons/globe_16_regular.svg" alt="" aria-hidden="true">
+                <span>New Tab</span>
+                <button class="edge-tab-dismiss" type="button" aria-label="Close tab"><img src="../assets/icons/dismiss_12_regular.svg" alt="" aria-hidden="true"></button>
+              </div>
+              <div class="edge-window-controls">
+                <button type="button" aria-label="Minimize"><img src="../assets/icons/subtract_16_regular.svg" alt="" aria-hidden="true"></button>
+                <button type="button" aria-label="Maximize"><img src="../assets/icons/square_16_regular.svg" alt="" aria-hidden="true"></button>
+                <button type="button" aria-label="Close window"><img src="../assets/icons/dismiss_16_regular.svg" alt="" aria-hidden="true"></button>
+              </div>
+            </div>
+            <div class="edge-chrome-row edge-toolbar">
+              <div class="edge-navigation-icons">
+                <button type="button" aria-label="Back"><img src="../assets/icons/arrow_left_20_regular.svg" alt="" aria-hidden="true"></button>
+                <button type="button" aria-label="Forward"><img src="../assets/icons/ic_fluent_arrow_right_20_regular.svg" alt="" aria-hidden="true"></button>
+                <button type="button" aria-label="Refresh"><img src="../assets/icons/arrow_clockwise_20_regular.svg" alt="" aria-hidden="true"></button>
+              </div>
+              <div class="edge-address">Search or enter web address</div>
+              <button type="button" aria-label="Profile"><span class="edge-profile-dot"></span></button>
+              <button type="button" aria-label="More options"><img src="../assets/icons/more_horizontal_20_regular.svg" alt="" aria-hidden="true"></button>
+            </div>
+            <div class="edge-chrome-row edge-favorites" aria-label="Favorites">
+              <div class="edge-favorite"><span class="edge-favorite__icon"></span><span class="edge-favorite__label">News</span></div>
+              <div class="edge-favorite"><span class="edge-favorite__icon"></span><span class="edge-favorite__label">Weather</span></div>
+              <div class="edge-favorite"><span class="edge-favorite__icon"></span><span class="edge-favorite__label">Money</span></div>
+              <div class="edge-favorite"><span class="edge-favorite__icon"></span><span class="edge-favorite__label">Sports</span></div>
+              <div class="edge-favorite"><span class="edge-favorite__icon"></span><span class="edge-favorite__label">Shopping</span></div>
+            </div>
+
+            <main class="edge-page edge-content msn-surface" aria-label="MSN new tab content">
+              <nav class="ntp-topnav" aria-label="New tab navigation">
+                <div class="ntp-brand">
+                  <button class="ntp-launcher" type="button" aria-label="App launcher">
+                    <span class="ntp-missing-icon" aria-hidden="true" data-icon-missing="grid-20-regular"></span>
+                  </button>
+                  <img class="ntp-brand-logo" src="../assets/images/brand/msn.svg" alt="MSN">
+                </div>
+                <div class="p2-header__controls" aria-label="MSN controls">
+                  <label class="p2-header__toggle">
+                    <span class="ntp-toggle-label">Copilot Discover (Preview)</span>
+                    <input type="checkbox" role="switch" checked aria-label="Copilot Discover (Preview)">
+                  </label>
+                  <button class="p2-header__button ntp-action" type="button" aria-label="Refresh">
+                    <span class="win-icon" data-icon="refresh" aria-hidden="true"></span>
+                  </button>
+                  <button class="p2-header__button ntp-action" type="button" aria-label="Notifications">
+                    <span class="win-icon" data-icon="notifications" aria-hidden="true"></span>
+                  </button>
+                  <button class="p2-header__button ntp-action" type="button" aria-label="Feedback">
+                    <span class="win-icon" data-icon="feedback" aria-hidden="true"></span>
+                  </button>
+                  <button class="p2-header__profile ntp-action" type="button" aria-label="Olivia profile">
+                    <span class="p2-header__avatar ntp-avatar"><img src="../assets/images/windows/avatar.png" alt="" aria-hidden="true" onerror="this.remove()"><span>OL</span></span>
+                  </button>
+                </div>
+              </nav>
+              <section class="ntp-hero" aria-label="Search and shortcuts">
+                <form class="ntp-search-slot" role="search">
+                  <span class="win-icon ntp-search-icon" data-icon="search" aria-hidden="true"></span>
+                  <input type="search" aria-label="Search the web" placeholder="Search the web">
+                  <button class="ntp-search-submit" type="submit" aria-label="Search">
+                    <span class="ntp-missing-icon ntp-missing-icon--mic" aria-hidden="true" data-icon-missing="mic-20-regular"></span>
+                  </button>
+                </form>
+                <div class="ntp-shortcuts" aria-label="Shortcuts">
+                  <button class="ntp-shortcut" type="button" aria-label="News"><span class="ntp-shortcut-icon" aria-hidden="true"></span><span class="ntp-shortcut-label">News</span></button>
+                  <button class="ntp-shortcut" type="button" aria-label="Weather"><span class="ntp-shortcut-icon" aria-hidden="true"></span><span class="ntp-shortcut-label">Weather</span></button>
+                  <button class="ntp-shortcut" type="button" aria-label="Money"><span class="ntp-shortcut-icon" aria-hidden="true"></span><span class="ntp-shortcut-label">Money</span></button>
+                  <button class="ntp-shortcut" type="button" aria-label="Sports"><span class="ntp-shortcut-icon" aria-hidden="true"></span><span class="ntp-shortcut-label">Sports</span></button>
+                  <button class="ntp-shortcut" type="button" aria-label="Shopping"><span class="ntp-shortcut-icon" aria-hidden="true"></span><span class="ntp-shortcut-label">Shopping</span></button>
+                  <button class="ntp-shortcut" type="button" aria-label="Discover"><span class="ntp-shortcut-icon" aria-hidden="true"></span><span class="ntp-shortcut-label">Discover</span></button>
+                  <button class="ntp-shortcut" type="button" aria-label="Widgets"><span class="ntp-shortcut-icon" aria-hidden="true"></span><span class="ntp-shortcut-label">Widgets</span></button>
+                  <button class="ntp-shortcut" type="button" aria-label="Search"><span class="ntp-shortcut-icon" aria-hidden="true"></span><span class="ntp-shortcut-label">Search</span></button>
+                  <button class="ntp-shortcut ntp-shortcut--add" type="button" aria-label="Add shortcut"><span class="ntp-shortcut-icon" aria-hidden="true"><span class="win-icon" data-icon="add"></span></span><span class="ntp-shortcut-label">Add</span></button>
+                </div>
+              </section>
+              <section class="edge-section edge-widget-section" aria-labelledby="widget-heading">
+                <header class="edge-widget-header">
+                  <h1 class="edge-greeting" id="widget-heading">Good morning, Olivia</h1>
+                  <ul class="edge-chip-list" aria-label="Quick information">
+                    <li class="edge-chip"><span>F1 Belgian Grand Prix</span><strong>LIVE</strong></li>
+                    <li class="edge-chip"><span>MSFT +3.97%</span></li>
+                    <li class="edge-chip"><span>Seattle, WA 77°</span></li>
+                  </ul>
+                </header>
+                <div class="edge-widget-grid">
+                  <article class="card digest span-2" tabindex="0" aria-label="Digest stories">
+                    <div class="digest-2u-inner">
+                      <div class="digest-2u-content">
+                        <div class="digest-publisher"><span class="digest-monogram" aria-hidden="true">T</span><span>Trailhead</span><span>· 1h</span></div>
+                        <h2 class="digest-title">Five quiet trails worth the early alarm this weekend</h2>
+                      </div>
+                      <div class="digest-pagination" aria-hidden="true"><span class="digest-bar is-active"></span><span class="digest-bar"></span><span class="digest-bar"></span><span class="digest-bar"></span><span class="digest-bar"></span></div>
+                    </div>
+                    <div class="digest-2u-paddles">
+                      <button type="button" aria-label="Previous story" data-digest-nav="-1"><svg class="digest-chevron" viewBox="4.5 2.5 7 11" aria-hidden="true"><path d="M10.3536 3.14645C10.5488 3.34171 10.5488 3.65829 10.3536 3.85355L6.20711 8L10.3536 12.1464C10.5488 12.3417 10.5488 12.6583 10.3536 12.8536C10.1583 13.0488 9.84171 13.0488 9.64645 12.8536L5.14645 8.35355C4.95118 8.15829 4.95118 7.84171 5.14645 7.64645L9.64645 3.14645C9.84171 2.95118 10.1583 2.95118 10.3536 3.14645Z" fill="currentColor"></path></svg></button>
+                      <button type="button" aria-label="Next story" data-digest-nav="1"><svg class="digest-chevron" viewBox="4.5 2.5 7 11" aria-hidden="true"><path d="M5.64645 3.14645C5.45118 3.34171 5.45118 3.65829 5.64645 3.85355C5.84171 3.65829 6.15829 3.65829 6.35355 3.85355L9.79289 8L5.64645 12.1464C5.45118 12.3417 5.45118 12.6583 5.64645 12.8536C5.84171 13.0488 6.15829 13.0488 6.35355 12.8536L10.8536 8.35355C11.0488 8.1583 11.0488 7.8417 10.8536 7.64645L6.35355 3.14645C6.15829 2.95118 5.84171 2.95118 5.64645 3.14645Z" fill="currentColor"></path></svg></button>
+                    </div>
+                  </article>
+                  <article class="card u1 seg-widget seg-sports span-1" aria-label="Coastal Soccer League scores">
+                    <button class="seg-more" type="button" aria-label="More options"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="12" r="1.75" fill="currentColor"></circle><circle cx="12" cy="12" r="1.75" fill="currentColor"></circle><circle cx="18" cy="12" r="1.75" fill="currentColor"></circle></svg></button>
+                    <div class="spt">
+                      <h2 class="spt-title">Coastal Soccer League</h2>
+                      <ul class="spt-list">
+                        <li class="spt-row"><span class="spt-team"><span class="spt-badge" style="--b:#3F3935">BAY</span><span class="spt-abbr">BAY</span></span><span class="spt-mid"><span class="spt-live"><i></i>LIVE</span><span class="spt-score">1 - 1</span></span><span class="spt-team"><span class="spt-badge" style="--b:#6B625C">PNW</span><span class="spt-abbr">PNW</span></span></li>
+                      </ul>
+                    </div>
+                  </article>
+                  <article class="card u1 seg-widget seg-trend span-1" aria-label="Trending on Copilot">
+                    <button class="seg-more" type="button" aria-label="More options"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="12" r="1.75" fill="currentColor"></circle><circle cx="12" cy="12" r="1.75" fill="currentColor"></circle><circle cx="18" cy="12" r="1.75" fill="currentColor"></circle></svg></button>
+                    <div class="trd">
+                      <h2 class="trd-title">Trending on Copilot</h2>
+                      <div class="trd-stage">
+                        <div class="trd-img-area"><img class="trd-img" src="../assets/images/msn/widgets/trd-1.jpg" alt="" width="256" height="250" loading="lazy" onerror="this.style.visibility='hidden'"></div>
+                        <div class="trd-bubble-area"><p class="trd-bubble">How can I reduce plastic waste to take my trash out less often?</p></div>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+              </section>
+
+              <section class="edge-section edge-card-section" aria-labelledby="trending-heading">
+                <h2 class="edge-section-title" id="trending-heading">Trending articles</h2>
+                <div class="edge-card-grid" id="edge-feed-grid"></div>
+              </section>
+              <section class="edge-section edge-shorts-section" aria-labelledby="shorts-heading">
+                <h2 class="edge-section-title" id="shorts-heading">From your favorite creator</h2>
+                <div class="edge-shorts-grid">
+                  <article class="shorts-card">
+                    <img class="shorts-card__image" src="../assets/images/msn/shorts/short-1.jpg" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
+                    <span class="shorts-card__play" aria-hidden="true"><span class="win-icon" data-icon="play"></span></span>
+                    <div class="shorts-card__caption"><span>Simple ideas for a brighter morning</span></div>
+                  </article>
+                  <article class="shorts-card">
+                    <img class="shorts-card__image" src="../assets/images/msn/shorts/short-2.jpg" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
+                    <span class="shorts-card__play" aria-hidden="true"><span class="win-icon" data-icon="play"></span></span>
+                    <div class="shorts-card__caption"><span>A favorite recipe in under a minute</span></div>
+                  </article>
+                  <article class="shorts-card">
+                    <img class="shorts-card__image" src="../assets/images/msn/shorts/short-3.jpg" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
+                    <span class="shorts-card__play" aria-hidden="true"><span class="win-icon" data-icon="play"></span></span>
+                    <div class="shorts-card__caption"><span>Explore a quiet corner of the city</span></div>
+                  </article>
+                  <article class="shorts-card">
+                    <img class="shorts-card__image" src="../assets/images/msn/shorts/short-4.jpg" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
+                    <span class="shorts-card__play" aria-hidden="true"><span class="win-icon" data-icon="play"></span></span>
+                    <div class="shorts-card__caption"><span>Small changes for a more welcoming space</span></div>
+                  </article>
+                  <article class="shorts-card">
+                    <img class="shorts-card__image" src="../assets/images/msn/shorts/short-5.jpg" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
+                    <span class="shorts-card__play" aria-hidden="true"><span class="win-icon" data-icon="play"></span></span>
+                    <div class="shorts-card__caption"><span>Find a little inspiration outdoors</span></div>
+                  </article>
+                </div>
+              </section>
+              <section class="edge-section edge-card-section edge-card-section--more" aria-labelledby="more-heading">
+                <h2 class="edge-section-title" id="more-heading">More for you</h2>
+                <div class="edge-card-grid" id="edge-feed-grid-more"></div>
+              </section>
+            </main>
+            <button class="feeds-button" type="button" aria-label="Feeds">
+              <span class="win-icon" data-icon="feeds" aria-hidden="true"></span>
+              <span>Feeds</span>
+            </button>
+          </section>
+
+          <div class="win-taskbar edge-taskbar" aria-label="Windows taskbar">
+            <div class="win-taskbar__center" aria-hidden="true">
+              <span class="win-taskbar__button"><img class="win-taskbar__image" src="../assets/images/windows/taskbar/start.svg" alt=""></span>
+              <span class="win-taskbar__button"><img class="win-taskbar__image" src="../assets/images/windows/taskbar/task-view.svg" alt=""></span>
+              <span class="win-taskbar__button"><img class="win-taskbar__image" src="../assets/images/windows/taskbar/edge.svg" alt=""></span>
+              <span class="win-taskbar__button"><img class="win-taskbar__image" src="../assets/images/windows/taskbar/explorer.svg" alt=""></span>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <template id="edge-article-template">
+    <article class="article-1u">
+      <div class="article-media article-media--standard">
+        <img src="../assets/images/msn/widgets/art-img-1.png" alt="" width="288" height="172" loading="lazy" onerror="this.style.visibility='hidden'">
+        <button class="hover-actions" type="button" aria-label="More options"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="6" cy="12" r="1.75" fill="currentColor"></circle><circle cx="12" cy="12" r="1.75" fill="currentColor"></circle><circle cx="18" cy="12" r="1.75" fill="currentColor"></circle></svg></button>
+      </div>
+      <div class="article-text">
+        <div class="cg-pub"><span class="cg-pub-brand"><span class="cg-fav-frame"><img src="../assets/images/msn/widgets/art-fav-1.svg" alt="" width="16" height="16" loading="lazy" onerror="this.style.visibility='hidden'"></span><span class="cg-pub-name">Quantis</span></span><span class="cg-pub-dot" aria-hidden="true">·</span><span class="cg-pub-time">1d</span></div>
+        <h3 class="article-title"></h3>
+      </div>
+    </article>
+  </template>
+  <template id="edge-ad-template">
+    <article class="ad-card">
+      <div class="ad-card__content">
+        <div class="ad-card__media"><button class="ad-card__more" type="button" aria-label="More options"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="12" r="1.75" fill="currentColor"></circle><circle cx="12" cy="12" r="1.75" fill="currentColor"></circle><circle cx="18" cy="12" r="1.75" fill="currentColor"></circle></svg></button></div>
+        <div class="ad-card__text">
+          <div class="ad-card__publisher"><div class="ad-card__base"><div class="ad-card__attribution"><span class="ad-card__icon"><span class="ad-card__favicon" aria-hidden="true">N</span></span><span class="ad-card__name-wrap"><span class="ad-card__name">Northwind Mobile</span></span></div><div class="ad-card__meta"><span class="ad-card__dot" aria-hidden="true">·</span><span class="ad-card__sponsored">Sponsored</span></div></div></div>
+          <div class="ad-card__title-wrap"><h3 class="ad-card__title"><a class="ad-card__link" href="#">Switch plans in seconds. Northwind Mobile gives you coverage that moves with you, wherever you go.</a></h3></div>
+        </div>
+      </div>
+    </article>
+  </template>
+</body>
+</html>
