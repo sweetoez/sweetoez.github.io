@@ -356,7 +356,7 @@
   background: transparent;
   cursor: pointer;
 }
-.p2-header__toggle input::before {
+.demo .p2-header__toggle input::before {
   position: absolute;
   top: 1px;
   left: 1px;
@@ -365,7 +365,7 @@
   border-radius: 50%;
   background: #616161;
   content: "";
-  transition: transform 150ms ease;
+  transition: transform var(--fluent-dur-fast) var(--fluent-ease);
 }
 .p2-header__toggle input:checked { border-color: transparent; background: #32AD52; }
 .p2-header__toggle input:checked::before { background: #FFFFFF; transform: translateX(16px); }

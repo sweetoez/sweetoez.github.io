@@ -1,0 +1,173 @@
+:root {
+  --fluent-dur-ultrafast: 50ms;
+  --fluent-dur-faster: 100ms;
+  --fluent-dur-fast: 150ms;
+  --fluent-dur-normal: 200ms;
+  --fluent-dur-gentle: 250ms;
+  --fluent-dur-slow: 300ms;
+  --fluent-dur-slower: 400ms;
+  --fluent-dur-ultraslow: 500ms;
+  --fluent-ease: cubic-bezier(.33,0,.67,1);
+  --fluent-ease-max: cubic-bezier(.8,0,.2,1);
+  --fluent-decel: cubic-bezier(0,0,0,1);
+  --fluent-decel-max: cubic-bezier(.1,.9,.2,1);
+  --fluent-accel: cubic-bezier(1,0,1,1);
+  --fluent-accel-max: cubic-bezier(.9,.1,1,.2);
+  --fluent-linear: linear;
+  --digest-dwell: 6000ms;
+}
+
+.demo button {
+  transition:
+    background-color var(--fluent-dur-faster) var(--fluent-ease),
+    color var(--fluent-dur-faster) var(--fluent-ease);
+}
+
+.demo button:active {
+  transition-duration: var(--fluent-dur-ultrafast);
+}
+
+.demo :focus-visible {
+  transition: none;
+}
+
+.demo.motion-disabled *,
+.demo.motion-disabled *::before,
+.demo.motion-disabled *::after {
+  animation: none !important;
+  transition: none !important;
+}
+
+.demo .hover-actions,
+.demo .seg-more {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--fluent-dur-faster) var(--fluent-accel);
+}
+
+.demo .art05 .hover-actions {
+  visibility: visible;
+}
+
+.demo .article-media:hover > .hover-actions,
+.demo .article-media:focus-within > .hover-actions,
+.demo .art05:hover .hover-actions,
+.demo .art05:focus-within .hover-actions,
+.demo .seg-widget:hover > .seg-more,
+.demo .seg-widget:focus-within > .seg-more {
+  opacity: 1;
+  pointer-events: auto;
+  transition-duration: var(--fluent-dur-fast);
+  transition-timing-function: var(--fluent-decel);
+  visibility: visible;
+}
+
+.demo .p2-header__toggle input {
+  transition: background-color var(--fluent-dur-faster) var(--fluent-ease);
+}
+
+.demo .p2-header__toggle input::before {
+  transition: transform var(--fluent-dur-fast) var(--fluent-ease);
+}
+
+.demo .p2-rail__navigation {
+  position: relative;
+}
+
+.demo .p2-rail__item[aria-current="page"]::before {
+  content: none;
+}
+
+.demo .p2-rail__navigation::after {
+  position: absolute;
+  top: var(--fluent-rail-indicator-top, 24px);
+  left: -1px;
+  z-index: 1;
+  width: 3px;
+  height: 16px;
+  border-radius: 2px;
+  background: #0F6CBD;
+  content: "";
+  pointer-events: none;
+  transform: translateY(-50%);
+  transition: top var(--fluent-dur-normal) var(--fluent-decel-max);
+}
+
+.demo :is([role="menu"], .shortcut-menu, .add-shortcut-flyout, .ntp-shortcut-menu, .ntp-add-shortcut-flyout, [data-motion-menu], [data-motion-flyout]) {
+  opacity: 0;
+  transform: translateY(4px);
+  transition:
+    opacity var(--fluent-dur-faster) var(--fluent-accel),
+    transform var(--fluent-dur-faster) var(--fluent-accel);
+}
+
+.demo :is([role="menu"], .shortcut-menu, .add-shortcut-flyout, .ntp-shortcut-menu, .ntp-add-shortcut-flyout, [data-motion-menu], [data-motion-flyout]).is-open {
+  opacity: 1;
+  transform: translateY(0);
+  transition-duration: var(--fluent-dur-normal);
+  transition-timing-function: var(--fluent-decel);
+}
+
+.demo .kc-card-more {
+  opacity: 0;
+  transform: translateY(4px);
+  transition:
+    opacity var(--fluent-dur-faster) var(--fluent-accel),
+    transform var(--fluent-dur-faster) var(--fluent-accel);
+}
+
+.demo .kc-card-more.is-open {
+  opacity: 1;
+  transform: translateY(0);
+  transition-duration: var(--fluent-dur-normal);
+  transition-timing-function: var(--fluent-decel);
+}
+
+.demo .kc-img img,
+.demo .kc-hero-img img,
+.demo .shorts-card__image,
+.demo .article-media > img,
+.demo .art05-image img,
+.demo .digest-slide-image {
+  opacity: 0;
+  transition: opacity var(--fluent-dur-normal) var(--fluent-ease);
+}
+
+.demo .kc-img img.is-loaded,
+.demo .kc-hero-img img.is-loaded,
+.demo .shorts-card__image.is-loaded,
+.demo .article-media > img.is-loaded,
+.demo .art05-image img.is-loaded,
+.demo .digest-slide-image.is-loaded {
+  opacity: 1;
+}
+
+.demo .p2-refresh__button img,
+.demo .p2-header__button[aria-label="Refresh"] img,
+.demo [data-icon="refresh"] svg {
+  transform-origin: center;
+}
+
+.demo .fluent-refreshing {
+  animation: fluent-refresh 1200ms linear 1;
+}
+
+@keyframes fluent-refresh {
+  to { transform: rotate(432deg); }
+}
+
+.demo .kc-scroll-row,
+.demo .shorts-grid {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .demo *,
+  .demo *::before,
+  .demo *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

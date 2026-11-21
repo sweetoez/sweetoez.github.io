@@ -52,3 +52,6 @@ Controls are native HTML in plain CSS with Fluent states (rest, hover, pressed, 
 
 ## One component, one source
 Every card and widget exists once: markup pattern on its component board, styles in msn-components.css. Shells and pages (Windows panel, Edge new tab page, case studies) reuse that exact markup and those classes. They may add only layout (grid placement) and theme overrides scoped to the shell. Never re-create a component's styles inside a shell. If a component needs a new detail, add it to the shared component so every use gets it.
+
+## Motion
+Two motion systems. Project demos (/boards/ and inline demos inside .demo) use only --fluent-* from /assets/css/fluent-motion.css: hover 100ms ease, press 50ms, appear 150-200ms decelerate, disappear 100ms accelerate, on-screen movement 200-400ms ease, timers linear. The portfolio site uses only --site-* from /assets/css/site-motion.css, which may be tuned independently. Never mix them. Both respect reduced motion. Auto-moving content needs a pause button.

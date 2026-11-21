@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>MSN 1u segment widgets</title>
   <link rel="stylesheet" href="../assets/css/msn-components.css">
+
   <style>
     @font-face {
       font-family: "Selawik";
@@ -782,8 +783,12 @@
     }
 
   </style>
+  <link rel="stylesheet" href="../assets/css/fluent-motion.css">
+  <script defer src="../assets/js/fluent-motion.js"></script>
+  <script defer src="../assets/js/digest.js"></script>
+
 </head>
-<body>
+<body class="demo">
   <div class="page-shell">
     <header>
       <p class="eyebrow">COMPONENT SYSTEM</p>
@@ -1566,58 +1571,6 @@
       podcastPlaying.hidden = true;
       podcastPlay.focus();
     });
-  </script>
-  <script>
-    const digest = document.querySelector(".digest");
-    const digestImage = document.querySelector("[data-digest-image]");
-    const stories = [
-      {publisher: "Trailhead", monogram: "T", title: "Five quiet trails worth the early alarm this weekend", image: "/assets/images/msn/digest-1.jpg"},
-      {publisher: "Tide Report", monogram: "R", title: "Why coastal towns are redesigning their seawalls", image: "/assets/images/msn/digest-2.jpg"},
-      {publisher: "Night Market", monogram: "N", title: "The late-night food scene rewriting city maps", image: "/assets/images/msn/digest-3.jpg"},
-      {publisher: "Field Notes", monogram: "F", title: "What a year of rooftop gardens taught one city block", image: "/assets/images/msn/digest-4.jpg"},
-      {publisher: "Open Studio", monogram: "O", title: "Inside the small workshops reviving hand-set type", image: "/assets/images/msn/digest-5.jpg"}
-    ];
-    let activeStory = 0;
-
-    function showStory(index) {
-      activeStory = (index + stories.length) % stories.length;
-      const story = stories[activeStory];
-      document.querySelectorAll("[data-segment]").forEach(segment => {
-        segment.classList.toggle("is-active", Number(segment.dataset.segment) === activeStory);
-      });
-      document.querySelectorAll("[data-digest-monogram]").forEach(monogram => {
-        monogram.textContent = story.monogram;
-      });
-      document.querySelectorAll("[data-digest-publisher]").forEach(publisher => {
-        publisher.textContent = story.publisher;
-      });
-      document.querySelectorAll("[data-digest-title]").forEach(title => {
-        title.textContent = story.title;
-      });
-      digest.dataset.imageMissing = "false";
-      digest.style.backgroundImage = `linear-gradient(180deg, rgba(40, 37, 35, 0) 0%, rgba(40, 37, 35, 0.20) 40%, rgba(40, 37, 35, 0.80) 70%), url("${story.image}")`;
-      digestImage.src = story.image;
-    }
-
-    digestImage.addEventListener("error", () => {
-      digest.dataset.imageMissing = "true";
-    });
-    digestImage.addEventListener("load", () => {
-      digest.dataset.imageMissing = "false";
-    });
-
-    document.querySelectorAll("[data-digest-nav]").forEach(button => {
-      button.addEventListener("click", () => showStory(activeStory + Number(button.dataset.digestNav)));
-    });
-
-    digest.addEventListener("keydown", event => {
-      if (event.key === "ArrowLeft" || event.key === "ArrowRight") {
-        event.preventDefault();
-        showStory(activeStory + (event.key === "ArrowRight" ? 1 : -1));
-      }
-    });
-
-    showStory(0);
   </script>
   <script>
     document.querySelectorAll(".article-section, .article-2u-section").forEach(section => {

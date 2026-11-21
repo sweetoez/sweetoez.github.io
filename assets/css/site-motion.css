@@ -1,0 +1,19 @@
+:root {
+  --site-dur-fast: 100ms;
+  --site-dur-base: 200ms;
+  --site-dur-slow: 300ms;
+  --site-ease: cubic-bezier(.33,0,.67,1);
+  --site-ease-in: cubic-bezier(1,0,1,1);
+  --site-ease-out: cubic-bezier(0,0,0,1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body:not(.demo) *,
+  body:not(.demo) *::before,
+  body:not(.demo) *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
