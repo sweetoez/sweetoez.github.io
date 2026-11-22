@@ -35,7 +35,9 @@
     media.className = "digest-slide-media";
     const image = document.createElement("img");
     image.className = "digest-slide-image";
-    image.src = `../assets/images/msn/digest-${index + 1}.jpg`;
+    image.src = index % 2 === 0
+      ? "../assets/images/msn/digest/digest-1.jpg"
+      : "../assets/images/msn/digest/digest-yeti.png";
     image.alt = "";
     image.loading = "lazy";
     image.setAttribute("aria-hidden", "true");

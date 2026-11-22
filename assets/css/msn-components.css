@@ -874,7 +874,7 @@ html[data-theme="dark-navy"] {
     height: auto;
     display: block;
     border: none;
-    background: linear-gradient(180deg, rgba(40, 37, 35, 0.00) 0%, rgba(40, 37, 35, 0.20) 40%, rgba(40, 37, 35, 0.80) 70%), url("../images/msn/digest-1.jpg") lightgray 50% / cover no-repeat;
+    background: linear-gradient(180deg, rgba(40, 37, 35, 0.00) 0%, rgba(40, 37, 35, 0.20) 40%, rgba(40, 37, 35, 0.80) 70%), url("../images/msn/digest/digest-1.jpg") lightgray 50% / cover no-repeat;
   }
 
   .demo .digest.digest--carousel {
@@ -1168,7 +1168,7 @@ html[data-theme="dark-navy"] {
   aspect-ratio: 78 / 43;
   border-radius: 12px;
   overflow: hidden;
-  background: #BDBDBD url("../images/msn/ad-1.jpg") center / cover no-repeat;
+  background: #BDBDBD;
 }
 
 .ad-card__text {
