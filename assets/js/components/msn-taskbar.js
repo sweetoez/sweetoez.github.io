@@ -1,0 +1,89 @@
+class MsnTaskbar extends HTMLElement {
+  connectedCallback() {
+    if (this.childElementCount > 0) return;
+
+    this.innerHTML = `<div class="win-taskbar win-acrylic-light" aria-label="Windows taskbar">
+  <span class="win-noise" aria-hidden="true"></span>
+  <div class="win-taskbar__left">
+    <img class="win-icon win-icon--24" src="../assets/images/windows/weather-sunny.png" alt="" aria-hidden="true" onerror="this.style.visibility='hidden'">
+    <div class="win-taskbar__weather-copy"><span>42°F</span><span>Mostly sunny</span></div>
+  </div>
+
+  <div class="win-taskbar__center" aria-label="Pinned apps">
+    <button class="win-taskbar__button win-taskbar__start" type="button" aria-label="Start">
+      <span class="win-icon win-icon--24" data-icon="grid" aria-hidden="true"></span>
+      <img class="win-taskbar__image" src="../assets/images/windows/taskbar/start.svg" alt="" aria-hidden="true" onerror="this.style.visibility='hidden'">
+    </button>
+    <div class="win-taskbar__search-wrap">
+      <button class="win-taskbar__search" type="button" aria-label="Search">
+        <span class="win-icon win-icon--16" data-icon="search" aria-hidden="true"></span>
+        <span>Search</span>
+        <img class="win-taskbar__search-highlight" src="../assets/images/windows/taskbar/search-highlight.svg" alt="" aria-hidden="true" onerror="this.style.visibility='hidden'">
+      </button>
+    </div>
+    <button class="win-taskbar__button" type="button" aria-label="Task view">
+      <span class="win-icon win-icon--24" data-icon="windowMultiple" aria-hidden="true"></span>
+      <img class="win-taskbar__image" src="../assets/images/windows/taskbar/task-view.svg" alt="" aria-hidden="true" onerror="this.style.visibility='hidden'">
+    </button>
+    <button class="win-taskbar__button win-taskbar__app" type="button" aria-label="Copilot">
+      <span class="win-icon win-icon--24 win-taskbar__fallback" data-icon="sparkle" aria-hidden="true"></span>
+      <img class="win-taskbar__image" src="../assets/images/windows/taskbar/copilot.svg" alt="" aria-hidden="true" onerror="this.style.visibility='hidden'">
+    </button>
+    <button class="win-taskbar__button win-taskbar__app" type="button" aria-label="File Explorer">
+      <span class="win-icon win-icon--24 win-taskbar__fallback" data-icon="folder" aria-hidden="true"></span>
+      <img class="win-taskbar__image" src="../assets/images/windows/taskbar/explorer.svg" alt="" aria-hidden="true" onerror="this.style.visibility='hidden'">
+    </button>
+    <button class="win-taskbar__button win-taskbar__app" type="button" aria-label="Browser">
+      <span class="win-icon win-icon--24 win-taskbar__fallback" data-icon="globe" aria-hidden="true"></span>
+      <img class="win-taskbar__image" src="../assets/images/windows/taskbar/edge.svg" alt="" aria-hidden="true" onerror="this.style.visibility='hidden'">
+    </button>
+    <button class="win-taskbar__button win-taskbar__app" type="button" aria-label="Store">
+      <span class="win-icon win-icon--24 win-taskbar__fallback" data-icon="buildingShop" aria-hidden="true"></span>
+      <img class="win-taskbar__image" src="../assets/images/windows/taskbar/store.svg" alt="" aria-hidden="true" onerror="this.style.visibility='hidden'">
+    </button>
+    <button class="win-taskbar__button win-taskbar__app" type="button" aria-label="Recall">
+      <span class="win-icon win-icon--24 win-taskbar__fallback" data-icon="chatSparkle" aria-hidden="true"></span>
+      <img class="win-taskbar__image" src="../assets/images/windows/taskbar/recall.svg" alt="" aria-hidden="true" onerror="this.style.visibility='hidden'">
+    </button>
+    <button class="win-taskbar__button win-taskbar__app" type="button" aria-label="Outlook">
+      <span class="win-icon win-icon--24 win-taskbar__fallback" data-icon="mail" aria-hidden="true"></span>
+      <img class="win-taskbar__image" src="../assets/images/windows/taskbar/outlook.svg" alt="" aria-hidden="true" onerror="this.style.visibility='hidden'">
+    </button>
+    <button class="win-taskbar__button win-taskbar__app" type="button" aria-label="Teams">
+      <span class="win-icon win-icon--24 win-taskbar__fallback" data-icon="people" aria-hidden="true"></span>
+      <img class="win-taskbar__image" src="../assets/images/windows/taskbar/teams.svg" alt="" aria-hidden="true" onerror="this.style.visibility='hidden'">
+    </button>
+  </div>
+
+  <div class="win-taskbar__right">
+    <div class="win-taskbar__status" role="group" aria-label="System status">
+      <span class="win-icon win-taskbar__tray-icon" role="img" aria-label="Show hidden icons">
+        <svg width="32" height="48" viewBox="0 0 32 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><g clip-path="url(#clip0_43086_21420)"><path d="M10.6641 26C10.6641 25.8177 10.7292 25.6615 10.8594 25.5312L15.5312 20.8594C15.6615 20.7292 15.8177 20.6641 16 20.6641C16.1823 20.6641 16.3385 20.7292 16.4688 20.8594L21.1406 25.5312C21.2708 25.6615 21.3359 25.8177 21.3359 26C21.3359 26.1875 21.2682 26.3464 21.1328 26.4766C21.0026 26.6016 20.8464 26.6641 20.6641 26.6641C20.4818 26.6641 20.3255 26.599 20.1953 26.4688L16 22.2734L11.8047 26.4688C11.6745 26.599 11.5182 26.6641 11.3359 26.6641C11.1536 26.6641 10.9948 26.6016 10.8594 26.4766C10.7292 26.3464 10.6641 26.1875 10.6641 26Z" fill="currentColor" fill-opacity="0.8956"/></g><defs><clipPath id="clip0_43086_21420"><rect width="16" height="16" fill="white" transform="translate(8 16)"/></clipPath></defs></svg>
+      </span>
+      <img class="win-taskbar__tray-icon" src="../assets/images/windows/taskbar/tray-onedrive.svg" alt="" aria-hidden="true" onerror="this.style.visibility='hidden'">
+      <img class="win-taskbar__tray-icon win-taskbar__recall-light" src="../assets/images/windows/taskbar/tray-recall.svg" alt="" aria-hidden="true" onerror="this.style.visibility='hidden'">
+      <img class="win-taskbar__tray-icon win-taskbar__recall-dark" src="../assets/images/windows/taskbar/tray-recall-dark.svg" alt="" aria-hidden="true" onerror="this.style.visibility='hidden'">
+      <span class="win-icon win-taskbar__quick-settings" role="img" aria-label="Wi-Fi, volume, and battery">
+        <svg width="80" height="48" viewBox="0 0 80 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+          <path d="M6.51562 22.5C8.13015 20.088 10.8797 18.5 14.0001 18.5C17.1205 18.5 19.87 20.088 21.4845 22.5" stroke-linecap="round" stroke="currentColor"/>
+          <path d="M8.80273 24.5C9.84016 22.7066 11.7792 21.5 14 21.5C16.2209 21.5 18.1599 22.7066 19.1973 24.5" stroke-linecap="round" stroke="currentColor"/>
+          <path d="M10.8359 26.5C11.3977 25.3175 12.6029 24.5 13.9991 24.5C15.3953 24.5 16.6006 25.3175 17.1623 26.5" stroke-linecap="round" stroke="currentColor"/>
+          <circle cx="14" cy="28" r="1.25" fill="currentColor"/>
+          <path d="M14 26.75C14.6902 26.7502 15.25 27.3098 15.25 28C15.25 28.6902 14.6902 29.2498 14 29.25C13.3098 29.25 12.75 28.6902 12.75 28C12.75 27.3098 13.3098 26.7502 14 26.75ZM14.001 24C15.5971 24.0002 16.9748 24.9352 17.6162 26.2852C17.7345 26.5343 17.6278 26.8325 17.3789 26.9512C17.1297 27.0693 16.8315 26.9638 16.7129 26.7148C16.2309 25.7004 15.1967 25.0002 14.001 25C12.8053 25.0002 11.7711 25.7004 11.2891 26.7148C11.1704 26.9637 10.8722 27.0693 10.623 26.9512C10.3742 26.8325 10.2685 26.5343 10.3867 26.2852C10.515 26.0152 10.6745 25.7629 10.8574 25.5303C11.4978 25.2013 12.056 24.7875 12.5186 24.2852C12.977 24.1019 13.477 24.0001 14.001 24ZM14 21C16.4063 21.0001 18.5068 22.3087 19.6299 24.25C19.7678 24.4889 19.686 24.7943 19.4473 24.9326C19.2084 25.0704 18.9029 24.9887 18.7646 24.75C17.8129 23.1051 16.0348 22.0001 14 22C13.9201 22 13.8408 22.0044 13.7617 22.0078C13.8499 21.684 13.9123 21.3477 13.9512 21C13.9674 20.9999 13.9837 21 14 21ZM14 18C17.294 18.0001 20.1971 19.6772 21.9004 22.2217C22.0537 22.451 21.9917 22.7614 21.7627 22.915C21.5334 23.0683 21.223 23.0073 21.0693 22.7783C19.5437 20.4993 16.9463 19.0001 14 19C13.9987 19 13.9974 19 13.9961 19L13.9922 18C13.9948 18 13.9974 18 14 18Z" fill="currentColor" fill-opacity="0.8956"/>
+          <g clip-path="url(#clip0_43086_21551)"><g clip-path="url(#clip1_43086_21551)">
+            <path d="M42 30.2422C42 30.1536 42.0156 30.0833 42.0469 30.0312C42.0833 29.974 42.1302 29.9141 42.1875 29.8516C42.2604 29.7786 42.3385 29.7109 42.4219 29.6484C42.5052 29.5807 42.5859 29.5104 42.6641 29.4375C43.0391 29.0938 43.3724 28.7135 43.6641 28.2969C43.9557 27.875 44.2005 27.4297 44.3984 26.9609C44.5964 26.4922 44.7448 26.0078 44.8438 25.5078C44.9479 25.0078 45 24.5052 45 24C45 23.5 44.9479 23 44.8438 22.5C44.7448 21.9948 44.5938 21.5078 44.3906 21.0391C44.1927 20.5651 43.9479 20.1172 43.6562 19.6953C43.3698 19.2734 43.0391 18.8932 42.6641 18.5547C42.5859 18.4818 42.5052 18.4141 42.4219 18.3516C42.3385 18.2839 42.2604 18.2135 42.1875 18.1406C42.125 18.0781 42.0781 18.0208 42.0469 17.9688C42.0156 17.9167 42 17.8438 42 17.75C42 17.6094 42.0469 17.4922 42.1406 17.3984C42.2396 17.3047 42.3594 17.2578 42.5 17.2578C42.5625 17.2578 42.6172 17.2682 42.6641 17.2891C42.7109 17.3047 42.7604 17.3307 42.8125 17.3672C43.0469 17.5182 43.2786 17.7109 43.5078 17.9453C43.737 18.1797 43.9531 18.4323 44.1562 18.7031C44.3646 18.9688 44.5547 19.2422 44.7266 19.5234C44.8984 19.8047 45.0443 20.0703 45.1641 20.3203C45.4401 20.8984 45.6484 21.4974 45.7891 22.1172C45.9297 22.7318 46 23.3594 46 24C46 24.6354 45.9297 25.2656 45.7891 25.8906C45.6484 26.5104 45.4401 27.1068 45.1641 27.6797C45.0443 27.9245 44.8984 28.1901 44.7266 28.4766C44.5547 28.7578 44.3646 29.0339 44.1562 29.3047C43.9479 29.5703 43.7292 29.8203 43.5 30.0547C43.2708 30.2891 43.0417 30.4818 42.8125 30.6328C42.7552 30.6693 42.7031 30.6979 42.6562 30.7188C42.6146 30.7344 42.5625 30.7422 42.5 30.7422C42.3646 30.7422 42.2474 30.6927 42.1484 30.5938C42.0495 30.4948 42 30.3776 42 30.2422ZM33.2969 27H31.5C31.2969 27 31.1042 26.9609 30.9219 26.8828C30.7396 26.8047 30.5781 26.6979 30.4375 26.5625C30.3021 26.4219 30.1953 26.2604 30.1172 26.0781C30.0391 25.8958 30 25.7031 30 25.5V22.5C30 22.2969 30.0391 22.1042 30.1172 21.9219C30.1953 21.7396 30.3021 21.5807 30.4375 21.4453C30.5781 21.3047 30.7396 21.1953 30.9219 21.1172C31.1042 21.0391 31.2969 21 31.5 21H33.2969L35.7188 18.5703C35.7917 18.4974 35.8724 18.4453 35.9609 18.4141C36.0547 18.3776 36.151 18.3594 36.25 18.3594C36.4635 18.3594 36.6406 18.4297 36.7812 18.5703C36.9271 18.7109 37 18.888 37 19.1016V28.8984C37 29.0026 36.9792 29.099 36.9375 29.1875C36.901 29.276 36.8464 29.3568 36.7734 29.4297C36.7057 29.4974 36.625 29.5521 36.5312 29.5938C36.4427 29.6302 36.349 29.6484 36.25 29.6484C36.0417 29.6484 35.8646 29.5755 35.7188 29.4297L33.2969 27ZM40.0312 28.4453C40.0312 28.3568 40.0443 28.2891 40.0703 28.2422C40.1016 28.1953 40.1458 28.138 40.2031 28.0703C40.4896 27.7474 40.7448 27.4375 40.9688 27.1406C41.1927 26.8438 41.3802 26.5391 41.5312 26.2266C41.6823 25.9089 41.7969 25.5703 41.875 25.2109C41.9583 24.8516 42 24.4479 42 24C42 23.5521 41.9583 23.1484 41.875 22.7891C41.7969 22.4297 41.6823 22.0938 41.5312 21.7812C41.3802 21.4635 41.1927 21.1562 40.9688 20.8594C40.7448 20.5625 40.4896 20.2526 40.2031 19.9297C40.1458 19.862 40.1016 19.8047 40.0703 19.7578C40.0443 19.7109 40.0312 19.6432 40.0312 19.5547C40.0312 19.4193 40.0807 19.3047 40.1797 19.2109C40.2839 19.112 40.4036 19.0625 40.5391 19.0625C40.6172 19.0625 40.6771 19.0729 40.7188 19.0938C40.7604 19.1094 40.8125 19.1406 40.875 19.1875C41.0312 19.3073 41.1849 19.4557 41.3359 19.6328C41.4922 19.8047 41.638 19.9896 41.7734 20.1875C41.9141 20.3854 42.0417 20.5885 42.1562 20.7969C42.2708 21 42.3672 21.1927 42.4453 21.375C42.8151 22.2083 43 23.0833 43 24C43 24.9167 42.8151 25.7917 42.4453 26.625C42.3724 26.7917 42.276 26.9818 42.1562 27.1953C42.0417 27.4036 41.9141 27.612 41.7734 27.8203C41.6328 28.0234 41.4844 28.2135 41.3281 28.3906C41.1771 28.5677 41.026 28.7083 40.875 28.8125C40.8177 28.849 40.763 28.8802 40.7109 28.9062C40.6641 28.9271 40.6068 28.9375 40.5391 28.9375C40.4036 28.9375 40.2839 28.8906 40.1797 28.7969C40.0807 28.6979 40.0312 28.5807 40.0312 28.4453ZM36 28.2891V19.7031L33.8516 21.8516C33.7526 21.9505 33.6354 22 33.5 22H31.5C31.3646 22 31.2474 22.0495 31.1484 22.1484C31.0495 22.2474 31 22.3646 31 22.5V25.5C31 25.6354 31.0495 25.7526 31.1484 25.8516C31.2474 25.9505 31.3646 26 31.5 26H33.5C33.6354 26 33.7526 26.0495 33.8516 26.1484L36 28.2891ZM38.0938 26.5391C38.0938 26.4661 38.1016 26.4089 38.1172 26.3672C38.138 26.3255 38.1693 26.276 38.2109 26.2188C38.3307 26.0365 38.4401 25.862 38.5391 25.6953C38.638 25.5234 38.7214 25.3516 38.7891 25.1797C38.8568 25.0026 38.9089 24.8203 38.9453 24.6328C38.9818 24.4401 39 24.2292 39 24C39 23.776 38.9818 23.5677 38.9453 23.375C38.9089 23.1823 38.8568 23 38.7891 22.8281C38.7214 22.651 38.638 22.4792 38.5391 22.3125C38.4401 22.1406 38.3307 21.9635 38.2109 21.7812C38.1693 21.724 38.138 21.6745 38.1172 21.6328C38.1016 21.5911 38.0938 21.5339 38.0938 21.4609C38.0938 21.3255 38.1432 21.2083 38.2422 21.1094C38.3411 21.0104 38.4583 20.9609 38.5938 20.9609C38.6823 20.9609 38.7552 20.9766 38.8125 21.0078C38.8698 21.0391 38.9271 21.0859 38.9844 21.1484C39.151 21.3307 39.2969 21.5365 39.4219 21.7656C39.5469 21.9896 39.651 22.2292 39.7344 22.4844C39.8229 22.7344 39.888 22.9896 39.9297 23.25C39.9766 23.5104 40 23.7604 40 24C40 24.2292 39.9766 24.4766 39.9297 24.7422C39.888 25.0026 39.8229 25.263 39.7344 25.5234C39.651 25.7786 39.5443 26.0234 39.4141 26.2578C39.2891 26.487 39.1458 26.6849 38.9844 26.8516C38.875 26.9714 38.7448 27.0312 38.5938 27.0312C38.4583 27.0312 38.3411 26.9844 38.2422 26.8906C38.1432 26.7917 38.0938 26.6745 38.0938 26.5391Z" fill="currentColor" fill-opacity="0.8956"/>
+          </g></g>
+          <path d="M70 19C71.6569 19 73 20.3431 73 22C73.5523 22 74 22.4477 74 23V25C74 25.5523 73.5523 26 73 26L72.9961 26.1543C72.9158 27.7394 71.6051 29 70 29H57L56.8457 28.9961C55.3117 28.9184 54.0816 27.6883 54.0039 26.1543L54 26V22C54 20.3949 55.2606 19.0842 56.8457 19.0039L57 19H60.6582L60.1582 20H57C55.8954 20 55 20.8954 55 22V26C55 27.1046 55.8954 28 57 28H70C71.1046 28 72 27.1046 72 26V22C72 20.8954 71.1046 20 70 20H66.8408L66.8887 19.9053C67.0378 19.6069 67.0735 19.2925 67.0205 19H70Z" fill="currentColor"/>
+          <path d="M63.375 16.2501C63.5308 15.9391 63.9996 16.0497 64 16.3975V19.0001H65.5879C65.7772 19.0004 65.9001 19.1998 65.8154 19.3692L63.625 23.7501C63.4692 24.061 63.0004 23.9503 63 23.6026V21.0001H61.4121C61.2228 21.0001 61.0999 20.8003 61.1846 20.6309L63.375 16.2501Z" fill="currentColor"/>
+          <path class="win-taskbar__battery-fill" d="M70 21C70.5523 21 71 21.4477 71 22V26C71 26.5523 70.5523 27 70 27H57C56.4477 27 56 26.5523 56 26V22C56 21.4477 56.4477 21 57 21H59.9795C60.0983 21.6555 60.6644 22.2 61.4121 22.2002H61.7998V23.6025C61.8002 25.2167 63.9763 25.7301 64.6982 24.2861L66.3408 21H70Z" fill="#0F7B0F"/>
+          <defs><clipPath id="clip0_43086_21551"><rect width="16" height="16" fill="white" transform="translate(30 16)"/></clipPath><clipPath id="clip1_43086_21551"><rect width="16" height="16" fill="white" transform="translate(30 16)"/></clipPath></defs>
+        </svg>
+      </span>
+    </div>
+    <div class="win-taskbar__clock"><span>11:30 AM</span><span>11/19/2026</span></div>
+  </div>
+</div>`;
+  }
+}
+
+customElements.define("msn-taskbar", MsnTaskbar);

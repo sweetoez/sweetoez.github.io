@@ -71,15 +71,11 @@
   scrollbar-width: thin;
 }
 
-.edge-taskbar {
+.edge-ntp-app msn-taskbar .win-taskbar {
   top: auto;
   bottom: 0;
   left: 0;
   width: 100%;
-}
-
-.edge-taskbar .win-taskbar__button {
-  display: block;
 }
 
 .edge-full-screen-link {
@@ -384,10 +380,6 @@ html[data-theme="dark"] .edge-page.edge-content .digest-1u-paddles button,
 html[data-theme="dark"] .edge-page.edge-content .digest--carousel .digest-transport button {
   background: #FFFFFF;
   color: #272320;
-}
-
-html[data-theme="dark"] .edge-taskbar {
-  border-top-color: rgba(255, 255, 255, .08);
 }
 
 html[data-theme="dark"] .feeds-button {

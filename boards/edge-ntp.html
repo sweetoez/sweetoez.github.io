@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="../assets/css/edge-chrome.css">
   <link rel="stylesheet" href="../assets/css/edge-ntp.css">
   <link rel="stylesheet" href="../assets/css/fluent-motion.css">
+  <script src="../assets/js/components/msn-taskbar.js"></script>
   <script defer src="../assets/js/fluent-motion.js"></script>
   <script defer src="../assets/js/digest.js?v=2"></script>
   <script defer src="../assets/js/edge-ntp.js"></script>
@@ -266,14 +267,7 @@
             </button>
           </section>
 
-          <div class="win-taskbar edge-taskbar" aria-label="Windows taskbar">
-            <div class="win-taskbar__center" aria-hidden="true">
-              <span class="win-taskbar__button"><img class="win-taskbar__image" src="../assets/images/windows/taskbar/start.svg" alt=""></span>
-              <span class="win-taskbar__button"><img class="win-taskbar__image" src="../assets/images/windows/taskbar/task-view.svg" alt=""></span>
-              <span class="win-taskbar__button"><img class="win-taskbar__image" src="../assets/images/windows/taskbar/edge.svg" alt=""></span>
-              <span class="win-taskbar__button"><img class="win-taskbar__image" src="../assets/images/windows/taskbar/explorer.svg" alt=""></span>
-            </div>
-          </div>
+          <msn-taskbar></msn-taskbar>
         </section>
       </div>
     </div>

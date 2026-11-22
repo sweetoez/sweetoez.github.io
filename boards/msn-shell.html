@@ -7,7 +7,10 @@
   <link rel="stylesheet" href="../assets/css/msn-components.css">
   <link rel="stylesheet" href="../assets/css/msn-shell.css">
   <link rel="stylesheet" href="../assets/css/edge-chrome.css">
+  <link rel="stylesheet" href="../assets/css/windows-desktop.css">
+  <link rel="stylesheet" href="../assets/css/windows-shell.css">
 
+  <script src="../assets/js/components/msn-taskbar.js"></script>
   <script defer src="../assets/js/msn-shell.js"></script>
   <link rel="stylesheet" href="../assets/css/fluent-motion.css">
   <script defer src="../assets/js/fluent-motion.js"></script>
@@ -87,13 +90,7 @@
           <iframe class="edge-page" src="msn-ntp-layout.html?embed=1&amp;theme=light" title="Edge new tab page content"></iframe>
         </section>
 
-        <div class="taskbar" aria-label="Windows taskbar">
-          <div class="taskbar-apps" aria-hidden="true">
-            <span class="taskbar-slot"><span class="taskbar-item"></span></span><span class="taskbar-slot"><span class="taskbar-item"></span></span><span class="taskbar-slot"><span class="taskbar-item"></span></span>
-            <span class="taskbar-slot"><span class="taskbar-item"></span></span><span class="taskbar-slot"><span class="taskbar-item"></span></span><span class="taskbar-slot"><span class="taskbar-item"></span></span>
-          </div>
-          <div class="taskbar-clock"><span>10:30 AM</span><span>11/17/2026</span></div>
-        </div>
+        <msn-taskbar></msn-taskbar>
       </section>
     </div>
     <iframe class="windows-panel-preview" src="windows-panel-shell.html?embed=1&amp;theme=light" title="Windows panel"></iframe>

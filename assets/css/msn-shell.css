@@ -411,26 +411,13 @@ html:is([data-theme="dark"], [data-theme="dark-navy"]) .shell-app {
 .p2-refresh__button:hover:not(:disabled) { background: #3B3633; }
 .p2-refresh__button:active:not(:disabled) { background: #1A1715; }
 
-.taskbar {
-  position: absolute;
+.desktop-canvas > msn-taskbar .win-taskbar {
+  top: auto;
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 4;
-  display: flex;
-  height: 48px;
-  align-items: center;
-  justify-content: center;
-  border-top: 1px solid rgba(0, 0, 0, .06);
-  background: var(--taskbar-surface);
-  backdrop-filter: blur(30px);
+  width: 100%;
 }
-
-.taskbar-apps { display: flex; align-items: center; gap: 4px; }
-.taskbar-slot { display: flex; width: 40px; height: 40px; align-items: center; justify-content: center; }
-.taskbar-item { display: block; width: 24px; height: 24px; flex: 0 0 24px; border-radius: 4px; background: #D3D3D3; }
-.taskbar-clock { position: absolute; right: 12px; display: flex; flex-direction: column; align-items: flex-end; color: #242424; font: 400 12px/16px "Segoe UI Variable Text", "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif; }
-.taskbar-clock span { font-family: inherit; }
 
 .shell-app[data-scenario="prong"] .edge-window { display: none; }
 .shell-app[data-scenario="edge"] .prong-panel { display: none; }

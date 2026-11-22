@@ -76,6 +76,10 @@ html[data-theme="dark"] .win-desktop {
   object-fit: cover;
 }
 
+msn-taskbar {
+  display: contents;
+}
+
 .win-taskbar {
   position: absolute;
   top: 1152px;
