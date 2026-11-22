@@ -81,7 +81,7 @@ function populateStories() {
       const card = document.createElement("msn-card");
       card.setAttribute("variant", "article");
       card.setAttribute("title", story.title);
-      card.setAttribute("publisher", story.publisher);
+      card.setAttribute("publisher-key", story.publisherKey);
       card.setAttribute("time", storyTimes[originalIndex] || "1d");
       card.setAttribute("image", story.image);
       card.setAttribute("image-alt", story.alt);

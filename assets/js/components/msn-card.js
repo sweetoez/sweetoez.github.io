@@ -10,14 +10,24 @@ class MsnCard extends HTMLElement {
 
     const variant = this.getAttribute("variant") === "ad" ? "ad" : "article";
     const title = escapeHtml(this.getAttribute("title") || "");
-    const publisher = escapeHtml(this.getAttribute("publisher") || "Quantis");
+    const publisherKey = this.getAttribute("publisher-key");
+    const publisherEntry = publisherKey
+      ? window.MSN_CONTENT?.publishers.find((entry) => entry.key === publisherKey)
+      : null;
+    if (publisherKey && !publisherEntry) {
+      throw new Error(`Unknown MSN publisher: ${publisherKey}`);
+    }
+    const publisher = escapeHtml(publisherEntry?.name || this.getAttribute("publisher") || "Quantis");
     const time = escapeHtml(this.getAttribute("time") || "1d");
     const href = escapeHtml(this.getAttribute("href") || "#");
     const sponsor = escapeHtml(this.getAttribute("sponsor") || "Sponsored");
     const cta = escapeHtml(this.getAttribute("cta") || "");
     const image = escapeHtml(this.getAttribute("image") || "");
     const imageAlt = escapeHtml(this.getAttribute("image-alt") || "");
-    const publisherIcon = this.getAttribute("publisher-icon");
+    const publisherIcon = publisherEntry?.logo || this.getAttribute("publisher-icon");
+    const logo = publisherIcon
+      ? `<img class="msn-card__publisher-logo" src="${escapeHtml(publisherIcon)}" alt="" width="16" height="16" onerror="this.style.visibility='hidden';this.parentElement.style.backgroundColor='#D3D3D3'">`
+      : "";
 
     if (variant === "ad") {
       this.innerHTML = `<article class="ad-card">
@@ -32,7 +42,7 @@ class MsnCard extends HTMLElement {
       <div class="ad-card__publisher">
         <div class="ad-card__base">
           <div class="ad-card__attribution">
-            <span class="ad-card__icon"><span class="ad-card__favicon" aria-hidden="true">${publisherIcon ? `<img src="${publisherIcon}" alt="" width="16" height="16" onerror="this.style.visibility='hidden'">` : "N"}</span></span>
+            <span class="ad-card__icon"><span class="ad-card__favicon${logo ? " ad-card__favicon--logo" : ""}" aria-hidden="true">${logo || "N"}</span></span>
             <span class="ad-card__name-wrap"><span class="ad-card__name">${publisher}</span></span>
           </div>
           <div class="ad-card__meta"><span class="ad-card__dot" aria-hidden="true">·</span><span class="ad-card__sponsored">${sponsor}</span></div>
@@ -59,7 +69,7 @@ class MsnCard extends HTMLElement {
   </div>
   <div class="article-text">
     <div class="cg-pub">
-      <span class="cg-pub-brand"><span class="cg-fav-frame">${publisherIcon ? `<img src="${publisherIcon}" alt="" width="16" height="16" onerror="this.style.visibility='hidden'">` : ""}</span><span class="cg-pub-name">${publisher}</span></span>
+      <span class="cg-pub-brand"><span class="cg-fav-frame">${logo}</span><span class="cg-pub-name">${publisher}</span></span>
       <span class="cg-pub-dot" aria-hidden="true">·</span><span class="cg-pub-time">${time}</span>
     </div>
     <h3 class="article-title">${title}</h3>

@@ -385,11 +385,6 @@ html[data-theme="dark"] .feeds-button:hover:not(:disabled) {
 }
 
 @container edge-page (max-width: 655px) {
-  .edge-card-grid > .edge-feed-article[data-feed-article="5"],
-  .edge-card-grid > .edge-feed-article[data-feed-article="6"] {
-    display: none;
-  }
-
   .edge-shorts-grid {
     width: calc(100% + 16px);
     max-width: none;
@@ -612,10 +607,6 @@ html[data-theme="dark"] .feeds-button:hover:not(:disabled) {
     box-shadow: none;
     color: var(--dg-icon);
   }
-
-  .edge-card-grid > .edge-feed-ad[data-feed-ad="3"] {
-    display: none;
-  }
 }
 
 html[data-theme="dark"] .shorts-card,
@@ -624,10 +615,6 @@ html[data-theme="dark"] .edge-card-grid .ad-card__media {
 }
 
 @container edge-page (min-width: 656px) and (max-width: 971px) {
-  .edge-card-grid > .edge-feed-ad[data-feed-ad="3"] {
-    display: none;
-  }
-
   .edge-widget-grid .digest--carousel .digest-controls {
     display: flex;
   }

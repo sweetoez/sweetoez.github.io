@@ -146,36 +146,38 @@ const ads = window.MSN_CONTENT.ads;
 
 document.querySelectorAll(".card-section[data-articles]").forEach((section) => {
   const grid = section.querySelector(".card-grid");
-  const count = Number(section.dataset.articles);
+  const originalCount = Number(section.dataset.articles);
+  const count = 8;
   section.querySelector(".section-title").textContent = section.dataset.title;
   let pairCount = 0;
 
   for (let index = 0; index < count; index += 1) {
-    const story = articles[articleIndex % articles.length];
+    const story = articles[(articleIndex + index) % articles.length];
     const article = document.createElement("msn-card");
     article.setAttribute("variant", "article");
     article.setAttribute("title", story.title);
-    article.setAttribute("publisher", story.publisher);
+    article.setAttribute("publisher-key", story.publisherKey);
     article.setAttribute("time", "1d");
     article.setAttribute("image", story.image);
     article.setAttribute("image-alt", story.alt);
     grid.insertBefore(article, grid.querySelector(".column-overlay"));
     pairCount += 1;
-    articleIndex += 1;
 
     if (pairCount === 2) {
-      const adContent = ads[adIndex % ads.length];
+      const adContent = ads[(adIndex + Math.floor(index / 2)) % ads.length];
       const ad = document.createElement("msn-card");
       ad.setAttribute("variant", "ad");
       ad.setAttribute("title", adContent.headline);
-      ad.setAttribute("publisher", adContent.advertiser);
+      ad.setAttribute("publisher-key", adContent.publisherKey);
       ad.setAttribute("image", adContent.image);
       ad.setAttribute("image-alt", adContent.alt);
       grid.insertBefore(ad, grid.querySelector(".column-overlay"));
       pairCount = 0;
-      adIndex += 1;
     }
   }
+
+  articleIndex += originalCount;
+  adIndex += Math.floor(originalCount / 2);
 
   const subtitle = section.querySelector(".section-subtitle");
   if (section.dataset.subtitle) {

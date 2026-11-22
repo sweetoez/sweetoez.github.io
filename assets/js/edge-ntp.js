@@ -108,12 +108,12 @@ function applyWidth() {
 function populateFeed(grid, articleStart, adStart) {
   const cards = [];
   let adCount = 0;
-  for (let index = 0; index < 6; index += 1) {
+  for (let index = 0; index < 8; index += 1) {
     const story = feedArticles[(articleStart + index) % feedArticles.length];
     const article = document.createElement("msn-card");
     article.setAttribute("variant", "article");
     article.setAttribute("title", story.title);
-    article.setAttribute("publisher", story.publisher);
+    article.setAttribute("publisher-key", story.publisherKey);
     article.setAttribute("time", "1d");
     article.setAttribute("image", story.image);
     article.setAttribute("image-alt", story.alt);
@@ -126,7 +126,7 @@ function populateFeed(grid, articleStart, adStart) {
       const ad = document.createElement("msn-card");
       ad.setAttribute("variant", "ad");
       ad.setAttribute("title", adContent.headline);
-      ad.setAttribute("publisher", adContent.advertiser);
+      ad.setAttribute("publisher-key", adContent.publisherKey);
       ad.setAttribute("image", adContent.image);
       ad.setAttribute("image-alt", adContent.alt);
       ad.classList.add("edge-feed-ad");
