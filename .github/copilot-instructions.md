@@ -46,6 +46,14 @@ Controls are native HTML in plain CSS with Fluent states (rest, hover, pressed, 
 - Entity cards assemble existing KC heroes and modules (kc-components.css, boards/kc-*.html). Never rebuild a component that exists.
 - Public-safe: never put real people, brands, team names or company names from the Figma exports into the site; use the dummy names each handoff gives.
 
+## KC web components
+- Use light-DOM custom elements only: classic `<script src>` in each board, no `type="module"`, no `fetch()`, no `/partials/` folder, no Shadow DOM, and no visual dependency on a server. Opened as a file must work.
+- Styles stay in `/assets/css/kc-components.css`; never put CSS inside a component's JavaScript.
+- One definition per hero and module, shared by every KC page. Never copy, fork, or restyle a component per entity. Entity differences such as accent color, background, and visible logos come from data and shared modifier classes.
+- Content and fixed module order come only from `/assets/js/data/kc-entities.js`. There is no reorder UI.
+- Convert one component or one module family per handoff. Every conversion must match `_shots/kc-baseline/` pixel for pixel on every affected page, desktop and mobile, with See more collapsed and expanded.
+- Standing KC rules: widths 472 / 360; one 1px `#DDD` seam; last visible item radius `0 0 6 6`; Title Case; #059 logo rows centered on the image edge with real brand SVGs; #060 scroll rows edge to edge with a 16px inner start inset; the 20px Video + Image overhang; and #085 module images under `/assets/images/kc/modules/<slug>/`.
+
 ## KC hero + carousel rules (#059)
 - Center the logo row on the image or band bottom edge; the hero body starts at that same edge (mobile Designer 212/196/184, Single Image 150/134, desktop Designer 280/264/240).
 - The body box is the only bordered hero element (1px #DDD). The image matches its width, and every card seam is one 1px line.
