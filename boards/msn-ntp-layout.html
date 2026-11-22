@@ -6,6 +6,7 @@
   <title>MSN responsive NTP layout</title>
   <link rel="stylesheet" href="../assets/css/msn-components.css">
   <script src="../assets/js/components/ntp-composer.js"></script>
+  <script src="../assets/js/components/ntp-shortcuts.js"></script>
 
   <style>
     .page-shell {
@@ -360,37 +361,6 @@
       padding: 32px;
     }
 
-
-    .ntp-shortcuts {
-      display: flex;
-      max-width: 100%;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 16px;
-    }
-
-    .ntp-shortcut {
-      display: flex;
-      width: 64px;
-      flex: 0 0 64px;
-      flex-direction: column;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .ntp-shortcut-icon {
-      width: 40px;
-      height: 40px;
-      border-radius: 999px;
-      background: #D3D3D3;
-    }
-
-    .ntp-shortcut-label {
-      width: 48px;
-      height: 8px;
-      border-radius: 4px;
-      background: #D3D3D3;
-    }
 
     .shorts-grid {
       display: grid;
@@ -748,14 +718,7 @@
         </nav>
         <section class="ntp-hero" aria-label="Search and shortcuts">
           <ntp-composer></ntp-composer>
-          <div class="ntp-shortcuts" aria-label="Shortcuts">
-            <div class="ntp-shortcut" aria-hidden="true"><span class="ntp-shortcut-icon"></span><span class="ntp-shortcut-label"></span></div>
-            <div class="ntp-shortcut" aria-hidden="true"><span class="ntp-shortcut-icon"></span><span class="ntp-shortcut-label"></span></div>
-            <div class="ntp-shortcut" aria-hidden="true"><span class="ntp-shortcut-icon"></span><span class="ntp-shortcut-label"></span></div>
-            <div class="ntp-shortcut" aria-hidden="true"><span class="ntp-shortcut-icon"></span><span class="ntp-shortcut-label"></span></div>
-            <div class="ntp-shortcut" aria-hidden="true"><span class="ntp-shortcut-icon"></span><span class="ntp-shortcut-label"></span></div>
-            <div class="ntp-shortcut" aria-hidden="true"><span class="ntp-shortcut-icon"></span><span class="ntp-shortcut-label"></span></div>
-          </div>
+          <ntp-shortcuts></ntp-shortcuts>
         </section>
         <section class="layout-section widget-section" aria-labelledby="widget-heading">
           <header class="widget-header">

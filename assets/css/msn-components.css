@@ -338,6 +338,132 @@ html:is([data-theme="dark"], [data-theme="dark-navy"]) .ntp-search-slot input::p
   color: rgba(164,173,200,.8);
 }
 
+ntp-shortcuts {
+  display: block;
+  width: 100%;
+  max-width: 872px;
+  height: 72px;
+  margin: 0 auto;
+  container-type: inline-size;
+}
+
+.ntp-shortcuts {
+  display: flex;
+  width: 100%;
+  max-width: 872px;
+  height: 72px;
+  justify-content: center;
+  gap: 8px;
+  margin: 0 auto;
+}
+
+.ntp-shortcut {
+  box-sizing: border-box;
+  width: 80px;
+  height: 72px;
+  display: flex;
+  flex: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  border-radius: 8px;
+  background: transparent;
+  color: #272320;
+  text-decoration: none;
+  transition: background-color var(--fluent-dur-hover) var(--fluent-ease);
+}
+
+.ntp-shortcut-icon {
+  box-sizing: border-box;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  border: 1px solid rgba(0,0,0,.08);
+  border-radius: 12px;
+  background: rgba(255,255,255,.7);
+  transition: background-color var(--fluent-dur-hover) var(--fluent-ease);
+}
+
+.ntp-shortcut-icon img,
+.ntp-shortcut-icon svg {
+  width: 24px;
+  height: 24px;
+  display: block;
+  object-fit: contain;
+}
+
+.ntp-shortcut-label {
+  max-width: 80px;
+  overflow: hidden;
+  color: #272320;
+  font-size: 12px;
+  font-weight: 650;
+  line-height: 16px;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ntp-shortcut:hover {
+  background: rgba(0,0,0,.04);
+}
+
+.ntp-shortcut:hover .ntp-shortcut-icon {
+  background: rgba(255,255,255,.9);
+}
+
+.ntp-shortcut:focus-visible {
+  outline: 2px solid #0F6CBD;
+  outline-offset: 2px;
+}
+
+.ntp-shortcut:active {
+  transform: scale(.98);
+  transition-duration: var(--fluent-dur-press);
+}
+
+.ntp-shortcut--add {
+  color: #272320;
+}
+
+html:is([data-theme="dark"], [data-theme="dark-navy"]) .ntp-shortcut,
+html:is([data-theme="dark"], [data-theme="dark-navy"]) .ntp-shortcut-label,
+html:is([data-theme="dark"], [data-theme="dark-navy"]) .ntp-shortcut--add {
+  color: #E5EBFA;
+}
+
+html:is([data-theme="dark"], [data-theme="dark-navy"]) .ntp-shortcut-icon {
+  border-color: rgba(255,255,255,.08);
+  background: rgba(50,63,96,.65);
+}
+
+html:is([data-theme="dark"], [data-theme="dark-navy"]) .ntp-shortcut:hover .ntp-shortcut-icon {
+  background: rgba(50,63,96,.85);
+}
+
+@container (min-width: 656px) and (max-width: 971px) {
+  .ntp-shortcut:nth-child(8),
+  .ntp-shortcut:nth-child(9) {
+    display: none;
+  }
+}
+
+@container (max-width: 655px) {
+  .ntp-shortcuts {
+    height: 152px;
+    display: grid;
+    grid-template-columns: repeat(4, 80px);
+  }
+
+  .ntp-shortcut:nth-child(8),
+  .ntp-shortcut:nth-child(9) {
+    display: none;
+  }
+}
+
 msn-header-controls {
   display: contents;
 }
