@@ -444,14 +444,34 @@ html:is([data-theme="dark"], [data-theme="dark-navy"]) .ntp-shortcut:hover .ntp-
   background: rgba(50,63,96,.85);
 }
 
-@container (min-width: 656px) and (max-width: 971px) {
+@container stage (min-width: 656px) and (max-width: 971px) {
   .ntp-shortcut:nth-child(8),
   .ntp-shortcut:nth-child(9) {
     display: none;
   }
 }
 
-@container (max-width: 655px) {
+@container stage (max-width: 655px) {
+  .ntp-shortcuts {
+    height: 152px;
+    display: grid;
+    grid-template-columns: repeat(4, 80px);
+  }
+
+  .ntp-shortcut:nth-child(8),
+  .ntp-shortcut:nth-child(9) {
+    display: none;
+  }
+}
+
+@container edge-page (min-width: 656px) and (max-width: 971px) {
+  .ntp-shortcut:nth-child(8),
+  .ntp-shortcut:nth-child(9) {
+    display: none;
+  }
+}
+
+@container edge-page (max-width: 655px) {
   .ntp-shortcuts {
     height: 152px;
     display: grid;
@@ -599,7 +619,11 @@ html[data-theme="dark"] .p2-header__profile,
 html[data-theme="dark-navy"] .p2-header__profile,
 html[data-theme="dark"] .p2-header__toggle,
 html[data-theme="dark-navy"] .p2-header__toggle {
-  color: var(--w-ink);
+  color: var(--msn-primary);
+}
+
+html:is([data-theme="dark"], [data-theme="dark-navy"]) .p2-header__toggle input {
+  border-color: var(--msn-secondary);
 }
 
 html:is([data-theme="dark"], [data-theme="dark-navy"]) .p2-header__button:hover:not(:disabled),

@@ -8,7 +8,7 @@ class EdgeChrome extends HTMLElement {
   </div>
   <div class="edge-tabs">
     <div class="edge-active-tab">
-      <span class="edge-icon" data-edge-icon="globe16" aria-hidden="true"></span>
+      <img class="edge-active-tab__favicon" src="../assets/images/brand/edge-favicon.png" alt="" aria-hidden="true">
       <span class="edge-active-tab__title">New Tab</span>
       <button class="edge-tab-dismiss" type="button" aria-label="Close tab"><span class="edge-icon" data-edge-icon="dismiss12" aria-hidden="true"></span></button>
     </div>
@@ -40,12 +40,12 @@ class EdgeChrome extends HTMLElement {
       <span class="edge-toolbar-profile__fallback" aria-hidden="true">OL</span>
     </button>
     <button type="button" aria-label="More options"><span class="edge-icon" data-edge-icon="more20" aria-hidden="true"></span></button>
-    <button type="button" aria-label="Copilot"><img src="../assets/images/windows/taskbar/copilot.svg" width="20" height="20" alt="" aria-hidden="true"></button>
+    <button type="button" aria-label="Copilot"><img src="../assets/images/windows/copilot-toolbar.svg" width="20" height="20" alt="" aria-hidden="true"></button>
   </div>
 </div>
 <div class="edge-chrome-row edge-favorites" aria-label="Favorites">
   <div class="edge-favorites__items">
-    <a class="edge-favorite" href="#" aria-label="Outlook"><span class="edge-favorite__icon"><img src="../assets/images/windows/taskbar/outlook.svg" alt="" aria-hidden="true"></span><span class="edge-favorite__label">Outlook</span></a>
+    <a class="edge-favorite" href="#" aria-label="Outlook"><span class="edge-favorite__icon"><img src="../assets/images/brand/outlook-favicon.svg" alt="" aria-hidden="true"></span><span class="edge-favorite__label">Outlook</span></a>
     <a class="edge-favorite" href="#" aria-label="YouTube"><span class="edge-favorite__icon"><img src="../assets/images/brand/youtube.svg" alt="" aria-hidden="true"></span><span class="edge-favorite__label">YouTube</span></a>
     <a class="edge-favorite" href="#" aria-label="Amazon"><span class="edge-favorite__icon"><img class="edge-amazon edge-amazon--light" src="../assets/images/brand/amazon-light.svg" alt="" aria-hidden="true"><img class="edge-amazon edge-amazon--dark" src="../assets/images/brand/amazon-dark.svg" alt="" aria-hidden="true"></span><span class="edge-favorite__label">Amazon</span></a>
     <a class="edge-favorite" href="#" aria-label="Instagram"><span class="edge-favorite__icon"><img src="../assets/images/brand/instagram.png" alt="" aria-hidden="true"></span><span class="edge-favorite__label">Instagram</span></a>
