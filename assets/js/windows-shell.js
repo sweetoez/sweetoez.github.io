@@ -3,7 +3,6 @@ const stageFit = document.querySelector(".win-stage-fit");
 const themeSelect = document.querySelector("#win-theme");
 const scaleToggle = document.querySelector("[data-scale-toggle]");
 const outlinesToggle = document.querySelector("[data-outlines-toggle]");
-const storyTemplate = document.querySelector("#win-story-template");
 const themeStorageKey = "windows-panel-theme";
 const params = new URLSearchParams(location.search);
 const isEmbed = params.get("embed") === "1";
@@ -93,10 +92,13 @@ function updateScale() {
 function populateStories() {
   storySections.forEach(({ gridId, stories }) => {
     const cards = stories.map(({ title, publisher, time }) => {
-      const card = storyTemplate.content.firstElementChild.cloneNode(true);
-      card.querySelector(".article-title").textContent = title;
-      card.querySelector(".cg-pub-name").textContent = publisher;
-      card.querySelector(".cg-pub-time").textContent = time;
+      const card = document.createElement("msn-card");
+      card.setAttribute("variant", "article");
+      card.setAttribute("title", title);
+      card.setAttribute("publisher", publisher);
+      card.setAttribute("time", time);
+      card.setAttribute("image", "../assets/images/msn/widgets/art-img-1.png");
+      card.setAttribute("publisher-icon", "../assets/images/msn/widgets/art-fav-1.svg");
       return card;
     });
     document.getElementById(gridId).replaceChildren(...cards);

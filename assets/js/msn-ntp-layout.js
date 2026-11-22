@@ -141,21 +141,28 @@ document.querySelector(".feeds-button").addEventListener("click", () => {
 
 document.querySelectorAll(".card-section[data-headlines]").forEach((section) => {
   const grid = section.querySelector(".card-grid");
-  const articleTemplate = document.querySelector("#article-template");
-  const adTemplate = document.querySelector("#ad-template");
   const headlines = section.dataset.headlines.split("|");
   const count = Number(section.dataset.articles);
   section.querySelector(".section-title").textContent = section.dataset.title;
   let pairCount = 0;
 
   for (let index = 0; index < count; index += 1) {
-    const article = articleTemplate.content.firstElementChild.cloneNode(true);
-    article.querySelector(".article-title").textContent = headlines[index % headlines.length];
+    const article = document.createElement("msn-card");
+    article.setAttribute("variant", "article");
+    article.setAttribute("title", headlines[index % headlines.length]);
+    article.setAttribute("publisher", "Quantis");
+    article.setAttribute("time", "1d");
+    article.setAttribute("image", "../assets/images/msn/widgets/art-img-1.png");
+    article.setAttribute("publisher-icon", "../assets/images/msn/widgets/art-fav-1.svg");
     grid.insertBefore(article, grid.querySelector(".column-overlay"));
     pairCount += 1;
 
     if (pairCount === 2) {
-      grid.insertBefore(adTemplate.content.firstElementChild.cloneNode(true), grid.querySelector(".column-overlay"));
+      const ad = document.createElement("msn-card");
+      ad.setAttribute("variant", "ad");
+      ad.setAttribute("title", "Switch plans in seconds. Northwind Mobile gives you coverage that moves with you, wherever you go.");
+      ad.setAttribute("publisher", "Northwind Mobile");
+      grid.insertBefore(ad, grid.querySelector(".column-overlay"));
       pairCount = 0;
     }
   }

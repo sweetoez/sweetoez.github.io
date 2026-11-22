@@ -10,8 +10,6 @@ const widthButtons = [...document.querySelectorAll("[data-width]")];
 const themeButtons = [...document.querySelectorAll("[data-theme-choice]")];
 const feedGrid = document.querySelector("#edge-feed-grid");
 const moreFeedGrid = document.querySelector("#edge-feed-grid-more");
-const articleTemplate = document.querySelector("#edge-article-template");
-const adTemplate = document.querySelector("#edge-ad-template");
 const iconPaths = {
   globe16: "../assets/icons/globe_16_regular.svg",
   dismiss12: "../assets/icons/dismiss_12_regular.svg",
@@ -124,14 +122,20 @@ function applyWidth() {
 function populateFeed(grid, stories) {
   const cards = [];
   stories.forEach((headline, index) => {
-    const article = articleTemplate.content.firstElementChild.cloneNode(true);
+    const article = document.createElement("msn-card");
+    article.setAttribute("variant", "article");
+    article.setAttribute("title", headline);
+    article.setAttribute("publisher", "Quantis");
+    article.setAttribute("time", "1d");
     article.classList.add("edge-feed-article");
     article.dataset.feedArticle = String(index + 1);
-    article.querySelector(".article-title").textContent = headline;
     cards.push(article);
 
     if ((index + 1) % 2 === 0) {
-      const ad = adTemplate.content.firstElementChild.cloneNode(true);
+      const ad = document.createElement("msn-card");
+      ad.setAttribute("variant", "ad");
+      ad.setAttribute("title", "Switch plans in seconds. Northwind Mobile gives you coverage that moves with you, wherever you go.");
+      ad.setAttribute("publisher", "Northwind Mobile");
       ad.classList.add("edge-feed-ad");
       ad.dataset.feedAd = String((index + 1) / 2);
       cards.push(ad);
