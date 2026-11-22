@@ -4,6 +4,18 @@ Owner is a systems designer, not an engineer. Explain any manual step as short n
 I receive work in blocks titled "=== HANDOFF W→P #NNN ===" from Justin's planning workspace. Follow them exactly.
 Handoffs no longer need a report back. When done, reply with one short line saying what changed.
 Use the same number as the handoff. For requests without a handoff, use "#ad-hoc".
+
+## Shared components (hard rule)
+- Anything used on more than one board (taskbar, desktop/wallpaper, header controls, cards, widgets, digest, Edge chrome, search bar, shortcuts) has ONE definition. Every board uses it. Never copy, fork or restyle a component for one board. If it looks wrong somewhere, fix the one shared source.
+- Shared pieces are light-DOM web components (custom elements), one file each: /assets/js/components/<name>.js, defining a tag such as <msn-taskbar>.
+- They must work when a board is opened directly as a file. So:
+  - Classic <script src> only. No type="module", no fetch(), no /partials/ folder, no include.js.
+  - No Shadow DOM. Components render normal HTML with the existing class names, so the existing shared CSS and theme apply unchanged.
+- Styling stays in the existing shared CSS files. Light/dark comes only from data-theme on <html>, read through shared CSS variables. Never write theme styles scoped to one board's container.
+- Convert ONE component per handoff. The converted version must look pixel-identical to the current one. Remove the old copies only after checking every board that uses it, in light and dark, opened as a file, with all toggles, the Fit control and scale-to-fit still working.
+- Before building anything, search the repo for an existing version and reuse it. Create a new component only if none exists, and say so.
+- If a handoff conflicts with this rule, the rule wins: flag it and don't build a duplicate.
+
 ## Rules
 - Plain HTML/CSS/vanilla JS. No frameworks, npm, CDNs or build step. GitHub Pages, main branch root. Relative paths.
 - Site is light; UI and text neutral only. Color only in images/art and prototypes. Use tokens in css/site.css; never hard-code values that have a token.
