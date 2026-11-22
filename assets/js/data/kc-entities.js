@@ -249,7 +249,47 @@ window.KC_ENTITIES = {
               "role": "background"
             }
           ],
-          "slots": []
+          "slots": [],
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": [
+                  "kc-module",
+                  "kc-image-list-interesting-facts",
+                  "kc-image-list-interesting-facts--none"
+                ],
+                "id": "kc-animal-desktop-mod-2",
+                "data-kc": "Image List / Interesting Facts",
+                "data-kc-variant": "Image Amount=None",
+                "aria-label": "Interesting fact about koi",
+                "style": "background-color:var(--kc-placeholder);background-image:url('../assets/images/kc/modules/animal/animal-desktop-facts-bg-top-01.png');background-size:cover;background-position:center;background-repeat:no-repeat"
+              }
+            },
+            "content": {
+              "blocks": [
+                {
+                  "kind": "text",
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-image-list-interesting-facts__text"
+                    ]
+                  },
+                  "lines": [
+                    {
+                      "kind": "field",
+                      "field": {
+                        "tag": "p",
+                        "attributes": {},
+                        "text": "Koi are ornamental carp bred for vivid colors and patterns, and are commonly kept in garden ponds. Many can recognize familiar keepers."
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          }
         },
         {
           "type": "interesting-facts",
@@ -279,7 +319,195 @@ window.KC_ENTITIES = {
               "role": "background"
             }
           ],
-          "slots": []
+          "slots": [],
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": [
+                  "kc-module",
+                  "kc-image-list-interesting-facts",
+                  "kc-image-list-interesting-facts--3-image"
+                ],
+                "id": "kc-animal-desktop-mod-3",
+                "data-kc": "Image List / Interesting Facts",
+                "data-kc-variant": "Image Amount=3-Image",
+                "aria-label": "More interesting facts about koi",
+                "style": "background-color:var(--kc-placeholder);background-image:url('../assets/images/kc/modules/animal/animal-desktop-facts-bg-main-01.png');background-size:cover;background-position:center;background-repeat:no-repeat"
+              }
+            },
+            "content": {
+              "blocks": [
+                {
+                  "kind": "group",
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-image-list-interesting-facts__row"
+                    ]
+                  },
+                  "parts": [
+                    {
+                      "kind": "text",
+                      "tag": "div",
+                      "attributes": {
+                        "class": [
+                          "kc-image-list-interesting-facts__text"
+                        ]
+                      },
+                      "lines": [
+                        {
+                          "kind": "field",
+                          "field": {
+                            "tag": "p",
+                            "attributes": {},
+                            "text": "Well-cared-for koi can live for decades; reports of fish living beyond 200 years are exceptional and difficult to verify."
+                          }
+                        },
+                        {
+                          "kind": "divider",
+                          "tag": "span",
+                          "attributes": {
+                            "class": [
+                              "kc-divider"
+                            ],
+                            "aria-hidden": "true"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "kind": "image",
+                      "image": {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-img",
+                            "kc-img--cover"
+                          ]
+                        },
+                        "image": {
+                          "attributes": {
+                            "src": "../assets/images/kc/modules/animal/animal-desktop-facts-01.png",
+                            "alt": "Koi carp swimming in a pond",
+                            "onerror": "this.style.display='none'"
+                          }
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "kind": "group",
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-image-list-interesting-facts__row"
+                    ]
+                  },
+                  "parts": [
+                    {
+                      "kind": "image",
+                      "image": {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-img",
+                            "kc-img--cover"
+                          ]
+                        },
+                        "image": {
+                          "attributes": {
+                            "src": "../assets/images/kc/modules/animal/animal-desktop-facts-02.png",
+                            "alt": "Koi carp feeding in a pond",
+                            "onerror": "this.style.display='none'"
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "kind": "text",
+                      "tag": "div",
+                      "attributes": {
+                        "class": [
+                          "kc-image-list-interesting-facts__text"
+                        ]
+                      },
+                      "lines": [
+                        {
+                          "kind": "field",
+                          "field": {
+                            "tag": "p",
+                            "attributes": {},
+                            "text": "Hanako, a scarlet koi, is often said to have lived 226 years, though the extraordinary age has not been independently verified."
+                          }
+                        },
+                        {
+                          "kind": "divider",
+                          "tag": "span",
+                          "attributes": {
+                            "class": [
+                              "kc-divider"
+                            ],
+                            "aria-hidden": "true"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "kind": "group",
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-image-list-interesting-facts__row"
+                    ]
+                  },
+                  "parts": [
+                    {
+                      "kind": "text",
+                      "tag": "div",
+                      "attributes": {
+                        "class": [
+                          "kc-image-list-interesting-facts__text"
+                        ]
+                      },
+                      "lines": [
+                        {
+                          "kind": "field",
+                          "field": {
+                            "tag": "p",
+                            "attributes": {},
+                            "text": "Kohaku koi are white with red markings. Their vivid colors are prized by keepers, but can also make them easier for predators to spot against a dark pond."
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "kind": "image",
+                      "image": {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-img",
+                            "kc-img--cover"
+                          ]
+                        },
+                        "image": {
+                          "attributes": {
+                            "src": "../assets/images/kc/modules/animal/animal-desktop-facts-03.png",
+                            "alt": "Kohaku koi with red and white markings",
+                            "onerror": "this.style.display='none'"
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          }
         },
         {
           "type": "poll-trivia",
@@ -520,7 +748,153 @@ window.KC_ENTITIES = {
               "height": 120,
               "src": null
             }
-          ]
+          ],
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": [
+                  "kc-module",
+                  "kc-module--mobile",
+                  "kc-mobile-image-list-carousel"
+                ],
+                "id": "kc-animal-mobile-mod-1",
+                "data-kc": "Mobile/ Image List / Carousel",
+                "aria-label": "Koi photos"
+              }
+            },
+            "content": {
+              "track": {
+                "tag": "div",
+                "attributes": {
+                  "class": [
+                    "kc-scroll-row"
+                  ],
+                  "tabindex": "0",
+                  "aria-label": "Koi photos, use left and right arrow keys to scroll"
+                }
+              },
+              "items": [
+                {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-img"
+                    ],
+                    "style": "width:132px;height:120px;border-radius:6px"
+                  },
+                  "image": null
+                },
+                {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-img"
+                    ],
+                    "style": "width:119px;height:120px;border-radius:6px"
+                  },
+                  "image": null
+                },
+                {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-img"
+                    ],
+                    "style": "width:106px;height:120px;border-radius:6px"
+                  },
+                  "image": null
+                },
+                {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-img"
+                    ],
+                    "style": "width:159px;height:120px;border-radius:6px"
+                  },
+                  "image": null
+                },
+                {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-img"
+                    ],
+                    "style": "width:105px;height:120px;border-radius:6px"
+                  },
+                  "image": null
+                }
+              ],
+              "controls": [
+                {
+                  "tag": "button",
+                  "attributes": {
+                    "class": [
+                      "kc-btn-flipper",
+                      "kc-animal-carousel__previous"
+                    ],
+                    "type": "button",
+                    "aria-label": "Previous carousel images",
+                    "disabled": ""
+                  },
+                  "icon": {
+                    "tag": "svg",
+                    "attributes": {
+                      "width": "16",
+                      "height": "16",
+                      "viewBox": "0 0 20 20",
+                      "fill": "none",
+                      "xmlns": "http://www.w3.org/2000/svg",
+                      "aria-hidden": "true",
+                      "focusable": "false"
+                    },
+                    "paths": [
+                      {
+                        "tag": "path",
+                        "attributes": {
+                          "d": "M9.15898 16.8666C9.36292 17.0528 9.67918 17.0384 9.86536 16.8345C10.0515 16.6305 10.0371 16.3143 9.8332 16.1281L3.66535 10.4974H17.4961C17.7722 10.4974 17.9961 10.2735 17.9961 9.99736C17.9961 9.72122 17.7722 9.49736 17.4961 9.49736H3.66824L9.8332 3.86927C10.0371 3.68309 10.0515 3.36684 9.86536 3.16289C9.67918 2.95895 9.36292 2.94456 9.15898 3.13074L2.24263 9.44478C2.10268 9.57254 2.02285 9.74008 2.00314 9.91323C1.99851 9.94058 1.99609 9.96869 1.99609 9.99736C1.99609 10.0242 1.99821 10.0506 2.00229 10.0763C2.02047 10.2522 2.10058 10.4229 2.24263 10.5526L9.15898 16.8666Z",
+                          "fill": "currentColor"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "tag": "button",
+                  "attributes": {
+                    "class": [
+                      "kc-btn-flipper",
+                      "kc-animal-carousel__next"
+                    ],
+                    "type": "button",
+                    "aria-label": "Next carousel images"
+                  },
+                  "icon": {
+                    "tag": "svg",
+                    "attributes": {
+                      "width": "16",
+                      "height": "16",
+                      "viewBox": "0 0 20 20",
+                      "fill": "none",
+                      "xmlns": "http://www.w3.org/2000/svg",
+                      "aria-hidden": "true",
+                      "focusable": "false"
+                    },
+                    "paths": [
+                      {
+                        "tag": "path",
+                        "attributes": {
+                          "d": "M10.8371 3.13074C10.6332 2.94456 10.3169 2.95895 10.1307 3.16289C9.94456 3.36683 9.95895 3.68309 10.1629 3.86927L16.3307 9.5H2.5C2.22386 9.5 2 9.72386 2 10C2 10.2761 2.22386 10.5 2.5 10.5H16.3279L10.1629 16.1281C9.95895 16.3143 9.94456 16.6305 10.1307 16.8345C10.3169 17.0384 10.6332 17.0528 10.8371 16.8666L17.7535 10.5526C17.8934 10.4248 17.9732 10.2573 17.993 10.0841C17.9976 10.0568 18 10.0287 18 10C18 9.97313 17.9979 9.94675 17.9938 9.92103C17.9756 9.74512 17.8955 9.57446 17.7535 9.44478L10.8371 3.13074Z",
+                          "fill": "currentColor"
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
         },
         {
           "type": "top-fact",
@@ -661,7 +1035,87 @@ window.KC_ENTITIES = {
               "height": 112,
               "src": null
             }
-          ]
+          ],
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": [
+                  "kc-module",
+                  "kc-module--mobile",
+                  "kc-mobile-image-list-interesting-facts",
+                  "kc-mobile-image-list-interesting-facts--1-image",
+                  "kc-animal-mobile__facts-intro"
+                ],
+                "id": "kc-animal-mobile-mod-3",
+                "data-kc": "Mobile / Image List / Interesting Facts",
+                "data-kc-variant": "Image Amount=1-Image",
+                "aria-label": "Koi facts"
+              }
+            },
+            "content": {
+              "blocks": [
+                {
+                  "kind": "text",
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-mobile-image-list-interesting-facts__text"
+                    ]
+                  },
+                  "lines": [
+                    {
+                      "kind": "field",
+                      "field": {
+                        "tag": "p",
+                        "attributes": {
+                          "class": [
+                            "kc-m-reg"
+                          ]
+                        },
+                        "text": "Koi are domesticated ornamental carp, selectively bred for vivid colors and patterns. They are commonly kept in outdoor garden ponds."
+                      }
+                    },
+                    {
+                      "kind": "divider",
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-m-divider"
+                        ],
+                        "aria-hidden": "true"
+                      }
+                    },
+                    {
+                      "kind": "field",
+                      "field": {
+                        "tag": "p",
+                        "attributes": {
+                          "class": [
+                            "kc-m-reg"
+                          ]
+                        },
+                        "text": "Well-cared-for koi can live for decades. Reports of individual fish living beyond 200 years are exceptional and difficult to verify."
+                      }
+                    }
+                  ]
+                },
+                {
+                  "kind": "image",
+                  "image": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-img"
+                      ],
+                      "style": "width:98px;height:112px;border-radius:6px"
+                    },
+                    "image": null
+                  }
+                }
+              ]
+            }
+          }
         },
         {
           "type": "videos-landscape",
@@ -709,7 +1163,87 @@ window.KC_ENTITIES = {
               "height": 112,
               "src": null
             }
-          ]
+          ],
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": [
+                  "kc-module",
+                  "kc-module--mobile",
+                  "kc-mobile-image-list-interesting-facts",
+                  "kc-mobile-image-list-interesting-facts--1-image",
+                  "kc-animal-mobile__facts-ending"
+                ],
+                "id": "kc-animal-mobile-mod-5",
+                "data-kc": "Mobile / Image List / Interesting Facts",
+                "data-kc-variant": "Image Amount=1-Image",
+                "aria-label": "More koi facts"
+              }
+            },
+            "content": {
+              "blocks": [
+                {
+                  "kind": "text",
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-mobile-image-list-interesting-facts__text"
+                    ]
+                  },
+                  "lines": [
+                    {
+                      "kind": "field",
+                      "field": {
+                        "tag": "p",
+                        "attributes": {
+                          "class": [
+                            "kc-m-reg"
+                          ]
+                        },
+                        "text": "Hanako, a scarlet koi from Japan, is often reported to have lived 226 years. The extraordinary age is famous, but not independently verified."
+                      }
+                    },
+                    {
+                      "kind": "divider",
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-m-divider"
+                        ],
+                        "aria-hidden": "true"
+                      }
+                    },
+                    {
+                      "kind": "field",
+                      "field": {
+                        "tag": "p",
+                        "attributes": {
+                          "class": [
+                            "kc-m-reg"
+                          ]
+                        },
+                        "text": "Kohaku koi are white with red markings; bright colors can also make them visible to predators."
+                      }
+                    }
+                  ]
+                },
+                {
+                  "kind": "image",
+                  "image": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-img"
+                      ],
+                      "style": "width:98px;height:112px;border-radius:6px"
+                    },
+                    "image": null
+                  }
+                }
+              ]
+            }
+          }
         },
         {
           "type": "poll-trivia",
@@ -1096,7 +1630,149 @@ window.KC_ENTITIES = {
               "alt": "Kerala backwaters in India"
             }
           ],
-          "slots": []
+          "slots": [],
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": [
+                  "kc-module",
+                  "kc-image-list-places-to-visit"
+                ],
+                "id": "kc-country-mod-3",
+                "data-kc": "Image List / Places to Visit",
+                "aria-labelledby": "kc-country-title-places"
+              }
+            },
+            "content": {
+              "heading": {
+                "tag": "div",
+                "attributes": {
+                  "class": [
+                    "kc-module-title",
+                    "kc-module-title--no-chevron"
+                  ]
+                },
+                "heading": {
+                  "tag": "h3",
+                  "attributes": {
+                    "id": "kc-country-title-places"
+                  },
+                  "text": "Top Places to Visit"
+                },
+                "trailing": null
+              },
+              "list": {
+                "tag": "div",
+                "attributes": {
+                  "class": [
+                    "kc-image-list-places-to-visit__items"
+                  ]
+                }
+              },
+              "items": [
+                {
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-image-list-places-to-visit__item"
+                    ]
+                  },
+                  "image": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-img",
+                        "kc-img--cover"
+                      ]
+                    },
+                    "image": {
+                      "attributes": {
+                        "src": "../assets/images/kc/modules/country/country-desktop-places-01.png",
+                        "alt": "Taj Mahal in Agra, India",
+                        "onerror": "this.style.display='none'"
+                      }
+                    }
+                  },
+                  "title": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-copy"
+                      ]
+                    },
+                    "text": "Taj Mahal"
+                  }
+                },
+                {
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-image-list-places-to-visit__item"
+                    ]
+                  },
+                  "image": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-img",
+                        "kc-img--cover"
+                      ]
+                    },
+                    "image": {
+                      "attributes": {
+                        "src": "../assets/images/kc/modules/country/country-desktop-places-02.png",
+                        "alt": "Hawa Mahal in Jaipur, India",
+                        "onerror": "this.style.display='none'"
+                      }
+                    }
+                  },
+                  "title": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-copy"
+                      ]
+                    },
+                    "text": "Jaipur"
+                  }
+                },
+                {
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-image-list-places-to-visit__item"
+                    ]
+                  },
+                  "image": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-img",
+                        "kc-img--cover"
+                      ]
+                    },
+                    "image": {
+                      "attributes": {
+                        "src": "../assets/images/kc/modules/country/country-desktop-places-03.png",
+                        "alt": "Kerala backwaters in India",
+                        "onerror": "this.style.display='none'"
+                      }
+                    }
+                  },
+                  "title": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-copy"
+                      ]
+                    },
+                    "text": "Kerala"
+                  }
+                }
+              ]
+            }
+          }
         },
         {
           "type": "interesting-facts",
@@ -1117,7 +1793,166 @@ window.KC_ENTITIES = {
               "alt": "Image illustrating an interesting fact about India, 2"
             }
           ],
-          "slots": []
+          "slots": [],
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": [
+                  "kc-module",
+                  "kc-image-list-interesting-facts",
+                  "kc-image-list-interesting-facts--2-image"
+                ],
+                "id": "kc-country-mod-4",
+                "data-kc": "Image List / Interesting Facts",
+                "aria-label": "Interesting facts about India"
+              }
+            },
+            "content": {
+              "blocks": [
+                {
+                  "kind": "group",
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-image-list-interesting-facts__row",
+                      "kc-country-fact-row--first"
+                    ]
+                  },
+                  "parts": [
+                    {
+                      "kind": "text",
+                      "tag": "div",
+                      "attributes": {
+                        "class": [
+                          "kc-image-list-interesting-facts__text"
+                        ]
+                      },
+                      "lines": [
+                        {
+                          "kind": "field",
+                          "field": {
+                            "tag": "p",
+                            "attributes": {
+                              "class": [
+                                "kc-copy"
+                              ]
+                            },
+                            "text": "India has the world's largest school in terms of students, the City Montessori School in Lucknow."
+                          }
+                        },
+                        {
+                          "kind": "divider",
+                          "tag": "span",
+                          "attributes": {
+                            "class": [
+                              "kc-divider"
+                            ],
+                            "aria-hidden": "true"
+                          }
+                        },
+                        {
+                          "kind": "field",
+                          "field": {
+                            "tag": "p",
+                            "attributes": {
+                              "class": [
+                                "kc-copy"
+                              ]
+                            },
+                            "text": "India's constitution took effect in 1950 and is among the world's longest written constitutions."
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "kind": "image",
+                      "image": {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-img",
+                            "kc-img--cover"
+                          ]
+                        },
+                        "image": {
+                          "attributes": {
+                            "src": "../assets/images/kc/modules/country/country-desktop-facts-01.png",
+                            "alt": "Image illustrating an interesting fact about India, 1",
+                            "onerror": "this.style.display='none'"
+                          }
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "kind": "group",
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-image-list-interesting-facts__row",
+                      "kc-country-fact-row--second"
+                    ]
+                  },
+                  "parts": [
+                    {
+                      "kind": "image",
+                      "image": {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-img",
+                            "kc-img--cover"
+                          ]
+                        },
+                        "image": {
+                          "attributes": {
+                            "src": "../assets/images/kc/modules/country/country-desktop-facts-02.png",
+                            "alt": "Image illustrating an interesting fact about India, 2",
+                            "onerror": "this.style.display='none'"
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "kind": "text",
+                      "tag": "div",
+                      "attributes": {
+                        "class": [
+                          "kc-image-list-interesting-facts__text"
+                        ]
+                      },
+                      "lines": [
+                        {
+                          "kind": "divider",
+                          "tag": "span",
+                          "attributes": {
+                            "class": [
+                              "kc-divider"
+                            ],
+                            "aria-hidden": "true"
+                          }
+                        },
+                        {
+                          "kind": "field",
+                          "field": {
+                            "tag": "p",
+                            "attributes": {
+                              "class": [
+                                "kc-copy"
+                              ]
+                            },
+                            "text": "Chail in Himachal Pradesh is home to a high-altitude cricket ground, surrounded by forests in the Himalayan foothills."
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          }
         },
         {
           "type": "top-fact",
@@ -1596,7 +2431,145 @@ window.KC_ENTITIES = {
               "height": 120,
               "src": null
             }
-          ]
+          ],
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": [
+                  "kc-module",
+                  "kc-module--mobile",
+                  "kc-mobile-image-list-carousel"
+                ],
+                "id": "kc-country-mobile-mod-1",
+                "data-kc": "Mobile/ Image List / Carousel"
+              }
+            },
+            "content": {
+              "track": {
+                "tag": "div",
+                "attributes": {
+                  "class": [
+                    "kc-scroll-row"
+                  ]
+                }
+              },
+              "items": [
+                {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-img",
+                      "kc-img--cover"
+                    ],
+                    "style": "width:132px;height:120px;border-radius:6px"
+                  },
+                  "image": {
+                    "attributes": {
+                      "src": "../assets/images/kc/modules/country/country-mobile-carousel-01.png",
+                      "alt": "Taj Mahal in Agra, India",
+                      "onerror": "this.style.display='none'"
+                    }
+                  }
+                },
+                {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-img",
+                      "kc-img--cover"
+                    ],
+                    "style": "width:119px;height:120px;border-radius:6px"
+                  },
+                  "image": {
+                    "attributes": {
+                      "src": "../assets/images/kc/modules/country/country-mobile-carousel-02.png",
+                      "alt": "Hawa Mahal in Jaipur, India",
+                      "onerror": "this.style.display='none'"
+                    }
+                  }
+                },
+                {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-img",
+                      "kc-img--crop-edge"
+                    ],
+                    "style": "width:106px;height:120px;border-radius:6px"
+                  },
+                  "image": {
+                    "attributes": {
+                      "src": "../assets/images/kc/modules/country/country-mobile-carousel-03.png",
+                      "alt": "Kerala backwaters in India",
+                      "onerror": "this.style.display='none'"
+                    }
+                  }
+                },
+                {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-img"
+                    ],
+                    "style": "width:159px;height:120px;border-radius:6px"
+                  },
+                  "image": null
+                },
+                {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-img"
+                    ],
+                    "style": "width:105px;height:120px;border-radius:6px"
+                  },
+                  "image": null
+                }
+              ],
+              "controls": [
+                {
+                  "tag": "button",
+                  "attributes": {
+                    "class": [
+                      "kc-btn-flipper",
+                      "kc-country-carousel__previous"
+                    ],
+                    "type": "button",
+                    "aria-label": "Previous carousel images",
+                    "disabled": ""
+                  },
+                  "icon": {
+                    "tag": "img",
+                    "attributes": {
+                      "src": "../assets/icons/ic_fluent_arrow_left_20_regular.svg",
+                      "alt": "",
+                      "aria-hidden": "true"
+                    }
+                  }
+                },
+                {
+                  "tag": "button",
+                  "attributes": {
+                    "class": [
+                      "kc-btn-flipper",
+                      "kc-country-carousel__next"
+                    ],
+                    "type": "button",
+                    "aria-label": "Next carousel images"
+                  },
+                  "icon": {
+                    "tag": "img",
+                    "attributes": {
+                      "src": "../assets/icons/ic_fluent_arrow_right_20_regular.svg",
+                      "alt": "",
+                      "aria-hidden": "true"
+                    }
+                  }
+                }
+              ]
+            }
+          }
         },
         {
           "type": "top-fact",
@@ -1744,7 +2717,155 @@ window.KC_ENTITIES = {
               "alt": "Kerala backwaters in India"
             }
           ],
-          "slots": []
+          "slots": [],
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": [
+                  "kc-module",
+                  "kc-module--mobile",
+                  "kc-mobile-image-list-places-to-visit"
+                ],
+                "id": "kc-country-mobile-mod-4",
+                "data-kc": "Mobile / Image List / Places to Visit"
+              }
+            },
+            "content": {
+              "heading": {
+                "tag": "div",
+                "attributes": {
+                  "class": [
+                    "kc-module-title"
+                  ]
+                },
+                "heading": {
+                  "tag": "h3",
+                  "attributes": {},
+                  "text": "Places of Interest"
+                },
+                "trailing": null
+              },
+              "list": {
+                "tag": "div",
+                "attributes": {
+                  "class": [
+                    "kc-mobile-image-list-places-to-visit__items"
+                  ]
+                }
+              },
+              "items": [
+                {
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-mobile-image-title",
+                      "kc-mobile-image-list-places-to-visit__item"
+                    ],
+                    "data-kc": "Mobile / Image + Title"
+                  },
+                  "image": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-img",
+                        "kc-img--cover"
+                      ],
+                      "style": "width:78px;height:88px;border-radius:6px"
+                    },
+                    "image": {
+                      "attributes": {
+                        "src": "../assets/images/kc/modules/country/country-mobile-image-title-01.png",
+                        "alt": "Taj Mahal in Agra, India",
+                        "onerror": "this.style.display='none'"
+                      }
+                    }
+                  },
+                  "title": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-mobile-image-title__name"
+                      ]
+                    },
+                    "text": "Taj Mahal"
+                  }
+                },
+                {
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-mobile-image-title",
+                      "kc-mobile-image-list-places-to-visit__item"
+                    ],
+                    "data-kc": "Mobile / Image + Title"
+                  },
+                  "image": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-img",
+                        "kc-img--cover"
+                      ],
+                      "style": "width:78px;height:88px;border-radius:6px"
+                    },
+                    "image": {
+                      "attributes": {
+                        "src": "../assets/images/kc/modules/country/country-mobile-image-title-02.png",
+                        "alt": "Hawa Mahal in Jaipur, India",
+                        "onerror": "this.style.display='none'"
+                      }
+                    }
+                  },
+                  "title": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-mobile-image-title__name"
+                      ]
+                    },
+                    "text": "Jaipur"
+                  }
+                },
+                {
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-mobile-image-title",
+                      "kc-mobile-image-list-places-to-visit__item"
+                    ],
+                    "data-kc": "Mobile / Image + Title"
+                  },
+                  "image": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-img",
+                        "kc-img--cover"
+                      ],
+                      "style": "width:78px;height:88px;border-radius:6px"
+                    },
+                    "image": {
+                      "attributes": {
+                        "src": "../assets/images/kc/modules/country/country-mobile-image-title-03.png",
+                        "alt": "Kerala backwaters in India",
+                        "onerror": "this.style.display='none'"
+                      }
+                    }
+                  },
+                  "title": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-mobile-image-title__name"
+                      ]
+                    },
+                    "text": "Kerala"
+                  }
+                }
+              ]
+            }
+          }
         },
         {
           "type": "interesting-facts",
@@ -1767,7 +2888,155 @@ window.KC_ENTITIES = {
               "height": 93,
               "src": null
             }
-          ]
+          ],
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": [
+                  "kc-module",
+                  "kc-module--mobile",
+                  "kc-mobile-image-list-interesting-facts",
+                  "kc-mobile-image-list-interesting-facts--2-image"
+                ],
+                "id": "kc-country-mobile-mod-5",
+                "data-kc": "Mobile / Image List / Interesting Facts",
+                "data-kc-variant": "Image Amount=2-Image",
+                "aria-label": "Interesting facts about India"
+              }
+            },
+            "content": {
+              "blocks": [
+                {
+                  "kind": "group",
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-mobile-image-list-interesting-facts__row"
+                    ]
+                  },
+                  "parts": [
+                    {
+                      "kind": "text",
+                      "tag": "div",
+                      "attributes": {
+                        "class": [
+                          "kc-mobile-image-list-interesting-facts__text"
+                        ]
+                      },
+                      "lines": [
+                        {
+                          "kind": "field",
+                          "field": {
+                            "tag": "p",
+                            "attributes": {
+                              "class": [
+                                "kc-m-reg"
+                              ]
+                            },
+                            "text": "India has the world's largest school in terms of students, the City Montessori School in Lucknow."
+                          }
+                        },
+                        {
+                          "kind": "divider",
+                          "tag": "span",
+                          "attributes": {
+                            "class": [
+                              "kc-m-divider"
+                            ],
+                            "aria-hidden": "true"
+                          }
+                        },
+                        {
+                          "kind": "field",
+                          "field": {
+                            "tag": "p",
+                            "attributes": {
+                              "class": [
+                                "kc-m-reg"
+                              ]
+                            },
+                            "text": "India's constitution took effect in 1950 and is among the world's longest written constitutions."
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "kind": "image",
+                      "image": {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-img"
+                          ],
+                          "style": "width:104px;height:142px;border-radius:6px"
+                        },
+                        "image": null
+                      }
+                    }
+                  ]
+                },
+                {
+                  "kind": "group",
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-mobile-image-list-interesting-facts__row",
+                      "kc-mobile-image-list-interesting-facts__row--reverse"
+                    ]
+                  },
+                  "parts": [
+                    {
+                      "kind": "image",
+                      "image": {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-img"
+                          ],
+                          "style": "width:106px;height:93px;border-radius:6px"
+                        },
+                        "image": null
+                      }
+                    },
+                    {
+                      "kind": "text",
+                      "tag": "div",
+                      "attributes": {
+                        "class": [
+                          "kc-mobile-image-list-interesting-facts__text"
+                        ]
+                      },
+                      "lines": [
+                        {
+                          "kind": "divider",
+                          "tag": "span",
+                          "attributes": {
+                            "class": [
+                              "kc-m-divider"
+                            ],
+                            "aria-hidden": "true"
+                          }
+                        },
+                        {
+                          "kind": "field",
+                          "field": {
+                            "tag": "p",
+                            "attributes": {
+                              "class": [
+                                "kc-m-reg"
+                              ]
+                            },
+                            "text": "Chail in Himachal Pradesh has a high-altitude cricket ground surrounded by forests."
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          }
         },
         {
           "type": "top-fact",
@@ -2394,7 +3663,147 @@ window.KC_ENTITIES = {
               "alt": "Landscape in Idaho"
             }
           ],
-          "slots": []
+          "slots": [],
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": [
+                  "kc-module",
+                  "kc-image-list-places-to-visit"
+                ],
+                "id": "kc-state-mod-3",
+                "data-kc": "Image List / Places to Visit",
+                "aria-label": "Top places to visit"
+              }
+            },
+            "content": {
+              "heading": {
+                "tag": "div",
+                "attributes": {
+                  "class": [
+                    "kc-module-title",
+                    "kc-module-title--no-chevron"
+                  ]
+                },
+                "heading": {
+                  "tag": "h3",
+                  "attributes": {},
+                  "text": "Top Places to Visit"
+                },
+                "trailing": null
+              },
+              "list": {
+                "tag": "div",
+                "attributes": {
+                  "class": [
+                    "kc-image-list-places-to-visit__items"
+                  ]
+                }
+              },
+              "items": [
+                {
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-image-list-places-to-visit__item"
+                    ]
+                  },
+                  "image": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-img",
+                        "kc-img--cover"
+                      ]
+                    },
+                    "image": {
+                      "attributes": {
+                        "src": "../assets/images/kc/modules/state/state-desktop-places-01.png",
+                        "alt": "Landscape in Idaho",
+                        "onerror": "this.style.display='none'"
+                      }
+                    }
+                  },
+                  "title": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-copy"
+                      ]
+                    },
+                    "text": "Name of Place"
+                  }
+                },
+                {
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-image-list-places-to-visit__item"
+                    ]
+                  },
+                  "image": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-img",
+                        "kc-img--cover"
+                      ]
+                    },
+                    "image": {
+                      "attributes": {
+                        "src": "../assets/images/kc/modules/state/state-desktop-places-02.png",
+                        "alt": "Landscape in Idaho",
+                        "onerror": "this.style.display='none'"
+                      }
+                    }
+                  },
+                  "title": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-copy"
+                      ]
+                    },
+                    "text": "Name of Place"
+                  }
+                },
+                {
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-image-list-places-to-visit__item"
+                    ]
+                  },
+                  "image": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-img",
+                        "kc-img--cover"
+                      ]
+                    },
+                    "image": {
+                      "attributes": {
+                        "src": "../assets/images/kc/modules/state/state-desktop-places-03.png",
+                        "alt": "Landscape in Idaho",
+                        "onerror": "this.style.display='none'"
+                      }
+                    }
+                  },
+                  "title": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-copy"
+                      ]
+                    },
+                    "text": "Name of Place"
+                  }
+                }
+              ]
+            }
+          }
         },
         {
           "type": "interesting-facts",
@@ -2415,7 +3824,166 @@ window.KC_ENTITIES = {
               "alt": "Idaho landscape"
             }
           ],
-          "slots": []
+          "slots": [],
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": [
+                  "kc-module",
+                  "kc-image-list-interesting-facts",
+                  "kc-image-list-interesting-facts--2-image"
+                ],
+                "id": "kc-state-mod-4",
+                "data-kc": "Image List / Interesting Facts",
+                "aria-label": "Interesting facts"
+              }
+            },
+            "content": {
+              "blocks": [
+                {
+                  "kind": "group",
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-image-list-interesting-facts__row",
+                      "state-fact-first"
+                    ]
+                  },
+                  "parts": [
+                    {
+                      "kind": "text",
+                      "tag": "div",
+                      "attributes": {
+                        "class": [
+                          "kc-image-list-interesting-facts__text"
+                        ]
+                      },
+                      "lines": [
+                        {
+                          "kind": "field",
+                          "field": {
+                            "tag": "p",
+                            "attributes": {
+                              "class": [
+                                "kc-copy"
+                              ]
+                            },
+                            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation."
+                          }
+                        },
+                        {
+                          "kind": "divider",
+                          "tag": "span",
+                          "attributes": {
+                            "class": [
+                              "kc-divider"
+                            ],
+                            "aria-hidden": "true"
+                          }
+                        },
+                        {
+                          "kind": "field",
+                          "field": {
+                            "tag": "p",
+                            "attributes": {
+                              "class": [
+                                "kc-copy"
+                              ]
+                            },
+                            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "kind": "image",
+                      "image": {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-img",
+                            "kc-img--cover"
+                          ]
+                        },
+                        "image": {
+                          "attributes": {
+                            "src": "../assets/images/kc/modules/state/state-desktop-facts-01.png",
+                            "alt": "Idaho landscape",
+                            "onerror": "this.style.display='none'"
+                          }
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "kind": "group",
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-image-list-interesting-facts__row",
+                      "state-fact-second"
+                    ]
+                  },
+                  "parts": [
+                    {
+                      "kind": "image",
+                      "image": {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-img",
+                            "kc-img--cover"
+                          ]
+                        },
+                        "image": {
+                          "attributes": {
+                            "src": "../assets/images/kc/modules/state/state-desktop-facts-02.png",
+                            "alt": "Idaho landscape",
+                            "onerror": "this.style.display='none'"
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "kind": "text",
+                      "tag": "div",
+                      "attributes": {
+                        "class": [
+                          "kc-image-list-interesting-facts__text"
+                        ]
+                      },
+                      "lines": [
+                        {
+                          "kind": "divider",
+                          "tag": "span",
+                          "attributes": {
+                            "class": [
+                              "kc-divider"
+                            ],
+                            "aria-hidden": "true"
+                          }
+                        },
+                        {
+                          "kind": "field",
+                          "field": {
+                            "tag": "p",
+                            "attributes": {
+                              "class": [
+                                "kc-copy"
+                              ]
+                            },
+                            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et. Ut enim ad minim veniam, quis."
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          }
         },
         {
           "type": "top-fact-image",
@@ -2435,7 +4003,133 @@ window.KC_ENTITIES = {
               "alt": "State symbol"
             }
           ],
-          "slots": []
+          "slots": [],
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": [
+                  "kc-module",
+                  "kc-image-list-top-fact"
+                ],
+                "id": "kc-state-mod-5",
+                "data-kc": "Image List / Top Fact",
+                "aria-label": "State symbols"
+              }
+            },
+            "content": {
+              "blocks": [
+                {
+                  "kind": "fact",
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-image-list-top-fact__fact"
+                    ]
+                  },
+                  "text": {
+                    "tag": "div",
+                    "attributes": {
+                      "class": [
+                        "kc-image-list-top-fact__text"
+                      ]
+                    },
+                    "fields": [
+                      {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-copy-bold"
+                          ]
+                        },
+                        "text": "Life Span"
+                      },
+                      {
+                        "tag": "strong",
+                        "attributes": {},
+                        "text": "12 - 17"
+                      }
+                    ]
+                  },
+                  "image": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-img",
+                        "kc-img--cover"
+                      ]
+                    },
+                    "image": {
+                      "attributes": {
+                        "src": "../assets/images/kc/modules/state/state-desktop-top-fact-symbols-01.png",
+                        "alt": "State symbol",
+                        "onerror": "this.style.display='none'"
+                      }
+                    }
+                  }
+                },
+                {
+                  "kind": "separator",
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-divider--v"
+                    ],
+                    "aria-hidden": "true"
+                  }
+                },
+                {
+                  "kind": "fact",
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-image-list-top-fact__fact"
+                    ]
+                  },
+                  "text": {
+                    "tag": "div",
+                    "attributes": {
+                      "class": [
+                        "kc-image-list-top-fact__text"
+                      ]
+                    },
+                    "fields": [
+                      {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-copy-bold"
+                          ]
+                        },
+                        "text": "Life Span"
+                      },
+                      {
+                        "tag": "strong",
+                        "attributes": {},
+                        "text": "12 - 17"
+                      }
+                    ]
+                  },
+                  "image": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-img",
+                        "kc-img--cover"
+                      ]
+                    },
+                    "image": {
+                      "attributes": {
+                        "src": "../assets/images/kc/modules/state/state-desktop-top-fact-symbols-02.png",
+                        "alt": "State symbol",
+                        "onerror": "this.style.display='none'"
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          }
         },
         {
           "type": "attributions",
@@ -2711,7 +4405,168 @@ window.KC_ENTITIES = {
             {
               "src": null
             }
-          ]
+          ],
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": [
+                  "kc-module",
+                  "kc-module--mobile",
+                  "kc-mobile-image-list-carousel"
+                ],
+                "data-kc": "Mobile / Image List / Carousel",
+                "aria-label": "Images"
+              }
+            },
+            "content": {
+              "track": {
+                "tag": "div",
+                "attributes": {
+                  "class": [
+                    "kc-scroll-row"
+                  ],
+                  "tabindex": "0",
+                  "role": "region",
+                  "aria-label": "Images"
+                }
+              },
+              "items": [
+                {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-img",
+                      "kc-img--cover"
+                    ]
+                  },
+                  "image": {
+                    "attributes": {
+                      "src": "../assets/images/kc/modules/state/state-mobile-carousel-01.png",
+                      "alt": "Idaho landscape",
+                      "onerror": "this.style.display='none'"
+                    }
+                  }
+                },
+                {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-img",
+                      "kc-img--cover"
+                    ]
+                  },
+                  "image": {
+                    "attributes": {
+                      "src": "../assets/images/kc/modules/state/state-mobile-carousel-02.png",
+                      "alt": "Idaho landscape",
+                      "onerror": "this.style.display='none'"
+                    }
+                  }
+                },
+                {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-img",
+                      "kc-img--crop-edge"
+                    ]
+                  },
+                  "image": {
+                    "attributes": {
+                      "src": "../assets/images/kc/modules/state/state-mobile-carousel-03.png",
+                      "alt": "Idaho landscape",
+                      "onerror": "this.style.display='none'"
+                    }
+                  }
+                },
+                {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-img"
+                    ]
+                  },
+                  "image": null
+                },
+                {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-img"
+                    ]
+                  },
+                  "image": null
+                }
+              ],
+              "controls": [
+                {
+                  "tag": "button",
+                  "attributes": {
+                    "type": "button",
+                    "class": [
+                      "kc-btn-flipper",
+                      "state-prev"
+                    ],
+                    "aria-label": "Previous images"
+                  },
+                  "icon": {
+                    "tag": "svg",
+                    "attributes": {
+                      "aria-hidden": "true",
+                      "focusable": "false",
+                      "width": "20",
+                      "height": "20",
+                      "viewBox": "0 0 20 20",
+                      "fill": "none",
+                      "xmlns": "http://www.w3.org/2000/svg"
+                    },
+                    "paths": [
+                      {
+                        "tag": "path",
+                        "attributes": {
+                          "d": "M9.15898 16.8666C9.36292 17.0528 9.67918 17.0384 9.86536 16.8345C10.0515 16.6305 10.0371 16.3143 9.8332 16.1281L3.66535 10.4974H17.4961C17.7722 10.4974 17.9961 10.2735 17.9961 9.99736C17.9961 9.72122 17.7722 9.49736 17.4961 9.49736H3.66824L9.8332 3.86927C10.0371 3.68309 10.0515 3.36684 9.86536 3.16289C9.67918 2.95895 9.36292 2.94456 9.15898 3.13074L2.24263 9.44478C2.10268 9.57254 2.02285 9.74008 2.00314 9.91323C1.99851 9.94058 1.99609 9.96869 1.99609 9.99736C1.99609 10.0242 1.99821 10.0506 2.00229 10.0763C2.02047 10.2522 2.10058 10.4229 2.24263 10.5526L9.15898 16.8666Z",
+                          "fill": "currentColor"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "tag": "button",
+                  "attributes": {
+                    "type": "button",
+                    "class": [
+                      "kc-btn-flipper",
+                      "state-next"
+                    ],
+                    "aria-label": "Next images"
+                  },
+                  "icon": {
+                    "tag": "svg",
+                    "attributes": {
+                      "aria-hidden": "true",
+                      "focusable": "false",
+                      "width": "20",
+                      "height": "20",
+                      "viewBox": "0 0 20 20",
+                      "fill": "none",
+                      "xmlns": "http://www.w3.org/2000/svg"
+                    },
+                    "paths": [
+                      {
+                        "tag": "path",
+                        "attributes": {
+                          "d": "M10.8371 3.13074C10.6332 2.94456 10.3169 2.95895 10.1307 3.16289C9.94456 3.36683 9.95895 3.68309 10.1629 3.86927L16.3307 9.5H2.5C2.22386 9.5 2 9.72386 2 10C2 10.2761 2.22386 10.5 2.5 10.5H16.3279L10.1629 16.1281C9.95895 16.3143 9.94456 16.6305 10.1307 16.8345C10.3169 17.0384 10.6332 17.0528 10.8371 16.8666L17.7535 10.5526C17.8934 10.4248 17.9732 10.2573 17.993 10.0841C17.9976 10.0568 18 10.0287 18 10C18 9.97313 17.9979 9.94675 17.9938 9.92103C17.9756 9.74512 17.8955 9.57446 17.7535 9.44478L10.8371 3.13074Z",
+                          "fill": "currentColor"
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
         },
         {
           "type": "top-fact",
@@ -2932,7 +4787,149 @@ window.KC_ENTITIES = {
               "alt": "Idaho landscape"
             }
           ],
-          "slots": []
+          "slots": [],
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": [
+                  "kc-module",
+                  "kc-module--mobile",
+                  "kc-mobile-image-list-places-to-visit"
+                ],
+                "data-kc": "Mobile / Image List / Places to Visit",
+                "aria-label": "Places of interest"
+              }
+            },
+            "content": {
+              "heading": {
+                "tag": "div",
+                "attributes": {
+                  "class": [
+                    "kc-module-title"
+                  ]
+                },
+                "heading": {
+                  "tag": "h3",
+                  "attributes": {},
+                  "text": "Places of Interest"
+                },
+                "trailing": null
+              },
+              "list": {
+                "tag": "div",
+                "attributes": {
+                  "class": [
+                    "kc-mobile-image-list-places-to-visit__items"
+                  ]
+                }
+              },
+              "items": [
+                {
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-mobile-image-title",
+                      "kc-mobile-image-list-places-to-visit__item"
+                    ]
+                  },
+                  "image": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-img",
+                        "kc-img--cover"
+                      ]
+                    },
+                    "image": {
+                      "attributes": {
+                        "src": "../assets/images/kc/modules/state/state-mobile-image-title-01.png",
+                        "alt": "Idaho landscape",
+                        "onerror": "this.style.display='none'"
+                      }
+                    }
+                  },
+                  "title": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-mobile-image-title__name"
+                      ]
+                    },
+                    "text": "Name of Place"
+                  }
+                },
+                {
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-mobile-image-title",
+                      "kc-mobile-image-list-places-to-visit__item"
+                    ]
+                  },
+                  "image": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-img",
+                        "kc-img--cover"
+                      ]
+                    },
+                    "image": {
+                      "attributes": {
+                        "src": "../assets/images/kc/modules/state/state-mobile-image-title-02.png",
+                        "alt": "Idaho landscape",
+                        "onerror": "this.style.display='none'"
+                      }
+                    }
+                  },
+                  "title": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-mobile-image-title__name"
+                      ]
+                    },
+                    "text": "Name of Place"
+                  }
+                },
+                {
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-mobile-image-title",
+                      "kc-mobile-image-list-places-to-visit__item"
+                    ]
+                  },
+                  "image": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-img",
+                        "kc-img--cover"
+                      ]
+                    },
+                    "image": {
+                      "attributes": {
+                        "src": "../assets/images/kc/modules/state/state-mobile-image-title-03.png",
+                        "alt": "Idaho landscape",
+                        "onerror": "this.style.display='none'"
+                      }
+                    }
+                  },
+                  "title": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-mobile-image-title__name"
+                      ]
+                    },
+                    "text": "Name of Place"
+                  }
+                }
+              ]
+            }
+          }
         },
         {
           "type": "attribution",
@@ -3363,7 +5360,149 @@ window.KC_ENTITIES = {
               "alt": "Conservatory of Flowers in Golden Gate Park"
             }
           ],
-          "slots": []
+          "slots": [],
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": [
+                  "kc-module",
+                  "kc-image-list-places-to-visit"
+                ],
+                "id": "kc-city-mod-5",
+                "data-kc": "Image List / Places to Visit",
+                "aria-labelledby": "kc-city-title-places"
+              }
+            },
+            "content": {
+              "heading": {
+                "tag": "div",
+                "attributes": {
+                  "class": [
+                    "kc-module-title",
+                    "kc-module-title--no-chevron"
+                  ]
+                },
+                "heading": {
+                  "tag": "h3",
+                  "attributes": {
+                    "id": "kc-city-title-places"
+                  },
+                  "text": "Top Places to Visit"
+                },
+                "trailing": null
+              },
+              "list": {
+                "tag": "div",
+                "attributes": {
+                  "class": [
+                    "kc-image-list-places-to-visit__items"
+                  ]
+                }
+              },
+              "items": [
+                {
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-image-list-places-to-visit__item"
+                    ]
+                  },
+                  "image": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-img",
+                        "kc-img--cover"
+                      ]
+                    },
+                    "image": {
+                      "attributes": {
+                        "src": "../assets/images/kc/modules/city/city-desktop-places-01.png",
+                        "alt": "Golden Gate Bridge at sunset",
+                        "onerror": "this.style.display='none'"
+                      }
+                    }
+                  },
+                  "title": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-copy"
+                      ]
+                    },
+                    "text": "Name of Place"
+                  }
+                },
+                {
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-image-list-places-to-visit__item"
+                    ]
+                  },
+                  "image": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-img",
+                        "kc-img--cover"
+                      ]
+                    },
+                    "image": {
+                      "attributes": {
+                        "src": "../assets/images/kc/modules/city/city-desktop-places-02.png",
+                        "alt": "Fishing boats in a San Francisco harbor",
+                        "onerror": "this.style.display='none'"
+                      }
+                    }
+                  },
+                  "title": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-copy"
+                      ]
+                    },
+                    "text": "Name of Place"
+                  }
+                },
+                {
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-image-list-places-to-visit__item"
+                    ]
+                  },
+                  "image": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-img",
+                        "kc-img--cover"
+                      ]
+                    },
+                    "image": {
+                      "attributes": {
+                        "src": "../assets/images/kc/modules/city/city-desktop-places-03.png",
+                        "alt": "Conservatory of Flowers in Golden Gate Park",
+                        "onerror": "this.style.display='none'"
+                      }
+                    }
+                  },
+                  "title": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-copy"
+                      ]
+                    },
+                    "text": "Name of Place"
+                  }
+                }
+              ]
+            }
+          }
         },
         {
           "type": "interesting-facts",
@@ -3384,7 +5523,166 @@ window.KC_ENTITIES = {
               "alt": "Two people walking hand in hand"
             }
           ],
-          "slots": []
+          "slots": [],
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": [
+                  "kc-module",
+                  "kc-image-list-interesting-facts",
+                  "kc-image-list-interesting-facts--2-image"
+                ],
+                "id": "kc-city-mod-6",
+                "data-kc": "Image List / Interesting Facts",
+                "aria-label": "Interesting facts about San Francisco"
+              }
+            },
+            "content": {
+              "blocks": [
+                {
+                  "kind": "group",
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-image-list-interesting-facts__row",
+                      "kc-city-fact-row--first"
+                    ]
+                  },
+                  "parts": [
+                    {
+                      "kind": "text",
+                      "tag": "div",
+                      "attributes": {
+                        "class": [
+                          "kc-image-list-interesting-facts__text"
+                        ]
+                      },
+                      "lines": [
+                        {
+                          "kind": "field",
+                          "field": {
+                            "tag": "p",
+                            "attributes": {
+                              "class": [
+                                "kc-copy"
+                              ]
+                            },
+                            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation."
+                          }
+                        },
+                        {
+                          "kind": "divider",
+                          "tag": "span",
+                          "attributes": {
+                            "class": [
+                              "kc-divider"
+                            ],
+                            "aria-hidden": "true"
+                          }
+                        },
+                        {
+                          "kind": "field",
+                          "field": {
+                            "tag": "p",
+                            "attributes": {
+                              "class": [
+                                "kc-copy"
+                              ]
+                            },
+                            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "kind": "image",
+                      "image": {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-img",
+                            "kc-img--cover"
+                          ]
+                        },
+                        "image": {
+                          "attributes": {
+                            "src": "../assets/images/kc/modules/city/city-desktop-facts-01.png",
+                            "alt": "Cable car on a San Francisco street",
+                            "onerror": "this.style.display='none'"
+                          }
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "kind": "group",
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-image-list-interesting-facts__row",
+                      "kc-city-fact-row--second"
+                    ]
+                  },
+                  "parts": [
+                    {
+                      "kind": "image",
+                      "image": {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-img",
+                            "kc-img--cover"
+                          ]
+                        },
+                        "image": {
+                          "attributes": {
+                            "src": "../assets/images/kc/modules/city/city-desktop-facts-02.png",
+                            "alt": "Two people walking hand in hand",
+                            "onerror": "this.style.display='none'"
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "kind": "text",
+                      "tag": "div",
+                      "attributes": {
+                        "class": [
+                          "kc-image-list-interesting-facts__text"
+                        ]
+                      },
+                      "lines": [
+                        {
+                          "kind": "divider",
+                          "tag": "span",
+                          "attributes": {
+                            "class": [
+                              "kc-divider"
+                            ],
+                            "aria-hidden": "true"
+                          }
+                        },
+                        {
+                          "kind": "field",
+                          "field": {
+                            "tag": "p",
+                            "attributes": {
+                              "class": [
+                                "kc-copy"
+                              ]
+                            },
+                            "text": "San Francisco is ranked the second ‘most walkable’ city in the United States by Walkscore.com."
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          }
         },
         {
           "type": "poll-trivia",
@@ -4380,7 +6678,334 @@ window.KC_ENTITIES = {
               "alt": "Album cover for The Chase Suite by Janelle Monáe"
             }
           ],
-          "slots": []
+          "slots": [],
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": [
+                  "kc-module",
+                  "kc-image-list-main",
+                  "kc-image-list-main--square"
+                ],
+                "id": "kc-artist-mod-4",
+                "data-kc": "Image List / Main",
+                "data-kc-variant": "Shape=Square",
+                "aria-labelledby": "kc-artist-albums-title"
+              }
+            },
+            "content": {
+              "heading": {
+                "tag": "div",
+                "attributes": {
+                  "class": [
+                    "kc-module-title"
+                  ]
+                },
+                "heading": {
+                  "tag": "h3",
+                  "attributes": {
+                    "id": "kc-artist-albums-title"
+                  },
+                  "text": "Albums"
+                },
+                "trailing": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-title-chevron"
+                    ],
+                    "aria-hidden": "true"
+                  },
+                  "wrapper": null,
+                  "icon": {
+                    "tag": "svg",
+                    "attributes": {
+                      "width": "16",
+                      "height": "16",
+                      "viewBox": "0 0 16 16",
+                      "fill": "none",
+                      "xmlns": "http://www.w3.org/2000/svg"
+                    },
+                    "paths": [
+                      {
+                        "tag": "path",
+                        "attributes": {
+                          "d": "M5.64645 3.14645C5.45118 3.34171 5.45118 3.65829 5.64645 3.85355L9.79289 8L5.64645 12.1464C5.45118 12.3417 5.45118 12.6583 5.64645 12.8536C5.84171 13.0488 6.15829 13.0488 6.35355 12.8536L10.8536 8.35355C11.0488 8.15829 11.0488 7.84171 10.8536 7.64645L6.35355 3.14645C6.15829 2.95118 5.84171 2.95118 5.64645 3.14645Z",
+                          "fill": "currentColor"
+                        }
+                      }
+                    ]
+                  }
+                }
+              },
+              "list": {
+                "tag": "div",
+                "attributes": {
+                  "class": [
+                    "kc-image-list-main__tiles"
+                  ]
+                }
+              },
+              "items": [
+                {
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-image-list-main__tile"
+                    ]
+                  },
+                  "image": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-img",
+                        "kc-img--cover"
+                      ]
+                    },
+                    "image": {
+                      "attributes": {
+                        "src": "../assets/images/kc/modules/artist/artist-desktop-main-albums-01.png",
+                        "alt": "Album cover for The ArchAndroid by Janelle Monáe",
+                        "onerror": "this.style.display='none'"
+                      }
+                    }
+                  },
+                  "text": {
+                    "tag": "div",
+                    "attributes": {
+                      "class": [
+                        "kc-image-list-main__tile-text"
+                      ]
+                    }
+                  },
+                  "title": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-copy-bold",
+                        "kc-clamp-3"
+                      ]
+                    },
+                    "text": "The ArchAndroid"
+                  },
+                  "subtitle": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-copy-small"
+                      ]
+                    },
+                    "text": "2010"
+                  }
+                },
+                {
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-image-list-main__tile"
+                    ]
+                  },
+                  "image": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-img",
+                        "kc-img--cover"
+                      ]
+                    },
+                    "image": {
+                      "attributes": {
+                        "src": "../assets/images/kc/modules/artist/artist-desktop-main-albums-02.png",
+                        "alt": "Album cover for The Electric Lady by Janelle Monáe",
+                        "onerror": "this.style.display='none'"
+                      }
+                    }
+                  },
+                  "text": {
+                    "tag": "div",
+                    "attributes": {
+                      "class": [
+                        "kc-image-list-main__tile-text"
+                      ]
+                    }
+                  },
+                  "title": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-copy-bold",
+                        "kc-clamp-3"
+                      ]
+                    },
+                    "text": "The Electric Lady"
+                  },
+                  "subtitle": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-copy-small"
+                      ]
+                    },
+                    "text": "2013"
+                  }
+                },
+                {
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-image-list-main__tile"
+                    ]
+                  },
+                  "image": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-img",
+                        "kc-img--cover"
+                      ]
+                    },
+                    "image": {
+                      "attributes": {
+                        "src": "../assets/images/kc/modules/artist/artist-desktop-main-albums-03.png",
+                        "alt": "Album cover for Dirty Computer by Janelle Monáe",
+                        "onerror": "this.style.display='none'"
+                      }
+                    }
+                  },
+                  "text": {
+                    "tag": "div",
+                    "attributes": {
+                      "class": [
+                        "kc-image-list-main__tile-text"
+                      ]
+                    }
+                  },
+                  "title": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-copy-bold",
+                        "kc-clamp-3"
+                      ]
+                    },
+                    "text": "Dirty Computer"
+                  },
+                  "subtitle": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-copy-small"
+                      ]
+                    },
+                    "text": "2018"
+                  }
+                },
+                {
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-image-list-main__tile"
+                    ]
+                  },
+                  "image": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-img",
+                        "kc-img--cover"
+                      ]
+                    },
+                    "image": {
+                      "attributes": {
+                        "src": "../assets/images/kc/modules/artist/artist-desktop-main-albums-04.png",
+                        "alt": "Album cover for The Age of Pleasure by Janelle Monáe",
+                        "onerror": "this.style.display='none'"
+                      }
+                    }
+                  },
+                  "text": {
+                    "tag": "div",
+                    "attributes": {
+                      "class": [
+                        "kc-image-list-main__tile-text"
+                      ]
+                    }
+                  },
+                  "title": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-copy-bold",
+                        "kc-clamp-3"
+                      ]
+                    },
+                    "text": "The Age of Pleasure"
+                  },
+                  "subtitle": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-copy-small"
+                      ]
+                    },
+                    "text": "2023"
+                  }
+                },
+                {
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-image-list-main__tile"
+                    ]
+                  },
+                  "image": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-img",
+                        "kc-img--cover"
+                      ]
+                    },
+                    "image": {
+                      "attributes": {
+                        "src": "../assets/images/kc/modules/artist/artist-desktop-main-albums-05.png",
+                        "alt": "Album cover for The Chase Suite by Janelle Monáe",
+                        "onerror": "this.style.display='none'"
+                      }
+                    }
+                  },
+                  "text": {
+                    "tag": "div",
+                    "attributes": {
+                      "class": [
+                        "kc-image-list-main__tile-text"
+                      ]
+                    }
+                  },
+                  "title": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-copy-bold",
+                        "kc-clamp-3"
+                      ]
+                    },
+                    "text": "The Chase Suite"
+                  },
+                  "subtitle": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-copy-small"
+                      ]
+                    },
+                    "text": "2008 EP"
+                  }
+                }
+              ]
+            }
+          }
         },
         {
           "type": "interesting-facts",
@@ -4401,7 +7026,167 @@ window.KC_ENTITIES = {
               "alt": "Image related to Janelle Monáe's music and film work"
             }
           ],
-          "slots": []
+          "slots": [],
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": [
+                  "kc-module",
+                  "kc-image-list-interesting-facts",
+                  "kc-image-list-interesting-facts--2-image"
+                ],
+                "id": "kc-artist-mod-5",
+                "data-kc": "Image List / Interesting Facts",
+                "data-kc-variant": "Image Amount=2-Image",
+                "aria-label": "Interesting facts about Janelle Monáe"
+              }
+            },
+            "content": {
+              "blocks": [
+                {
+                  "kind": "group",
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-image-list-interesting-facts__row",
+                      "kc-artist-fact-row--first"
+                    ]
+                  },
+                  "parts": [
+                    {
+                      "kind": "image",
+                      "image": {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-img",
+                            "kc-img--cover"
+                          ]
+                        },
+                        "image": {
+                          "attributes": {
+                            "src": "../assets/images/kc/modules/artist/artist-desktop-facts-01.png",
+                            "alt": "Janelle Monáe performing on stage",
+                            "onerror": "this.style.display='none'"
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "kind": "text",
+                      "tag": "div",
+                      "attributes": {
+                        "class": [
+                          "kc-image-list-interesting-facts__text"
+                        ]
+                      },
+                      "lines": [
+                        {
+                          "kind": "field",
+                          "field": {
+                            "tag": "p",
+                            "attributes": {
+                              "class": [
+                                "kc-copy"
+                              ]
+                            },
+                            "text": "Monáe's 2018 album Dirty Computer was accompanied by a 48-minute science-fiction film she called an “emotion picture.” The film explores identity and self-expression through a futuristic story."
+                          }
+                        },
+                        {
+                          "kind": "divider",
+                          "tag": "span",
+                          "attributes": {
+                            "class": [
+                              "kc-divider"
+                            ],
+                            "aria-hidden": "true"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "kind": "paragraph",
+                  "field": {
+                    "tag": "p",
+                    "attributes": {
+                      "class": [
+                        "kc-copy"
+                      ]
+                    },
+                    "text": "Her screen roles include Moonlight and Hidden Figures, followed by leading roles in Harriet and Antebellum, and a supporting part in Glass Onion: A Knives Out Mystery."
+                  }
+                },
+                {
+                  "kind": "group",
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-image-list-interesting-facts__row",
+                      "kc-artist-fact-row--second"
+                    ]
+                  },
+                  "parts": [
+                    {
+                      "kind": "text",
+                      "tag": "div",
+                      "attributes": {
+                        "class": [
+                          "kc-image-list-interesting-facts__text"
+                        ]
+                      },
+                      "lines": [
+                        {
+                          "kind": "divider",
+                          "tag": "span",
+                          "attributes": {
+                            "class": [
+                              "kc-divider"
+                            ],
+                            "aria-hidden": "true"
+                          }
+                        },
+                        {
+                          "kind": "field",
+                          "field": {
+                            "tag": "p",
+                            "attributes": {
+                              "class": [
+                                "kc-copy"
+                              ]
+                            },
+                            "text": "Monáe played Mary Jackson in Hidden Figures and Teresa in Moonlight, both released in 2016. She later appeared in Harriet, Antebellum, and Glass Onion."
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "kind": "image",
+                      "image": {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-img",
+                            "kc-img--cover"
+                          ]
+                        },
+                        "image": {
+                          "attributes": {
+                            "src": "../assets/images/kc/modules/artist/artist-desktop-facts-02.png",
+                            "alt": "Image related to Janelle Monáe's music and film work",
+                            "onerror": "this.style.display='none'"
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          }
         },
         {
           "type": "awards",
@@ -4600,7 +7385,334 @@ window.KC_ENTITIES = {
               "alt": "Poster image for Glass Onion, featuring Janelle Monáe"
             }
           ],
-          "slots": []
+          "slots": [],
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": [
+                  "kc-module",
+                  "kc-image-list-main",
+                  "kc-image-list-main--rectangle"
+                ],
+                "id": "kc-artist-mod-7",
+                "data-kc": "Image List / Main",
+                "data-kc-variant": "Shape=Rectangle",
+                "aria-labelledby": "kc-artist-films-title"
+              }
+            },
+            "content": {
+              "heading": {
+                "tag": "div",
+                "attributes": {
+                  "class": [
+                    "kc-module-title"
+                  ]
+                },
+                "heading": {
+                  "tag": "h3",
+                  "attributes": {
+                    "id": "kc-artist-films-title"
+                  },
+                  "text": "Films"
+                },
+                "trailing": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-title-chevron"
+                    ],
+                    "aria-hidden": "true"
+                  },
+                  "wrapper": null,
+                  "icon": {
+                    "tag": "svg",
+                    "attributes": {
+                      "width": "16",
+                      "height": "16",
+                      "viewBox": "0 0 16 16",
+                      "fill": "none",
+                      "xmlns": "http://www.w3.org/2000/svg"
+                    },
+                    "paths": [
+                      {
+                        "tag": "path",
+                        "attributes": {
+                          "d": "M5.64645 3.14645C5.45118 3.34171 5.45118 3.65829 5.64645 3.85355L9.79289 8L5.64645 12.1464C5.45118 12.3417 5.45118 12.6583 5.64645 12.8536C5.84171 13.0488 6.15829 13.1583 6.35355 12.8536L10.8536 8.35355C11.0488 8.15829 11.0488 7.84171 10.8536 7.64645L6.35355 3.14645C6.15829 2.95118 5.84171 2.95118 5.64645 3.14645Z",
+                          "fill": "currentColor"
+                        }
+                      }
+                    ]
+                  }
+                }
+              },
+              "list": {
+                "tag": "div",
+                "attributes": {
+                  "class": [
+                    "kc-image-list-main__tiles"
+                  ]
+                }
+              },
+              "items": [
+                {
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-image-list-main__tile"
+                    ]
+                  },
+                  "image": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-img",
+                        "kc-img--cover"
+                      ]
+                    },
+                    "image": {
+                      "attributes": {
+                        "src": "../assets/images/kc/modules/artist/artist-desktop-main-movies-01.png",
+                        "alt": "Poster image for Moonlight, featuring Janelle Monáe",
+                        "onerror": "this.style.display='none'"
+                      }
+                    }
+                  },
+                  "text": {
+                    "tag": "div",
+                    "attributes": {
+                      "class": [
+                        "kc-image-list-main__tile-text"
+                      ]
+                    }
+                  },
+                  "title": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-copy-bold",
+                        "kc-clamp-3"
+                      ]
+                    },
+                    "text": "Moonlight"
+                  },
+                  "subtitle": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-copy-small"
+                      ]
+                    },
+                    "text": "2016"
+                  }
+                },
+                {
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-image-list-main__tile"
+                    ]
+                  },
+                  "image": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-img",
+                        "kc-img--cover"
+                      ]
+                    },
+                    "image": {
+                      "attributes": {
+                        "src": "../assets/images/kc/modules/artist/artist-desktop-main-movies-02.png",
+                        "alt": "Poster image for Hidden Figures, featuring Janelle Monáe",
+                        "onerror": "this.style.display='none'"
+                      }
+                    }
+                  },
+                  "text": {
+                    "tag": "div",
+                    "attributes": {
+                      "class": [
+                        "kc-image-list-main__tile-text"
+                      ]
+                    }
+                  },
+                  "title": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-copy-bold",
+                        "kc-clamp-3"
+                      ]
+                    },
+                    "text": "Hidden Figures"
+                  },
+                  "subtitle": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-copy-small"
+                      ]
+                    },
+                    "text": "2016"
+                  }
+                },
+                {
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-image-list-main__tile"
+                    ]
+                  },
+                  "image": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-img",
+                        "kc-img--cover"
+                      ]
+                    },
+                    "image": {
+                      "attributes": {
+                        "src": "../assets/images/kc/modules/artist/artist-desktop-main-movies-03.png",
+                        "alt": "Poster image for Harriet, featuring Janelle Monáe",
+                        "onerror": "this.style.display='none'"
+                      }
+                    }
+                  },
+                  "text": {
+                    "tag": "div",
+                    "attributes": {
+                      "class": [
+                        "kc-image-list-main__tile-text"
+                      ]
+                    }
+                  },
+                  "title": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-copy-bold",
+                        "kc-clamp-3"
+                      ]
+                    },
+                    "text": "Harriet"
+                  },
+                  "subtitle": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-copy-small"
+                      ]
+                    },
+                    "text": "2019"
+                  }
+                },
+                {
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-image-list-main__tile"
+                    ]
+                  },
+                  "image": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-img",
+                        "kc-img--cover"
+                      ]
+                    },
+                    "image": {
+                      "attributes": {
+                        "src": "../assets/images/kc/modules/artist/artist-desktop-main-movies-04.png",
+                        "alt": "Poster image for Antebellum, featuring Janelle Monáe",
+                        "onerror": "this.style.display='none'"
+                      }
+                    }
+                  },
+                  "text": {
+                    "tag": "div",
+                    "attributes": {
+                      "class": [
+                        "kc-image-list-main__tile-text"
+                      ]
+                    }
+                  },
+                  "title": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-copy-bold",
+                        "kc-clamp-3"
+                      ]
+                    },
+                    "text": "Antebellum"
+                  },
+                  "subtitle": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-copy-small"
+                      ]
+                    },
+                    "text": "2020"
+                  }
+                },
+                {
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-image-list-main__tile"
+                    ]
+                  },
+                  "image": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-img",
+                        "kc-img--cover"
+                      ]
+                    },
+                    "image": {
+                      "attributes": {
+                        "src": "../assets/images/kc/modules/artist/artist-desktop-main-movies-05.png",
+                        "alt": "Poster image for Glass Onion, featuring Janelle Monáe",
+                        "onerror": "this.style.display='none'"
+                      }
+                    }
+                  },
+                  "text": {
+                    "tag": "div",
+                    "attributes": {
+                      "class": [
+                        "kc-image-list-main__tile-text"
+                      ]
+                    }
+                  },
+                  "title": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-copy-bold",
+                        "kc-clamp-3"
+                      ]
+                    },
+                    "text": "Glass Onion"
+                  },
+                  "subtitle": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-copy-small"
+                      ]
+                    },
+                    "text": "2022"
+                  }
+                }
+              ]
+            }
+          }
         },
         {
           "type": "attributions",
@@ -4896,7 +8008,168 @@ window.KC_ENTITIES = {
               "height": 120,
               "src": null
             }
-          ]
+          ],
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": [
+                  "kc-module",
+                  "kc-module--mobile",
+                  "kc-mobile-image-list-carousel"
+                ],
+                "id": "kc-artist-mobile-mod-carousel",
+                "data-kc": "Mobile / Image List / Carousel",
+                "aria-label": "Janelle Monáe image carousel"
+              }
+            },
+            "content": {
+              "track": {
+                "tag": "div",
+                "attributes": {
+                  "class": [
+                    "kc-scroll-row"
+                  ],
+                  "tabindex": "0",
+                  "aria-label": "Janelle Monáe photos, use left and right arrow keys to scroll"
+                }
+              },
+              "items": [
+                {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-img",
+                      "kc-img--cover"
+                    ],
+                    "style": "width:132px;height:120px;border-radius:6px"
+                  },
+                  "image": {
+                    "attributes": {
+                      "src": "../assets/images/kc/modules/artist/artist-mobile-carousel-01.png",
+                      "alt": "Janelle Monáe image carousel photo 1",
+                      "onerror": "this.style.display='none'"
+                    }
+                  }
+                },
+                {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-img",
+                      "kc-img--cover"
+                    ],
+                    "style": "width:119px;height:120px;border-radius:6px"
+                  },
+                  "image": {
+                    "attributes": {
+                      "src": "../assets/images/kc/modules/artist/artist-mobile-carousel-02.png",
+                      "alt": "Janelle Monáe image carousel photo 2",
+                      "onerror": "this.style.display='none'"
+                    }
+                  }
+                },
+                {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-img",
+                      "kc-img--crop-edge"
+                    ],
+                    "style": "width:106px;height:120px;border-radius:6px"
+                  },
+                  "image": {
+                    "attributes": {
+                      "src": "../assets/images/kc/modules/artist/artist-mobile-carousel-03.png",
+                      "alt": "Janelle Monáe image carousel photo 3",
+                      "onerror": "this.style.display='none'"
+                    }
+                  }
+                },
+                {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-img"
+                    ],
+                    "style": "width:159px;height:120px;border-radius:6px"
+                  },
+                  "image": null
+                },
+                {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-img"
+                    ],
+                    "style": "width:105px;height:120px;border-radius:6px"
+                  },
+                  "image": null
+                }
+              ],
+              "controls": [
+                {
+                  "tag": "button",
+                  "attributes": {
+                    "class": [
+                      "kc-btn-flipper",
+                      "kc-artist-mobile-carousel__previous"
+                    ],
+                    "type": "button",
+                    "aria-label": "Previous carousel images",
+                    "disabled": ""
+                  },
+                  "icon": {
+                    "tag": "svg",
+                    "attributes": {
+                      "width": "16",
+                      "height": "16",
+                      "viewBox": "0 0 20 20",
+                      "aria-hidden": "true",
+                      "focusable": "false"
+                    },
+                    "paths": [
+                      {
+                        "tag": "use",
+                        "attributes": {
+                          "href": "#kc-artist-icon-arrow-left"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "tag": "button",
+                  "attributes": {
+                    "class": [
+                      "kc-btn-flipper",
+                      "kc-artist-mobile-carousel__next"
+                    ],
+                    "type": "button",
+                    "aria-label": "Next carousel images"
+                  },
+                  "icon": {
+                    "tag": "svg",
+                    "attributes": {
+                      "width": "16",
+                      "height": "16",
+                      "viewBox": "0 0 20 20",
+                      "aria-hidden": "true",
+                      "focusable": "false"
+                    },
+                    "paths": [
+                      {
+                        "tag": "use",
+                        "attributes": {
+                          "href": "#kc-artist-icon-arrow-right"
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
         },
         {
           "type": "quick-facts",
@@ -5225,7 +8498,279 @@ window.KC_ENTITIES = {
               "height": null,
               "src": null
             }
-          ]
+          ],
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": [
+                  "kc-module",
+                  "kc-module--mobile",
+                  "kc-mobile-image-list-main",
+                  "kc-mobile-image-list-main--square"
+                ],
+                "id": "kc-artist-mobile-mod-albums",
+                "data-kc": "Mobile / Image List / Main",
+                "data-kc-variant": "Shape=Square",
+                "aria-labelledby": "kc-artist-mobile-albums-title"
+              }
+            },
+            "content": {
+              "heading": {
+                "tag": "div",
+                "attributes": {
+                  "class": [
+                    "kc-module-title"
+                  ]
+                },
+                "heading": {
+                  "tag": "h3",
+                  "attributes": {
+                    "id": "kc-artist-mobile-albums-title"
+                  },
+                  "text": "Albums"
+                },
+                "trailing": null
+              },
+              "list": {
+                "tag": "div",
+                "attributes": {
+                  "class": [
+                    "kc-scroll-row"
+                  ],
+                  "tabindex": "0",
+                  "aria-label": "Janelle Monáe albums"
+                }
+              },
+              "items": [
+                {
+                  "tag": "article",
+                  "attributes": {
+                    "class": [
+                      "kc-card",
+                      "kc-mobile-image-title-sub-title"
+                    ]
+                  },
+                  "image": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-img"
+                      ]
+                    },
+                    "image": null
+                  },
+                  "text": {
+                    "tag": "div",
+                    "attributes": {
+                      "class": [
+                        "kc-mobile-image-title-sub-title__text"
+                      ]
+                    }
+                  },
+                  "title": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-m-bold",
+                        "kc-m-nols"
+                      ]
+                    },
+                    "text": "The ArchAndroid"
+                  },
+                  "subtitle": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-mobile-image-title-sub-title__sub"
+                      ]
+                    },
+                    "text": "2010"
+                  }
+                },
+                {
+                  "tag": "article",
+                  "attributes": {
+                    "class": [
+                      "kc-card",
+                      "kc-mobile-image-title-sub-title"
+                    ]
+                  },
+                  "image": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-img"
+                      ]
+                    },
+                    "image": null
+                  },
+                  "text": {
+                    "tag": "div",
+                    "attributes": {
+                      "class": [
+                        "kc-mobile-image-title-sub-title__text"
+                      ]
+                    }
+                  },
+                  "title": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-m-bold",
+                        "kc-m-nols"
+                      ]
+                    },
+                    "text": "The Electric Lady"
+                  },
+                  "subtitle": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-mobile-image-title-sub-title__sub"
+                      ]
+                    },
+                    "text": "2013"
+                  }
+                },
+                {
+                  "tag": "article",
+                  "attributes": {
+                    "class": [
+                      "kc-card",
+                      "kc-mobile-image-title-sub-title"
+                    ]
+                  },
+                  "image": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-img"
+                      ]
+                    },
+                    "image": null
+                  },
+                  "text": {
+                    "tag": "div",
+                    "attributes": {
+                      "class": [
+                        "kc-mobile-image-title-sub-title__text"
+                      ]
+                    }
+                  },
+                  "title": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-m-bold",
+                        "kc-m-nols"
+                      ]
+                    },
+                    "text": "Dirty Computer"
+                  },
+                  "subtitle": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-mobile-image-title-sub-title__sub"
+                      ]
+                    },
+                    "text": "2018"
+                  }
+                },
+                {
+                  "tag": "article",
+                  "attributes": {
+                    "class": [
+                      "kc-card",
+                      "kc-mobile-image-title-sub-title"
+                    ]
+                  },
+                  "image": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-img"
+                      ]
+                    },
+                    "image": null
+                  },
+                  "text": {
+                    "tag": "div",
+                    "attributes": {
+                      "class": [
+                        "kc-mobile-image-title-sub-title__text"
+                      ]
+                    }
+                  },
+                  "title": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-m-bold",
+                        "kc-m-nols"
+                      ]
+                    },
+                    "text": "The Age of Pleasure"
+                  },
+                  "subtitle": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-mobile-image-title-sub-title__sub"
+                      ]
+                    },
+                    "text": "2023"
+                  }
+                },
+                {
+                  "tag": "article",
+                  "attributes": {
+                    "class": [
+                      "kc-card",
+                      "kc-mobile-image-title-sub-title"
+                    ]
+                  },
+                  "image": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-img"
+                      ]
+                    },
+                    "image": null
+                  },
+                  "text": {
+                    "tag": "div",
+                    "attributes": {
+                      "class": [
+                        "kc-mobile-image-title-sub-title__text"
+                      ]
+                    }
+                  },
+                  "title": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-m-bold",
+                        "kc-m-nols"
+                      ]
+                    },
+                    "text": "The Chase Suite"
+                  },
+                  "subtitle": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-mobile-image-title-sub-title__sub"
+                      ]
+                    },
+                    "text": "2008 EP"
+                  }
+                }
+              ]
+            }
+          }
         },
         {
           "type": "interesting-facts",
@@ -5249,7 +8794,153 @@ window.KC_ENTITIES = {
               "src": null
             }
           ],
-          "seeMore": true
+          "seeMore": true,
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": [
+                  "kc-module",
+                  "kc-module--mobile",
+                  "kc-mobile-image-list-interesting-facts",
+                  "kc-mobile-image-list-interesting-facts--2-image"
+                ],
+                "id": "kc-artist-mobile-mod-interesting",
+                "data-kc": "Mobile / Image List / Interesting Facts",
+                "data-kc-variant": "Image Amount=2-Image",
+                "aria-label": "Interesting facts about Janelle Monáe"
+              }
+            },
+            "content": {
+              "blocks": [
+                {
+                  "kind": "group",
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-mobile-image-list-interesting-facts__row"
+                    ]
+                  },
+                  "parts": [
+                    {
+                      "kind": "text",
+                      "tag": "div",
+                      "attributes": {
+                        "class": [
+                          "kc-mobile-image-list-interesting-facts__text"
+                        ]
+                      },
+                      "lines": [
+                        {
+                          "kind": "field",
+                          "field": {
+                            "tag": "p",
+                            "attributes": {
+                              "class": [
+                                "kc-m-reg"
+                              ]
+                            },
+                            "text": "Monáe's 2018 album Dirty Computer was accompanied by a 48-minute science-fiction film she called an “emotion picture.”"
+                          }
+                        },
+                        {
+                          "kind": "divider",
+                          "tag": "span",
+                          "attributes": {
+                            "class": [
+                              "kc-m-divider"
+                            ],
+                            "aria-hidden": "true"
+                          }
+                        },
+                        {
+                          "kind": "field",
+                          "field": {
+                            "tag": "p",
+                            "attributes": {
+                              "class": [
+                                "kc-m-reg"
+                              ]
+                            },
+                            "text": "She played Mary Jackson in Hidden Figures and Teresa in Moonlight, both released in 2016."
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "kind": "image",
+                      "image": {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-img"
+                          ]
+                        },
+                        "image": null
+                      }
+                    }
+                  ]
+                },
+                {
+                  "kind": "group",
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-mobile-image-list-interesting-facts__row",
+                      "kc-mobile-image-list-interesting-facts__row--reverse"
+                    ]
+                  },
+                  "parts": [
+                    {
+                      "kind": "image",
+                      "image": {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-img"
+                          ]
+                        },
+                        "image": null
+                      }
+                    },
+                    {
+                      "kind": "text",
+                      "tag": "div",
+                      "attributes": {
+                        "class": [
+                          "kc-mobile-image-list-interesting-facts__text"
+                        ]
+                      },
+                      "lines": [
+                        {
+                          "kind": "divider",
+                          "tag": "span",
+                          "attributes": {
+                            "class": [
+                              "kc-m-divider"
+                            ],
+                            "aria-hidden": "true"
+                          }
+                        },
+                        {
+                          "kind": "field",
+                          "field": {
+                            "tag": "p",
+                            "attributes": {
+                              "class": [
+                                "kc-m-reg"
+                              ]
+                            },
+                            "text": "Her later screen roles include Harriet, Antebellum, and Glass Onion."
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          }
         },
         {
           "type": "awards",
@@ -5438,7 +9129,279 @@ window.KC_ENTITIES = {
               "src": null
             }
           ],
-          "seeMore": true
+          "seeMore": true,
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": [
+                  "kc-module",
+                  "kc-module--mobile",
+                  "kc-mobile-image-list-main",
+                  "kc-mobile-image-list-main--rectangle"
+                ],
+                "id": "kc-artist-mobile-mod-films",
+                "data-kc": "Mobile / Image List / Main",
+                "data-kc-variant": "Shape=Rectangle",
+                "aria-labelledby": "kc-artist-mobile-films-title"
+              }
+            },
+            "content": {
+              "heading": {
+                "tag": "div",
+                "attributes": {
+                  "class": [
+                    "kc-module-title"
+                  ]
+                },
+                "heading": {
+                  "tag": "h3",
+                  "attributes": {
+                    "id": "kc-artist-mobile-films-title"
+                  },
+                  "text": "Films"
+                },
+                "trailing": null
+              },
+              "list": {
+                "tag": "div",
+                "attributes": {
+                  "class": [
+                    "kc-scroll-row"
+                  ],
+                  "tabindex": "0",
+                  "aria-label": "Janelle Monáe films"
+                }
+              },
+              "items": [
+                {
+                  "tag": "article",
+                  "attributes": {
+                    "class": [
+                      "kc-card",
+                      "kc-mobile-image-title-sub-title"
+                    ]
+                  },
+                  "image": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-img"
+                      ]
+                    },
+                    "image": null
+                  },
+                  "text": {
+                    "tag": "div",
+                    "attributes": {
+                      "class": [
+                        "kc-mobile-image-title-sub-title__text"
+                      ]
+                    }
+                  },
+                  "title": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-m-bold",
+                        "kc-m-nols"
+                      ]
+                    },
+                    "text": "Moonlight"
+                  },
+                  "subtitle": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-mobile-image-title-sub-title__sub"
+                      ]
+                    },
+                    "text": "2016"
+                  }
+                },
+                {
+                  "tag": "article",
+                  "attributes": {
+                    "class": [
+                      "kc-card",
+                      "kc-mobile-image-title-sub-title"
+                    ]
+                  },
+                  "image": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-img"
+                      ]
+                    },
+                    "image": null
+                  },
+                  "text": {
+                    "tag": "div",
+                    "attributes": {
+                      "class": [
+                        "kc-mobile-image-title-sub-title__text"
+                      ]
+                    }
+                  },
+                  "title": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-m-bold",
+                        "kc-m-nols"
+                      ]
+                    },
+                    "text": "Hidden Figures"
+                  },
+                  "subtitle": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-mobile-image-title-sub-title__sub"
+                      ]
+                    },
+                    "text": "2016"
+                  }
+                },
+                {
+                  "tag": "article",
+                  "attributes": {
+                    "class": [
+                      "kc-card",
+                      "kc-mobile-image-title-sub-title"
+                    ]
+                  },
+                  "image": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-img"
+                      ]
+                    },
+                    "image": null
+                  },
+                  "text": {
+                    "tag": "div",
+                    "attributes": {
+                      "class": [
+                        "kc-mobile-image-title-sub-title__text"
+                      ]
+                    }
+                  },
+                  "title": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-m-bold",
+                        "kc-m-nols"
+                      ]
+                    },
+                    "text": "Harriet"
+                  },
+                  "subtitle": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-mobile-image-title-sub-title__sub"
+                      ]
+                    },
+                    "text": "2019"
+                  }
+                },
+                {
+                  "tag": "article",
+                  "attributes": {
+                    "class": [
+                      "kc-card",
+                      "kc-mobile-image-title-sub-title"
+                    ]
+                  },
+                  "image": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-img"
+                      ]
+                    },
+                    "image": null
+                  },
+                  "text": {
+                    "tag": "div",
+                    "attributes": {
+                      "class": [
+                        "kc-mobile-image-title-sub-title__text"
+                      ]
+                    }
+                  },
+                  "title": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-m-bold",
+                        "kc-m-nols"
+                      ]
+                    },
+                    "text": "Antebellum"
+                  },
+                  "subtitle": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-mobile-image-title-sub-title__sub"
+                      ]
+                    },
+                    "text": "2020"
+                  }
+                },
+                {
+                  "tag": "article",
+                  "attributes": {
+                    "class": [
+                      "kc-card",
+                      "kc-mobile-image-title-sub-title"
+                    ]
+                  },
+                  "image": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-img"
+                      ]
+                    },
+                    "image": null
+                  },
+                  "text": {
+                    "tag": "div",
+                    "attributes": {
+                      "class": [
+                        "kc-mobile-image-title-sub-title__text"
+                      ]
+                    }
+                  },
+                  "title": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-m-bold",
+                        "kc-m-nols"
+                      ]
+                    },
+                    "text": "Glass Onion"
+                  },
+                  "subtitle": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-mobile-image-title-sub-title__sub"
+                      ]
+                    },
+                    "text": "2022"
+                  }
+                }
+              ]
+            }
+          }
         },
         {
           "type": "attribution",
@@ -5707,7 +9670,167 @@ window.KC_ENTITIES = {
               "height": null,
               "src": null
             }
-          ]
+          ],
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": [
+                  "kc-module",
+                  "kc-image-list-carousel"
+                ],
+                "id": "kc-actor-mod-carousel",
+                "data-kc": "Image List / Carousel",
+                "aria-label": "Pharrell Williams image carousel",
+                "tabindex": "0"
+              }
+            },
+            "content": {
+              "track": null,
+              "items": [
+                {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-img",
+                      "kc-img--cover"
+                    ]
+                  },
+                  "image": {
+                    "attributes": {
+                      "src": "../assets/images/kc/modules/actor/actor-desktop-carousel-01.png",
+                      "alt": "Pharrell Williams image carousel photo 1",
+                      "onerror": "this.style.display='none'"
+                    }
+                  }
+                },
+                {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-img",
+                      "kc-img--cover"
+                    ]
+                  },
+                  "image": {
+                    "attributes": {
+                      "src": "../assets/images/kc/modules/actor/actor-desktop-carousel-02.png",
+                      "alt": "Pharrell Williams image carousel photo 2",
+                      "onerror": "this.style.display='none'"
+                    }
+                  }
+                },
+                {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-img",
+                      "kc-img--cover"
+                    ]
+                  },
+                  "image": {
+                    "attributes": {
+                      "src": "../assets/images/kc/modules/actor/actor-desktop-carousel-03.png",
+                      "alt": "Pharrell Williams image carousel photo 3",
+                      "onerror": "this.style.display='none'"
+                    }
+                  }
+                },
+                {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-img",
+                      "kc-img--cover"
+                    ]
+                  },
+                  "image": {
+                    "attributes": {
+                      "src": "../assets/images/kc/modules/actor/actor-desktop-carousel-04.png",
+                      "alt": "Pharrell Williams image carousel photo 4",
+                      "onerror": "this.style.display='none'"
+                    }
+                  }
+                },
+                {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-img"
+                    ]
+                  },
+                  "image": null
+                }
+              ],
+              "controls": [
+                {
+                  "tag": "button",
+                  "attributes": {
+                    "class": [
+                      "kc-btn-flipper",
+                      "kc-actor-carousel__previous"
+                    ],
+                    "type": "button",
+                    "aria-label": "Previous carousel images",
+                    "disabled": ""
+                  },
+                  "icon": {
+                    "tag": "svg",
+                    "attributes": {
+                      "width": "16",
+                      "height": "16",
+                      "viewBox": "0 0 20 20",
+                      "fill": "none",
+                      "xmlns": "http://www.w3.org/2000/svg",
+                      "aria-hidden": "true",
+                      "focusable": "false"
+                    },
+                    "paths": [
+                      {
+                        "tag": "path",
+                        "attributes": {
+                          "d": "M9.15898 16.8666C9.36292 17.0528 9.67918 17.0384 9.86536 16.8345C10.0515 16.6305 10.0371 16.3143 9.8332 16.1281L3.66535 10.4974H17.4961C17.7722 10.4974 17.9961 10.2735 17.9961 9.99736C17.9961 9.72122 17.7722 9.49736 17.4961 9.49736H3.66824L9.8332 3.86927C10.0371 3.68309 10.0515 3.36684 9.86536 3.16289C9.67918 2.95895 9.36292 2.94456 9.15898 3.13074L2.24263 9.44478C2.10268 9.57254 2.02285 9.74008 2.00314 9.91323C1.99851 9.94058 1.99609 9.96869 1.99609 9.99736C1.99609 10.0242 1.99821 10.0506 2.00229 10.0763C2.02047 10.2522 2.10058 10.4229 2.24263 10.5526L9.15898 16.8666Z",
+                          "fill": "currentColor"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "tag": "button",
+                  "attributes": {
+                    "class": [
+                      "kc-btn-flipper",
+                      "kc-actor-carousel__next"
+                    ],
+                    "type": "button",
+                    "aria-label": "Next carousel images"
+                  },
+                  "icon": {
+                    "tag": "svg",
+                    "attributes": {
+                      "width": "16",
+                      "height": "16",
+                      "viewBox": "0 0 20 20",
+                      "fill": "none",
+                      "xmlns": "http://www.w3.org/2000/svg",
+                      "aria-hidden": "true",
+                      "focusable": "false"
+                    },
+                    "paths": [
+                      {
+                        "tag": "path",
+                        "attributes": {
+                          "d": "M10.8371 3.13074C10.6332 2.94456 10.3169 2.95895 10.1307 3.16289C9.94456 3.36683 9.95895 3.68309 10.1629 3.86927L16.3307 9.5H2.5C2.22386 9.5 2 9.72386 2 10C2 10.2761 2.22386 10.5 2.5 10.5H16.3279L10.1629 16.1281C9.95895 16.3143 9.94456 16.6305 10.1307 16.8345C10.3169 17.0384 10.6332 17.0528 10.8371 16.8666L17.7535 10.5526C17.8934 10.4248 17.9732 10.2573 17.993 10.0841C17.9976 10.0568 18 10.0287 18 10C18 9.97313 17.9979 9.94675 17.9938 9.92103C17.9756 9.74512 17.8955 9.57446 17.7535 9.44478L10.8371 3.13074Z",
+                          "fill": "currentColor"
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
         },
         {
           "type": "quick-facts",
@@ -5979,7 +10102,321 @@ window.KC_ENTITIES = {
               "height": null,
               "src": null
             }
-          ]
+          ],
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": [
+                  "kc-module",
+                  "kc-image-list-main",
+                  "kc-image-list-main--square"
+                ],
+                "id": "kc-actor-mod-main",
+                "data-kc": "Image List / Main",
+                "aria-labelledby": "kc-actor-title-main"
+              }
+            },
+            "content": {
+              "heading": {
+                "tag": "div",
+                "attributes": {
+                  "class": [
+                    "kc-module-title"
+                  ]
+                },
+                "heading": {
+                  "tag": "h3",
+                  "attributes": {
+                    "id": "kc-actor-title-main"
+                  },
+                  "text": "Featured Songs"
+                },
+                "trailing": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-title-chevron"
+                    ],
+                    "aria-hidden": "true"
+                  },
+                  "wrapper": null,
+                  "icon": {
+                    "tag": "svg",
+                    "attributes": {
+                      "width": "16",
+                      "height": "16",
+                      "viewBox": "0 0 16 16",
+                      "fill": "none",
+                      "xmlns": "http://www.w3.org/2000/svg"
+                    },
+                    "paths": [
+                      {
+                        "tag": "path",
+                        "attributes": {
+                          "d": "M5.64645 3.14645C5.45118 3.34171 5.45118 3.65829 5.64645 3.85355L9.79289 8L5.64645 12.1464C5.45118 12.3417 5.45118 12.6583 5.64645 12.8536C5.84171 13.0488 6.15829 13.0488 6.35355 12.8536L10.8536 8.35355C11.0488 8.15829 11.0488 7.84171 10.8536 7.64645L6.35355 3.14645C6.15829 2.95118 5.84171 2.95118 5.64645 3.14645Z",
+                          "fill": "currentColor"
+                        }
+                      }
+                    ]
+                  }
+                }
+              },
+              "list": {
+                "tag": "div",
+                "attributes": {
+                  "class": [
+                    "kc-image-list-main__tiles"
+                  ]
+                }
+              },
+              "items": [
+                {
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-image-list-main__tile"
+                    ]
+                  },
+                  "image": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-img",
+                        "kc-img--cover"
+                      ]
+                    },
+                    "image": {
+                      "attributes": {
+                        "src": "../assets/images/kc/modules/actor/actor-desktop-main-01.png",
+                        "alt": "Cover art for Happy by Pharrell Williams",
+                        "onerror": "this.style.display='none'"
+                      }
+                    }
+                  },
+                  "text": {
+                    "tag": "div",
+                    "attributes": {
+                      "class": [
+                        "kc-image-list-main__tile-text"
+                      ]
+                    }
+                  },
+                  "title": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-copy-bold"
+                      ]
+                    },
+                    "text": "Happy"
+                  },
+                  "subtitle": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-copy-small"
+                      ]
+                    },
+                    "text": "G I R L"
+                  }
+                },
+                {
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-image-list-main__tile"
+                    ]
+                  },
+                  "image": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-img",
+                        "kc-img--cover"
+                      ]
+                    },
+                    "image": {
+                      "attributes": {
+                        "src": "../assets/images/kc/modules/actor/actor-desktop-main-02.png",
+                        "alt": "Cover art for Get Lucky by Daft Punk",
+                        "onerror": "this.style.display='none'"
+                      }
+                    }
+                  },
+                  "text": {
+                    "tag": "div",
+                    "attributes": {
+                      "class": [
+                        "kc-image-list-main__tile-text"
+                      ]
+                    }
+                  },
+                  "title": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-copy-bold"
+                      ]
+                    },
+                    "text": "Get Lucky"
+                  },
+                  "subtitle": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-copy-small"
+                      ]
+                    },
+                    "text": "Random Access Memories"
+                  }
+                },
+                {
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-image-list-main__tile"
+                    ]
+                  },
+                  "image": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-img",
+                        "kc-img--cover"
+                      ]
+                    },
+                    "image": {
+                      "attributes": {
+                        "src": "../assets/images/kc/modules/actor/actor-desktop-main-03.png",
+                        "alt": "Cover art for Blurred Lines by Robin Thicke",
+                        "onerror": "this.style.display='none'"
+                      }
+                    }
+                  },
+                  "text": {
+                    "tag": "div",
+                    "attributes": {
+                      "class": [
+                        "kc-image-list-main__tile-text"
+                      ]
+                    }
+                  },
+                  "title": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-copy-bold"
+                      ]
+                    },
+                    "text": "Blurred Lines"
+                  },
+                  "subtitle": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-copy-small"
+                      ]
+                    },
+                    "text": "Blurred Lines"
+                  }
+                },
+                {
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-image-list-main__tile"
+                    ]
+                  },
+                  "image": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-img",
+                        "kc-img--cover"
+                      ]
+                    },
+                    "image": {
+                      "attributes": {
+                        "src": "../assets/images/kc/modules/actor/actor-desktop-main-04.png",
+                        "alt": "Cover art for Frontin by Pharrell Williams",
+                        "onerror": "this.style.display='none'"
+                      }
+                    }
+                  },
+                  "text": {
+                    "tag": "div",
+                    "attributes": {
+                      "class": [
+                        "kc-image-list-main__tile-text"
+                      ]
+                    }
+                  },
+                  "title": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-copy-bold"
+                      ]
+                    },
+                    "text": "Frontin’"
+                  },
+                  "subtitle": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-copy-small"
+                      ]
+                    },
+                    "text": "The Neptunes Present... Clones"
+                  }
+                },
+                {
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-image-list-main__tile"
+                    ]
+                  },
+                  "image": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-img"
+                      ]
+                    },
+                    "image": null
+                  },
+                  "text": {
+                    "tag": "div",
+                    "attributes": {
+                      "class": [
+                        "kc-image-list-main__tile-text"
+                      ]
+                    }
+                  },
+                  "title": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-copy-bold"
+                      ]
+                    },
+                    "text": "Come Get It Bae"
+                  },
+                  "subtitle": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-copy-small"
+                      ]
+                    },
+                    "text": "G I R L"
+                  }
+                }
+              ]
+            }
+          }
         },
         {
           "type": "interesting-facts",
@@ -6000,7 +10437,166 @@ window.KC_ENTITIES = {
               "alt": "Live music image illustrating Pharrell Williams' career"
             }
           ],
-          "slots": []
+          "slots": [],
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": [
+                  "kc-module",
+                  "kc-image-list-interesting-facts",
+                  "kc-image-list-interesting-facts--2-image"
+                ],
+                "id": "kc-actor-mod-facts-images",
+                "data-kc": "Image List / Interesting Facts",
+                "aria-label": "Interesting facts about Pharrell Williams"
+              }
+            },
+            "content": {
+              "blocks": [
+                {
+                  "kind": "group",
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-image-list-interesting-facts__row",
+                      "kc-actor-fact-row--first"
+                    ]
+                  },
+                  "parts": [
+                    {
+                      "kind": "text",
+                      "tag": "div",
+                      "attributes": {
+                        "class": [
+                          "kc-image-list-interesting-facts__text"
+                        ]
+                      },
+                      "lines": [
+                        {
+                          "kind": "field",
+                          "field": {
+                            "tag": "p",
+                            "attributes": {
+                              "class": [
+                                "kc-copy"
+                              ]
+                            },
+                            "text": "Pharrell Williams co-founded the production duo the Neptunes with Chad Hugo. Their work spans hip-hop, pop, and R&B."
+                          }
+                        },
+                        {
+                          "kind": "divider",
+                          "tag": "span",
+                          "attributes": {
+                            "class": [
+                              "kc-divider"
+                            ],
+                            "aria-hidden": "true"
+                          }
+                        },
+                        {
+                          "kind": "field",
+                          "field": {
+                            "tag": "p",
+                            "attributes": {
+                              "class": [
+                                "kc-copy"
+                              ]
+                            },
+                            "text": "His song “Happy” appeared in Despicable Me 2 and became a worldwide hit."
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "kind": "image",
+                      "image": {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-img",
+                            "kc-img--cover"
+                          ]
+                        },
+                        "image": {
+                          "attributes": {
+                            "src": "../assets/images/kc/modules/actor/actor-desktop-facts-01.png",
+                            "alt": "Studio image illustrating Pharrell Williams' music production",
+                            "onerror": "this.style.display='none'"
+                          }
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "kind": "group",
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-image-list-interesting-facts__row",
+                      "kc-actor-fact-row--second"
+                    ]
+                  },
+                  "parts": [
+                    {
+                      "kind": "image",
+                      "image": {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-img",
+                            "kc-img--cover"
+                          ]
+                        },
+                        "image": {
+                          "attributes": {
+                            "src": "../assets/images/kc/modules/actor/actor-desktop-facts-02.png",
+                            "alt": "Live music image illustrating Pharrell Williams' career",
+                            "onerror": "this.style.display='none'"
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "kind": "text",
+                      "tag": "div",
+                      "attributes": {
+                        "class": [
+                          "kc-image-list-interesting-facts__text"
+                        ]
+                      },
+                      "lines": [
+                        {
+                          "kind": "divider",
+                          "tag": "span",
+                          "attributes": {
+                            "class": [
+                              "kc-divider"
+                            ],
+                            "aria-hidden": "true"
+                          }
+                        },
+                        {
+                          "kind": "field",
+                          "field": {
+                            "tag": "p",
+                            "attributes": {
+                              "class": [
+                                "kc-copy"
+                              ]
+                            },
+                            "text": "Williams is also part of N.E.R.D and has worked in fashion, including as a creative director for Louis Vuitton."
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          }
         },
         {
           "type": "top-songs",
@@ -6046,7 +10642,390 @@ window.KC_ENTITIES = {
               "height": null,
               "src": null
             }
-          ]
+          ],
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": [
+                  "kc-module",
+                  "kc-image-list-top-songs"
+                ],
+                "id": "kc-actor-mod-top-songs",
+                "data-kc": "Image List / Top Songs",
+                "aria-labelledby": "kc-actor-title-top-songs"
+              }
+            },
+            "content": {
+              "heading": {
+                "tag": "div",
+                "attributes": {
+                  "class": [
+                    "kc-module-title"
+                  ]
+                },
+                "heading": {
+                  "tag": "h3",
+                  "attributes": {
+                    "id": "kc-actor-title-top-songs"
+                  },
+                  "text": "Top Songs"
+                },
+                "trailing": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-title-chevron"
+                    ],
+                    "aria-hidden": "true"
+                  },
+                  "wrapper": null,
+                  "icon": {
+                    "tag": "svg",
+                    "attributes": {
+                      "width": "16",
+                      "height": "16",
+                      "viewBox": "0 0 16 16",
+                      "fill": "none",
+                      "xmlns": "http://www.w3.org/2000/svg"
+                    },
+                    "paths": [
+                      {
+                        "tag": "path",
+                        "attributes": {
+                          "d": "M5.64645 3.14645C5.45118 3.34171 5.45118 3.65829 5.64645 3.85355L9.79289 8L5.64645 12.1464C5.45118 12.3417 5.45118 12.6583 5.64645 12.8536C5.84171 13.0488 6.15829 13.0488 6.35355 12.8536L10.8536 8.35355C11.0488 8.15829 11.0488 7.84171 10.8536 7.64645L6.35355 3.14645C6.15829 2.95118 5.84171 2.95118 5.64645 3.14645Z",
+                          "fill": "currentColor"
+                        }
+                      }
+                    ]
+                  }
+                }
+              },
+              "list": {
+                "tag": "div",
+                "attributes": {
+                  "class": [
+                    "kc-image-list-top-songs__columns"
+                  ]
+                }
+              },
+              "columns": [
+                {
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-image-list-top-songs__column"
+                    ]
+                  },
+                  "songs": [
+                    {
+                      "tag": "div",
+                      "attributes": {
+                        "class": [
+                          "kc-image-list-top-songs__song"
+                        ]
+                      },
+                      "image": {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-img",
+                            "kc-img--cover"
+                          ]
+                        },
+                        "image": {
+                          "attributes": {
+                            "src": "../assets/images/kc/modules/actor/actor-desktop-top-songs-01.png",
+                            "alt": "Cover art for Happy by Pharrell Williams",
+                            "onerror": "this.style.display='none'"
+                          }
+                        }
+                      },
+                      "text": {
+                        "tag": "div",
+                        "attributes": {
+                          "class": [
+                            "kc-image-list-top-songs__song-text"
+                          ]
+                        }
+                      },
+                      "title": {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-copy-bold"
+                          ]
+                        },
+                        "text": "Happy"
+                      },
+                      "artist": {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-copy-small"
+                          ]
+                        },
+                        "text": "Pharrell Williams"
+                      }
+                    },
+                    {
+                      "tag": "div",
+                      "attributes": {
+                        "class": [
+                          "kc-image-list-top-songs__song"
+                        ]
+                      },
+                      "image": {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-img",
+                            "kc-img--cover"
+                          ]
+                        },
+                        "image": {
+                          "attributes": {
+                            "src": "../assets/images/kc/modules/actor/actor-desktop-top-songs-02.png",
+                            "alt": "Cover art for Get Lucky by Daft Punk",
+                            "onerror": "this.style.display='none'"
+                          }
+                        }
+                      },
+                      "text": {
+                        "tag": "div",
+                        "attributes": {
+                          "class": [
+                            "kc-image-list-top-songs__song-text"
+                          ]
+                        }
+                      },
+                      "title": {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-copy-bold"
+                          ]
+                        },
+                        "text": "Get Lucky"
+                      },
+                      "artist": {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-copy-small"
+                          ]
+                        },
+                        "text": "Daft Punk"
+                      }
+                    },
+                    {
+                      "tag": "div",
+                      "attributes": {
+                        "class": [
+                          "kc-image-list-top-songs__song"
+                        ]
+                      },
+                      "image": {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-img",
+                            "kc-img--cover"
+                          ]
+                        },
+                        "image": {
+                          "attributes": {
+                            "src": "../assets/images/kc/modules/actor/actor-desktop-top-songs-03.png",
+                            "alt": "Cover art for Blurred Lines by Robin Thicke",
+                            "onerror": "this.style.display='none'"
+                          }
+                        }
+                      },
+                      "text": {
+                        "tag": "div",
+                        "attributes": {
+                          "class": [
+                            "kc-image-list-top-songs__song-text"
+                          ]
+                        }
+                      },
+                      "title": {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-copy-bold"
+                          ]
+                        },
+                        "text": "Blurred Lines"
+                      },
+                      "artist": {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-copy-small"
+                          ]
+                        },
+                        "text": "Robin Thicke"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-image-list-top-songs__column"
+                    ]
+                  },
+                  "songs": [
+                    {
+                      "tag": "div",
+                      "attributes": {
+                        "class": [
+                          "kc-image-list-top-songs__song"
+                        ]
+                      },
+                      "image": {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-img",
+                            "kc-img--cover"
+                          ]
+                        },
+                        "image": {
+                          "attributes": {
+                            "src": "../assets/images/kc/modules/actor/actor-desktop-top-songs-04.png",
+                            "alt": "Cover art for Frontin by Pharrell Williams",
+                            "onerror": "this.style.display='none'"
+                          }
+                        }
+                      },
+                      "text": {
+                        "tag": "div",
+                        "attributes": {
+                          "class": [
+                            "kc-image-list-top-songs__song-text"
+                          ]
+                        }
+                      },
+                      "title": {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-copy-bold"
+                          ]
+                        },
+                        "text": "Frontin’"
+                      },
+                      "artist": {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-copy-small"
+                          ]
+                        },
+                        "text": "Pharrell Williams"
+                      }
+                    },
+                    {
+                      "tag": "div",
+                      "attributes": {
+                        "class": [
+                          "kc-image-list-top-songs__song"
+                        ]
+                      },
+                      "image": {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-img",
+                            "kc-img--cover"
+                          ]
+                        },
+                        "image": {
+                          "attributes": {
+                            "src": "../assets/images/kc/modules/actor/actor-desktop-top-songs-05.png",
+                            "alt": "Cover art for Come Get It Bae by Pharrell Williams",
+                            "onerror": "this.style.display='none'"
+                          }
+                        }
+                      },
+                      "text": {
+                        "tag": "div",
+                        "attributes": {
+                          "class": [
+                            "kc-image-list-top-songs__song-text"
+                          ]
+                        }
+                      },
+                      "title": {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-copy-bold"
+                          ]
+                        },
+                        "text": "Come Get It Bae"
+                      },
+                      "artist": {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-copy-small"
+                          ]
+                        },
+                        "text": "Pharrell Williams"
+                      }
+                    },
+                    {
+                      "tag": "div",
+                      "attributes": {
+                        "class": [
+                          "kc-image-list-top-songs__song"
+                        ]
+                      },
+                      "image": {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-img"
+                          ]
+                        },
+                        "image": null
+                      },
+                      "text": {
+                        "tag": "div",
+                        "attributes": {
+                          "class": [
+                            "kc-image-list-top-songs__song-text"
+                          ]
+                        }
+                      },
+                      "title": {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-copy-bold"
+                          ]
+                        },
+                        "text": "Freedom"
+                      },
+                      "artist": {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-copy-small"
+                          ]
+                        },
+                        "text": "Pharrell Williams"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          }
         },
         {
           "type": "attributions",
@@ -6328,7 +11307,181 @@ window.KC_ENTITIES = {
               "height": 100,
               "src": null
             }
-          ]
+          ],
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": [
+                  "kc-module",
+                  "kc-module--mobile",
+                  "kc-mobile-image-list-carousel"
+                ],
+                "id": "kc-actor-mobile-mod-carousel",
+                "data-kc": "Mobile / Image List / Carousel",
+                "aria-label": "Pharrell Williams image carousel"
+              }
+            },
+            "content": {
+              "track": {
+                "tag": "div",
+                "attributes": {
+                  "class": [
+                    "kc-scroll-row"
+                  ],
+                  "tabindex": "0",
+                  "aria-label": "Pharrell Williams photos, use left and right arrow keys to scroll"
+                }
+              },
+              "items": [
+                {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-img",
+                      "kc-img--cover"
+                    ],
+                    "style": "width:103px;height:100px;border-radius:6px"
+                  },
+                  "image": {
+                    "attributes": {
+                      "src": "../assets/images/kc/modules/actor/actor-mobile-carousel-01.png",
+                      "alt": "Pharrell Williams image carousel photo 1",
+                      "onerror": "this.style.display='none'"
+                    }
+                  }
+                },
+                {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-img",
+                      "kc-img--cover"
+                    ],
+                    "style": "width:90px;height:100px;border-radius:6px"
+                  },
+                  "image": {
+                    "attributes": {
+                      "src": "../assets/images/kc/modules/actor/actor-mobile-carousel-02.png",
+                      "alt": "Pharrell Williams image carousel photo 2",
+                      "onerror": "this.style.display='none'"
+                    }
+                  }
+                },
+                {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-img",
+                      "kc-img--cover"
+                    ],
+                    "style": "width:77px;height:100px;border-radius:6px"
+                  },
+                  "image": {
+                    "attributes": {
+                      "src": "../assets/images/kc/modules/actor/actor-mobile-carousel-03.png",
+                      "alt": "Pharrell Williams image carousel photo 3",
+                      "onerror": "this.style.display='none'"
+                    }
+                  }
+                },
+                {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-img",
+                      "kc-img--crop-edge"
+                    ],
+                    "style": "width:130px;height:100px;border-radius:6px"
+                  },
+                  "image": {
+                    "attributes": {
+                      "src": "../assets/images/kc/modules/actor/actor-mobile-carousel-04.png",
+                      "alt": "Pharrell Williams image carousel photo 4",
+                      "onerror": "this.style.display='none'"
+                    }
+                  }
+                },
+                {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-img"
+                    ],
+                    "style": "width:76px;height:100px;border-radius:6px"
+                  },
+                  "image": null
+                }
+              ],
+              "controls": [
+                {
+                  "tag": "button",
+                  "attributes": {
+                    "class": [
+                      "kc-btn-flipper",
+                      "kc-actor-mobile-carousel__previous"
+                    ],
+                    "type": "button",
+                    "aria-label": "Previous carousel images",
+                    "disabled": ""
+                  },
+                  "icon": {
+                    "tag": "svg",
+                    "attributes": {
+                      "width": "16",
+                      "height": "16",
+                      "viewBox": "0 0 20 20",
+                      "fill": "none",
+                      "xmlns": "http://www.w3.org/2000/svg",
+                      "aria-hidden": "true",
+                      "focusable": "false"
+                    },
+                    "paths": [
+                      {
+                        "tag": "path",
+                        "attributes": {
+                          "d": "M9.15898 16.8666C9.36292 17.0528 9.67918 17.0384 9.86536 16.8345C10.0515 16.6305 10.0371 16.3143 9.8332 16.1281L3.66535 10.4974H17.4961C17.7722 10.4974 17.9961 10.2735 17.9961 9.99736C17.9961 9.72122 17.7722 9.49736 17.4961 9.49736H3.66824L9.8332 3.86927C10.0371 3.68309 10.0515 3.36684 9.86536 3.16289C9.67918 2.95895 9.36292 2.94456 9.15898 3.13074L2.24263 9.44478C2.10268 9.57254 2.02285 9.74008 2.00314 9.91323C1.99851 9.94058 1.99609 9.96869 1.99609 9.99736C1.99609 10.0242 1.99821 10.0506 2.00229 10.0763C2.02047 10.2522 2.10058 10.4229 2.24263 10.5526L9.15898 16.8666Z",
+                          "fill": "currentColor"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "tag": "button",
+                  "attributes": {
+                    "class": [
+                      "kc-btn-flipper",
+                      "kc-actor-mobile-carousel__next"
+                    ],
+                    "type": "button",
+                    "aria-label": "Next carousel images"
+                  },
+                  "icon": {
+                    "tag": "svg",
+                    "attributes": {
+                      "width": "16",
+                      "height": "16",
+                      "viewBox": "0 0 20 20",
+                      "fill": "none",
+                      "xmlns": "http://www.w3.org/2000/svg",
+                      "aria-hidden": "true",
+                      "focusable": "false"
+                    },
+                    "paths": [
+                      {
+                        "tag": "path",
+                        "attributes": {
+                          "d": "M10.8371 3.13074C10.6332 2.94456 10.3169 2.95895 10.1307 3.16289C9.94456 3.36683 9.95895 3.68309 10.1629 3.86927L16.3307 9.5H2.5C2.22386 9.5 2 9.72386 2 10C2 10.2761 2.22386 10.5 2.5 10.5H16.3279L10.1629 16.1281C9.95895 16.3143 9.94456 16.6305 10.1307 16.8345C10.3169 17.0384 10.6332 17.0528 10.8371 16.8666L17.7535 10.5526C17.8934 10.4248 17.9732 10.2573 17.993 10.0841C17.9976 10.0568 18 10.0287 18 10C18 9.97313 17.9979 9.94675 17.9938 9.92103C17.9756 9.74512 17.8955 9.57446 17.7535 9.44478L10.8371 3.13074Z",
+                          "fill": "currentColor"
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
         },
         {
           "type": "quick-facts",
@@ -6611,7 +11764,299 @@ window.KC_ENTITIES = {
               "height": null,
               "src": null
             }
-          ]
+          ],
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": [
+                  "kc-module",
+                  "kc-module--mobile",
+                  "kc-mobile-image-list-main",
+                  "kc-mobile-image-list-main--square"
+                ],
+                "id": "kc-actor-mobile-mod-main",
+                "data-kc": "Mobile / Image List / Main",
+                "data-kc-variant": "Shape=Square",
+                "aria-labelledby": "kc-actor-mobile-main-title"
+              }
+            },
+            "content": {
+              "heading": {
+                "tag": "div",
+                "attributes": {
+                  "class": [
+                    "kc-module-title"
+                  ]
+                },
+                "heading": {
+                  "tag": "h3",
+                  "attributes": {
+                    "id": "kc-actor-mobile-main-title"
+                  },
+                  "text": "Featured Songs"
+                },
+                "trailing": null
+              },
+              "list": {
+                "tag": "div",
+                "attributes": {
+                  "class": [
+                    "kc-scroll-row"
+                  ],
+                  "aria-label": "Featured songs"
+                }
+              },
+              "items": [
+                {
+                  "tag": "article",
+                  "attributes": {
+                    "class": [
+                      "kc-card",
+                      "kc-mobile-image-title-sub-title"
+                    ]
+                  },
+                  "image": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-img",
+                        "kc-img--cover"
+                      ]
+                    },
+                    "image": {
+                      "attributes": {
+                        "src": "../assets/images/kc/modules/actor/actor-mobile-image-title-subtitle-01.png",
+                        "alt": "Cover art for Happy by Pharrell Williams",
+                        "onerror": "this.style.display='none'"
+                      }
+                    }
+                  },
+                  "text": {
+                    "tag": "div",
+                    "attributes": {
+                      "class": [
+                        "kc-mobile-image-title-sub-title__text"
+                      ]
+                    }
+                  },
+                  "title": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-m-bold",
+                        "kc-m-nols"
+                      ]
+                    },
+                    "text": "Happy"
+                  },
+                  "subtitle": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-mobile-image-title-sub-title__sub"
+                      ]
+                    },
+                    "text": "G I R L"
+                  }
+                },
+                {
+                  "tag": "article",
+                  "attributes": {
+                    "class": [
+                      "kc-card",
+                      "kc-mobile-image-title-sub-title"
+                    ]
+                  },
+                  "image": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-img",
+                        "kc-img--cover"
+                      ]
+                    },
+                    "image": {
+                      "attributes": {
+                        "src": "../assets/images/kc/modules/actor/actor-mobile-image-title-subtitle-02.png",
+                        "alt": "Cover art for Get Lucky by Daft Punk",
+                        "onerror": "this.style.display='none'"
+                      }
+                    }
+                  },
+                  "text": {
+                    "tag": "div",
+                    "attributes": {
+                      "class": [
+                        "kc-mobile-image-title-sub-title__text"
+                      ]
+                    }
+                  },
+                  "title": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-m-bold",
+                        "kc-m-nols"
+                      ]
+                    },
+                    "text": "Get Lucky"
+                  },
+                  "subtitle": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-mobile-image-title-sub-title__sub"
+                      ]
+                    },
+                    "text": "Random Access Memories"
+                  }
+                },
+                {
+                  "tag": "article",
+                  "attributes": {
+                    "class": [
+                      "kc-card",
+                      "kc-mobile-image-title-sub-title"
+                    ]
+                  },
+                  "image": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-img",
+                        "kc-img--cover"
+                      ]
+                    },
+                    "image": {
+                      "attributes": {
+                        "src": "../assets/images/kc/modules/actor/actor-mobile-image-title-subtitle-03.png",
+                        "alt": "Cover art for Blurred Lines by Robin Thicke",
+                        "onerror": "this.style.display='none'"
+                      }
+                    }
+                  },
+                  "text": {
+                    "tag": "div",
+                    "attributes": {
+                      "class": [
+                        "kc-mobile-image-title-sub-title__text"
+                      ]
+                    }
+                  },
+                  "title": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-m-bold",
+                        "kc-m-nols"
+                      ]
+                    },
+                    "text": "Blurred Lines"
+                  },
+                  "subtitle": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-mobile-image-title-sub-title__sub"
+                      ]
+                    },
+                    "text": "Blurred Lines"
+                  }
+                },
+                {
+                  "tag": "article",
+                  "attributes": {
+                    "class": [
+                      "kc-card",
+                      "kc-mobile-image-title-sub-title"
+                    ]
+                  },
+                  "image": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-img"
+                      ]
+                    },
+                    "image": null
+                  },
+                  "text": {
+                    "tag": "div",
+                    "attributes": {
+                      "class": [
+                        "kc-mobile-image-title-sub-title__text"
+                      ]
+                    }
+                  },
+                  "title": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-m-bold",
+                        "kc-m-nols"
+                      ]
+                    },
+                    "text": "Frontin’"
+                  },
+                  "subtitle": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-mobile-image-title-sub-title__sub"
+                      ]
+                    },
+                    "text": "The Neptunes Present... Clones"
+                  }
+                },
+                {
+                  "tag": "article",
+                  "attributes": {
+                    "class": [
+                      "kc-card",
+                      "kc-mobile-image-title-sub-title"
+                    ]
+                  },
+                  "image": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-img"
+                      ]
+                    },
+                    "image": null
+                  },
+                  "text": {
+                    "tag": "div",
+                    "attributes": {
+                      "class": [
+                        "kc-mobile-image-title-sub-title__text"
+                      ]
+                    }
+                  },
+                  "title": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-m-bold",
+                        "kc-m-nols"
+                      ]
+                    },
+                    "text": "Come Get It Bae"
+                  },
+                  "subtitle": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-mobile-image-title-sub-title__sub"
+                      ]
+                    },
+                    "text": "G I R L"
+                  }
+                }
+              ]
+            }
+          }
         },
         {
           "type": "quote",
@@ -6644,7 +12089,156 @@ window.KC_ENTITIES = {
               "height": 93,
               "src": null
             }
-          ]
+          ],
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": [
+                  "kc-module",
+                  "kc-module--mobile",
+                  "kc-mobile-image-list-interesting-facts",
+                  "kc-mobile-image-list-interesting-facts--2-image",
+                  "kc-actor-mobile__interesting"
+                ],
+                "id": "kc-actor-mobile-mod-interesting",
+                "data-kc": "Mobile / Image List / Interesting Facts",
+                "data-kc-variant": "Image Amount=2-Image",
+                "aria-label": "Interesting facts about Pharrell Williams"
+              }
+            },
+            "content": {
+              "blocks": [
+                {
+                  "kind": "group",
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-mobile-image-list-interesting-facts__row"
+                    ]
+                  },
+                  "parts": [
+                    {
+                      "kind": "text",
+                      "tag": "div",
+                      "attributes": {
+                        "class": [
+                          "kc-mobile-image-list-interesting-facts__text"
+                        ]
+                      },
+                      "lines": [
+                        {
+                          "kind": "field",
+                          "field": {
+                            "tag": "p",
+                            "attributes": {
+                              "class": [
+                                "kc-m-reg"
+                              ]
+                            },
+                            "text": "Williams co-founded the Neptunes with Chad Hugo, producing hip-hop, pop, and R&B."
+                          }
+                        },
+                        {
+                          "kind": "divider",
+                          "tag": "span",
+                          "attributes": {
+                            "class": [
+                              "kc-m-divider"
+                            ],
+                            "aria-hidden": "true"
+                          }
+                        },
+                        {
+                          "kind": "field",
+                          "field": {
+                            "tag": "p",
+                            "attributes": {
+                              "class": [
+                                "kc-m-reg"
+                              ]
+                            },
+                            "text": "His worldwide hit “Happy” appeared in Despicable Me 2."
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "kind": "image",
+                      "image": {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-img"
+                          ],
+                          "style": "width:104px;height:142px;border-radius:6px"
+                        },
+                        "image": null
+                      }
+                    }
+                  ]
+                },
+                {
+                  "kind": "group",
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-mobile-image-list-interesting-facts__row",
+                      "kc-mobile-image-list-interesting-facts__row--reverse"
+                    ]
+                  },
+                  "parts": [
+                    {
+                      "kind": "image",
+                      "image": {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-img"
+                          ],
+                          "style": "width:106px;height:93px;border-radius:6px"
+                        },
+                        "image": null
+                      }
+                    },
+                    {
+                      "kind": "text",
+                      "tag": "div",
+                      "attributes": {
+                        "class": [
+                          "kc-mobile-image-list-interesting-facts__text"
+                        ]
+                      },
+                      "lines": [
+                        {
+                          "kind": "divider",
+                          "tag": "span",
+                          "attributes": {
+                            "class": [
+                              "kc-m-divider"
+                            ],
+                            "aria-hidden": "true"
+                          }
+                        },
+                        {
+                          "kind": "field",
+                          "field": {
+                            "tag": "p",
+                            "attributes": {
+                              "class": [
+                                "kc-m-reg"
+                              ]
+                            },
+                            "text": "He is also part of N.E.R.D and works in fashion as a creative director."
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          }
         },
         {
           "type": "top-songs",
@@ -6695,7 +12289,328 @@ window.KC_ENTITIES = {
               "src": null
             }
           ],
-          "seeMore": true
+          "seeMore": true,
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": [
+                  "kc-module",
+                  "kc-module--mobile",
+                  "kc-mobile-image-list-top-songs"
+                ],
+                "id": "kc-actor-mobile-mod-top-songs",
+                "data-kc": "Mobile / Image List / Top Songs",
+                "aria-label": "Top songs"
+              }
+            },
+            "content": {
+              "heading": {
+                "tag": "div",
+                "attributes": {
+                  "class": [
+                    "kc-module-title"
+                  ]
+                },
+                "heading": {
+                  "tag": "h3",
+                  "attributes": {},
+                  "text": "Top Songs"
+                },
+                "trailing": null
+              },
+              "list": {
+                "tag": "div",
+                "attributes": {
+                  "class": [
+                    "kc-mobile-image-list-top-songs__columns"
+                  ]
+                }
+              },
+              "columns": [
+                {
+                  "tag": "ul",
+                  "attributes": {
+                    "class": [
+                      "kc-mobile-image-list-top-songs__column"
+                    ],
+                    "style": "list-style:none;padding:0;margin:0"
+                  },
+                  "songs": [
+                    {
+                      "tag": "li",
+                      "attributes": {
+                        "class": [
+                          "kc-mobile-image-list-top-songs__song"
+                        ]
+                      },
+                      "image": {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-img"
+                          ]
+                        },
+                        "image": null
+                      },
+                      "text": {
+                        "tag": "div",
+                        "attributes": {
+                          "class": [
+                            "kc-mobile-image-list-top-songs__text"
+                          ]
+                        }
+                      },
+                      "title": {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-m-bold"
+                          ]
+                        },
+                        "text": "Happy"
+                      },
+                      "artist": {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-m-foot"
+                          ]
+                        },
+                        "text": "Pharrell Williams"
+                      }
+                    },
+                    {
+                      "tag": "li",
+                      "attributes": {
+                        "class": [
+                          "kc-mobile-image-list-top-songs__song"
+                        ]
+                      },
+                      "image": {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-img"
+                          ]
+                        },
+                        "image": null
+                      },
+                      "text": {
+                        "tag": "div",
+                        "attributes": {
+                          "class": [
+                            "kc-mobile-image-list-top-songs__text"
+                          ]
+                        }
+                      },
+                      "title": {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-m-bold"
+                          ]
+                        },
+                        "text": "Get Lucky"
+                      },
+                      "artist": {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-m-foot"
+                          ]
+                        },
+                        "text": "Daft Punk"
+                      }
+                    },
+                    {
+                      "tag": "li",
+                      "attributes": {
+                        "class": [
+                          "kc-mobile-image-list-top-songs__song"
+                        ]
+                      },
+                      "image": {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-img"
+                          ]
+                        },
+                        "image": null
+                      },
+                      "text": {
+                        "tag": "div",
+                        "attributes": {
+                          "class": [
+                            "kc-mobile-image-list-top-songs__text"
+                          ]
+                        }
+                      },
+                      "title": {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-m-bold"
+                          ]
+                        },
+                        "text": "Blurred Lines"
+                      },
+                      "artist": {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-m-foot"
+                          ]
+                        },
+                        "text": "Robin Thicke"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "tag": "ul",
+                  "attributes": {
+                    "class": [
+                      "kc-mobile-image-list-top-songs__column"
+                    ],
+                    "style": "list-style:none;padding:0;margin:0"
+                  },
+                  "songs": [
+                    {
+                      "tag": "li",
+                      "attributes": {
+                        "class": [
+                          "kc-mobile-image-list-top-songs__song"
+                        ]
+                      },
+                      "image": {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-img"
+                          ]
+                        },
+                        "image": null
+                      },
+                      "text": {
+                        "tag": "div",
+                        "attributes": {
+                          "class": [
+                            "kc-mobile-image-list-top-songs__text"
+                          ]
+                        }
+                      },
+                      "title": {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-m-bold"
+                          ]
+                        },
+                        "text": "Frontin’"
+                      },
+                      "artist": {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-m-foot"
+                          ]
+                        },
+                        "text": "Pharrell Williams"
+                      }
+                    },
+                    {
+                      "tag": "li",
+                      "attributes": {
+                        "class": [
+                          "kc-mobile-image-list-top-songs__song"
+                        ]
+                      },
+                      "image": {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-img"
+                          ]
+                        },
+                        "image": null
+                      },
+                      "text": {
+                        "tag": "div",
+                        "attributes": {
+                          "class": [
+                            "kc-mobile-image-list-top-songs__text"
+                          ]
+                        }
+                      },
+                      "title": {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-m-bold"
+                          ]
+                        },
+                        "text": "Come Get It Bae"
+                      },
+                      "artist": {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-m-foot"
+                          ]
+                        },
+                        "text": "Pharrell Williams"
+                      }
+                    },
+                    {
+                      "tag": "li",
+                      "attributes": {
+                        "class": [
+                          "kc-mobile-image-list-top-songs__song"
+                        ]
+                      },
+                      "image": {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-img"
+                          ]
+                        },
+                        "image": null
+                      },
+                      "text": {
+                        "tag": "div",
+                        "attributes": {
+                          "class": [
+                            "kc-mobile-image-list-top-songs__text"
+                          ]
+                        }
+                      },
+                      "title": {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-m-bold"
+                          ]
+                        },
+                        "text": "Freedom"
+                      },
+                      "artist": {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-m-foot"
+                          ]
+                        },
+                        "text": "Pharrell Williams"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          }
         },
         {
           "type": "attribution",
@@ -6967,7 +12882,343 @@ window.KC_ENTITIES = {
               "alt": "Red Hot Chili Peppers album cover, 5"
             }
           ],
-          "slots": []
+          "slots": [],
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": [
+                  "kc-module",
+                  "kc-image-list-main",
+                  "kc-image-list-main--square"
+                ],
+                "id": "kc-band-desktop-mod-main",
+                "data-kc": "Image List / Main",
+                "data-kc-variant": "Shape=Square",
+                "aria-labelledby": "kc-band-desktop-main-title"
+              }
+            },
+            "content": {
+              "heading": {
+                "tag": "div",
+                "attributes": {
+                  "class": [
+                    "kc-module-title"
+                  ]
+                },
+                "heading": {
+                  "tag": "h3",
+                  "attributes": {
+                    "id": "kc-band-desktop-main-title"
+                  },
+                  "text": "Module title"
+                },
+                "trailing": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-title-chevron"
+                    ],
+                    "aria-hidden": "true"
+                  },
+                  "wrapper": null,
+                  "icon": {
+                    "tag": "svg",
+                    "attributes": {
+                      "width": "16",
+                      "height": "16",
+                      "viewBox": "0 0 16 16",
+                      "focusable": "false"
+                    },
+                    "paths": [
+                      {
+                        "tag": "use",
+                        "attributes": {
+                          "href": "#kc-band-chevron-right"
+                        }
+                      }
+                    ]
+                  }
+                }
+              },
+              "list": {
+                "tag": "div",
+                "attributes": {
+                  "class": [
+                    "kc-image-list-main__tiles"
+                  ]
+                }
+              },
+              "items": [
+                {
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-image-list-main__tile"
+                    ]
+                  },
+                  "image": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-img",
+                        "kc-img--cover"
+                      ],
+                      "style": "width:80px;height:80px;border-radius:6px"
+                    },
+                    "image": {
+                      "attributes": {
+                        "src": "../assets/images/kc/modules/band/band-desktop-main-01.png",
+                        "alt": "Red Hot Chili Peppers album cover, 1",
+                        "onerror": "this.style.display='none'"
+                      }
+                    }
+                  },
+                  "text": {
+                    "tag": "div",
+                    "attributes": {
+                      "class": [
+                        "kc-image-list-main__tile-text"
+                      ]
+                    }
+                  },
+                  "title": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-copy-bold",
+                        "kc-band-desktop__tile-title"
+                      ]
+                    },
+                    "text": "Title"
+                  },
+                  "subtitle": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-copy-small",
+                        "kc-band-desktop__tile-sub"
+                      ]
+                    },
+                    "text": "Sub-title"
+                  }
+                },
+                {
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-image-list-main__tile"
+                    ]
+                  },
+                  "image": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-img",
+                        "kc-img--cover"
+                      ],
+                      "style": "width:80px;height:80px;border-radius:6px"
+                    },
+                    "image": {
+                      "attributes": {
+                        "src": "../assets/images/kc/modules/band/band-desktop-main-02.png",
+                        "alt": "Red Hot Chili Peppers album cover, 2",
+                        "onerror": "this.style.display='none'"
+                      }
+                    }
+                  },
+                  "text": {
+                    "tag": "div",
+                    "attributes": {
+                      "class": [
+                        "kc-image-list-main__tile-text"
+                      ]
+                    }
+                  },
+                  "title": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-copy-bold",
+                        "kc-band-desktop__tile-title",
+                        "kc-band-desktop__tile-title--single"
+                      ]
+                    },
+                    "text": "Title"
+                  },
+                  "subtitle": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-copy-small",
+                        "kc-band-desktop__tile-sub"
+                      ]
+                    },
+                    "text": "Sub-title"
+                  }
+                },
+                {
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-image-list-main__tile"
+                    ]
+                  },
+                  "image": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-img",
+                        "kc-img--cover"
+                      ],
+                      "style": "width:80px;height:80px;border-radius:6px"
+                    },
+                    "image": {
+                      "attributes": {
+                        "src": "../assets/images/kc/modules/band/band-desktop-main-03.png",
+                        "alt": "Red Hot Chili Peppers album cover, 3",
+                        "onerror": "this.style.display='none'"
+                      }
+                    }
+                  },
+                  "text": {
+                    "tag": "div",
+                    "attributes": {
+                      "class": [
+                        "kc-image-list-main__tile-text"
+                      ]
+                    }
+                  },
+                  "title": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-copy-bold",
+                        "kc-band-desktop__tile-title"
+                      ]
+                    },
+                    "text": "Title"
+                  },
+                  "subtitle": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-copy-small",
+                        "kc-band-desktop__tile-sub"
+                      ]
+                    },
+                    "text": "Sub-title"
+                  }
+                },
+                {
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-image-list-main__tile"
+                    ]
+                  },
+                  "image": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-img",
+                        "kc-img--cover"
+                      ],
+                      "style": "width:80px;height:80px;border-radius:6px"
+                    },
+                    "image": {
+                      "attributes": {
+                        "src": "../assets/images/kc/modules/band/band-desktop-main-04.png",
+                        "alt": "Red Hot Chili Peppers album cover, 4",
+                        "onerror": "this.style.display='none'"
+                      }
+                    }
+                  },
+                  "text": {
+                    "tag": "div",
+                    "attributes": {
+                      "class": [
+                        "kc-image-list-main__tile-text"
+                      ]
+                    }
+                  },
+                  "title": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-copy-bold",
+                        "kc-band-desktop__tile-title"
+                      ]
+                    },
+                    "text": "Title"
+                  },
+                  "subtitle": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-copy-small",
+                        "kc-band-desktop__tile-sub"
+                      ]
+                    },
+                    "text": "Sub-title"
+                  }
+                },
+                {
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-image-list-main__tile"
+                    ]
+                  },
+                  "image": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-img",
+                        "kc-img--cover"
+                      ],
+                      "style": "width:80px;height:80px;border-radius:6px"
+                    },
+                    "image": {
+                      "attributes": {
+                        "src": "../assets/images/kc/modules/band/band-desktop-main-05.png",
+                        "alt": "Red Hot Chili Peppers album cover, 5",
+                        "onerror": "this.style.display='none'"
+                      }
+                    }
+                  },
+                  "text": {
+                    "tag": "div",
+                    "attributes": {
+                      "class": [
+                        "kc-image-list-main__tile-text"
+                      ]
+                    }
+                  },
+                  "title": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-copy-bold",
+                        "kc-band-desktop__tile-title"
+                      ]
+                    },
+                    "text": "Title"
+                  },
+                  "subtitle": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-copy-small",
+                        "kc-band-desktop__tile-sub"
+                      ]
+                    },
+                    "text": "Sub-title"
+                  }
+                }
+              ]
+            }
+          }
         },
         {
           "type": "listen",
@@ -7019,7 +13270,168 @@ window.KC_ENTITIES = {
               "alt": "Red Hot Chili Peppers band members"
             }
           ],
-          "slots": []
+          "slots": [],
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": [
+                  "kc-module",
+                  "kc-image-list-interesting-facts",
+                  "kc-band-desktop__facts"
+                ],
+                "id": "kc-band-desktop-mod-facts",
+                "data-kc": "Image List / Interesting Facts",
+                "aria-label": "Interesting facts about Red Hot Chili Peppers"
+              }
+            },
+            "content": {
+              "blocks": [
+                {
+                  "kind": "group",
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-band-desktop__facts-row",
+                      "kc-band-desktop__facts-row--first"
+                    ]
+                  },
+                  "parts": [
+                    {
+                      "kind": "group",
+                      "tag": "div",
+                      "attributes": {
+                        "class": [
+                          "kc-band-desktop__facts-col",
+                          "kc-band-desktop__facts-col--first"
+                        ]
+                      },
+                      "parts": [
+                        {
+                          "kind": "paragraph",
+                          "field": {
+                            "tag": "p",
+                            "attributes": {
+                              "class": [
+                                "kc-copy"
+                              ]
+                            },
+                            "text": "The Red Hot Chili Peppers have won seven Grammy Awards and sold over 80 million albums worldwide."
+                          }
+                        },
+                        {
+                          "kind": "divider",
+                          "tag": "span",
+                          "attributes": {
+                            "class": [
+                              "kc-divider"
+                            ],
+                            "aria-hidden": "true"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "kind": "image",
+                      "image": {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-img",
+                            "kc-img--cover"
+                          ]
+                        },
+                        "image": {
+                          "attributes": {
+                            "src": "../assets/images/kc/modules/band/band-desktop-facts-01.png",
+                            "alt": "Red Hot Chili Peppers performing on stage",
+                            "onerror": "this.style.display='none'"
+                          }
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "kind": "paragraph",
+                  "field": {
+                    "tag": "p",
+                    "attributes": {
+                      "class": [
+                        "kc-band-desktop__facts-highlight"
+                      ]
+                    },
+                    "text": "RHCP was known for its psychedelic adventures and creative performances. Its band members once wore only tube socks in Rolling Stone."
+                  }
+                },
+                {
+                  "kind": "group",
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-band-desktop__facts-row",
+                      "kc-band-desktop__facts-row--second"
+                    ]
+                  },
+                  "parts": [
+                    {
+                      "kind": "image",
+                      "image": {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-img",
+                            "kc-img--cover"
+                          ]
+                        },
+                        "image": {
+                          "attributes": {
+                            "src": "../assets/images/kc/modules/band/band-desktop-facts-02.png",
+                            "alt": "Red Hot Chili Peppers band members",
+                            "onerror": "this.style.display='none'"
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "kind": "group",
+                      "tag": "div",
+                      "attributes": {
+                        "class": [
+                          "kc-band-desktop__facts-col",
+                          "kc-band-desktop__facts-col--second"
+                        ]
+                      },
+                      "parts": [
+                        {
+                          "kind": "divider",
+                          "tag": "span",
+                          "attributes": {
+                            "class": [
+                              "kc-divider"
+                            ],
+                            "aria-hidden": "true"
+                          }
+                        },
+                        {
+                          "kind": "paragraph",
+                          "field": {
+                            "tag": "p",
+                            "attributes": {
+                              "class": [
+                                "kc-copy"
+                              ]
+                            },
+                            "text": "All told, the Red Hot Chili Peppers have had seven total guitarists in their history."
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          }
         },
         {
           "type": "awards",
@@ -7454,7 +13866,168 @@ window.KC_ENTITIES = {
               "width": "105px",
               "height": "120px"
             }
-          ]
+          ],
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": [
+                  "kc-module",
+                  "kc-module--mobile",
+                  "kc-mobile-image-list-carousel"
+                ],
+                "id": "kc-band-mobile-carousel",
+                "data-kc": "Mobile / Image List / Carousel",
+                "aria-label": "Red Hot Chili Peppers photos"
+              }
+            },
+            "content": {
+              "track": {
+                "tag": "div",
+                "attributes": {
+                  "class": [
+                    "kc-scroll-row"
+                  ],
+                  "tabindex": "0",
+                  "aria-label": "Red Hot Chili Peppers photos, use left and right arrow keys to scroll"
+                }
+              },
+              "items": [
+                {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-img",
+                      "kc-img--cover"
+                    ],
+                    "style": "width:132px;height:120px;border-radius:6px"
+                  },
+                  "image": {
+                    "attributes": {
+                      "src": "../assets/images/kc/modules/band/band-mobile-carousel-01.png",
+                      "alt": "Red Hot Chili Peppers photo 1",
+                      "onerror": "this.style.display='none'"
+                    }
+                  }
+                },
+                {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-img",
+                      "kc-img--cover"
+                    ],
+                    "style": "width:119px;height:120px;border-radius:6px"
+                  },
+                  "image": {
+                    "attributes": {
+                      "src": "../assets/images/kc/modules/band/band-mobile-carousel-02.png",
+                      "alt": "Red Hot Chili Peppers photo 2",
+                      "onerror": "this.style.display='none'"
+                    }
+                  }
+                },
+                {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-img",
+                      "kc-img--crop-edge"
+                    ],
+                    "style": "width:106px;height:120px;border-radius:6px"
+                  },
+                  "image": {
+                    "attributes": {
+                      "src": "../assets/images/kc/modules/band/band-mobile-carousel-03.png",
+                      "alt": "Red Hot Chili Peppers photo 3",
+                      "onerror": "this.style.display='none'"
+                    }
+                  }
+                },
+                {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-img"
+                    ],
+                    "style": "width:159px;height:120px;border-radius:6px"
+                  },
+                  "image": null
+                },
+                {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-img"
+                    ],
+                    "style": "width:105px;height:120px;border-radius:6px"
+                  },
+                  "image": null
+                }
+              ],
+              "controls": [
+                {
+                  "tag": "button",
+                  "attributes": {
+                    "class": [
+                      "kc-btn-flipper",
+                      "kc-band-mobile-carousel__previous"
+                    ],
+                    "type": "button",
+                    "aria-label": "Previous carousel images",
+                    "disabled": ""
+                  },
+                  "icon": {
+                    "tag": "svg",
+                    "attributes": {
+                      "width": "16",
+                      "height": "16",
+                      "viewBox": "0 0 20 20",
+                      "aria-hidden": "true",
+                      "focusable": "false"
+                    },
+                    "paths": [
+                      {
+                        "tag": "use",
+                        "attributes": {
+                          "href": "#kc-band-icon-arrow-left"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "tag": "button",
+                  "attributes": {
+                    "class": [
+                      "kc-btn-flipper",
+                      "kc-band-mobile-carousel__next"
+                    ],
+                    "type": "button",
+                    "aria-label": "Next carousel images"
+                  },
+                  "icon": {
+                    "tag": "svg",
+                    "attributes": {
+                      "width": "16",
+                      "height": "16",
+                      "viewBox": "0 0 20 20",
+                      "aria-hidden": "true",
+                      "focusable": "false"
+                    },
+                    "paths": [
+                      {
+                        "tag": "use",
+                        "attributes": {
+                          "href": "#kc-band-icon-arrow-right"
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
         },
         {
           "type": "quick-facts",
@@ -7945,7 +14518,167 @@ window.KC_ENTITIES = {
               "alt": "Very large pizza"
             }
           ],
-          "slots": []
+          "slots": [],
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": [
+                  "kc-module",
+                  "kc-image-list-interesting-facts",
+                  "kc-image-list-interesting-facts--2-image",
+                  "kc-food-facts"
+                ],
+                "id": "kc-food-mod-2",
+                "data-kc": "Image List / Interesting Facts",
+                "aria-label": "Interesting facts about Pizza Margherita"
+              }
+            },
+            "content": {
+              "blocks": [
+                {
+                  "kind": "group",
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-food-facts__row",
+                      "kc-food-facts__row--first"
+                    ]
+                  },
+                  "parts": [
+                    {
+                      "kind": "group",
+                      "tag": "div",
+                      "attributes": {
+                        "class": [
+                          "kc-food-facts__col"
+                        ]
+                      },
+                      "parts": [
+                        {
+                          "kind": "paragraph",
+                          "field": {
+                            "tag": "p",
+                            "attributes": {},
+                            "text": "Place of origin Italy"
+                          }
+                        },
+                        {
+                          "kind": "divider",
+                          "tag": "span",
+                          "attributes": {
+                            "class": [
+                              "kc-divider"
+                            ],
+                            "aria-hidden": "true"
+                          }
+                        },
+                        {
+                          "kind": "paragraph",
+                          "field": {
+                            "tag": "p",
+                            "attributes": {},
+                            "text": "Pizza Margherita got its name from Italy’s Queen Margherita"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "kind": "image",
+                      "image": {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-img",
+                            "kc-img--cover",
+                            "kc-food-facts__img-1"
+                          ]
+                        },
+                        "image": {
+                          "attributes": {
+                            "src": "../assets/images/kc/modules/food/food-desktop-facts-01.png",
+                            "alt": "Pizza Margherita",
+                            "onerror": "this.style.display='none'"
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "kind": "group",
+                      "tag": "div",
+                      "attributes": {
+                        "class": [
+                          "kc-food-facts__col",
+                          "kc-food-facts__col--solo"
+                        ]
+                      },
+                      "parts": [
+                        {
+                          "kind": "paragraph",
+                          "field": {
+                            "tag": "p",
+                            "attributes": {},
+                            "text": "The word 'pizza' first appeared in a Latin text from the central Italian town of Gaeta, then still part of the Byzantine Empire, in 997 AD."
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "kind": "group",
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-food-facts__row",
+                      "kc-food-facts__row--second"
+                    ]
+                  },
+                  "parts": [
+                    {
+                      "kind": "image",
+                      "image": {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-img",
+                            "kc-img--cover",
+                            "kc-food-facts__img-2"
+                          ]
+                        },
+                        "image": {
+                          "attributes": {
+                            "src": "../assets/images/kc/modules/food/food-desktop-facts-02.png",
+                            "alt": "Very large pizza",
+                            "onerror": "this.style.display='none'"
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "kind": "group",
+                      "tag": "div",
+                      "attributes": {
+                        "class": [
+                          "kc-food-facts__side"
+                        ]
+                      },
+                      "parts": [
+                        {
+                          "kind": "paragraph",
+                          "field": {
+                            "tag": "p",
+                            "attributes": {},
+                            "text": "A pizza named 'Ottavia' is the largest pizza that has a total surface area of 1,261.65 m² (13,580.28 ft²) and was prepared in Rome, Italy, on 13 December 2012."
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          }
         },
         {
           "type": "ingredients",
@@ -7985,7 +14718,293 @@ window.KC_ENTITIES = {
               "alt": ""
             }
           ],
-          "slots": []
+          "slots": [],
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": [
+                  "kc-module",
+                  "kc-image-list-ingredients"
+                ],
+                "id": "kc-food-mod-3",
+                "data-kc": "Image List / Ingredients",
+                "aria-labelledby": "kc-food-title-ingredients"
+              }
+            },
+            "content": {
+              "heading": {
+                "tag": "div",
+                "attributes": {
+                  "class": [
+                    "kc-module-title"
+                  ]
+                },
+                "heading": {
+                  "tag": "h3",
+                  "attributes": {
+                    "id": "kc-food-title-ingredients"
+                  },
+                  "text": "Common ingredients"
+                },
+                "trailing": {
+                  "tag": "button",
+                  "attributes": {
+                    "class": [
+                      "kc-btn-reset",
+                      "kc-link"
+                    ],
+                    "type": "button",
+                    "aria-label": "See all common ingredients"
+                  },
+                  "wrapper": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-title-chevron"
+                      ]
+                    }
+                  },
+                  "icon": {
+                    "tag": "img",
+                    "attributes": {
+                      "src": "../assets/icons/ic_fluent_chevron_right_16_regular.svg",
+                      "alt": "",
+                      "aria-hidden": "true"
+                    }
+                  }
+                }
+              },
+              "list": {
+                "tag": "div",
+                "attributes": {
+                  "class": [
+                    "kc-image-list-ingredients__list"
+                  ]
+                }
+              },
+              "rows": [
+                {
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-image-list-ingredients__row"
+                    ]
+                  },
+                  "items": [
+                    {
+                      "tag": "div",
+                      "attributes": {
+                        "class": [
+                          "kc-image-list-ingredients__item"
+                        ]
+                      },
+                      "image": {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-img"
+                          ],
+                          "style": "width:32px;height:32px;border-radius:20px"
+                        },
+                        "image": {
+                          "attributes": {
+                            "src": "../assets/images/kc/modules/food/food-desktop-ingredients-01.png",
+                            "alt": "",
+                            "onerror": "this.style.display='none'"
+                          }
+                        }
+                      },
+                      "label": {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-copy-bold"
+                          ]
+                        },
+                        "text": "Ingredient"
+                      }
+                    },
+                    {
+                      "tag": "div",
+                      "attributes": {
+                        "class": [
+                          "kc-image-list-ingredients__item"
+                        ]
+                      },
+                      "image": {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-img"
+                          ],
+                          "style": "width:32px;height:32px;border-radius:20px"
+                        },
+                        "image": {
+                          "attributes": {
+                            "src": "../assets/images/kc/modules/food/food-desktop-ingredients-02.png",
+                            "alt": "",
+                            "onerror": "this.style.display='none'"
+                          }
+                        }
+                      },
+                      "label": {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-copy-bold"
+                          ]
+                        },
+                        "text": "Ingredient"
+                      }
+                    },
+                    {
+                      "tag": "div",
+                      "attributes": {
+                        "class": [
+                          "kc-image-list-ingredients__item"
+                        ]
+                      },
+                      "image": {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-img"
+                          ],
+                          "style": "width:32px;height:32px;border-radius:20px"
+                        },
+                        "image": {
+                          "attributes": {
+                            "src": "../assets/images/kc/modules/food/food-desktop-ingredients-03.png",
+                            "alt": "",
+                            "onerror": "this.style.display='none'"
+                          }
+                        }
+                      },
+                      "label": {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-copy-bold"
+                          ]
+                        },
+                        "text": "Ingredient"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-image-list-ingredients__row"
+                    ]
+                  },
+                  "items": [
+                    {
+                      "tag": "div",
+                      "attributes": {
+                        "class": [
+                          "kc-image-list-ingredients__item"
+                        ]
+                      },
+                      "image": {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-img"
+                          ],
+                          "style": "width:32px;height:32px;border-radius:20px"
+                        },
+                        "image": {
+                          "attributes": {
+                            "src": "../assets/images/kc/modules/food/food-desktop-ingredients-04.png",
+                            "alt": "",
+                            "onerror": "this.style.display='none'"
+                          }
+                        }
+                      },
+                      "label": {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-copy-bold"
+                          ]
+                        },
+                        "text": "Ingredient"
+                      }
+                    },
+                    {
+                      "tag": "div",
+                      "attributes": {
+                        "class": [
+                          "kc-image-list-ingredients__item"
+                        ]
+                      },
+                      "image": {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-img"
+                          ],
+                          "style": "width:32px;height:32px;border-radius:20px"
+                        },
+                        "image": {
+                          "attributes": {
+                            "src": "../assets/images/kc/modules/food/food-desktop-ingredients-05.png",
+                            "alt": "",
+                            "onerror": "this.style.display='none'"
+                          }
+                        }
+                      },
+                      "label": {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-copy-bold"
+                          ]
+                        },
+                        "text": "Ingredient"
+                      }
+                    },
+                    {
+                      "tag": "div",
+                      "attributes": {
+                        "class": [
+                          "kc-image-list-ingredients__item"
+                        ]
+                      },
+                      "image": {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-img"
+                          ],
+                          "style": "width:32px;height:32px;border-radius:20px"
+                        },
+                        "image": {
+                          "attributes": {
+                            "src": "../assets/images/kc/modules/food/food-desktop-ingredients-06.png",
+                            "alt": "",
+                            "onerror": "this.style.display='none'"
+                          }
+                        }
+                      },
+                      "label": {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-copy-bold"
+                          ]
+                        },
+                        "text": "Ingredient"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          }
         },
         {
           "type": "poll-trivia",
@@ -8219,7 +15238,158 @@ window.KC_ENTITIES = {
               "alt": "Very large pizza"
             }
           ],
-          "slots": []
+          "slots": [],
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": [
+                  "kc-module",
+                  "kc-module--mobile",
+                  "kc-mobile-image-list-interesting-facts",
+                  "kc-mobile-image-list-interesting-facts--2-image"
+                ],
+                "id": "kc-food-mobile-facts",
+                "data-kc": "Mobile / Image List / Interesting Facts",
+                "data-kc-variant": "Image Amount=2-Image",
+                "aria-label": "Interesting facts about Pizza Margherita"
+              }
+            },
+            "content": {
+              "blocks": [
+                {
+                  "kind": "group",
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-food-mobile-facts__row",
+                      "kc-food-mobile-facts__row--first"
+                    ]
+                  },
+                  "parts": [
+                    {
+                      "kind": "group",
+                      "tag": "div",
+                      "attributes": {
+                        "class": [
+                          "kc-food-mobile-facts__col"
+                        ]
+                      },
+                      "parts": [
+                        {
+                          "kind": "paragraph",
+                          "field": {
+                            "tag": "p",
+                            "attributes": {},
+                            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore."
+                          }
+                        },
+                        {
+                          "kind": "divider",
+                          "tag": "span",
+                          "attributes": {
+                            "class": [
+                              "kc-m-divider"
+                            ],
+                            "aria-hidden": "true"
+                          }
+                        },
+                        {
+                          "kind": "paragraph",
+                          "field": {
+                            "tag": "p",
+                            "attributes": {},
+                            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "kind": "image",
+                      "image": {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-img",
+                            "kc-img--cover",
+                            "kc-food-mobile-facts__img-1"
+                          ]
+                        },
+                        "image": {
+                          "attributes": {
+                            "src": "../assets/images/kc/modules/food/food-mobile-facts-01.png",
+                            "alt": "Pizza Margherita",
+                            "onerror": "this.style.display='none'"
+                          }
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "kind": "group",
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-food-mobile-facts__row",
+                      "kc-food-mobile-facts__row--second"
+                    ]
+                  },
+                  "parts": [
+                    {
+                      "kind": "image",
+                      "image": {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-img",
+                            "kc-img--cover",
+                            "kc-food-mobile-facts__img-2"
+                          ]
+                        },
+                        "image": {
+                          "attributes": {
+                            "src": "../assets/images/kc/modules/food/food-mobile-facts-02.png",
+                            "alt": "Very large pizza",
+                            "onerror": "this.style.display='none'"
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "kind": "group",
+                      "tag": "div",
+                      "attributes": {
+                        "class": [
+                          "kc-food-mobile-facts__side"
+                        ]
+                      },
+                      "parts": [
+                        {
+                          "kind": "divider",
+                          "tag": "span",
+                          "attributes": {
+                            "class": [
+                              "kc-m-divider"
+                            ],
+                            "aria-hidden": "true"
+                          }
+                        },
+                        {
+                          "kind": "paragraph",
+                          "field": {
+                            "tag": "p",
+                            "attributes": {},
+                            "text": "A pizza named 'Ottavia' is the largest pizza that has a total surface area of 1,261.65 m² (13,580.28 ft²) and was prepared in Rome, Italy, on 13 December 2012."
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          }
         },
         {
           "type": "ingredients",
@@ -8250,7 +15420,202 @@ window.KC_ENTITIES = {
               "alt": ""
             }
           ],
-          "slots": []
+          "slots": [],
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": [
+                  "kc-module",
+                  "kc-module--mobile",
+                  "kc-mobile-image-list-ingredients"
+                ],
+                "id": "kc-food-mobile-ingredients",
+                "data-kc": "Mobile / Image List / Ingredients",
+                "aria-labelledby": "kc-food-mobile-ingredients-title"
+              }
+            },
+            "content": {
+              "heading": {
+                "tag": "div",
+                "attributes": {
+                  "class": [
+                    "kc-module-title"
+                  ]
+                },
+                "heading": {
+                  "tag": "h3",
+                  "attributes": {
+                    "id": "kc-food-mobile-ingredients-title"
+                  },
+                  "text": "Common Ingredients"
+                },
+                "trailing": null
+              },
+              "list": {
+                "tag": "div",
+                "attributes": {
+                  "class": [
+                    "kc-mobile-image-list-ingredients__list"
+                  ]
+                }
+              },
+              "rows": [
+                {
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-mobile-image-list-ingredients__row"
+                    ]
+                  },
+                  "items": [
+                    {
+                      "tag": "div",
+                      "attributes": {
+                        "class": [
+                          "kc-mobile-image-list-ingredients__item"
+                        ]
+                      },
+                      "image": {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-img"
+                          ],
+                          "style": "width:32px;height:32px;border-radius:20px"
+                        },
+                        "image": {
+                          "attributes": {
+                            "src": "../assets/images/kc/modules/food/food-mobile-ingredients-01.png",
+                            "alt": "",
+                            "onerror": "this.style.display='none'"
+                          }
+                        }
+                      },
+                      "label": {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-m-bold"
+                          ]
+                        },
+                        "text": "Ingredient"
+                      }
+                    },
+                    {
+                      "tag": "div",
+                      "attributes": {
+                        "class": [
+                          "kc-mobile-image-list-ingredients__item"
+                        ]
+                      },
+                      "image": {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-img"
+                          ],
+                          "style": "width:32px;height:32px;border-radius:20px"
+                        },
+                        "image": {
+                          "attributes": {
+                            "src": "../assets/images/kc/modules/food/food-mobile-ingredients-02.png",
+                            "alt": "",
+                            "onerror": "this.style.display='none'"
+                          }
+                        }
+                      },
+                      "label": {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-m-bold"
+                          ]
+                        },
+                        "text": "Ingredient"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-mobile-image-list-ingredients__row"
+                    ]
+                  },
+                  "items": [
+                    {
+                      "tag": "div",
+                      "attributes": {
+                        "class": [
+                          "kc-mobile-image-list-ingredients__item"
+                        ]
+                      },
+                      "image": {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-img"
+                          ],
+                          "style": "width:32px;height:32px;border-radius:20px"
+                        },
+                        "image": {
+                          "attributes": {
+                            "src": "../assets/images/kc/modules/food/food-mobile-ingredients-03.png",
+                            "alt": "",
+                            "onerror": "this.style.display='none'"
+                          }
+                        }
+                      },
+                      "label": {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-m-bold"
+                          ]
+                        },
+                        "text": "Ingredient"
+                      }
+                    },
+                    {
+                      "tag": "div",
+                      "attributes": {
+                        "class": [
+                          "kc-mobile-image-list-ingredients__item"
+                        ]
+                      },
+                      "image": {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-img"
+                          ],
+                          "style": "width:32px;height:32px;border-radius:20px"
+                        },
+                        "image": {
+                          "attributes": {
+                            "src": "../assets/images/kc/modules/food/food-mobile-ingredients-04.png",
+                            "alt": "",
+                            "onerror": "this.style.display='none'"
+                          }
+                        }
+                      },
+                      "label": {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-m-bold"
+                          ]
+                        },
+                        "text": "Ingredient"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          }
         },
         {
           "type": "attribution",
@@ -8465,7 +15830,155 @@ window.KC_ENTITIES = {
               "alt": "Image for interesting fact about summer squash, 2"
             }
           ],
-          "slots": []
+          "slots": [],
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": [
+                  "kc-module",
+                  "kc-image-list-interesting-facts",
+                  "kc-image-list-interesting-facts--2-image",
+                  "kc-ingredient-facts"
+                ],
+                "id": "kc-ingredient-mod-2",
+                "data-kc": "Image List / Interesting Facts",
+                "aria-label": "Interesting facts about summer squash"
+              }
+            },
+            "content": {
+              "blocks": [
+                {
+                  "kind": "group",
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-ingredient-facts__row",
+                      "kc-ingredient-facts__row--first"
+                    ]
+                  },
+                  "parts": [
+                    {
+                      "kind": "group",
+                      "tag": "div",
+                      "attributes": {
+                        "class": [
+                          "kc-ingredient-facts__col"
+                        ]
+                      },
+                      "parts": [
+                        {
+                          "kind": "paragraph",
+                          "field": {
+                            "tag": "p",
+                            "attributes": {},
+                            "text": "Summer squash is a tender squash, picked young and immature so that its skin is thin and edible. They aren’t able to be stored as long as winter squash and are best picked and eaten young."
+                          }
+                        },
+                        {
+                          "kind": "divider",
+                          "tag": "span",
+                          "attributes": {
+                            "class": [
+                              "kc-divider"
+                            ],
+                            "aria-hidden": "true"
+                          }
+                        },
+                        {
+                          "kind": "paragraph",
+                          "field": {
+                            "tag": "p",
+                            "attributes": {},
+                            "text": "Summer squash is a wonderful vegetable to grow in the home vegetable garden. Summer squash can be planted in rows or in raised beds. They can even be planted in large containers."
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "kind": "image",
+                      "image": {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-img",
+                            "kc-img--cover"
+                          ]
+                        },
+                        "image": {
+                          "attributes": {
+                            "src": "../assets/images/kc/modules/ingredient/ingredient-desktop-facts-01.png",
+                            "alt": "Image for interesting fact about summer squash, 1",
+                            "onerror": "this.style.display='none'"
+                          }
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "kind": "group",
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-ingredient-facts__row",
+                      "kc-ingredient-facts__row--second"
+                    ]
+                  },
+                  "parts": [
+                    {
+                      "kind": "image",
+                      "image": {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-img",
+                            "kc-img--cover"
+                          ]
+                        },
+                        "image": {
+                          "attributes": {
+                            "src": "../assets/images/kc/modules/ingredient/ingredient-desktop-facts-02.png",
+                            "alt": "Image for interesting fact about summer squash, 2",
+                            "onerror": "this.style.display='none'"
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "kind": "group",
+                      "tag": "div",
+                      "attributes": {
+                        "class": [
+                          "kc-ingredient-facts__col"
+                        ]
+                      },
+                      "parts": [
+                        {
+                          "kind": "divider",
+                          "tag": "span",
+                          "attributes": {
+                            "class": [
+                              "kc-divider"
+                            ],
+                            "aria-hidden": "true"
+                          }
+                        },
+                        {
+                          "kind": "paragraph",
+                          "field": {
+                            "tag": "p",
+                            "attributes": {},
+                            "text": "The darling of summer squashes, zucchini is one of the most widely-known and popular squashes available. It flourishes in almost any circumstance, producing a huge bounty off just one plant."
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          }
         },
         {
           "type": "ingredients",
@@ -8489,7 +16002,159 @@ window.KC_ENTITIES = {
               "alt": ""
             }
           ],
-          "slots": []
+          "slots": [],
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": [
+                  "kc-module",
+                  "kc-image-list-ingredients"
+                ],
+                "id": "kc-ingredient-mod-3",
+                "data-kc": "Image List / Ingredients",
+                "aria-labelledby": "kc-ingredient-title-ingredients"
+              }
+            },
+            "content": {
+              "heading": {
+                "tag": "div",
+                "attributes": {
+                  "class": [
+                    "kc-module-title",
+                    "kc-module-title--no-chevron"
+                  ]
+                },
+                "heading": {
+                  "tag": "h3",
+                  "attributes": {
+                    "id": "kc-ingredient-title-ingredients"
+                  },
+                  "text": "Common Ingredients"
+                },
+                "trailing": null
+              },
+              "list": {
+                "tag": "div",
+                "attributes": {
+                  "class": [
+                    "kc-image-list-ingredients__list"
+                  ]
+                }
+              },
+              "rows": [
+                {
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-image-list-ingredients__row"
+                    ]
+                  },
+                  "items": [
+                    {
+                      "tag": "div",
+                      "attributes": {
+                        "class": [
+                          "kc-image-list-ingredients__item"
+                        ]
+                      },
+                      "image": {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-img",
+                            "kc-img--cover"
+                          ]
+                        },
+                        "image": {
+                          "attributes": {
+                            "src": "../assets/images/kc/modules/ingredient/ingredient-desktop-ingredients-01.png",
+                            "alt": "",
+                            "onerror": "this.style.display='none'"
+                          }
+                        }
+                      },
+                      "label": {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-copy-bold"
+                          ]
+                        },
+                        "text": "Ingredient"
+                      }
+                    },
+                    {
+                      "tag": "div",
+                      "attributes": {
+                        "class": [
+                          "kc-image-list-ingredients__item"
+                        ]
+                      },
+                      "image": {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-img",
+                            "kc-img--cover"
+                          ]
+                        },
+                        "image": {
+                          "attributes": {
+                            "src": "../assets/images/kc/modules/ingredient/ingredient-desktop-ingredients-02.png",
+                            "alt": "",
+                            "onerror": "this.style.display='none'"
+                          }
+                        }
+                      },
+                      "label": {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-copy-bold"
+                          ]
+                        },
+                        "text": "Ingredient"
+                      }
+                    },
+                    {
+                      "tag": "div",
+                      "attributes": {
+                        "class": [
+                          "kc-image-list-ingredients__item"
+                        ]
+                      },
+                      "image": {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-img",
+                            "kc-img--cover"
+                          ]
+                        },
+                        "image": {
+                          "attributes": {
+                            "src": "../assets/images/kc/modules/ingredient/ingredient-desktop-ingredients-03.png",
+                            "alt": "",
+                            "onerror": "this.style.display='none'"
+                          }
+                        }
+                      },
+                      "label": {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-copy-bold"
+                          ]
+                        },
+                        "text": "Ingredient"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          }
         },
         {
           "type": "attributions",
@@ -8713,7 +16378,165 @@ window.KC_ENTITIES = {
             {
               "src": null
             }
-          ]
+          ],
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": [
+                  "kc-module",
+                  "kc-module--mobile",
+                  "kc-mobile-image-list-carousel"
+                ],
+                "id": "kc-ingredient-mobile-carousel",
+                "data-kc": "Mobile/ Image List / Carousel",
+                "aria-label": "Summer squash photos"
+              }
+            },
+            "content": {
+              "track": {
+                "tag": "div",
+                "attributes": {
+                  "class": [
+                    "kc-scroll-row"
+                  ],
+                  "tabindex": "0",
+                  "aria-label": "Summer squash photo list"
+                }
+              },
+              "items": [
+                {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-img",
+                      "kc-img--cover"
+                    ]
+                  },
+                  "image": {
+                    "attributes": {
+                      "src": "../assets/images/kc/modules/ingredient/ingredient-mobile-carousel-01.png",
+                      "alt": "Summer squash photo 1",
+                      "onerror": "this.style.display='none'"
+                    }
+                  }
+                },
+                {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-img",
+                      "kc-img--cover"
+                    ]
+                  },
+                  "image": {
+                    "attributes": {
+                      "src": "../assets/images/kc/modules/ingredient/ingredient-mobile-carousel-02.png",
+                      "alt": "Summer squash photo 2",
+                      "onerror": "this.style.display='none'"
+                    }
+                  }
+                },
+                {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-img",
+                      "kc-img--crop-edge"
+                    ]
+                  },
+                  "image": {
+                    "attributes": {
+                      "src": "../assets/images/kc/modules/ingredient/ingredient-mobile-carousel-03.png",
+                      "alt": "Summer squash photo 3",
+                      "onerror": "this.style.display='none'"
+                    }
+                  }
+                },
+                {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-img"
+                    ]
+                  },
+                  "image": null
+                },
+                {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-img"
+                    ]
+                  },
+                  "image": null
+                }
+              ],
+              "controls": [
+                {
+                  "tag": "button",
+                  "attributes": {
+                    "class": [
+                      "kc-btn-flipper",
+                      "kc-ingredient-mobile-carousel__previous"
+                    ],
+                    "type": "button",
+                    "aria-label": "Previous carousel images",
+                    "disabled": ""
+                  },
+                  "icon": {
+                    "tag": "svg",
+                    "attributes": {
+                      "width": "16",
+                      "height": "16",
+                      "viewBox": "0 0 20 20",
+                      "aria-hidden": "true",
+                      "focusable": "false"
+                    },
+                    "paths": [
+                      {
+                        "tag": "path",
+                        "attributes": {
+                          "d": "M9.15898 16.8666C9.36292 17.0528 9.67918 17.0384 9.86536 16.8345C10.0515 16.6305 10.0371 16.3143 9.8332 16.1281L3.66535 10.4974H17.4961C17.7722 10.4974 17.9961 10.2735 17.9961 9.99736C17.9961 9.72122 17.7722 9.49736 17.4961 9.49736H3.66824L9.8332 3.86927C10.0371 3.68309 10.0515 3.36684 9.86536 3.16289C9.67918 2.95895 9.36292 2.94456 9.15898 3.13074L2.24263 9.44478C2.10268 9.57254 2.02285 9.74008 2.00314 9.91323C1.99851 9.94058 1.99609 9.96869 1.99609 9.99736C1.99609 10.0242 1.99821 10.0506 2.00229 10.0763C2.02047 10.2522 2.10058 10.4229 2.24263 10.5526L9.15898 16.8666Z",
+                          "fill": "currentColor"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "tag": "button",
+                  "attributes": {
+                    "class": [
+                      "kc-btn-flipper",
+                      "kc-ingredient-mobile-carousel__next"
+                    ],
+                    "type": "button",
+                    "aria-label": "Next carousel images"
+                  },
+                  "icon": {
+                    "tag": "svg",
+                    "attributes": {
+                      "width": "16",
+                      "height": "16",
+                      "viewBox": "0 0 20 20",
+                      "aria-hidden": "true",
+                      "focusable": "false"
+                    },
+                    "paths": [
+                      {
+                        "tag": "path",
+                        "attributes": {
+                          "d": "M10.8371 3.13074C10.6332 2.94456 10.3169 2.95895 10.1307 3.16289C9.94456 3.36683 9.95895 3.68309 10.1629 3.86927L16.3307 9.5H2.5C2.22386 9.5 2 9.72386 2 10C2 10.2761 2.22386 10.5 2.5 10.5H16.3279L10.1629 16.1281C9.95895 16.3143 9.94456 16.6305 10.1307 16.8345C10.3169 17.0384 10.6332 17.0528 10.8371 16.8666L17.7535 10.5526C17.8934 10.4248 17.9732 10.2573 17.993 10.0841C17.9976 10.0568 18 10.0287 18 10C18 9.97313 17.9979 9.94675 17.9938 9.92103C17.9756 9.74512 17.8955 9.57446 17.7535 9.44478L10.8371 3.13074Z",
+                          "fill": "currentColor"
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
         },
         {
           "type": "serving-size",
@@ -8755,7 +16578,167 @@ window.KC_ENTITIES = {
               "alt": "Image for interesting fact about summer squash, 2"
             }
           ],
-          "slots": []
+          "slots": [],
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": [
+                  "kc-module",
+                  "kc-module--mobile",
+                  "kc-mobile-image-list-interesting-facts",
+                  "kc-mobile-image-list-interesting-facts--2-image"
+                ],
+                "id": "kc-ingredient-mobile-interesting-facts",
+                "data-kc": "Mobile / Image List / Interesting Facts",
+                "data-kc-variant": "Image Amount=2-Image",
+                "aria-label": "Interesting facts about summer squash"
+              }
+            },
+            "content": {
+              "blocks": [
+                {
+                  "kind": "group",
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-mobile-image-list-interesting-facts__row"
+                    ]
+                  },
+                  "parts": [
+                    {
+                      "kind": "text",
+                      "tag": "div",
+                      "attributes": {
+                        "class": [
+                          "kc-mobile-image-list-interesting-facts__text"
+                        ]
+                      },
+                      "lines": [
+                        {
+                          "kind": "field",
+                          "field": {
+                            "tag": "p",
+                            "attributes": {
+                              "class": [
+                                "kc-m-reg"
+                              ]
+                            },
+                            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore."
+                          }
+                        },
+                        {
+                          "kind": "divider",
+                          "tag": "span",
+                          "attributes": {
+                            "class": [
+                              "kc-m-divider"
+                            ],
+                            "aria-hidden": "true"
+                          }
+                        },
+                        {
+                          "kind": "field",
+                          "field": {
+                            "tag": "p",
+                            "attributes": {
+                              "class": [
+                                "kc-m-reg"
+                              ]
+                            },
+                            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "kind": "image",
+                      "image": {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-img",
+                            "kc-img--cover"
+                          ]
+                        },
+                        "image": {
+                          "attributes": {
+                            "src": "../assets/images/kc/modules/ingredient/ingredient-mobile-facts-01.png",
+                            "alt": "Image for interesting fact about summer squash, 1",
+                            "onerror": "this.style.display='none'"
+                          }
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "kind": "group",
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-mobile-image-list-interesting-facts__row",
+                      "kc-mobile-image-list-interesting-facts__row--reverse"
+                    ]
+                  },
+                  "parts": [
+                    {
+                      "kind": "image",
+                      "image": {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-img",
+                            "kc-img--cover"
+                          ]
+                        },
+                        "image": {
+                          "attributes": {
+                            "src": "../assets/images/kc/modules/ingredient/ingredient-mobile-facts-02.png",
+                            "alt": "Image for interesting fact about summer squash, 2",
+                            "onerror": "this.style.display='none'"
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "kind": "text",
+                      "tag": "div",
+                      "attributes": {
+                        "class": [
+                          "kc-mobile-image-list-interesting-facts__text"
+                        ]
+                      },
+                      "lines": [
+                        {
+                          "kind": "divider",
+                          "tag": "span",
+                          "attributes": {
+                            "class": [
+                              "kc-m-divider"
+                            ],
+                            "aria-hidden": "true"
+                          }
+                        },
+                        {
+                          "kind": "field",
+                          "field": {
+                            "tag": "p",
+                            "attributes": {
+                              "class": [
+                                "kc-m-reg"
+                              ]
+                            },
+                            "text": "A zucchini with the flowers attached is a sign of a truly fresh and immature fruit."
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          }
         },
         {
           "type": "videos-landscape",
@@ -8813,7 +16796,128 @@ window.KC_ENTITIES = {
               "alt": ""
             }
           ],
-          "slots": []
+          "slots": [],
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": [
+                  "kc-module",
+                  "kc-module--mobile",
+                  "kc-mobile-image-list-ingredients"
+                ],
+                "id": "kc-ingredient-mobile-ingredients",
+                "data-kc": "Mobile / Image List / Ingredients",
+                "aria-labelledby": "kc-ingredient-mobile-ingredients-title"
+              }
+            },
+            "content": {
+              "heading": {
+                "tag": "div",
+                "attributes": {
+                  "class": [
+                    "kc-module-title"
+                  ]
+                },
+                "heading": {
+                  "tag": "h3",
+                  "attributes": {
+                    "id": "kc-ingredient-mobile-ingredients-title"
+                  },
+                  "text": "Common Ingredients"
+                },
+                "trailing": null
+              },
+              "list": {
+                "tag": "div",
+                "attributes": {
+                  "class": [
+                    "kc-mobile-image-list-ingredients__list"
+                  ]
+                }
+              },
+              "rows": [
+                {
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-mobile-image-list-ingredients__row"
+                    ]
+                  },
+                  "items": [
+                    {
+                      "tag": "div",
+                      "attributes": {
+                        "class": [
+                          "kc-mobile-image-list-ingredients__item"
+                        ]
+                      },
+                      "image": {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-img",
+                            "kc-img--cover"
+                          ],
+                          "style": "width:32px;height:32px;border-radius:20px"
+                        },
+                        "image": {
+                          "attributes": {
+                            "src": "../assets/images/kc/modules/ingredient/ingredient-mobile-ingredients-01.png",
+                            "alt": "",
+                            "onerror": "this.style.display='none'"
+                          }
+                        }
+                      },
+                      "label": {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-m-bold"
+                          ]
+                        },
+                        "text": "Ingredient"
+                      }
+                    },
+                    {
+                      "tag": "div",
+                      "attributes": {
+                        "class": [
+                          "kc-mobile-image-list-ingredients__item"
+                        ]
+                      },
+                      "image": {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-img",
+                            "kc-img--cover"
+                          ],
+                          "style": "width:32px;height:32px;border-radius:20px"
+                        },
+                        "image": {
+                          "attributes": {
+                            "src": "../assets/images/kc/modules/ingredient/ingredient-mobile-ingredients-02.png",
+                            "alt": "",
+                            "onerror": "this.style.display='none'"
+                          }
+                        }
+                      },
+                      "label": {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-m-bold"
+                          ]
+                        },
+                        "text": "Ingredient"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          }
         },
         {
           "type": "attribution",
@@ -9178,7 +17282,166 @@ window.KC_ENTITIES = {
               "alt": "View of Jupiter"
             }
           ],
-          "slots": []
+          "slots": [],
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": [
+                  "kc-module",
+                  "kc-image-list-interesting-facts",
+                  "kc-image-list-interesting-facts--2-image"
+                ],
+                "id": "kc-planet-desktop-mod-interesting",
+                "data-kc": "Image List / Interesting Facts",
+                "aria-label": "Interesting facts about Jupiter"
+              }
+            },
+            "content": {
+              "blocks": [
+                {
+                  "kind": "group",
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-image-list-interesting-facts__row",
+                      "kc-planet-fact-row--first"
+                    ]
+                  },
+                  "parts": [
+                    {
+                      "kind": "text",
+                      "tag": "div",
+                      "attributes": {
+                        "class": [
+                          "kc-image-list-interesting-facts__text"
+                        ]
+                      },
+                      "lines": [
+                        {
+                          "kind": "field",
+                          "field": {
+                            "tag": "p",
+                            "attributes": {
+                              "class": [
+                                "kc-copy"
+                              ]
+                            },
+                            "text": "Jupiter has the shortest day of all the planets. It turns on its axis once every 9 hours and 55 minutes."
+                          }
+                        },
+                        {
+                          "kind": "divider",
+                          "tag": "span",
+                          "attributes": {
+                            "class": [
+                              "kc-divider"
+                            ],
+                            "aria-hidden": "true"
+                          }
+                        },
+                        {
+                          "kind": "field",
+                          "field": {
+                            "tag": "p",
+                            "attributes": {
+                              "class": [
+                                "kc-copy"
+                              ]
+                            },
+                            "text": "Jupiter is the third-brightest natural object in the Earth's night sky after the Moon and Venus."
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "kind": "image",
+                      "image": {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-img",
+                            "kc-img--cover"
+                          ]
+                        },
+                        "image": {
+                          "attributes": {
+                            "src": "../assets/images/kc/modules/planet/planet-desktop-facts-01.png",
+                            "alt": "Illustration of Jupiter and a spacecraft",
+                            "onerror": "this.style.display='none'"
+                          }
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "kind": "group",
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-image-list-interesting-facts__row",
+                      "kc-planet-fact-row--second"
+                    ]
+                  },
+                  "parts": [
+                    {
+                      "kind": "image",
+                      "image": {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-img",
+                            "kc-img--cover"
+                          ]
+                        },
+                        "image": {
+                          "attributes": {
+                            "src": "../assets/images/kc/modules/planet/planet-desktop-facts-02.png",
+                            "alt": "View of Jupiter",
+                            "onerror": "this.style.display='none'"
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "kind": "text",
+                      "tag": "div",
+                      "attributes": {
+                        "class": [
+                          "kc-image-list-interesting-facts__text"
+                        ]
+                      },
+                      "lines": [
+                        {
+                          "kind": "divider",
+                          "tag": "span",
+                          "attributes": {
+                            "class": [
+                              "kc-divider"
+                            ],
+                            "aria-hidden": "true"
+                          }
+                        },
+                        {
+                          "kind": "field",
+                          "field": {
+                            "tag": "p",
+                            "attributes": {
+                              "class": [
+                                "kc-copy"
+                              ]
+                            },
+                            "text": "Jupiter has a very strong magnetic field. This is around 14 times stronger than the magnetic field found on Earth – the largest of any planet in the solar system."
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          }
         },
         {
           "type": "top-fact",
@@ -9562,7 +17825,165 @@ window.KC_ENTITIES = {
             {
               "src": null
             }
-          ]
+          ],
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": [
+                  "kc-module",
+                  "kc-module--mobile",
+                  "kc-mobile-image-list-carousel"
+                ],
+                "id": "kc-planet-mobile-carousel",
+                "data-kc": "Mobile / Image List / Carousel",
+                "aria-label": "Jupiter photos"
+              }
+            },
+            "content": {
+              "track": {
+                "tag": "div",
+                "attributes": {
+                  "class": [
+                    "kc-scroll-row"
+                  ],
+                  "tabindex": "0",
+                  "aria-label": "Jupiter photos, use left and right arrow keys to scroll"
+                }
+              },
+              "items": [
+                {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-img",
+                      "kc-img--cover"
+                    ]
+                  },
+                  "image": {
+                    "attributes": {
+                      "src": "../assets/images/kc/modules/planet/planet-mobile-carousel-01.png",
+                      "alt": "Jupiter with cloud bands and the Great Red Spot",
+                      "onerror": "this.style.display='none'"
+                    }
+                  }
+                },
+                {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-img",
+                      "kc-img--cover"
+                    ]
+                  },
+                  "image": {
+                    "attributes": {
+                      "src": "../assets/images/kc/modules/planet/planet-mobile-carousel-02.png",
+                      "alt": "Close-up of Jupiter's Great Red Spot",
+                      "onerror": "this.style.display='none'"
+                    }
+                  }
+                },
+                {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-img",
+                      "kc-img--crop-edge"
+                    ]
+                  },
+                  "image": {
+                    "attributes": {
+                      "src": "../assets/images/kc/modules/planet/planet-mobile-carousel-03.png",
+                      "alt": "Jupiter with cloud bands and the Great Red Spot",
+                      "onerror": "this.style.display='none'"
+                    }
+                  }
+                },
+                {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-img"
+                    ]
+                  },
+                  "image": null
+                },
+                {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-img"
+                    ]
+                  },
+                  "image": null
+                }
+              ],
+              "controls": [
+                {
+                  "tag": "button",
+                  "attributes": {
+                    "class": [
+                      "kc-btn-flipper",
+                      "kc-planet-mobile-carousel__previous"
+                    ],
+                    "type": "button",
+                    "aria-label": "Previous carousel images",
+                    "disabled": ""
+                  },
+                  "icon": {
+                    "tag": "svg",
+                    "attributes": {
+                      "width": "16",
+                      "height": "16",
+                      "viewBox": "0 0 20 20",
+                      "aria-hidden": "true",
+                      "focusable": "false"
+                    },
+                    "paths": [
+                      {
+                        "tag": "path",
+                        "attributes": {
+                          "d": "M9.15898 16.8666C9.36292 17.0528 9.67918 17.0384 9.86536 16.8345C10.0515 16.6305 10.0371 16.3143 9.8332 16.1281L3.66535 10.4974H17.4961C17.7722 10.4974 17.9961 10.2735 17.9961 9.99736C17.9961 9.72122 17.7722 9.49736 17.4961 9.49736H3.66824L9.8332 3.86927C10.0371 3.68309 10.0515 3.36684 9.86536 3.16289C9.67918 2.95895 9.36292 2.94456 9.15898 3.13074L2.24263 9.44478C2.10268 9.57254 2.02285 9.74008 2.00314 9.91323C1.99851 9.94058 1.99609 9.96869 1.99609 9.99736C1.99609 10.0242 1.99821 10.0506 2.00229 10.0763C2.02047 10.2522 2.10058 10.4229 2.24263 10.5526L9.15898 16.8666Z",
+                          "fill": "currentColor"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "tag": "button",
+                  "attributes": {
+                    "class": [
+                      "kc-btn-flipper",
+                      "kc-planet-mobile-carousel__next"
+                    ],
+                    "type": "button",
+                    "aria-label": "Next carousel images"
+                  },
+                  "icon": {
+                    "tag": "svg",
+                    "attributes": {
+                      "width": "16",
+                      "height": "16",
+                      "viewBox": "0 0 20 20",
+                      "aria-hidden": "true",
+                      "focusable": "false"
+                    },
+                    "paths": [
+                      {
+                        "tag": "path",
+                        "attributes": {
+                          "d": "M10.8371 3.13074C10.6332 2.94456 10.3169 2.95895 10.1307 3.16289C9.94456 3.36683 9.95895 3.68309 10.1629 3.86927L16.3307 9.5H2.5C2.22386 9.5 2 9.72386 2 10C2 10.2761 2.22386 10.5 2.5 10.5H16.3279L10.1629 16.1281C9.95895 16.3143 9.94456 16.6305 10.1307 16.8345C10.3169 17.0384 10.6332 17.0528 10.8371 16.8666L17.7535 10.5526C17.8934 10.4248 17.9732 10.2573 17.993 10.0841C17.9976 10.0568 18 10.0287 18 10C18 9.97313 17.9979 9.94675 17.9938 9.92103C17.9756 9.74512 17.8955 9.57446 17.7535 9.44478L10.8371 3.13074Z",
+                          "fill": "currentColor"
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
         },
         {
           "type": "quick-facts",
@@ -9854,7 +18275,167 @@ window.KC_ENTITIES = {
               "alt": "Cloud formations on Jupiter"
             }
           ],
-          "slots": []
+          "slots": [],
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": [
+                  "kc-module",
+                  "kc-module--mobile",
+                  "kc-mobile-image-list-interesting-facts",
+                  "kc-mobile-image-list-interesting-facts--2-image"
+                ],
+                "id": "kc-planet-mobile-interesting-facts",
+                "data-kc": "Mobile / Image List / Interesting Facts",
+                "data-kc-variant": "Image Amount=2-Image",
+                "aria-label": "Interesting facts about Jupiter"
+              }
+            },
+            "content": {
+              "blocks": [
+                {
+                  "kind": "group",
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-mobile-image-list-interesting-facts__row"
+                    ]
+                  },
+                  "parts": [
+                    {
+                      "kind": "text",
+                      "tag": "div",
+                      "attributes": {
+                        "class": [
+                          "kc-mobile-image-list-interesting-facts__text"
+                        ]
+                      },
+                      "lines": [
+                        {
+                          "kind": "field",
+                          "field": {
+                            "tag": "p",
+                            "attributes": {
+                              "class": [
+                                "kc-m-reg"
+                              ]
+                            },
+                            "text": "Jupiter has the shortest day of all the planets. It turns on its axis once every 9 hours and 55 minutes."
+                          }
+                        },
+                        {
+                          "kind": "divider",
+                          "tag": "span",
+                          "attributes": {
+                            "class": [
+                              "kc-m-divider"
+                            ],
+                            "aria-hidden": "true"
+                          }
+                        },
+                        {
+                          "kind": "field",
+                          "field": {
+                            "tag": "p",
+                            "attributes": {
+                              "class": [
+                                "kc-m-reg"
+                              ]
+                            },
+                            "text": "Jupiter is the third-brightest natural object in the Earth's night sky after the Moon and Venus."
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "kind": "image",
+                      "image": {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-img",
+                            "kc-img--cover"
+                          ]
+                        },
+                        "image": {
+                          "attributes": {
+                            "src": "../assets/images/kc/modules/planet/planet-mobile-facts-01.png",
+                            "alt": "Jupiter's Great Red Spot",
+                            "onerror": "this.style.display='none'"
+                          }
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "kind": "group",
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-mobile-image-list-interesting-facts__row",
+                      "kc-mobile-image-list-interesting-facts__row--reverse"
+                    ]
+                  },
+                  "parts": [
+                    {
+                      "kind": "image",
+                      "image": {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-img",
+                            "kc-img--cover"
+                          ]
+                        },
+                        "image": {
+                          "attributes": {
+                            "src": "../assets/images/kc/modules/planet/planet-mobile-facts-02.png",
+                            "alt": "Cloud formations on Jupiter",
+                            "onerror": "this.style.display='none'"
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "kind": "text",
+                      "tag": "div",
+                      "attributes": {
+                        "class": [
+                          "kc-mobile-image-list-interesting-facts__text"
+                        ]
+                      },
+                      "lines": [
+                        {
+                          "kind": "divider",
+                          "tag": "span",
+                          "attributes": {
+                            "class": [
+                              "kc-m-divider"
+                            ],
+                            "aria-hidden": "true"
+                          }
+                        },
+                        {
+                          "kind": "field",
+                          "field": {
+                            "tag": "p",
+                            "attributes": {
+                              "class": [
+                                "kc-m-reg"
+                              ]
+                            },
+                            "text": "Jupiter has a very strong magnetic field. This is around 14 times stronger than the magnetic field found on Earth — the largest of any planet in the solar system."
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          }
         },
         {
           "type": "top-fact",
@@ -10377,7 +18958,161 @@ window.KC_ENTITIES = {
               "height": null,
               "src": null
             }
-          ]
+          ],
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": [
+                  "kc-module",
+                  "kc-image-list-carousel"
+                ],
+                "id": "kc-plant-desktop-mod-carousel",
+                "data-kc": "Image List / Carousel",
+                "aria-label": "Dahlia photos",
+                "tabindex": "0"
+              }
+            },
+            "content": {
+              "track": null,
+              "items": [
+                {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-img",
+                      "kc-img--cover"
+                    ]
+                  },
+                  "image": {
+                    "attributes": {
+                      "src": "../assets/images/kc/modules/plant/plant-desktop-carousel-01.png",
+                      "alt": "Red Dahlietta Anna dahlia flower",
+                      "onerror": "this.style.display='none'"
+                    }
+                  }
+                },
+                {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-img",
+                      "kc-img--cover"
+                    ]
+                  },
+                  "image": {
+                    "attributes": {
+                      "src": "../assets/images/kc/modules/plant/plant-desktop-carousel-02.png",
+                      "alt": "Yellow and red Moonfire dahlia flower",
+                      "onerror": "this.style.display='none'"
+                    }
+                  }
+                },
+                {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-img",
+                      "kc-img--cover"
+                    ]
+                  },
+                  "image": {
+                    "attributes": {
+                      "src": "../assets/images/kc/modules/plant/plant-desktop-carousel-03.png",
+                      "alt": "Moonfire dahlia flower bud",
+                      "onerror": "this.style.display='none'"
+                    }
+                  }
+                },
+                {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-img",
+                      "kc-img--cover"
+                    ]
+                  },
+                  "image": {
+                    "attributes": {
+                      "src": "../assets/images/kc/modules/plant/plant-desktop-carousel-04.png",
+                      "alt": "Dahlietta Anna plant with red flowers and buds",
+                      "onerror": "this.style.display='none'"
+                    }
+                  }
+                },
+                {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-img"
+                    ]
+                  },
+                  "image": null
+                }
+              ],
+              "controls": [
+                {
+                  "tag": "button",
+                  "attributes": {
+                    "class": [
+                      "kc-btn-flipper",
+                      "kc-plant-desktop-carousel__previous"
+                    ],
+                    "type": "button",
+                    "aria-label": "Previous carousel images",
+                    "disabled": ""
+                  },
+                  "icon": {
+                    "tag": "svg",
+                    "attributes": {
+                      "width": "16",
+                      "height": "16",
+                      "viewBox": "0 0 20 20",
+                      "aria-hidden": "true",
+                      "focusable": "false"
+                    },
+                    "paths": [
+                      {
+                        "tag": "use",
+                        "attributes": {
+                          "href": "#kc-plant-desktop-arrow-left"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "tag": "button",
+                  "attributes": {
+                    "class": [
+                      "kc-btn-flipper",
+                      "kc-plant-desktop-carousel__next"
+                    ],
+                    "type": "button",
+                    "aria-label": "Next carousel images"
+                  },
+                  "icon": {
+                    "tag": "svg",
+                    "attributes": {
+                      "width": "16",
+                      "height": "16",
+                      "viewBox": "0 0 20 20",
+                      "aria-hidden": "true",
+                      "focusable": "false"
+                    },
+                    "paths": [
+                      {
+                        "tag": "use",
+                        "attributes": {
+                          "href": "#kc-plant-desktop-arrow-right"
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
         },
         {
           "type": "top-fact",
@@ -10494,7 +19229,102 @@ window.KC_ENTITIES = {
               "alt": "Yellow and red Moonfire dahlia flower"
             }
           ],
-          "slots": []
+          "slots": [],
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": [
+                  "kc-module",
+                  "kc-image-list-interesting-facts",
+                  "kc-image-list-interesting-facts--1-image"
+                ],
+                "id": "kc-plant-desktop-mod-interesting-one",
+                "data-kc": "Image List / Interesting Facts",
+                "data-kc-variant": "Image Amount=1-Image",
+                "aria-label": "Dahlia growing and flower facts"
+              }
+            },
+            "content": {
+              "blocks": [
+                {
+                  "kind": "group",
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-image-list-interesting-facts__row"
+                    ]
+                  },
+                  "parts": [
+                    {
+                      "kind": "text",
+                      "tag": "div",
+                      "attributes": {
+                        "class": [
+                          "kc-image-list-interesting-facts__text"
+                        ]
+                      },
+                      "lines": [
+                        {
+                          "kind": "field",
+                          "field": {
+                            "tag": "p",
+                            "attributes": {
+                              "class": [
+                                "kc-copy"
+                              ]
+                            },
+                            "text": "Dahlias grow best in a sunny, sheltered spot with fertile, well-drained soil. Smaller varieties can also thrive in containers."
+                          }
+                        },
+                        {
+                          "kind": "divider",
+                          "tag": "span",
+                          "attributes": {
+                            "class": [
+                              "kc-divider"
+                            ],
+                            "aria-hidden": "true"
+                          }
+                        },
+                        {
+                          "kind": "field",
+                          "field": {
+                            "tag": "p",
+                            "attributes": {
+                              "class": [
+                                "kc-copy"
+                              ]
+                            },
+                            "text": "Thousands of cultivars offer flowers in a wide variety of shapes and colors, from small blooms to flowers a foot across."
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "kind": "image",
+                      "image": {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-img",
+                            "kc-img--cover"
+                          ]
+                        },
+                        "image": {
+                          "attributes": {
+                            "src": "../assets/images/kc/modules/plant/plant-desktop-facts-01.png",
+                            "alt": "Yellow and red Moonfire dahlia flower",
+                            "onerror": "this.style.display='none'"
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          }
         },
         {
           "type": "interesting-facts",
@@ -10515,7 +19345,190 @@ window.KC_ENTITIES = {
               "alt": "Dahlietta Anna plant with red flowers and buds"
             }
           ],
-          "slots": []
+          "slots": [],
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": [
+                  "kc-module",
+                  "kc-image-list-interesting-facts",
+                  "kc-image-list-interesting-facts--3-image"
+                ],
+                "id": "kc-plant-desktop-mod-interesting-three",
+                "data-kc": "Image List / Interesting Facts",
+                "data-kc-variant": "Image Amount=3-Image",
+                "aria-label": "More Dahlia facts"
+              }
+            },
+            "content": {
+              "blocks": [
+                {
+                  "kind": "group",
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-image-list-interesting-facts__row",
+                      "kc-plant-desktop-fact-row--first"
+                    ]
+                  },
+                  "parts": [
+                    {
+                      "kind": "image",
+                      "image": {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-img",
+                            "kc-img--cover"
+                          ]
+                        },
+                        "image": {
+                          "attributes": {
+                            "src": "../assets/images/kc/modules/plant/plant-desktop-facts-02.png",
+                            "alt": "Moonfire dahlia flower bud",
+                            "onerror": "this.style.display='none'"
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "kind": "text",
+                      "tag": "div",
+                      "attributes": {
+                        "class": [
+                          "kc-image-list-interesting-facts__text"
+                        ]
+                      },
+                      "lines": [
+                        {
+                          "kind": "field",
+                          "field": {
+                            "tag": "p",
+                            "attributes": {
+                              "class": [
+                                "kc-copy"
+                              ]
+                            },
+                            "text": "Dahlias grow from underground tubers. In colder climates, gardeners can lift and store the tubers in a frost-free place over winter, then start them into growth in spring."
+                          }
+                        },
+                        {
+                          "kind": "divider",
+                          "tag": "span",
+                          "attributes": {
+                            "class": [
+                              "kc-divider"
+                            ],
+                            "aria-hidden": "true"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "kind": "group",
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-image-list-interesting-facts__row",
+                      "kc-plant-desktop-fact-row--second"
+                    ]
+                  },
+                  "parts": [
+                    {
+                      "kind": "text",
+                      "tag": "div",
+                      "attributes": {
+                        "class": [
+                          "kc-image-list-interesting-facts__text"
+                        ]
+                      },
+                      "lines": [
+                        {
+                          "kind": "field",
+                          "field": {
+                            "tag": "p",
+                            "attributes": {
+                              "class": [
+                                "kc-copy"
+                              ]
+                            },
+                            "text": "Dahlias bloom through summer and autumn, often until the first frost. Removing spent flowers encourages more blooms throughout the season."
+                          }
+                        },
+                        {
+                          "kind": "divider",
+                          "tag": "span",
+                          "attributes": {
+                            "class": [
+                              "kc-divider"
+                            ],
+                            "aria-hidden": "true"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "kind": "image",
+                      "image": {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-img",
+                            "kc-img--cover"
+                          ]
+                        },
+                        "image": {
+                          "attributes": {
+                            "src": "../assets/images/kc/modules/plant/plant-desktop-facts-03.png",
+                            "alt": "Dahlietta Anna plant with red flowers and buds",
+                            "onerror": "this.style.display='none'"
+                          }
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "kind": "group",
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-image-list-interesting-facts__row",
+                      "kc-plant-desktop-fact-row--third"
+                    ]
+                  },
+                  "parts": [
+                    {
+                      "kind": "text",
+                      "tag": "div",
+                      "attributes": {
+                        "class": [
+                          "kc-image-list-interesting-facts__text"
+                        ]
+                      },
+                      "lines": [
+                        {
+                          "kind": "field",
+                          "field": {
+                            "tag": "p",
+                            "attributes": {
+                              "class": [
+                                "kc-copy"
+                              ]
+                            },
+                            "text": "Dahlia flowers range from open, daisy-like blooms to rounded, multi-petalled forms."
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          }
         },
         {
           "type": "attributions",
@@ -10801,7 +19814,170 @@ window.KC_ENTITIES = {
             {
               "src": null
             }
-          ]
+          ],
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": [
+                  "kc-module",
+                  "kc-module--mobile",
+                  "kc-mobile-image-list-carousel"
+                ],
+                "id": "kc-plant-mobile-carousel",
+                "data-kc": "Mobile / Image List / Carousel",
+                "aria-label": "Dahlia photos"
+              }
+            },
+            "content": {
+              "track": {
+                "tag": "div",
+                "attributes": {
+                  "class": [
+                    "kc-scroll-row"
+                  ],
+                  "tabindex": "0",
+                  "aria-label": "Dahlia photos, use left and right arrow keys to scroll"
+                }
+              },
+              "items": [
+                {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-img",
+                      "kc-img--cover"
+                    ]
+                  },
+                  "image": {
+                    "attributes": {
+                      "src": "../assets/images/kc/modules/plant/plant-mobile-carousel-01.png",
+                      "alt": "Red Dahlietta Anna dahlia flower",
+                      "onerror": "this.style.display='none'"
+                    }
+                  }
+                },
+                {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-img",
+                      "kc-img--cover"
+                    ]
+                  },
+                  "image": {
+                    "attributes": {
+                      "src": "../assets/images/kc/modules/plant/plant-mobile-carousel-02.png",
+                      "alt": "Yellow and red Moonfire dahlia flower",
+                      "onerror": "this.style.display='none'"
+                    }
+                  }
+                },
+                {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-img",
+                      "kc-img--cover"
+                    ]
+                  },
+                  "image": {
+                    "attributes": {
+                      "src": "../assets/images/kc/modules/plant/plant-mobile-carousel-03.png",
+                      "alt": "Moonfire dahlia flower bud",
+                      "onerror": "this.style.display='none'"
+                    }
+                  }
+                },
+                {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-img",
+                      "kc-img--cover"
+                    ]
+                  },
+                  "image": {
+                    "attributes": {
+                      "src": "../assets/images/kc/modules/plant/plant-mobile-carousel-04.png",
+                      "alt": "Dahlietta Anna plant with red flowers and buds",
+                      "onerror": "this.style.display='none'"
+                    }
+                  }
+                },
+                {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-img"
+                    ]
+                  },
+                  "image": null
+                }
+              ],
+              "controls": [
+                {
+                  "tag": "button",
+                  "attributes": {
+                    "class": [
+                      "kc-btn-flipper",
+                      "kc-plant-mobile-carousel__previous"
+                    ],
+                    "type": "button",
+                    "aria-label": "Previous carousel images",
+                    "disabled": ""
+                  },
+                  "icon": {
+                    "tag": "svg",
+                    "attributes": {
+                      "width": "16",
+                      "height": "16",
+                      "viewBox": "0 0 20 20",
+                      "aria-hidden": "true",
+                      "focusable": "false"
+                    },
+                    "paths": [
+                      {
+                        "tag": "use",
+                        "attributes": {
+                          "href": "#kc-plant-arrow-left"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "tag": "button",
+                  "attributes": {
+                    "class": [
+                      "kc-btn-flipper",
+                      "kc-plant-mobile-carousel__next"
+                    ],
+                    "type": "button",
+                    "aria-label": "Next carousel images"
+                  },
+                  "icon": {
+                    "tag": "svg",
+                    "attributes": {
+                      "width": "16",
+                      "height": "16",
+                      "viewBox": "0 0 20 20",
+                      "aria-hidden": "true",
+                      "focusable": "false"
+                    },
+                    "paths": [
+                      {
+                        "tag": "use",
+                        "attributes": {
+                          "href": "#kc-plant-arrow-right"
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
         },
         {
           "type": "quick-facts",
@@ -11084,7 +20260,85 @@ window.KC_ENTITIES = {
             {
               "src": null
             }
-          ]
+          ],
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": [
+                  "kc-module",
+                  "kc-module--mobile",
+                  "kc-mobile-image-list-interesting-facts",
+                  "kc-mobile-image-list-interesting-facts--1-image"
+                ],
+                "id": "kc-plant-mobile-interesting-one",
+                "data-kc": "Mobile / Image List / Interesting Facts",
+                "data-kc-variant": "Image Amount=1-Image",
+                "aria-label": "Dahlia growing and flower facts"
+              }
+            },
+            "content": {
+              "blocks": [
+                {
+                  "kind": "text",
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-mobile-image-list-interesting-facts__text"
+                    ]
+                  },
+                  "lines": [
+                    {
+                      "kind": "field",
+                      "field": {
+                        "tag": "p",
+                        "attributes": {
+                          "class": [
+                            "kc-m-reg"
+                          ]
+                        },
+                        "text": "Dahlias grow best in a sunny, sheltered spot with fertile, well-drained soil. Smaller varieties can also thrive in containers."
+                      }
+                    },
+                    {
+                      "kind": "divider",
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-m-divider"
+                        ],
+                        "aria-hidden": "true"
+                      }
+                    },
+                    {
+                      "kind": "field",
+                      "field": {
+                        "tag": "p",
+                        "attributes": {
+                          "class": [
+                            "kc-m-bold"
+                          ]
+                        },
+                        "text": "Thousands of cultivars offer flowers in a wide variety of shapes and colors, from small blooms to flowers a foot across."
+                      }
+                    }
+                  ]
+                },
+                {
+                  "kind": "image",
+                  "image": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-img"
+                      ]
+                    },
+                    "image": null
+                  }
+                }
+              ]
+            }
+          }
         },
         {
           "type": "interesting-facts",
@@ -11106,7 +20360,187 @@ window.KC_ENTITIES = {
             {
               "src": null
             }
-          ]
+          ],
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": [
+                  "kc-module",
+                  "kc-module--mobile",
+                  "kc-mobile-image-list-interesting-facts",
+                  "kc-mobile-image-list-interesting-facts--3-image"
+                ],
+                "id": "kc-plant-mobile-interesting-three",
+                "data-kc": "Mobile / Image List / Interesting Facts",
+                "data-kc-variant": "Image Amount=3-Image",
+                "aria-label": "More Dahlia facts"
+              }
+            },
+            "content": {
+              "blocks": [
+                {
+                  "kind": "group",
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-mobile-image-list-interesting-facts__row"
+                    ]
+                  },
+                  "parts": [
+                    {
+                      "kind": "text",
+                      "tag": "div",
+                      "attributes": {
+                        "class": [
+                          "kc-mobile-image-list-interesting-facts__text"
+                        ]
+                      },
+                      "lines": [
+                        {
+                          "kind": "field",
+                          "field": {
+                            "tag": "p",
+                            "attributes": {
+                              "class": [
+                                "kc-m-reg"
+                              ]
+                            },
+                            "text": "Dahlias grow from underground tubers. In colder climates, gardeners can lift and store the tubers in a frost-free place over winter, then start them into growth in spring."
+                          }
+                        },
+                        {
+                          "kind": "divider",
+                          "tag": "span",
+                          "attributes": {
+                            "class": [
+                              "kc-m-divider"
+                            ],
+                            "aria-hidden": "true"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "kind": "image",
+                      "image": {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-img"
+                          ]
+                        },
+                        "image": null
+                      }
+                    }
+                  ]
+                },
+                {
+                  "kind": "group",
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-mobile-image-list-interesting-facts__row",
+                      "kc-mobile-image-list-interesting-facts__row--reverse"
+                    ]
+                  },
+                  "parts": [
+                    {
+                      "kind": "image",
+                      "image": {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-img"
+                          ]
+                        },
+                        "image": null
+                      }
+                    },
+                    {
+                      "kind": "text",
+                      "tag": "div",
+                      "attributes": {
+                        "class": [
+                          "kc-mobile-image-list-interesting-facts__text"
+                        ]
+                      },
+                      "lines": [
+                        {
+                          "kind": "field",
+                          "field": {
+                            "tag": "p",
+                            "attributes": {
+                              "class": [
+                                "kc-m-reg"
+                              ]
+                            },
+                            "text": "Dahlias bloom through summer and autumn, often until the first frost. Removing spent flowers encourages more blooms throughout the season."
+                          }
+                        },
+                        {
+                          "kind": "divider",
+                          "tag": "span",
+                          "attributes": {
+                            "class": [
+                              "kc-m-divider"
+                            ],
+                            "aria-hidden": "true"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "kind": "group",
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-mobile-image-list-interesting-facts__row"
+                    ]
+                  },
+                  "parts": [
+                    {
+                      "kind": "text",
+                      "tag": "div",
+                      "attributes": {
+                        "class": [
+                          "kc-mobile-image-list-interesting-facts__text"
+                        ]
+                      },
+                      "lines": [
+                        {
+                          "kind": "field",
+                          "field": {
+                            "tag": "p",
+                            "attributes": {
+                              "class": [
+                                "kc-m-bold"
+                              ]
+                            },
+                            "text": "Dahlia flowers range from open, daisy-like blooms to rounded, multi-petalled forms."
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "kind": "image",
+                      "image": {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-img"
+                          ]
+                        },
+                        "image": null
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          }
         },
         {
           "type": "attribution",
@@ -11621,7 +21055,273 @@ window.KC_ENTITIES = {
               "alt": "Portrait of Player Five"
             }
           ],
-          "slots": []
+          "slots": [],
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": [
+                  "kc-module",
+                  "kc-image-list-main",
+                  "kc-image-list-main--square",
+                  "kc-team-desktop__players"
+                ],
+                "id": "kc-team-desktop-players",
+                "data-kc": "Image List / Main",
+                "data-kc-variant": "Shape=Square",
+                "aria-labelledby": "kc-team-desktop-players-title"
+              }
+            },
+            "content": {
+              "heading": {
+                "tag": "div",
+                "attributes": {
+                  "class": [
+                    "kc-module-title",
+                    "kc-module-title--no-chevron"
+                  ]
+                },
+                "heading": {
+                  "tag": "h3",
+                  "attributes": {
+                    "id": "kc-team-desktop-players-title"
+                  },
+                  "text": "Players"
+                },
+                "trailing": null
+              },
+              "list": {
+                "tag": "div",
+                "attributes": {
+                  "class": [
+                    "kc-image-list-main__tiles"
+                  ]
+                }
+              },
+              "items": [
+                {
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-image-list-main__tile"
+                    ]
+                  },
+                  "image": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-img",
+                        "kc-img--cover"
+                      ],
+                      "style": "width:80px;height:80px;border-radius:6px"
+                    },
+                    "image": {
+                      "attributes": {
+                        "src": "../assets/images/kc/modules/team/team-desktop-main-01.png",
+                        "alt": "Portrait of Player One",
+                        "onerror": "this.style.display='none'"
+                      }
+                    }
+                  },
+                  "text": {
+                    "tag": "div",
+                    "attributes": {
+                      "class": [
+                        "kc-image-list-main__tile-text"
+                      ]
+                    }
+                  },
+                  "title": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-copy-bold",
+                        "kc-clamp-2"
+                      ]
+                    },
+                    "text": "Player One"
+                  },
+                  "subtitle": null
+                },
+                {
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-image-list-main__tile"
+                    ]
+                  },
+                  "image": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-img",
+                        "kc-img--cover"
+                      ],
+                      "style": "width:80px;height:80px;border-radius:6px"
+                    },
+                    "image": {
+                      "attributes": {
+                        "src": "../assets/images/kc/modules/team/team-desktop-main-02.png",
+                        "alt": "Portrait of Player Two",
+                        "onerror": "this.style.display='none'"
+                      }
+                    }
+                  },
+                  "text": {
+                    "tag": "div",
+                    "attributes": {
+                      "class": [
+                        "kc-image-list-main__tile-text"
+                      ]
+                    }
+                  },
+                  "title": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-copy-bold",
+                        "kc-clamp-2"
+                      ]
+                    },
+                    "text": "Player Two"
+                  },
+                  "subtitle": null
+                },
+                {
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-image-list-main__tile"
+                    ]
+                  },
+                  "image": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-img",
+                        "kc-img--cover"
+                      ],
+                      "style": "width:80px;height:80px;border-radius:6px"
+                    },
+                    "image": {
+                      "attributes": {
+                        "src": "../assets/images/kc/modules/team/team-desktop-main-03.png",
+                        "alt": "Portrait of Player Three",
+                        "onerror": "this.style.display='none'"
+                      }
+                    }
+                  },
+                  "text": {
+                    "tag": "div",
+                    "attributes": {
+                      "class": [
+                        "kc-image-list-main__tile-text"
+                      ]
+                    }
+                  },
+                  "title": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-copy-bold",
+                        "kc-clamp-2"
+                      ]
+                    },
+                    "text": "Player Three"
+                  },
+                  "subtitle": null
+                },
+                {
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-image-list-main__tile"
+                    ]
+                  },
+                  "image": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-img",
+                        "kc-img--cover"
+                      ],
+                      "style": "width:80px;height:80px;border-radius:6px"
+                    },
+                    "image": {
+                      "attributes": {
+                        "src": "../assets/images/kc/modules/team/team-desktop-main-04.png",
+                        "alt": "Portrait of Player Four",
+                        "onerror": "this.style.display='none'"
+                      }
+                    }
+                  },
+                  "text": {
+                    "tag": "div",
+                    "attributes": {
+                      "class": [
+                        "kc-image-list-main__tile-text"
+                      ]
+                    }
+                  },
+                  "title": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-copy-bold",
+                        "kc-clamp-2"
+                      ]
+                    },
+                    "text": "Player Four"
+                  },
+                  "subtitle": null
+                },
+                {
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-image-list-main__tile"
+                    ]
+                  },
+                  "image": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-img",
+                        "kc-img--cover"
+                      ],
+                      "style": "width:80px;height:80px;border-radius:6px"
+                    },
+                    "image": {
+                      "attributes": {
+                        "src": "../assets/images/kc/modules/team/team-desktop-main-05.png",
+                        "alt": "Portrait of Player Five",
+                        "onerror": "this.style.display='none'"
+                      }
+                    }
+                  },
+                  "text": {
+                    "tag": "div",
+                    "attributes": {
+                      "class": [
+                        "kc-image-list-main__tile-text"
+                      ]
+                    }
+                  },
+                  "title": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-copy-bold",
+                        "kc-clamp-2"
+                      ]
+                    },
+                    "text": "Player Five"
+                  },
+                  "subtitle": null
+                }
+              ]
+            }
+          }
         },
         {
           "type": "interesting-facts",
@@ -11646,7 +21346,210 @@ window.KC_ENTITIES = {
               "alt": "Minneapolis image related to the Lakers history"
             }
           ],
-          "slots": []
+          "slots": [],
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": [
+                  "kc-module",
+                  "kc-image-list-interesting-facts",
+                  "kc-image-list-interesting-facts--3-image",
+                  "kc-team-desktop__interesting-facts"
+                ],
+                "id": "kc-team-desktop-interesting",
+                "data-kc": "Image List / Interesting Facts",
+                "data-kc-variant": "Image Amount=3-Image",
+                "aria-label": "Interesting facts about the Los Angeles Lakers"
+              }
+            },
+            "content": {
+              "blocks": [
+                {
+                  "kind": "group",
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-image-list-interesting-facts__row"
+                    ]
+                  },
+                  "parts": [
+                    {
+                      "kind": "text",
+                      "tag": "div",
+                      "attributes": {
+                        "class": [
+                          "kc-image-list-interesting-facts__text"
+                        ]
+                      },
+                      "lines": [
+                        {
+                          "kind": "field",
+                          "field": {
+                            "tag": "p",
+                            "attributes": {
+                              "class": [
+                                "kc-copy"
+                              ]
+                            },
+                            "text": "The Lakers won 33 straight games during the 1971–72 season, the longest winning streak in NBA history. They went on to win the championship that season."
+                          }
+                        },
+                        {
+                          "kind": "divider",
+                          "tag": "span",
+                          "attributes": {
+                            "class": [
+                              "kc-divider"
+                            ],
+                            "aria-hidden": "true"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "kind": "image",
+                      "image": {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-img",
+                            "kc-img--cover"
+                          ],
+                          "style": "width:168px;height:131px;border-radius:6px"
+                        },
+                        "image": {
+                          "attributes": {
+                            "src": "../assets/images/kc/modules/team/team-desktop-facts-01.png",
+                            "alt": "Basketball game illustrating a Lakers record",
+                            "onerror": "this.style.display='none'"
+                          }
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "kind": "group",
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-image-list-interesting-facts__row"
+                    ]
+                  },
+                  "parts": [
+                    {
+                      "kind": "text",
+                      "tag": "div",
+                      "attributes": {
+                        "class": [
+                          "kc-image-list-interesting-facts__text"
+                        ]
+                      },
+                      "lines": [
+                        {
+                          "kind": "field",
+                          "field": {
+                            "tag": "p",
+                            "attributes": {
+                              "class": [
+                                "kc-copy"
+                              ]
+                            },
+                            "text": "The Lakers are the only team in the NBA to have every first overall selection be a Hall of Famer, with at least three selections."
+                          }
+                        },
+                        {
+                          "kind": "divider",
+                          "tag": "span",
+                          "attributes": {
+                            "class": [
+                              "kc-divider"
+                            ],
+                            "aria-hidden": "true"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "kind": "image",
+                      "image": {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-img",
+                            "kc-img--cover"
+                          ],
+                          "style": "width:163px;height:132px;border-radius:6px"
+                        },
+                        "image": {
+                          "attributes": {
+                            "src": "../assets/images/kc/modules/team/team-desktop-facts-02.png",
+                            "alt": "Player portrait illustrating a Lakers history fact",
+                            "onerror": "this.style.display='none'"
+                          }
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "kind": "group",
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-image-list-interesting-facts__row"
+                    ]
+                  },
+                  "parts": [
+                    {
+                      "kind": "image",
+                      "image": {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-img",
+                            "kc-img--cover"
+                          ],
+                          "style": "width:146px;height:111px;border-radius:6px"
+                        },
+                        "image": {
+                          "attributes": {
+                            "src": "../assets/images/kc/modules/team/team-desktop-facts-03.png",
+                            "alt": "Minneapolis image related to the Lakers history",
+                            "onerror": "this.style.display='none'"
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "kind": "text",
+                      "tag": "div",
+                      "attributes": {
+                        "class": [
+                          "kc-image-list-interesting-facts__text"
+                        ]
+                      },
+                      "lines": [
+                        {
+                          "kind": "field",
+                          "field": {
+                            "tag": "p",
+                            "attributes": {
+                              "class": [
+                                "kc-copy"
+                              ]
+                            },
+                            "text": "The team began in Minneapolis, the city of lakes, before moving to Los Angeles in 1960. The Lakers name traveled with them."
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          }
         },
         {
           "type": "awards",
@@ -12009,7 +21912,168 @@ window.KC_ENTITIES = {
               "width": "105px",
               "height": "120px"
             }
-          ]
+          ],
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": [
+                  "kc-module",
+                  "kc-module--mobile",
+                  "kc-mobile-image-list-carousel"
+                ],
+                "id": "kc-team-mobile-carousel",
+                "data-kc": "Mobile / Image List / Carousel",
+                "aria-label": "Team photos"
+              }
+            },
+            "content": {
+              "track": {
+                "tag": "div",
+                "attributes": {
+                  "class": [
+                    "kc-scroll-row"
+                  ],
+                  "tabindex": "0",
+                  "aria-label": "Team photos, use left and right arrow keys to scroll"
+                }
+              },
+              "items": [
+                {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-img",
+                      "kc-img--cover"
+                    ],
+                    "style": "width:132px;height:120px;border-radius:6px"
+                  },
+                  "image": {
+                    "attributes": {
+                      "src": "../assets/images/kc/modules/team/team-mobile-carousel-01.png",
+                      "alt": "Los Angeles Lakers team photo 1",
+                      "onerror": "this.style.display='none'"
+                    }
+                  }
+                },
+                {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-img",
+                      "kc-img--cover"
+                    ],
+                    "style": "width:119px;height:120px;border-radius:6px"
+                  },
+                  "image": {
+                    "attributes": {
+                      "src": "../assets/images/kc/modules/team/team-mobile-carousel-02.png",
+                      "alt": "Los Angeles Lakers team photo 2",
+                      "onerror": "this.style.display='none'"
+                    }
+                  }
+                },
+                {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-img",
+                      "kc-img--crop-edge"
+                    ],
+                    "style": "width:106px;height:120px;border-radius:6px"
+                  },
+                  "image": {
+                    "attributes": {
+                      "src": "../assets/images/kc/modules/team/team-mobile-carousel-03.png",
+                      "alt": "Los Angeles Lakers team photo 3",
+                      "onerror": "this.style.display='none'"
+                    }
+                  }
+                },
+                {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-img"
+                    ],
+                    "style": "width:159px;height:120px;border-radius:6px"
+                  },
+                  "image": null
+                },
+                {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-img"
+                    ],
+                    "style": "width:105px;height:120px;border-radius:6px"
+                  },
+                  "image": null
+                }
+              ],
+              "controls": [
+                {
+                  "tag": "button",
+                  "attributes": {
+                    "class": [
+                      "kc-btn-flipper",
+                      "kc-team-mobile-carousel__previous"
+                    ],
+                    "type": "button",
+                    "aria-label": "Previous carousel images",
+                    "disabled": ""
+                  },
+                  "icon": {
+                    "tag": "svg",
+                    "attributes": {
+                      "width": "16",
+                      "height": "16",
+                      "viewBox": "0 0 20 20",
+                      "aria-hidden": "true",
+                      "focusable": "false"
+                    },
+                    "paths": [
+                      {
+                        "tag": "use",
+                        "attributes": {
+                          "href": "#kc-team-icon-arrow-left"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "tag": "button",
+                  "attributes": {
+                    "class": [
+                      "kc-btn-flipper",
+                      "kc-team-mobile-carousel__next"
+                    ],
+                    "type": "button",
+                    "aria-label": "Next carousel images"
+                  },
+                  "icon": {
+                    "tag": "svg",
+                    "attributes": {
+                      "width": "16",
+                      "height": "16",
+                      "viewBox": "0 0 20 20",
+                      "aria-hidden": "true",
+                      "focusable": "false"
+                    },
+                    "paths": [
+                      {
+                        "tag": "use",
+                        "attributes": {
+                          "href": "#kc-team-icon-arrow-right"
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
         },
         {
           "type": "quick-facts",
@@ -12236,7 +22300,211 @@ window.KC_ENTITIES = {
               "alt": "Minneapolis image related to the Lakers history"
             }
           ],
-          "slots": []
+          "slots": [],
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": [
+                  "kc-module",
+                  "kc-module--mobile",
+                  "kc-mobile-image-list-interesting-facts",
+                  "kc-mobile-image-list-interesting-facts--3-image"
+                ],
+                "id": "kc-team-mobile-interesting",
+                "data-kc": "Mobile / Image List / Interesting Facts",
+                "data-kc-variant": "Image Amount=3-Image",
+                "aria-label": "Interesting facts about the Los Angeles Lakers"
+              }
+            },
+            "content": {
+              "blocks": [
+                {
+                  "kind": "group",
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-mobile-image-list-interesting-facts__row"
+                    ]
+                  },
+                  "parts": [
+                    {
+                      "kind": "image",
+                      "image": {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-img",
+                            "kc-img--cover"
+                          ],
+                          "style": "width:164px;height:105px;border-radius:6px"
+                        },
+                        "image": {
+                          "attributes": {
+                            "src": "../assets/images/kc/modules/team/team-mobile-facts-01.png",
+                            "alt": "Basketball game illustrating a Lakers record",
+                            "onerror": "this.style.display='none'"
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "kind": "text",
+                      "tag": "div",
+                      "attributes": {
+                        "class": [
+                          "kc-mobile-image-list-interesting-facts__text"
+                        ]
+                      },
+                      "lines": [
+                        {
+                          "kind": "field",
+                          "field": {
+                            "tag": "p",
+                            "attributes": {
+                              "class": [
+                                "kc-m-reg"
+                              ]
+                            },
+                            "text": "The Lakers won 33 straight games in 1971–72, an NBA record, and won the championship that season."
+                          }
+                        },
+                        {
+                          "kind": "divider",
+                          "tag": "span",
+                          "attributes": {
+                            "class": [
+                              "kc-m-divider"
+                            ],
+                            "aria-hidden": "true"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "kind": "group",
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-mobile-image-list-interesting-facts__row"
+                    ]
+                  },
+                  "parts": [
+                    {
+                      "kind": "image",
+                      "image": {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-img",
+                            "kc-img--cover"
+                          ],
+                          "style": "width:128px;height:106px;border-radius:6px"
+                        },
+                        "image": {
+                          "attributes": {
+                            "src": "../assets/images/kc/modules/team/team-mobile-facts-02.png",
+                            "alt": "Player portrait illustrating a Lakers history fact",
+                            "onerror": "this.style.display='none'"
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "kind": "text",
+                      "tag": "div",
+                      "attributes": {
+                        "class": [
+                          "kc-mobile-image-list-interesting-facts__text"
+                        ]
+                      },
+                      "lines": [
+                        {
+                          "kind": "field",
+                          "field": {
+                            "tag": "p",
+                            "attributes": {
+                              "class": [
+                                "kc-m-reg"
+                              ]
+                            },
+                            "text": "The Lakers are the only team in the NBA to have every first overall selection be a Hall of Famer, with at least three selections."
+                          }
+                        },
+                        {
+                          "kind": "divider",
+                          "tag": "span",
+                          "attributes": {
+                            "class": [
+                              "kc-m-divider"
+                            ],
+                            "aria-hidden": "true"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "kind": "group",
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-mobile-image-list-interesting-facts__row",
+                      "kc-mobile-image-list-interesting-facts__row--reverse"
+                    ]
+                  },
+                  "parts": [
+                    {
+                      "kind": "image",
+                      "image": {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-img",
+                            "kc-img--cover"
+                          ],
+                          "style": "width:104px;height:93px;border-radius:6px"
+                        },
+                        "image": {
+                          "attributes": {
+                            "src": "../assets/images/kc/modules/team/team-mobile-facts-03.png",
+                            "alt": "Minneapolis image related to the Lakers history",
+                            "onerror": "this.style.display='none'"
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "kind": "text",
+                      "tag": "div",
+                      "attributes": {
+                        "class": [
+                          "kc-mobile-image-list-interesting-facts__text"
+                        ]
+                      },
+                      "lines": [
+                        {
+                          "kind": "field",
+                          "field": {
+                            "tag": "p",
+                            "attributes": {
+                              "class": [
+                                "kc-m-reg"
+                              ]
+                            },
+                            "text": "The team began in Minneapolis and kept the Lakers name after moving to Los Angeles in 1960."
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          }
         },
         {
           "type": "main",
@@ -12267,7 +22535,239 @@ window.KC_ENTITIES = {
             {
               "src": null
             }
-          ]
+          ],
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": [
+                  "kc-module",
+                  "kc-module--mobile",
+                  "kc-mobile-image-list-main",
+                  "kc-mobile-image-list-main--square"
+                ],
+                "id": "kc-team-mobile-players",
+                "data-kc": "Mobile / Image List / Main",
+                "data-kc-variant": "Shape=Square",
+                "aria-labelledby": "kc-team-mobile-players-title"
+              }
+            },
+            "content": {
+              "heading": {
+                "tag": "div",
+                "attributes": {
+                  "class": [
+                    "kc-module-title"
+                  ]
+                },
+                "heading": {
+                  "tag": "h3",
+                  "attributes": {
+                    "id": "kc-team-mobile-players-title"
+                  },
+                  "text": "Players"
+                },
+                "trailing": null
+              },
+              "list": {
+                "tag": "div",
+                "attributes": {
+                  "class": [
+                    "kc-scroll-row"
+                  ],
+                  "tabindex": "0",
+                  "aria-label": "Sample player cards, use left and right arrow keys to scroll"
+                }
+              },
+              "items": [
+                {
+                  "tag": "article",
+                  "attributes": {
+                    "class": [
+                      "kc-card",
+                      "kc-mobile-image-title-sub-title"
+                    ]
+                  },
+                  "image": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-img"
+                      ]
+                    },
+                    "image": null
+                  },
+                  "text": {
+                    "tag": "div",
+                    "attributes": {
+                      "class": [
+                        "kc-mobile-image-title-sub-title__text"
+                      ]
+                    }
+                  },
+                  "title": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-m-bold",
+                        "kc-m-nols"
+                      ]
+                    },
+                    "text": "Player One"
+                  },
+                  "subtitle": null
+                },
+                {
+                  "tag": "article",
+                  "attributes": {
+                    "class": [
+                      "kc-card",
+                      "kc-mobile-image-title-sub-title"
+                    ]
+                  },
+                  "image": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-img"
+                      ]
+                    },
+                    "image": null
+                  },
+                  "text": {
+                    "tag": "div",
+                    "attributes": {
+                      "class": [
+                        "kc-mobile-image-title-sub-title__text"
+                      ]
+                    }
+                  },
+                  "title": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-m-bold",
+                        "kc-m-nols"
+                      ]
+                    },
+                    "text": "Player Two"
+                  },
+                  "subtitle": null
+                },
+                {
+                  "tag": "article",
+                  "attributes": {
+                    "class": [
+                      "kc-card",
+                      "kc-mobile-image-title-sub-title"
+                    ]
+                  },
+                  "image": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-img"
+                      ]
+                    },
+                    "image": null
+                  },
+                  "text": {
+                    "tag": "div",
+                    "attributes": {
+                      "class": [
+                        "kc-mobile-image-title-sub-title__text"
+                      ]
+                    }
+                  },
+                  "title": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-m-bold",
+                        "kc-m-nols"
+                      ]
+                    },
+                    "text": "Player Three"
+                  },
+                  "subtitle": null
+                },
+                {
+                  "tag": "article",
+                  "attributes": {
+                    "class": [
+                      "kc-card",
+                      "kc-mobile-image-title-sub-title"
+                    ]
+                  },
+                  "image": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-img"
+                      ]
+                    },
+                    "image": null
+                  },
+                  "text": {
+                    "tag": "div",
+                    "attributes": {
+                      "class": [
+                        "kc-mobile-image-title-sub-title__text"
+                      ]
+                    }
+                  },
+                  "title": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-m-bold",
+                        "kc-m-nols"
+                      ]
+                    },
+                    "text": "Player Four"
+                  },
+                  "subtitle": null
+                },
+                {
+                  "tag": "article",
+                  "attributes": {
+                    "class": [
+                      "kc-card",
+                      "kc-mobile-image-title-sub-title"
+                    ]
+                  },
+                  "image": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-img"
+                      ]
+                    },
+                    "image": null
+                  },
+                  "text": {
+                    "tag": "div",
+                    "attributes": {
+                      "class": [
+                        "kc-mobile-image-title-sub-title__text"
+                      ]
+                    }
+                  },
+                  "title": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-m-bold",
+                        "kc-m-nols"
+                      ]
+                    },
+                    "text": "Player Five"
+                  },
+                  "subtitle": null
+                }
+              ]
+            }
+          }
         },
         {
           "type": "awards",
@@ -12892,7 +23392,171 @@ window.KC_ENTITIES = {
               "alt": "Image illustrating an interesting fact about Microsoft, 2"
             }
           ],
-          "slots": []
+          "slots": [],
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": [
+                  "kc-module",
+                  "kc-image-list-interesting-facts",
+                  "kc-image-list-interesting-facts--2-image"
+                ],
+                "id": "kc-company-mod-4",
+                "data-kc": "Image List / Interesting Facts",
+                "data-kc-variant": "Image Amount=2-Image",
+                "aria-label": "Interesting facts about Microsoft"
+              }
+            },
+            "content": {
+              "blocks": [
+                {
+                  "kind": "group",
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-image-list-interesting-facts__row",
+                      "kc-company-fact-row",
+                      "kc-company-fact-row--first"
+                    ]
+                  },
+                  "parts": [
+                    {
+                      "kind": "paragraph",
+                      "field": {
+                        "tag": "p",
+                        "attributes": {
+                          "class": [
+                            "kc-copy"
+                          ]
+                        },
+                        "text": "The company title of Microsoft was initially having a hyphen. The main goal is to create software for microprocessors. Which leads to coining it as Micro-Soft."
+                      }
+                    },
+                    {
+                      "kind": "image",
+                      "image": {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-img",
+                            "kc-img--cover"
+                          ]
+                        },
+                        "image": {
+                          "attributes": {
+                            "src": "../assets/images/kc/modules/company/company-desktop-facts-01.png",
+                            "alt": "Image illustrating an interesting fact about Microsoft, 1",
+                            "onerror": "this.style.display='none'"
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "kind": "paragraph",
+                      "field": {
+                        "tag": "p",
+                        "attributes": {
+                          "class": [
+                            "kc-copy"
+                          ]
+                        },
+                        "text": "Microsoft entered the OS business in 1980 with its own version of Unix, called Xenix. However, it was MS-DOS that solidified the company’s dominance."
+                      }
+                    }
+                  ]
+                },
+                {
+                  "kind": "group",
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-image-list-interesting-facts__row",
+                      "kc-company-fact-row",
+                      "kc-company-fact-row--second"
+                    ]
+                  },
+                  "parts": [
+                    {
+                      "kind": "group",
+                      "tag": "div",
+                      "attributes": {
+                        "class": [
+                          "kc-company-fact-col"
+                        ]
+                      },
+                      "parts": [
+                        {
+                          "kind": "paragraph",
+                          "field": {
+                            "tag": "p",
+                            "attributes": {
+                              "class": [
+                                "kc-copy"
+                              ]
+                            },
+                            "text": "November 1985 saw the first release of Microsoft Windows; Windows 1.0, a 16-bit system."
+                          }
+                        },
+                        {
+                          "kind": "group",
+                          "tag": "div",
+                          "attributes": {
+                            "class": [
+                              "kc-company-fact-col__lower"
+                            ]
+                          },
+                          "parts": [
+                            {
+                              "kind": "divider",
+                              "tag": "span",
+                              "attributes": {
+                                "class": [
+                                  "kc-divider"
+                                ],
+                                "aria-hidden": "true"
+                              }
+                            },
+                            {
+                              "kind": "paragraph",
+                              "field": {
+                                "tag": "p",
+                                "attributes": {
+                                  "class": [
+                                    "kc-copy"
+                                  ]
+                                },
+                                "text": "Aside from the tablet PC, Microsoft also created the first smartwatch, way back in 1994. The watch was coproduced with Timex and was called Timex DataLink 150."
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "kind": "image",
+                      "image": {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-img",
+                            "kc-img--cover"
+                          ]
+                        },
+                        "image": {
+                          "attributes": {
+                            "src": "../assets/images/kc/modules/company/company-desktop-facts-02.png",
+                            "alt": "Image illustrating an interesting fact about Microsoft, 2",
+                            "onerror": "this.style.display='none'"
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          }
         },
         {
           "type": "main",
@@ -12925,7 +23589,327 @@ window.KC_ENTITIES = {
               "alt": "Image 5 in the Microsoft image list"
             }
           ],
-          "slots": []
+          "slots": [],
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": [
+                  "kc-module",
+                  "kc-image-list-main"
+                ],
+                "id": "kc-company-mod-5",
+                "data-kc": "Image List / Main",
+                "aria-labelledby": "kc-company-main-title"
+              }
+            },
+            "content": {
+              "heading": {
+                "tag": "div",
+                "attributes": {
+                  "class": [
+                    "kc-module-title"
+                  ]
+                },
+                "heading": {
+                  "tag": "h3",
+                  "attributes": {
+                    "id": "kc-company-main-title"
+                  },
+                  "text": "Module title"
+                },
+                "trailing": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-title-chevron"
+                    ],
+                    "aria-hidden": "true"
+                  },
+                  "wrapper": null,
+                  "icon": {
+                    "tag": "svg",
+                    "attributes": {
+                      "width": "16",
+                      "height": "16",
+                      "viewBox": "0 0 16 16",
+                      "fill": "none",
+                      "xmlns": "http://www.w3.org/2000/svg"
+                    },
+                    "paths": [
+                      {
+                        "tag": "path",
+                        "attributes": {
+                          "d": "M5.64645 3.14645C5.45118 3.34171 5.45118 3.65829 5.64645 3.85355L9.79289 8L5.64645 12.1464C5.45118 12.3417 5.45118 12.6583 5.64645 12.8536C5.84171 13.0488 6.15829 13.0488 6.35355 12.8536L10.8536 8.35355C11.0488 8.15829 11.0488 7.84171 10.8536 7.64645L6.35355 3.14645C6.15829 2.95118 5.84171 2.95118 5.64645 3.14645Z",
+                          "fill": "currentColor"
+                        }
+                      }
+                    ]
+                  }
+                }
+              },
+              "list": {
+                "tag": "div",
+                "attributes": {
+                  "class": [
+                    "kc-image-list-main__tiles"
+                  ]
+                }
+              },
+              "items": [
+                {
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-image-list-main__tile"
+                    ]
+                  },
+                  "image": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-img",
+                        "kc-img--cover"
+                      ]
+                    },
+                    "image": {
+                      "attributes": {
+                        "src": "../assets/images/kc/modules/company/company-desktop-main-01.png",
+                        "alt": "Image 1 in the Microsoft image list",
+                        "onerror": "this.style.display='none'"
+                      }
+                    }
+                  },
+                  "text": {
+                    "tag": "div",
+                    "attributes": {
+                      "class": [
+                        "kc-image-list-main__tile-text"
+                      ]
+                    }
+                  },
+                  "title": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-copy-bold"
+                      ]
+                    },
+                    "text": "Title"
+                  },
+                  "subtitle": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-copy-small"
+                      ]
+                    },
+                    "text": "Sub-title"
+                  }
+                },
+                {
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-image-list-main__tile"
+                    ]
+                  },
+                  "image": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-img",
+                        "kc-img--cover"
+                      ]
+                    },
+                    "image": {
+                      "attributes": {
+                        "src": "../assets/images/kc/modules/company/company-desktop-main-02.png",
+                        "alt": "Image 2 in the Microsoft image list",
+                        "onerror": "this.style.display='none'"
+                      }
+                    }
+                  },
+                  "text": {
+                    "tag": "div",
+                    "attributes": {
+                      "class": [
+                        "kc-image-list-main__tile-text"
+                      ]
+                    }
+                  },
+                  "title": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-copy-bold"
+                      ]
+                    },
+                    "text": "Title"
+                  },
+                  "subtitle": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-copy-small"
+                      ]
+                    },
+                    "text": "Sub-title"
+                  }
+                },
+                {
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-image-list-main__tile"
+                    ]
+                  },
+                  "image": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-img",
+                        "kc-img--cover"
+                      ]
+                    },
+                    "image": {
+                      "attributes": {
+                        "src": "../assets/images/kc/modules/company/company-desktop-main-03.png",
+                        "alt": "Image 3 in the Microsoft image list",
+                        "onerror": "this.style.display='none'"
+                      }
+                    }
+                  },
+                  "text": {
+                    "tag": "div",
+                    "attributes": {
+                      "class": [
+                        "kc-image-list-main__tile-text"
+                      ]
+                    }
+                  },
+                  "title": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-copy-bold"
+                      ]
+                    },
+                    "text": "Title"
+                  },
+                  "subtitle": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-copy-small"
+                      ]
+                    },
+                    "text": "Sub-title"
+                  }
+                },
+                {
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-image-list-main__tile"
+                    ]
+                  },
+                  "image": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-img",
+                        "kc-img--cover"
+                      ]
+                    },
+                    "image": {
+                      "attributes": {
+                        "src": "../assets/images/kc/modules/company/company-desktop-main-04.png",
+                        "alt": "Image 4 in the Microsoft image list",
+                        "onerror": "this.style.display='none'"
+                      }
+                    }
+                  },
+                  "text": {
+                    "tag": "div",
+                    "attributes": {
+                      "class": [
+                        "kc-image-list-main__tile-text"
+                      ]
+                    }
+                  },
+                  "title": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-copy-bold"
+                      ]
+                    },
+                    "text": "Title"
+                  },
+                  "subtitle": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-copy-small"
+                      ]
+                    },
+                    "text": "Sub-title"
+                  }
+                },
+                {
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-image-list-main__tile"
+                    ]
+                  },
+                  "image": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-img",
+                        "kc-img--cover"
+                      ]
+                    },
+                    "image": {
+                      "attributes": {
+                        "src": "../assets/images/kc/modules/company/company-desktop-main-05.png",
+                        "alt": "Image 5 in the Microsoft image list",
+                        "onerror": "this.style.display='none'"
+                      }
+                    }
+                  },
+                  "text": {
+                    "tag": "div",
+                    "attributes": {
+                      "class": [
+                        "kc-image-list-main__tile-text"
+                      ]
+                    }
+                  },
+                  "title": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-copy-bold"
+                      ]
+                    },
+                    "text": "Title"
+                  },
+                  "subtitle": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-copy-small"
+                      ]
+                    },
+                    "text": "Sub-title"
+                  }
+                }
+              ]
+            }
+          }
         },
         {
           "type": "timeline",
@@ -13541,7 +24525,189 @@ window.KC_ENTITIES = {
               "alt": "Image illustrating an interesting fact about Microsoft, 2"
             }
           ],
-          "slots": []
+          "slots": [],
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": [
+                  "kc-module",
+                  "kc-module--mobile",
+                  "kc-mobile-image-list-interesting-facts",
+                  "kc-mobile-image-list-interesting-facts--2-image"
+                ],
+                "id": "kc-company-mobile-interesting-facts",
+                "data-kc": "Mobile / Image List / Interesting Facts",
+                "data-kc-variant": "Image Amount=2-Image",
+                "aria-label": "Interesting facts about Microsoft"
+              }
+            },
+            "content": {
+              "blocks": [
+                {
+                  "kind": "group",
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-mobile-image-list-interesting-facts__row"
+                    ]
+                  },
+                  "parts": [
+                    {
+                      "kind": "text",
+                      "tag": "div",
+                      "attributes": {
+                        "class": [
+                          "kc-mobile-image-list-interesting-facts__text"
+                        ]
+                      },
+                      "lines": [
+                        {
+                          "kind": "field",
+                          "field": {
+                            "tag": "p",
+                            "attributes": {
+                              "class": [
+                                "kc-m-reg"
+                              ]
+                            },
+                            "text": "The company title of Microsoft was initially having a hyphen. The main goal is to create software for microprocessors. Which leads to coining it as Micro-Soft."
+                          }
+                        },
+                        {
+                          "kind": "divider",
+                          "tag": "span",
+                          "attributes": {
+                            "class": [
+                              "kc-m-divider"
+                            ],
+                            "aria-hidden": "true"
+                          }
+                        },
+                        {
+                          "kind": "field",
+                          "field": {
+                            "tag": "p",
+                            "attributes": {
+                              "class": [
+                                "kc-m-reg"
+                              ]
+                            },
+                            "text": "Microsoft entered the OS business in 1980 with its own version of Unix, called Xenix. However, it was MS-DOS that solidified the company’s dominance."
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "kind": "image",
+                      "image": {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-img",
+                            "kc-img--cover"
+                          ]
+                        },
+                        "image": {
+                          "attributes": {
+                            "src": "../assets/images/kc/modules/company/company-desktop-facts-01.png",
+                            "alt": "Image illustrating an interesting fact about Microsoft, 1",
+                            "onerror": "this.style.display='none'"
+                          }
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "kind": "group",
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-mobile-image-list-interesting-facts__row",
+                      "kc-mobile-image-list-interesting-facts__row--reverse"
+                    ]
+                  },
+                  "parts": [
+                    {
+                      "kind": "image",
+                      "image": {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-img",
+                            "kc-img--cover"
+                          ]
+                        },
+                        "image": {
+                          "attributes": {
+                            "src": "../assets/images/kc/modules/company/company-desktop-facts-02.png",
+                            "alt": "Image illustrating an interesting fact about Microsoft, 2",
+                            "onerror": "this.style.display='none'"
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "kind": "text",
+                      "tag": "div",
+                      "attributes": {
+                        "class": [
+                          "kc-mobile-image-list-interesting-facts__text"
+                        ]
+                      },
+                      "lines": [
+                        {
+                          "kind": "divider",
+                          "tag": "span",
+                          "attributes": {
+                            "class": [
+                              "kc-m-divider"
+                            ],
+                            "aria-hidden": "true"
+                          }
+                        },
+                        {
+                          "kind": "field",
+                          "field": {
+                            "tag": "p",
+                            "attributes": {
+                              "class": [
+                                "kc-m-reg"
+                              ]
+                            },
+                            "text": "November 1985 saw the first release of Microsoft Windows; Windows 1.0, a 16-bit system."
+                          }
+                        },
+                        {
+                          "kind": "divider",
+                          "tag": "span",
+                          "attributes": {
+                            "class": [
+                              "kc-m-divider"
+                            ],
+                            "aria-hidden": "true"
+                          }
+                        },
+                        {
+                          "kind": "field",
+                          "field": {
+                            "tag": "p",
+                            "attributes": {
+                              "class": [
+                                "kc-m-reg"
+                              ]
+                            },
+                            "text": "Aside from the tablet PC, Microsoft also created the first smartwatch, way back in 1994. The watch was coproduced with Timex and was called Timex DataLink 150."
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          }
         },
         {
           "type": "timeline",
@@ -21410,6 +32576,5524 @@ window.KC_ENTITIES = {
                     "value": "."
                   }
                 ]
+              }
+            ]
+          }
+        }
+      },
+      "desktop-main-circle": {
+        "id": "desktop-main-circle",
+        "type": "main",
+        "platform": "desktop",
+        "render": {
+          "root": {
+            "tag": "section",
+            "attributes": {
+              "class": [
+                "kc-module",
+                "kc-image-list-main",
+                "kc-image-list-main--circle"
+              ],
+              "data-kc": "Image List / Main"
+            }
+          },
+          "content": {
+            "heading": {
+              "tag": "div",
+              "attributes": {
+                "class": [
+                  "kc-module-title"
+                ]
+              },
+              "heading": {
+                "tag": "h3",
+                "attributes": {},
+                "text": "Stock portraits"
+              },
+              "trailing": {
+                "tag": "a",
+                "attributes": {
+                  "class": [
+                    "kc-link"
+                  ],
+                  "href": "#",
+                  "aria-label": "See all Stock portraits"
+                },
+                "wrapper": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-title-chevron"
+                    ]
+                  }
+                },
+                "icon": {
+                  "tag": "img",
+                  "attributes": {
+                    "src": "../assets/icons/ic_fluent_chevron_right_16_regular.svg",
+                    "alt": "",
+                    "aria-hidden": "true"
+                  }
+                }
+              }
+            },
+            "list": {
+              "tag": "div",
+              "attributes": {
+                "class": [
+                  "kc-image-list-main__tiles"
+                ]
+              }
+            },
+            "items": [
+              {
+                "tag": "div",
+                "attributes": {
+                  "class": [
+                    "kc-image-list-main__tile"
+                  ]
+                },
+                "image": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-img"
+                    ],
+                    "style": "width:80px;height:80px;border-radius:100px"
+                  },
+                  "image": {
+                    "attributes": {
+                      "src": "../assets/images/kc/stock/portrait-a.jpg",
+                      "alt": "Illustrative stock portrait of a person in a gray sweater",
+                      "data-fluent-load-observed": "true",
+                      "class": [
+                        "is-loaded"
+                      ]
+                    }
+                  }
+                },
+                "text": {
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-image-list-main__tile-text"
+                    ]
+                  }
+                },
+                "title": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-copy-bold"
+                    ]
+                  },
+                  "text": "Portrait in gray sweater"
+                },
+                "subtitle": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-copy-small"
+                    ]
+                  },
+                  "text": "Stock portrait"
+                }
+              },
+              {
+                "tag": "div",
+                "attributes": {
+                  "class": [
+                    "kc-image-list-main__tile"
+                  ]
+                },
+                "image": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-img"
+                    ],
+                    "style": "width:80px;height:80px;border-radius:100px"
+                  },
+                  "image": {
+                    "attributes": {
+                      "src": "../assets/images/kc/stock/portrait-b.jpg",
+                      "alt": "Illustrative stock portrait of a person against a blue background",
+                      "data-fluent-load-observed": "true",
+                      "class": [
+                        "is-loaded"
+                      ]
+                    }
+                  }
+                },
+                "text": {
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-image-list-main__tile-text"
+                    ]
+                  }
+                },
+                "title": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-copy-bold"
+                    ]
+                  },
+                  "text": "Portrait against blue background"
+                },
+                "subtitle": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-copy-small"
+                    ]
+                  },
+                  "text": "Stock portrait"
+                }
+              },
+              {
+                "tag": "div",
+                "attributes": {
+                  "class": [
+                    "kc-image-list-main__tile"
+                  ]
+                },
+                "image": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-img"
+                    ],
+                    "style": "width:80px;height:80px;border-radius:100px"
+                  },
+                  "image": {
+                    "attributes": {
+                      "src": "../assets/images/kc/stock/portrait-c.jpg",
+                      "alt": "Illustrative stock portrait of a person in a dark sweater",
+                      "data-fluent-load-observed": "true",
+                      "class": [
+                        "is-loaded"
+                      ]
+                    }
+                  }
+                },
+                "text": {
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-image-list-main__tile-text"
+                    ]
+                  }
+                },
+                "title": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-copy-bold"
+                    ]
+                  },
+                  "text": "Portrait in dark sweater"
+                },
+                "subtitle": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-copy-small"
+                    ]
+                  },
+                  "text": "Stock portrait"
+                }
+              },
+              {
+                "tag": "div",
+                "attributes": {
+                  "class": [
+                    "kc-image-list-main__tile"
+                  ]
+                },
+                "image": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-img"
+                    ],
+                    "style": "width:80px;height:80px;border-radius:100px"
+                  },
+                  "image": {
+                    "attributes": {
+                      "src": "../assets/images/kc/stock/portrait-d.jpg",
+                      "alt": "Illustrative stock portrait of a person in a white shirt",
+                      "data-fluent-load-observed": "true",
+                      "class": [
+                        "is-loaded"
+                      ]
+                    }
+                  }
+                },
+                "text": {
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-image-list-main__tile-text"
+                    ]
+                  }
+                },
+                "title": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-copy-bold"
+                    ]
+                  },
+                  "text": "Portrait in white shirt"
+                },
+                "subtitle": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-copy-small"
+                    ]
+                  },
+                  "text": "Stock portrait"
+                }
+              },
+              {
+                "tag": "div",
+                "attributes": {
+                  "class": [
+                    "kc-image-list-main__tile"
+                  ]
+                },
+                "image": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-img"
+                    ],
+                    "style": "width:80px;height:80px;border-radius:100px"
+                  },
+                  "image": {
+                    "attributes": {
+                      "src": "../assets/images/kc/stock/portrait-e.jpg",
+                      "alt": "Illustrative stock portrait of a person against a red wall",
+                      "data-fluent-load-observed": "true",
+                      "class": [
+                        "is-loaded"
+                      ]
+                    }
+                  }
+                },
+                "text": {
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-image-list-main__tile-text"
+                    ]
+                  }
+                },
+                "title": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-copy-bold"
+                    ]
+                  },
+                  "text": "Portrait against red wall"
+                },
+                "subtitle": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-copy-small"
+                    ]
+                  },
+                  "text": "Stock portrait"
+                }
+              }
+            ]
+          }
+        }
+      },
+      "desktop-main-square": {
+        "id": "desktop-main-square",
+        "type": "main",
+        "platform": "desktop",
+        "render": {
+          "root": {
+            "tag": "section",
+            "attributes": {
+              "class": [
+                "kc-module",
+                "kc-image-list-main",
+                "kc-image-list-main--square"
+              ],
+              "data-kc": "Image List / Main"
+            }
+          },
+          "content": {
+            "heading": {
+              "tag": "div",
+              "attributes": {
+                "class": [
+                  "kc-module-title"
+                ]
+              },
+              "heading": {
+                "tag": "h3",
+                "attributes": {},
+                "text": "Stock portraits"
+              },
+              "trailing": {
+                "tag": "a",
+                "attributes": {
+                  "class": [
+                    "kc-link"
+                  ],
+                  "href": "#",
+                  "aria-label": "See all Stock portraits"
+                },
+                "wrapper": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-title-chevron"
+                    ]
+                  }
+                },
+                "icon": {
+                  "tag": "img",
+                  "attributes": {
+                    "src": "../assets/icons/ic_fluent_chevron_right_16_regular.svg",
+                    "alt": "",
+                    "aria-hidden": "true"
+                  }
+                }
+              }
+            },
+            "list": {
+              "tag": "div",
+              "attributes": {
+                "class": [
+                  "kc-image-list-main__tiles"
+                ]
+              }
+            },
+            "items": [
+              {
+                "tag": "div",
+                "attributes": {
+                  "class": [
+                    "kc-image-list-main__tile"
+                  ]
+                },
+                "image": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-img"
+                    ],
+                    "style": "width:80px;height:80px;border-radius:6px"
+                  },
+                  "image": {
+                    "attributes": {
+                      "src": "../assets/images/kc/stock/portrait-a.jpg",
+                      "alt": "Illustrative stock portrait of a person in a gray sweater",
+                      "data-fluent-load-observed": "true",
+                      "class": [
+                        "is-loaded"
+                      ]
+                    }
+                  }
+                },
+                "text": {
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-image-list-main__tile-text"
+                    ]
+                  }
+                },
+                "title": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-copy-bold"
+                    ]
+                  },
+                  "text": "Portrait in gray sweater"
+                },
+                "subtitle": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-copy-small"
+                    ]
+                  },
+                  "text": "Stock portrait"
+                }
+              },
+              {
+                "tag": "div",
+                "attributes": {
+                  "class": [
+                    "kc-image-list-main__tile"
+                  ]
+                },
+                "image": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-img"
+                    ],
+                    "style": "width:80px;height:80px;border-radius:6px"
+                  },
+                  "image": {
+                    "attributes": {
+                      "src": "../assets/images/kc/stock/portrait-b.jpg",
+                      "alt": "Illustrative stock portrait of a person against a blue background",
+                      "data-fluent-load-observed": "true",
+                      "class": [
+                        "is-loaded"
+                      ]
+                    }
+                  }
+                },
+                "text": {
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-image-list-main__tile-text"
+                    ]
+                  }
+                },
+                "title": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-copy-bold"
+                    ]
+                  },
+                  "text": "Portrait against blue background"
+                },
+                "subtitle": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-copy-small"
+                    ]
+                  },
+                  "text": "Stock portrait"
+                }
+              },
+              {
+                "tag": "div",
+                "attributes": {
+                  "class": [
+                    "kc-image-list-main__tile"
+                  ]
+                },
+                "image": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-img"
+                    ],
+                    "style": "width:80px;height:80px;border-radius:6px"
+                  },
+                  "image": {
+                    "attributes": {
+                      "src": "../assets/images/kc/stock/portrait-c.jpg",
+                      "alt": "Illustrative stock portrait of a person in a dark sweater",
+                      "data-fluent-load-observed": "true",
+                      "class": [
+                        "is-loaded"
+                      ]
+                    }
+                  }
+                },
+                "text": {
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-image-list-main__tile-text"
+                    ]
+                  }
+                },
+                "title": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-copy-bold"
+                    ]
+                  },
+                  "text": "Portrait in dark sweater"
+                },
+                "subtitle": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-copy-small"
+                    ]
+                  },
+                  "text": "Stock portrait"
+                }
+              },
+              {
+                "tag": "div",
+                "attributes": {
+                  "class": [
+                    "kc-image-list-main__tile"
+                  ]
+                },
+                "image": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-img"
+                    ],
+                    "style": "width:80px;height:80px;border-radius:6px"
+                  },
+                  "image": {
+                    "attributes": {
+                      "src": "../assets/images/kc/stock/portrait-d.jpg",
+                      "alt": "Illustrative stock portrait of a person in a white shirt",
+                      "data-fluent-load-observed": "true",
+                      "class": [
+                        "is-loaded"
+                      ]
+                    }
+                  }
+                },
+                "text": {
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-image-list-main__tile-text"
+                    ]
+                  }
+                },
+                "title": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-copy-bold"
+                    ]
+                  },
+                  "text": "Portrait in white shirt"
+                },
+                "subtitle": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-copy-small"
+                    ]
+                  },
+                  "text": "Stock portrait"
+                }
+              },
+              {
+                "tag": "div",
+                "attributes": {
+                  "class": [
+                    "kc-image-list-main__tile"
+                  ]
+                },
+                "image": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-img"
+                    ],
+                    "style": "width:80px;height:80px;border-radius:6px"
+                  },
+                  "image": {
+                    "attributes": {
+                      "src": "../assets/images/kc/stock/portrait-e.jpg",
+                      "alt": "Illustrative stock portrait of a person against a red wall",
+                      "data-fluent-load-observed": "true",
+                      "class": [
+                        "is-loaded"
+                      ]
+                    }
+                  }
+                },
+                "text": {
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-image-list-main__tile-text"
+                    ]
+                  }
+                },
+                "title": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-copy-bold"
+                    ]
+                  },
+                  "text": "Portrait against red wall"
+                },
+                "subtitle": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-copy-small"
+                    ]
+                  },
+                  "text": "Stock portrait"
+                }
+              }
+            ]
+          }
+        }
+      },
+      "desktop-main-rectangle": {
+        "id": "desktop-main-rectangle",
+        "type": "main",
+        "platform": "desktop",
+        "render": {
+          "root": {
+            "tag": "section",
+            "attributes": {
+              "class": [
+                "kc-module",
+                "kc-image-list-main",
+                "kc-image-list-main--rectangle"
+              ],
+              "data-kc": "Image List / Main"
+            }
+          },
+          "content": {
+            "heading": {
+              "tag": "div",
+              "attributes": {
+                "class": [
+                  "kc-module-title"
+                ]
+              },
+              "heading": {
+                "tag": "h3",
+                "attributes": {},
+                "text": "Stock portraits"
+              },
+              "trailing": {
+                "tag": "a",
+                "attributes": {
+                  "class": [
+                    "kc-link"
+                  ],
+                  "href": "#",
+                  "aria-label": "See all Stock portraits"
+                },
+                "wrapper": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-title-chevron"
+                    ]
+                  }
+                },
+                "icon": {
+                  "tag": "img",
+                  "attributes": {
+                    "src": "../assets/icons/ic_fluent_chevron_right_16_regular.svg",
+                    "alt": "",
+                    "aria-hidden": "true"
+                  }
+                }
+              }
+            },
+            "list": {
+              "tag": "div",
+              "attributes": {
+                "class": [
+                  "kc-image-list-main__tiles"
+                ]
+              }
+            },
+            "items": [
+              {
+                "tag": "div",
+                "attributes": {
+                  "class": [
+                    "kc-image-list-main__tile"
+                  ]
+                },
+                "image": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-img"
+                    ],
+                    "style": "width:80px;height:120px;border-radius:6px"
+                  },
+                  "image": {
+                    "attributes": {
+                      "src": "../assets/images/kc/stock/portrait-a.jpg",
+                      "alt": "Illustrative stock portrait of a person in a gray sweater",
+                      "data-fluent-load-observed": "true",
+                      "class": [
+                        "is-loaded"
+                      ]
+                    }
+                  }
+                },
+                "text": {
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-image-list-main__tile-text"
+                    ]
+                  }
+                },
+                "title": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-copy-bold"
+                    ]
+                  },
+                  "text": "Portrait in gray sweater"
+                },
+                "subtitle": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-copy-small"
+                    ]
+                  },
+                  "text": "Stock portrait"
+                }
+              },
+              {
+                "tag": "div",
+                "attributes": {
+                  "class": [
+                    "kc-image-list-main__tile"
+                  ]
+                },
+                "image": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-img"
+                    ],
+                    "style": "width:80px;height:120px;border-radius:6px"
+                  },
+                  "image": {
+                    "attributes": {
+                      "src": "../assets/images/kc/stock/portrait-b.jpg",
+                      "alt": "Illustrative stock portrait of a person against a blue background",
+                      "data-fluent-load-observed": "true",
+                      "class": [
+                        "is-loaded"
+                      ]
+                    }
+                  }
+                },
+                "text": {
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-image-list-main__tile-text"
+                    ]
+                  }
+                },
+                "title": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-copy-bold"
+                    ]
+                  },
+                  "text": "Portrait against blue background"
+                },
+                "subtitle": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-copy-small"
+                    ]
+                  },
+                  "text": "Stock portrait"
+                }
+              },
+              {
+                "tag": "div",
+                "attributes": {
+                  "class": [
+                    "kc-image-list-main__tile"
+                  ]
+                },
+                "image": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-img"
+                    ],
+                    "style": "width:80px;height:120px;border-radius:6px"
+                  },
+                  "image": {
+                    "attributes": {
+                      "src": "../assets/images/kc/stock/portrait-c.jpg",
+                      "alt": "Illustrative stock portrait of a person in a dark sweater",
+                      "data-fluent-load-observed": "true",
+                      "class": [
+                        "is-loaded"
+                      ]
+                    }
+                  }
+                },
+                "text": {
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-image-list-main__tile-text"
+                    ]
+                  }
+                },
+                "title": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-copy-bold"
+                    ]
+                  },
+                  "text": "Portrait in dark sweater"
+                },
+                "subtitle": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-copy-small"
+                    ]
+                  },
+                  "text": "Stock portrait"
+                }
+              },
+              {
+                "tag": "div",
+                "attributes": {
+                  "class": [
+                    "kc-image-list-main__tile"
+                  ]
+                },
+                "image": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-img"
+                    ],
+                    "style": "width:80px;height:120px;border-radius:6px"
+                  },
+                  "image": {
+                    "attributes": {
+                      "src": "../assets/images/kc/stock/portrait-d.jpg",
+                      "alt": "Illustrative stock portrait of a person in a white shirt",
+                      "data-fluent-load-observed": "true",
+                      "class": [
+                        "is-loaded"
+                      ]
+                    }
+                  }
+                },
+                "text": {
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-image-list-main__tile-text"
+                    ]
+                  }
+                },
+                "title": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-copy-bold"
+                    ]
+                  },
+                  "text": "Portrait in white shirt"
+                },
+                "subtitle": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-copy-small"
+                    ]
+                  },
+                  "text": "Stock portrait"
+                }
+              },
+              {
+                "tag": "div",
+                "attributes": {
+                  "class": [
+                    "kc-image-list-main__tile"
+                  ]
+                },
+                "image": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-img"
+                    ],
+                    "style": "width:80px;height:120px;border-radius:6px"
+                  },
+                  "image": {
+                    "attributes": {
+                      "src": "../assets/images/kc/stock/portrait-e.jpg",
+                      "alt": "Illustrative stock portrait of a person against a red wall",
+                      "data-fluent-load-observed": "true",
+                      "class": [
+                        "is-loaded"
+                      ]
+                    }
+                  }
+                },
+                "text": {
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-image-list-main__tile-text"
+                    ]
+                  }
+                },
+                "title": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-copy-bold"
+                    ]
+                  },
+                  "text": "Portrait against red wall"
+                },
+                "subtitle": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-copy-small"
+                    ]
+                  },
+                  "text": "Stock portrait"
+                }
+              }
+            ]
+          }
+        }
+      },
+      "desktop-places-to-visit": {
+        "id": "desktop-places-to-visit",
+        "type": "places-to-visit",
+        "platform": "desktop",
+        "render": {
+          "root": {
+            "tag": "section",
+            "attributes": {
+              "class": [
+                "kc-module",
+                "kc-image-list-places-to-visit"
+              ],
+              "data-kc": "Image List / Places to Visit"
+            }
+          },
+          "content": {
+            "heading": {
+              "tag": "div",
+              "attributes": {
+                "class": [
+                  "kc-module-title"
+                ]
+              },
+              "heading": {
+                "tag": "h3",
+                "attributes": {},
+                "text": "Top places to visit"
+              },
+              "trailing": null
+            },
+            "list": {
+              "tag": "div",
+              "attributes": {
+                "class": [
+                  "kc-image-list-places-to-visit__items"
+                ]
+              }
+            },
+            "items": [
+              {
+                "tag": "div",
+                "attributes": {
+                  "class": [
+                    "kc-image-list-places-to-visit__item"
+                  ]
+                },
+                "image": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-img"
+                    ],
+                    "style": "width:100px;height:116px;border-radius:6px"
+                  },
+                  "image": {
+                    "attributes": {
+                      "src": "../assets/images/kc/stock/taj-mahal.jpg",
+                      "alt": "Taj Mahal monument with a reflecting pool",
+                      "data-fluent-load-observed": "true",
+                      "class": [
+                        "is-loaded"
+                      ]
+                    }
+                  }
+                },
+                "title": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-copy"
+                    ]
+                  },
+                  "text": "Taj Mahal"
+                }
+              },
+              {
+                "tag": "div",
+                "attributes": {
+                  "class": [
+                    "kc-image-list-places-to-visit__item"
+                  ]
+                },
+                "image": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-img"
+                    ],
+                    "style": "width:100px;height:100px;border-radius:6px"
+                  },
+                  "image": {
+                    "attributes": {
+                      "src": "../assets/images/kc/stock/jaipur.jpg",
+                      "alt": "Hawa Mahal palace facade in Jaipur",
+                      "data-fluent-load-observed": "true",
+                      "class": [
+                        "is-loaded"
+                      ]
+                    }
+                  }
+                },
+                "title": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-copy"
+                    ]
+                  },
+                  "text": "Hawa Mahal"
+                }
+              },
+              {
+                "tag": "div",
+                "attributes": {
+                  "class": [
+                    "kc-image-list-places-to-visit__item"
+                  ]
+                },
+                "image": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-img"
+                    ],
+                    "style": "width:100px;height:116px;border-radius:6px"
+                  },
+                  "image": {
+                    "attributes": {
+                      "src": "../assets/images/kc/stock/kerala.jpg",
+                      "alt": "Houseboat on Kerala backwaters",
+                      "data-fluent-load-observed": "true",
+                      "class": [
+                        "is-loaded"
+                      ]
+                    }
+                  }
+                },
+                "title": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-copy"
+                    ]
+                  },
+                  "text": "Kerala"
+                }
+              }
+            ]
+          }
+        }
+      },
+      "desktop-carousel": {
+        "id": "desktop-carousel",
+        "type": "carousel",
+        "platform": "desktop",
+        "render": {
+          "root": {
+            "tag": "section",
+            "attributes": {
+              "class": [
+                "kc-module",
+                "kc-image-list-carousel"
+              ],
+              "data-kc": "Image List / Carousel",
+              "aria-label": "Image carousel"
+            }
+          },
+          "content": {
+            "track": null,
+            "items": [
+              {
+                "tag": "span",
+                "attributes": {
+                  "class": [
+                    "kc-img"
+                  ],
+                  "style": "width:103px;height:100px;border-radius:6px"
+                },
+                "image": {
+                  "attributes": {
+                    "src": "../assets/images/kc/stock/taj-mahal.jpg",
+                    "alt": "Taj Mahal monument with a reflecting pool",
+                    "data-fluent-load-observed": "true",
+                    "class": [
+                      "is-loaded"
+                    ]
+                  }
+                }
+              },
+              {
+                "tag": "span",
+                "attributes": {
+                  "class": [
+                    "kc-img"
+                  ],
+                  "style": "width:90px;height:100px;border-radius:6px"
+                },
+                "image": {
+                  "attributes": {
+                    "src": "../assets/images/kc/stock/jaipur.jpg",
+                    "alt": "Hawa Mahal palace facade in Jaipur",
+                    "data-fluent-load-observed": "true",
+                    "class": [
+                      "is-loaded"
+                    ]
+                  }
+                }
+              },
+              {
+                "tag": "span",
+                "attributes": {
+                  "class": [
+                    "kc-img"
+                  ],
+                  "style": "width:77px;height:100px;border-radius:6px"
+                },
+                "image": {
+                  "attributes": {
+                    "src": "../assets/images/kc/stock/kerala.jpg",
+                    "alt": "Houseboat on Kerala backwaters",
+                    "data-fluent-load-observed": "true",
+                    "class": [
+                      "is-loaded"
+                    ]
+                  }
+                }
+              },
+              {
+                "tag": "span",
+                "attributes": {
+                  "class": [
+                    "kc-img"
+                  ],
+                  "style": "width:130px;height:100px;border-radius:6px"
+                },
+                "image": {
+                  "attributes": {
+                    "src": "../assets/images/kc/stock/mountain-lake.jpg",
+                    "alt": "Mountain lake beside a forest and cabin",
+                    "data-fluent-load-observed": "true",
+                    "class": [
+                      "is-loaded"
+                    ]
+                  }
+                }
+              },
+              {
+                "tag": "span",
+                "attributes": {
+                  "class": [
+                    "kc-img"
+                  ],
+                  "style": "width:76px;height:100px;border-radius:6px"
+                },
+                "image": {
+                  "attributes": {
+                    "src": "../assets/images/kc/stock/city.jpg",
+                    "alt": "City skyline at sunset",
+                    "data-fluent-load-observed": "true",
+                    "class": [
+                      "is-loaded"
+                    ]
+                  }
+                }
+              }
+            ],
+            "controls": []
+          }
+        }
+      },
+      "desktop-top-songs": {
+        "id": "desktop-top-songs",
+        "type": "top-songs",
+        "platform": "desktop",
+        "render": {
+          "root": {
+            "tag": "section",
+            "attributes": {
+              "class": [
+                "kc-module",
+                "kc-image-list-top-songs"
+              ],
+              "data-kc": "Image List / Top Songs"
+            }
+          },
+          "content": {
+            "heading": {
+              "tag": "div",
+              "attributes": {
+                "class": [
+                  "kc-module-title"
+                ]
+              },
+              "heading": {
+                "tag": "h3",
+                "attributes": {},
+                "text": "Top Songs"
+              },
+              "trailing": {
+                "tag": "a",
+                "attributes": {
+                  "class": [
+                    "kc-link"
+                  ],
+                  "href": "#",
+                  "aria-label": "See all Top Songs"
+                },
+                "wrapper": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-title-chevron"
+                    ]
+                  }
+                },
+                "icon": {
+                  "tag": "img",
+                  "attributes": {
+                    "src": "../assets/icons/ic_fluent_chevron_right_16_regular.svg",
+                    "alt": "",
+                    "aria-hidden": "true"
+                  }
+                }
+              }
+            },
+            "list": {
+              "tag": "div",
+              "attributes": {
+                "class": [
+                  "kc-image-list-top-songs__columns"
+                ]
+              }
+            },
+            "columns": [
+              {
+                "tag": "div",
+                "attributes": {
+                  "class": [
+                    "kc-image-list-top-songs__column"
+                  ]
+                },
+                "songs": [
+                  {
+                    "tag": "div",
+                    "attributes": {
+                      "class": [
+                        "kc-image-list-top-songs__song"
+                      ]
+                    },
+                    "image": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-img"
+                        ],
+                        "style": "width:48px;height:48px;border-radius:6px"
+                      },
+                      "image": {
+                        "attributes": {
+                          "src": "../assets/images/kc/stock/music-studio.jpg",
+                          "alt": "Audio mixing console in a recording studio",
+                          "data-fluent-load-observed": "true",
+                          "class": [
+                            "is-loaded"
+                          ]
+                        }
+                      }
+                    },
+                    "text": {
+                      "tag": "div",
+                      "attributes": {
+                        "class": [
+                          "kc-image-list-top-songs__song-text"
+                        ]
+                      }
+                    },
+                    "title": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-copy-bold"
+                        ]
+                      },
+                      "text": "Paper Lanterns"
+                    },
+                    "artist": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-copy-small"
+                        ]
+                      },
+                      "text": "Album · Year"
+                    }
+                  },
+                  {
+                    "tag": "div",
+                    "attributes": {
+                      "class": [
+                        "kc-image-list-top-songs__song"
+                      ]
+                    },
+                    "image": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-img"
+                        ],
+                        "style": "width:48px;height:48px;border-radius:6px"
+                      },
+                      "image": {
+                        "attributes": {
+                          "src": "../assets/images/kc/stock/guitar.jpg",
+                          "alt": "Hands playing an acoustic guitar",
+                          "data-fluent-load-observed": "true",
+                          "class": [
+                            "is-loaded"
+                          ]
+                        }
+                      }
+                    },
+                    "text": {
+                      "tag": "div",
+                      "attributes": {
+                        "class": [
+                          "kc-image-list-top-songs__song-text"
+                        ]
+                      }
+                    },
+                    "title": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-copy-bold"
+                        ]
+                      },
+                      "text": "Slow Tide"
+                    },
+                    "artist": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-copy-small"
+                        ]
+                      },
+                      "text": "Album · Year"
+                    }
+                  },
+                  {
+                    "tag": "div",
+                    "attributes": {
+                      "class": [
+                        "kc-image-list-top-songs__song"
+                      ]
+                    },
+                    "image": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-img"
+                        ],
+                        "style": "width:48px;height:48px;border-radius:6px"
+                      },
+                      "image": {
+                        "attributes": {
+                          "src": "../assets/images/kc/stock/headphones.jpg",
+                          "alt": "Over-ear headphones on a yellow background",
+                          "data-fluent-load-observed": "true",
+                          "class": [
+                            "is-loaded"
+                          ]
+                        }
+                      }
+                    },
+                    "text": {
+                      "tag": "div",
+                      "attributes": {
+                        "class": [
+                          "kc-image-list-top-songs__song-text"
+                        ]
+                      }
+                    },
+                    "title": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-copy-bold"
+                        ]
+                      },
+                      "text": "Glass Garden"
+                    },
+                    "artist": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-copy-small"
+                        ]
+                      },
+                      "text": "Album · Year"
+                    }
+                  }
+                ]
+              },
+              {
+                "tag": "div",
+                "attributes": {
+                  "class": [
+                    "kc-image-list-top-songs__column"
+                  ]
+                },
+                "songs": [
+                  {
+                    "tag": "div",
+                    "attributes": {
+                      "class": [
+                        "kc-image-list-top-songs__song"
+                      ]
+                    },
+                    "image": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-img"
+                        ],
+                        "style": "width:48px;height:48px;border-radius:6px"
+                      },
+                      "image": {
+                        "attributes": {
+                          "src": "../assets/images/kc/stock/music-studio.jpg",
+                          "alt": "Audio mixing console in a recording studio",
+                          "data-fluent-load-observed": "true",
+                          "class": [
+                            "is-loaded"
+                          ]
+                        }
+                      }
+                    },
+                    "text": {
+                      "tag": "div",
+                      "attributes": {
+                        "class": [
+                          "kc-image-list-top-songs__song-text"
+                        ]
+                      }
+                    },
+                    "title": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-copy-bold"
+                        ]
+                      },
+                      "text": "Morning Static"
+                    },
+                    "artist": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-copy-small"
+                        ]
+                      },
+                      "text": "Album · Year"
+                    }
+                  },
+                  {
+                    "tag": "div",
+                    "attributes": {
+                      "class": [
+                        "kc-image-list-top-songs__song"
+                      ]
+                    },
+                    "image": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-img"
+                        ],
+                        "style": "width:48px;height:48px;border-radius:6px"
+                      },
+                      "image": {
+                        "attributes": {
+                          "src": "../assets/images/kc/stock/guitar.jpg",
+                          "alt": "Hands playing an acoustic guitar",
+                          "data-fluent-load-observed": "true",
+                          "class": [
+                            "is-loaded"
+                          ]
+                        }
+                      }
+                    },
+                    "text": {
+                      "tag": "div",
+                      "attributes": {
+                        "class": [
+                          "kc-image-list-top-songs__song-text"
+                        ]
+                      }
+                    },
+                    "title": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-copy-bold"
+                        ]
+                      },
+                      "text": "Silver Line"
+                    },
+                    "artist": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-copy-small"
+                        ]
+                      },
+                      "text": "Album · Year"
+                    }
+                  },
+                  {
+                    "tag": "div",
+                    "attributes": {
+                      "class": [
+                        "kc-image-list-top-songs__song"
+                      ]
+                    },
+                    "image": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-img"
+                        ],
+                        "style": "width:48px;height:48px;border-radius:6px"
+                      },
+                      "image": {
+                        "attributes": {
+                          "src": "../assets/images/kc/stock/headphones.jpg",
+                          "alt": "Over-ear headphones on a yellow background",
+                          "data-fluent-load-observed": "true",
+                          "class": [
+                            "is-loaded"
+                          ]
+                        }
+                      }
+                    },
+                    "text": {
+                      "tag": "div",
+                      "attributes": {
+                        "class": [
+                          "kc-image-list-top-songs__song-text"
+                        ]
+                      }
+                    },
+                    "title": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-copy-bold"
+                        ]
+                      },
+                      "text": "Paper Lanterns (Live)"
+                    },
+                    "artist": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-copy-small"
+                        ]
+                      },
+                      "text": "Album · Year"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "desktop-top-fact-image": {
+        "id": "desktop-top-fact-image",
+        "type": "top-fact-image",
+        "platform": "desktop",
+        "render": {
+          "root": {
+            "tag": "section",
+            "attributes": {
+              "class": [
+                "kc-module",
+                "kc-image-list-top-fact"
+              ],
+              "data-kc": "Image List / Top Fact",
+              "aria-label": "Top facts"
+            }
+          },
+          "content": {
+            "blocks": [
+              {
+                "kind": "fact",
+                "tag": "div",
+                "attributes": {
+                  "class": [
+                    "kc-image-list-top-fact__fact"
+                  ]
+                },
+                "text": {
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-image-list-top-fact__text"
+                    ]
+                  },
+                  "fields": [
+                    {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-copy-bold"
+                        ]
+                      },
+                      "text": "Life Span"
+                    },
+                    {
+                      "tag": "strong",
+                      "attributes": {
+                        "class": [
+                          "kc-t-highlight-l",
+                          "kc-gray-copy"
+                        ]
+                      },
+                      "text": "12 - 17"
+                    }
+                  ]
+                },
+                "image": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-img"
+                    ],
+                    "style": "width:64px;height:80px;border-radius:0px"
+                  },
+                  "image": {
+                    "attributes": {
+                      "src": "../assets/images/kc/stock/koi.jpg",
+                      "alt": "Orange koi swimming in a canal",
+                      "data-fluent-load-observed": "true",
+                      "class": [
+                        "is-loaded"
+                      ]
+                    }
+                  }
+                }
+              },
+              {
+                "kind": "separator",
+                "tag": "span",
+                "attributes": {
+                  "class": [
+                    "kc-divider--v"
+                  ]
+                }
+              },
+              {
+                "kind": "fact",
+                "tag": "div",
+                "attributes": {
+                  "class": [
+                    "kc-image-list-top-fact__fact"
+                  ]
+                },
+                "text": {
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-image-list-top-fact__text"
+                    ]
+                  },
+                  "fields": [
+                    {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-copy-bold"
+                        ]
+                      },
+                      "text": "Life Span"
+                    },
+                    {
+                      "tag": "strong",
+                      "attributes": {
+                        "class": [
+                          "kc-t-highlight-l",
+                          "kc-gray-copy"
+                        ]
+                      },
+                      "text": "12 - 17"
+                    }
+                  ]
+                },
+                "image": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-img"
+                    ],
+                    "style": "width:64px;height:80px;border-radius:0px"
+                  },
+                  "image": {
+                    "attributes": {
+                      "src": "../assets/images/kc/stock/maple-green.jpg",
+                      "alt": "Green Japanese maple leaves",
+                      "data-fluent-load-observed": "true",
+                      "class": [
+                        "is-loaded"
+                      ]
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        }
+      },
+      "desktop-ingredients": {
+        "id": "desktop-ingredients",
+        "type": "ingredients",
+        "platform": "desktop",
+        "render": {
+          "root": {
+            "tag": "section",
+            "attributes": {
+              "class": [
+                "kc-module",
+                "kc-image-list-ingredients"
+              ],
+              "data-kc": "Image List / Ingredients"
+            }
+          },
+          "content": {
+            "heading": {
+              "tag": "div",
+              "attributes": {
+                "class": [
+                  "kc-module-title"
+                ]
+              },
+              "heading": {
+                "tag": "h3",
+                "attributes": {},
+                "text": "Common ingredients"
+              },
+              "trailing": {
+                "tag": "a",
+                "attributes": {
+                  "class": [
+                    "kc-link"
+                  ],
+                  "href": "#",
+                  "aria-label": "See all Common ingredients"
+                },
+                "wrapper": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-title-chevron"
+                    ]
+                  }
+                },
+                "icon": {
+                  "tag": "img",
+                  "attributes": {
+                    "src": "../assets/icons/ic_fluent_chevron_right_16_regular.svg",
+                    "alt": "",
+                    "aria-hidden": "true"
+                  }
+                }
+              }
+            },
+            "list": {
+              "tag": "div",
+              "attributes": {
+                "class": [
+                  "kc-image-list-ingredients__list"
+                ]
+              }
+            },
+            "rows": [
+              {
+                "tag": "div",
+                "attributes": {
+                  "class": [
+                    "kc-image-list-ingredients__row"
+                  ]
+                },
+                "items": [
+                  {
+                    "tag": "div",
+                    "attributes": {
+                      "class": [
+                        "kc-image-list-ingredients__item"
+                      ]
+                    },
+                    "image": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-img"
+                        ],
+                        "style": "width:32px;height:32px;border-radius:20px"
+                      },
+                      "image": {
+                        "attributes": {
+                          "src": "../assets/images/kc/stock/salad.jpg",
+                          "alt": "Bowl of salad with vegetables",
+                          "data-fluent-load-observed": "true",
+                          "class": [
+                            "is-loaded"
+                          ]
+                        }
+                      }
+                    },
+                    "label": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-copy-bold"
+                        ]
+                      },
+                      "text": "Flour"
+                    }
+                  },
+                  {
+                    "tag": "div",
+                    "attributes": {
+                      "class": [
+                        "kc-image-list-ingredients__item"
+                      ]
+                    },
+                    "image": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-img"
+                        ],
+                        "style": "width:32px;height:32px;border-radius:20px"
+                      },
+                      "image": {
+                        "attributes": {
+                          "src": "../assets/images/kc/stock/foliage-dark.jpg",
+                          "alt": "Close-up of overlapping green leaves",
+                          "data-fluent-load-observed": "true",
+                          "class": [
+                            "is-loaded"
+                          ]
+                        }
+                      }
+                    },
+                    "label": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-copy-bold"
+                        ]
+                      },
+                      "text": "Butter"
+                    }
+                  },
+                  {
+                    "tag": "div",
+                    "attributes": {
+                      "class": [
+                        "kc-image-list-ingredients__item"
+                      ]
+                    },
+                    "image": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-img"
+                        ],
+                        "style": "width:32px;height:32px;border-radius:20px"
+                      },
+                      "image": {
+                        "attributes": {
+                          "src": "../assets/images/kc/stock/potted-plant.jpg",
+                          "alt": "Ferns filling a shaded frame",
+                          "data-fluent-load-observed": "true",
+                          "class": [
+                            "is-loaded"
+                          ]
+                        }
+                      }
+                    },
+                    "label": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-copy-bold"
+                        ]
+                      },
+                      "text": "Sugar"
+                    }
+                  }
+                ]
+              },
+              {
+                "tag": "div",
+                "attributes": {
+                  "class": [
+                    "kc-image-list-ingredients__row"
+                  ]
+                },
+                "items": [
+                  {
+                    "tag": "div",
+                    "attributes": {
+                      "class": [
+                        "kc-image-list-ingredients__item"
+                      ]
+                    },
+                    "image": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-img"
+                        ],
+                        "style": "width:32px;height:32px;border-radius:20px"
+                      },
+                      "image": {
+                        "attributes": {
+                          "src": "../assets/images/kc/stock/salad.jpg",
+                          "alt": "Bowl of salad with vegetables",
+                          "data-fluent-load-observed": "true",
+                          "class": [
+                            "is-loaded"
+                          ]
+                        }
+                      }
+                    },
+                    "label": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-copy-bold"
+                        ]
+                      },
+                      "text": "Eggs"
+                    }
+                  },
+                  {
+                    "tag": "div",
+                    "attributes": {
+                      "class": [
+                        "kc-image-list-ingredients__item"
+                      ]
+                    },
+                    "image": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-img"
+                        ],
+                        "style": "width:32px;height:32px;border-radius:20px"
+                      },
+                      "image": {
+                        "attributes": {
+                          "src": "../assets/images/kc/stock/foliage-dark.jpg",
+                          "alt": "Close-up of overlapping green leaves",
+                          "data-fluent-load-observed": "true",
+                          "class": [
+                            "is-loaded"
+                          ]
+                        }
+                      }
+                    },
+                    "label": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-copy-bold"
+                        ]
+                      },
+                      "text": "Milk"
+                    }
+                  },
+                  {
+                    "tag": "div",
+                    "attributes": {
+                      "class": [
+                        "kc-image-list-ingredients__item"
+                      ]
+                    },
+                    "image": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-img"
+                        ],
+                        "style": "width:32px;height:32px;border-radius:20px"
+                      },
+                      "image": {
+                        "attributes": {
+                          "src": "../assets/images/kc/stock/potted-plant.jpg",
+                          "alt": "Ferns filling a shaded frame",
+                          "data-fluent-load-observed": "true",
+                          "class": [
+                            "is-loaded"
+                          ]
+                        }
+                      }
+                    },
+                    "label": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-copy-bold"
+                        ]
+                      },
+                      "text": "Salt"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "desktop-interesting-facts-1-image": {
+        "id": "desktop-interesting-facts-1-image",
+        "type": "interesting-facts",
+        "platform": "desktop",
+        "render": {
+          "root": {
+            "tag": "section",
+            "attributes": {
+              "class": [
+                "kc-module",
+                "kc-image-list-interesting-facts",
+                "kc-image-list-interesting-facts--1-image"
+              ],
+              "data-kc": "Image List / Interesting Facts",
+              "aria-label": "Interesting facts"
+            }
+          },
+          "content": {
+            "blocks": [
+              {
+                "kind": "text",
+                "tag": "div",
+                "attributes": {
+                  "class": [
+                    "kc-image-list-interesting-facts__text"
+                  ],
+                  "style": "width:287px;height:193px"
+                },
+                "lines": [
+                  {
+                    "kind": "field",
+                    "field": {
+                      "tag": "p",
+                      "attributes": {
+                        "class": [
+                          "kc-copy"
+                        ],
+                        "style": "width:287px;height:62px"
+                      },
+                      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                    }
+                  },
+                  {
+                    "kind": "divider",
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-divider"
+                      ]
+                    }
+                  },
+                  {
+                    "kind": "field",
+                    "field": {
+                      "tag": "p",
+                      "attributes": {
+                        "class": [
+                          "kc-copy"
+                        ],
+                        "style": "width:287px;height:98px"
+                      },
+                      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation."
+                    }
+                  }
+                ]
+              },
+              {
+                "kind": "image",
+                "image": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-img"
+                    ],
+                    "style": "width:125px;height:193px;border-radius:6px"
+                  },
+                  "image": {
+                    "attributes": {
+                      "src": "../assets/images/kc/stock/mountain-lake.jpg",
+                      "alt": "Mountain lake beside a forest and cabin",
+                      "data-fluent-load-observed": "true",
+                      "class": [
+                        "is-loaded"
+                      ]
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        }
+      },
+      "desktop-interesting-facts-3-image": {
+        "id": "desktop-interesting-facts-3-image",
+        "type": "interesting-facts",
+        "platform": "desktop",
+        "render": {
+          "root": {
+            "tag": "section",
+            "attributes": {
+              "class": [
+                "kc-module",
+                "kc-image-list-interesting-facts",
+                "kc-image-list-interesting-facts--3-image"
+              ],
+              "data-kc": "Image List / Interesting Facts",
+              "aria-label": "Interesting facts"
+            }
+          },
+          "content": {
+            "blocks": [
+              {
+                "kind": "group",
+                "tag": "div",
+                "attributes": {
+                  "class": [
+                    "kc-image-list-interesting-facts__row"
+                  ]
+                },
+                "parts": [
+                  {
+                    "kind": "text",
+                    "tag": "div",
+                    "attributes": {
+                      "class": [
+                        "kc-image-list-interesting-facts__text"
+                      ],
+                      "style": "width:323px;height:132px;gap:15px"
+                    },
+                    "lines": [
+                      {
+                        "kind": "field",
+                        "field": {
+                          "tag": "p",
+                          "attributes": {
+                            "class": [
+                              "kc-copy"
+                            ],
+                            "style": "width:323px;height:116px"
+                          },
+                          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+                        }
+                      },
+                      {
+                        "kind": "divider",
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-divider"
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "image",
+                    "image": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-img"
+                        ],
+                        "style": "width:89px;height:131px;border-radius:6px"
+                      },
+                      "image": {
+                        "attributes": {
+                          "src": "../assets/images/kc/stock/mountain-lake.jpg",
+                          "alt": "Mountain lake beside a forest and cabin",
+                          "data-fluent-load-observed": "true",
+                          "class": [
+                            "is-loaded"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "kind": "group",
+                "tag": "div",
+                "attributes": {
+                  "class": [
+                    "kc-image-list-interesting-facts__row"
+                  ]
+                },
+                "parts": [
+                  {
+                    "kind": "image",
+                    "image": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-img"
+                        ],
+                        "style": "width:90px;height:133px;border-radius:6px"
+                      },
+                      "image": {
+                        "attributes": {
+                          "src": "../assets/images/kc/stock/maple-green.jpg",
+                          "alt": "Green Japanese maple leaves",
+                          "data-fluent-load-observed": "true",
+                          "class": [
+                            "is-loaded"
+                          ]
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "kind": "text",
+                    "tag": "div",
+                    "attributes": {
+                      "class": [
+                        "kc-image-list-interesting-facts__text"
+                      ],
+                      "style": "width:322px;height:133px;gap:16px"
+                    },
+                    "lines": [
+                      {
+                        "kind": "field",
+                        "field": {
+                          "tag": "p",
+                          "attributes": {
+                            "class": [
+                              "kc-copy"
+                            ],
+                            "style": "width:322px;height:116px;text-align:right"
+                          },
+                          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+                        }
+                      },
+                      {
+                        "kind": "divider",
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-divider"
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "kind": "group",
+                "tag": "div",
+                "attributes": {
+                  "class": [
+                    "kc-image-list-interesting-facts__row"
+                  ]
+                },
+                "parts": [
+                  {
+                    "kind": "paragraph",
+                    "field": {
+                      "tag": "p",
+                      "attributes": {
+                        "class": [
+                          "kc-copy"
+                        ],
+                        "style": "width:266px;height:94px"
+                      },
+                      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation."
+                    }
+                  },
+                  {
+                    "kind": "image",
+                    "image": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-img"
+                        ],
+                        "style": "width:146px;height:93px;border-radius:6px"
+                      },
+                      "image": {
+                        "attributes": {
+                          "src": "../assets/images/kc/stock/earth.jpg",
+                          "alt": "Earth viewed from orbit",
+                          "data-fluent-load-observed": "true",
+                          "class": [
+                            "is-loaded"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "desktop-interesting-facts-2-image": {
+        "id": "desktop-interesting-facts-2-image",
+        "type": "interesting-facts",
+        "platform": "desktop",
+        "render": {
+          "root": {
+            "tag": "section",
+            "attributes": {
+              "class": [
+                "kc-module",
+                "kc-image-list-interesting-facts",
+                "kc-image-list-interesting-facts--2-image"
+              ],
+              "data-kc": "Image List / Interesting Facts",
+              "aria-label": "Interesting facts"
+            }
+          },
+          "content": {
+            "blocks": [
+              {
+                "kind": "group",
+                "tag": "div",
+                "attributes": {
+                  "class": [
+                    "kc-image-list-interesting-facts__row"
+                  ]
+                },
+                "parts": [
+                  {
+                    "kind": "text",
+                    "tag": "div",
+                    "attributes": {
+                      "class": [
+                        "kc-image-list-interesting-facts__text"
+                      ],
+                      "style": "width:282px;height:193px;gap:16px"
+                    },
+                    "lines": [
+                      {
+                        "kind": "field",
+                        "field": {
+                          "tag": "p",
+                          "attributes": {
+                            "class": [
+                              "kc-copy"
+                            ],
+                            "style": "width:282px;height:98px"
+                          },
+                          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation."
+                        }
+                      },
+                      {
+                        "kind": "divider",
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-divider"
+                          ]
+                        }
+                      },
+                      {
+                        "kind": "field",
+                        "field": {
+                          "tag": "p",
+                          "attributes": {
+                            "class": [
+                              "kc-copy"
+                            ],
+                            "style": "width:282px;height:62px"
+                          },
+                          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "image",
+                    "image": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-img"
+                        ],
+                        "style": "width:130px;height:193px;border-radius:6px"
+                      },
+                      "image": {
+                        "attributes": {
+                          "src": "../assets/images/kc/stock/mountain-lake.jpg",
+                          "alt": "Mountain lake beside a forest and cabin",
+                          "data-fluent-load-observed": "true",
+                          "class": [
+                            "is-loaded"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "kind": "group",
+                "tag": "div",
+                "attributes": {
+                  "class": [
+                    "kc-image-list-interesting-facts__row"
+                  ]
+                },
+                "parts": [
+                  {
+                    "kind": "image",
+                    "image": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-img"
+                        ],
+                        "style": "width:146px;height:93px;border-radius:6px"
+                      },
+                      "image": {
+                        "attributes": {
+                          "src": "../assets/images/kc/stock/maple-green.jpg",
+                          "alt": "Green Japanese maple leaves",
+                          "data-fluent-load-observed": "true",
+                          "class": [
+                            "is-loaded"
+                          ]
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "kind": "text",
+                    "tag": "div",
+                    "attributes": {
+                      "class": [
+                        "kc-image-list-interesting-facts__text"
+                      ],
+                      "style": "width:266px;height:93px;gap:16px"
+                    },
+                    "lines": [
+                      {
+                        "kind": "divider",
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-divider"
+                          ]
+                        }
+                      },
+                      {
+                        "kind": "field",
+                        "field": {
+                          "tag": "p",
+                          "attributes": {
+                            "class": [
+                              "kc-copy"
+                            ],
+                            "style": "width:266px;height:76px;text-align:right"
+                          },
+                          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et. Ut enim ad minim veniam, quis."
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "desktop-interesting-facts-none": {
+        "id": "desktop-interesting-facts-none",
+        "type": "interesting-facts",
+        "platform": "desktop",
+        "render": {
+          "root": {
+            "tag": "section",
+            "attributes": {
+              "class": [
+                "kc-module",
+                "kc-image-list-interesting-facts",
+                "kc-image-list-interesting-facts--none"
+              ],
+              "data-kc": "Image List / Interesting Facts",
+              "aria-label": "Interesting facts"
+            }
+          },
+          "content": {
+            "blocks": [
+              {
+                "kind": "text",
+                "tag": "div",
+                "attributes": {
+                  "class": [
+                    "kc-image-list-interesting-facts__text"
+                  ]
+                },
+                "lines": [
+                  {
+                    "kind": "field",
+                    "field": {
+                      "tag": "p",
+                      "attributes": {
+                        "class": [
+                          "kc-copy"
+                        ],
+                        "style": "width:432px;height:40px"
+                      },
+                      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "mobile-top-songs": {
+        "id": "mobile-top-songs",
+        "type": "top-songs",
+        "platform": "mobile",
+        "render": {
+          "root": {
+            "tag": "section",
+            "attributes": {
+              "class": [
+                "kc-module",
+                "kc-module--mobile",
+                "kc-mobile-image-list-top-songs"
+              ],
+              "data-kc": "Mobile / Image List / Top Songs"
+            }
+          },
+          "content": {
+            "heading": {
+              "tag": "div",
+              "attributes": {
+                "class": [
+                  "kc-module-title"
+                ]
+              },
+              "heading": {
+                "tag": "h3",
+                "attributes": {},
+                "text": "Top Songs"
+              },
+              "trailing": null
+            },
+            "list": {
+              "tag": "div",
+              "attributes": {
+                "class": [
+                  "kc-mobile-image-list-top-songs__columns"
+                ]
+              }
+            },
+            "columns": [
+              {
+                "tag": "ul",
+                "attributes": {
+                  "class": [
+                    "kc-mobile-image-list-top-songs__column"
+                  ],
+                  "style": "list-style:none;padding:0;margin:0"
+                },
+                "songs": [
+                  {
+                    "tag": "li",
+                    "attributes": {
+                      "class": [
+                        "kc-mobile-image-list-top-songs__song"
+                      ]
+                    },
+                    "image": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-img"
+                        ],
+                        "style": "width:48px;height:48px;border-radius:6px"
+                      },
+                      "image": {
+                        "attributes": {
+                          "src": "../assets/images/kc/stock/music-studio.jpg",
+                          "alt": "Audio mixing console in a recording studio",
+                          "onerror": "this.style.display='none'"
+                        }
+                      }
+                    },
+                    "text": {
+                      "tag": "div",
+                      "attributes": {
+                        "class": [
+                          "kc-mobile-image-list-top-songs__text"
+                        ]
+                      }
+                    },
+                    "title": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-m-bold"
+                        ]
+                      },
+                      "text": "Paper Lanterns"
+                    },
+                    "artist": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-m-foot"
+                        ]
+                      },
+                      "text": "Northern Lights · 2019"
+                    }
+                  },
+                  {
+                    "tag": "li",
+                    "attributes": {
+                      "class": [
+                        "kc-mobile-image-list-top-songs__song"
+                      ]
+                    },
+                    "image": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-img"
+                        ],
+                        "style": "width:48px;height:48px;border-radius:6px"
+                      },
+                      "image": {
+                        "attributes": {
+                          "src": "../assets/images/kc/stock/guitar.jpg",
+                          "alt": "Hands playing an acoustic guitar",
+                          "onerror": "this.style.display='none'"
+                        }
+                      }
+                    },
+                    "text": {
+                      "tag": "div",
+                      "attributes": {
+                        "class": [
+                          "kc-mobile-image-list-top-songs__text"
+                        ]
+                      }
+                    },
+                    "title": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-m-bold"
+                        ]
+                      },
+                      "text": "Slow Tide"
+                    },
+                    "artist": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-m-foot"
+                        ]
+                      },
+                      "text": "Northern Lights · 2019"
+                    }
+                  },
+                  {
+                    "tag": "li",
+                    "attributes": {
+                      "class": [
+                        "kc-mobile-image-list-top-songs__song"
+                      ]
+                    },
+                    "image": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-img"
+                        ],
+                        "style": "width:48px;height:48px;border-radius:6px"
+                      },
+                      "image": {
+                        "attributes": {
+                          "src": "../assets/images/kc/stock/headphones.jpg",
+                          "alt": "Over-ear headphones on a yellow background",
+                          "onerror": "this.style.display='none'"
+                        }
+                      }
+                    },
+                    "text": {
+                      "tag": "div",
+                      "attributes": {
+                        "class": [
+                          "kc-mobile-image-list-top-songs__text"
+                        ]
+                      }
+                    },
+                    "title": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-m-bold"
+                        ]
+                      },
+                      "text": "Glass Garden"
+                    },
+                    "artist": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-m-foot"
+                        ]
+                      },
+                      "text": "Northern Lights · 2019"
+                    }
+                  }
+                ]
+              },
+              {
+                "tag": "ul",
+                "attributes": {
+                  "class": [
+                    "kc-mobile-image-list-top-songs__column"
+                  ],
+                  "style": "list-style:none;padding:0;margin:0"
+                },
+                "songs": [
+                  {
+                    "tag": "li",
+                    "attributes": {
+                      "class": [
+                        "kc-mobile-image-list-top-songs__song"
+                      ]
+                    },
+                    "image": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-img"
+                        ],
+                        "style": "width:48px;height:48px;border-radius:6px"
+                      },
+                      "image": {
+                        "attributes": {
+                          "src": "../assets/images/kc/stock/music-studio.jpg",
+                          "alt": "Audio mixing console in a recording studio",
+                          "onerror": "this.style.display='none'"
+                        }
+                      }
+                    },
+                    "text": {
+                      "tag": "div",
+                      "attributes": {
+                        "class": [
+                          "kc-mobile-image-list-top-songs__text"
+                        ]
+                      }
+                    },
+                    "title": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-m-bold"
+                        ]
+                      },
+                      "text": "Morning Static"
+                    },
+                    "artist": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-m-foot"
+                        ]
+                      },
+                      "text": "Northern Lights · 2019"
+                    }
+                  },
+                  {
+                    "tag": "li",
+                    "attributes": {
+                      "class": [
+                        "kc-mobile-image-list-top-songs__song"
+                      ]
+                    },
+                    "image": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-img"
+                        ],
+                        "style": "width:48px;height:48px;border-radius:6px"
+                      },
+                      "image": {
+                        "attributes": {
+                          "src": "../assets/images/kc/stock/guitar.jpg",
+                          "alt": "Hands playing an acoustic guitar",
+                          "onerror": "this.style.display='none'"
+                        }
+                      }
+                    },
+                    "text": {
+                      "tag": "div",
+                      "attributes": {
+                        "class": [
+                          "kc-mobile-image-list-top-songs__text"
+                        ]
+                      }
+                    },
+                    "title": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-m-bold"
+                        ]
+                      },
+                      "text": "Silver Line"
+                    },
+                    "artist": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-m-foot"
+                        ]
+                      },
+                      "text": "Northern Lights · 2019"
+                    }
+                  },
+                  {
+                    "tag": "li",
+                    "attributes": {
+                      "class": [
+                        "kc-mobile-image-list-top-songs__song"
+                      ]
+                    },
+                    "image": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-img"
+                        ],
+                        "style": "width:48px;height:48px;border-radius:6px"
+                      },
+                      "image": {
+                        "attributes": {
+                          "src": "../assets/images/kc/stock/headphones.jpg",
+                          "alt": "Over-ear headphones on a yellow background",
+                          "onerror": "this.style.display='none'"
+                        }
+                      }
+                    },
+                    "text": {
+                      "tag": "div",
+                      "attributes": {
+                        "class": [
+                          "kc-mobile-image-list-top-songs__text"
+                        ]
+                      }
+                    },
+                    "title": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-m-bold"
+                        ]
+                      },
+                      "text": "Northern Lights"
+                    },
+                    "artist": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-m-foot"
+                        ]
+                      },
+                      "text": "Northern Lights · 2019"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "mobile-carousel": {
+        "id": "mobile-carousel",
+        "type": "carousel",
+        "platform": "mobile",
+        "render": {
+          "root": {
+            "tag": "section",
+            "attributes": {
+              "class": [
+                "kc-module",
+                "kc-module--mobile",
+                "kc-mobile-image-list-carousel"
+              ],
+              "data-kc": "Mobile/ Image List / Carousel"
+            }
+          },
+          "content": {
+            "track": {
+              "tag": "div",
+              "attributes": {
+                "class": [
+                  "kc-scroll-row"
+                ]
+              }
+            },
+            "items": [
+              {
+                "tag": "span",
+                "attributes": {
+                  "class": [
+                    "kc-img"
+                  ],
+                  "style": "width:132px;height:120px;border-radius:6px"
+                },
+                "image": {
+                  "attributes": {
+                    "src": "../assets/images/kc/stock/taj-mahal.jpg",
+                    "alt": "Taj Mahal monument with a reflecting pool",
+                    "onerror": "this.style.display='none'"
+                  }
+                }
+              },
+              {
+                "tag": "span",
+                "attributes": {
+                  "class": [
+                    "kc-img"
+                  ],
+                  "style": "width:119px;height:120px;border-radius:6px"
+                },
+                "image": {
+                  "attributes": {
+                    "src": "../assets/images/kc/stock/jaipur.jpg",
+                    "alt": "Hawa Mahal palace facade in Jaipur",
+                    "onerror": "this.style.display='none'"
+                  }
+                }
+              },
+              {
+                "tag": "span",
+                "attributes": {
+                  "class": [
+                    "kc-img"
+                  ],
+                  "style": "width:106px;height:120px;border-radius:6px"
+                },
+                "image": {
+                  "attributes": {
+                    "src": "../assets/images/kc/stock/kerala.jpg",
+                    "alt": "Houseboat on Kerala backwaters",
+                    "onerror": "this.style.display='none'"
+                  }
+                }
+              },
+              {
+                "tag": "span",
+                "attributes": {
+                  "class": [
+                    "kc-img"
+                  ],
+                  "style": "width:159px;height:120px;border-radius:6px"
+                },
+                "image": {
+                  "attributes": {
+                    "src": "../assets/images/kc/stock/mountain-lake.jpg",
+                    "alt": "Mountain lake beside a forest and cabin",
+                    "onerror": "this.style.display='none'"
+                  }
+                }
+              },
+              {
+                "tag": "span",
+                "attributes": {
+                  "class": [
+                    "kc-img"
+                  ],
+                  "style": "width:105px;height:120px;border-radius:6px"
+                },
+                "image": {
+                  "attributes": {
+                    "src": "../assets/images/kc/stock/city.jpg",
+                    "alt": "City skyline at sunset",
+                    "onerror": "this.style.display='none'"
+                  }
+                }
+              }
+            ],
+            "controls": []
+          }
+        }
+      },
+      "mobile-main-square": {
+        "id": "mobile-main-square",
+        "type": "main",
+        "platform": "mobile",
+        "render": {
+          "root": {
+            "tag": "section",
+            "attributes": {
+              "class": [
+                "kc-module",
+                "kc-module--mobile",
+                "kc-mobile-image-list-main",
+                "kc-mobile-image-list-main--square"
+              ],
+              "data-kc": "Mobile / Image List / Main",
+              "data-kc-variant": "Shape=Square"
+            }
+          },
+          "content": {
+            "heading": {
+              "tag": "div",
+              "attributes": {
+                "class": [
+                  "kc-module-title"
+                ]
+              },
+              "heading": {
+                "tag": "h3",
+                "attributes": {},
+                "text": "Stock portraits"
+              },
+              "trailing": null
+            },
+            "list": {
+              "tag": "div",
+              "attributes": {
+                "class": [
+                  "kc-scroll-row"
+                ]
+              }
+            },
+            "items": [
+              {
+                "tag": "article",
+                "attributes": {
+                  "class": [
+                    "kc-card",
+                    "kc-mobile-image-title-sub-title"
+                  ],
+                  "data-kc": "Mobile / Image,Title,Sub-Title"
+                },
+                "image": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-img"
+                    ],
+                    "style": "width:84px;height:84px;border-radius:0px"
+                  },
+                  "image": {
+                    "attributes": {
+                      "src": "../assets/images/kc/stock/portrait-a.jpg",
+                      "alt": "Illustrative stock portrait of a person in a gray sweater",
+                      "onerror": "this.style.display='none'"
+                    }
+                  }
+                },
+                "text": {
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-mobile-image-title-sub-title__text"
+                    ]
+                  }
+                },
+                "title": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-m-bold",
+                      "kc-m-nols"
+                    ]
+                  },
+                  "text": "Sam Okafor"
+                },
+                "subtitle": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-mobile-image-title-sub-title__sub"
+                    ]
+                  },
+                  "text": "Actor"
+                }
+              },
+              {
+                "tag": "article",
+                "attributes": {
+                  "class": [
+                    "kc-card",
+                    "kc-mobile-image-title-sub-title"
+                  ],
+                  "data-kc": "Mobile / Image,Title,Sub-Title"
+                },
+                "image": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-img"
+                    ],
+                    "style": "width:84px;height:84px;border-radius:0px"
+                  },
+                  "image": {
+                    "attributes": {
+                      "src": "../assets/images/kc/stock/portrait-b.jpg",
+                      "alt": "Illustrative stock portrait of a person against a blue background",
+                      "onerror": "this.style.display='none'"
+                    }
+                  }
+                },
+                "text": {
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-mobile-image-title-sub-title__text"
+                    ]
+                  }
+                },
+                "title": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-m-bold",
+                      "kc-m-nols"
+                    ]
+                  },
+                  "text": "Riley Chen"
+                },
+                "subtitle": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-mobile-image-title-sub-title__sub"
+                    ]
+                  },
+                  "text": "Actor"
+                }
+              },
+              {
+                "tag": "article",
+                "attributes": {
+                  "class": [
+                    "kc-card",
+                    "kc-mobile-image-title-sub-title"
+                  ],
+                  "data-kc": "Mobile / Image,Title,Sub-Title"
+                },
+                "image": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-img"
+                    ],
+                    "style": "width:84px;height:84px;border-radius:0px"
+                  },
+                  "image": {
+                    "attributes": {
+                      "src": "../assets/images/kc/stock/portrait-c.jpg",
+                      "alt": "Illustrative stock portrait of a person in a dark sweater",
+                      "onerror": "this.style.display='none'"
+                    }
+                  }
+                },
+                "text": {
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-mobile-image-title-sub-title__text"
+                    ]
+                  }
+                },
+                "title": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-m-bold",
+                      "kc-m-nols"
+                    ]
+                  },
+                  "text": "Taylor Kim"
+                },
+                "subtitle": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-mobile-image-title-sub-title__sub"
+                    ]
+                  },
+                  "text": "Actor"
+                }
+              },
+              {
+                "tag": "article",
+                "attributes": {
+                  "class": [
+                    "kc-card",
+                    "kc-mobile-image-title-sub-title"
+                  ],
+                  "data-kc": "Mobile / Image,Title,Sub-Title"
+                },
+                "image": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-img"
+                    ],
+                    "style": "width:84px;height:84px;border-radius:0px"
+                  },
+                  "image": {
+                    "attributes": {
+                      "src": "../assets/images/kc/stock/portrait-d.jpg",
+                      "alt": "Illustrative stock portrait of a person in a white shirt",
+                      "onerror": "this.style.display='none'"
+                    }
+                  }
+                },
+                "text": {
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-mobile-image-title-sub-title__text"
+                    ]
+                  }
+                },
+                "title": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-m-bold",
+                      "kc-m-nols"
+                    ]
+                  },
+                  "text": "Casey Brooks"
+                },
+                "subtitle": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-mobile-image-title-sub-title__sub"
+                    ]
+                  },
+                  "text": "Actor"
+                }
+              },
+              {
+                "tag": "article",
+                "attributes": {
+                  "class": [
+                    "kc-card",
+                    "kc-mobile-image-title-sub-title"
+                  ],
+                  "data-kc": "Mobile / Image,Title,Sub-Title"
+                },
+                "image": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-img"
+                    ],
+                    "style": "width:84px;height:84px;border-radius:0px"
+                  },
+                  "image": {
+                    "attributes": {
+                      "src": "../assets/images/kc/stock/portrait-e.jpg",
+                      "alt": "Illustrative stock portrait of a person against a red wall",
+                      "onerror": "this.style.display='none'"
+                    }
+                  }
+                },
+                "text": {
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-mobile-image-title-sub-title__text"
+                    ]
+                  }
+                },
+                "title": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-m-bold",
+                      "kc-m-nols"
+                    ]
+                  },
+                  "text": "Jordan Reyes"
+                },
+                "subtitle": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-mobile-image-title-sub-title__sub"
+                    ]
+                  },
+                  "text": "Actor"
+                }
+              }
+            ]
+          }
+        }
+      },
+      "mobile-main-rectangle": {
+        "id": "mobile-main-rectangle",
+        "type": "main",
+        "platform": "mobile",
+        "render": {
+          "root": {
+            "tag": "section",
+            "attributes": {
+              "class": [
+                "kc-module",
+                "kc-module--mobile",
+                "kc-mobile-image-list-main",
+                "kc-mobile-image-list-main--rectangle"
+              ],
+              "data-kc": "Mobile / Image List / Main",
+              "data-kc-variant": "Shape=Rectangle"
+            }
+          },
+          "content": {
+            "heading": {
+              "tag": "div",
+              "attributes": {
+                "class": [
+                  "kc-module-title"
+                ]
+              },
+              "heading": {
+                "tag": "h3",
+                "attributes": {},
+                "text": "Stock portraits"
+              },
+              "trailing": null
+            },
+            "list": {
+              "tag": "div",
+              "attributes": {
+                "class": [
+                  "kc-scroll-row"
+                ]
+              }
+            },
+            "items": [
+              {
+                "tag": "article",
+                "attributes": {
+                  "class": [
+                    "kc-card",
+                    "kc-mobile-image-title-sub-title"
+                  ],
+                  "data-kc": "Mobile / Image,Title,Sub-Title"
+                },
+                "image": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-img"
+                    ],
+                    "style": "width:100px;height:150px;border-radius:0px"
+                  },
+                  "image": {
+                    "attributes": {
+                      "src": "../assets/images/kc/stock/portrait-a.jpg",
+                      "alt": "Illustrative stock portrait of a person in a gray sweater",
+                      "onerror": "this.style.display='none'"
+                    }
+                  }
+                },
+                "text": {
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-mobile-image-title-sub-title__text"
+                    ]
+                  }
+                },
+                "title": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-m-bold",
+                      "kc-m-nols"
+                    ]
+                  },
+                  "text": "Sam Okafor"
+                },
+                "subtitle": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-mobile-image-title-sub-title__sub"
+                    ]
+                  },
+                  "text": "Actor"
+                }
+              },
+              {
+                "tag": "article",
+                "attributes": {
+                  "class": [
+                    "kc-card",
+                    "kc-mobile-image-title-sub-title"
+                  ],
+                  "data-kc": "Mobile / Image,Title,Sub-Title"
+                },
+                "image": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-img"
+                    ],
+                    "style": "width:100px;height:150px;border-radius:0px"
+                  },
+                  "image": {
+                    "attributes": {
+                      "src": "../assets/images/kc/stock/portrait-b.jpg",
+                      "alt": "Illustrative stock portrait of a person against a blue background",
+                      "onerror": "this.style.display='none'"
+                    }
+                  }
+                },
+                "text": {
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-mobile-image-title-sub-title__text"
+                    ]
+                  }
+                },
+                "title": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-m-bold",
+                      "kc-m-nols"
+                    ]
+                  },
+                  "text": "Riley Chen"
+                },
+                "subtitle": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-mobile-image-title-sub-title__sub"
+                    ]
+                  },
+                  "text": "Actor"
+                }
+              },
+              {
+                "tag": "article",
+                "attributes": {
+                  "class": [
+                    "kc-card",
+                    "kc-mobile-image-title-sub-title"
+                  ],
+                  "data-kc": "Mobile / Image,Title,Sub-Title"
+                },
+                "image": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-img"
+                    ],
+                    "style": "width:100px;height:150px;border-radius:0px"
+                  },
+                  "image": {
+                    "attributes": {
+                      "src": "../assets/images/kc/stock/portrait-c.jpg",
+                      "alt": "Illustrative stock portrait of a person in a dark sweater",
+                      "onerror": "this.style.display='none'"
+                    }
+                  }
+                },
+                "text": {
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-mobile-image-title-sub-title__text"
+                    ]
+                  }
+                },
+                "title": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-m-bold",
+                      "kc-m-nols"
+                    ]
+                  },
+                  "text": "Taylor Kim"
+                },
+                "subtitle": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-mobile-image-title-sub-title__sub"
+                    ]
+                  },
+                  "text": "Actor"
+                }
+              },
+              {
+                "tag": "article",
+                "attributes": {
+                  "class": [
+                    "kc-card",
+                    "kc-mobile-image-title-sub-title"
+                  ],
+                  "data-kc": "Mobile / Image,Title,Sub-Title"
+                },
+                "image": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-img"
+                    ],
+                    "style": "width:100px;height:150px;border-radius:0px"
+                  },
+                  "image": {
+                    "attributes": {
+                      "src": "../assets/images/kc/stock/portrait-d.jpg",
+                      "alt": "Illustrative stock portrait of a person in a white shirt",
+                      "onerror": "this.style.display='none'"
+                    }
+                  }
+                },
+                "text": {
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-mobile-image-title-sub-title__text"
+                    ]
+                  }
+                },
+                "title": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-m-bold",
+                      "kc-m-nols"
+                    ]
+                  },
+                  "text": "Casey Brooks"
+                },
+                "subtitle": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-mobile-image-title-sub-title__sub"
+                    ]
+                  },
+                  "text": "Actor"
+                }
+              },
+              {
+                "tag": "article",
+                "attributes": {
+                  "class": [
+                    "kc-card",
+                    "kc-mobile-image-title-sub-title"
+                  ],
+                  "data-kc": "Mobile / Image,Title,Sub-Title"
+                },
+                "image": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-img"
+                    ],
+                    "style": "width:100px;height:150px;border-radius:0px"
+                  },
+                  "image": {
+                    "attributes": {
+                      "src": "../assets/images/kc/stock/portrait-e.jpg",
+                      "alt": "Illustrative stock portrait of a person against a red wall",
+                      "onerror": "this.style.display='none'"
+                    }
+                  }
+                },
+                "text": {
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-mobile-image-title-sub-title__text"
+                    ]
+                  }
+                },
+                "title": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-m-bold",
+                      "kc-m-nols"
+                    ]
+                  },
+                  "text": "Jordan Reyes"
+                },
+                "subtitle": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-mobile-image-title-sub-title__sub"
+                    ]
+                  },
+                  "text": "Actor"
+                }
+              }
+            ]
+          }
+        }
+      },
+      "mobile-places-to-visit": {
+        "id": "mobile-places-to-visit",
+        "type": "places-to-visit",
+        "platform": "mobile",
+        "render": {
+          "root": {
+            "tag": "section",
+            "attributes": {
+              "class": [
+                "kc-module",
+                "kc-module--mobile",
+                "kc-mobile-image-list-places-to-visit"
+              ],
+              "data-kc": "Mobile / Image List / Places to Visit"
+            }
+          },
+          "content": {
+            "heading": {
+              "tag": "div",
+              "attributes": {
+                "class": [
+                  "kc-module-title"
+                ]
+              },
+              "heading": {
+                "tag": "h3",
+                "attributes": {},
+                "text": "Places of Interest"
+              },
+              "trailing": null
+            },
+            "list": {
+              "tag": "div",
+              "attributes": {
+                "class": [
+                  "kc-mobile-image-list-places-to-visit__items"
+                ]
+              }
+            },
+            "items": [
+              {
+                "tag": "div",
+                "attributes": {
+                  "class": [
+                    "kc-mobile-image-title",
+                    "kc-mobile-image-list-places-to-visit__item"
+                  ],
+                  "data-kc": "Mobile / Image + Title"
+                },
+                "image": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-img"
+                    ],
+                    "style": "width:78px;height:88px;border-radius:6px"
+                  },
+                  "image": {
+                    "attributes": {
+                      "src": "../assets/images/kc/stock/taj-mahal.jpg",
+                      "alt": "Taj Mahal monument with a reflecting pool",
+                      "onerror": "this.style.display='none'"
+                    }
+                  }
+                },
+                "title": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-mobile-image-title__name"
+                    ]
+                  },
+                  "text": "Taj Mahal"
+                }
+              },
+              {
+                "tag": "div",
+                "attributes": {
+                  "class": [
+                    "kc-mobile-image-title",
+                    "kc-mobile-image-list-places-to-visit__item"
+                  ],
+                  "data-kc": "Mobile / Image + Title"
+                },
+                "image": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-img"
+                    ],
+                    "style": "width:78px;height:78px;border-radius:6px"
+                  },
+                  "image": {
+                    "attributes": {
+                      "src": "../assets/images/kc/stock/jaipur.jpg",
+                      "alt": "Hawa Mahal palace facade in Jaipur",
+                      "onerror": "this.style.display='none'"
+                    }
+                  }
+                },
+                "title": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-mobile-image-title__name"
+                    ]
+                  },
+                  "text": "Hawa Mahal"
+                }
+              },
+              {
+                "tag": "div",
+                "attributes": {
+                  "class": [
+                    "kc-mobile-image-title",
+                    "kc-mobile-image-list-places-to-visit__item"
+                  ],
+                  "data-kc": "Mobile / Image + Title"
+                },
+                "image": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-img"
+                    ],
+                    "style": "width:78px;height:88px;border-radius:6px"
+                  },
+                  "image": {
+                    "attributes": {
+                      "src": "../assets/images/kc/stock/kerala.jpg",
+                      "alt": "Houseboat on Kerala backwaters",
+                      "onerror": "this.style.display='none'"
+                    }
+                  }
+                },
+                "title": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-mobile-image-title__name"
+                    ]
+                  },
+                  "text": "Kerala"
+                }
+              }
+            ]
+          }
+        }
+      },
+      "mobile-ingredients": {
+        "id": "mobile-ingredients",
+        "type": "ingredients",
+        "platform": "mobile",
+        "render": {
+          "root": {
+            "tag": "section",
+            "attributes": {
+              "class": [
+                "kc-module",
+                "kc-module--mobile",
+                "kc-mobile-image-list-ingredients"
+              ],
+              "data-kc": "Mobile / Image List / Ingredients"
+            }
+          },
+          "content": {
+            "heading": {
+              "tag": "div",
+              "attributes": {
+                "class": [
+                  "kc-module-title"
+                ]
+              },
+              "heading": {
+                "tag": "h3",
+                "attributes": {},
+                "text": "Food and plant photos"
+              },
+              "trailing": null
+            },
+            "list": {
+              "tag": "div",
+              "attributes": {
+                "class": [
+                  "kc-mobile-image-list-ingredients__list"
+                ]
+              }
+            },
+            "rows": [
+              {
+                "tag": "div",
+                "attributes": {
+                  "class": [
+                    "kc-mobile-image-list-ingredients__row"
+                  ]
+                },
+                "items": [
+                  {
+                    "tag": "div",
+                    "attributes": {
+                      "class": [
+                        "kc-mobile-image-list-ingredients__item"
+                      ]
+                    },
+                    "image": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-img"
+                        ],
+                        "style": "width:32px;height:32px;border-radius:20px"
+                      },
+                      "image": {
+                        "attributes": {
+                          "src": "../assets/images/kc/stock/salad.jpg",
+                          "alt": "Bowl of salad with vegetables",
+                          "onerror": "this.style.display='none'"
+                        }
+                      }
+                    },
+                    "label": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-m-bold"
+                        ]
+                      },
+                      "text": "Vegetable salad"
+                    }
+                  },
+                  {
+                    "tag": "div",
+                    "attributes": {
+                      "class": [
+                        "kc-mobile-image-list-ingredients__item"
+                      ]
+                    },
+                    "image": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-img"
+                        ],
+                        "style": "width:32px;height:32px;border-radius:20px"
+                      },
+                      "image": {
+                        "attributes": {
+                          "src": "../assets/images/kc/stock/foliage-dark.jpg",
+                          "alt": "Close-up of overlapping green leaves",
+                          "onerror": "this.style.display='none'"
+                        }
+                      }
+                    },
+                    "label": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-m-bold"
+                        ]
+                      },
+                      "text": "Green leaves"
+                    }
+                  }
+                ]
+              },
+              {
+                "tag": "div",
+                "attributes": {
+                  "class": [
+                    "kc-mobile-image-list-ingredients__row"
+                  ]
+                },
+                "items": [
+                  {
+                    "tag": "div",
+                    "attributes": {
+                      "class": [
+                        "kc-mobile-image-list-ingredients__item"
+                      ]
+                    },
+                    "image": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-img"
+                        ],
+                        "style": "width:32px;height:32px;border-radius:20px"
+                      },
+                      "image": {
+                        "attributes": {
+                          "src": "../assets/images/kc/stock/potted-plant.jpg",
+                          "alt": "Ferns filling a shaded frame",
+                          "onerror": "this.style.display='none'"
+                        }
+                      }
+                    },
+                    "label": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-m-bold"
+                        ]
+                      },
+                      "text": "Fern fronds"
+                    }
+                  },
+                  {
+                    "tag": "div",
+                    "attributes": {
+                      "class": [
+                        "kc-mobile-image-list-ingredients__item"
+                      ]
+                    },
+                    "image": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-img"
+                        ],
+                        "style": "width:32px;height:32px;border-radius:20px"
+                      },
+                      "image": {
+                        "attributes": {
+                          "src": "../assets/images/kc/stock/salad.jpg",
+                          "alt": "Bowl of salad with vegetables",
+                          "onerror": "this.style.display='none'"
+                        }
+                      }
+                    },
+                    "label": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-m-bold"
+                        ]
+                      },
+                      "text": "Vegetable salad"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "mobile-interesting-facts-3-image": {
+        "id": "mobile-interesting-facts-3-image",
+        "type": "interesting-facts",
+        "platform": "mobile",
+        "render": {
+          "root": {
+            "tag": "section",
+            "attributes": {
+              "class": [
+                "kc-module",
+                "kc-module--mobile",
+                "kc-mobile-image-list-interesting-facts",
+                "kc-mobile-image-list-interesting-facts--3-image"
+              ],
+              "data-kc": "Mobile / Image List / Interesting Facts",
+              "data-kc-variant": "Image Amount=3-Image"
+            }
+          },
+          "content": {
+            "blocks": [
+              {
+                "kind": "group",
+                "tag": "div",
+                "attributes": {
+                  "class": [
+                    "kc-mobile-image-list-interesting-facts__row"
+                  ]
+                },
+                "parts": [
+                  {
+                    "kind": "text",
+                    "tag": "div",
+                    "attributes": {
+                      "class": [
+                        "kc-mobile-image-list-interesting-facts__text"
+                      ]
+                    },
+                    "lines": [
+                      {
+                        "kind": "field",
+                        "field": {
+                          "tag": "p",
+                          "attributes": {
+                            "class": [
+                              "kc-m-reg",
+                              "kc-mobile-image-list-interesting-facts__copy"
+                            ],
+                            "style": "width:218px;height:116px;"
+                          },
+                          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation."
+                        }
+                      },
+                      {
+                        "kind": "divider",
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-m-divider"
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "image",
+                    "image": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-img"
+                        ],
+                        "style": "width:89px;height:134px;border-radius:6px"
+                      },
+                      "image": {
+                        "attributes": {
+                          "src": "../assets/images/kc/stock/mountain-lake.jpg",
+                          "alt": "Mountain lake beside a forest and cabin",
+                          "onerror": "this.style.display='none'"
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "kind": "group",
+                "tag": "div",
+                "attributes": {
+                  "class": [
+                    "kc-mobile-image-list-interesting-facts__row",
+                    "kc-mobile-image-list-interesting-facts__row--reverse"
+                  ]
+                },
+                "parts": [
+                  {
+                    "kind": "image",
+                    "image": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-img"
+                        ],
+                        "style": "width:90px;height:106px;border-radius:6px"
+                      },
+                      "image": {
+                        "attributes": {
+                          "src": "../assets/images/kc/stock/maple-green.jpg",
+                          "alt": "Green Japanese maple leaves",
+                          "onerror": "this.style.display='none'"
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "kind": "text",
+                    "tag": "div",
+                    "attributes": {
+                      "class": [
+                        "kc-mobile-image-list-interesting-facts__text"
+                      ]
+                    },
+                    "lines": [
+                      {
+                        "kind": "field",
+                        "field": {
+                          "tag": "p",
+                          "attributes": {
+                            "class": [
+                              "kc-m-reg",
+                              "kc-mobile-image-list-interesting-facts__copy"
+                            ],
+                            "style": "width:217px;height:98px;text-align:right;"
+                          },
+                          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                        }
+                      },
+                      {
+                        "kind": "divider",
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-m-divider"
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "kind": "group",
+                "tag": "div",
+                "attributes": {
+                  "class": [
+                    "kc-mobile-image-list-interesting-facts__row"
+                  ]
+                },
+                "parts": [
+                  {
+                    "kind": "paragraph",
+                    "field": {
+                      "tag": "p",
+                      "attributes": {
+                        "class": [
+                          "kc-m-reg",
+                          "kc-mobile-image-list-interesting-facts__copy"
+                        ],
+                        "style": "width:203px;height:98px;"
+                      },
+                      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                    }
+                  },
+                  {
+                    "kind": "image",
+                    "image": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-img"
+                        ],
+                        "style": "width:104px;height:93px;border-radius:6px"
+                      },
+                      "image": {
+                        "attributes": {
+                          "src": "../assets/images/kc/stock/earth.jpg",
+                          "alt": "Earth viewed from orbit",
+                          "onerror": "this.style.display='none'"
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "mobile-interesting-facts-2-image": {
+        "id": "mobile-interesting-facts-2-image",
+        "type": "interesting-facts",
+        "platform": "mobile",
+        "render": {
+          "root": {
+            "tag": "section",
+            "attributes": {
+              "class": [
+                "kc-module",
+                "kc-module--mobile",
+                "kc-mobile-image-list-interesting-facts",
+                "kc-mobile-image-list-interesting-facts--2-image"
+              ],
+              "data-kc": "Mobile / Image List / Interesting Facts",
+              "data-kc-variant": "Image Amount=2-Image"
+            }
+          },
+          "content": {
+            "blocks": [
+              {
+                "kind": "group",
+                "tag": "div",
+                "attributes": {
+                  "class": [
+                    "kc-mobile-image-list-interesting-facts__row"
+                  ]
+                },
+                "parts": [
+                  {
+                    "kind": "text",
+                    "tag": "div",
+                    "attributes": {
+                      "class": [
+                        "kc-mobile-image-list-interesting-facts__text"
+                      ]
+                    },
+                    "lines": [
+                      {
+                        "kind": "field",
+                        "field": {
+                          "tag": "p",
+                          "attributes": {
+                            "class": [
+                              "kc-m-reg",
+                              "kc-mobile-image-list-interesting-facts__copy"
+                            ],
+                            "style": "width:203px;height:80px;"
+                          },
+                          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore."
+                        }
+                      },
+                      {
+                        "kind": "divider",
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-m-divider"
+                          ]
+                        }
+                      },
+                      {
+                        "kind": "field",
+                        "field": {
+                          "tag": "p",
+                          "attributes": {
+                            "class": [
+                              "kc-m-reg",
+                              "kc-mobile-image-list-interesting-facts__copy"
+                            ],
+                            "style": "width:203px;height:63px;"
+                          },
+                          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "image",
+                    "image": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-img"
+                        ],
+                        "style": "width:104px;height:142px;border-radius:6px"
+                      },
+                      "image": {
+                        "attributes": {
+                          "src": "../assets/images/kc/stock/mountain-lake.jpg",
+                          "alt": "Mountain lake beside a forest and cabin",
+                          "onerror": "this.style.display='none'"
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "kind": "group",
+                "tag": "div",
+                "attributes": {
+                  "class": [
+                    "kc-mobile-image-list-interesting-facts__row",
+                    "kc-mobile-image-list-interesting-facts__row--reverse"
+                  ]
+                },
+                "parts": [
+                  {
+                    "kind": "image",
+                    "image": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-img"
+                        ],
+                        "style": "width:106px;height:93px;border-radius:6px"
+                      },
+                      "image": {
+                        "attributes": {
+                          "src": "../assets/images/kc/stock/maple-green.jpg",
+                          "alt": "Green Japanese maple leaves",
+                          "onerror": "this.style.display='none'"
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "kind": "text",
+                    "tag": "div",
+                    "attributes": {
+                      "class": [
+                        "kc-mobile-image-list-interesting-facts__text"
+                      ]
+                    },
+                    "lines": [
+                      {
+                        "kind": "divider",
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-m-divider"
+                          ]
+                        }
+                      },
+                      {
+                        "kind": "field",
+                        "field": {
+                          "tag": "p",
+                          "attributes": {
+                            "class": [
+                              "kc-m-reg",
+                              "kc-mobile-image-list-interesting-facts__copy"
+                            ],
+                            "style": "width:201px;height:80px;text-align:right;"
+                          },
+                          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et."
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "mobile-interesting-facts-1-image": {
+        "id": "mobile-interesting-facts-1-image",
+        "type": "interesting-facts",
+        "platform": "mobile",
+        "render": {
+          "root": {
+            "tag": "section",
+            "attributes": {
+              "class": [
+                "kc-module",
+                "kc-module--mobile",
+                "kc-mobile-image-list-interesting-facts",
+                "kc-mobile-image-list-interesting-facts--1-image"
+              ],
+              "data-kc": "Mobile / Image List / Interesting Facts",
+              "data-kc-variant": "Image Amount=1-Image"
+            }
+          },
+          "content": {
+            "blocks": [
+              {
+                "kind": "text",
+                "tag": "div",
+                "attributes": {
+                  "class": [
+                    "kc-mobile-image-list-interesting-facts__text"
+                  ]
+                },
+                "lines": [
+                  {
+                    "kind": "field",
+                    "field": {
+                      "tag": "p",
+                      "attributes": {
+                        "class": [
+                          "kc-m-reg",
+                          "kc-mobile-image-list-interesting-facts__copy"
+                        ],
+                        "style": "width:209px;height:98px;"
+                      },
+                      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                    }
+                  },
+                  {
+                    "kind": "divider",
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-m-divider"
+                      ]
+                    }
+                  },
+                  {
+                    "kind": "field",
+                    "field": {
+                      "tag": "p",
+                      "attributes": {
+                        "class": [
+                          "kc-m-reg",
+                          "kc-mobile-image-list-interesting-facts__copy"
+                        ],
+                        "style": "width:319px;height:80px;"
+                      },
+                      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation."
+                    }
+                  }
+                ]
+              },
+              {
+                "kind": "image",
+                "image": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-img"
+                    ],
+                    "style": "width:98px;height:112px;border-radius:6px"
+                  },
+                  "image": {
+                    "attributes": {
+                      "src": "../assets/images/kc/stock/mountain-lake.jpg",
+                      "alt": "Mountain lake beside a forest and cabin",
+                      "onerror": "this.style.display='none'"
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        }
+      },
+      "mobile-interesting-facts-none": {
+        "id": "mobile-interesting-facts-none",
+        "type": "interesting-facts",
+        "platform": "mobile",
+        "render": {
+          "root": {
+            "tag": "section",
+            "attributes": {
+              "class": [
+                "kc-module",
+                "kc-module--mobile",
+                "kc-mobile-image-list-interesting-facts",
+                "kc-mobile-image-list-interesting-facts--none"
+              ],
+              "data-kc": "Mobile / Image List / Interesting Facts",
+              "data-kc-variant": "Image Amount=None"
+            }
+          },
+          "content": {
+            "blocks": [
+              {
+                "kind": "text",
+                "tag": "div",
+                "attributes": {
+                  "class": [
+                    "kc-mobile-image-list-interesting-facts__text"
+                  ]
+                },
+                "lines": [
+                  {
+                    "kind": "field",
+                    "field": {
+                      "tag": "p",
+                      "attributes": {
+                        "class": [
+                          "kc-m-reg",
+                          "kc-mobile-image-list-interesting-facts__copy"
+                        ],
+                        "style": "width:328px;height:62px; /* #053 */"
+                      },
+                      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "card-desktop-places-to-visit": {
+        "id": "card-desktop-places-to-visit",
+        "type": "places-to-visit",
+        "platform": "desktop",
+        "render": {
+          "root": {
+            "tag": "section",
+            "attributes": {
+              "class": [
+                "kc-module",
+                "kc-image-list-places-to-visit"
+              ],
+              "id": "kc-mod-places",
+              "data-kc": "Image List / Places to Visit",
+              "aria-labelledby": "kc-title-places"
+            }
+          },
+          "content": {
+            "heading": {
+              "tag": "div",
+              "attributes": {
+                "class": [
+                  "kc-module-title"
+                ]
+              },
+              "heading": {
+                "tag": "h3",
+                "attributes": {
+                  "id": "kc-title-places"
+                },
+                "text": "Top places to visit"
+              },
+              "trailing": null
+            },
+            "list": {
+              "tag": "div",
+              "attributes": {
+                "class": [
+                  "kc-image-list-places-to-visit__items"
+                ]
+              }
+            },
+            "items": [
+              {
+                "tag": "div",
+                "attributes": {
+                  "class": [
+                    "kc-image-list-places-to-visit__item"
+                  ]
+                },
+                "image": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-img"
+                    ],
+                    "style": "width:100px;height:116px;border-radius:6px"
+                  },
+                  "image": {
+                    "attributes": {
+                      "src": "../assets/images/kc/stock/taj-mahal.jpg",
+                      "alt": "Taj Mahal monument with a reflecting pool",
+                      "onerror": "this.style.display='none'"
+                    }
+                  }
+                },
+                "title": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-copy"
+                    ]
+                  },
+                  "text": "Taj Mahal"
+                }
+              },
+              {
+                "tag": "div",
+                "attributes": {
+                  "class": [
+                    "kc-image-list-places-to-visit__item"
+                  ]
+                },
+                "image": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-img"
+                    ],
+                    "style": "width:100px;height:100px;border-radius:6px"
+                  },
+                  "image": {
+                    "attributes": {
+                      "src": "../assets/images/kc/stock/jaipur.jpg",
+                      "alt": "Hawa Mahal palace facade in Jaipur",
+                      "onerror": "this.style.display='none'"
+                    }
+                  }
+                },
+                "title": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-copy"
+                    ]
+                  },
+                  "text": "Hawa Mahal"
+                }
+              },
+              {
+                "tag": "div",
+                "attributes": {
+                  "class": [
+                    "kc-image-list-places-to-visit__item"
+                  ]
+                },
+                "image": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-img"
+                    ],
+                    "style": "width:100px;height:116px;border-radius:6px"
+                  },
+                  "image": {
+                    "attributes": {
+                      "src": "../assets/images/kc/stock/kerala.jpg",
+                      "alt": "Houseboat on Kerala backwaters",
+                      "onerror": "this.style.display='none'"
+                    }
+                  }
+                },
+                "title": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-copy"
+                    ]
+                  },
+                  "text": "Kerala"
+                }
+              }
+            ]
+          }
+        }
+      },
+      "card-desktop-main-square": {
+        "id": "card-desktop-main-square",
+        "type": "main",
+        "platform": "desktop",
+        "render": {
+          "root": {
+            "tag": "section",
+            "attributes": {
+              "class": [
+                "kc-module",
+                "kc-image-list-main",
+                "kc-image-list-main--square"
+              ],
+              "id": "kc-mod-main",
+              "data-kc": "Image List / Main",
+              "aria-labelledby": "kc-title-main"
+            }
+          },
+          "content": {
+            "heading": {
+              "tag": "div",
+              "attributes": {
+                "class": [
+                  "kc-module-title"
+                ]
+              },
+              "heading": {
+                "tag": "h3",
+                "attributes": {
+                  "id": "kc-title-main"
+                },
+                "text": "Image examples"
+              },
+              "trailing": {
+                "tag": "a",
+                "attributes": {
+                  "class": [
+                    "kc-link"
+                  ],
+                  "href": "#",
+                  "aria-label": "See all image examples"
+                },
+                "wrapper": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-title-chevron"
+                    ]
+                  }
+                },
+                "icon": {
+                  "tag": "img",
+                  "attributes": {
+                    "src": "../assets/icons/ic_fluent_chevron_right_16_regular.svg",
+                    "alt": "",
+                    "aria-hidden": "true"
+                  }
+                }
+              }
+            },
+            "list": {
+              "tag": "div",
+              "attributes": {
+                "class": [
+                  "kc-image-list-main__tiles"
+                ]
+              }
+            },
+            "items": [
+              {
+                "tag": "div",
+                "attributes": {
+                  "class": [
+                    "kc-image-list-main__tile"
+                  ]
+                },
+                "image": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-img"
+                    ],
+                    "style": "width:80px;height:80px;border-radius:6px"
+                  },
+                  "image": {
+                    "attributes": {
+                      "src": "../assets/images/kc/stock/mountain-lake.jpg",
+                      "alt": "Mountain lake beside a forest and cabin",
+                      "onerror": "this.style.display='none'"
+                    }
+                  }
+                },
+                "text": {
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-image-list-main__tile-text"
+                    ]
+                  }
+                },
+                "title": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-copy-bold"
+                    ]
+                  },
+                  "text": "Mountain lake"
+                },
+                "subtitle": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-copy-small"
+                    ]
+                  },
+                  "text": "Stock photo"
+                }
+              },
+              {
+                "tag": "div",
+                "attributes": {
+                  "class": [
+                    "kc-image-list-main__tile"
+                  ]
+                },
+                "image": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-img"
+                    ],
+                    "style": "width:80px;height:80px;border-radius:6px"
+                  },
+                  "image": {
+                    "attributes": {
+                      "src": "../assets/images/kc/stock/city.jpg",
+                      "alt": "City skyline at sunset",
+                      "onerror": "this.style.display='none'"
+                    }
+                  }
+                },
+                "text": {
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-image-list-main__tile-text"
+                    ]
+                  }
+                },
+                "title": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-copy-bold"
+                    ]
+                  },
+                  "text": "City skyline"
+                },
+                "subtitle": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-copy-small"
+                    ]
+                  },
+                  "text": "Stock photo"
+                }
+              },
+              {
+                "tag": "div",
+                "attributes": {
+                  "class": [
+                    "kc-image-list-main__tile"
+                  ]
+                },
+                "image": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-img"
+                    ],
+                    "style": "width:80px;height:80px;border-radius:6px"
+                  },
+                  "image": {
+                    "attributes": {
+                      "src": "../assets/images/kc/stock/forest.jpg",
+                      "alt": "Evergreen forest at sunset",
+                      "onerror": "this.style.display='none'"
+                    }
+                  }
+                },
+                "text": {
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-image-list-main__tile-text"
+                    ]
+                  }
+                },
+                "title": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-copy-bold"
+                    ]
+                  },
+                  "text": "Evergreen forest"
+                },
+                "subtitle": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-copy-small"
+                    ]
+                  },
+                  "text": "Stock photo"
+                }
+              },
+              {
+                "tag": "div",
+                "attributes": {
+                  "class": [
+                    "kc-image-list-main__tile"
+                  ]
+                },
+                "image": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-img"
+                    ],
+                    "style": "width:80px;height:80px;border-radius:6px"
+                  },
+                  "image": {
+                    "attributes": {
+                      "src": "../assets/images/kc/stock/mountain-lake.jpg",
+                      "alt": "Mountain lake beside a forest and cabin",
+                      "onerror": "this.style.display='none'"
+                    }
+                  }
+                },
+                "text": {
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-image-list-main__tile-text"
+                    ]
+                  }
+                },
+                "title": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-copy-bold"
+                    ]
+                  },
+                  "text": "Mountain lake"
+                },
+                "subtitle": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-copy-small"
+                    ]
+                  },
+                  "text": "Stock photo"
+                }
+              },
+              {
+                "tag": "div",
+                "attributes": {
+                  "class": [
+                    "kc-image-list-main__tile"
+                  ]
+                },
+                "image": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-img"
+                    ],
+                    "style": "width:80px;height:80px;border-radius:6px"
+                  },
+                  "image": {
+                    "attributes": {
+                      "src": "../assets/images/kc/stock/city.jpg",
+                      "alt": "City skyline at sunset",
+                      "onerror": "this.style.display='none'"
+                    }
+                  }
+                },
+                "text": {
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-image-list-main__tile-text"
+                    ]
+                  }
+                },
+                "title": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-copy-bold"
+                    ]
+                  },
+                  "text": "City skyline"
+                },
+                "subtitle": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-copy-small"
+                    ]
+                  },
+                  "text": "Stock photo"
+                }
+              }
+            ]
+          }
+        }
+      },
+      "card-mobile-places-to-visit": {
+        "id": "card-mobile-places-to-visit",
+        "type": "places-to-visit",
+        "platform": "mobile",
+        "render": {
+          "root": {
+            "tag": "section",
+            "attributes": {
+              "class": [
+                "kc-module",
+                "kc-module--mobile",
+                "kc-mobile-image-list-places-to-visit"
+              ],
+              "id": "kc-mobile-places",
+              "data-kc": "Mobile / Image List / Places to Visit"
+            }
+          },
+          "content": {
+            "heading": {
+              "tag": "div",
+              "attributes": {
+                "class": [
+                  "kc-module-title"
+                ]
+              },
+              "heading": {
+                "tag": "h3",
+                "attributes": {},
+                "text": "Places of Interest"
+              },
+              "trailing": null
+            },
+            "list": {
+              "tag": "div",
+              "attributes": {
+                "class": [
+                  "kc-mobile-image-list-places-to-visit__items"
+                ]
+              }
+            },
+            "items": [
+              {
+                "tag": "div",
+                "attributes": {
+                  "class": [
+                    "kc-mobile-image-title",
+                    "kc-mobile-image-list-places-to-visit__item"
+                  ],
+                  "data-kc": "Mobile / Image + Title"
+                },
+                "image": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-img"
+                    ],
+                    "style": "width:78px;height:88px;border-radius:6px"
+                  },
+                  "image": {
+                    "attributes": {
+                      "src": "../assets/images/kc/stock/taj-mahal.jpg",
+                      "alt": "Taj Mahal monument with a reflecting pool",
+                      "onerror": "this.style.display='none'"
+                    }
+                  }
+                },
+                "title": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-mobile-image-title__name"
+                    ]
+                  },
+                  "text": "Taj Mahal"
+                }
+              },
+              {
+                "tag": "div",
+                "attributes": {
+                  "class": [
+                    "kc-mobile-image-title",
+                    "kc-mobile-image-list-places-to-visit__item"
+                  ],
+                  "data-kc": "Mobile / Image + Title"
+                },
+                "image": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-img"
+                    ],
+                    "style": "width:78px;height:78px;border-radius:6px"
+                  },
+                  "image": {
+                    "attributes": {
+                      "src": "../assets/images/kc/stock/jaipur.jpg",
+                      "alt": "Hawa Mahal palace facade in Jaipur",
+                      "onerror": "this.style.display='none'"
+                    }
+                  }
+                },
+                "title": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-mobile-image-title__name"
+                    ]
+                  },
+                  "text": "Hawa Mahal"
+                }
+              },
+              {
+                "tag": "div",
+                "attributes": {
+                  "class": [
+                    "kc-mobile-image-title",
+                    "kc-mobile-image-list-places-to-visit__item"
+                  ],
+                  "data-kc": "Mobile / Image + Title"
+                },
+                "image": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-img"
+                    ],
+                    "style": "width:78px;height:88px;border-radius:6px"
+                  },
+                  "image": {
+                    "attributes": {
+                      "src": "../assets/images/kc/stock/kerala.jpg",
+                      "alt": "Houseboat on Kerala backwaters",
+                      "onerror": "this.style.display='none'"
+                    }
+                  }
+                },
+                "title": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-mobile-image-title__name"
+                    ]
+                  },
+                  "text": "Kerala"
+                }
+              }
+            ]
+          }
+        }
+      },
+      "card-mobile-main-square": {
+        "id": "card-mobile-main-square",
+        "type": "main",
+        "platform": "mobile",
+        "render": {
+          "root": {
+            "tag": "section",
+            "attributes": {
+              "class": [
+                "kc-module",
+                "kc-module--mobile",
+                "kc-mobile-image-list-main",
+                "kc-mobile-image-list-main--square"
+              ],
+              "id": "kc-mobile-main",
+              "data-kc": "Mobile / Image List / Main",
+              "data-kc-variant": "Shape=Square"
+            }
+          },
+          "content": {
+            "heading": {
+              "tag": "div",
+              "attributes": {
+                "class": [
+                  "kc-module-title"
+                ]
+              },
+              "heading": {
+                "tag": "h3",
+                "attributes": {},
+                "text": "Stock portraits"
+              },
+              "trailing": null
+            },
+            "list": {
+              "tag": "div",
+              "attributes": {
+                "class": [
+                  "kc-scroll-row"
+                ]
+              }
+            },
+            "items": [
+              {
+                "tag": "article",
+                "attributes": {
+                  "class": [
+                    "kc-card",
+                    "kc-mobile-image-title-sub-title"
+                  ],
+                  "data-kc": "Mobile / Image,Title,Sub-Title"
+                },
+                "image": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-img"
+                    ],
+                    "style": "width:84px;height:84px;border-radius:0px"
+                  },
+                  "image": {
+                    "attributes": {
+                      "src": "../assets/images/kc/stock/portrait-a.jpg",
+                      "alt": "Illustrative stock portrait of a person in a gray sweater",
+                      "onerror": "this.style.display='none'"
+                    }
+                  }
+                },
+                "text": {
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-mobile-image-title-sub-title__text"
+                    ]
+                  }
+                },
+                "title": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-m-bold",
+                      "kc-m-nols"
+                    ]
+                  },
+                  "text": "Sam Okafor"
+                },
+                "subtitle": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-mobile-image-title-sub-title__sub"
+                    ]
+                  },
+                  "text": "Actor"
+                }
+              },
+              {
+                "tag": "article",
+                "attributes": {
+                  "class": [
+                    "kc-card",
+                    "kc-mobile-image-title-sub-title"
+                  ],
+                  "data-kc": "Mobile / Image,Title,Sub-Title"
+                },
+                "image": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-img"
+                    ],
+                    "style": "width:84px;height:84px;border-radius:0px"
+                  },
+                  "image": {
+                    "attributes": {
+                      "src": "../assets/images/kc/stock/portrait-b.jpg",
+                      "alt": "Illustrative stock portrait of a person against a blue background",
+                      "onerror": "this.style.display='none'"
+                    }
+                  }
+                },
+                "text": {
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-mobile-image-title-sub-title__text"
+                    ]
+                  }
+                },
+                "title": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-m-bold",
+                      "kc-m-nols"
+                    ]
+                  },
+                  "text": "Riley Chen"
+                },
+                "subtitle": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-mobile-image-title-sub-title__sub"
+                    ]
+                  },
+                  "text": "Actor"
+                }
+              },
+              {
+                "tag": "article",
+                "attributes": {
+                  "class": [
+                    "kc-card",
+                    "kc-mobile-image-title-sub-title"
+                  ],
+                  "data-kc": "Mobile / Image,Title,Sub-Title"
+                },
+                "image": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-img"
+                    ],
+                    "style": "width:84px;height:84px;border-radius:0px"
+                  },
+                  "image": {
+                    "attributes": {
+                      "src": "../assets/images/kc/stock/portrait-c.jpg",
+                      "alt": "Illustrative stock portrait of a person in a dark sweater",
+                      "onerror": "this.style.display='none'"
+                    }
+                  }
+                },
+                "text": {
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-mobile-image-title-sub-title__text"
+                    ]
+                  }
+                },
+                "title": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-m-bold",
+                      "kc-m-nols"
+                    ]
+                  },
+                  "text": "Taylor Kim"
+                },
+                "subtitle": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-mobile-image-title-sub-title__sub"
+                    ]
+                  },
+                  "text": "Actor"
+                }
+              },
+              {
+                "tag": "article",
+                "attributes": {
+                  "class": [
+                    "kc-card",
+                    "kc-mobile-image-title-sub-title"
+                  ],
+                  "data-kc": "Mobile / Image,Title,Sub-Title"
+                },
+                "image": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-img"
+                    ],
+                    "style": "width:84px;height:84px;border-radius:0px"
+                  },
+                  "image": {
+                    "attributes": {
+                      "src": "../assets/images/kc/stock/portrait-d.jpg",
+                      "alt": "Illustrative stock portrait of a person in a white shirt",
+                      "onerror": "this.style.display='none'"
+                    }
+                  }
+                },
+                "text": {
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-mobile-image-title-sub-title__text"
+                    ]
+                  }
+                },
+                "title": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-m-bold",
+                      "kc-m-nols"
+                    ]
+                  },
+                  "text": "Casey Brooks"
+                },
+                "subtitle": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-mobile-image-title-sub-title__sub"
+                    ]
+                  },
+                  "text": "Actor"
+                }
+              },
+              {
+                "tag": "article",
+                "attributes": {
+                  "class": [
+                    "kc-card",
+                    "kc-mobile-image-title-sub-title"
+                  ],
+                  "data-kc": "Mobile / Image,Title,Sub-Title"
+                },
+                "image": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-img"
+                    ],
+                    "style": "width:84px;height:84px;border-radius:0px"
+                  },
+                  "image": {
+                    "attributes": {
+                      "src": "../assets/images/kc/stock/portrait-e.jpg",
+                      "alt": "Illustrative stock portrait of a person against a red wall",
+                      "onerror": "this.style.display='none'"
+                    }
+                  }
+                },
+                "text": {
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-mobile-image-title-sub-title__text"
+                    ]
+                  }
+                },
+                "title": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-m-bold",
+                      "kc-m-nols"
+                    ]
+                  },
+                  "text": "Jordan Reyes"
+                },
+                "subtitle": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-mobile-image-title-sub-title__sub"
+                    ]
+                  },
+                  "text": "Actor"
+                }
               }
             ]
           }

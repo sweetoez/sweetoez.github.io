@@ -9,6 +9,7 @@
   <script src="../assets/js/data/kc-entities.js"></script>
   <script src="../assets/js/components/kc-module.js"></script>
   <script src="../assets/js/components/kc-modules/text-list.js"></script>
+  <script src="../assets/js/components/kc-modules/image-list.js"></script>
   <script src="../assets/js/components/kc-hero.js"></script>
   <script src="../assets/js/kc-mobile-carousels.js" defer></script>
   <style>
@@ -29,17 +30,7 @@
         <article class="kc-card-stack kc-country-mobile kc-theme-orange" data-kc="Segment / Country" aria-label="India knowledge card">
           <kc-hero entity="country" platform="mobile"></kc-hero>
 
-          <section class="kc-module kc-module--mobile kc-mobile-image-list-carousel" id="kc-country-mobile-mod-1" data-kc="Mobile/ Image List / Carousel">
-            <div class="kc-scroll-row">
-              <span class="kc-img kc-img--cover" style="width:132px;height:120px;border-radius:6px"><img src="../assets/images/kc/modules/country/country-mobile-carousel-01.png" alt="Taj Mahal in Agra, India" onerror="this.style.display='none'"></span>
-              <span class="kc-img kc-img--cover" style="width:119px;height:120px;border-radius:6px"><img src="../assets/images/kc/modules/country/country-mobile-carousel-02.png" alt="Hawa Mahal in Jaipur, India" onerror="this.style.display='none'"></span>
-              <span class="kc-img kc-img--crop-edge" style="width:106px;height:120px;border-radius:6px"><img src="../assets/images/kc/modules/country/country-mobile-carousel-03.png" alt="Kerala backwaters in India" onerror="this.style.display='none'"></span>
-              <span class="kc-img" style="width:159px;height:120px;border-radius:6px"></span>
-              <span class="kc-img" style="width:105px;height:120px;border-radius:6px"></span>
-            </div>
-            <button class="kc-btn-flipper kc-country-carousel__previous" type="button" aria-label="Previous carousel images" disabled><img src="../assets/icons/ic_fluent_arrow_left_20_regular.svg" alt="" aria-hidden="true"></button>
-            <button class="kc-btn-flipper kc-country-carousel__next" type="button" aria-label="Next carousel images"><img src="../assets/icons/ic_fluent_arrow_right_20_regular.svg" alt="" aria-hidden="true"></button>
-          </section>
+          <kc-module entity="country" platform="mobile" index="0"></kc-module>
 
           <kc-module entity="country" platform="mobile" index="1"></kc-module>
 
@@ -51,41 +42,9 @@
             </div>
           </section>
 
-          <section class="kc-module kc-module--mobile kc-mobile-image-list-places-to-visit" id="kc-country-mobile-mod-4" data-kc="Mobile / Image List / Places to Visit">
-            <div class="kc-module-title"><h3>Places of Interest</h3></div>
-            <div class="kc-mobile-image-list-places-to-visit__items">
-              <div class="kc-mobile-image-title kc-mobile-image-list-places-to-visit__item" data-kc="Mobile / Image + Title">
-                <span class="kc-img kc-img--cover" style="width:78px;height:88px;border-radius:6px"><img src="../assets/images/kc/modules/country/country-mobile-image-title-01.png" alt="Taj Mahal in Agra, India" onerror="this.style.display='none'"></span>
-                <span class="kc-mobile-image-title__name">Taj Mahal</span>
-              </div>
-              <div class="kc-mobile-image-title kc-mobile-image-list-places-to-visit__item" data-kc="Mobile / Image + Title">
-                <span class="kc-img kc-img--cover" style="width:78px;height:88px;border-radius:6px"><img src="../assets/images/kc/modules/country/country-mobile-image-title-02.png" alt="Hawa Mahal in Jaipur, India" onerror="this.style.display='none'"></span>
-                <span class="kc-mobile-image-title__name">Jaipur</span>
-              </div>
-              <div class="kc-mobile-image-title kc-mobile-image-list-places-to-visit__item" data-kc="Mobile / Image + Title">
-                <span class="kc-img kc-img--cover" style="width:78px;height:88px;border-radius:6px"><img src="../assets/images/kc/modules/country/country-mobile-image-title-03.png" alt="Kerala backwaters in India" onerror="this.style.display='none'"></span>
-                <span class="kc-mobile-image-title__name">Kerala</span>
-              </div>
-            </div>
-          </section>
+          <kc-module entity="country" platform="mobile" index="3"></kc-module>
 
-          <section class="kc-module kc-module--mobile kc-mobile-image-list-interesting-facts kc-mobile-image-list-interesting-facts--2-image" id="kc-country-mobile-mod-5" data-kc="Mobile / Image List / Interesting Facts" data-kc-variant="Image Amount=2-Image" aria-label="Interesting facts about India">
-            <div class="kc-mobile-image-list-interesting-facts__row">
-              <div class="kc-mobile-image-list-interesting-facts__text">
-                <p class="kc-m-reg">India has the world's largest school in terms of students, the City Montessori School in Lucknow.</p>
-                <span class="kc-m-divider" aria-hidden="true"></span>
-                <p class="kc-m-reg">India's constitution took effect in 1950 and is among the world's longest written constitutions.</p>
-              </div>
-              <span class="kc-img" style="width:104px;height:142px;border-radius:6px"></span>
-            </div>
-            <div class="kc-mobile-image-list-interesting-facts__row kc-mobile-image-list-interesting-facts__row--reverse">
-              <span class="kc-img" style="width:106px;height:93px;border-radius:6px"></span>
-              <div class="kc-mobile-image-list-interesting-facts__text">
-                <span class="kc-m-divider" aria-hidden="true"></span>
-                <p class="kc-m-reg">Chail in Himachal Pradesh has a high-altitude cricket ground surrounded by forests.</p>
-              </div>
-            </div>
-          </section>
+          <kc-module entity="country" platform="mobile" index="4"></kc-module>
 
           <kc-module entity="country" platform="mobile" index="5"></kc-module>
 

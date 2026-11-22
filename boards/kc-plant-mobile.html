@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="../assets/css/msn-components.css">
   <link rel="stylesheet" href="../assets/css/kc-components.css"><script src="../assets/js/data/kc-entities.js"></script>  <script src="../assets/js/components/kc-module.js"></script>
   <script src="../assets/js/components/kc-modules/text-list.js"></script>
+  <script src="../assets/js/components/kc-modules/image-list.js"></script>
   <script src="../assets/js/components/kc-hero.js"></script>
   <script src="../assets/js/kc-mobile-carousels.js" defer></script>
   <style>
@@ -28,53 +29,15 @@
         <article class="kc-card-stack kc-mobile-designer-card kc-plant-mobile kc-theme-orange" data-kc="Segment / Plant" aria-label="Dahlia knowledge card">
           <kc-hero entity="plant" platform="mobile"></kc-hero>
 
-          <section class="kc-module kc-module--mobile kc-mobile-image-list-carousel" id="kc-plant-mobile-carousel" data-kc="Mobile / Image List / Carousel" aria-label="Dahlia photos">
-            <div class="kc-scroll-row" tabindex="0" aria-label="Dahlia photos, use left and right arrow keys to scroll">
-              <span class="kc-img kc-img--cover"><img src="../assets/images/kc/modules/plant/plant-mobile-carousel-01.png" alt="Red Dahlietta Anna dahlia flower" onerror="this.style.display='none'"></span>
-              <span class="kc-img kc-img--cover"><img src="../assets/images/kc/modules/plant/plant-mobile-carousel-02.png" alt="Yellow and red Moonfire dahlia flower" onerror="this.style.display='none'"></span>
-              <span class="kc-img kc-img--cover"><img src="../assets/images/kc/modules/plant/plant-mobile-carousel-03.png" alt="Moonfire dahlia flower bud" onerror="this.style.display='none'"></span>
-              <span class="kc-img kc-img--cover"><img src="../assets/images/kc/modules/plant/plant-mobile-carousel-04.png" alt="Dahlietta Anna plant with red flowers and buds" onerror="this.style.display='none'"></span>
-              <span class="kc-img"></span>
-            </div>
-            <button class="kc-btn-flipper kc-plant-mobile-carousel__previous" type="button" aria-label="Previous carousel images" disabled><svg width="16" height="16" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><use href="#kc-plant-arrow-left"></use></svg></button>
-            <button class="kc-btn-flipper kc-plant-mobile-carousel__next" type="button" aria-label="Next carousel images"><svg width="16" height="16" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><use href="#kc-plant-arrow-right"></use></svg></button>
-          </section>
+          <kc-module entity="plant" platform="mobile" index="0"></kc-module>
 
           <kc-module entity="plant" platform="mobile" index="1"></kc-module>
 
           <kc-module entity="plant" platform="mobile" index="2"></kc-module>
 
-          <section class="kc-module kc-module--mobile kc-mobile-image-list-interesting-facts kc-mobile-image-list-interesting-facts--1-image" id="kc-plant-mobile-interesting-one" data-kc="Mobile / Image List / Interesting Facts" data-kc-variant="Image Amount=1-Image" aria-label="Dahlia growing and flower facts">
-            <div class="kc-mobile-image-list-interesting-facts__text">
-              <p class="kc-m-reg">Dahlias grow best in a sunny, sheltered spot with fertile, well-drained soil. Smaller varieties can also thrive in containers.</p>
-              <span class="kc-m-divider" aria-hidden="true"></span>
-              <p class="kc-m-bold">Thousands of cultivars offer flowers in a wide variety of shapes and colors, from small blooms to flowers a foot across.</p>
-            </div>
-            <span class="kc-img"></span>
-          </section>
+          <kc-module entity="plant" platform="mobile" index="3"></kc-module>
 
-          <section class="kc-module kc-module--mobile kc-mobile-image-list-interesting-facts kc-mobile-image-list-interesting-facts--3-image" id="kc-plant-mobile-interesting-three" data-kc="Mobile / Image List / Interesting Facts" data-kc-variant="Image Amount=3-Image" aria-label="More Dahlia facts">
-            <div class="kc-mobile-image-list-interesting-facts__row">
-              <div class="kc-mobile-image-list-interesting-facts__text">
-                <p class="kc-m-reg">Dahlias grow from underground tubers. In colder climates, gardeners can lift and store the tubers in a frost-free place over winter, then start them into growth in spring.</p>
-                <span class="kc-m-divider" aria-hidden="true"></span>
-              </div>
-              <span class="kc-img"></span>
-            </div>
-            <div class="kc-mobile-image-list-interesting-facts__row kc-mobile-image-list-interesting-facts__row--reverse">
-              <span class="kc-img"></span>
-              <div class="kc-mobile-image-list-interesting-facts__text">
-                <p class="kc-m-reg">Dahlias bloom through summer and autumn, often until the first frost. Removing spent flowers encourages more blooms throughout the season.</p>
-                <span class="kc-m-divider" aria-hidden="true"></span>
-              </div>
-            </div>
-            <div class="kc-mobile-image-list-interesting-facts__row">
-              <div class="kc-mobile-image-list-interesting-facts__text">
-                <p class="kc-m-bold">Dahlia flowers range from open, daisy-like blooms to rounded, multi-petalled forms.</p>
-              </div>
-              <span class="kc-img"></span>
-            </div>
-          </section>
+          <kc-module entity="plant" platform="mobile" index="4"></kc-module>
 
           <div class="kc-card-more" id="kc-plant-mobile-more" hidden>
             <kc-module entity="plant" platform="mobile" index="5"></kc-module>

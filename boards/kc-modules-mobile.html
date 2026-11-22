@@ -9,6 +9,7 @@
   <script src="../assets/js/data/kc-entities.js"></script>
   <script src="../assets/js/components/kc-module.js"></script>
   <script src="../assets/js/components/kc-modules/text-list.js"></script>
+  <script src="../assets/js/components/kc-modules/image-list.js"></script>
   <script src="../assets/js/kc-mobile-carousels.js" defer></script>
   <style>
     * { box-sizing:border-box; }
@@ -29,71 +30,7 @@
     <div class="kc-board-grid">
 <div class="kc-board-item">
   <p class="kc-board-label">Mobile / Image List / Top Songs</p>
-  <section class="kc-module kc-module--mobile kc-mobile-image-list-top-songs" data-kc="Mobile / Image List / Top Songs">
-    <div class="kc-module-title">
-      <h3>Top Songs</h3>
-    </div>
-    <div class="kc-mobile-image-list-top-songs__columns">
-      <ul class="kc-mobile-image-list-top-songs__column" style="list-style:none;padding:0;margin:0">
-        <li class="kc-mobile-image-list-top-songs__song">
-          <span class="kc-img" style="width:48px;height:48px;border-radius:6px">
-            <img src="../assets/images/kc/stock/music-studio.jpg" alt="Audio mixing console in a recording studio" onerror="this.style.display='none'">
-          </span>
-          <div class="kc-mobile-image-list-top-songs__text">
-            <span class="kc-m-bold">Paper Lanterns</span>
-            <span class="kc-m-foot">Northern Lights · 2019</span>
-          </div>
-        </li>
-        <li class="kc-mobile-image-list-top-songs__song">
-          <span class="kc-img" style="width:48px;height:48px;border-radius:6px">
-            <img src="../assets/images/kc/stock/guitar.jpg" alt="Hands playing an acoustic guitar" onerror="this.style.display='none'">
-          </span>
-          <div class="kc-mobile-image-list-top-songs__text">
-            <span class="kc-m-bold">Slow Tide</span>
-            <span class="kc-m-foot">Northern Lights · 2019</span>
-          </div>
-        </li>
-        <li class="kc-mobile-image-list-top-songs__song">
-          <span class="kc-img" style="width:48px;height:48px;border-radius:6px">
-            <img src="../assets/images/kc/stock/headphones.jpg" alt="Over-ear headphones on a yellow background" onerror="this.style.display='none'">
-          </span>
-          <div class="kc-mobile-image-list-top-songs__text">
-            <span class="kc-m-bold">Glass Garden</span>
-            <span class="kc-m-foot">Northern Lights · 2019</span>
-          </div>
-        </li>
-      </ul>
-      <ul class="kc-mobile-image-list-top-songs__column" style="list-style:none;padding:0;margin:0">
-        <li class="kc-mobile-image-list-top-songs__song">
-          <span class="kc-img" style="width:48px;height:48px;border-radius:6px">
-            <img src="../assets/images/kc/stock/music-studio.jpg" alt="Audio mixing console in a recording studio" onerror="this.style.display='none'">
-          </span>
-          <div class="kc-mobile-image-list-top-songs__text">
-            <span class="kc-m-bold">Morning Static</span>
-            <span class="kc-m-foot">Northern Lights · 2019</span>
-          </div>
-        </li>
-        <li class="kc-mobile-image-list-top-songs__song">
-          <span class="kc-img" style="width:48px;height:48px;border-radius:6px">
-            <img src="../assets/images/kc/stock/guitar.jpg" alt="Hands playing an acoustic guitar" onerror="this.style.display='none'">
-          </span>
-          <div class="kc-mobile-image-list-top-songs__text">
-            <span class="kc-m-bold">Silver Line</span>
-            <span class="kc-m-foot">Northern Lights · 2019</span>
-          </div>
-        </li>
-        <li class="kc-mobile-image-list-top-songs__song">
-          <span class="kc-img" style="width:48px;height:48px;border-radius:6px">
-            <img src="../assets/images/kc/stock/headphones.jpg" alt="Over-ear headphones on a yellow background" onerror="this.style.display='none'">
-          </span>
-          <div class="kc-mobile-image-list-top-songs__text">
-            <span class="kc-m-bold">Northern Lights</span>
-            <span class="kc-m-foot">Northern Lights · 2019</span>
-          </div>
-        </li>
-      </ul>
-    </div>
-  </section>
+  <kc-module type="top-songs" platform="mobile" variant="mobile-top-songs"></kc-module>
 </div>
 <div class="kc-board-item">
   <p class="kc-board-label">Mobile / Image List / Watch Links</p>
@@ -167,280 +104,39 @@
 </div>
 <div class="kc-board-item">
   <p class="kc-board-label">Mobile/ Image List / Carousel</p>
-  <section class="kc-module kc-module--mobile kc-mobile-image-list-carousel" data-kc="Mobile/ Image List / Carousel">
-    <div class="kc-scroll-row">
-      <span class="kc-img" style="width:132px;height:120px;border-radius:6px">
-        <img src="../assets/images/kc/stock/taj-mahal.jpg" alt="Taj Mahal monument with a reflecting pool" onerror="this.style.display='none'">
-      </span>
-      <span class="kc-img" style="width:119px;height:120px;border-radius:6px">
-        <img src="../assets/images/kc/stock/jaipur.jpg" alt="Hawa Mahal palace facade in Jaipur" onerror="this.style.display='none'">
-      </span>
-      <span class="kc-img" style="width:106px;height:120px;border-radius:6px">
-        <img src="../assets/images/kc/stock/kerala.jpg" alt="Houseboat on Kerala backwaters" onerror="this.style.display='none'">
-      </span>
-      <span class="kc-img" style="width:159px;height:120px;border-radius:6px">
-        <img src="../assets/images/kc/stock/mountain-lake.jpg" alt="Mountain lake beside a forest and cabin" onerror="this.style.display='none'">
-      </span>
-      <span class="kc-img" style="width:105px;height:120px;border-radius:6px">
-        <img src="../assets/images/kc/stock/city.jpg" alt="City skyline at sunset" onerror="this.style.display='none'">
-      </span>
-    </div>
-  </section>
+  <kc-module type="carousel" platform="mobile" variant="mobile-carousel"></kc-module>
 </div>
 <div class="kc-board-item">
   <p class="kc-board-label">Mobile / Image List / Main — Shape=Square</p>
-  <section class="kc-module kc-module--mobile kc-mobile-image-list-main kc-mobile-image-list-main--square" data-kc="Mobile / Image List / Main" data-kc-variant="Shape=Square">
-    <div class="kc-module-title">
-      <h3>Stock portraits</h3>
-    </div>
-    <div class="kc-scroll-row">
-      <article class="kc-card kc-mobile-image-title-sub-title" data-kc="Mobile / Image,Title,Sub-Title">
-        <span class="kc-img" style="width:84px;height:84px;border-radius:0px">
-          <img src="../assets/images/kc/stock/portrait-a.jpg" alt="Illustrative stock portrait of a person in a gray sweater" onerror="this.style.display='none'">
-        </span>
-        <div class="kc-mobile-image-title-sub-title__text">
-          <span class="kc-m-bold kc-m-nols">Sam Okafor</span>
-          <span class="kc-mobile-image-title-sub-title__sub">Actor</span>
-        </div>
-      </article>
-      <article class="kc-card kc-mobile-image-title-sub-title" data-kc="Mobile / Image,Title,Sub-Title">
-        <span class="kc-img" style="width:84px;height:84px;border-radius:0px">
-          <img src="../assets/images/kc/stock/portrait-b.jpg" alt="Illustrative stock portrait of a person against a blue background" onerror="this.style.display='none'">
-        </span>
-        <div class="kc-mobile-image-title-sub-title__text">
-          <span class="kc-m-bold kc-m-nols">Riley Chen</span>
-          <span class="kc-mobile-image-title-sub-title__sub">Actor</span>
-        </div>
-      </article>
-      <article class="kc-card kc-mobile-image-title-sub-title" data-kc="Mobile / Image,Title,Sub-Title">
-        <span class="kc-img" style="width:84px;height:84px;border-radius:0px">
-          <img src="../assets/images/kc/stock/portrait-c.jpg" alt="Illustrative stock portrait of a person in a dark sweater" onerror="this.style.display='none'">
-        </span>
-        <div class="kc-mobile-image-title-sub-title__text">
-          <span class="kc-m-bold kc-m-nols">Taylor Kim</span>
-          <span class="kc-mobile-image-title-sub-title__sub">Actor</span>
-        </div>
-      </article>
-      <article class="kc-card kc-mobile-image-title-sub-title" data-kc="Mobile / Image,Title,Sub-Title">
-        <span class="kc-img" style="width:84px;height:84px;border-radius:0px">
-          <img src="../assets/images/kc/stock/portrait-d.jpg" alt="Illustrative stock portrait of a person in a white shirt" onerror="this.style.display='none'">
-        </span>
-        <div class="kc-mobile-image-title-sub-title__text">
-          <span class="kc-m-bold kc-m-nols">Casey Brooks</span>
-          <span class="kc-mobile-image-title-sub-title__sub">Actor</span>
-        </div>
-      </article>
-      <article class="kc-card kc-mobile-image-title-sub-title" data-kc="Mobile / Image,Title,Sub-Title">
-        <span class="kc-img" style="width:84px;height:84px;border-radius:0px">
-          <img src="../assets/images/kc/stock/portrait-e.jpg" alt="Illustrative stock portrait of a person against a red wall" onerror="this.style.display='none'">
-        </span>
-        <div class="kc-mobile-image-title-sub-title__text">
-          <span class="kc-m-bold kc-m-nols">Jordan Reyes</span>
-          <span class="kc-mobile-image-title-sub-title__sub">Actor</span>
-        </div>
-      </article>
-    </div>
-  </section>
+  <kc-module type="main" platform="mobile" variant="mobile-main-square"></kc-module>
 </div>
 <div class="kc-board-item">
   <p class="kc-board-label">Mobile / Image List / Main — Shape=Rectangle</p>
-  <section class="kc-module kc-module--mobile kc-mobile-image-list-main kc-mobile-image-list-main--rectangle" data-kc="Mobile / Image List / Main" data-kc-variant="Shape=Rectangle">
-    <div class="kc-module-title">
-      <h3>Stock portraits</h3>
-    </div>
-    <div class="kc-scroll-row">
-      <article class="kc-card kc-mobile-image-title-sub-title" data-kc="Mobile / Image,Title,Sub-Title">
-        <span class="kc-img" style="width:100px;height:150px;border-radius:0px">
-          <img src="../assets/images/kc/stock/portrait-a.jpg" alt="Illustrative stock portrait of a person in a gray sweater" onerror="this.style.display='none'">
-        </span>
-        <div class="kc-mobile-image-title-sub-title__text">
-          <span class="kc-m-bold kc-m-nols">Sam Okafor</span>
-          <span class="kc-mobile-image-title-sub-title__sub">Actor</span>
-        </div>
-      </article>
-      <article class="kc-card kc-mobile-image-title-sub-title" data-kc="Mobile / Image,Title,Sub-Title">
-        <span class="kc-img" style="width:100px;height:150px;border-radius:0px">
-          <img src="../assets/images/kc/stock/portrait-b.jpg" alt="Illustrative stock portrait of a person against a blue background" onerror="this.style.display='none'">
-        </span>
-        <div class="kc-mobile-image-title-sub-title__text">
-          <span class="kc-m-bold kc-m-nols">Riley Chen</span>
-          <span class="kc-mobile-image-title-sub-title__sub">Actor</span>
-        </div>
-      </article>
-      <article class="kc-card kc-mobile-image-title-sub-title" data-kc="Mobile / Image,Title,Sub-Title">
-        <span class="kc-img" style="width:100px;height:150px;border-radius:0px">
-          <img src="../assets/images/kc/stock/portrait-c.jpg" alt="Illustrative stock portrait of a person in a dark sweater" onerror="this.style.display='none'">
-        </span>
-        <div class="kc-mobile-image-title-sub-title__text">
-          <span class="kc-m-bold kc-m-nols">Taylor Kim</span>
-          <span class="kc-mobile-image-title-sub-title__sub">Actor</span>
-        </div>
-      </article>
-      <article class="kc-card kc-mobile-image-title-sub-title" data-kc="Mobile / Image,Title,Sub-Title">
-        <span class="kc-img" style="width:100px;height:150px;border-radius:0px">
-          <img src="../assets/images/kc/stock/portrait-d.jpg" alt="Illustrative stock portrait of a person in a white shirt" onerror="this.style.display='none'">
-        </span>
-        <div class="kc-mobile-image-title-sub-title__text">
-          <span class="kc-m-bold kc-m-nols">Casey Brooks</span>
-          <span class="kc-mobile-image-title-sub-title__sub">Actor</span>
-        </div>
-      </article>
-      <article class="kc-card kc-mobile-image-title-sub-title" data-kc="Mobile / Image,Title,Sub-Title">
-        <span class="kc-img" style="width:100px;height:150px;border-radius:0px">
-          <img src="../assets/images/kc/stock/portrait-e.jpg" alt="Illustrative stock portrait of a person against a red wall" onerror="this.style.display='none'">
-        </span>
-        <div class="kc-mobile-image-title-sub-title__text">
-          <span class="kc-m-bold kc-m-nols">Jordan Reyes</span>
-          <span class="kc-mobile-image-title-sub-title__sub">Actor</span>
-        </div>
-      </article>
-    </div>
-  </section>
+  <kc-module type="main" platform="mobile" variant="mobile-main-rectangle"></kc-module>
 </div>
 <div class="kc-board-item">
   <p class="kc-board-label">Mobile / Image List / Places to Visit</p>
-  <section class="kc-module kc-module--mobile kc-mobile-image-list-places-to-visit" data-kc="Mobile / Image List / Places to Visit">
-    <div class="kc-module-title">
-      <h3>Places of Interest</h3>
-    </div>
-    <div class="kc-mobile-image-list-places-to-visit__items">
-      <div class="kc-mobile-image-title kc-mobile-image-list-places-to-visit__item" data-kc="Mobile / Image + Title">
-        <span class="kc-img" style="width:78px;height:88px;border-radius:6px">
-          <img src="../assets/images/kc/stock/taj-mahal.jpg" alt="Taj Mahal monument with a reflecting pool" onerror="this.style.display='none'">
-        </span>
-        <span class="kc-mobile-image-title__name">Taj Mahal</span>
-      </div>
-      <div class="kc-mobile-image-title kc-mobile-image-list-places-to-visit__item" data-kc="Mobile / Image + Title">
-        <span class="kc-img" style="width:78px;height:78px;border-radius:6px">
-          <img src="../assets/images/kc/stock/jaipur.jpg" alt="Hawa Mahal palace facade in Jaipur" onerror="this.style.display='none'">
-        </span>
-        <span class="kc-mobile-image-title__name">Hawa Mahal</span>
-      </div>
-      <div class="kc-mobile-image-title kc-mobile-image-list-places-to-visit__item" data-kc="Mobile / Image + Title">
-        <span class="kc-img" style="width:78px;height:88px;border-radius:6px">
-          <img src="../assets/images/kc/stock/kerala.jpg" alt="Houseboat on Kerala backwaters" onerror="this.style.display='none'">
-        </span>
-        <span class="kc-mobile-image-title__name">Kerala</span>
-      </div>
-    </div>
-  </section>
+  <kc-module type="places-to-visit" platform="mobile" variant="mobile-places-to-visit"></kc-module>
 </div>
 <div class="kc-board-item">
   <p class="kc-board-label">Mobile / Image List / Ingredients</p>
-  <section class="kc-module kc-module--mobile kc-mobile-image-list-ingredients" data-kc="Mobile / Image List / Ingredients">
-    <div class="kc-module-title">
-      <h3>Food and plant photos</h3>
-    </div>
-    <div class="kc-mobile-image-list-ingredients__list">
-      <div class="kc-mobile-image-list-ingredients__row">
-        <div class="kc-mobile-image-list-ingredients__item">
-          <span class="kc-img" style="width:32px;height:32px;border-radius:20px">
-            <img src="../assets/images/kc/stock/salad.jpg" alt="Bowl of salad with vegetables" onerror="this.style.display='none'">
-          </span>
-          <span class="kc-m-bold">Vegetable salad</span>
-        </div>
-        <div class="kc-mobile-image-list-ingredients__item">
-          <span class="kc-img" style="width:32px;height:32px;border-radius:20px">
-            <img src="../assets/images/kc/stock/foliage-dark.jpg" alt="Close-up of overlapping green leaves" onerror="this.style.display='none'">
-          </span>
-          <span class="kc-m-bold">Green leaves</span>
-        </div>
-      </div>
-      <div class="kc-mobile-image-list-ingredients__row">
-        <div class="kc-mobile-image-list-ingredients__item">
-          <span class="kc-img" style="width:32px;height:32px;border-radius:20px">
-            <img src="../assets/images/kc/stock/potted-plant.jpg" alt="Ferns filling a shaded frame" onerror="this.style.display='none'">
-          </span>
-          <span class="kc-m-bold">Fern fronds</span>
-        </div>
-        <div class="kc-mobile-image-list-ingredients__item">
-          <span class="kc-img" style="width:32px;height:32px;border-radius:20px">
-            <img src="../assets/images/kc/stock/salad.jpg" alt="Bowl of salad with vegetables" onerror="this.style.display='none'">
-          </span>
-          <span class="kc-m-bold">Vegetable salad</span>
-        </div>
-      </div>
-    </div>
-  </section>
+  <kc-module type="ingredients" platform="mobile" variant="mobile-ingredients"></kc-module>
 </div>
 <div class="kc-board-item">
   <p class="kc-board-label">Mobile / Image List / Interesting Facts — Image Amount=3-Image</p>
-  <section class="kc-module kc-module--mobile kc-mobile-image-list-interesting-facts kc-mobile-image-list-interesting-facts--3-image" data-kc="Mobile / Image List / Interesting Facts" data-kc-variant="Image Amount=3-Image">
-    <div class="kc-mobile-image-list-interesting-facts__row">
-      <div class="kc-mobile-image-list-interesting-facts__text">
-        <p class="kc-m-reg kc-mobile-image-list-interesting-facts__copy" style="width:218px;height:116px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
-        <span class="kc-m-divider">
-        </span>
-      </div>
-      <span class="kc-img" style="width:89px;height:134px;border-radius:6px">
-        <img src="../assets/images/kc/stock/mountain-lake.jpg" alt="Mountain lake beside a forest and cabin" onerror="this.style.display='none'">
-      </span>
-    </div>
-    <div class="kc-mobile-image-list-interesting-facts__row kc-mobile-image-list-interesting-facts__row--reverse">
-      <span class="kc-img" style="width:90px;height:106px;border-radius:6px">
-        <img src="../assets/images/kc/stock/maple-green.jpg" alt="Green Japanese maple leaves" onerror="this.style.display='none'">
-      </span>
-      <div class="kc-mobile-image-list-interesting-facts__text">
-        <p class="kc-m-reg kc-mobile-image-list-interesting-facts__copy" style="width:217px;height:98px;text-align:right;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        <span class="kc-m-divider">
-        </span>
-      </div>
-    </div>
-    <div class="kc-mobile-image-list-interesting-facts__row">
-      <p class="kc-m-reg kc-mobile-image-list-interesting-facts__copy" style="width:203px;height:98px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      <span class="kc-img" style="width:104px;height:93px;border-radius:6px">
-        <img src="../assets/images/kc/stock/earth.jpg" alt="Earth viewed from orbit" onerror="this.style.display='none'">
-      </span>
-    </div>
-  </section>
+  <kc-module type="interesting-facts" platform="mobile" variant="mobile-interesting-facts-3-image"></kc-module>
 </div>
 <div class="kc-board-item">
   <p class="kc-board-label">Mobile / Image List / Interesting Facts — Image Amount=2-Image</p>
-  <section class="kc-module kc-module--mobile kc-mobile-image-list-interesting-facts kc-mobile-image-list-interesting-facts--2-image" data-kc="Mobile / Image List / Interesting Facts" data-kc-variant="Image Amount=2-Image">
-    <div class="kc-mobile-image-list-interesting-facts__row">
-      <div class="kc-mobile-image-list-interesting-facts__text">
-        <p class="kc-m-reg kc-mobile-image-list-interesting-facts__copy" style="width:203px;height:80px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
-        <span class="kc-m-divider">
-        </span>
-        <p class="kc-m-reg kc-mobile-image-list-interesting-facts__copy" style="width:203px;height:63px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-      </div>
-      <span class="kc-img" style="width:104px;height:142px;border-radius:6px">
-        <img src="../assets/images/kc/stock/mountain-lake.jpg" alt="Mountain lake beside a forest and cabin" onerror="this.style.display='none'">
-      </span>
-    </div>
-    <div class="kc-mobile-image-list-interesting-facts__row kc-mobile-image-list-interesting-facts__row--reverse">
-      <span class="kc-img" style="width:106px;height:93px;border-radius:6px">
-        <img src="../assets/images/kc/stock/maple-green.jpg" alt="Green Japanese maple leaves" onerror="this.style.display='none'">
-      </span>
-      <div class="kc-mobile-image-list-interesting-facts__text">
-        <span class="kc-m-divider">
-        </span>
-        <p class="kc-m-reg kc-mobile-image-list-interesting-facts__copy" style="width:201px;height:80px;text-align:right;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.</p>
-      </div>
-    </div>
-  </section>
+  <kc-module type="interesting-facts" platform="mobile" variant="mobile-interesting-facts-2-image"></kc-module>
 </div>
 <div class="kc-board-item">
   <p class="kc-board-label">Mobile / Image List / Interesting Facts — Image Amount=1-Image</p>
-  <section class="kc-module kc-module--mobile kc-mobile-image-list-interesting-facts kc-mobile-image-list-interesting-facts--1-image" data-kc="Mobile / Image List / Interesting Facts" data-kc-variant="Image Amount=1-Image">
-    <div class="kc-mobile-image-list-interesting-facts__text">
-      <p class="kc-m-reg kc-mobile-image-list-interesting-facts__copy" style="width:209px;height:98px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      <span class="kc-m-divider">
-      </span>
-      <p class="kc-m-reg kc-mobile-image-list-interesting-facts__copy" style="width:319px;height:80px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
-    </div>
-    <span class="kc-img" style="width:98px;height:112px;border-radius:6px">
-      <img src="../assets/images/kc/stock/mountain-lake.jpg" alt="Mountain lake beside a forest and cabin" onerror="this.style.display='none'">
-    </span>
-  </section>
+  <kc-module type="interesting-facts" platform="mobile" variant="mobile-interesting-facts-1-image"></kc-module>
 </div>
 <div class="kc-board-item">
   <p class="kc-board-label">Mobile / Image List / Interesting Facts — Image Amount=None</p>
-  <section class="kc-module kc-module--mobile kc-mobile-image-list-interesting-facts kc-mobile-image-list-interesting-facts--none" data-kc="Mobile / Image List / Interesting Facts" data-kc-variant="Image Amount=None">
-    <div class="kc-mobile-image-list-interesting-facts__text">
-      <p class="kc-m-reg kc-mobile-image-list-interesting-facts__copy" style="width:328px;height:62px; /* #053 */">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    </div>
-  </section>
+  <kc-module type="interesting-facts" platform="mobile" variant="mobile-interesting-facts-none"></kc-module>
 </div>
 <div class="kc-board-item">
   <p class="kc-board-label">Mobile / Ratings / Movie Critics</p>

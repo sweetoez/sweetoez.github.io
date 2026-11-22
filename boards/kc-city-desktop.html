@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="../assets/css/msn-components.css">
   <link rel="stylesheet" href="../assets/css/kc-components.css"><script src="../assets/js/data/kc-entities.js"></script>  <script src="../assets/js/components/kc-module.js"></script>
   <script src="../assets/js/components/kc-modules/text-list.js"></script>
+  <script src="../assets/js/components/kc-modules/image-list.js"></script>
   <script src="../assets/js/components/kc-hero.js"></script>
   <style>
     * { box-sizing:border-box; }
@@ -123,41 +124,9 @@
             </div>
           </section>
 
-          <section class="kc-module kc-image-list-places-to-visit" id="kc-city-mod-5" data-kc="Image List / Places to Visit" aria-labelledby="kc-city-title-places">
-            <div class="kc-module-title kc-module-title--no-chevron"><h3 id="kc-city-title-places">Top Places to Visit</h3></div>
-            <div class="kc-image-list-places-to-visit__items">
-              <div class="kc-image-list-places-to-visit__item">
-                <span class="kc-img kc-img--cover"><img src="../assets/images/kc/modules/city/city-desktop-places-01.png" alt="Golden Gate Bridge at sunset" onerror="this.style.display='none'"></span>
-                <span class="kc-copy">Name of Place</span>
-              </div>
-              <div class="kc-image-list-places-to-visit__item">
-                <span class="kc-img kc-img--cover"><img src="../assets/images/kc/modules/city/city-desktop-places-02.png" alt="Fishing boats in a San Francisco harbor" onerror="this.style.display='none'"></span>
-                <span class="kc-copy">Name of Place</span>
-              </div>
-              <div class="kc-image-list-places-to-visit__item">
-                <span class="kc-img kc-img--cover"><img src="../assets/images/kc/modules/city/city-desktop-places-03.png" alt="Conservatory of Flowers in Golden Gate Park" onerror="this.style.display='none'"></span>
-                <span class="kc-copy">Name of Place</span>
-              </div>
-            </div>
-          </section>
+          <kc-module entity="city" platform="desktop" index="4"></kc-module>
 
-          <section class="kc-module kc-image-list-interesting-facts kc-image-list-interesting-facts--2-image" id="kc-city-mod-6" data-kc="Image List / Interesting Facts" aria-label="Interesting facts about San Francisco">
-            <div class="kc-image-list-interesting-facts__row kc-city-fact-row--first">
-              <div class="kc-image-list-interesting-facts__text">
-                <p class="kc-copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
-                <span class="kc-divider" aria-hidden="true"></span>
-                <p class="kc-copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-              </div>
-              <span class="kc-img kc-img--cover"><img src="../assets/images/kc/modules/city/city-desktop-facts-01.png" alt="Cable car on a San Francisco street" onerror="this.style.display='none'"></span>
-            </div>
-            <div class="kc-image-list-interesting-facts__row kc-city-fact-row--second">
-              <span class="kc-img kc-img--cover"><img src="../assets/images/kc/modules/city/city-desktop-facts-02.png" alt="Two people walking hand in hand" onerror="this.style.display='none'"></span>
-              <div class="kc-image-list-interesting-facts__text">
-                <span class="kc-divider" aria-hidden="true"></span>
-                <p class="kc-copy">San Francisco is ranked the second ‘most walkable’ city in the United States by Walkscore.com.</p>
-              </div>
-            </div>
-          </section>
+          <kc-module entity="city" platform="desktop" index="5"></kc-module>
 
           <section class="kc-module kc-miscellaneous-poll-trivia kc-miscellaneous-poll-trivia--quantity-3-columns-1" id="kc-city-mod-7" data-kc="Miscellaneous / Poll &amp; Trivia" data-kc-variant="Quantity=3, Columns=1" aria-label="Trivia">
             <fieldset>

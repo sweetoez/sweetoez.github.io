@@ -5,7 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Full Knowledge Card — Mobile</title>
   <link rel="stylesheet" href="../assets/css/msn-components.css">
-  <link rel="stylesheet" href="../assets/css/kc-components.css"><script src="../assets/js/data/kc-entities.js"></script><script src="../assets/js/components/kc-hero.js"></script>
+  <link rel="stylesheet" href="../assets/css/kc-components.css"><script src="../assets/js/data/kc-entities.js"></script>
+  <script src="../assets/js/components/kc-module.js"></script>
+  <script src="../assets/js/components/kc-modules/image-list.js"></script><script src="../assets/js/components/kc-hero.js"></script>
   <script src="../assets/js/kc-mobile-carousels.js" defer></script>
   <style>
     * { box-sizing:border-box; }
@@ -42,68 +44,9 @@
             </a>
           </section>
 
-          <section class="kc-module kc-module--mobile kc-mobile-image-list-places-to-visit" id="kc-mobile-places" data-kc="Mobile / Image List / Places to Visit">
-            <div class="kc-module-title">
-              <h3>Places of Interest</h3>
-            </div>
-            <div class="kc-mobile-image-list-places-to-visit__items">
-              <div class="kc-mobile-image-title kc-mobile-image-list-places-to-visit__item" data-kc="Mobile / Image + Title">
-                <span class="kc-img" style="width:78px;height:88px;border-radius:6px"><img src="../assets/images/kc/stock/taj-mahal.jpg" alt="Taj Mahal monument with a reflecting pool" onerror="this.style.display='none'"></span>
-                <span class="kc-mobile-image-title__name">Taj Mahal</span>
-              </div>
-              <div class="kc-mobile-image-title kc-mobile-image-list-places-to-visit__item" data-kc="Mobile / Image + Title">
-                <span class="kc-img" style="width:78px;height:78px;border-radius:6px"><img src="../assets/images/kc/stock/jaipur.jpg" alt="Hawa Mahal palace facade in Jaipur" onerror="this.style.display='none'"></span>
-                <span class="kc-mobile-image-title__name">Hawa Mahal</span>
-              </div>
-              <div class="kc-mobile-image-title kc-mobile-image-list-places-to-visit__item" data-kc="Mobile / Image + Title">
-                <span class="kc-img" style="width:78px;height:88px;border-radius:6px"><img src="../assets/images/kc/stock/kerala.jpg" alt="Houseboat on Kerala backwaters" onerror="this.style.display='none'"></span>
-                <span class="kc-mobile-image-title__name">Kerala</span>
-              </div>
-            </div>
-          </section>
+          <kc-module type="places-to-visit" platform="mobile" variant="card-mobile-places-to-visit"></kc-module>
 
-          <section class="kc-module kc-module--mobile kc-mobile-image-list-main kc-mobile-image-list-main--square" id="kc-mobile-main" data-kc="Mobile / Image List / Main" data-kc-variant="Shape=Square"> <!-- #053 -->
-            <div class="kc-module-title">
-              <h3>Stock portraits</h3>
-            </div>
-            <div class="kc-scroll-row">
-              <article class="kc-card kc-mobile-image-title-sub-title" data-kc="Mobile / Image,Title,Sub-Title">
-                <span class="kc-img" style="width:84px;height:84px;border-radius:0px"><img src="../assets/images/kc/stock/portrait-a.jpg" alt="Illustrative stock portrait of a person in a gray sweater" onerror="this.style.display='none'"></span>
-                <div class="kc-mobile-image-title-sub-title__text">
-                  <span class="kc-m-bold kc-m-nols">Sam Okafor</span>
-                  <span class="kc-mobile-image-title-sub-title__sub">Actor</span>
-                </div>
-              </article>
-              <article class="kc-card kc-mobile-image-title-sub-title" data-kc="Mobile / Image,Title,Sub-Title">
-                <span class="kc-img" style="width:84px;height:84px;border-radius:0px"><img src="../assets/images/kc/stock/portrait-b.jpg" alt="Illustrative stock portrait of a person against a blue background" onerror="this.style.display='none'"></span>
-                <div class="kc-mobile-image-title-sub-title__text">
-                  <span class="kc-m-bold kc-m-nols">Riley Chen</span>
-                  <span class="kc-mobile-image-title-sub-title__sub">Actor</span>
-                </div>
-              </article>
-              <article class="kc-card kc-mobile-image-title-sub-title" data-kc="Mobile / Image,Title,Sub-Title">
-                <span class="kc-img" style="width:84px;height:84px;border-radius:0px"><img src="../assets/images/kc/stock/portrait-c.jpg" alt="Illustrative stock portrait of a person in a dark sweater" onerror="this.style.display='none'"></span>
-                <div class="kc-mobile-image-title-sub-title__text">
-                  <span class="kc-m-bold kc-m-nols">Taylor Kim</span>
-                  <span class="kc-mobile-image-title-sub-title__sub">Actor</span>
-                </div>
-              </article>
-              <article class="kc-card kc-mobile-image-title-sub-title" data-kc="Mobile / Image,Title,Sub-Title">
-                <span class="kc-img" style="width:84px;height:84px;border-radius:0px"><img src="../assets/images/kc/stock/portrait-d.jpg" alt="Illustrative stock portrait of a person in a white shirt" onerror="this.style.display='none'"></span>
-                <div class="kc-mobile-image-title-sub-title__text">
-                  <span class="kc-m-bold kc-m-nols">Casey Brooks</span>
-                  <span class="kc-mobile-image-title-sub-title__sub">Actor</span>
-                </div>
-              </article>
-              <article class="kc-card kc-mobile-image-title-sub-title" data-kc="Mobile / Image,Title,Sub-Title">
-                <span class="kc-img" style="width:84px;height:84px;border-radius:0px"><img src="../assets/images/kc/stock/portrait-e.jpg" alt="Illustrative stock portrait of a person against a red wall" onerror="this.style.display='none'"></span>
-                <div class="kc-mobile-image-title-sub-title__text">
-                  <span class="kc-m-bold kc-m-nols">Jordan Reyes</span>
-                  <span class="kc-mobile-image-title-sub-title__sub">Actor</span>
-                </div>
-              </article>
-            </div>
-          </section>
+          <kc-module type="main" platform="mobile" variant="card-mobile-main-square"></kc-module>
 
           <section class="kc-module kc-module--mobile kc-mobile-miscellaneous-quote" id="kc-mobile-quote" data-kc="Mobile / Miscellaneous / Quote">
             <figure class="kc-mobile-miscellaneous-quote__frame">

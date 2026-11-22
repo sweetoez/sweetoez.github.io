@@ -9,6 +9,7 @@
   <script src="../assets/js/data/kc-entities.js"></script>
     <script src="../assets/js/components/kc-module.js"></script>
   <script src="../assets/js/components/kc-modules/text-list.js"></script>
+  <script src="../assets/js/components/kc-modules/image-list.js"></script>
   <script src="../assets/js/components/kc-hero.js"></script>
   <style>
     * { box-sizing:border-box; }
@@ -40,41 +41,9 @@
             </div>
           </section>
 
-          <section class="kc-module kc-image-list-places-to-visit" id="kc-country-mod-3" data-kc="Image List / Places to Visit" aria-labelledby="kc-country-title-places">
-            <div class="kc-module-title kc-module-title--no-chevron"><h3 id="kc-country-title-places">Top Places to Visit</h3></div>
-            <div class="kc-image-list-places-to-visit__items">
-              <div class="kc-image-list-places-to-visit__item">
-                <span class="kc-img kc-img--cover"><img src="../assets/images/kc/modules/country/country-desktop-places-01.png" alt="Taj Mahal in Agra, India" onerror="this.style.display='none'"></span>
-                <span class="kc-copy">Taj Mahal</span>
-              </div>
-              <div class="kc-image-list-places-to-visit__item">
-                <span class="kc-img kc-img--cover"><img src="../assets/images/kc/modules/country/country-desktop-places-02.png" alt="Hawa Mahal in Jaipur, India" onerror="this.style.display='none'"></span>
-                <span class="kc-copy">Jaipur</span>
-              </div>
-              <div class="kc-image-list-places-to-visit__item">
-                <span class="kc-img kc-img--cover"><img src="../assets/images/kc/modules/country/country-desktop-places-03.png" alt="Kerala backwaters in India" onerror="this.style.display='none'"></span>
-                <span class="kc-copy">Kerala</span>
-              </div>
-            </div>
-          </section>
+          <kc-module entity="country" platform="desktop" index="2"></kc-module>
 
-          <section class="kc-module kc-image-list-interesting-facts kc-image-list-interesting-facts--2-image" id="kc-country-mod-4" data-kc="Image List / Interesting Facts" aria-label="Interesting facts about India">
-            <div class="kc-image-list-interesting-facts__row kc-country-fact-row--first">
-              <div class="kc-image-list-interesting-facts__text">
-                <p class="kc-copy">India has the world's largest school in terms of students, the City Montessori School in Lucknow.</p>
-                <span class="kc-divider" aria-hidden="true"></span>
-                <p class="kc-copy">India's constitution took effect in 1950 and is among the world's longest written constitutions.</p>
-              </div>
-              <span class="kc-img kc-img--cover"><img src="../assets/images/kc/modules/country/country-desktop-facts-01.png" alt="Image illustrating an interesting fact about India, 1" onerror="this.style.display='none'"></span>
-            </div>
-            <div class="kc-image-list-interesting-facts__row kc-country-fact-row--second">
-              <span class="kc-img kc-img--cover"><img src="../assets/images/kc/modules/country/country-desktop-facts-02.png" alt="Image illustrating an interesting fact about India, 2" onerror="this.style.display='none'"></span>
-              <div class="kc-image-list-interesting-facts__text">
-                <span class="kc-divider" aria-hidden="true"></span>
-                <p class="kc-copy">Chail in Himachal Pradesh is home to a high-altitude cricket ground, surrounded by forests in the Himalayan foothills.</p>
-              </div>
-            </div>
-          </section>
+          <kc-module entity="country" platform="desktop" index="3"></kc-module>
 
           <kc-module entity="country" platform="desktop" index="4"></kc-module>
 

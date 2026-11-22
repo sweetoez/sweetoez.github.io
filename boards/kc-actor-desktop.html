@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="../assets/css/msn-components.css">
   <link rel="stylesheet" href="../assets/css/kc-components.css"><script src="../assets/js/data/kc-entities.js"></script>  <script src="../assets/js/components/kc-module.js"></script>
   <script src="../assets/js/components/kc-modules/text-list.js"></script>
+  <script src="../assets/js/components/kc-modules/image-list.js"></script>
   <script src="../assets/js/components/kc-hero.js"></script>
   <style>
     * { box-sizing:border-box; }
@@ -27,19 +28,7 @@
         <article class="kc-card-stack kc-actor-desktop kc-theme-purple-1" data-kc="Segment / Actor" aria-label="Pharrell Williams knowledge card">
           <kc-hero entity="actor" platform="desktop"></kc-hero>
 
-          <section class="kc-module kc-image-list-carousel" id="kc-actor-mod-carousel" data-kc="Image List / Carousel" aria-label="Pharrell Williams image carousel" tabindex="0">
-            <span class="kc-img kc-img--cover"><img src="../assets/images/kc/modules/actor/actor-desktop-carousel-01.png" alt="Pharrell Williams image carousel photo 1" onerror="this.style.display='none'"></span>
-            <span class="kc-img kc-img--cover"><img src="../assets/images/kc/modules/actor/actor-desktop-carousel-02.png" alt="Pharrell Williams image carousel photo 2" onerror="this.style.display='none'"></span>
-            <span class="kc-img kc-img--cover"><img src="../assets/images/kc/modules/actor/actor-desktop-carousel-03.png" alt="Pharrell Williams image carousel photo 3" onerror="this.style.display='none'"></span>
-            <span class="kc-img kc-img--cover"><img src="../assets/images/kc/modules/actor/actor-desktop-carousel-04.png" alt="Pharrell Williams image carousel photo 4" onerror="this.style.display='none'"></span>
-            <span class="kc-img"></span>
-            <button class="kc-btn-flipper kc-actor-carousel__previous" type="button" aria-label="Previous carousel images" disabled>
-              <svg width="16" height="16" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M9.15898 16.8666C9.36292 17.0528 9.67918 17.0384 9.86536 16.8345C10.0515 16.6305 10.0371 16.3143 9.8332 16.1281L3.66535 10.4974H17.4961C17.7722 10.4974 17.9961 10.2735 17.9961 9.99736C17.9961 9.72122 17.7722 9.49736 17.4961 9.49736H3.66824L9.8332 3.86927C10.0371 3.68309 10.0515 3.36684 9.86536 3.16289C9.67918 2.95895 9.36292 2.94456 9.15898 3.13074L2.24263 9.44478C2.10268 9.57254 2.02285 9.74008 2.00314 9.91323C1.99851 9.94058 1.99609 9.96869 1.99609 9.99736C1.99609 10.0242 1.99821 10.0506 2.00229 10.0763C2.02047 10.2522 2.10058 10.4229 2.24263 10.5526L9.15898 16.8666Z" fill="currentColor"/></svg>
-            </button>
-            <button class="kc-btn-flipper kc-actor-carousel__next" type="button" aria-label="Next carousel images">
-              <svg width="16" height="16" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M10.8371 3.13074C10.6332 2.94456 10.3169 2.95895 10.1307 3.16289C9.94456 3.36683 9.95895 3.68309 10.1629 3.86927L16.3307 9.5H2.5C2.22386 9.5 2 9.72386 2 10C2 10.2761 2.22386 10.5 2.5 10.5H16.3279L10.1629 16.1281C9.95895 16.3143 9.94456 16.6305 10.1307 16.8345C10.3169 17.0384 10.6332 17.0528 10.8371 16.8666L17.7535 10.5526C17.8934 10.4248 17.9732 10.2573 17.993 10.0841C17.9976 10.0568 18 10.0287 18 10C18 9.97313 17.9979 9.94675 17.9938 9.92103C17.9756 9.74512 17.8955 9.57446 17.7535 9.44478L10.8371 3.13074Z" fill="currentColor"/></svg>
-            </button>
-          </section>
+          <kc-module entity="actor" platform="desktop" index="0"></kc-module>
 
           <kc-module entity="actor" platform="desktop" index="1"></kc-module>
 
@@ -69,56 +58,11 @@
             </figure>
           </section>
 
-          <section class="kc-module kc-image-list-main kc-image-list-main--square" id="kc-actor-mod-main" data-kc="Image List / Main" aria-labelledby="kc-actor-title-main">
-            <div class="kc-module-title">
-              <h3 id="kc-actor-title-main">Featured Songs</h3>
-              <span class="kc-title-chevron" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.64645 3.14645C5.45118 3.34171 5.45118 3.65829 5.64645 3.85355L9.79289 8L5.64645 12.1464C5.45118 12.3417 5.45118 12.6583 5.64645 12.8536C5.84171 13.0488 6.15829 13.0488 6.35355 12.8536L10.8536 8.35355C11.0488 8.15829 11.0488 7.84171 10.8536 7.64645L6.35355 3.14645C6.15829 2.95118 5.84171 2.95118 5.64645 3.14645Z" fill="currentColor"/></svg></span>
-            </div>
-            <div class="kc-image-list-main__tiles">
-              <div class="kc-image-list-main__tile"><span class="kc-img kc-img--cover"><img src="../assets/images/kc/modules/actor/actor-desktop-main-01.png" alt="Cover art for Happy by Pharrell Williams" onerror="this.style.display='none'"></span><div class="kc-image-list-main__tile-text"><span class="kc-copy-bold">Happy</span><span class="kc-copy-small">G I R L</span></div></div>
-              <div class="kc-image-list-main__tile"><span class="kc-img kc-img--cover"><img src="../assets/images/kc/modules/actor/actor-desktop-main-02.png" alt="Cover art for Get Lucky by Daft Punk" onerror="this.style.display='none'"></span><div class="kc-image-list-main__tile-text"><span class="kc-copy-bold">Get Lucky</span><span class="kc-copy-small">Random Access Memories</span></div></div>
-              <div class="kc-image-list-main__tile"><span class="kc-img kc-img--cover"><img src="../assets/images/kc/modules/actor/actor-desktop-main-03.png" alt="Cover art for Blurred Lines by Robin Thicke" onerror="this.style.display='none'"></span><div class="kc-image-list-main__tile-text"><span class="kc-copy-bold">Blurred Lines</span><span class="kc-copy-small">Blurred Lines</span></div></div>
-              <div class="kc-image-list-main__tile"><span class="kc-img kc-img--cover"><img src="../assets/images/kc/modules/actor/actor-desktop-main-04.png" alt="Cover art for Frontin by Pharrell Williams" onerror="this.style.display='none'"></span><div class="kc-image-list-main__tile-text"><span class="kc-copy-bold">Frontin’</span><span class="kc-copy-small">The Neptunes Present... Clones</span></div></div>
-              <div class="kc-image-list-main__tile"><span class="kc-img"></span><div class="kc-image-list-main__tile-text"><span class="kc-copy-bold">Come Get It Bae</span><span class="kc-copy-small">G I R L</span></div></div>
-            </div>
-          </section>
+          <kc-module entity="actor" platform="desktop" index="4"></kc-module>
 
-          <section class="kc-module kc-image-list-interesting-facts kc-image-list-interesting-facts--2-image" id="kc-actor-mod-facts-images" data-kc="Image List / Interesting Facts" aria-label="Interesting facts about Pharrell Williams">
-            <div class="kc-image-list-interesting-facts__row kc-actor-fact-row--first">
-              <div class="kc-image-list-interesting-facts__text">
-                <p class="kc-copy">Pharrell Williams co-founded the production duo the Neptunes with Chad Hugo. Their work spans hip-hop, pop, and R&amp;B.</p>
-                <span class="kc-divider" aria-hidden="true"></span>
-                <p class="kc-copy">His song “Happy” appeared in Despicable Me 2 and became a worldwide hit.</p>
-              </div>
-              <span class="kc-img kc-img--cover"><img src="../assets/images/kc/modules/actor/actor-desktop-facts-01.png" alt="Studio image illustrating Pharrell Williams&#x27; music production" onerror="this.style.display='none'"></span>
-            </div>
-            <div class="kc-image-list-interesting-facts__row kc-actor-fact-row--second">
-              <span class="kc-img kc-img--cover"><img src="../assets/images/kc/modules/actor/actor-desktop-facts-02.png" alt="Live music image illustrating Pharrell Williams&#x27; career" onerror="this.style.display='none'"></span>
-              <div class="kc-image-list-interesting-facts__text">
-                <span class="kc-divider" aria-hidden="true"></span>
-                <p class="kc-copy">Williams is also part of N.E.R.D and has worked in fashion, including as a creative director for Louis Vuitton.</p>
-              </div>
-            </div>
-          </section>
+          <kc-module entity="actor" platform="desktop" index="5"></kc-module>
 
-          <section class="kc-module kc-image-list-top-songs" id="kc-actor-mod-top-songs" data-kc="Image List / Top Songs" aria-labelledby="kc-actor-title-top-songs">
-            <div class="kc-module-title">
-              <h3 id="kc-actor-title-top-songs">Top Songs</h3>
-              <span class="kc-title-chevron" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.64645 3.14645C5.45118 3.34171 5.45118 3.65829 5.64645 3.85355L9.79289 8L5.64645 12.1464C5.45118 12.3417 5.45118 12.6583 5.64645 12.8536C5.84171 13.0488 6.15829 13.0488 6.35355 12.8536L10.8536 8.35355C11.0488 8.15829 11.0488 7.84171 10.8536 7.64645L6.35355 3.14645C6.15829 2.95118 5.84171 2.95118 5.64645 3.14645Z" fill="currentColor"/></svg></span>
-            </div>
-            <div class="kc-image-list-top-songs__columns">
-              <div class="kc-image-list-top-songs__column">
-                <div class="kc-image-list-top-songs__song"><span class="kc-img kc-img--cover"><img src="../assets/images/kc/modules/actor/actor-desktop-top-songs-01.png" alt="Cover art for Happy by Pharrell Williams" onerror="this.style.display='none'"></span><div class="kc-image-list-top-songs__song-text"><span class="kc-copy-bold">Happy</span><span class="kc-copy-small">Pharrell Williams</span></div></div>
-                <div class="kc-image-list-top-songs__song"><span class="kc-img kc-img--cover"><img src="../assets/images/kc/modules/actor/actor-desktop-top-songs-02.png" alt="Cover art for Get Lucky by Daft Punk" onerror="this.style.display='none'"></span><div class="kc-image-list-top-songs__song-text"><span class="kc-copy-bold">Get Lucky</span><span class="kc-copy-small">Daft Punk</span></div></div>
-                <div class="kc-image-list-top-songs__song"><span class="kc-img kc-img--cover"><img src="../assets/images/kc/modules/actor/actor-desktop-top-songs-03.png" alt="Cover art for Blurred Lines by Robin Thicke" onerror="this.style.display='none'"></span><div class="kc-image-list-top-songs__song-text"><span class="kc-copy-bold">Blurred Lines</span><span class="kc-copy-small">Robin Thicke</span></div></div>
-              </div>
-              <div class="kc-image-list-top-songs__column">
-                <div class="kc-image-list-top-songs__song"><span class="kc-img kc-img--cover"><img src="../assets/images/kc/modules/actor/actor-desktop-top-songs-04.png" alt="Cover art for Frontin by Pharrell Williams" onerror="this.style.display='none'"></span><div class="kc-image-list-top-songs__song-text"><span class="kc-copy-bold">Frontin’</span><span class="kc-copy-small">Pharrell Williams</span></div></div>
-                <div class="kc-image-list-top-songs__song"><span class="kc-img kc-img--cover"><img src="../assets/images/kc/modules/actor/actor-desktop-top-songs-05.png" alt="Cover art for Come Get It Bae by Pharrell Williams" onerror="this.style.display='none'"></span><div class="kc-image-list-top-songs__song-text"><span class="kc-copy-bold">Come Get It Bae</span><span class="kc-copy-small">Pharrell Williams</span></div></div>
-                <div class="kc-image-list-top-songs__song"><span class="kc-img"></span><div class="kc-image-list-top-songs__song-text"><span class="kc-copy-bold">Freedom</span><span class="kc-copy-small">Pharrell Williams</span></div></div>
-              </div>
-            </div>
-          </section>
+          <kc-module entity="actor" platform="desktop" index="6"></kc-module>
 
           <kc-module entity="actor" platform="desktop" index="7"></kc-module>
         </article>

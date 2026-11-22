@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="../assets/css/msn-components.css">
   <link rel="stylesheet" href="../assets/css/kc-components.css"><script src="../assets/js/data/kc-entities.js"></script>  <script src="../assets/js/components/kc-module.js"></script>
   <script src="../assets/js/components/kc-modules/text-list.js"></script>
+  <script src="../assets/js/components/kc-modules/image-list.js"></script>
   <script src="../assets/js/components/kc-hero.js"></script>
   <script src="../assets/js/kc-mobile-carousels.js" defer></script>
   <style>
@@ -28,17 +29,7 @@
         <article class="kc-card-stack kc-mobile-designer-card kc-actor-mobile kc-theme-purple-1" data-kc="Segment / Actor" aria-label="Pharrell Williams knowledge card">
           <kc-hero entity="actor" platform="mobile"></kc-hero>
 
-          <section class="kc-module kc-module--mobile kc-mobile-image-list-carousel" id="kc-actor-mobile-mod-carousel" data-kc="Mobile / Image List / Carousel" aria-label="Pharrell Williams image carousel">
-            <div class="kc-scroll-row" tabindex="0" aria-label="Pharrell Williams photos, use left and right arrow keys to scroll">
-              <span class="kc-img kc-img--cover" style="width:103px;height:100px;border-radius:6px"><img src="../assets/images/kc/modules/actor/actor-mobile-carousel-01.png" alt="Pharrell Williams image carousel photo 1" onerror="this.style.display='none'"></span>
-              <span class="kc-img kc-img--cover" style="width:90px;height:100px;border-radius:6px"><img src="../assets/images/kc/modules/actor/actor-mobile-carousel-02.png" alt="Pharrell Williams image carousel photo 2" onerror="this.style.display='none'"></span>
-              <span class="kc-img kc-img--cover" style="width:77px;height:100px;border-radius:6px"><img src="../assets/images/kc/modules/actor/actor-mobile-carousel-03.png" alt="Pharrell Williams image carousel photo 3" onerror="this.style.display='none'"></span>
-              <span class="kc-img kc-img--crop-edge" style="width:130px;height:100px;border-radius:6px"><img src="../assets/images/kc/modules/actor/actor-mobile-carousel-04.png" alt="Pharrell Williams image carousel photo 4" onerror="this.style.display='none'"></span>
-              <span class="kc-img" style="width:76px;height:100px;border-radius:6px"></span>
-            </div>
-            <button class="kc-btn-flipper kc-actor-mobile-carousel__previous" type="button" aria-label="Previous carousel images" disabled><svg width="16" height="16" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M9.15898 16.8666C9.36292 17.0528 9.67918 17.0384 9.86536 16.8345C10.0515 16.6305 10.0371 16.3143 9.8332 16.1281L3.66535 10.4974H17.4961C17.7722 10.4974 17.9961 10.2735 17.9961 9.99736C17.9961 9.72122 17.7722 9.49736 17.4961 9.49736H3.66824L9.8332 3.86927C10.0371 3.68309 10.0515 3.36684 9.86536 3.16289C9.67918 2.95895 9.36292 2.94456 9.15898 3.13074L2.24263 9.44478C2.10268 9.57254 2.02285 9.74008 2.00314 9.91323C1.99851 9.94058 1.99609 9.96869 1.99609 9.99736C1.99609 10.0242 1.99821 10.0506 2.00229 10.0763C2.02047 10.2522 2.10058 10.4229 2.24263 10.5526L9.15898 16.8666Z" fill="currentColor"/></svg></button>
-            <button class="kc-btn-flipper kc-actor-mobile-carousel__next" type="button" aria-label="Next carousel images"><svg width="16" height="16" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M10.8371 3.13074C10.6332 2.94456 10.3169 2.95895 10.1307 3.16289C9.94456 3.36683 9.95895 3.68309 10.1629 3.86927L16.3307 9.5H2.5C2.22386 9.5 2 9.72386 2 10C2 10.2761 2.22386 10.5 2.5 10.5H16.3279L10.1629 16.1281C9.95895 16.3143 9.94456 16.6305 10.1307 16.8345C10.3169 17.0384 10.6332 17.0528 10.8371 16.8666L17.7535 10.5526C17.8934 10.4248 17.9732 10.2573 17.993 10.0841C17.9976 10.0568 18 10.0287 18 10C18 9.97313 17.9979 9.94675 17.9938 9.92103C17.9756 9.74512 17.8955 9.57446 17.7535 9.44478L10.8371 3.13074Z" fill="currentColor"/></svg></button>
-          </section>
+          <kc-module entity="actor" platform="mobile" index="0"></kc-module>
 
           <kc-module entity="actor" platform="mobile" index="1"></kc-module>
 
@@ -56,31 +47,7 @@
             </div>
           </section>
 
-          <section class="kc-module kc-module--mobile kc-mobile-image-list-main kc-mobile-image-list-main--square" id="kc-actor-mobile-mod-main" data-kc="Mobile / Image List / Main" data-kc-variant="Shape=Square" aria-labelledby="kc-actor-mobile-main-title">
-            <div class="kc-module-title"><h3 id="kc-actor-mobile-main-title">Featured Songs</h3></div>
-            <div class="kc-scroll-row" aria-label="Featured songs">
-              <article class="kc-card kc-mobile-image-title-sub-title">
-                <span class="kc-img kc-img--cover"><img src="../assets/images/kc/modules/actor/actor-mobile-image-title-subtitle-01.png" alt="Cover art for Happy by Pharrell Williams" onerror="this.style.display='none'"></span>
-                <div class="kc-mobile-image-title-sub-title__text"><span class="kc-m-bold kc-m-nols">Happy</span><span class="kc-mobile-image-title-sub-title__sub">G I R L</span></div>
-              </article>
-              <article class="kc-card kc-mobile-image-title-sub-title">
-                <span class="kc-img kc-img--cover"><img src="../assets/images/kc/modules/actor/actor-mobile-image-title-subtitle-02.png" alt="Cover art for Get Lucky by Daft Punk" onerror="this.style.display='none'"></span>
-                <div class="kc-mobile-image-title-sub-title__text"><span class="kc-m-bold kc-m-nols">Get Lucky</span><span class="kc-mobile-image-title-sub-title__sub">Random Access Memories</span></div>
-              </article>
-              <article class="kc-card kc-mobile-image-title-sub-title">
-                <span class="kc-img kc-img--cover"><img src="../assets/images/kc/modules/actor/actor-mobile-image-title-subtitle-03.png" alt="Cover art for Blurred Lines by Robin Thicke" onerror="this.style.display='none'"></span>
-                <div class="kc-mobile-image-title-sub-title__text"><span class="kc-m-bold kc-m-nols">Blurred Lines</span><span class="kc-mobile-image-title-sub-title__sub">Blurred Lines</span></div>
-              </article>
-              <article class="kc-card kc-mobile-image-title-sub-title">
-                <span class="kc-img"></span>
-                <div class="kc-mobile-image-title-sub-title__text"><span class="kc-m-bold kc-m-nols">Frontin’</span><span class="kc-mobile-image-title-sub-title__sub">The Neptunes Present... Clones</span></div>
-              </article>
-              <article class="kc-card kc-mobile-image-title-sub-title">
-                <span class="kc-img"></span>
-                <div class="kc-mobile-image-title-sub-title__text"><span class="kc-m-bold kc-m-nols">Come Get It Bae</span><span class="kc-mobile-image-title-sub-title__sub">G I R L</span></div>
-              </article>
-            </div>
-          </section>
+          <kc-module entity="actor" platform="mobile" index="3"></kc-module>
 
           <section class="kc-module kc-module--mobile kc-mobile-miscellaneous-quote" id="kc-actor-mobile-mod-quote" data-kc="Mobile / Miscellaneous / Quote" aria-label="Quote from Pharrell Williams">
             <figure class="kc-mobile-miscellaneous-quote__frame">
@@ -90,40 +57,10 @@
             </figure>
           </section>
 
-          <section class="kc-module kc-module--mobile kc-mobile-image-list-interesting-facts kc-mobile-image-list-interesting-facts--2-image kc-actor-mobile__interesting" id="kc-actor-mobile-mod-interesting" data-kc="Mobile / Image List / Interesting Facts" data-kc-variant="Image Amount=2-Image" aria-label="Interesting facts about Pharrell Williams">
-            <div class="kc-mobile-image-list-interesting-facts__row">
-              <div class="kc-mobile-image-list-interesting-facts__text">
-                <p class="kc-m-reg">Williams co-founded the Neptunes with Chad Hugo, producing hip-hop, pop, and R&amp;B.</p>
-                <span class="kc-m-divider" aria-hidden="true"></span>
-                <p class="kc-m-reg">His worldwide hit “Happy” appeared in Despicable Me 2.</p>
-              </div>
-              <span class="kc-img" style="width:104px;height:142px;border-radius:6px"></span>
-            </div>
-            <div class="kc-mobile-image-list-interesting-facts__row kc-mobile-image-list-interesting-facts__row--reverse">
-              <span class="kc-img" style="width:106px;height:93px;border-radius:6px"></span>
-              <div class="kc-mobile-image-list-interesting-facts__text">
-                <span class="kc-m-divider" aria-hidden="true"></span>
-                <p class="kc-m-reg">He is also part of N.E.R.D and works in fashion as a creative director.</p>
-              </div>
-            </div>
-          </section>
+          <kc-module entity="actor" platform="mobile" index="5"></kc-module>
 
           <div class="kc-card-more" id="kc-actor-mobile-more" hidden>
-            <section class="kc-module kc-module--mobile kc-mobile-image-list-top-songs" id="kc-actor-mobile-mod-top-songs" data-kc="Mobile / Image List / Top Songs" aria-label="Top songs">
-              <div class="kc-module-title"><h3>Top Songs</h3></div>
-              <div class="kc-mobile-image-list-top-songs__columns">
-                <ul class="kc-mobile-image-list-top-songs__column" style="list-style:none;padding:0;margin:0">
-                  <li class="kc-mobile-image-list-top-songs__song"><span class="kc-img"></span><div class="kc-mobile-image-list-top-songs__text"><span class="kc-m-bold">Happy</span><span class="kc-m-foot">Pharrell Williams</span></div></li>
-                  <li class="kc-mobile-image-list-top-songs__song"><span class="kc-img"></span><div class="kc-mobile-image-list-top-songs__text"><span class="kc-m-bold">Get Lucky</span><span class="kc-m-foot">Daft Punk</span></div></li>
-                  <li class="kc-mobile-image-list-top-songs__song"><span class="kc-img"></span><div class="kc-mobile-image-list-top-songs__text"><span class="kc-m-bold">Blurred Lines</span><span class="kc-m-foot">Robin Thicke</span></div></li>
-                </ul>
-                <ul class="kc-mobile-image-list-top-songs__column" style="list-style:none;padding:0;margin:0">
-                  <li class="kc-mobile-image-list-top-songs__song"><span class="kc-img"></span><div class="kc-mobile-image-list-top-songs__text"><span class="kc-m-bold">Frontin’</span><span class="kc-m-foot">Pharrell Williams</span></div></li>
-                  <li class="kc-mobile-image-list-top-songs__song"><span class="kc-img"></span><div class="kc-mobile-image-list-top-songs__text"><span class="kc-m-bold">Come Get It Bae</span><span class="kc-m-foot">Pharrell Williams</span></div></li>
-                  <li class="kc-mobile-image-list-top-songs__song"><span class="kc-img"></span><div class="kc-mobile-image-list-top-songs__text"><span class="kc-m-bold">Freedom</span><span class="kc-m-foot">Pharrell Williams</span></div></li>
-                </ul>
-              </div>
-            </section>
+            <kc-module entity="actor" platform="mobile" index="6"></kc-module>
             <kc-module entity="actor" platform="mobile" index="7"></kc-module>
           </div>
 

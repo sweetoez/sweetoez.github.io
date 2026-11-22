@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="../assets/css/msn-components.css">
   <link rel="stylesheet" href="../assets/css/kc-components.css"><script src="../assets/js/data/kc-entities.js"></script>  <script src="../assets/js/components/kc-module.js"></script>
   <script src="../assets/js/components/kc-modules/text-list.js"></script>
+  <script src="../assets/js/components/kc-modules/image-list.js"></script>
   <script src="../assets/js/components/kc-hero.js"></script>
   <style>
     * { box-sizing:border-box; }
@@ -82,44 +83,9 @@
             </div>
           </section>
 
-          <section class="kc-module kc-image-list-interesting-facts kc-image-list-interesting-facts--2-image kc-food-facts" id="kc-food-mod-2" data-kc="Image List / Interesting Facts" aria-label="Interesting facts about Pizza Margherita">
-            <div class="kc-food-facts__row kc-food-facts__row--first">
-              <div class="kc-food-facts__col">
-                <p>Place of origin Italy</p>
-                <span class="kc-divider" aria-hidden="true"></span>
-                <p>Pizza Margherita got its name from Italy’s Queen Margherita</p>
-              </div>
-              <span class="kc-img kc-img--cover kc-food-facts__img-1"><img src="../assets/images/kc/modules/food/food-desktop-facts-01.png" alt="Pizza Margherita" onerror="this.style.display='none'"></span>
-              <div class="kc-food-facts__col kc-food-facts__col--solo">
-                <p>The word 'pizza' first appeared in a Latin text from the central Italian town of Gaeta, then still part of the Byzantine Empire, in 997 AD.</p>
-              </div>
-            </div>
-            <div class="kc-food-facts__row kc-food-facts__row--second">
-              <span class="kc-img kc-img--cover kc-food-facts__img-2"><img src="../assets/images/kc/modules/food/food-desktop-facts-02.png" alt="Very large pizza" onerror="this.style.display='none'"></span>
-              <div class="kc-food-facts__side">
-                <p>A pizza named 'Ottavia' is the largest pizza that has a total surface area of 1,261.65 m² (13,580.28 ft²) and was prepared in Rome, Italy, on 13 December 2012.</p>
-              </div>
-            </div>
-          </section>
+          <kc-module entity="food" platform="desktop" index="1"></kc-module>
 
-          <section class="kc-module kc-image-list-ingredients" id="kc-food-mod-3" data-kc="Image List / Ingredients" aria-labelledby="kc-food-title-ingredients">
-            <div class="kc-module-title">
-              <h3 id="kc-food-title-ingredients">Common ingredients</h3>
-              <button class="kc-btn-reset kc-link" type="button" aria-label="See all common ingredients"><span class="kc-title-chevron"><img src="../assets/icons/ic_fluent_chevron_right_16_regular.svg" alt="" aria-hidden="true"></span></button>
-            </div>
-            <div class="kc-image-list-ingredients__list">
-              <div class="kc-image-list-ingredients__row">
-                <div class="kc-image-list-ingredients__item"><span class="kc-img" style="width:32px;height:32px;border-radius:20px"><img src="../assets/images/kc/modules/food/food-desktop-ingredients-01.png" alt="" onerror="this.style.display='none'"></span><span class="kc-copy-bold">Ingredient</span></div>
-                <div class="kc-image-list-ingredients__item"><span class="kc-img" style="width:32px;height:32px;border-radius:20px"><img src="../assets/images/kc/modules/food/food-desktop-ingredients-02.png" alt="" onerror="this.style.display='none'"></span><span class="kc-copy-bold">Ingredient</span></div>
-                <div class="kc-image-list-ingredients__item"><span class="kc-img" style="width:32px;height:32px;border-radius:20px"><img src="../assets/images/kc/modules/food/food-desktop-ingredients-03.png" alt="" onerror="this.style.display='none'"></span><span class="kc-copy-bold">Ingredient</span></div>
-              </div>
-              <div class="kc-image-list-ingredients__row">
-                <div class="kc-image-list-ingredients__item"><span class="kc-img" style="width:32px;height:32px;border-radius:20px"><img src="../assets/images/kc/modules/food/food-desktop-ingredients-04.png" alt="" onerror="this.style.display='none'"></span><span class="kc-copy-bold">Ingredient</span></div>
-                <div class="kc-image-list-ingredients__item"><span class="kc-img" style="width:32px;height:32px;border-radius:20px"><img src="../assets/images/kc/modules/food/food-desktop-ingredients-05.png" alt="" onerror="this.style.display='none'"></span><span class="kc-copy-bold">Ingredient</span></div>
-                <div class="kc-image-list-ingredients__item"><span class="kc-img" style="width:32px;height:32px;border-radius:20px"><img src="../assets/images/kc/modules/food/food-desktop-ingredients-06.png" alt="" onerror="this.style.display='none'"></span><span class="kc-copy-bold">Ingredient</span></div>
-              </div>
-            </div>
-          </section>
+          <kc-module entity="food" platform="desktop" index="2"></kc-module>
 
           <section class="kc-module kc-miscellaneous-poll-trivia kc-miscellaneous-poll-trivia--quantity-4-columns-1" id="kc-food-mod-4" data-kc="Miscellaneous / Poll &amp; Trivia" data-kc-variant="Quantity=4, Columns=1" aria-label="Poll and trivia">
             <fieldset>

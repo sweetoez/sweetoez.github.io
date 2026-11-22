@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="../assets/css/msn-components.css">
   <link rel="stylesheet" href="../assets/css/kc-components.css"><script src="../assets/js/data/kc-entities.js"></script>  <script src="../assets/js/components/kc-module.js"></script>
   <script src="../assets/js/components/kc-modules/text-list.js"></script>
+  <script src="../assets/js/components/kc-modules/image-list.js"></script>
   <script src="../assets/js/components/kc-hero.js"></script>
   <style>
     * { box-sizing:border-box; }
@@ -92,39 +93,9 @@
             </div>
           </section>
 
-          <section class="kc-module kc-module--mobile kc-mobile-image-list-interesting-facts kc-mobile-image-list-interesting-facts--2-image" id="kc-food-mobile-facts" data-kc="Mobile / Image List / Interesting Facts" data-kc-variant="Image Amount=2-Image" aria-label="Interesting facts about Pizza Margherita">
-            <div class="kc-food-mobile-facts__row kc-food-mobile-facts__row--first">
-              <div class="kc-food-mobile-facts__col">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
-                <span class="kc-m-divider" aria-hidden="true"></span>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-              </div>
-              <span class="kc-img kc-img--cover kc-food-mobile-facts__img-1"><img src="../assets/images/kc/modules/food/food-mobile-facts-01.png" alt="Pizza Margherita" onerror="this.style.display='none'"></span>
-            </div>
-            <div class="kc-food-mobile-facts__row kc-food-mobile-facts__row--second">
-              <span class="kc-img kc-img--cover kc-food-mobile-facts__img-2"><img src="../assets/images/kc/modules/food/food-mobile-facts-02.png" alt="Very large pizza" onerror="this.style.display='none'"></span>
-              <div class="kc-food-mobile-facts__side">
-                <span class="kc-m-divider" aria-hidden="true"></span>
-                <p>A pizza named 'Ottavia' is the largest pizza that has a total surface area of 1,261.65 m² (13,580.28 ft²) and was prepared in Rome, Italy, on 13 December 2012.</p>
-              </div>
-            </div>
-          </section>
+          <kc-module entity="food" platform="mobile" index="1"></kc-module>
 
-          <section class="kc-module kc-module--mobile kc-mobile-image-list-ingredients" id="kc-food-mobile-ingredients" data-kc="Mobile / Image List / Ingredients" aria-labelledby="kc-food-mobile-ingredients-title">
-            <div class="kc-module-title">
-              <h3 id="kc-food-mobile-ingredients-title">Common Ingredients</h3>
-            </div>
-            <div class="kc-mobile-image-list-ingredients__list">
-              <div class="kc-mobile-image-list-ingredients__row">
-                <div class="kc-mobile-image-list-ingredients__item"><span class="kc-img" style="width:32px;height:32px;border-radius:20px"><img src="../assets/images/kc/modules/food/food-mobile-ingredients-01.png" alt="" onerror="this.style.display='none'"></span><span class="kc-m-bold">Ingredient</span></div>
-                <div class="kc-mobile-image-list-ingredients__item"><span class="kc-img" style="width:32px;height:32px;border-radius:20px"><img src="../assets/images/kc/modules/food/food-mobile-ingredients-02.png" alt="" onerror="this.style.display='none'"></span><span class="kc-m-bold">Ingredient</span></div>
-              </div>
-              <div class="kc-mobile-image-list-ingredients__row">
-                <div class="kc-mobile-image-list-ingredients__item"><span class="kc-img" style="width:32px;height:32px;border-radius:20px"><img src="../assets/images/kc/modules/food/food-mobile-ingredients-03.png" alt="" onerror="this.style.display='none'"></span><span class="kc-m-bold">Ingredient</span></div>
-                <div class="kc-mobile-image-list-ingredients__item"><span class="kc-img" style="width:32px;height:32px;border-radius:20px"><img src="../assets/images/kc/modules/food/food-mobile-ingredients-04.png" alt="" onerror="this.style.display='none'"></span><span class="kc-m-bold">Ingredient</span></div>
-              </div>
-            </div>
-          </section>
+          <kc-module entity="food" platform="mobile" index="2"></kc-module>
 
           <div class="kc-card-more" id="kc-food-mobile-more" hidden>
             <kc-module entity="food" platform="mobile" index="3"></kc-module>

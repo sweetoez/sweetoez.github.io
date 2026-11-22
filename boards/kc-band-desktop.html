@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="../assets/css/msn-components.css">
   <link rel="stylesheet" href="../assets/css/kc-components.css"><script src="../assets/js/data/kc-entities.js"></script>  <script src="../assets/js/components/kc-module.js"></script>
   <script src="../assets/js/components/kc-modules/text-list.js"></script>
+  <script src="../assets/js/components/kc-modules/image-list.js"></script>
   <script src="../assets/js/components/kc-hero.js"></script>
   <style>
     * { box-sizing:border-box; }
@@ -72,19 +73,7 @@
         <article class="kc-card-stack kc-band-desktop kc-theme-orange" data-kc="Segment / Band" aria-label="Red Hot Chili Peppers knowledge card">
           <kc-hero entity="band" platform="desktop"></kc-hero>
 
-          <section class="kc-module kc-image-list-main kc-image-list-main--square" id="kc-band-desktop-mod-main" data-kc="Image List / Main" data-kc-variant="Shape=Square" aria-labelledby="kc-band-desktop-main-title">
-            <div class="kc-module-title">
-              <h3 id="kc-band-desktop-main-title">Module title</h3>
-              <span class="kc-title-chevron" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" focusable="false"><use href="#kc-band-chevron-right"></use></svg></span>
-            </div>
-            <div class="kc-image-list-main__tiles">
-              <div class="kc-image-list-main__tile"><span class="kc-img kc-img--cover" style="width:80px;height:80px;border-radius:6px"><img src="../assets/images/kc/modules/band/band-desktop-main-01.png" alt="Red Hot Chili Peppers album cover, 1" onerror="this.style.display='none'"></span><div class="kc-image-list-main__tile-text"><span class="kc-copy-bold kc-band-desktop__tile-title">Title</span><span class="kc-copy-small kc-band-desktop__tile-sub">Sub-title</span></div></div>
-              <div class="kc-image-list-main__tile"><span class="kc-img kc-img--cover" style="width:80px;height:80px;border-radius:6px"><img src="../assets/images/kc/modules/band/band-desktop-main-02.png" alt="Red Hot Chili Peppers album cover, 2" onerror="this.style.display='none'"></span><div class="kc-image-list-main__tile-text"><span class="kc-copy-bold kc-band-desktop__tile-title kc-band-desktop__tile-title--single">Title</span><span class="kc-copy-small kc-band-desktop__tile-sub">Sub-title</span></div></div>
-              <div class="kc-image-list-main__tile"><span class="kc-img kc-img--cover" style="width:80px;height:80px;border-radius:6px"><img src="../assets/images/kc/modules/band/band-desktop-main-03.png" alt="Red Hot Chili Peppers album cover, 3" onerror="this.style.display='none'"></span><div class="kc-image-list-main__tile-text"><span class="kc-copy-bold kc-band-desktop__tile-title">Title</span><span class="kc-copy-small kc-band-desktop__tile-sub">Sub-title</span></div></div>
-              <div class="kc-image-list-main__tile"><span class="kc-img kc-img--cover" style="width:80px;height:80px;border-radius:6px"><img src="../assets/images/kc/modules/band/band-desktop-main-04.png" alt="Red Hot Chili Peppers album cover, 4" onerror="this.style.display='none'"></span><div class="kc-image-list-main__tile-text"><span class="kc-copy-bold kc-band-desktop__tile-title">Title</span><span class="kc-copy-small kc-band-desktop__tile-sub">Sub-title</span></div></div>
-              <div class="kc-image-list-main__tile"><span class="kc-img kc-img--cover" style="width:80px;height:80px;border-radius:6px"><img src="../assets/images/kc/modules/band/band-desktop-main-05.png" alt="Red Hot Chili Peppers album cover, 5" onerror="this.style.display='none'"></span><div class="kc-image-list-main__tile-text"><span class="kc-copy-bold kc-band-desktop__tile-title">Title</span><span class="kc-copy-small kc-band-desktop__tile-sub">Sub-title</span></div></div>
-            </div>
-          </section>
+          <kc-module entity="band" platform="desktop" index="0"></kc-module>
 
           <section class="kc-module kc-miscellaneous-listen" id="kc-band-desktop-mod-listen" data-kc="Miscellaneous / Listen" aria-label="Listen to Red Hot Chili Peppers">
             <div class="kc-module-title kc-module-title--no-chevron kc-miscellaneous-listen__title"><h3>Listen</h3></div>
@@ -104,23 +93,7 @@
             </div>
           </section>
 
-          <section class="kc-module kc-image-list-interesting-facts kc-band-desktop__facts" id="kc-band-desktop-mod-facts" data-kc="Image List / Interesting Facts" aria-label="Interesting facts about Red Hot Chili Peppers">
-            <div class="kc-band-desktop__facts-row kc-band-desktop__facts-row--first">
-              <div class="kc-band-desktop__facts-col kc-band-desktop__facts-col--first">
-                <p class="kc-copy">The Red Hot Chili Peppers have won seven Grammy Awards and sold over 80 million albums worldwide.</p>
-                <span class="kc-divider" aria-hidden="true"></span>
-              </div>
-              <span class="kc-img kc-img--cover"><img src="../assets/images/kc/modules/band/band-desktop-facts-01.png" alt="Red Hot Chili Peppers performing on stage" onerror="this.style.display='none'"></span>
-            </div>
-            <p class="kc-band-desktop__facts-highlight">RHCP was known for its psychedelic adventures and creative performances. Its band members once wore only tube socks in Rolling Stone.</p>
-            <div class="kc-band-desktop__facts-row kc-band-desktop__facts-row--second">
-              <span class="kc-img kc-img--cover"><img src="../assets/images/kc/modules/band/band-desktop-facts-02.png" alt="Red Hot Chili Peppers band members" onerror="this.style.display='none'"></span>
-              <div class="kc-band-desktop__facts-col kc-band-desktop__facts-col--second">
-                <span class="kc-divider" aria-hidden="true"></span>
-                <p class="kc-copy">All told, the Red Hot Chili Peppers have had seven total guitarists in their history.</p>
-              </div>
-            </div>
-          </section>
+          <kc-module entity="band" platform="desktop" index="2"></kc-module>
 
           <kc-module entity="band" platform="desktop" index="3"></kc-module>
 

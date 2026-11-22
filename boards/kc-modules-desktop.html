@@ -9,6 +9,7 @@
   <script src="../assets/js/data/kc-entities.js"></script>
   <script src="../assets/js/components/kc-module.js"></script>
   <script src="../assets/js/components/kc-modules/text-list.js"></script>
+  <script src="../assets/js/components/kc-modules/image-list.js"></script>
   <style>
     * { box-sizing:border-box; }
     body { min-width:1136px; margin:0; padding:32px; background:#F2F2F2; color:#444; font-family:var(--kc-font); }
@@ -29,6 +30,8 @@
     const board = document.querySelector("#kc-board");
     const modules = [];
     const add = (section, label, cls, content, aria = "") => modules.push({ section, label, cls, content, aria });
+    const addSample = (label, variant, aria = "") =>
+      modules.push({ section: "Image List", label, imageListSample: variant, aria });
     const textListSamples = new Map([
       ["Text List / Awards", ["awards", "desktop-awards"]],
       ["Text List / Top Fact — Quantity=2", ["top-fact", "desktop-top-fact-2"]],
@@ -124,23 +127,14 @@
     const longCopy2 = `${longCopy} Ut enim ad minim veniam, quis nostrud exercitation.`;
     const names = ["Jordan Reyes", "Sam Okafor", "Riley Chen", "Morgan Patel", "Casey Brooks", "Taylor Kim"];
 
-    ["Circle", "Square", "Rectangle"].forEach(shape => {
-      const circle = shape === "Circle";
-      const rectangle = shape === "Rectangle";
-      const slug = "image-list-main";
-      const tiles = Array.from({ length: 5 }, (_, i) => {
-        const label = stockLabels[stockFile(slug, i + 1)];
-        return `<div class="kc-image-list-main__tile">${image(slug, i + 1, 80, rectangle ? 120 : 80, circle ? 100 : 6)}<div class="kc-image-list-main__tile-text"><span class="kc-copy-bold">${label}</span><span class="kc-copy-small">Stock portrait</span></div></div>`;
-      }).join("");
-      add("Image List", `Image List / Main — Shape=${shape}`, `kc-image-list-main kc-image-list-main--${shape.toLowerCase()}`,
-        `${title("Stock portraits")}<div class="kc-image-list-main__tiles">${tiles}</div>`);
-    });
+    ["Circle", "Square", "Rectangle"].forEach(shape =>
+      addSample(`Image List / Main — Shape=${shape}`, `desktop-main-${shape.toLowerCase()}`)
+    );
 
     add("Image List", "Image List / Related Songs", "kc-image-list-related-songs",
       `${title("Related songs")}<div class="kc-image-list-related-songs__list">${[1, 2, 3].map((n) => `<div class="kc-image-list-related-songs__song"><div class="kc-image-list-related-songs__row"><div class="kc-image-list-related-songs__text"><span class="kc-copy-bold">Name of Related Song ${n}</span><span class="kc-copy">Title of Album · Year of Album</span></div>${image("image-list-related-songs", n, 100, 56, 4, `Related song image ${n}`)}</div>${n < 3 ? '<span class="kc-divider"></span>' : ""}</div>`).join("")}</div>`);
 
-    add("Image List", "Image List / Places to Visit", "kc-image-list-places-to-visit",
-      `${title("Top places to visit", false)}<div class="kc-image-list-places-to-visit__items">${["Taj Mahal", "Hawa Mahal", "Kerala"].map((name, i) => `<div class="kc-image-list-places-to-visit__item">${image("image-list-places-to-visit", i + 1, 100, i === 1 ? 100 : 116, 6, `${name} image`)}<span class="kc-copy">${name}</span></div>`).join("")}</div>`);
+    addSample("Image List / Places to Visit", "desktop-places-to-visit");
 
     add("Image List", "Image List / Element Uses", "kc-image-list-element-uses",
       `${title("Image examples")}<div class="kc-image-list-element-uses__list">${[1, 2, 3].map(n => `<div class="kc-image-list-element-uses__use"><div class="kc-image-list-element-uses__row"><p class="kc-copy">${longCopy}</p>${image("image-list-element-uses", n, 60, 60, 6, `Module image ${n}`)}</div>${n < 3 ? '<span class="kc-divider"></span>' : ""}</div>`).join("")}</div>`);
@@ -148,12 +142,9 @@
     add("Image List", "Image List / Played By", "kc-image-list-played-by",
       `${title("Played by")}<div class="kc-image-list-played-by__row">${["Jordan Reyes", "Sam Okafor"].map((name, i) => `<div class="kc-image-list-played-by__actor">${image("image-list-played-by", i + 1, 60, 60, 50, name)}<div class="kc-col"><span class="kc-copy-bold">${name}</span><span class="kc-copy">Date/Character</span></div></div>`).join("")}</div>`);
 
-    add("Image List", "Image List / Carousel", "kc-image-list-carousel",
-      Array.from({ length: 5 }, (_, i) => image("image-list-carousel", i + 1, [103, 90, 77, 130, 76][i], 100, 6, `Carousel image ${i + 1}`)).join(""), "Image carousel");
+    addSample("Image List / Carousel", "desktop-carousel", "Image carousel");
 
-    const topSongs = ["Paper Lanterns", "Slow Tide", "Glass Garden", "Morning Static", "Silver Line", "Paper Lanterns (Live)"];
-    add("Image List", "Image List / Top Songs", "kc-image-list-top-songs",
-      `${title("Top Songs")}<div class="kc-image-list-top-songs__columns">${[0, 1].map(col => `<div class="kc-image-list-top-songs__column">${topSongs.slice(col * 3, col * 3 + 3).map((song, i) => `<div class="kc-image-list-top-songs__song">${image("image-list-top-songs", col * 3 + i + 1, 48, 48, 6, `${song} image`)}<div class="kc-image-list-top-songs__song-text"><span class="kc-copy-bold">${song}</span><span class="kc-copy-small">${["Album · Year", "Album · Year", "Album · Year"][i]}</span></div></div>`).join("")}</div>`).join("")}</div>`);
+    addSample("Image List / Top Songs", "desktop-top-songs");
 
     add("Image List", "Image List / Featured In", "kc-image-list-featured-in",
       `${title("Featured in")}<div class="kc-image-list-featured-in__list">${[1, 2, 3].map(n => `<div class="kc-image-list-featured-in__row">${image("image-list-featured-in", n, 32, 32, 20, `Featured in image ${n}`)}<div class="kc-image-list-featured-in__text"><span class="kc-copy-bold">Name of List</span><span class="kc-copy-small">List Publisher</span></div></div>`).join("")}</div>`);
@@ -172,8 +163,7 @@
     add("Image List", "Image List / Carded / Large", "kc-image-list-carded-large",
       title("List Title") + '<div class="kc-image-list-carded-large__cards">' + [1, 2].map(row => '<div class="kc-image-list-carded-large__row">' + largeCardRow(row) + '</div>').join("") + '</div>');
 
-    add("Image List", "Image List / Top Fact", "kc-image-list-top-fact",
-      `<div class="kc-image-list-top-fact__fact"><div class="kc-image-list-top-fact__text"><span class="kc-copy-bold">Life Span</span><strong class="kc-t-highlight-l kc-gray-copy">12 - 17</strong></div>${image("image-list-top-fact", 1, 64, 80, 0, "Top fact image 1")}</div><span class="kc-divider--v"></span><div class="kc-image-list-top-fact__fact"><div class="kc-image-list-top-fact__text"><span class="kc-copy-bold">Life Span</span><strong class="kc-t-highlight-l kc-gray-copy">12 - 17</strong></div>${image("image-list-top-fact", 2, 64, 80, 0, "Top fact image 2")}</div>`, "Top facts");
+    addSample("Image List / Top Fact", "desktop-top-fact-image", "Top facts");
 
     add("Image List", "Image List / Carded / Small / Vertical", "kc-image-list-carded-small-vertical",
       `${title("List Title")}<div class="kc-image-list-carded-small-vertical__cards">${[0, 1].map(col => `<div class="kc-image-list-carded-small-vertical__column">${[1, 2].map(row => { const n = col * 2 + row; return `<div class="kc-card kc-image-list-carded-small-vertical__card"><div class="kc-image-list-carded-small-vertical__inner">${image("image-list-carded-small-vertical", n, 48, 48, "6px 0 0 6px", "Image,Title / Horizontal")}<span class="kc-copy-bold">Lorem ipsum</span></div></div>`; }).join("")}</div>`).join("")}</div>`);
@@ -184,21 +174,19 @@
     add("Image List", "Image List / Entity List", "kc-image-list-entity-list",
       `${title("Stock portraits")}<div class="kc-image-list-entity-list__list">${[0, 1, 2].map(row => `<div class="kc-image-list-entity-list__row">${names.slice(row * 2, row * 2 + 2).map((name, i) => `<div class="kc-image-list-entity-list__person">${image("image-list-entity-list", row * 2 + i + 1, 32, 32, 20, name)}<span class="kc-copy-bold">${name}</span></div>`).join("")}</div>`).join("")}</div>`);
 
-    add("Image List", "Image List / Ingredients", "kc-image-list-ingredients",
-      `${title("Common ingredients")}<div class="kc-image-list-ingredients__list">${[0, 1].map(row => `<div class="kc-image-list-ingredients__row">${["Flour", "Butter", "Sugar", "Eggs", "Milk", "Salt"].slice(row * 3, row * 3 + 3).map((name, i) => `<div class="kc-image-list-ingredients__item">${image("image-list-ingredients", row * 3 + i + 1, 32, 32, 20, name)}<span class="kc-copy-bold">${name}</span></div>`).join("")}</div>`).join("")}</div>`);
+    addSample("Image List / Ingredients", "desktop-ingredients");
 
     add("Image List", "Image List / Products", "kc-image-list-products",
       Array.from({ length: 6 }, (_, i) => `<div class="kc-image-list-products__item">${image("image-list-products", i + 1, 32, 32, 6, `Product ${i + 1}`)}<span class="kc-copy-bold">Product</span></div>`).join(""), "Products");
 
-    const factVariants = [
-      { variant:"1-image", label:"Image Amount=1-Image", rows:[`<div class="kc-image-list-interesting-facts__text" style="width:287px;height:193px"><p class="kc-copy" style="width:287px;height:62px">${longCopy}</p><span class="kc-divider"></span><p class="kc-copy" style="width:287px;height:98px">${longCopy2}</p></div>${image("image-list-interesting-facts", 1, 125, 193, 6, "Interesting fact image 1")}`] },
-      { variant:"3-image", label:"Image Amount=3-Image", rows:[`<div class="kc-image-list-interesting-facts__row"><div class="kc-image-list-interesting-facts__text" style="width:323px;height:132px;gap:15px"><p class="kc-copy" style="width:323px;height:116px">${longCopy2} Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p><span class="kc-divider"></span></div>${image("image-list-interesting-facts", 1, 89, 131, 6, "Interesting fact image 1")}</div>`,`<div class="kc-image-list-interesting-facts__row">${image("image-list-interesting-facts", 2, 90, 133, 6, "Interesting fact image 2")}<div class="kc-image-list-interesting-facts__text" style="width:322px;height:133px;gap:16px"><p class="kc-copy" style="width:322px;height:116px;text-align:right">${longCopy2} Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p><span class="kc-divider"></span></div></div>`,`<div class="kc-image-list-interesting-facts__row"><p class="kc-copy" style="width:266px;height:94px">${longCopy2}</p>${image("image-list-interesting-facts", 3, 146, 93, 6, "Interesting fact image 3")}</div>`] },
-      { variant:"2-image", label:"Image Amount=2-Image", rows:[`<div class="kc-image-list-interesting-facts__row"><div class="kc-image-list-interesting-facts__text" style="width:282px;height:193px;gap:16px"><p class="kc-copy" style="width:282px;height:98px">${longCopy2}</p><span class="kc-divider"></span><p class="kc-copy" style="width:282px;height:62px">${longCopy}</p></div>${image("image-list-interesting-facts", 1, 130, 193, 6, "Interesting fact image 1")}</div>`,`<div class="kc-image-list-interesting-facts__row">${image("image-list-interesting-facts", 2, 146, 93, 6, "Interesting fact image 2")}<div class="kc-image-list-interesting-facts__text" style="width:266px;height:93px;gap:16px"><span class="kc-divider"></span><p class="kc-copy" style="width:266px;height:76px;text-align:right">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et. Ut enim ad minim veniam, quis.</p></div></div>`] },
-      { variant:"none", label:"Image Amount=None", rows:[`<div class="kc-image-list-interesting-facts__text"><p class="kc-copy" style="width:432px;height:40px">${longCopy}</p></div>`] }
-    ];
-    factVariants.forEach(({ variant, label, rows }) =>
-      add("Image List", `Image List / Interesting Facts — ${label}`, `kc-image-list-interesting-facts kc-image-list-interesting-facts--${variant}`,
-        rows.join(""), "Interesting facts"));
+    [
+      ["1-image", "Image Amount=1-Image"],
+      ["3-image", "Image Amount=3-Image"],
+      ["2-image", "Image Amount=2-Image"],
+      ["none", "Image Amount=None"]
+    ].forEach(([variant, label]) =>
+      addSample(`Image List / Interesting Facts — ${label}`, `desktop-interesting-facts-${variant}`, "Interesting facts")
+    );
 
     add("Ratings", "Ratings / Movie Critics", "kc-ratings-movie-critics",
       ["8.1/10|M|Movie DB", "92%|C|Critic Score", "81%|A|Audience Score"].map(v => {
@@ -291,10 +279,17 @@
         label.className = "kc-board-label";
         label.textContent = item.label;
         const sample = textListSamples.get(item.label);
-        const root = document.createElement(sample ? "kc-module" : "section");
+        const imageListSample = item.imageListSample;
+        const root = document.createElement(sample || imageListSample ? "kc-module" : "section");
         if (sample) {
           root.setAttribute("type", sample[0]);
           root.setAttribute("variant", sample[1]);
+        } else if (imageListSample) {
+          const sampleData = window.KC_ENTITIES._samples.modules[imageListSample];
+          if (!sampleData) throw new Error(`Missing KC image-list sample "${imageListSample}".`);
+          root.setAttribute("type", sampleData.type);
+          root.setAttribute("platform", "desktop");
+          root.setAttribute("variant", imageListSample);
         } else {
           root.className = `kc-module ${item.cls}`;
           root.dataset.kc = item.label.split(" — ")[0];

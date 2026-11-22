@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="../assets/css/msn-components.css">
   <link rel="stylesheet" href="../assets/css/kc-components.css"><script src="../assets/js/data/kc-entities.js"></script>  <script src="../assets/js/components/kc-module.js"></script>
   <script src="../assets/js/components/kc-modules/text-list.js"></script>
+  <script src="../assets/js/components/kc-modules/image-list.js"></script>
   <script src="../assets/js/components/kc-hero.js"></script>
   <script src="../assets/js/kc-mobile-carousels.js" defer></script>
   <style>
@@ -28,17 +29,7 @@
         <article class="kc-card-stack kc-mobile-designer-card kc-team-mobile kc-theme-purple-2" data-kc="Segment / Team" aria-label="Los Angeles Lakers knowledge card">
           <kc-hero entity="team" platform="mobile"></kc-hero>
 
-          <section class="kc-module kc-module--mobile kc-mobile-image-list-carousel" id="kc-team-mobile-carousel" data-kc="Mobile / Image List / Carousel" aria-label="Team photos">
-            <div class="kc-scroll-row" tabindex="0" aria-label="Team photos, use left and right arrow keys to scroll">
-              <span class="kc-img kc-img--cover" style="width:132px;height:120px;border-radius:6px"><img src="../assets/images/kc/modules/team/team-mobile-carousel-01.png" alt="Los Angeles Lakers team photo 1" onerror="this.style.display='none'"></span>
-              <span class="kc-img kc-img--cover" style="width:119px;height:120px;border-radius:6px"><img src="../assets/images/kc/modules/team/team-mobile-carousel-02.png" alt="Los Angeles Lakers team photo 2" onerror="this.style.display='none'"></span>
-              <span class="kc-img kc-img--crop-edge" style="width:106px;height:120px;border-radius:6px"><img src="../assets/images/kc/modules/team/team-mobile-carousel-03.png" alt="Los Angeles Lakers team photo 3" onerror="this.style.display='none'"></span>
-              <span class="kc-img" style="width:159px;height:120px;border-radius:6px"></span>
-              <span class="kc-img" style="width:105px;height:120px;border-radius:6px"></span>
-            </div>
-            <button class="kc-btn-flipper kc-team-mobile-carousel__previous" type="button" aria-label="Previous carousel images" disabled><svg width="16" height="16" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><use href="#kc-team-icon-arrow-left"></use></svg></button>
-            <button class="kc-btn-flipper kc-team-mobile-carousel__next" type="button" aria-label="Next carousel images"><svg width="16" height="16" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><use href="#kc-team-icon-arrow-right"></use></svg></button>
-          </section>
+          <kc-module entity="team" platform="mobile" index="0"></kc-module>
 
           <kc-module entity="team" platform="mobile" index="1"></kc-module>
 
@@ -82,31 +73,9 @@
             <button class="kc-btn-flipper kc-mobile-videos-landscape__next" type="button" aria-label="Next videos"><svg width="16" height="16" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><use href="#kc-team-icon-arrow-right"></use></svg></button>
           </section>
 
-          <section class="kc-module kc-module--mobile kc-mobile-image-list-interesting-facts kc-mobile-image-list-interesting-facts--3-image" id="kc-team-mobile-interesting" data-kc="Mobile / Image List / Interesting Facts" data-kc-variant="Image Amount=3-Image" aria-label="Interesting facts about the Los Angeles Lakers">
-            <div class="kc-mobile-image-list-interesting-facts__row">
-              <span class="kc-img kc-img--cover" style="width:164px;height:105px;border-radius:6px"><img src="../assets/images/kc/modules/team/team-mobile-facts-01.png" alt="Basketball game illustrating a Lakers record" onerror="this.style.display='none'"></span>
-              <div class="kc-mobile-image-list-interesting-facts__text"><p class="kc-m-reg">The Lakers won 33 straight games in 1971–72, an NBA record, and won the championship that season.</p><span class="kc-m-divider" aria-hidden="true"></span></div>
-            </div>
-            <div class="kc-mobile-image-list-interesting-facts__row">
-              <span class="kc-img kc-img--cover" style="width:128px;height:106px;border-radius:6px"><img src="../assets/images/kc/modules/team/team-mobile-facts-02.png" alt="Player portrait illustrating a Lakers history fact" onerror="this.style.display='none'"></span>
-              <div class="kc-mobile-image-list-interesting-facts__text"><p class="kc-m-reg">The Lakers are the only team in the NBA to have every first overall selection be a Hall of Famer, with at least three selections.</p><span class="kc-m-divider" aria-hidden="true"></span></div>
-            </div>
-            <div class="kc-mobile-image-list-interesting-facts__row kc-mobile-image-list-interesting-facts__row--reverse">
-              <span class="kc-img kc-img--cover" style="width:104px;height:93px;border-radius:6px"><img src="../assets/images/kc/modules/team/team-mobile-facts-03.png" alt="Minneapolis image related to the Lakers history" onerror="this.style.display='none'"></span>
-              <div class="kc-mobile-image-list-interesting-facts__text"><p class="kc-m-reg">The team began in Minneapolis and kept the Lakers name after moving to Los Angeles in 1960.</p></div>
-            </div>
-          </section>
+          <kc-module entity="team" platform="mobile" index="4"></kc-module>
 
-          <section class="kc-module kc-module--mobile kc-mobile-image-list-main kc-mobile-image-list-main--square" id="kc-team-mobile-players" data-kc="Mobile / Image List / Main" data-kc-variant="Shape=Square" aria-labelledby="kc-team-mobile-players-title">
-            <div class="kc-module-title"><h3 id="kc-team-mobile-players-title">Players</h3></div>
-            <div class="kc-scroll-row" tabindex="0" aria-label="Sample player cards, use left and right arrow keys to scroll">
-              <article class="kc-card kc-mobile-image-title-sub-title"><span class="kc-img"></span><div class="kc-mobile-image-title-sub-title__text"><span class="kc-m-bold kc-m-nols">Player One</span></div></article>
-              <article class="kc-card kc-mobile-image-title-sub-title"><span class="kc-img"></span><div class="kc-mobile-image-title-sub-title__text"><span class="kc-m-bold kc-m-nols">Player Two</span></div></article>
-              <article class="kc-card kc-mobile-image-title-sub-title"><span class="kc-img"></span><div class="kc-mobile-image-title-sub-title__text"><span class="kc-m-bold kc-m-nols">Player Three</span></div></article>
-              <article class="kc-card kc-mobile-image-title-sub-title"><span class="kc-img"></span><div class="kc-mobile-image-title-sub-title__text"><span class="kc-m-bold kc-m-nols">Player Four</span></div></article>
-              <article class="kc-card kc-mobile-image-title-sub-title"><span class="kc-img"></span><div class="kc-mobile-image-title-sub-title__text"><span class="kc-m-bold kc-m-nols">Player Five</span></div></article>
-            </div>
-          </section>
+          <kc-module entity="team" platform="mobile" index="5"></kc-module>
 
           <div class="kc-card-more" id="kc-team-mobile-more" hidden>
             <kc-module entity="team" platform="mobile" index="6"></kc-module>

@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="../assets/css/msn-components.css">
   <link rel="stylesheet" href="../assets/css/kc-components.css"><script src="../assets/js/data/kc-entities.js"></script>  <script src="../assets/js/components/kc-module.js"></script>
   <script src="../assets/js/components/kc-modules/text-list.js"></script>
+  <script src="../assets/js/components/kc-modules/image-list.js"></script>
   <script src="../assets/js/components/kc-hero.js"></script>
   <script src="../assets/js/kc-mobile-carousels.js" defer></script>
   <style>
@@ -28,17 +29,7 @@
         <article class="kc-card-stack kc-mobile-designer-card kc-artist-mobile kc-theme-green" data-kc="Segment / Artist" aria-label="Janelle Monáe knowledge card">
           <kc-hero entity="artist" platform="mobile"></kc-hero>
 
-          <section class="kc-module kc-module--mobile kc-mobile-image-list-carousel" id="kc-artist-mobile-mod-carousel" data-kc="Mobile / Image List / Carousel" aria-label="Janelle Monáe image carousel">
-            <div class="kc-scroll-row" tabindex="0" aria-label="Janelle Monáe photos, use left and right arrow keys to scroll">
-              <span class="kc-img kc-img--cover" style="width:132px;height:120px;border-radius:6px"><img src="../assets/images/kc/modules/artist/artist-mobile-carousel-01.png" alt="Janelle Monáe image carousel photo 1" onerror="this.style.display='none'"></span>
-              <span class="kc-img kc-img--cover" style="width:119px;height:120px;border-radius:6px"><img src="../assets/images/kc/modules/artist/artist-mobile-carousel-02.png" alt="Janelle Monáe image carousel photo 2" onerror="this.style.display='none'"></span>
-              <span class="kc-img kc-img--crop-edge" style="width:106px;height:120px;border-radius:6px"><img src="../assets/images/kc/modules/artist/artist-mobile-carousel-03.png" alt="Janelle Monáe image carousel photo 3" onerror="this.style.display='none'"></span>
-              <span class="kc-img" style="width:159px;height:120px;border-radius:6px"></span>
-              <span class="kc-img" style="width:105px;height:120px;border-radius:6px"></span>
-            </div>
-            <button class="kc-btn-flipper kc-artist-mobile-carousel__previous" type="button" aria-label="Previous carousel images" disabled><svg width="16" height="16" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><use href="#kc-artist-icon-arrow-left"></use></svg></button>
-            <button class="kc-btn-flipper kc-artist-mobile-carousel__next" type="button" aria-label="Next carousel images"><svg width="16" height="16" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><use href="#kc-artist-icon-arrow-right"></use></svg></button>
-          </section>
+          <kc-module entity="artist" platform="mobile" index="0"></kc-module>
 
           <kc-module entity="artist" platform="mobile" index="1"></kc-module>
 
@@ -98,48 +89,14 @@
             </figure>
           </section>
 
-          <section class="kc-module kc-module--mobile kc-mobile-image-list-main kc-mobile-image-list-main--square" id="kc-artist-mobile-mod-albums" data-kc="Mobile / Image List / Main" data-kc-variant="Shape=Square" aria-labelledby="kc-artist-mobile-albums-title">
-            <div class="kc-module-title"><h3 id="kc-artist-mobile-albums-title">Albums</h3></div>
-            <div class="kc-scroll-row" tabindex="0" aria-label="Janelle Monáe albums">
-              <article class="kc-card kc-mobile-image-title-sub-title"><span class="kc-img"></span><div class="kc-mobile-image-title-sub-title__text"><span class="kc-m-bold kc-m-nols">The ArchAndroid</span><span class="kc-mobile-image-title-sub-title__sub">2010</span></div></article>
-              <article class="kc-card kc-mobile-image-title-sub-title"><span class="kc-img"></span><div class="kc-mobile-image-title-sub-title__text"><span class="kc-m-bold kc-m-nols">The Electric Lady</span><span class="kc-mobile-image-title-sub-title__sub">2013</span></div></article>
-              <article class="kc-card kc-mobile-image-title-sub-title"><span class="kc-img"></span><div class="kc-mobile-image-title-sub-title__text"><span class="kc-m-bold kc-m-nols">Dirty Computer</span><span class="kc-mobile-image-title-sub-title__sub">2018</span></div></article>
-              <article class="kc-card kc-mobile-image-title-sub-title"><span class="kc-img"></span><div class="kc-mobile-image-title-sub-title__text"><span class="kc-m-bold kc-m-nols">The Age of Pleasure</span><span class="kc-mobile-image-title-sub-title__sub">2023</span></div></article>
-              <article class="kc-card kc-mobile-image-title-sub-title"><span class="kc-img"></span><div class="kc-mobile-image-title-sub-title__text"><span class="kc-m-bold kc-m-nols">The Chase Suite</span><span class="kc-mobile-image-title-sub-title__sub">2008 EP</span></div></article>
-            </div>
-          </section>
+          <kc-module entity="artist" platform="mobile" index="5"></kc-module>
 
           <div class="kc-card-more" id="kc-artist-mobile-more" hidden>
-            <section class="kc-module kc-module--mobile kc-mobile-image-list-interesting-facts kc-mobile-image-list-interesting-facts--2-image" id="kc-artist-mobile-mod-interesting" data-kc="Mobile / Image List / Interesting Facts" data-kc-variant="Image Amount=2-Image" aria-label="Interesting facts about Janelle Monáe">
-              <div class="kc-mobile-image-list-interesting-facts__row">
-                <div class="kc-mobile-image-list-interesting-facts__text">
-                  <p class="kc-m-reg">Monáe's 2018 album Dirty Computer was accompanied by a 48-minute science-fiction film she called an “emotion picture.”</p>
-                  <span class="kc-m-divider" aria-hidden="true"></span>
-                  <p class="kc-m-reg">She played Mary Jackson in Hidden Figures and Teresa in Moonlight, both released in 2016.</p>
-                </div>
-                <span class="kc-img"></span>
-              </div>
-              <div class="kc-mobile-image-list-interesting-facts__row kc-mobile-image-list-interesting-facts__row--reverse">
-                <span class="kc-img"></span>
-                <div class="kc-mobile-image-list-interesting-facts__text">
-                  <span class="kc-m-divider" aria-hidden="true"></span>
-                  <p class="kc-m-reg">Her later screen roles include Harriet, Antebellum, and Glass Onion.</p>
-                </div>
-              </div>
-            </section>
+            <kc-module entity="artist" platform="mobile" index="6"></kc-module>
 
             <kc-module entity="artist" platform="mobile" index="7"></kc-module>
 
-            <section class="kc-module kc-module--mobile kc-mobile-image-list-main kc-mobile-image-list-main--rectangle" id="kc-artist-mobile-mod-films" data-kc="Mobile / Image List / Main" data-kc-variant="Shape=Rectangle" aria-labelledby="kc-artist-mobile-films-title">
-              <div class="kc-module-title"><h3 id="kc-artist-mobile-films-title">Films</h3></div>
-              <div class="kc-scroll-row" tabindex="0" aria-label="Janelle Monáe films">
-                <article class="kc-card kc-mobile-image-title-sub-title"><span class="kc-img"></span><div class="kc-mobile-image-title-sub-title__text"><span class="kc-m-bold kc-m-nols">Moonlight</span><span class="kc-mobile-image-title-sub-title__sub">2016</span></div></article>
-                <article class="kc-card kc-mobile-image-title-sub-title"><span class="kc-img"></span><div class="kc-mobile-image-title-sub-title__text"><span class="kc-m-bold kc-m-nols">Hidden Figures</span><span class="kc-mobile-image-title-sub-title__sub">2016</span></div></article>
-                <article class="kc-card kc-mobile-image-title-sub-title"><span class="kc-img"></span><div class="kc-mobile-image-title-sub-title__text"><span class="kc-m-bold kc-m-nols">Harriet</span><span class="kc-mobile-image-title-sub-title__sub">2019</span></div></article>
-                <article class="kc-card kc-mobile-image-title-sub-title"><span class="kc-img"></span><div class="kc-mobile-image-title-sub-title__text"><span class="kc-m-bold kc-m-nols">Antebellum</span><span class="kc-mobile-image-title-sub-title__sub">2020</span></div></article>
-                <article class="kc-card kc-mobile-image-title-sub-title"><span class="kc-img"></span><div class="kc-mobile-image-title-sub-title__text"><span class="kc-m-bold kc-m-nols">Glass Onion</span><span class="kc-mobile-image-title-sub-title__sub">2022</span></div></article>
-              </div>
-            </section>
+            <kc-module entity="artist" platform="mobile" index="8"></kc-module>
 
             <kc-module entity="artist" platform="mobile" index="9"></kc-module>
           </div>

@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="../assets/css/msn-components.css">
   <link rel="stylesheet" href="../assets/css/kc-components.css"><script src="../assets/js/data/kc-entities.js"></script>  <script src="../assets/js/components/kc-module.js"></script>
   <script src="../assets/js/components/kc-modules/text-list.js"></script>
+  <script src="../assets/js/components/kc-modules/image-list.js"></script>
   <script src="../assets/js/components/kc-hero.js"></script>
   <style>
     * { box-sizing:border-box; }
@@ -32,25 +33,9 @@
             <a class="kc-btn-outline kc-miscellaneous-travel__action" href="#"><img src="../assets/icons/ic_fluent_bed_20_regular.svg" alt="" aria-hidden="true"><span>Book hotels</span></a>
           </section>
 
-          <section class="kc-module kc-image-list-places-to-visit" id="kc-mod-places" data-kc="Image List / Places to Visit" aria-labelledby="kc-title-places">
-            <div class="kc-module-title"><h3 id="kc-title-places">Top places to visit</h3></div>
-            <div class="kc-image-list-places-to-visit__items">
-              <div class="kc-image-list-places-to-visit__item"><span class="kc-img" style="width:100px;height:116px;border-radius:6px"><img src="../assets/images/kc/stock/taj-mahal.jpg" alt="Taj Mahal monument with a reflecting pool" onerror="this.style.display='none'"></span><span class="kc-copy">Taj Mahal</span></div>
-              <div class="kc-image-list-places-to-visit__item"><span class="kc-img" style="width:100px;height:100px;border-radius:6px"><img src="../assets/images/kc/stock/jaipur.jpg" alt="Hawa Mahal palace facade in Jaipur" onerror="this.style.display='none'"></span><span class="kc-copy">Hawa Mahal</span></div>
-              <div class="kc-image-list-places-to-visit__item"><span class="kc-img" style="width:100px;height:116px;border-radius:6px"><img src="../assets/images/kc/stock/kerala.jpg" alt="Houseboat on Kerala backwaters" onerror="this.style.display='none'"></span><span class="kc-copy">Kerala</span></div>
-            </div>
-          </section>
+          <kc-module type="places-to-visit" platform="desktop" variant="card-desktop-places-to-visit"></kc-module>
 
-          <section class="kc-module kc-image-list-main kc-image-list-main--square" id="kc-mod-main" data-kc="Image List / Main" aria-labelledby="kc-title-main">
-            <div class="kc-module-title"><h3 id="kc-title-main">Image examples</h3><a class="kc-link" href="#" aria-label="See all image examples"><span class="kc-title-chevron"><img src="../assets/icons/ic_fluent_chevron_right_16_regular.svg" alt="" aria-hidden="true"></span></a></div>
-            <div class="kc-image-list-main__tiles">
-              <div class="kc-image-list-main__tile"><span class="kc-img" style="width:80px;height:80px;border-radius:6px"><img src="../assets/images/kc/stock/mountain-lake.jpg" alt="Mountain lake beside a forest and cabin" onerror="this.style.display='none'"></span><div class="kc-image-list-main__tile-text"><span class="kc-copy-bold">Mountain lake</span><span class="kc-copy-small">Stock photo</span></div></div>
-              <div class="kc-image-list-main__tile"><span class="kc-img" style="width:80px;height:80px;border-radius:6px"><img src="../assets/images/kc/stock/city.jpg" alt="City skyline at sunset" onerror="this.style.display='none'"></span><div class="kc-image-list-main__tile-text"><span class="kc-copy-bold">City skyline</span><span class="kc-copy-small">Stock photo</span></div></div>
-              <div class="kc-image-list-main__tile"><span class="kc-img" style="width:80px;height:80px;border-radius:6px"><img src="../assets/images/kc/stock/forest.jpg" alt="Evergreen forest at sunset" onerror="this.style.display='none'"></span><div class="kc-image-list-main__tile-text"><span class="kc-copy-bold">Evergreen forest</span><span class="kc-copy-small">Stock photo</span></div></div>
-              <div class="kc-image-list-main__tile"><span class="kc-img" style="width:80px;height:80px;border-radius:6px"><img src="../assets/images/kc/stock/mountain-lake.jpg" alt="Mountain lake beside a forest and cabin" onerror="this.style.display='none'"></span><div class="kc-image-list-main__tile-text"><span class="kc-copy-bold">Mountain lake</span><span class="kc-copy-small">Stock photo</span></div></div>
-              <div class="kc-image-list-main__tile"><span class="kc-img" style="width:80px;height:80px;border-radius:6px"><img src="../assets/images/kc/stock/city.jpg" alt="City skyline at sunset" onerror="this.style.display='none'"></span><div class="kc-image-list-main__tile-text"><span class="kc-copy-bold">City skyline</span><span class="kc-copy-small">Stock photo</span></div></div>
-            </div>
-          </section>
+          <kc-module type="main" platform="desktop" variant="card-desktop-main-square"></kc-module>
 
           <section class="kc-module kc-miscellaneous-quote" id="kc-mod-quote" data-kc="Miscellaneous / Quote" aria-label="Quote">
             <figure class="kc-miscellaneous-quote__frame">

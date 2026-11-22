@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="../assets/css/msn-components.css">
   <link rel="stylesheet" href="../assets/css/kc-components.css"><script src="../assets/js/data/kc-entities.js"></script>  <script src="../assets/js/components/kc-module.js"></script>
   <script src="../assets/js/components/kc-modules/text-list.js"></script>
+  <script src="../assets/js/components/kc-modules/image-list.js"></script>
   <script src="../assets/js/components/kc-hero.js"></script>
   <style>
     * { box-sizing:border-box; }
@@ -89,17 +90,7 @@
         <article class="kc-card-stack kc-mobile-designer-card kc-band-mobile" data-kc="Segment / Band" aria-label="Red Hot Chili Peppers knowledge card">
           <kc-hero entity="band" platform="mobile"></kc-hero>
 
-          <section class="kc-module kc-module--mobile kc-mobile-image-list-carousel" id="kc-band-mobile-carousel" data-kc="Mobile / Image List / Carousel" aria-label="Red Hot Chili Peppers photos">
-            <div class="kc-scroll-row" tabindex="0" aria-label="Red Hot Chili Peppers photos, use left and right arrow keys to scroll">
-              <span class="kc-img kc-img--cover" style="width:132px;height:120px;border-radius:6px"><img src="../assets/images/kc/modules/band/band-mobile-carousel-01.png" alt="Red Hot Chili Peppers photo 1" onerror="this.style.display='none'"></span>
-              <span class="kc-img kc-img--cover" style="width:119px;height:120px;border-radius:6px"><img src="../assets/images/kc/modules/band/band-mobile-carousel-02.png" alt="Red Hot Chili Peppers photo 2" onerror="this.style.display='none'"></span>
-              <span class="kc-img kc-img--crop-edge" style="width:106px;height:120px;border-radius:6px"><img src="../assets/images/kc/modules/band/band-mobile-carousel-03.png" alt="Red Hot Chili Peppers photo 3" onerror="this.style.display='none'"></span>
-              <span class="kc-img" style="width:159px;height:120px;border-radius:6px"></span>
-              <span class="kc-img" style="width:105px;height:120px;border-radius:6px"></span>
-            </div>
-            <button class="kc-btn-flipper kc-band-mobile-carousel__previous" type="button" aria-label="Previous carousel images" disabled><svg width="16" height="16" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><use href="#kc-band-icon-arrow-left"></use></svg></button>
-            <button class="kc-btn-flipper kc-band-mobile-carousel__next" type="button" aria-label="Next carousel images"><svg width="16" height="16" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><use href="#kc-band-icon-arrow-right"></use></svg></button>
-          </section>
+          <kc-module entity="band" platform="mobile" index="0"></kc-module>
 
           <kc-module entity="band" platform="mobile" index="1"></kc-module>
 
