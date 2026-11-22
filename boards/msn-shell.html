@@ -12,6 +12,7 @@
 
   <script src="../assets/js/components/msn-taskbar.js"></script>
   <script src="../assets/js/components/windows-wallpaper.js"></script>
+  <script src="../assets/js/components/edge-chrome.js"></script>
   <script defer src="../assets/js/msn-shell.js"></script>
   <link rel="stylesheet" href="../assets/css/fluent-motion.css">
   <script defer src="../assets/js/fluent-motion.js"></script>
@@ -57,35 +58,7 @@
         <windows-wallpaper></windows-wallpaper>
 
         <section class="edge-window" aria-label="Edge new tab page">
-          <div class="edge-chrome-row edge-tab-row">
-            <div class="edge-active-tab">
-              <img src="../assets/icons/globe_16_regular.svg" alt="" aria-hidden="true">
-              <span>New tab</span>
-              <button class="edge-tab-dismiss" type="button" aria-label="Close tab"><img src="../assets/icons/dismiss_12_regular.svg" alt="" aria-hidden="true"></button>
-            </div>
-            <div class="edge-window-controls">
-              <button type="button" aria-label="Minimize"><img src="../assets/icons/subtract_16_regular.svg" alt="" aria-hidden="true"></button>
-              <button type="button" aria-label="Maximize"><img src="../assets/icons/square_16_regular.svg" alt="" aria-hidden="true"></button>
-              <button type="button" aria-label="Close window"><img src="../assets/icons/dismiss_16_regular.svg" alt="" aria-hidden="true"></button>
-            </div>
-          </div>
-          <div class="edge-chrome-row edge-toolbar">
-            <div class="edge-navigation-icons">
-              <button type="button" aria-label="Back"><img src="../assets/icons/arrow_left_20_regular.svg" alt="" aria-hidden="true"></button>
-              <button type="button" aria-label="Reload"><img src="../assets/icons/arrow_clockwise_20_regular.svg" alt="" aria-hidden="true"></button>
-              <button type="button" aria-label="Home"><img src="../assets/icons/home_20_regular.svg" alt="" aria-hidden="true"></button>
-            </div>
-            <div class="edge-address">Search or enter web address</div>
-            <button type="button" aria-label="Favorites"><img src="../assets/icons/star_20_regular.svg" alt="" aria-hidden="true"></button>
-            <button type="button" aria-label="More options"><img src="../assets/icons/more_horizontal_20_regular.svg" alt="" aria-hidden="true"></button>
-          </div>
-          <div class="edge-chrome-row edge-favorites" aria-label="Favorites">
-            <div class="edge-favorite"><span class="edge-favorite__icon"></span><span class="edge-favorite__label">News</span></div>
-            <div class="edge-favorite"><span class="edge-favorite__icon"></span><span class="edge-favorite__label">Weather</span></div>
-            <div class="edge-favorite"><span class="edge-favorite__icon"></span><span class="edge-favorite__label">Money</span></div>
-            <div class="edge-favorite"><span class="edge-favorite__icon"></span><span class="edge-favorite__label">Sports</span></div>
-            <div class="edge-favorite"><span class="edge-favorite__icon"></span><span class="edge-favorite__label">Shopping</span></div>
-          </div>
+          <edge-chrome></edge-chrome>
           <iframe class="edge-page" src="msn-ntp-layout.html?embed=1&amp;theme=light" title="Edge new tab page content"></iframe>
         </section>
 
