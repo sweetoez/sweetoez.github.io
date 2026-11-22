@@ -203,16 +203,28 @@ html[data-theme="dark-navy"] {
 
 ntp-composer {
   display: flex;
-  width: 728px;
-  max-width: calc(100% - 48px);
+  width: min(728px, calc(100% - 48px));
+  min-width: 280px;
   justify-content: center;
   margin-inline: auto;
 }
 
+@container stage (max-width: 391px) {
+  ntp-composer {
+    width: calc(100% - 32px);
+  }
+}
+
+@container edge-page (max-width: 391px) {
+  ntp-composer {
+    width: calc(100% - 32px);
+  }
+}
+
 .ntp-search-shell {
   box-sizing: border-box;
-  width: 728px;
-  max-width: calc(100% - 48px);
+  width: 100%;
+  max-width: none;
   height: 60px;
   display: flex;
   flex-direction: column;
@@ -452,10 +464,22 @@ html:is([data-theme="dark"], [data-theme="dark-navy"]) .ntp-shortcut:hover .ntp-
 }
 
 @container stage (max-width: 655px) {
+  ntp-shortcuts {
+    height: auto;
+  }
+
   .ntp-shortcuts {
-    height: 152px;
+    height: auto;
     display: grid;
-    grid-template-columns: repeat(4, 80px);
+    grid-template-columns: repeat(4, minmax(64px, 80px));
+    justify-content: center;
+    row-gap: 8px;
+  }
+
+  .ntp-shortcut,
+  .ntp-shortcut-label {
+    width: 100%;
+    max-width: 80px;
   }
 
   .ntp-shortcut:nth-child(8),
@@ -472,10 +496,22 @@ html:is([data-theme="dark"], [data-theme="dark-navy"]) .ntp-shortcut:hover .ntp-
 }
 
 @container edge-page (max-width: 655px) {
+  ntp-shortcuts {
+    height: auto;
+  }
+
   .ntp-shortcuts {
-    height: 152px;
+    height: auto;
     display: grid;
-    grid-template-columns: repeat(4, 80px);
+    grid-template-columns: repeat(4, minmax(64px, 80px));
+    justify-content: center;
+    row-gap: 8px;
+  }
+
+  .ntp-shortcut,
+  .ntp-shortcut-label {
+    width: 100%;
+    max-width: 80px;
   }
 
   .ntp-shortcut:nth-child(8),
@@ -561,6 +597,13 @@ msn-header-controls {
   cursor: pointer;
 }
 
+.p2-header__button,
+.p2-header__button .win-icon,
+.p2-header__button .edge-icon,
+.p2-header__profile {
+  color: var(--msn-primary);
+}
+
 .p2-header__button .win-icon,
 .p2-header__button .edge-icon {
   width: 24px;
@@ -634,6 +677,30 @@ html:is([data-theme="dark"], [data-theme="dark-navy"]) .p2-header__profile:hover
 html:is([data-theme="dark"], [data-theme="dark-navy"]) .p2-header__button:active:not(:disabled),
 html:is([data-theme="dark"], [data-theme="dark-navy"]) .p2-header__profile:active:not(:disabled) {
   background: rgba(255, 255, 255, .10);
+}
+
+@container edge-page (max-width: 663px) {
+  .win-panel__toggle-label {
+    display: none;
+  }
+}
+
+@container edge-page (max-width: 360px) {
+  .p2-header__toggle {
+    display: none;
+  }
+}
+
+@container stage (max-width: 663px) {
+  .win-panel__toggle-label {
+    display: none;
+  }
+}
+
+@container stage (max-width: 360px) {
+  .p2-header__toggle {
+    display: none;
+  }
 }
 
 html:is([data-theme="dark"], [data-theme="dark-navy"]) .ntp-brand,
@@ -1138,8 +1205,8 @@ html:is([data-theme="dark"], [data-theme="dark-navy"]) .win-panel__rail-label {
   position: relative;
   display: flex;
   min-width: 0;
-  height: auto;
   flex: 0 0 100%;
+  height: auto;
   flex-direction: column;
   gap: 16px;
 }
@@ -1847,6 +1914,11 @@ html:is([data-theme="dark"], [data-theme="dark-navy"]) .msn-surface .trd05-bubbl
   color: var(--w-ink);
 }
 
+html:is([data-theme="dark"], [data-theme="dark-navy"]) .msn-surface .digest-1u .digest-title,
+html:is([data-theme="dark"], [data-theme="dark-navy"]) .msn-surface .digest--carousel .digest-caption .digest-title {
+  color: #FFFFFF;
+}
+
 html:is([data-theme="dark"], [data-theme="dark-navy"]) .msn-surface .digest-publisher,
 html:is([data-theme="dark"], [data-theme="dark-navy"]) .msn-surface .cg-pub-name,
 html:is([data-theme="dark"], [data-theme="dark-navy"]) .msn-surface .cg-pub-dot,
@@ -1857,6 +1929,11 @@ html:is([data-theme="dark"], [data-theme="dark-navy"]) .msn-surface .stk05-chg,
 html:is([data-theme="dark"], [data-theme="dark-navy"]) .msn-surface .ev05-venue,
 html:is([data-theme="dark"], [data-theme="dark-navy"]) .msn-surface .sp05-link {
   color: var(--w-ink-2);
+}
+
+html:is([data-theme="dark"], [data-theme="dark-navy"]) .msn-surface .digest-1u .digest-publisher,
+html:is([data-theme="dark"], [data-theme="dark-navy"]) .msn-surface .digest--carousel .digest-caption .digest-publisher {
+  color: #C2CADF;
 }
 
 html:is([data-theme="dark"], [data-theme="dark-navy"]) .msn-surface .stk05-chg {

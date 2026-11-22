@@ -36,14 +36,14 @@ let renderedWidgetLayout = "";
 
 function getLayout(width) {
   if (isEmbed) {
-    if (width >= 1448) return { columns: 4, sectionWidth: Math.min(width, 1440) };
-    if (width >= 980) return { columns: 3, sectionWidth: Math.min(width, 1088) };
-    if (width >= 664) return { columns: 2, sectionWidth: Math.min(width, 784) };
+    if (width >= 1440) return { columns: 4, sectionWidth: Math.min(width, 1440) };
+    if (width >= 972) return { columns: 3, sectionWidth: Math.min(width, 1088) };
+    if (width >= 656) return { columns: 2, sectionWidth: Math.min(width, 784) };
     return { columns: 1, sectionWidth: Math.min(width, width < 348 ? 320 : 408) };
   }
-  if (width >= 1296) return { columns: 4, sectionWidth: Math.min(width, 1440) };
-  if (width >= 980) return { columns: 3, sectionWidth: Math.min(width, 1088) };
-  if (width >= 664) return { columns: 2, sectionWidth: Math.min(width, 784) };
+  if (width >= 1440) return { columns: 4, sectionWidth: Math.min(width, 1440) };
+  if (width >= 972) return { columns: 3, sectionWidth: Math.min(width, 1088) };
+  if (width >= 656) return { columns: 2, sectionWidth: Math.min(width, 784) };
   return { columns: 1, sectionWidth: Math.min(width, width < 348 ? 320 : 408) };
 }
 
@@ -152,8 +152,7 @@ document.querySelectorAll(".card-section[data-headlines]").forEach((section) => 
     article.setAttribute("title", headlines[index % headlines.length]);
     article.setAttribute("publisher", "Quantis");
     article.setAttribute("time", "1d");
-    article.setAttribute("image", "../assets/images/msn/widgets/art-img-1.png");
-    article.setAttribute("publisher-icon", "../assets/images/msn/widgets/art-fav-1.svg");
+    article.setAttribute("image", "../assets/images/msn/digest/digest-1.jpg");
     grid.insertBefore(article, grid.querySelector(".column-overlay"));
     pairCount += 1;
 

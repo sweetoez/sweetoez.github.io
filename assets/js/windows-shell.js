@@ -97,8 +97,7 @@ function populateStories() {
       card.setAttribute("title", title);
       card.setAttribute("publisher", publisher);
       card.setAttribute("time", time);
-      card.setAttribute("image", "../assets/images/msn/widgets/art-img-1.png");
-      card.setAttribute("publisher-icon", "../assets/images/msn/widgets/art-fav-1.svg");
+      card.setAttribute("image", "../assets/images/msn/digest/digest-1.jpg");
       return card;
     });
     document.getElementById(gridId).replaceChildren(...cards);

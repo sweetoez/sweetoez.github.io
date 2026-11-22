@@ -411,23 +411,32 @@ html[data-theme="dark"] .feeds-button:hover:not(:disabled) {
   }
 }
 
-@container edge-page (max-width: 971px) {
+@container edge-page (max-width: 655px) {
   .edge-widget-header {
     flex-direction: column;
     justify-content: flex-start;
+    align-items: flex-start;
     gap: 22px;
   }
 
   .edge-greeting {
-    white-space: normal;
-    text-align: center;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-align: left;
+    text-overflow: ellipsis;
   }
 
   .edge-chip-list {
-    justify-content: center;
-    flex-wrap: wrap;
-    row-gap: 8px;
+    width: 100%;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scrollbar-width: none;
   }
+
+  .edge-chip-list::-webkit-scrollbar { display: none; }
+  .edge-chip { flex: none; }
 }
 
 @container edge-page (min-width: 656px) {

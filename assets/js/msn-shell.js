@@ -44,7 +44,7 @@ function renderShell() {
     edgePage.src = `msn-ntp-layout.html?embed=1&theme=${theme}`;
   }
   if (new URL(windowsPanel.src).searchParams.get("theme") !== theme) {
-    windowsPanel.src = `windows-panel-shell.html?embed=1&theme=${theme}`;
+    windowsPanel.src = `windows-panel-shell.html?embed=1&theme=${theme}&v=133`;
   }
   updateDesktopScale();
   updateUrl();

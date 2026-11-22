@@ -81,6 +81,8 @@
       border: 0;
       border-radius: 0;
       background: transparent;
+      container-name: stage;
+      container-type: inline-size;
     }
 
     .layout-section {
@@ -165,6 +167,10 @@
       width: 16px;
       height: 16px;
       object-fit: cover;
+    }
+
+    .chip-image--weather {
+      background: transparent;
     }
 
     .chip-live {
@@ -456,7 +462,7 @@
       .shorts-card:nth-child(3) { display: block; }
     }
 
-    @container stage (min-width: 980px) {
+    @container stage (min-width: 972px) {
       .shorts-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
       .shorts-card:nth-child(4) { display: block; }
     }
@@ -477,36 +483,44 @@
       }
     }
 
-    @container stage (max-width: 663px) {
+    @container stage (max-width: 655px) {
       .ntp-hero { padding-right: 16px; padding-left: 16px; }
     }
 
-    @container stage (max-width: 347px) {
+    @container stage (max-width: 391px) {
       .layout-section {
-        max-width: 320px;
+        width: calc(100% - 16px);
+        max-width: none;
         min-width: 0;
       }
 
       .widget-header {
         height: auto;
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
         gap: 22px;
         padding: 0 8px;
       }
 
       .widget-header .greeting {
-        white-space: normal;
-        text-align: center;
+        width: 100%;
+        overflow: hidden;
+        white-space: nowrap;
+        text-align: left;
+        text-overflow: ellipsis;
       }
 
       .chip-list {
-        width: calc(100% + 1px);
+        width: 100%;
         max-width: none;
-        justify-content: center;
-        flex-wrap: wrap;
-        row-gap: 8px;
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        scrollbar-width: none;
       }
+
+      .chip-list::-webkit-scrollbar { display: none; }
+      .chip { flex: none; }
 
       .widget-grid > .digest {
         grid-column: span 1;
@@ -517,23 +531,40 @@
       }
     }
 
-    @container stage (min-width: 348px) and (max-width: 663px) {
+    @container stage (min-width: 392px) and (max-width: 655px) {
       .layout-section {
-        max-width: 408px;
-        min-width: 348px;
+        width: calc(100% - 16px);
+        max-width: none;
+        min-width: 0;
       }
 
       .widget-header {
         height: auto;
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
         gap: 22px;
         padding: 0 8px;
       }
 
-      .chip-list {
-        justify-content: center;
+      .widget-header .greeting {
+        width: 100%;
+        overflow: hidden;
+        white-space: nowrap;
+        text-align: left;
+        text-overflow: ellipsis;
       }
+
+      .chip-list {
+        width: 100%;
+        max-width: none;
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        scrollbar-width: none;
+      }
+
+      .chip-list::-webkit-scrollbar { display: none; }
+      .chip { flex: none; }
 
       .widget-grid,
       .card-grid {
@@ -556,13 +587,9 @@
         display: none;
       }
 
-      .chip-list {
-        flex-wrap: wrap;
-        row-gap: 8px;
-      }
     }
 
-    @container stage (min-width: 664px) {
+    @container stage (min-width: 656px) {
       .layout-section {
         max-width: 784px;
       }
@@ -577,15 +604,15 @@
       }
 
       .widget-header {
-        height: auto;
-        flex-direction: column;
-        align-items: center;
-        gap: 22px;
+        height: 36px;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 0;
         padding: 0 8px;
       }
 
       .chip-list {
-        justify-content: center;
+        justify-content: flex-end;
       }
 
       .widget-grid > .digest {
@@ -593,7 +620,7 @@
       }
     }
 
-    @container stage (min-width: 980px) {
+    @container stage (min-width: 972px) {
       .layout-section {
         max-width: 1088px;
       }
@@ -621,7 +648,7 @@
 
     }
 
-    @container stage (min-width: 1296px) {
+    @container stage (min-width: 1440px) {
       .layout-section {
         max-width: 1440px;
       }
@@ -646,12 +673,6 @@
         min-width: 616px;
       }
 
-    }
-
-    @container stage (max-width: 347px) {
-      .widget-header {
-        gap: 22px;
-      }
     }
 
     html:not([data-embed="true"]) .ntp-topnav,
@@ -714,7 +735,7 @@
           <div class="ntp-actions">
             <button class="ntp-action" type="button" aria-label="Settings"><img src="../assets/icons/settings_20_regular.svg" alt="" aria-hidden="true"></button>
             <button class="ntp-action" type="button" aria-label="Notifications"><img src="../assets/icons/alert_20_regular.svg" alt="" aria-hidden="true"></button>
-            <button class="ntp-action" type="button" aria-label="Profile"><span class="ntp-avatar"><img src="../assets/images/msn/shell/avatar-32.jpg" alt="" onerror="this.style.visibility='hidden'"></span></button>
+            <button class="ntp-action" type="button" aria-label="Profile"><span class="ntp-avatar"><img src="../assets/images/windows/avatar.png" alt="" onerror="this.style.visibility='hidden'"></span></button>
           </div>
         </nav>
         <section class="ntp-hero" aria-label="Search and shortcuts">
@@ -724,7 +745,7 @@
         <section class="layout-section widget-section" aria-labelledby="widget-heading">
           <header class="widget-header">
             <h2 id="widget-heading" class="greeting">Good morning, Olivia</h2>
-            <ul class="chip-list" aria-label="Quick information">
+            <ul class="chip-list" aria-label="Highlights" tabindex="0">
               <li class="chip">
                 <span class="chip-image"><img src="../assets/images/msn/widgets/chip-f1.png" alt="" width="16" height="16"></span>
                 <span>F1 Belgian Grand Prix</span>
@@ -890,10 +911,10 @@
           </header>
           <div class="shorts-grid">
             <article class="shorts-card"><img class="shorts-card__image" src="../assets/images/msn/shorts/short-1.jpg" alt="" onerror="this.style.visibility='hidden'"><span class="shorts-card__play" aria-hidden="true"><img src="../assets/icons/play_20_filled.svg" alt=""></span><div class="shorts-card__caption"><span>Simple ideas for a brighter morning</span></div></article>
-            <article class="shorts-card"><img class="shorts-card__image" src="../assets/images/msn/shorts/short-2.jpg" alt="" onerror="this.style.visibility='hidden'"><span class="shorts-card__play" aria-hidden="true"><img src="../assets/icons/play_20_filled.svg" alt=""></span><div class="shorts-card__caption"><span>A favorite recipe in under a minute</span></div></article>
-            <article class="shorts-card"><img class="shorts-card__image" src="../assets/images/msn/shorts/short-3.jpg" alt="" onerror="this.style.visibility='hidden'"><span class="shorts-card__play" aria-hidden="true"><img src="../assets/icons/play_20_filled.svg" alt=""></span><div class="shorts-card__caption"><span>Explore a quiet corner of the city</span></div></article>
-            <article class="shorts-card"><img class="shorts-card__image" src="../assets/images/msn/shorts/short-4.jpg" alt="" onerror="this.style.visibility='hidden'"><span class="shorts-card__play" aria-hidden="true"><img src="../assets/icons/play_20_filled.svg" alt=""></span><div class="shorts-card__caption"><span>Small changes for a more welcoming space</span></div></article>
-            <article class="shorts-card"><img class="shorts-card__image" src="../assets/images/msn/shorts/short-5.jpg" alt="" onerror="this.style.visibility='hidden'"><span class="shorts-card__play" aria-hidden="true"><img src="../assets/icons/play_20_filled.svg" alt=""></span><div class="shorts-card__caption"><span>Find a little inspiration outdoors</span></div></article>
+            <article class="shorts-card"><img class="shorts-card__image" src="../assets/images/msn/shorts/short-2.png" alt="" onerror="this.style.visibility='hidden'"><span class="shorts-card__play" aria-hidden="true"><img src="../assets/icons/play_20_filled.svg" alt=""></span><div class="shorts-card__caption"><span>A favorite recipe in under a minute</span></div></article>
+            <article class="shorts-card"><img class="shorts-card__image" src="../assets/images/msn/shorts/short-1.jpg" alt="" onerror="this.style.visibility='hidden'"><span class="shorts-card__play" aria-hidden="true"><img src="../assets/icons/play_20_filled.svg" alt=""></span><div class="shorts-card__caption"><span>Explore a quiet corner of the city</span></div></article>
+            <article class="shorts-card"><img class="shorts-card__image" src="../assets/images/msn/shorts/short-2.png" alt="" onerror="this.style.visibility='hidden'"><span class="shorts-card__play" aria-hidden="true"><img src="../assets/icons/play_20_filled.svg" alt=""></span><div class="shorts-card__caption"><span>Small changes for a more welcoming space</span></div></article>
+            <article class="shorts-card"><img class="shorts-card__image" src="../assets/images/msn/shorts/short-1.jpg" alt="" onerror="this.style.visibility='hidden'"><span class="shorts-card__play" aria-hidden="true"><img src="../assets/icons/play_20_filled.svg" alt=""></span><div class="shorts-card__caption"><span>Find a little inspiration outdoors</span></div></article>
           </div>
         </section>
         <section class="layout-section card-section" data-title="Technology" data-articles="5" data-headlines="A beginner's guide to tidy home networks|Why small design systems scale better than big ones|A closer look at tomorrow's personal devices|The next wave of useful AI tools|Five ideas for a more thoughtful digital workspace" aria-labelledby="technology-heading">
