@@ -35,7 +35,13 @@ window.KC_ENTITIES = {
           "text": [
             "Koi are ornamental carp bred for vivid colors and patterns, and are commonly kept in garden ponds. Many can recognize familiar keepers."
           ],
-          "images": [],
+          "images": [
+            {
+              "src": "../assets/images/kc/modules/animal/animal-desktop-facts-bg-top-01.png",
+              "alt": "",
+              "role": "background"
+            }
+          ],
           "slots": []
         },
         {
@@ -59,6 +65,11 @@ window.KC_ENTITIES = {
             {
               "src": "../assets/images/kc/modules/animal/animal-desktop-facts-03.png",
               "alt": "Kohaku koi with red and white markings"
+            },
+            {
+              "src": "../assets/images/kc/modules/animal/animal-desktop-facts-bg-main-01.png",
+              "alt": "",
+              "role": "background"
             }
           ],
           "slots": []
@@ -152,7 +163,13 @@ window.KC_ENTITIES = {
             "12 - 17",
             "years"
           ],
-          "images": [],
+          "images": [
+            {
+              "src": "../assets/images/kc/modules/animal/animal-mobile-top-fact-bg-01.png",
+              "alt": "",
+              "role": "background"
+            }
+          ],
           "slots": []
         },
         {
@@ -748,7 +765,137 @@ window.KC_ENTITIES = {
           "website"
         ]
       },
-      "modules": []
+      "modules": [
+        {
+          "type": "carousel",
+          "figmaName": "Mobile / Image List / Carousel",
+          "variant": "",
+          "text": [],
+          "images": [
+            {
+              "src": "../assets/images/kc/modules/state/state-mobile-carousel-01.png",
+              "alt": "Idaho landscape"
+            },
+            {
+              "src": "../assets/images/kc/modules/state/state-mobile-carousel-02.png",
+              "alt": "Idaho landscape"
+            },
+            {
+              "src": "../assets/images/kc/modules/state/state-mobile-carousel-03.png",
+              "alt": "Idaho landscape"
+            }
+          ],
+          "slots": [
+            {
+              "src": null
+            },
+            {
+              "src": null
+            }
+          ]
+        },
+        {
+          "type": "top-fact",
+          "figmaName": "Mobile / Text List / Top Fact",
+          "variant": "",
+          "text": [
+            "Life Span",
+            "12 - 17",
+            "Life Span",
+            "12 - 17",
+            "years",
+            "Life Span",
+            "12 - 17",
+            "years"
+          ],
+          "images": [],
+          "slots": []
+        },
+        {
+          "type": "map",
+          "figmaName": "Mobile / Miscellaneous / Map",
+          "variant": "",
+          "text": [],
+          "images": [
+            {
+              "src": "../assets/images/kc/modules/state/state-mobile-map-01.png",
+              "alt": "Map showing Idaho and surrounding states"
+            }
+          ],
+          "slots": []
+        },
+        {
+          "type": "videos-landscape",
+          "figmaName": "Mobile / Videos / Landscape",
+          "variant": "",
+          "text": [
+            "Videos",
+            "1:23",
+            "Video Title Two Lines",
+            "Views · Date",
+            "YouTube",
+            "1:23",
+            "Video Title Two Lines",
+            "Views · Date",
+            "YouTube",
+            "1:23",
+            "Video Title Two Lines",
+            "Views · Date",
+            "YouTube"
+          ],
+          "images": [
+            {
+              "src": "../assets/images/kc/modules/state/state-mobile-video-01.png",
+              "alt": "Idaho video thumbnail"
+            },
+            {
+              "src": "../assets/images/kc/modules/state/state-mobile-video-02.png",
+              "alt": "Idaho video thumbnail"
+            }
+          ],
+          "slots": [
+            {
+              "src": null
+            }
+          ]
+        },
+        {
+          "type": "places-to-visit",
+          "figmaName": "Mobile / Image List / Places to Visit",
+          "variant": "",
+          "text": [
+            "Places of Interest",
+            "Name of Place",
+            "Name of Place",
+            "Name of Place"
+          ],
+          "images": [
+            {
+              "src": "../assets/images/kc/modules/state/state-mobile-image-title-01.png",
+              "alt": "Idaho landscape"
+            },
+            {
+              "src": "../assets/images/kc/modules/state/state-mobile-image-title-02.png",
+              "alt": "Idaho landscape"
+            },
+            {
+              "src": "../assets/images/kc/modules/state/state-mobile-image-title-03.png",
+              "alt": "Idaho landscape"
+            }
+          ],
+          "slots": []
+        },
+        {
+          "type": "attribution",
+          "figmaName": "Mobile / Text List / Attribution",
+          "variant": "",
+          "text": [
+            "Images: Getty Images. Data: en.wikipedia.org · anothersite.com · coolfacts.com Hero image: Holy town Varanasi and the river Ganges"
+          ],
+          "images": [],
+          "slots": []
+        }
+      ]
     }
   },
   "city": {
@@ -939,7 +1086,134 @@ window.KC_ENTITIES = {
           "website"
         ]
       },
-      "modules": []
+      "modules": [
+        {
+          "type": "quick-facts",
+          "figmaName": "Mobile / Text List / Quick Facts",
+          "variant": "",
+          "text": [
+            "Fact title",
+            "Lorem ipsum · Dolor sit amet",
+            "Fact title",
+            "Lorem ipsum · Dolor sit amet",
+            "Fact title",
+            "Lorem ipsum · Dolor sit amet",
+            "Fact title",
+            "Lorem ipsum · Dolor sit amet",
+            "See more"
+          ],
+          "images": [],
+          "slots": []
+        },
+        {
+          "type": "map",
+          "figmaName": "Mobile / Miscellaneous / Map",
+          "variant": "",
+          "text": [],
+          "images": [
+            {
+              "src": "../assets/images/kc/modules/city/city-mobile-map-01.png",
+              "alt": "Map of San Francisco"
+            }
+          ],
+          "slots": []
+        },
+        {
+          "type": "videos-landscape",
+          "figmaName": "Mobile / Videos / Landscape",
+          "variant": "",
+          "text": [
+            "Videos",
+            "1:23",
+            "Video Title Two Lines",
+            "Views · Date",
+            "YouTube",
+            "1:23",
+            "Video Title Two Lines",
+            "Views · Date",
+            "YouTube",
+            "1:23",
+            "Video Title Two Lines",
+            "Views · Date",
+            "YouTube"
+          ],
+          "images": [
+            {
+              "src": "../assets/images/kc/modules/city/city-mobile-video-01.png",
+              "alt": "Video thumbnail: football player in a game"
+            },
+            {
+              "src": "../assets/images/kc/modules/city/city-mobile-video-02.png",
+              "alt": "Video thumbnail: person wearing sunglasses and a cap"
+            },
+            {
+              "src": "../assets/icons/ic_fluent_arrow_left_20_regular.svg",
+              "alt": ""
+            },
+            {
+              "src": "../assets/icons/ic_fluent_arrow_right_20_regular.svg",
+              "alt": ""
+            }
+          ],
+          "slots": [
+            {
+              "src": null
+            }
+          ]
+        },
+        {
+          "type": "travel",
+          "figmaName": "Mobile / Miscellaneous / Travel",
+          "variant": "",
+          "text": [
+            "Travel guide",
+            "Book flights",
+            "Book hotels"
+          ],
+          "images": [
+            {
+              "src": "../assets/icons/ic_fluent_book_globe_20_regular.svg",
+              "alt": ""
+            },
+            {
+              "src": "../assets/icons/ic_fluent_airplane_20_regular.svg",
+              "alt": ""
+            },
+            {
+              "src": "../assets/icons/ic_fluent_bed_20_regular.svg",
+              "alt": ""
+            }
+          ],
+          "slots": []
+        },
+        {
+          "type": "visit-times",
+          "figmaName": "Mobile / Miscellaneous / Visit Times",
+          "variant": "",
+          "text": [
+            "Best Times to Visit",
+            "2018",
+            "2019",
+            "2020",
+            "2021",
+            "2022",
+            "2023",
+            "2024"
+          ],
+          "images": [],
+          "slots": []
+        },
+        {
+          "type": "attribution",
+          "figmaName": "Mobile / Text List / Attribution",
+          "variant": "",
+          "text": [
+            "Images: Getty Images. Data: en.wikipedia.org · anothersite.com · coolfacts.com Hero image: Holy town Varanasi and the river Ganges"
+          ],
+          "images": [],
+          "slots": []
+        }
+      ]
     }
   },
   "artist": {
@@ -2047,7 +2321,134 @@ window.KC_ENTITIES = {
           "website"
         ]
       },
-      "modules": []
+      "modules": [
+        {
+          "type": "carousel",
+          "figmaName": "Mobile / Image List / Carousel",
+          "variant": "",
+          "text": [],
+          "images": [
+            {
+              "src": "../assets/images/kc/modules/band/band-mobile-carousel-01.png",
+              "alt": "Red Hot Chili Peppers photo 1"
+            },
+            {
+              "src": "../assets/images/kc/modules/band/band-mobile-carousel-02.png",
+              "alt": "Red Hot Chili Peppers photo 2"
+            },
+            {
+              "src": "../assets/images/kc/modules/band/band-mobile-carousel-03.png",
+              "alt": "Red Hot Chili Peppers photo 3"
+            }
+          ],
+          "slots": [
+            {
+              "src": null,
+              "width": "159px",
+              "height": "120px"
+            },
+            {
+              "src": null,
+              "width": "105px",
+              "height": "120px"
+            }
+          ]
+        },
+        {
+          "type": "quick-facts",
+          "figmaName": "Mobile / Text List / Quick Facts",
+          "variant": "See more=Yes",
+          "text": [
+            "Fact title",
+            "Lorem ipsum · Dolor sit amet",
+            "Fact title",
+            "Lorem ipsum · Dolor sit amet",
+            "Fact title",
+            "Lorem ipsum · Dolor sit amet",
+            "Fact title",
+            "Lorem ipsum · Dolor sit amet",
+            "See more"
+          ],
+          "images": [],
+          "slots": []
+        },
+        {
+          "type": "listen",
+          "figmaName": "Mobile / Miscellaneous / Listen",
+          "variant": "",
+          "text": [
+            "Listen",
+            "Spotify",
+            "iHeart Radio",
+            "Deezer",
+            "TuneIn"
+          ],
+          "images": [
+            {
+              "src": "../assets/images/kc/brands/spotify.svg",
+              "alt": ""
+            },
+            {
+              "src": "../assets/images/kc/brands/iheart-radio.svg",
+              "alt": ""
+            },
+            {
+              "src": "../assets/images/kc/brands/deezer.svg",
+              "alt": ""
+            },
+            {
+              "src": "../assets/images/kc/brands/tunein.svg",
+              "alt": ""
+            }
+          ],
+          "slots": []
+        },
+        {
+          "type": "videos-landscape",
+          "figmaName": "Mobile / Videos / Landscape",
+          "variant": "",
+          "text": [
+            "Videos",
+            "1:23",
+            "Red",
+            "Views · Date",
+            "YouTube",
+            "1:23",
+            "Video Title Two Lines",
+            "Views · Date",
+            "YouTube",
+            "1:23",
+            "Video Title Two Lines",
+            "Views · Date",
+            "YouTube"
+          ],
+          "images": [
+            {
+              "src": "../assets/images/kc/modules/band/band-mobile-video-01.png",
+              "alt": "Video thumbnail of a Red Hot Chili Peppers performance"
+            },
+            {
+              "src": "../assets/images/kc/modules/band/band-mobile-video-02.png",
+              "alt": "Video thumbnail of a Red Hot Chili Peppers video"
+            }
+          ],
+          "slots": [
+            {
+              "src": null
+            }
+          ]
+        },
+        {
+          "type": "attribution",
+          "figmaName": "Mobile / Text List / Attribution",
+          "variant": "",
+          "text": [
+            "Images: Getty Images. Data: en.wikipedia.org · anothersite.com · coolfacts.com Hero image: Holy town Varanasi and the river Ganges"
+          ],
+          "images": [],
+          "slots": []
+        }
+      ]
     }
   },
   "food": {
@@ -2188,7 +2589,91 @@ window.KC_ENTITIES = {
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad ..."
         ]
       },
-      "modules": []
+      "modules": [
+        {
+          "type": "serving-size",
+          "figmaName": "Mobile / Miscellaneous / Serving Size",
+          "variant": "",
+          "text": [
+            "Serving Size: Food (100g)",
+            "Calories",
+            "000",
+            "Fat",
+            "000",
+            "Carbs",
+            "000",
+            "XX%",
+            "Sugar",
+            "000",
+            "XX%",
+            "% Daily value*"
+          ],
+          "images": [],
+          "slots": []
+        },
+        {
+          "type": "interesting-facts",
+          "figmaName": "Mobile / Image List / Interesting Facts",
+          "variant": "Image Amount=2-Image",
+          "text": [
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+            "A pizza named 'Ottavia' is the largest pizza that has a total surface area of 1,261.65 m² (13,580.28 ft²) and was prepared in Rome, Italy, on 13 December 2012."
+          ],
+          "images": [
+            {
+              "src": "../assets/images/kc/modules/food/food-mobile-facts-01.png",
+              "alt": "Pizza Margherita"
+            },
+            {
+              "src": "../assets/images/kc/modules/food/food-mobile-facts-02.png",
+              "alt": "Very large pizza"
+            }
+          ],
+          "slots": []
+        },
+        {
+          "type": "ingredients",
+          "figmaName": "Mobile / Image List / Ingredients",
+          "variant": "",
+          "text": [
+            "Common Ingredients",
+            "Ingredient",
+            "Ingredient",
+            "Ingredient",
+            "Ingredient"
+          ],
+          "images": [
+            {
+              "src": "../assets/images/kc/modules/food/food-mobile-ingredients-01.png",
+              "alt": ""
+            },
+            {
+              "src": "../assets/images/kc/modules/food/food-mobile-ingredients-02.png",
+              "alt": ""
+            },
+            {
+              "src": "../assets/images/kc/modules/food/food-mobile-ingredients-03.png",
+              "alt": ""
+            },
+            {
+              "src": "../assets/images/kc/modules/food/food-mobile-ingredients-04.png",
+              "alt": ""
+            }
+          ],
+          "slots": []
+        },
+        {
+          "type": "attribution",
+          "figmaName": "Mobile / Text List / Attribution",
+          "variant": "",
+          "text": [
+            "Images: Getty Images. Data: en.wikipedia.org · anothersite.com · coolfacts.com Hero image: Holy town Varanasi and the river Ganges"
+          ],
+          "images": [],
+          "slots": []
+        }
+      ]
     }
   },
   "ingredient": {
@@ -2294,7 +2779,146 @@ window.KC_ENTITIES = {
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad"
         ]
       },
-      "modules": []
+      "modules": [
+        {
+          "type": "carousel",
+          "figmaName": "Mobile/ Image List / Carousel",
+          "variant": "",
+          "text": [],
+          "images": [
+            {
+              "src": "../assets/images/kc/modules/ingredient/ingredient-mobile-carousel-01.png",
+              "alt": "Summer squash photo 1"
+            },
+            {
+              "src": "../assets/images/kc/modules/ingredient/ingredient-mobile-carousel-02.png",
+              "alt": "Summer squash photo 2"
+            },
+            {
+              "src": "../assets/images/kc/modules/ingredient/ingredient-mobile-carousel-03.png",
+              "alt": "Summer squash photo 3"
+            }
+          ],
+          "slots": [
+            {
+              "src": null
+            },
+            {
+              "src": null
+            }
+          ]
+        },
+        {
+          "type": "serving-size",
+          "figmaName": "Mobile / Miscellaneous / Serving Size",
+          "variant": "",
+          "text": [
+            "Serving Size: Food (100g)",
+            "Title",
+            "000",
+            "Title",
+            "000",
+            "XX%",
+            "Title",
+            "000",
+            "Title",
+            "000",
+            "XX%",
+            "% Daily value*"
+          ],
+          "images": [],
+          "slots": []
+        },
+        {
+          "type": "interesting-facts",
+          "figmaName": "Mobile / Image List / Interesting Facts",
+          "variant": "Image Amount=2-Image",
+          "text": [
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+            "A zucchini with the flowers attached is a sign of a truly fresh and immature fruit."
+          ],
+          "images": [
+            {
+              "src": "../assets/images/kc/modules/ingredient/ingredient-mobile-facts-01.png",
+              "alt": "Image for interesting fact about summer squash, 1"
+            },
+            {
+              "src": "../assets/images/kc/modules/ingredient/ingredient-mobile-facts-02.png",
+              "alt": "Image for interesting fact about summer squash, 2"
+            }
+          ],
+          "slots": []
+        },
+        {
+          "type": "videos-landscape",
+          "figmaName": "Mobile / Videos / Landscape",
+          "variant": "",
+          "text": [
+            "Videos",
+            "1:23",
+            "Video Title Two Lines",
+            "Views · Date",
+            "YouTube",
+            "1:23",
+            "Video Title Two Lines",
+            "Views · Date",
+            "YouTube",
+            "1:23",
+            "Video Title Two Lines",
+            "Views · Date",
+            "YouTube"
+          ],
+          "images": [
+            {
+              "src": "../assets/images/kc/modules/ingredient/ingredient-mobile-video-01.png",
+              "alt": ""
+            },
+            {
+              "src": "../assets/images/kc/modules/ingredient/ingredient-mobile-video-02.png",
+              "alt": ""
+            }
+          ],
+          "slots": [
+            {
+              "src": null,
+              "width": "240px",
+              "height": "135px"
+            }
+          ]
+        },
+        {
+          "type": "ingredients",
+          "figmaName": "Mobile / Image List / Ingredients",
+          "variant": "",
+          "text": [
+            "Common Ingredients",
+            "Ingredient",
+            "Ingredient"
+          ],
+          "images": [
+            {
+              "src": "../assets/images/kc/modules/ingredient/ingredient-mobile-ingredients-01.png",
+              "alt": ""
+            },
+            {
+              "src": "../assets/images/kc/modules/ingredient/ingredient-mobile-ingredients-02.png",
+              "alt": ""
+            }
+          ],
+          "slots": []
+        },
+        {
+          "type": "attribution",
+          "figmaName": "Mobile / Text List / Attribution",
+          "variant": "",
+          "text": [
+            "Images: Getty Images. Data: en.wikipedia.org · anothersite.com · coolfacts.com Hero image: Holy town Varanasi and the river Ganges"
+          ],
+          "images": [],
+          "slots": []
+        }
+      ]
     }
   },
   "planet": {
@@ -2416,7 +3040,142 @@ window.KC_ENTITIES = {
           "Fifth planet from the Sun"
         ]
       },
-      "modules": []
+      "modules": [
+        {
+          "type": "carousel",
+          "figmaName": "Mobile / Image List / Carousel",
+          "variant": "",
+          "text": [],
+          "images": [
+            {
+              "src": "../assets/images/kc/modules/planet/planet-mobile-carousel-01.png",
+              "alt": "Jupiter with cloud bands and the Great Red Spot"
+            },
+            {
+              "src": "../assets/images/kc/modules/planet/planet-mobile-carousel-02.png",
+              "alt": "Close-up of Jupiter's Great Red Spot"
+            },
+            {
+              "src": "../assets/images/kc/modules/planet/planet-mobile-carousel-03.png",
+              "alt": "Jupiter with cloud bands and the Great Red Spot"
+            }
+          ],
+          "slots": [
+            {
+              "src": null
+            },
+            {
+              "src": null
+            }
+          ]
+        },
+        {
+          "type": "quick-facts",
+          "figmaName": "Mobile / Text List / Quick Facts",
+          "variant": "See more=Yes",
+          "text": [
+            "Diameter",
+            "139,820 km",
+            "Moons",
+            "95",
+            "Day",
+            "9 h 56 min",
+            "Year",
+            "11.86 Earth years",
+            "Distance",
+            "5.2 AU",
+            "Mass",
+            "318 Earths",
+            "See more"
+          ],
+          "images": [],
+          "slots": []
+        },
+        {
+          "type": "interesting-facts",
+          "figmaName": "Mobile / Image List / Interesting Facts",
+          "variant": "Image Amount=2-Image",
+          "text": [
+            "Jupiter has the shortest day of all the planets. It turns on its axis once every 9 hours and 55 minutes.",
+            "Jupiter is the third-brightest natural object in the Earth's night sky after the Moon and Venus.",
+            "Jupiter has a very strong magnetic field. This is around 14 times stronger than the magnetic field found on Earth — the largest of any planet in the solar system."
+          ],
+          "images": [
+            {
+              "src": "../assets/images/kc/modules/planet/planet-mobile-facts-01.png",
+              "alt": "Jupiter's Great Red Spot"
+            },
+            {
+              "src": "../assets/images/kc/modules/planet/planet-mobile-facts-02.png",
+              "alt": "Cloud formations on Jupiter"
+            }
+          ],
+          "slots": []
+        },
+        {
+          "type": "top-fact",
+          "figmaName": "Mobile / Text List / Top Fact",
+          "variant": "Quantity=3",
+          "text": [
+            "Diameter",
+            "139,820",
+            "km",
+            "Moons",
+            "95",
+            "Day",
+            "9 h 56",
+            "min"
+          ],
+          "images": [],
+          "slots": []
+        },
+        {
+          "type": "top-fact",
+          "figmaName": "Mobile / Text List / Top Fact",
+          "variant": "Quantity=3",
+          "text": [
+            "Distance from Sun",
+            "5.2",
+            "AU",
+            "Year",
+            "11.86",
+            "Earth years",
+            "Mass",
+            "318",
+            "Earths"
+          ],
+          "images": [],
+          "slots": []
+        },
+        {
+          "type": "timeline",
+          "figmaName": "Mobile / Miscellaneous / Timeline",
+          "variant": "",
+          "text": [
+            "1610",
+            "Galileo spots Jupiter's four largest moons.",
+            "1979",
+            "Voyager 1 and 2 fly by Jupiter.",
+            "1995",
+            "Galileo probe enters Jupiter's atmosphere.",
+            "2016",
+            "Juno arrives at Jupiter."
+          ],
+          "images": [],
+          "slots": []
+        },
+        {
+          "type": "attribution",
+          "figmaName": "Mobile / Text List / Attribution",
+          "variant": "",
+          "text": [
+            "Hero image: Jupiter"
+          ],
+          "images": [],
+          "slots": [],
+          "seeMore": true
+        }
+      ]
     }
   },
   "plant": {
@@ -2556,7 +3315,130 @@ window.KC_ENTITIES = {
           "Dahlias are flowering perennials in the aster family, native to Mexico and Central America."
         ]
       },
-      "modules": []
+      "modules": [
+        {
+          "type": "carousel",
+          "figmaName": "Mobile / Image List / Carousel",
+          "variant": "",
+          "text": [],
+          "images": [
+            {
+              "src": "../assets/images/kc/modules/plant/plant-mobile-carousel-01.png",
+              "alt": "Red Dahlietta Anna dahlia flower"
+            },
+            {
+              "src": "../assets/images/kc/modules/plant/plant-mobile-carousel-02.png",
+              "alt": "Yellow and red Moonfire dahlia flower"
+            },
+            {
+              "src": "../assets/images/kc/modules/plant/plant-mobile-carousel-03.png",
+              "alt": "Moonfire dahlia flower bud"
+            },
+            {
+              "src": "../assets/images/kc/modules/plant/plant-mobile-carousel-04.png",
+              "alt": "Dahlietta Anna plant with red flowers and buds"
+            }
+          ],
+          "slots": [
+            {
+              "src": null
+            }
+          ]
+        },
+        {
+          "type": "quick-facts",
+          "figmaName": "Mobile / Text List / Quick Facts",
+          "variant": "See more=No",
+          "text": [
+            "Family",
+            "Asteraceae",
+            "Garden height",
+            "1–5+ ft",
+            "Native",
+            "Mexico and Central America",
+            "Bloom",
+            "Summer to first frost"
+          ],
+          "images": [],
+          "slots": []
+        },
+        {
+          "type": "top-fact",
+          "figmaName": "Mobile / Text List / Top Fact",
+          "variant": "Quantity=2",
+          "text": [
+            "Garden height",
+            "1–5+ ft",
+            "Native to",
+            "Mexico"
+          ],
+          "images": [],
+          "slots": []
+        },
+        {
+          "type": "interesting-facts",
+          "figmaName": "Mobile / Image List / Interesting Facts",
+          "variant": "Image Amount=1-Image",
+          "text": [
+            "Dahlias grow best in a sunny, sheltered spot with fertile, well-drained soil. Smaller varieties can also thrive in containers.",
+            "Thousands of cultivars offer flowers in a wide variety of shapes and colors, from small blooms to flowers a foot across."
+          ],
+          "images": [],
+          "slots": [
+            {
+              "src": null
+            }
+          ]
+        },
+        {
+          "type": "interesting-facts",
+          "figmaName": "Mobile / Image List / Interesting Facts",
+          "variant": "Image Amount=3-Image",
+          "text": [
+            "Dahlias grow from underground tubers. In colder climates, gardeners can lift and store the tubers in a frost-free place over winter, then start them into growth in spring.",
+            "Dahlias bloom through summer and autumn, often until the first frost. Removing spent flowers encourages more blooms throughout the season.",
+            "Dahlia flowers range from open, daisy-like blooms to rounded, multi-petalled forms."
+          ],
+          "images": [],
+          "slots": [
+            {
+              "src": null
+            },
+            {
+              "src": null
+            },
+            {
+              "src": null
+            }
+          ]
+        },
+        {
+          "type": "attribution",
+          "figmaName": "Mobile / Text List / Attribution",
+          "variant": "",
+          "text": [
+            "Photos (resized): Andy Mabbett,",
+            "flower",
+            "and",
+            "plant",
+            "; Dominicus Johannes Bergsma,",
+            "flower",
+            ",",
+            "foliage",
+            "and",
+            "bud",
+            ".",
+            "CC BY-SA 4.0",
+            ". Facts:",
+            "RHS",
+            "and",
+            "Britannica",
+            "."
+          ],
+          "images": [],
+          "slots": []
+        }
+      ]
     }
   },
   "team": {
@@ -2576,7 +3458,110 @@ window.KC_ENTITIES = {
         "imageAlt": "Los Angeles Lakers",
         "text": []
       },
-      "modules": []
+      "modules": [
+        {
+          "type": "quick-facts",
+          "figmaName": "Text List / Quick Facts",
+          "variant": "Elements=Image, See more=No",
+          "text": [
+            "Founded",
+            "1947",
+            "Arena",
+            "Crypto.com Arena",
+            "Championships",
+            "17"
+          ],
+          "images": [],
+          "slots": [
+            {
+              "src": null
+            }
+          ]
+        },
+        {
+          "type": "main",
+          "figmaName": "Image List / Main",
+          "variant": "Shape=Square",
+          "text": [
+            "Players",
+            "Player One",
+            "Player Two",
+            "Player Three",
+            "Player Four",
+            "Player Five"
+          ],
+          "images": [
+            {
+              "src": "../assets/images/kc/modules/team/team-desktop-main-01.png",
+              "alt": "Portrait of Player One"
+            },
+            {
+              "src": "../assets/images/kc/modules/team/team-desktop-main-02.png",
+              "alt": "Portrait of Player Two"
+            },
+            {
+              "src": "../assets/images/kc/modules/team/team-desktop-main-03.png",
+              "alt": "Portrait of Player Three"
+            },
+            {
+              "src": "../assets/images/kc/modules/team/team-desktop-main-04.png",
+              "alt": "Portrait of Player Four"
+            },
+            {
+              "src": "../assets/images/kc/modules/team/team-desktop-main-05.png",
+              "alt": "Portrait of Player Five"
+            }
+          ],
+          "slots": []
+        },
+        {
+          "type": "interesting-facts",
+          "figmaName": "Image List / Interesting Facts",
+          "variant": "Image Amount=3-Image",
+          "text": [
+            "The Lakers won 33 straight games during the 1971–72 season, the longest winning streak in NBA history. They went on to win the championship that season.",
+            "The Lakers are the only team in the NBA to have every first overall selection be a Hall of Famer, with at least three selections.",
+            "The team began in Minneapolis, the city of lakes, before moving to Los Angeles in 1960. The Lakers name traveled with them."
+          ],
+          "images": [
+            {
+              "src": "../assets/images/kc/modules/team/team-desktop-facts-01.png",
+              "alt": "Basketball game illustrating a Lakers record"
+            },
+            {
+              "src": "../assets/images/kc/modules/team/team-desktop-facts-02.png",
+              "alt": "Player portrait illustrating a Lakers history fact"
+            },
+            {
+              "src": "../assets/images/kc/modules/team/team-desktop-facts-03.png",
+              "alt": "Minneapolis image related to the Lakers history"
+            }
+          ],
+          "slots": []
+        },
+        {
+          "type": "awards",
+          "figmaName": "Text List / Awards",
+          "variant": "",
+          "text": [
+            "Awards",
+            "NBA Championships",
+            "17 titles"
+          ],
+          "images": [],
+          "slots": []
+        },
+        {
+          "type": "attributions",
+          "figmaName": "Text List / Attributions",
+          "variant": "",
+          "text": [
+            "Hero image: Los Angeles Lakers"
+          ],
+          "images": [],
+          "slots": []
+        }
+      ]
     },
     "mobile": {
       "hero": {
@@ -2595,7 +3580,199 @@ window.KC_ENTITIES = {
           "nba.com/lakers"
         ]
       },
-      "modules": []
+      "modules": [
+        {
+          "type": "carousel",
+          "figmaName": "Mobile / Image List / Carousel",
+          "variant": "",
+          "text": [],
+          "images": [
+            {
+              "src": "../assets/images/kc/modules/team/team-mobile-carousel-01.png",
+              "alt": "Los Angeles Lakers team photo 1"
+            },
+            {
+              "src": "../assets/images/kc/modules/team/team-mobile-carousel-02.png",
+              "alt": "Los Angeles Lakers team photo 2"
+            },
+            {
+              "src": "../assets/images/kc/modules/team/team-mobile-carousel-03.png",
+              "alt": "Los Angeles Lakers team photo 3"
+            }
+          ],
+          "slots": [
+            {
+              "src": null,
+              "width": "159px",
+              "height": "120px"
+            },
+            {
+              "src": null,
+              "width": "105px",
+              "height": "120px"
+            }
+          ]
+        },
+        {
+          "type": "quick-facts",
+          "figmaName": "Mobile / Text List / Quick Facts",
+          "variant": "",
+          "text": [
+            "Founded",
+            "1947",
+            "Arena",
+            "Crypto.com Arena",
+            "Championships",
+            "17"
+          ],
+          "images": [],
+          "slots": []
+        },
+        {
+          "type": "news",
+          "figmaName": "Mobile / News",
+          "variant": "",
+          "text": [
+            "News",
+            "Sample team news headline",
+            "Sample source",
+            "Sample player and team update",
+            "Sample source",
+            "Sample season coverage",
+            "Sample source"
+          ],
+          "images": [
+            {
+              "src": "../assets/images/kc/stock/basketball-court.jpg",
+              "alt": "Basketball resting on an outdoor court"
+            },
+            {
+              "src": "../assets/images/kc/stock/portrait-c.jpg",
+              "alt": "Illustrative stock portrait for a player news item"
+            },
+            {
+              "src": "../assets/images/kc/stock/city.jpg",
+              "alt": "City skyline at sunset"
+            }
+          ],
+          "slots": []
+        },
+        {
+          "type": "videos-landscape",
+          "figmaName": "Mobile / Videos / Landscape",
+          "variant": "",
+          "text": [
+            "Videos",
+            "1:23",
+            "Sample team video",
+            "Sample views · Today",
+            "YouTube",
+            "2:14",
+            "Sample game highlights",
+            "Sample views · Today",
+            "YouTube",
+            "3:06",
+            "Sample team interview",
+            "Sample views · Today",
+            "YouTube"
+          ],
+          "images": [
+            {
+              "src": "../assets/images/kc/modules/team/team-mobile-video-01.png",
+              "alt": "Video thumbnail for a Lakers feature"
+            },
+            {
+              "src": "../assets/images/kc/modules/team/team-mobile-video-02.png",
+              "alt": "Video thumbnail for Lakers game highlights"
+            }
+          ],
+          "slots": [
+            {
+              "src": null
+            }
+          ]
+        },
+        {
+          "type": "interesting-facts",
+          "figmaName": "Mobile / Image List / Interesting Facts",
+          "variant": "Image Amount=3-Image",
+          "text": [
+            "The Lakers won 33 straight games in 1971–72, an NBA record, and won the championship that season.",
+            "The Lakers are the only team in the NBA to have every first overall selection be a Hall of Famer, with at least three selections.",
+            "The team began in Minneapolis and kept the Lakers name after moving to Los Angeles in 1960."
+          ],
+          "images": [
+            {
+              "src": "../assets/images/kc/modules/team/team-mobile-facts-01.png",
+              "alt": "Basketball game illustrating a Lakers record"
+            },
+            {
+              "src": "../assets/images/kc/modules/team/team-mobile-facts-02.png",
+              "alt": "Player portrait illustrating a Lakers history fact"
+            },
+            {
+              "src": "../assets/images/kc/modules/team/team-mobile-facts-03.png",
+              "alt": "Minneapolis image related to the Lakers history"
+            }
+          ],
+          "slots": []
+        },
+        {
+          "type": "main",
+          "figmaName": "Mobile / Image List / Main",
+          "variant": "Shape=Square",
+          "text": [
+            "Players",
+            "Player One",
+            "Player Two",
+            "Player Three",
+            "Player Four",
+            "Player Five"
+          ],
+          "images": [],
+          "slots": [
+            {
+              "src": null
+            },
+            {
+              "src": null
+            },
+            {
+              "src": null
+            },
+            {
+              "src": null
+            },
+            {
+              "src": null
+            }
+          ]
+        },
+        {
+          "type": "awards",
+          "figmaName": "Mobile / Text List / Awards",
+          "variant": "",
+          "text": [
+            "Awards",
+            "NBA Championships",
+            "17 titles"
+          ],
+          "images": [],
+          "slots": [],
+          "seeMore": true
+        },
+        {
+          "type": "attribution",
+          "figmaName": "Mobile / Text List / Attribution",
+          "variant": "",
+          "text": [
+            "Hero image: Los Angeles Lakers"
+          ],
+          "images": [],
+          "slots": [],
+          "seeMore": true
+        }
+      ]
     }
   },
   "company": {
@@ -2756,7 +3933,106 @@ window.KC_ENTITIES = {
           "website"
         ]
       },
-      "modules": []
+      "modules": [
+        {
+          "type": "top-fact",
+          "figmaName": "Mobile / Text List / Top Fact",
+          "variant": "Quantity=2",
+          "text": [
+            "Life Span",
+            "12 - 17",
+            "Life Span",
+            "12 - 17"
+          ],
+          "images": [],
+          "slots": []
+        },
+        {
+          "type": "quick-facts",
+          "figmaName": "Mobile / Text List / Quick Facts",
+          "variant": "See more=Yes",
+          "text": [
+            "Fact title",
+            "Lorem ipsum · Dolor sit amet",
+            "Fact title",
+            "Lorem ipsum · Dolor sit amet",
+            "Fact title",
+            "Lorem ipsum · Dolor sit amet",
+            "Fact title",
+            "Lorem ipsum · Dolor sit amet",
+            "See more"
+          ],
+          "images": [],
+          "slots": []
+        },
+        {
+          "type": "quote",
+          "figmaName": "Mobile / Miscellaneous / Quote",
+          "variant": "",
+          "text": [
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          ],
+          "images": [],
+          "slots": []
+        },
+        {
+          "type": "interesting-facts",
+          "figmaName": "Mobile / Image List / Interesting Facts",
+          "variant": "Image Amount=2-Image",
+          "text": [
+            "The company title of Microsoft was initially having a hyphen. The main goal is to create software for microprocessors. Which leads to coining it as Micro-Soft.",
+            "Microsoft entered the OS business in 1980 with its own version of Unix, called Xenix. However, it was MS-DOS that solidified the company’s dominance.",
+            "November 1985 saw the first release of Microsoft Windows; Windows 1.0, a 16-bit system.",
+            "Aside from the tablet PC, Microsoft also created the first smartwatch, way back in 1994. The watch was coproduced with Timex and was called Timex DataLink 150."
+          ],
+          "images": [
+            {
+              "src": "../assets/images/kc/modules/company/company-desktop-facts-01.png",
+              "alt": "Image illustrating an interesting fact about Microsoft, 1"
+            },
+            {
+              "src": "../assets/images/kc/modules/company/company-desktop-facts-02.png",
+              "alt": "Image illustrating an interesting fact about Microsoft, 2"
+            }
+          ],
+          "slots": []
+        },
+        {
+          "type": "timeline",
+          "figmaName": "Mobile / Miscellaneous / Timeline",
+          "variant": "",
+          "text": [
+            "2022",
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "2018",
+            "Microsoft partnered with 17 American intelligence agencies to develop cloud computing products.",
+            "2015",
+            "Microsoft announced the release of their first Interactive whiteboard, Microsoft Surface Hub.",
+            "2011",
+            "Microsoft unveiled Windows 8, an operating system designed to power both personal computers and tablet computers.",
+            "2009",
+            "Microsoft announced its intent to open a chain of Microsoft-branded retail stores, and on October 22, 2009, the first retail Microsoft Store opened in Scottsdale, Arizona.",
+            "1990",
+            "Microsoft introduced the Microsoft Office suite which bundled separate applications such as Microsoft Word and Microsoft Excel.",
+            "1983",
+            "The company expanded into new markets with the release of the Microsoft Mouse.",
+            "1977",
+            "The company expanded into new markets with the release of the Microsoft Mouse."
+          ],
+          "images": [],
+          "slots": []
+        },
+        {
+          "type": "attribution",
+          "figmaName": "Mobile / Text List / Attribution",
+          "variant": "",
+          "text": [
+            "Images: Getty Images. Data: en.wikipedia.org · anothersite.com · coolfacts.com Hero image: Holy town Varanasi and the river Ganges"
+          ],
+          "images": [],
+          "slots": []
+        }
+      ]
     }
   }
 };
