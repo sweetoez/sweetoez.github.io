@@ -127,8 +127,7 @@
 .demo .kc-hero-img img,
 .demo .shorts-card__image,
 .demo .article-media > img,
-.demo .art05-image img,
-.demo .digest-slide-image {
+.demo .art05-image img {
   opacity: 0;
   transition: opacity var(--fluent-dur-normal) var(--fluent-ease);
 }
@@ -137,8 +136,7 @@
 .demo .kc-hero-img img.is-loaded,
 .demo .shorts-card__image.is-loaded,
 .demo .article-media > img.is-loaded,
-.demo .art05-image img.is-loaded,
-.demo .digest-slide-image.is-loaded {
+.demo .art05-image img.is-loaded {
   opacity: 1;
 }
 

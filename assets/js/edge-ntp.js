@@ -6,7 +6,6 @@ const desktop = document.querySelector(".edge-desktop");
 const edgeWindow = document.querySelector(".edge-window");
 const widthSlider = document.querySelector("#edge-width");
 const widthReadout = document.querySelector("#edge-width-readout");
-const wallpaper = document.querySelector(".edge-desktop .win-wallpaper img");
 const widthButtons = [...document.querySelectorAll("[data-width]")];
 const themeButtons = [...document.querySelectorAll("[data-theme-choice]")];
 const feedGrid = document.querySelector("#edge-feed-grid");
@@ -86,7 +85,6 @@ let theme = readPreference(themeStorageKey, (value) => value === "light" || valu
 
 function applyTheme() {
   document.documentElement.dataset.theme = theme;
-  wallpaper.src = `../assets/images/windows/wallpaper-${theme}.jpg`;
   themeButtons.forEach((button) => {
     button.setAttribute("aria-pressed", String(button.dataset.themeChoice === theme));
   });

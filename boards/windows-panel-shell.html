@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="../assets/css/windows-shell.css">
 
   <script src="../assets/js/components/msn-taskbar.js"></script>
+  <script src="../assets/js/components/windows-wallpaper.js"></script>
   <script defer src="../assets/js/windows-shell.js"></script>
   <link rel="stylesheet" href="../assets/css/fluent-motion.css">
   <script defer src="../assets/js/fluent-motion.js"></script>
@@ -32,9 +33,7 @@
 
   <main class="win-stage-fit">
     <section class="win-desktop" aria-label="Windows desktop">
-      <div class="win-wallpaper">
-        <img src="../assets/images/windows/wallpaper-light.jpg" alt="" aria-hidden="true" onerror="this.style.visibility='hidden'">
-      </div>
+      <windows-wallpaper></windows-wallpaper>
 
       <section class="win-panel win-acrylic-light" aria-label="Windows panel">
         <span class="win-noise" aria-hidden="true"></span>
@@ -119,7 +118,6 @@
                 </div>
                 <div class="digest-1u">
                   <div class="digest-1u-frame">
-                    <img class="digest-1u-image" src="../assets/images/msn/digest-1.jpg" alt="" aria-hidden="true" data-digest-image onerror="this.style.visibility='hidden'" onload="this.style.visibility='visible'">
                   </div>
                   <div class="digest-1u-text">
                     <div class="digest-publisher">

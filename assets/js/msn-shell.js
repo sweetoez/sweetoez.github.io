@@ -6,7 +6,6 @@ const edgeWidth = document.querySelector("#edge-width");
 const edgeWidthReadout = document.querySelector("#edge-width-readout");
 const edgePage = document.querySelector(".edge-page");
 const windowsPanel = document.querySelector(".windows-panel-preview");
-const wallpaper = document.querySelector(".desktop-wallpaper img");
 const widthPresets = [...document.querySelectorAll("[data-width]")];
 const scenarioButtons = [...document.querySelectorAll("[data-scenario]")];
 const themeButtons = [...document.querySelectorAll("[data-theme-choice]")];
@@ -29,7 +28,6 @@ function renderShell() {
   edgeWindow.style.width = `${width}px`;
   edgeWidthReadout.value = `${width} px`;
   edgeWidthReadout.textContent = `${width} px`;
-  wallpaper.src = `../assets/images/msn/shell/wallpaper-${theme}.jpg`;
 
   scenarioButtons.forEach((button) => {
     button.setAttribute("aria-pressed", String(button.dataset.scenario === scenario));

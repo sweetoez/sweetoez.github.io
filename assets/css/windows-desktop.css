@@ -76,7 +76,16 @@ html[data-theme="dark"] .win-desktop {
   object-fit: cover;
 }
 
+html[data-theme="dark"] .win-wallpaper img,
+html[data-theme="dark-navy"] .win-wallpaper img {
+  content: url("../images/windows/wallpaper-dark.jpg");
+}
+
 msn-taskbar {
+  display: contents;
+}
+
+windows-wallpaper {
   display: contents;
 }
 

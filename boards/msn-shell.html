@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="../assets/css/windows-shell.css">
 
   <script src="../assets/js/components/msn-taskbar.js"></script>
+  <script src="../assets/js/components/windows-wallpaper.js"></script>
   <script defer src="../assets/js/msn-shell.js"></script>
   <link rel="stylesheet" href="../assets/css/fluent-motion.css">
   <script defer src="../assets/js/fluent-motion.js"></script>
@@ -52,10 +53,8 @@
     </header>
 
     <div class="desktop-fit">
-      <section class="desktop-canvas" aria-label="Windows desktop">
-        <div class="desktop-wallpaper">
-          <img src="../assets/images/msn/shell/wallpaper-light.jpg" alt="" aria-hidden="true" onerror="this.style.visibility='hidden'">
-        </div>
+      <section class="desktop-canvas win-desktop" aria-label="Windows desktop">
+        <windows-wallpaper></windows-wallpaper>
 
         <section class="edge-window" aria-label="Edge new tab page">
           <div class="edge-chrome-row edge-tab-row">

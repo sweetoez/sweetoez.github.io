@@ -13,7 +13,6 @@
     let paused = reducedMotion.matches;
     let timer;
     const pauseButtons = [];
-    const image = digest.querySelector("[data-digest-image]");
 
     digest.querySelectorAll(".digest-pagination").forEach((pagination) => {
       const progress = document.createElement("div");
@@ -51,12 +50,6 @@
         publisher.children[0].textContent = story.monogram;
         publisher.children[1].textContent = story.publisher;
       });
-      const imagePath = `../assets/images/msn/digest-${activeStory + 1}.jpg`;
-      digest.style.backgroundImage = `linear-gradient(180deg, rgba(40, 37, 35, 0) 0%, rgba(40, 37, 35, .20) 40%, rgba(40, 37, 35, .80) 70%), url("${imagePath}")`;
-      if (image) {
-        image.style.visibility = "visible";
-        image.src = imagePath;
-      }
     }
 
     function resetTimer() {

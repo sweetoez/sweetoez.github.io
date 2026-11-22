@@ -3,7 +3,6 @@ const stageFit = document.querySelector(".win-stage-fit");
 const themeSelect = document.querySelector("#win-theme");
 const scaleToggle = document.querySelector("[data-scale-toggle]");
 const outlinesToggle = document.querySelector("[data-outlines-toggle]");
-const wallpaper = document.querySelector(".win-wallpaper img");
 const storyTemplate = document.querySelector("#win-story-template");
 const themeStorageKey = "windows-panel-theme";
 const params = new URLSearchParams(location.search);
@@ -70,7 +69,6 @@ function readSavedTheme() {
 function applyTheme(theme, save = false) {
   document.documentElement.dataset.theme = theme;
   themeSelect.value = theme;
-  wallpaper.src = `../assets/images/windows/wallpaper-${theme === "dark" || theme === "dark-navy" ? "dark" : "light"}.jpg`;
 
   if (!save) return;
 

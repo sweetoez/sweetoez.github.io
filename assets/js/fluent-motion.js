@@ -28,7 +28,6 @@
     ".shorts-card__image",
     ".article-media > img",
     ".art05-image img",
-    ".digest-slide-image",
   ].map((selector) => `.demo ${selector}`).join(",");
 
   function watchImage(image) {
