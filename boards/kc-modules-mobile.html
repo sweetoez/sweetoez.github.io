@@ -12,6 +12,7 @@
   <script src="../assets/js/components/kc-modules/image-list.js"></script>
   <script src="../assets/js/components/kc-modules/travel-map.js"></script>
   <script src="../assets/js/components/kc-modules/media.js"></script>
+  <script src="../assets/js/components/kc-modules/utility.js"></script>
   <script src="../assets/js/kc-mobile-carousels.js" defer></script>
   <style>
     * { box-sizing:border-box; }
@@ -493,49 +494,7 @@
 </div>
 <div class="kc-board-item">
   <p class="kc-board-label">Mobile / News</p>
-  <section class="kc-module kc-module--mobile kc-mobile-news" data-kc="Mobile / News">
-    <div class="kc-module-title">
-      <h3>News</h3>
-    </div>
-    <div class="kc-scroll-row kc-mobile-news__row">
-      <article class="kc-mobile-article" data-kc="Mobile / Article">
-        <div class="kc-mobile-article__media">
-          <span class="kc-img" style="width:240px;height:135px;border-radius:6px">
-            <img src="../assets/images/kc/stock/city.jpg" alt="City skyline at sunset" onerror="this.style.display='none'">
-          </span>
-        </div>
-        <div class="kc-mobile-article__text">
-          <p class="kc-mobile-article__title">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-          <p class="kc-mobile-article__source">Contoso News · 10h</p>
-        </div>
-      </article>
-      <article class="kc-mobile-article" data-kc="Mobile / Article">
-        <div class="kc-mobile-article__media">
-          <span class="kc-img" style="width:240px;height:135px;border-radius:6px">
-            <img src="../assets/images/kc/stock/concert.jpg" alt="Crowd at a live music performance" onerror="this.style.display='none'">
-          </span>
-        </div>
-        <div class="kc-mobile-article__text">
-          <p class="kc-mobile-article__title">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-          <p class="kc-mobile-article__source">Contoso News · 10h</p>
-        </div>
-      </article>
-      <article class="kc-mobile-article" data-kc="Mobile / Article">
-        <div class="kc-mobile-article__media">
-          <span class="kc-img" style="width:240px;height:135px;border-radius:6px">
-            <img src="../assets/images/kc/stock/jaipur.jpg" alt="Hawa Mahal palace facade in Jaipur" onerror="this.style.display='none'">
-          </span>
-        </div>
-        <div class="kc-mobile-article__text">
-          <p class="kc-mobile-article__title">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-          <p class="kc-mobile-article__source">Contoso News · 10h</p>
-        </div>
-      </article>
-    </div>
-    <button class="kc-btn-flipper kc-mobile-news__next" type="button" aria-label="Next">
-      <img src="../assets/icons/ic_fluent_chevron_right_16_regular.svg" alt="" aria-hidden="true">
-    </button>
-  </section>
+  <kc-module type="news" platform="mobile" variant="modules-mobile-news"></kc-module>
 </div>
 <div class="kc-board-item">
   <p class="kc-board-label">Mobile / Miscellaneous / Timeline</p>
@@ -543,13 +502,7 @@
 </div>
 <div class="kc-board-item">
   <p class="kc-board-label">Mobile / Miscellaneous / Quote</p>
-  <section class="kc-module kc-module--mobile kc-mobile-miscellaneous-quote" data-kc="Mobile / Miscellaneous / Quote">
-    <figure class="kc-mobile-miscellaneous-quote__frame">
-      <img class="kc-mobile-miscellaneous-quote__glyph" src="../assets/icons/ic_fluent_text_quote_24_filled.svg" alt="" aria-hidden="true">
-      <img class="kc-mobile-miscellaneous-quote__glyph kc-mobile-miscellaneous-quote__glyph--close" src="../assets/icons/ic_fluent_text_quote_24_filled.svg" alt="" aria-hidden="true">
-      <blockquote class="kc-mobile-miscellaneous-quote__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</blockquote>
-    </figure>
-  </section>
+  <kc-module type="quote" platform="mobile" variant="modules-mobile-quote"></kc-module>
 </div>
 <div class="kc-board-item">
   <p class="kc-board-label">Mobile / Miscellaneous / Serving Size</p>
@@ -561,47 +514,11 @@
 </div>
 <div class="kc-board-item">
   <p class="kc-board-label">Mobile / Miscellaneous / Poll &amp; Trivia — Quantity=3, Columns=1</p>
-  <section class="kc-module kc-module--mobile kc-mobile-miscellaneous-poll-trivia" data-kc="Mobile / Miscellaneous / Poll &amp; Trivia" data-kc-variant="Quantity=3, Columns=1">
-    <strong class="kc-mobile-miscellaneous-poll-trivia__question">Which spot in Riverside Old Town is oldest?</strong>
-    <div class="kc-mobile-miscellaneous-poll-trivia__options">
-      <button class="kc-mobile-miscellaneous-poll-trivia__option" type="button" aria-label="A: Lorem Ipsum">
-        <span class="kc-mobile-miscellaneous-poll-trivia__letter" aria-hidden="true">A</span>
-        <span class="kc-mobile-miscellaneous-poll-trivia__choice" aria-hidden="true">Lorem Ipsum</span>
-      </button>
-      <button class="kc-mobile-miscellaneous-poll-trivia__option" type="button" aria-label="B: Lorem Ipsum">
-        <span class="kc-mobile-miscellaneous-poll-trivia__letter" aria-hidden="true">B</span>
-        <span class="kc-mobile-miscellaneous-poll-trivia__choice" aria-hidden="true">Lorem Ipsum</span>
-      </button>
-      <button class="kc-mobile-miscellaneous-poll-trivia__option" type="button" aria-label="C: Lorem Ipsum">
-        <span class="kc-mobile-miscellaneous-poll-trivia__letter" aria-hidden="true">C</span>
-        <span class="kc-mobile-miscellaneous-poll-trivia__choice" aria-hidden="true">Lorem Ipsum</span>
-      </button>
-    </div>
-  </section>
+  <kc-module type="poll-trivia" platform="mobile" variant="modules-mobile-poll-trivia-quantity-3-columns-1"></kc-module>
 </div>
 <div class="kc-board-item">
   <p class="kc-board-label">Mobile / Miscellaneous / Poll &amp; Trivia — Quantity=4, Columns=1</p>
-  <section class="kc-module kc-module--mobile kc-mobile-miscellaneous-poll-trivia" data-kc="Mobile / Miscellaneous / Poll &amp; Trivia" data-kc-variant="Quantity=4, Columns=1">
-    <strong class="kc-mobile-miscellaneous-poll-trivia__question">Which spot in Riverside Old Town is oldest?</strong>
-    <div class="kc-mobile-miscellaneous-poll-trivia__options">
-      <button class="kc-mobile-miscellaneous-poll-trivia__option" type="button" aria-label="A: Lorem Ipsum">
-        <span class="kc-mobile-miscellaneous-poll-trivia__letter" aria-hidden="true">A</span>
-        <span class="kc-mobile-miscellaneous-poll-trivia__choice" aria-hidden="true">Lorem Ipsum</span>
-      </button>
-      <button class="kc-mobile-miscellaneous-poll-trivia__option" type="button" aria-label="B: Lorem Ipsum">
-        <span class="kc-mobile-miscellaneous-poll-trivia__letter" aria-hidden="true">B</span>
-        <span class="kc-mobile-miscellaneous-poll-trivia__choice" aria-hidden="true">Lorem Ipsum</span>
-      </button>
-      <button class="kc-mobile-miscellaneous-poll-trivia__option" type="button" aria-label="C: Lorem Ipsum">
-        <span class="kc-mobile-miscellaneous-poll-trivia__letter" aria-hidden="true">C</span>
-        <span class="kc-mobile-miscellaneous-poll-trivia__choice" aria-hidden="true">Lorem Ipsum</span>
-      </button>
-      <button class="kc-mobile-miscellaneous-poll-trivia__option" type="button" aria-label="D: Lorem Ipsum">
-        <span class="kc-mobile-miscellaneous-poll-trivia__letter" aria-hidden="true">D</span>
-        <span class="kc-mobile-miscellaneous-poll-trivia__choice" aria-hidden="true">Lorem Ipsum</span>
-      </button>
-    </div>
-  </section>
+  <kc-module type="poll-trivia" platform="mobile" variant="modules-mobile-poll-trivia-quantity-4-columns-1"></kc-module>
 </div>
 <div class="kc-board-item">
   <p class="kc-board-label">Mobile / Miscellaneous / Donate</p>

@@ -9,6 +9,7 @@
   <script src="../assets/js/components/kc-modules/text-list.js"></script>
   <script src="../assets/js/components/kc-modules/image-list.js"></script>
   <script src="../assets/js/components/kc-modules/travel-map.js"></script>
+  <script src="../assets/js/components/kc-modules/utility.js"></script>
   <script src="../assets/js/components/kc-hero.js"></script>
   <style>
     * { box-sizing:border-box; }
@@ -34,13 +35,7 @@
 
           <kc-module type="main" platform="desktop" variant="card-desktop-main-square"></kc-module>
 
-          <section class="kc-module kc-miscellaneous-quote" id="kc-mod-quote" data-kc="Miscellaneous / Quote" aria-label="Quote">
-            <figure class="kc-miscellaneous-quote__frame">
-              <img class="kc-miscellaneous-quote__glyph" src="../assets/icons/ic_fluent_text_quote_24_filled.svg" alt="" aria-hidden="true">
-              <img class="kc-miscellaneous-quote__glyph kc-miscellaneous-quote__glyph--close" src="../assets/icons/ic_fluent_text_quote_24_filled.svg" alt="" aria-hidden="true">
-              <blockquote class="kc-miscellaneous-quote__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</blockquote>
-            </figure>
-          </section>
+          <kc-module type="quote" platform="desktop" variant="card-desktop-quote"></kc-module>
 
           <section class="kc-module kc-reviews-critics" id="kc-mod-critics" data-kc="Reviews / Critics" aria-labelledby="kc-title-critics">
             <div class="kc-module-title"><h3 id="kc-title-critics">Critic reviews</h3><a class="kc-link" href="#" aria-label="See all Critic reviews"><span class="kc-title-chevron"><img src="../assets/icons/ic_fluent_chevron_right_16_regular.svg" alt="" aria-hidden="true"></span></a></div>

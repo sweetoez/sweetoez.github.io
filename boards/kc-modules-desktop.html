@@ -12,6 +12,7 @@
   <script src="../assets/js/components/kc-modules/image-list.js"></script>
   <script src="../assets/js/components/kc-modules/travel-map.js"></script>
   <script src="../assets/js/components/kc-modules/media.js"></script>
+  <script src="../assets/js/components/kc-modules/utility.js"></script>
   <style>
     * { box-sizing:border-box; }
     body { min-width:1136px; margin:0; padding:32px; background:#F2F2F2; color:#444; font-family:var(--kc-font); }
@@ -233,23 +234,17 @@
       `${title("Popular short videos")}<div class="kc-videos-tik-toks__row">${[1, 2, 3, 4].map(n => `<div class="kc-card kc-videos-tik-toks__tile">${image("videos-tik-toks", n, 112, 206, 6, `Short video ${n}`)}<div class="kc-videos-tik-toks__gradient"></div><div class="kc-videos-tik-toks__copy"><strong class="kc-copy-bold kc-white-copy">XX weeks ago</strong><span class="kc-copy-small kc-white-copy">400K likes</span></div></div>`).join("")}</div><button class="kc-btn-flipper kc-videos-tik-toks__next" type="button" aria-label="Next"><img src="../assets/icons/ic_fluent_chevron_right_16_regular.svg" alt="" aria-hidden="true"></button>`);
     addMediaSample("Videos / Landscape", "modules-desktop-videos-landscape");
 
-    const options = [["A", "Lorem Ipsum"], ["B", "Lorem Ipsum"], ["C", "Lorem Ipsum"], ["D", "Lorem Ipsum"]];
-    const pollRow = ([letter, text]) => `<button class="kc-miscellaneous-poll-trivia__option" type="button" aria-label="${letter}: ${text}"><span class="kc-btn-outline kc-miscellaneous-poll-trivia__letter" aria-hidden="true">${letter}</span><span class="kc-btn-outline kc-miscellaneous-poll-trivia__choice" aria-hidden="true">${text}</span></button>`;
     ["quantity-3-columns-1", "quantity-4-columns-1", "quantity-4-columns-2"].forEach(variant => {
       const twoCols = variant.endsWith("2");
       const count = variant.includes("quantity-3") ? 3 : 4;
-      const labels = twoCols ? [["A", "Jordan &amp; Sam"], ["C", "Jordan &amp; Riley"], ["B", "Jordan &amp; Morgan"], ["D", "No opinion"]] : options.slice(0, count);
-      const choices = twoCols ? `<div class="kc-miscellaneous-poll-trivia__columns"><div class="kc-col">${pollRow(labels[0])}${pollRow(labels[1])}</div><div class="kc-col">${pollRow(labels[2])}${pollRow(labels[3])}</div></div>` : `<div class="kc-miscellaneous-poll-trivia__options">${labels.map(pollRow).join("")}</div>`;
       const label = twoCols ? "Quantity=4, Columns=2" : `Quantity=${count}, Columns=1`;
-      add("Miscellaneous", `Miscellaneous / Poll & Trivia — ${label}`, `kc-miscellaneous-poll-trivia kc-miscellaneous-poll-trivia--${variant}`,
-        `<fieldset style="border:0;margin:0;padding:0"><legend class="kc-miscellaneous-poll-trivia__question">Trivia Question</legend>${choices}</fieldset>`, "Poll and trivia");
+      modules.push({ section: "Miscellaneous", label: `Miscellaneous / Poll & Trivia — ${label}`, moduleSample: `modules-desktop-poll-trivia-${variant}` });
     });
 
     add("Miscellaneous", "Miscellaneous / Donate", "kc-miscellaneous-donate",
       `<div class="kc-miscellaneous-donate__copy"><div class="kc-miscellaneous-donate__text"><strong>Donate with Contoso</strong><p>Your gift will support [company]</p></div><button class="kc-btn-outline kc-miscellaneous-donate__button" type="button">Donate</button></div><div class="kc-miscellaneous-donate__image">${mono("C", "Contoso", 104, 22)}</div>`, "Donate");
     modules.push({ section: "Miscellaneous", label: "Miscellaneous / Timeline", moduleSample: "modules-desktop-timeline" });
-    add("Miscellaneous", "Miscellaneous / Quote", "kc-miscellaneous-quote",
-      `<figure class="kc-miscellaneous-quote__frame"><img class="kc-miscellaneous-quote__glyph" src="../assets/icons/ic_fluent_text_quote_24_filled.svg" alt="" aria-hidden="true"><img class="kc-miscellaneous-quote__glyph kc-miscellaneous-quote__glyph--close" src="../assets/icons/ic_fluent_text_quote_24_filled.svg" alt="" aria-hidden="true"><blockquote class="kc-miscellaneous-quote__text">${longCopy}</blockquote></figure>`, "Quote");
+    modules.push({ section: "Miscellaneous", label: "Miscellaneous / Quote", moduleSample: "modules-desktop-quote" });
     modules.push({ section: "Miscellaneous", label: "Miscellaneous / Serving Size", moduleSample: "modules-desktop-serving-size" });
     modules.push({ section: "Miscellaneous", label: "Miscellaneous / Visit Times", moduleSample: "modules-desktop-visit-times" });
     modules.push({ section: "Miscellaneous", label: "Miscellaneous / Travel", moduleSample: "modules-desktop-travel" });

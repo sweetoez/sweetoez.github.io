@@ -354,6 +354,7 @@
 .kc-miscellaneous-poll-trivia--quantity-4-columns-2 { height:146px; }
 .kc-miscellaneous-poll-trivia__question { width:432px; overflow:hidden; color:var(--kc-black); font-size:18px; line-height:22px; text-overflow:ellipsis; white-space:nowrap; }
 .kc-miscellaneous-poll-trivia fieldset { display:flex; flex-direction:column; gap:16px; }
+.kc-module--fieldset-reset fieldset { border:0; margin:0; padding:0; }
 .kc-miscellaneous-poll-trivia legend { margin-bottom:16px; }
 .kc-miscellaneous-poll-trivia__options { display:flex; width:432px; flex-direction:column; gap:8px; }
 .kc-miscellaneous-poll-trivia__option { display:flex; width:432px; height:32px; align-items:center; gap:12px; padding:0; border:0; background:transparent; color:inherit; cursor:pointer; font:inherit; text-align:left; }

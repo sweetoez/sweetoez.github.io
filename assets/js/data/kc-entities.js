@@ -523,7 +523,152 @@ window.KC_ENTITIES = {
             "Change their pattern every day"
           ],
           "images": [],
-          "slots": []
+          "slots": [],
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": "kc-module kc-miscellaneous-poll-trivia kc-miscellaneous-poll-trivia--quantity-3-columns-1 kc-module--fieldset-reset",
+                "id": "kc-animal-desktop-mod-4",
+                "data-kc": "Miscellaneous / Poll & Trivia",
+                "data-kc-variant": "Quantity=3, Columns=1",
+                "aria-label": "Koi trivia poll"
+              }
+            },
+            "content": [
+              "\n            ",
+              {
+                "tag": "fieldset",
+                "attributes": {},
+                "children": [
+                  "\n              ",
+                  {
+                    "tag": "legend",
+                    "attributes": {
+                      "class": "kc-miscellaneous-poll-trivia__question"
+                    },
+                    "children": [
+                      "What can koi learn to do?"
+                    ]
+                  },
+                  "\n              ",
+                  {
+                    "tag": "div",
+                    "attributes": {
+                      "class": "kc-miscellaneous-poll-trivia__options"
+                    },
+                    "children": [
+                      "\n                ",
+                      {
+                        "tag": "button",
+                        "attributes": {
+                          "class": "kc-miscellaneous-poll-trivia__option",
+                          "type": "button",
+                          "aria-label": "A: Recognize familiar keepers"
+                        },
+                        "children": [
+                          "\n                  ",
+                          {
+                            "tag": "span",
+                            "attributes": {
+                              "class": "kc-btn-outline kc-miscellaneous-poll-trivia__letter",
+                              "aria-hidden": "true"
+                            },
+                            "children": [
+                              "A"
+                            ]
+                          },
+                          "\n                  ",
+                          {
+                            "tag": "span",
+                            "attributes": {
+                              "class": "kc-btn-outline kc-miscellaneous-poll-trivia__choice",
+                              "aria-hidden": "true"
+                            },
+                            "children": [
+                              "Recognize familiar keepers"
+                            ]
+                          },
+                          "\n                "
+                        ]
+                      },
+                      "\n                ",
+                      {
+                        "tag": "button",
+                        "attributes": {
+                          "class": "kc-miscellaneous-poll-trivia__option",
+                          "type": "button",
+                          "aria-label": "B: Breathe outside water"
+                        },
+                        "children": [
+                          "\n                  ",
+                          {
+                            "tag": "span",
+                            "attributes": {
+                              "class": "kc-btn-outline kc-miscellaneous-poll-trivia__letter",
+                              "aria-hidden": "true"
+                            },
+                            "children": [
+                              "B"
+                            ]
+                          },
+                          "\n                  ",
+                          {
+                            "tag": "span",
+                            "attributes": {
+                              "class": "kc-btn-outline kc-miscellaneous-poll-trivia__choice",
+                              "aria-hidden": "true"
+                            },
+                            "children": [
+                              "Breathe outside water"
+                            ]
+                          },
+                          "\n                "
+                        ]
+                      },
+                      "\n                ",
+                      {
+                        "tag": "button",
+                        "attributes": {
+                          "class": "kc-miscellaneous-poll-trivia__option",
+                          "type": "button",
+                          "aria-label": "C: Change their pattern every day"
+                        },
+                        "children": [
+                          "\n                  ",
+                          {
+                            "tag": "span",
+                            "attributes": {
+                              "class": "kc-btn-outline kc-miscellaneous-poll-trivia__letter",
+                              "aria-hidden": "true"
+                            },
+                            "children": [
+                              "C"
+                            ]
+                          },
+                          "\n                  ",
+                          {
+                            "tag": "span",
+                            "attributes": {
+                              "class": "kc-btn-outline kc-miscellaneous-poll-trivia__choice",
+                              "aria-hidden": "true"
+                            },
+                            "children": [
+                              "Change their pattern every day"
+                            ]
+                          },
+                          "\n                "
+                        ]
+                      },
+                      "\n              "
+                    ]
+                  },
+                  "\n            "
+                ]
+              },
+              "\n          "
+            ]
+          }
         },
         {
           "type": "attributions",
@@ -1639,7 +1784,152 @@ window.KC_ENTITIES = {
             "Change their pattern every day"
           ],
           "images": [],
-          "slots": []
+          "slots": [],
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": "kc-module kc-module--mobile kc-mobile-miscellaneous-poll-trivia kc-module--fieldset-reset",
+                "id": "kc-animal-mobile-mod-6",
+                "data-kc": "Mobile / Miscellaneous / Poll & Trivia",
+                "data-kc-variant": "Quantity=3, Columns=1",
+                "aria-label": "Koi trivia poll"
+              }
+            },
+            "content": [
+              "\n            ",
+              {
+                "tag": "fieldset",
+                "attributes": {},
+                "children": [
+                  "\n              ",
+                  {
+                    "tag": "legend",
+                    "attributes": {
+                      "class": "kc-mobile-miscellaneous-poll-trivia__question"
+                    },
+                    "children": [
+                      "What can koi learn to do?"
+                    ]
+                  },
+                  "\n              ",
+                  {
+                    "tag": "div",
+                    "attributes": {
+                      "class": "kc-mobile-miscellaneous-poll-trivia__options"
+                    },
+                    "children": [
+                      "\n                ",
+                      {
+                        "tag": "button",
+                        "attributes": {
+                          "class": "kc-mobile-miscellaneous-poll-trivia__option",
+                          "type": "button",
+                          "aria-label": "A: Recognize familiar keepers"
+                        },
+                        "children": [
+                          "\n                  ",
+                          {
+                            "tag": "span",
+                            "attributes": {
+                              "class": "kc-mobile-miscellaneous-poll-trivia__letter",
+                              "aria-hidden": "true"
+                            },
+                            "children": [
+                              "A"
+                            ]
+                          },
+                          "\n                  ",
+                          {
+                            "tag": "span",
+                            "attributes": {
+                              "class": "kc-mobile-miscellaneous-poll-trivia__choice",
+                              "aria-hidden": "true"
+                            },
+                            "children": [
+                              "Recognize familiar keepers"
+                            ]
+                          },
+                          "\n                "
+                        ]
+                      },
+                      "\n                ",
+                      {
+                        "tag": "button",
+                        "attributes": {
+                          "class": "kc-mobile-miscellaneous-poll-trivia__option",
+                          "type": "button",
+                          "aria-label": "B: Breathe outside water"
+                        },
+                        "children": [
+                          "\n                  ",
+                          {
+                            "tag": "span",
+                            "attributes": {
+                              "class": "kc-mobile-miscellaneous-poll-trivia__letter",
+                              "aria-hidden": "true"
+                            },
+                            "children": [
+                              "B"
+                            ]
+                          },
+                          "\n                  ",
+                          {
+                            "tag": "span",
+                            "attributes": {
+                              "class": "kc-mobile-miscellaneous-poll-trivia__choice",
+                              "aria-hidden": "true"
+                            },
+                            "children": [
+                              "Breathe outside water"
+                            ]
+                          },
+                          "\n                "
+                        ]
+                      },
+                      "\n                ",
+                      {
+                        "tag": "button",
+                        "attributes": {
+                          "class": "kc-mobile-miscellaneous-poll-trivia__option",
+                          "type": "button",
+                          "aria-label": "C: Change their pattern every day"
+                        },
+                        "children": [
+                          "\n                  ",
+                          {
+                            "tag": "span",
+                            "attributes": {
+                              "class": "kc-mobile-miscellaneous-poll-trivia__letter",
+                              "aria-hidden": "true"
+                            },
+                            "children": [
+                              "C"
+                            ]
+                          },
+                          "\n                  ",
+                          {
+                            "tag": "span",
+                            "attributes": {
+                              "class": "kc-mobile-miscellaneous-poll-trivia__choice",
+                              "aria-hidden": "true"
+                            },
+                            "children": [
+                              "Change their pattern every day"
+                            ]
+                          },
+                          "\n                "
+                        ]
+                      },
+                      "\n              "
+                    ]
+                  },
+                  "\n            "
+                ]
+              },
+              "\n          "
+            ]
+          }
         },
         {
           "type": "attribution",
@@ -7636,7 +7926,152 @@ window.KC_ENTITIES = {
             "C"
           ],
           "images": [],
-          "slots": []
+          "slots": [],
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": "kc-module kc-miscellaneous-poll-trivia kc-miscellaneous-poll-trivia--quantity-3-columns-1",
+                "id": "kc-city-mod-7",
+                "data-kc": "Miscellaneous / Poll & Trivia",
+                "data-kc-variant": "Quantity=3, Columns=1",
+                "aria-label": "Trivia"
+              }
+            },
+            "content": [
+              "\n            ",
+              {
+                "tag": "fieldset",
+                "attributes": {},
+                "children": [
+                  "\n              ",
+                  {
+                    "tag": "legend",
+                    "attributes": {
+                      "class": "kc-miscellaneous-poll-trivia__question"
+                    },
+                    "children": [
+                      "Trivia Question"
+                    ]
+                  },
+                  "\n              ",
+                  {
+                    "tag": "div",
+                    "attributes": {
+                      "class": "kc-miscellaneous-poll-trivia__options"
+                    },
+                    "children": [
+                      "\n                ",
+                      {
+                        "tag": "button",
+                        "attributes": {
+                          "class": "kc-miscellaneous-poll-trivia__option",
+                          "type": "button",
+                          "aria-label": "A: Lorem Ipsum"
+                        },
+                        "children": [
+                          "\n                  ",
+                          {
+                            "tag": "span",
+                            "attributes": {
+                              "class": "kc-btn-outline kc-miscellaneous-poll-trivia__letter",
+                              "aria-hidden": "true"
+                            },
+                            "children": [
+                              "A"
+                            ]
+                          },
+                          "\n                  ",
+                          {
+                            "tag": "span",
+                            "attributes": {
+                              "class": "kc-btn-outline kc-miscellaneous-poll-trivia__choice",
+                              "aria-hidden": "true"
+                            },
+                            "children": [
+                              "Lorem Ipsum"
+                            ]
+                          },
+                          "\n                "
+                        ]
+                      },
+                      "\n                ",
+                      {
+                        "tag": "button",
+                        "attributes": {
+                          "class": "kc-miscellaneous-poll-trivia__option",
+                          "type": "button",
+                          "aria-label": "B: Lorem Ipsum"
+                        },
+                        "children": [
+                          "\n                  ",
+                          {
+                            "tag": "span",
+                            "attributes": {
+                              "class": "kc-btn-outline kc-miscellaneous-poll-trivia__letter",
+                              "aria-hidden": "true"
+                            },
+                            "children": [
+                              "B"
+                            ]
+                          },
+                          "\n                  ",
+                          {
+                            "tag": "span",
+                            "attributes": {
+                              "class": "kc-btn-outline kc-miscellaneous-poll-trivia__choice",
+                              "aria-hidden": "true"
+                            },
+                            "children": [
+                              "Lorem Ipsum"
+                            ]
+                          },
+                          "\n                "
+                        ]
+                      },
+                      "\n                ",
+                      {
+                        "tag": "button",
+                        "attributes": {
+                          "class": "kc-miscellaneous-poll-trivia__option",
+                          "type": "button",
+                          "aria-label": "C: Lorem Ipsum"
+                        },
+                        "children": [
+                          "\n                  ",
+                          {
+                            "tag": "span",
+                            "attributes": {
+                              "class": "kc-btn-outline kc-miscellaneous-poll-trivia__letter",
+                              "aria-hidden": "true"
+                            },
+                            "children": [
+                              "C"
+                            ]
+                          },
+                          "\n                  ",
+                          {
+                            "tag": "span",
+                            "attributes": {
+                              "class": "kc-btn-outline kc-miscellaneous-poll-trivia__choice",
+                              "aria-hidden": "true"
+                            },
+                            "children": [
+                              "Lorem Ipsum"
+                            ]
+                          },
+                          "\n                "
+                        ]
+                      },
+                      "\n              "
+                    ]
+                  },
+                  "\n            "
+                ]
+              },
+              "\n          "
+            ]
+          }
         },
         {
           "type": "attributions",
@@ -9484,7 +9919,86 @@ window.KC_ENTITIES = {
             "Embrace what makes you unique, even if it makes others uncomfortable."
           ],
           "images": [],
-          "slots": []
+          "slots": [],
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": "kc-module kc-miscellaneous-quote",
+                "id": "kc-artist-mod-3",
+                "data-kc": "Miscellaneous / Quote",
+                "aria-label": "Quote from Janelle Monáe"
+              }
+            },
+            "content": [
+              "\n            ",
+              {
+                "tag": "figure",
+                "attributes": {
+                  "class": "kc-miscellaneous-quote__frame"
+                },
+                "children": [
+                  "\n              ",
+                  {
+                    "tag": "svg",
+                    "attributes": {
+                      "class": "kc-miscellaneous-quote__glyph",
+                      "width": "52",
+                      "height": "34",
+                      "viewBox": "0 0 24 24",
+                      "aria-hidden": "true",
+                      "focusable": "false"
+                    },
+                    "children": [
+                      {
+                        "tag": "path",
+                        "attributes": {
+                          "d": "M8 5C9.62875 5 10.9526 6.29802 10.9971 7.91602C11.0002 7.94363 11.0029 7.97156 11.0029 8C11.0029 10.9327 9.936 13.3818 8.88965 15.0811C8.3651 15.9329 7.84001 16.6051 7.44434 17.0664C7.24631 17.2973 7.0797 17.4767 6.96094 17.5996C6.9017 17.6609 6.85398 17.7081 6.82031 17.7412C6.80346 17.7578 6.78999 17.771 6.78027 17.7803C6.77548 17.7849 6.77151 17.7892 6.76855 17.792C6.76721 17.7933 6.76558 17.794 6.76465 17.7949L6.76367 17.7969C6.46146 18.08 5.98635 18.0648 5.70312 17.7627C5.41997 17.4605 5.4352 16.9863 5.7373 16.7031C5.73816 16.7023 5.73972 16.7006 5.74219 16.6982C5.74761 16.693 5.75709 16.6841 5.76953 16.6719C5.79442 16.6474 5.83279 16.6084 5.88281 16.5566C5.98286 16.4531 6.12878 16.2961 6.30566 16.0898C6.6604 15.6762 7.1363 15.067 7.6123 14.2939C8.19982 13.3398 8.77816 12.1484 9.1377 10.7754C8.78672 10.9194 8.40287 11 8 11C6.34315 11 5 9.65685 5 8C5 6.34315 6.34315 5 8 5ZM16 5C17.62875 5 18.9526 6.29802 18.9971 7.91602C19.0002 7.94363 19.0029 7.97156 19.0029 8C19.0029 10.9327 17.936 13.3818 16.8896 15.0811C16.3651 15.9329 15.84 16.6051 15.4443 17.0664C15.2463 17.2973 15.0797 17.4767 14.9609 17.5996C14.9017 17.6609 14.854 17.7081 14.8203 17.7412C14.8035 17.7578 14.79 17.771 14.7803 17.7803C14.7755 17.7849 14.7715 17.7892 14.7686 17.792C14.7672 17.7933 14.7656 17.794 14.7646 17.7949L14.7637 17.7969C14.4615 18.08 13.9863 18.0648 13.7031 17.7627C13.42 17.4605 13.4352 16.9863 13.7373 16.7031C13.7382 16.7023 13.7397 16.7006 13.7422 16.6982C13.7476 16.693 13.7571 16.6841 13.7695 16.6719C13.7944 16.6474 13.8328 16.6084 13.8828 16.5566C13.9829 16.4531 14.1288 16.2961 14.3057 16.0898C14.6604 15.6762 15.1363 15.067 15.6123 14.2939C16.1998 13.3398 16.7782 12.1484 17.1377 10.7754C16.7867 10.9194 16.4029 11 16 11C14.3431 11 13 9.65685 13 8C13 6.34315 14.3431 5 16 5Z",
+                          "fill": "currentColor"
+                        },
+                        "children": []
+                      }
+                    ]
+                  },
+                  "\n              ",
+                  {
+                    "tag": "svg",
+                    "attributes": {
+                      "class": "kc-miscellaneous-quote__glyph kc-miscellaneous-quote__glyph--close",
+                      "width": "52",
+                      "height": "34",
+                      "viewBox": "0 0 24 24",
+                      "aria-hidden": "true",
+                      "focusable": "false"
+                    },
+                    "children": [
+                      {
+                        "tag": "path",
+                        "attributes": {
+                          "d": "M8 5C9.62875 5 10.9526 6.29802 10.9971 7.91602C11.0002 7.94363 11.0029 7.97156 11.0029 8C11.0029 10.9327 9.936 13.3818 8.88965 15.0811C8.3651 15.9329 7.84001 16.6051 7.44434 17.0664C7.24631 17.2973 7.0797 17.4767 6.96094 17.5996C6.9017 17.6609 6.85398 17.7081 6.82031 17.7412C6.80346 17.7578 6.78999 17.771 6.78027 17.7803C6.77548 17.7849 6.77151 17.7892 6.76855 17.792C6.76721 17.7933 6.76558 17.794 6.76465 17.7949L6.76367 17.7969C6.46146 18.08 5.98635 18.0648 5.70312 17.7627C5.41997 17.4605 5.4352 16.9863 5.7373 16.7031C5.73816 16.7023 5.73972 16.7006 5.74219 16.6982C5.74761 16.693 5.75709 16.6841 5.76953 16.6719C5.79442 16.6474 5.83279 16.6084 5.88281 16.5566C5.98286 16.4531 6.12878 16.2961 6.30566 16.0898C6.6604 15.6762 7.1363 15.067 7.6123 14.2939C8.19982 13.3398 8.77816 12.1484 9.1377 10.7754C8.78672 10.9194 8.40287 11 8 11C6.34315 11 5 9.65685 5 8C5 6.34315 6.34315 5 8 5ZM16 5C17.62875 5 18.9526 6.29802 18.9971 7.91602C19.0002 7.94363 19.0029 7.97156 19.0029 8C19.0029 10.9327 17.936 13.3818 16.8896 15.0811C16.3651 15.9329 15.84 16.6051 15.4443 17.0664C15.2463 17.2973 15.0797 17.4767 14.9609 17.5996C14.9017 17.6609 14.854 17.7081 14.8203 17.7412C14.8035 17.7578 14.79 17.771 14.7803 17.7803C14.7755 17.7849 14.7715 17.7892 14.7686 17.792C14.7672 17.7933 14.7656 17.794 14.7646 17.7949L14.7637 17.7969C14.4615 18.08 13.9863 18.0648 13.7031 17.7627C13.42 17.4605 13.4352 16.9863 13.7373 16.7031C13.7382 16.7023 13.7397 16.6935 13.7422 16.6982C13.7476 16.693 13.7571 16.6841 13.7695 16.6719C13.7944 16.6474 13.8328 16.6084 13.8828 16.5566C13.9829 16.4531 14.1288 16.2961 14.3057 16.0898C14.6604 15.6762 15.1363 15.067 15.6123 14.2939C16.1998 13.3398 16.7782 12.1484 17.1377 10.7754C16.7867 10.9194 16.4029 11 16 11C14.3431 11 13 9.65685 13 8C13 6.34315 14.3431 5 16 5Z",
+                          "fill": "currentColor"
+                        },
+                        "children": []
+                      }
+                    ]
+                  },
+                  "\n              ",
+                  {
+                    "tag": "blockquote",
+                    "attributes": {
+                      "class": "kc-miscellaneous-quote__text",
+                      "cite": "https://www.brainyquote.com/quotes/janelle_monae_892246"
+                    },
+                    "children": [
+                      "Embrace what makes you unique, even if it makes others uncomfortable."
+                    ]
+                  },
+                  "\n            "
+                ]
+              },
+              "\n          "
+            ]
+          }
         },
         {
           "type": "main",
@@ -11258,7 +11772,373 @@ window.KC_ENTITIES = {
               "alt": "Audio mixing console in a recording studio"
             }
           ],
-          "slots": []
+          "slots": [],
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": "kc-module kc-module--mobile kc-mobile-news",
+                "id": "kc-artist-mobile-mod-news",
+                "data-kc": "Mobile / News",
+                "aria-label": "News"
+              }
+            },
+            "content": [
+              "\n            ",
+              {
+                "tag": "div",
+                "attributes": {
+                  "class": "kc-module-title"
+                },
+                "children": [
+                  {
+                    "tag": "h3",
+                    "attributes": {},
+                    "children": [
+                      "News"
+                    ]
+                  }
+                ]
+              },
+              "\n            ",
+              {
+                "tag": "div",
+                "attributes": {
+                  "class": "kc-scroll-row kc-mobile-news__row",
+                  "tabindex": "0",
+                  "aria-label": "Sample news about Janelle Monáe, use left and right arrow keys to scroll",
+                  "role": "region"
+                },
+                "children": [
+                  "\n              ",
+                  {
+                    "tag": "article",
+                    "attributes": {
+                      "class": "kc-mobile-video",
+                      "style": "scroll-margin-inline-start: 42px;"
+                    },
+                    "children": [
+                      "\n                ",
+                      {
+                        "tag": "div",
+                        "attributes": {
+                          "class": "kc-mobile-video__media"
+                        },
+                        "children": [
+                          "\n                  ",
+                          {
+                            "tag": "span",
+                            "attributes": {
+                              "class": "kc-img kc-img--cover"
+                            },
+                            "children": [
+                              {
+                                "tag": "img",
+                                "attributes": {
+                                  "src": "../assets/images/kc/modules/artist/artist-mobile-video-01.png",
+                                  "alt": "Video thumbnail for a Janelle Monáe interview",
+                                  "onerror": "this.style.display='none'",
+                                  "data-fluent-load-observed": "true",
+                                  "class": "is-loaded"
+                                },
+                                "children": []
+                              }
+                            ]
+                          },
+                          "\n                  ",
+                          {
+                            "tag": "span",
+                            "attributes": {
+                              "class": "kc-mobile-video__timestamp"
+                            },
+                            "children": [
+                              "04:28"
+                            ]
+                          },
+                          "\n                  ",
+                          {
+                            "tag": "button",
+                            "attributes": {
+                              "class": "kc-mobile-video__play kc-btn-reset",
+                              "type": "button",
+                              "aria-label": "Play sample interview"
+                            },
+                            "children": [
+                              {
+                                "tag": "svg",
+                                "attributes": {
+                                  "width": "24",
+                                  "height": "24",
+                                  "viewBox": "0 0 24 24",
+                                  "aria-hidden": "true",
+                                  "focusable": "false"
+                                },
+                                "children": [
+                                  {
+                                    "tag": "use",
+                                    "attributes": {
+                                      "href": "#kc-artist-icon-play"
+                                    },
+                                    "children": []
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          "\n                "
+                        ]
+                      },
+                      "\n                ",
+                      {
+                        "tag": "div",
+                        "attributes": {
+                          "class": "kc-mobile-video__text"
+                        },
+                        "children": [
+                          "\n                  ",
+                          {
+                            "tag": "p",
+                            "attributes": {
+                              "class": "kc-mobile-video__title"
+                            },
+                            "children": [
+                              "Janelle Monáe on music, film, and creative freedom"
+                            ]
+                          },
+                          "\n                  ",
+                          {
+                            "tag": "div",
+                            "attributes": {
+                              "class": "kc-mobile-video__meta"
+                            },
+                            "children": [
+                              {
+                                "tag": "p",
+                                "attributes": {},
+                                "children": [
+                                  "Sample interview"
+                                ]
+                              },
+                              {
+                                "tag": "p",
+                                "attributes": {},
+                                "children": [
+                                  "Music News"
+                                ]
+                              }
+                            ]
+                          },
+                          "\n                "
+                        ]
+                      },
+                      "\n              "
+                    ]
+                  },
+                  "\n              ",
+                  {
+                    "tag": "article",
+                    "attributes": {
+                      "class": "kc-mobile-article",
+                      "style": "scroll-margin-inline-start: 42px;"
+                    },
+                    "children": [
+                      "\n                ",
+                      {
+                        "tag": "div",
+                        "attributes": {
+                          "class": "kc-mobile-article__media"
+                        },
+                        "children": [
+                          {
+                            "tag": "span",
+                            "attributes": {
+                              "class": "kc-img"
+                            },
+                            "children": [
+                              {
+                                "tag": "img",
+                                "attributes": {
+                                  "src": "../assets/images/kc/stock/concert.jpg",
+                                  "alt": "Crowd at a live music performance",
+                                  "onerror": "this.style.display='none'",
+                                  "data-fluent-load-observed": "true",
+                                  "class": "is-loaded"
+                                },
+                                "children": []
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      "\n                ",
+                      {
+                        "tag": "div",
+                        "attributes": {
+                          "class": "kc-mobile-article__text"
+                        },
+                        "children": [
+                          "\n                  ",
+                          {
+                            "tag": "p",
+                            "attributes": {
+                              "class": "kc-mobile-article__title"
+                            },
+                            "children": [
+                              "Janelle Monáe discusses storytelling across music and film"
+                            ]
+                          },
+                          "\n                  ",
+                          {
+                            "tag": "p",
+                            "attributes": {
+                              "class": "kc-mobile-article__source"
+                            },
+                            "children": [
+                              "Arts & Culture"
+                            ]
+                          },
+                          "\n                "
+                        ]
+                      },
+                      "\n              "
+                    ]
+                  },
+                  "\n              ",
+                  {
+                    "tag": "article",
+                    "attributes": {
+                      "class": "kc-mobile-article",
+                      "style": "scroll-margin-inline-start: 42px;"
+                    },
+                    "children": [
+                      "\n                ",
+                      {
+                        "tag": "div",
+                        "attributes": {
+                          "class": "kc-mobile-article__media"
+                        },
+                        "children": [
+                          {
+                            "tag": "span",
+                            "attributes": {
+                              "class": "kc-img"
+                            },
+                            "children": [
+                              {
+                                "tag": "img",
+                                "attributes": {
+                                  "src": "../assets/images/kc/stock/music-studio.jpg",
+                                  "alt": "Audio mixing console in a recording studio",
+                                  "onerror": "this.style.display='none'",
+                                  "data-fluent-load-observed": "true",
+                                  "class": "is-loaded"
+                                },
+                                "children": []
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      "\n                ",
+                      {
+                        "tag": "div",
+                        "attributes": {
+                          "class": "kc-mobile-article__text"
+                        },
+                        "children": [
+                          "\n                  ",
+                          {
+                            "tag": "p",
+                            "attributes": {
+                              "class": "kc-mobile-article__title"
+                            },
+                            "children": [
+                              "Janelle Monáe reflects on creativity and collaboration"
+                            ]
+                          },
+                          "\n                  ",
+                          {
+                            "tag": "p",
+                            "attributes": {
+                              "class": "kc-mobile-article__source"
+                            },
+                            "children": [
+                              "Sample Feature"
+                            ]
+                          },
+                          "\n                "
+                        ]
+                      },
+                      "\n              "
+                    ]
+                  },
+                  "\n            "
+                ]
+              },
+              "\n            ",
+              {
+                "tag": "button",
+                "attributes": {
+                  "class": "kc-btn-flipper kc-mobile-news__previous",
+                  "type": "button",
+                  "aria-label": "Previous news items",
+                  "disabled": true
+                },
+                "children": [
+                  {
+                    "tag": "svg",
+                    "attributes": {
+                      "width": "16",
+                      "height": "16",
+                      "viewBox": "0 0 20 20",
+                      "aria-hidden": "true",
+                      "focusable": "false"
+                    },
+                    "children": [
+                      {
+                        "tag": "use",
+                        "attributes": {
+                          "href": "#kc-artist-icon-arrow-left"
+                        },
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              "\n            ",
+              {
+                "tag": "button",
+                "attributes": {
+                  "class": "kc-btn-flipper kc-mobile-news__next",
+                  "type": "button",
+                  "aria-label": "Next news items"
+                },
+                "children": [
+                  {
+                    "tag": "svg",
+                    "attributes": {
+                      "width": "16",
+                      "height": "16",
+                      "viewBox": "0 0 20 20",
+                      "aria-hidden": "true",
+                      "focusable": "false"
+                    },
+                    "children": [
+                      {
+                        "tag": "use",
+                        "attributes": {
+                          "href": "#kc-artist-icon-arrow-right"
+                        },
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              "\n          "
+            ]
+          }
         },
         {
           "type": "listen",
@@ -11467,7 +12347,108 @@ window.KC_ENTITIES = {
             "Embrace what makes you unique, even if it makes others uncomfortable."
           ],
           "images": [],
-          "slots": []
+          "slots": [],
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": "kc-module kc-module--mobile kc-mobile-miscellaneous-quote",
+                "id": "kc-artist-mobile-mod-quote",
+                "data-kc": "Mobile / Miscellaneous / Quote",
+                "aria-label": "Quote from Janelle Monáe"
+              }
+            },
+            "content": [
+              "\n            ",
+              {
+                "tag": "figure",
+                "attributes": {
+                  "class": "kc-mobile-miscellaneous-quote__frame"
+                },
+                "children": [
+                  "\n              ",
+                  {
+                    "tag": "svg",
+                    "attributes": {
+                      "class": "kc-mobile-miscellaneous-quote__glyph",
+                      "width": "52",
+                      "height": "34",
+                      "viewBox": "0 0 24 24",
+                      "aria-hidden": "true",
+                      "focusable": "false"
+                    },
+                    "children": [
+                      {
+                        "tag": "path",
+                        "attributes": {
+                          "d": "M8 5C9.62875 5 10.9526 6.29802 10.9971 7.91602C11.0002 7.94363 11.0029 7.97156 11.0029 8C11.0029 10.9327 9.936 13.3818 8.88965 15.0811C8.3651 15.9329 7.84001 16.6051 7.44434 17.0664C7.24631 17.2973 7.0797 17.4767 6.96094 17.5996C6.9017 17.6609 6.85398 17.7081 6.82031 17.7412C6.80346 17.7578 6.78999 17.771 6.78027 17.7803C6.77548 17.7849 6.77151 17.7892 6.76855 17.792C6.76721 17.7933 6.76558 17.794 6.76465 17.7949L6.76367 17.7969C6.46146 18.08 5.98635 18.0648 5.70312 17.7627C5.41997 17.4605 5.4352 16.9863 5.7373 16.7031C5.73816 16.7023 5.73972 16.7006 5.74219 16.6982C5.74761 16.693 5.75709 16.6841 5.76953 16.6719C5.79442 16.6474 5.83279 16.6084 5.88281 16.5566C5.98286 16.4531 6.12878 16.2961 6.30566 16.0898C6.6604 15.6762 7.1363 15.067 7.6123 14.2939C8.19982 13.3398 8.77816 12.1484 9.1377 10.7754C8.78672 10.9194 8.40287 11 8 11C6.34315 11 5 9.65685 5 8C5 6.34315 6.34315 5 8 5ZM16 5C17.62875 5 18.9526 6.29802 18.9971 7.91602C19.0002 7.94363 19.0029 7.97156 19.0029 8C19.0029 10.9327 17.936 13.3818 16.8896 15.0811C16.3651 15.9329 15.84 16.6051 15.4443 17.0664C15.2463 17.2973 15.0797 17.4767 14.9609 17.5996C14.9017 17.6609 14.854 17.7081 14.8203 17.7412C14.8035 17.7578 14.79 17.771 14.7803 17.7803C14.7755 17.7849 14.7715 17.7892 14.7686 17.792C14.7672 17.7933 14.7656 17.794 14.7646 17.7949L14.7637 17.7969C14.4615 18.08 13.9863 18.0648 13.7031 17.7627C13.42 17.4605 13.4352 16.9863 13.7373 16.7031C13.7382 16.7023 13.7397 16.7006 13.7422 16.6982C13.7476 16.693 13.7571 16.6841 13.7695 16.6719C13.7944 16.6474 13.8328 16.6084 13.8828 16.5566C13.9829 16.4531 14.1288 16.2961 14.3057 16.0898C14.6604 15.6762 15.1363 15.067 15.6123 14.2939C16.1998 13.3398 16.7782 12.1484 17.1377 10.7754C16.7867 10.9194 16.4029 11 16 11C14.3431 11 13 9.65685 13 8C13 6.34315 14.3431 5 16 5Z",
+                          "fill": "currentColor"
+                        },
+                        "children": []
+                      }
+                    ]
+                  },
+                  "\n              ",
+                  {
+                    "tag": "svg",
+                    "attributes": {
+                      "class": "kc-mobile-miscellaneous-quote__glyph kc-mobile-miscellaneous-quote__glyph--close",
+                      "width": "52",
+                      "height": "34",
+                      "viewBox": "0 0 24 24",
+                      "aria-hidden": "true",
+                      "focusable": "false"
+                    },
+                    "children": [
+                      {
+                        "tag": "path",
+                        "attributes": {
+                          "d": "M8 5C9.62875 5 10.9526 6.29802 10.9971 7.91602C11.0002 7.94363 11.0029 7.97156 11.0029 8C11.0029 10.9327 9.936 13.3818 8.88965 15.0811C8.3651 15.9329 7.84001 16.6051 7.44434 17.0664C7.24631 17.2973 7.0797 17.4767 6.96094 17.5996C6.9017 17.6609 6.85398 17.7081 6.82031 17.7412C6.80346 17.7578 6.78999 17.771 6.78027 17.7803C6.77548 17.7849 6.77151 17.7892 6.76855 17.792C6.76721 17.7933 6.76558 17.794 0.001 0.76465L0.001 0.76367C0.2839 0.46146 0.758 0.44625 1.0602 0.72852C1.3624 1.0108 1.3776 1.485 1.0953 1.7871C1.0944 1.788 1.0928 1.7897 1.0908 1.792C1.086 1.7974 1.0771 1.8069 1.0649 1.8193C1.0404 1.8442 1.0014 1.8826 0.9497 1.9326C0.8462 2.0327 0.6892 2.1786 0.4829 2.3555C0.0693 2.7102 -0.5399 3.1861 -1.313 3.6621C-2.2671 4.2496 -3.4585 4.8279 -4.8315 5.1875C-4.9755 4.8365 -5.0561 4.4527 -5.0561 4.0498C-5.0561 2.3929 -3.7129 1.0498 -2.0561 1.0498C-0.3992 1.0498 0.9439 2.3929 0.9439 4.0498C0.9439 5.7067 -0.3992 7.0498 -2.0561 7.0498C-2.2487 7.0498 -2.433 7.0317 -2.6087 6.9973C-2.5083 7.4884 -2.3452 7.9187 -2.1676 8.2781C-1.7962 9.0294 -1.3191 9.6193 -0.9644 10.0329C-0.7875 10.2392 -0.6416 10.3962 -0.5416 10.4997C-0.4915 10.5515 -0.4532 10.5905 -0.4283 10.615C-0.4158 10.6272 -0.4063 10.6361 -0.4009 10.6413C-0.3984 10.6437 -0.3968 10.6454 -0.3959 10.6462C-0.0937 10.9294 0.3814 10.9142 0.6646 10.612C0.9478 10.3098 0.9326 9.8356 0.6304 9.5524C0.6295 9.5516 0.6279 9.5499 0.6255 9.5475C0.62 9.5423 0.6106 9.5334 0.5981 9.5212C0.5732 9.4967 0.5348 9.4577 0.4848 9.406C0.3848 9.3024 0.2389 9.1455 0.062 8.9393C-0.293 8.5257 -0.7688 7.9165 -1.2448 7.1434C-1.8323 6.1893 -2.4106 4.9979 -2.7701 3.6249C-2.4191 3.7689 -2.0353 3.8495 -1.6325 3.8495C0.0243 3.8495 1.3675 2.5064 1.3675 0.8495C1.3675 -0.8074 0.0243 -2.1505 -1.6325 -2.1505C-3.2894 -2.1505 -4.6325 -0.8074 -4.6325 0.8495C-4.6325 2.5064 -3.2894 3.8495 -1.6325 3.8495Z",
+                          "fill": "currentColor"
+                        },
+                        "children": []
+                      }
+                    ]
+                  },
+                  "\n              ",
+                  {
+                    "tag": "blockquote",
+                    "attributes": {
+                      "class": "kc-mobile-miscellaneous-quote__text",
+                      "cite": "https://www.brainyquote.com/quotes/janelle_monae_892246"
+                    },
+                    "children": [
+                      "Embrace what makes you unique, even if it makes others uncomfortable."
+                    ]
+                  },
+                  "\n              ",
+                  {
+                    "tag": "svg",
+                    "attributes": {
+                      "class": "kc-mobile-miscellaneous-quote__glyph kc-mobile-miscellaneous-quote__glyph--close kc-artist-mobile__quote-close-correct",
+                      "width": "52",
+                      "height": "34",
+                      "viewBox": "0 0 24 24",
+                      "aria-hidden": "true",
+                      "focusable": "false"
+                    },
+                    "children": [
+                      {
+                        "tag": "path",
+                        "attributes": {
+                          "d": "M8 5C9.62875 5 10.9526 6.29802 10.9971 7.91602C11.0002 7.94363 11.0029 7.97156 11.0029 8C11.0029 10.9327 9.936 13.3818 8.88965 15.0811C8.3651 15.9329 7.84001 16.6051 7.44434 17.0664C7.24631 17.2973 7.0797 17.4767 6.96094 17.5996C6.9017 17.6609 6.85398 17.7081 6.82031 17.7412C6.80346 17.7578 6.78999 17.771 6.78027 17.7803C6.77548 17.7849 6.77151 17.7892 6.76855 17.792C6.76721 17.7933 6.76558 17.794 6.76465 17.7949L6.76367 17.7969C6.46146 18.08 5.98635 18.0648 5.70312 17.7627C5.41997 17.4605 5.4352 16.9863 5.7373 16.7031C5.73816 16.7023 5.73972 16.7006 5.74219 16.6982C5.74761 16.693 5.75709 16.6841 5.76953 16.6719C5.79442 16.6474 5.83279 16.6084 5.88281 16.5566C5.98286 16.4531 6.12878 16.2961 6.30566 16.0898C6.6604 15.6762 7.1363 15.067 7.6123 14.2939C8.19982 13.3398 8.77816 12.1484 9.1377 10.7754C8.78672 10.9194 8.40287 11 8 11C6.34315 11 5 9.65685 5 8C5 6.34315 6.34315 5 8 5ZM16 5C17.62875 5 18.9526 6.29802 18.9971 7.91602C19.0002 7.94363 19.0029 7.97156 19.0029 8C19.0029 10.9327 17.936 13.3818 16.8896 15.0811C16.3651 15.9329 15.84 16.6051 15.4443 17.0664C15.2463 17.2973 15.0797 17.4767 14.9609 17.5996C14.9017 17.6609 14.854 17.7081 14.8203 17.7412C14.8035 17.7578 14.79 17.771 14.7803 17.7803C14.7755 17.7849 14.7715 17.7892 14.7686 17.792C14.7672 17.7933 14.7656 17.794 14.7646 17.7949L14.7637 17.7969C14.4615 18.08 13.9863 18.0648 13.7031 17.7627C13.42 17.4605 13.4352 16.9863 13.7373 16.7031C13.7382 16.7023 13.7397 16.7006 13.7422 16.6982C13.7476 16.693 13.7571 16.6841 13.7695 16.6719C13.7944 16.6474 13.8328 16.6084 13.8828 16.5566C13.9829 16.4531 14.1288 16.2961 14.3057 16.0898C14.6604 15.6762 15.1363 15.067 15.6123 14.2939C16.1998 13.3398 16.7782 12.1484 17.1377 10.7754C16.7867 10.9194 16.4029 11 16 11C14.3431 11 13 9.65685 13 8C13 6.34315 14.3431 5 16 5Z",
+                          "fill": "currentColor"
+                        },
+                        "children": []
+                      }
+                    ]
+                  },
+                  "\n            "
+                ]
+              },
+              "\n          "
+            ]
+          }
         },
         {
           "type": "main",
@@ -13228,7 +14209,90 @@ window.KC_ENTITIES = {
             "Wealth is of the heart and mind, not the pocket."
           ],
           "images": [],
-          "slots": []
+          "slots": [],
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": "kc-module kc-miscellaneous-quote",
+                "id": "kc-actor-mod-quote",
+                "data-kc": "Miscellaneous / Quote",
+                "aria-label": "Quote from Pharrell Williams"
+              }
+            },
+            "content": [
+              "\n            ",
+              {
+                "tag": "figure",
+                "attributes": {
+                  "class": "kc-miscellaneous-quote__frame"
+                },
+                "children": [
+                  "\n              ",
+                  {
+                    "tag": "svg",
+                    "attributes": {
+                      "class": "kc-miscellaneous-quote__glyph",
+                      "width": "52",
+                      "height": "34",
+                      "viewBox": "0 0 24 24",
+                      "fill": "none",
+                      "xmlns": "http://www.w3.org/2000/svg",
+                      "aria-hidden": "true",
+                      "focusable": "false"
+                    },
+                    "children": [
+                      {
+                        "tag": "path",
+                        "attributes": {
+                          "d": "M8 5C9.62875 5 10.9526 6.29802 10.9971 7.91602C11.0002 7.94363 11.0029 7.97156 11.0029 8C11.0029 10.9327 9.936 13.3818 8.88965 15.0811C8.3651 15.9329 7.84001 16.6051 7.44434 17.0664C7.24631 17.2973 7.0797 17.4767 6.96094 17.5996C6.9017 17.6609 6.85398 17.7081 6.82031 17.7412C6.80346 17.7578 6.78999 17.771 6.78027 17.7803C6.77548 17.7849 6.77151 17.7892 6.76855 17.792C6.76721 17.7933 6.76558 17.794 6.76465 17.7949L6.76367 17.7969C6.46146 18.08 5.98635 18.0648 5.70312 17.7627C5.41997 17.4605 5.4352 16.9863 5.7373 16.7031C5.73816 16.7023 5.73972 16.7006 5.74219 16.6982C5.74761 16.693 5.75709 16.6841 5.76953 16.6719C5.79442 16.6474 5.83279 16.6084 5.88281 16.5566C5.98286 16.4531 6.12878 16.2961 6.30566 16.0898C6.6604 15.6762 7.1363 15.067 7.6123 14.2939C8.19982 13.3398 8.77816 12.1484 9.1377 10.7754C8.78672 10.9194 8.40287 11 8 11C6.34315 11 5 9.65685 5 8C5 6.34315 6.34315 5 8 5ZM16 5C17.6288 5 18.9526 6.29802 18.9971 7.91602C19.0002 7.94363 19.0029 7.97156 19.0029 8C19.0029 10.9327 17.936 13.3818 16.8896 15.0811C16.3651 15.9329 15.84 16.6051 15.4443 17.0664C15.2463 17.2973 15.0797 17.4767 14.9609 17.5996C14.9017 17.6609 14.854 17.7081 14.8203 17.7412C14.8035 17.7578 14.79 17.771 14.7803 17.7803C14.7755 17.7849 14.7715 17.7892 14.7686 17.792C14.7672 17.7933 14.7656 17.794 14.7646 17.7949L14.7637 17.7969C14.4615 18.08 13.9863 18.0648 13.7031 17.7627C13.42 17.4605 13.4352 16.9863 13.7373 16.7031C13.7382 16.7023 13.7397 16.7006 13.7422 16.6982C13.7476 16.693 13.7571 16.6841 13.7695 16.6719C13.7944 16.6474 13.8328 16.6084 13.8828 16.5566C13.9829 16.4531 14.1288 16.2961 14.3057 16.0898C14.6604 15.6762 15.1363 15.067 15.6123 14.2939C16.1998 13.3398 16.7782 12.1484 17.1377 10.7754C16.7867 10.9194 16.4029 11 16 11C14.3431 11 13 9.65685 13 8C13 6.34315 14.3431 5 16 5Z",
+                          "fill": "currentColor"
+                        },
+                        "children": []
+                      }
+                    ]
+                  },
+                  "\n              ",
+                  {
+                    "tag": "svg",
+                    "attributes": {
+                      "class": "kc-miscellaneous-quote__glyph kc-miscellaneous-quote__glyph--close",
+                      "width": "52",
+                      "height": "34",
+                      "viewBox": "0 0 24 24",
+                      "fill": "none",
+                      "xmlns": "http://www.w3.org/2000/svg",
+                      "aria-hidden": "true",
+                      "focusable": "false"
+                    },
+                    "children": [
+                      {
+                        "tag": "path",
+                        "attributes": {
+                          "d": "M8 5C9.62875 5 10.9526 6.29802 10.9971 7.91602C11.0002 7.94363 11.0029 7.97156 11.0029 8C11.0029 10.9327 9.936 13.3818 8.88965 15.0811C8.3651 15.9329 7.84001 16.6051 7.44434 17.0664C7.24631 17.2973 7.0797 17.4767 6.96094 17.5996C6.9017 17.6609 6.85398 17.7081 6.82031 17.7412C6.80346 17.7578 6.78999 17.771 6.78027 17.7803C6.77548 17.7849 6.77151 17.7892 6.76855 17.792C6.76721 17.7933 6.76558 17.794 6.76465 17.7949L6.76367 17.7969C6.46146 18.08 5.98635 18.0648 5.70312 17.7627C5.41997 17.4605 5.4352 16.9863 5.7373 16.7031C5.73816 16.7023 5.73972 16.7006 5.74219 16.6982C5.74761 16.693 5.75709 16.6841 5.76953 16.6719C5.79442 16.6474 5.83279 16.6084 5.88281 16.5566C5.98286 16.4531 6.12878 16.2961 6.30566 16.0898C6.6604 15.6762 7.1363 15.067 7.6123 14.2939C8.19982 13.3398 8.77816 12.1484 9.1377 10.7754C8.78672 10.9194 8.40287 11 8 11C6.34315 11 5 9.65685 5 8C5 6.34315 6.34315 5 8 5ZM16 5C17.6288 5 18.9526 6.29802 18.9971 7.91602C19.0002 7.94363 19.0029 7.97156 19.0029 8C19.0029 10.9327 17.936 13.3818 16.8896 15.0811C16.3651 15.9329 15.84 16.6051 15.4443 17.0664C15.2463 17.2973 15.0797 17.4767 14.9609 17.5996C14.9017 17.6609 14.854 17.7081 14.8203 17.7412C14.8035 17.7578 14.79 17.771 14.7803 17.7803C14.7755 17.7849 14.7715 17.7892 14.7686 17.792C14.7672 17.7933 14.7656 17.794 14.7646 17.7949L14.7637 17.7969C14.4615 18.08 13.9863 18.0648 13.7031 17.7627C13.42 17.4605 13.4352 16.9863 13.7373 16.7031C13.7382 16.7023 13.7397 16.7006 13.7422 16.6982C13.7476 16.693 13.7571 16.6841 13.7695 16.6719C13.7944 16.6474 13.8328 16.6084 13.8828 16.5566C13.9829 16.4531 14.1288 16.2961 14.3057 16.0898C14.6604 15.6762 15.1363 15.067 15.6123 14.2939C16.1998 13.3398 16.7782 12.1484 17.1377 10.7754C16.7867 10.9194 16.4029 11 16 11C14.3431 11 13 9.65685 13 8C13 6.34315 14.3431 5 16 5Z",
+                          "fill": "currentColor"
+                        },
+                        "children": []
+                      }
+                    ]
+                  },
+                  "\n              ",
+                  {
+                    "tag": "blockquote",
+                    "attributes": {
+                      "class": "kc-miscellaneous-quote__text",
+                      "cite": "https://hypebeast.com/2020/6/bobby-hundreds-pharrell-williams-interview-george-floyd-black-lives-matter-streetwear"
+                    },
+                    "children": [
+                      "Wealth is of the heart and mind, not the pocket."
+                    ]
+                  },
+                  "\n            "
+                ]
+              },
+              "\n          "
+            ]
+          }
         },
         {
           "type": "main",
@@ -15401,7 +16465,90 @@ window.KC_ENTITIES = {
             "Wealth is of the heart and mind, not the pocket."
           ],
           "images": [],
-          "slots": []
+          "slots": [],
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": "kc-module kc-module--mobile kc-mobile-miscellaneous-quote",
+                "id": "kc-actor-mobile-mod-quote",
+                "data-kc": "Mobile / Miscellaneous / Quote",
+                "aria-label": "Quote from Pharrell Williams"
+              }
+            },
+            "content": [
+              "\n            ",
+              {
+                "tag": "figure",
+                "attributes": {
+                  "class": "kc-mobile-miscellaneous-quote__frame"
+                },
+                "children": [
+                  "\n              ",
+                  {
+                    "tag": "svg",
+                    "attributes": {
+                      "class": "kc-mobile-miscellaneous-quote__glyph",
+                      "width": "52",
+                      "height": "34",
+                      "viewBox": "0 0 24 24",
+                      "fill": "none",
+                      "xmlns": "http://www.w3.org/2000/svg",
+                      "aria-hidden": "true",
+                      "focusable": "false"
+                    },
+                    "children": [
+                      {
+                        "tag": "path",
+                        "attributes": {
+                          "d": "M8 5C9.62875 5 10.9526 6.29802 10.9971 7.91602C11.0002 7.94363 11.0029 7.97156 11.0029 8C11.0029 10.9327 9.936 13.3818 8.88965 15.0811C8.3651 15.9329 7.84001 16.6051 7.44434 17.0664C7.24631 17.2973 7.0797 17.4767 6.96094 17.5996C6.9017 17.6609 6.85398 17.7081 6.82031 17.7412C6.80346 17.7578 6.78999 17.771 6.78027 17.7803C6.77548 17.7849 6.77151 17.7892 6.76855 17.792C6.76721 17.7933 6.76558 17.794 6.76465 17.7949L6.76367 17.7969C6.46146 18.08 5.98635 18.0648 5.70312 17.7627C5.41997 17.4605 5.4352 16.9863 5.7373 16.7031C5.73816 16.7023 5.73972 16.7006 5.74219 16.6982C5.74761 16.693 5.75709 16.6841 5.76953 16.6719C5.79442 16.6474 5.83279 16.6084 5.88281 16.5566C5.98286 16.4531 6.12878 16.2961 6.30566 16.0898C6.6604 15.6762 7.1363 15.067 7.6123 14.2939C8.19982 13.3398 8.77816 12.1484 9.1377 10.7754C8.78672 10.9194 8.40287 11 8 11C6.34315 11 5 9.65685 5 8C5 6.34315 6.34315 5 8 5ZM16 5C17.6288 5 18.9526 6.29802 18.9971 7.91602C19.0002 7.94363 19.0029 7.97156 19.0029 8C19.0029 10.9327 17.936 13.3818 16.8896 15.0811C16.3651 15.9329 15.84 16.6051 15.4443 17.0664C15.2463 17.2973 15.0797 17.4767 14.9609 17.5996C14.9017 17.6609 14.854 17.7081 14.8203 17.7412C14.8035 17.7578 14.79 17.771 14.7803 17.7803C14.7755 17.7849 14.7715 17.7892 14.7686 17.792C14.7672 17.7933 14.7656 17.794 14.7646 17.7949L14.7637 17.7969C14.4615 18.08 13.9863 18.0648 13.7031 17.7627C13.42 17.4605 13.4352 16.9863 13.7373 16.7031C13.7382 16.7023 13.7397 16.7006 13.7422 16.6982C13.7476 16.693 13.7571 16.6841 13.7695 16.6719C13.7944 16.6474 13.8328 16.6084 13.8828 16.5566C13.9829 16.4531 14.1288 16.2961 14.3057 16.0898C14.6604 15.6762 15.1363 15.067 15.6123 14.2939C16.1998 13.3398 16.7782 12.1484 17.1377 10.7754C16.7867 10.9194 16.4029 11 16 11C14.3431 11 13 9.65685 13 8C13 6.34315 14.3431 5 16 5Z",
+                          "fill": "currentColor"
+                        },
+                        "children": []
+                      }
+                    ]
+                  },
+                  "\n              ",
+                  {
+                    "tag": "svg",
+                    "attributes": {
+                      "class": "kc-mobile-miscellaneous-quote__glyph kc-mobile-miscellaneous-quote__glyph--close",
+                      "width": "52",
+                      "height": "34",
+                      "viewBox": "0 0 24 24",
+                      "fill": "none",
+                      "xmlns": "http://www.w3.org/2000/svg",
+                      "aria-hidden": "true",
+                      "focusable": "false"
+                    },
+                    "children": [
+                      {
+                        "tag": "path",
+                        "attributes": {
+                          "d": "M8 5C9.62875 5 10.9526 6.29802 10.9971 7.91602C11.0002 7.94363 11.0029 7.97156 11.0029 8C11.0029 10.9327 9.936 13.3818 8.88965 15.0811C8.3651 15.9329 7.84001 16.6051 7.44434 17.0664C7.24631 17.2973 7.0797 17.4767 6.96094 17.5996C6.9017 17.6609 6.85398 17.7081 6.82031 17.7412C6.80346 17.7578 6.78999 17.771 6.78027 17.7803C6.77548 17.7849 6.77151 17.7892 6.76855 17.792C6.76721 17.7933 6.76558 17.794 6.76465 17.7949L6.76367 17.7969C6.46146 18.08 5.98635 18.0648 5.70312 17.7627C5.41997 17.4605 5.4352 16.9863 5.7373 16.7031C5.73816 16.7023 5.73972 16.7006 5.74219 16.6982C5.74761 16.693 5.75709 16.6841 5.76953 16.6719C5.79442 16.6474 5.83279 16.6084 5.88281 16.5566C5.98286 16.4531 6.12878 16.2961 6.30566 16.0898C6.6604 15.6762 7.1363 15.067 7.6123 14.2939C8.19982 13.3398 8.77816 12.1484 9.1377 10.7754C8.78672 10.9194 8.40287 11 8 11C6.34315 11 5 9.65685 5 8C5 6.34315 6.34315 5 8 5ZM16 5C17.6288 5 18.9526 6.29802 18.9971 7.91602C19.0002 7.94363 19.0029 7.97156 19.0029 8C19.0029 10.9327 17.936 13.3818 16.8896 15.0811C16.3651 15.9329 15.84 16.6051 15.4443 17.0664C15.2463 17.2973 15.0797 17.4767 14.9609 17.5996C14.9017 17.6609 14.854 17.7081 14.8203 17.7412C14.8035 17.7578 14.79 17.771 14.7803 17.7803C14.7755 17.7849 14.7715 17.7892 14.7686 17.792C14.7672 17.7933 14.7656 17.794 14.7646 17.7949L14.7637 17.7969C14.4615 18.08 13.9863 18.0648 13.7031 17.7627C13.42 17.4605 13.4352 16.9863 13.7373 16.7031C13.7382 16.7023 13.7397 16.7006 13.7422 16.6982C13.7476 16.693 13.7571 16.6841 13.7695 16.6719C13.7944 16.6474 13.8328 16.6084 13.8828 16.5566C13.9829 16.4531 14.1288 16.2961 14.3057 16.0898C14.6604 15.6762 15.1363 15.067 15.6123 14.2939C16.1998 13.3398 16.7782 12.1484 17.1377 10.7754C16.7867 10.9194 16.4029 11 16 11C14.3431 11 13 9.65685 13 8C13 6.34315 14.3431 5 16 5Z",
+                          "fill": "currentColor"
+                        },
+                        "children": []
+                      }
+                    ]
+                  },
+                  "\n              ",
+                  {
+                    "tag": "blockquote",
+                    "attributes": {
+                      "class": "kc-mobile-miscellaneous-quote__text",
+                      "cite": "https://hypebeast.com/2020/6/bobby-hundreds-pharrell-williams-interview-george-floyd-black-lives-matter-streetwear"
+                    },
+                    "children": [
+                      "Wealth is of the heart and mind, not the pocket."
+                    ]
+                  },
+                  "\n            "
+                ]
+              },
+              "\n          "
+            ]
+          }
         },
         {
           "type": "interesting-facts",
@@ -19263,7 +20410,174 @@ window.KC_ENTITIES = {
             "D"
           ],
           "images": [],
-          "slots": []
+          "slots": [],
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": "kc-module kc-miscellaneous-poll-trivia kc-miscellaneous-poll-trivia--quantity-4-columns-1",
+                "id": "kc-food-mod-4",
+                "data-kc": "Miscellaneous / Poll & Trivia",
+                "data-kc-variant": "Quantity=4, Columns=1",
+                "aria-label": "Poll and trivia"
+              }
+            },
+            "content": [
+              "\n            ",
+              {
+                "tag": "fieldset",
+                "attributes": {},
+                "children": [
+                  "\n              ",
+                  {
+                    "tag": "legend",
+                    "attributes": {
+                      "class": "kc-miscellaneous-poll-trivia__question"
+                    },
+                    "children": [
+                      "Trivia Question"
+                    ]
+                  },
+                  "\n              ",
+                  {
+                    "tag": "div",
+                    "attributes": {
+                      "class": "kc-miscellaneous-poll-trivia__options"
+                    },
+                    "children": [
+                      "\n                ",
+                      {
+                        "tag": "button",
+                        "attributes": {
+                          "class": "kc-miscellaneous-poll-trivia__option",
+                          "type": "button",
+                          "aria-label": "A: Lorem Ipsum"
+                        },
+                        "children": [
+                          {
+                            "tag": "span",
+                            "attributes": {
+                              "class": "kc-miscellaneous-poll-trivia__letter",
+                              "aria-hidden": "true"
+                            },
+                            "children": [
+                              "A"
+                            ]
+                          },
+                          {
+                            "tag": "span",
+                            "attributes": {
+                              "class": "kc-miscellaneous-poll-trivia__choice",
+                              "aria-hidden": "true"
+                            },
+                            "children": [
+                              "Lorem Ipsum"
+                            ]
+                          }
+                        ]
+                      },
+                      "\n                ",
+                      {
+                        "tag": "button",
+                        "attributes": {
+                          "class": "kc-miscellaneous-poll-trivia__option",
+                          "type": "button",
+                          "aria-label": "B: Lorem Ipsum"
+                        },
+                        "children": [
+                          {
+                            "tag": "span",
+                            "attributes": {
+                              "class": "kc-miscellaneous-poll-trivia__letter",
+                              "aria-hidden": "true"
+                            },
+                            "children": [
+                              "B"
+                            ]
+                          },
+                          {
+                            "tag": "span",
+                            "attributes": {
+                              "class": "kc-miscellaneous-poll-trivia__choice",
+                              "aria-hidden": "true"
+                            },
+                            "children": [
+                              "Lorem Ipsum"
+                            ]
+                          }
+                        ]
+                      },
+                      "\n                ",
+                      {
+                        "tag": "button",
+                        "attributes": {
+                          "class": "kc-miscellaneous-poll-trivia__option",
+                          "type": "button",
+                          "aria-label": "C: Lorem Ipsum"
+                        },
+                        "children": [
+                          {
+                            "tag": "span",
+                            "attributes": {
+                              "class": "kc-miscellaneous-poll-trivia__letter",
+                              "aria-hidden": "true"
+                            },
+                            "children": [
+                              "C"
+                            ]
+                          },
+                          {
+                            "tag": "span",
+                            "attributes": {
+                              "class": "kc-miscellaneous-poll-trivia__choice",
+                              "aria-hidden": "true"
+                            },
+                            "children": [
+                              "Lorem Ipsum"
+                            ]
+                          }
+                        ]
+                      },
+                      "\n                ",
+                      {
+                        "tag": "button",
+                        "attributes": {
+                          "class": "kc-miscellaneous-poll-trivia__option",
+                          "type": "button",
+                          "aria-label": "D: Lorem Ipsum"
+                        },
+                        "children": [
+                          {
+                            "tag": "span",
+                            "attributes": {
+                              "class": "kc-miscellaneous-poll-trivia__letter",
+                              "aria-hidden": "true"
+                            },
+                            "children": [
+                              "D"
+                            ]
+                          },
+                          {
+                            "tag": "span",
+                            "attributes": {
+                              "class": "kc-miscellaneous-poll-trivia__choice",
+                              "aria-hidden": "true"
+                            },
+                            "children": [
+                              "Lorem Ipsum"
+                            ]
+                          }
+                        ]
+                      },
+                      "\n              "
+                    ]
+                  },
+                  "\n            "
+                ]
+              },
+              "\n          "
+            ]
+          }
         },
         {
           "type": "attributions",
@@ -27836,7 +29150,306 @@ window.KC_ENTITIES = {
               "alt": "City skyline at sunset"
             }
           ],
-          "slots": []
+          "slots": [],
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": "kc-module kc-module--mobile kc-mobile-news",
+                "id": "kc-team-mobile-news",
+                "data-kc": "Mobile / News",
+                "aria-label": "News"
+              }
+            },
+            "content": [
+              "\n            ",
+              {
+                "tag": "div",
+                "attributes": {
+                  "class": "kc-module-title"
+                },
+                "children": [
+                  {
+                    "tag": "h3",
+                    "attributes": {},
+                    "children": [
+                      "News"
+                    ]
+                  }
+                ]
+              },
+              "\n            ",
+              {
+                "tag": "div",
+                "attributes": {
+                  "class": "kc-scroll-row kc-mobile-news__row",
+                  "tabindex": "0",
+                  "aria-label": "Sample news, use left and right arrow keys to scroll",
+                  "role": "region"
+                },
+                "children": [
+                  "\n              ",
+                  {
+                    "tag": "article",
+                    "attributes": {
+                      "class": "kc-mobile-article",
+                      "style": "scroll-margin-inline-start: 42px;"
+                    },
+                    "children": [
+                      "\n                ",
+                      {
+                        "tag": "div",
+                        "attributes": {
+                          "class": "kc-mobile-article__media"
+                        },
+                        "children": [
+                          {
+                            "tag": "span",
+                            "attributes": {
+                              "class": "kc-img"
+                            },
+                            "children": [
+                              {
+                                "tag": "img",
+                                "attributes": {
+                                  "src": "../assets/images/kc/stock/basketball-court.jpg",
+                                  "alt": "Basketball resting on an outdoor court",
+                                  "data-fluent-load-observed": "true",
+                                  "class": "is-loaded"
+                                },
+                                "children": []
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      "\n                ",
+                      {
+                        "tag": "div",
+                        "attributes": {
+                          "class": "kc-mobile-article__text"
+                        },
+                        "children": [
+                          {
+                            "tag": "p",
+                            "attributes": {
+                              "class": "kc-mobile-article__title"
+                            },
+                            "children": [
+                              "Sample team news headline"
+                            ]
+                          },
+                          {
+                            "tag": "p",
+                            "attributes": {
+                              "class": "kc-mobile-article__source"
+                            },
+                            "children": [
+                              "Sample source"
+                            ]
+                          }
+                        ]
+                      },
+                      "\n              "
+                    ]
+                  },
+                  "\n              ",
+                  {
+                    "tag": "article",
+                    "attributes": {
+                      "class": "kc-mobile-article",
+                      "style": "scroll-margin-inline-start: 42px;"
+                    },
+                    "children": [
+                      "\n                ",
+                      {
+                        "tag": "div",
+                        "attributes": {
+                          "class": "kc-mobile-article__media"
+                        },
+                        "children": [
+                          {
+                            "tag": "span",
+                            "attributes": {
+                              "class": "kc-img"
+                            },
+                            "children": [
+                              {
+                                "tag": "img",
+                                "attributes": {
+                                  "src": "../assets/images/kc/stock/portrait-c.jpg",
+                                  "alt": "Illustrative stock portrait for a player news item",
+                                  "data-fluent-load-observed": "true",
+                                  "class": "is-loaded"
+                                },
+                                "children": []
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      "\n                ",
+                      {
+                        "tag": "div",
+                        "attributes": {
+                          "class": "kc-mobile-article__text"
+                        },
+                        "children": [
+                          {
+                            "tag": "p",
+                            "attributes": {
+                              "class": "kc-mobile-article__title"
+                            },
+                            "children": [
+                              "Sample player and team update"
+                            ]
+                          },
+                          {
+                            "tag": "p",
+                            "attributes": {
+                              "class": "kc-mobile-article__source"
+                            },
+                            "children": [
+                              "Sample source"
+                            ]
+                          }
+                        ]
+                      },
+                      "\n              "
+                    ]
+                  },
+                  "\n              ",
+                  {
+                    "tag": "article",
+                    "attributes": {
+                      "class": "kc-mobile-article",
+                      "style": "scroll-margin-inline-start: 42px;"
+                    },
+                    "children": [
+                      "\n                ",
+                      {
+                        "tag": "div",
+                        "attributes": {
+                          "class": "kc-mobile-article__media"
+                        },
+                        "children": [
+                          {
+                            "tag": "span",
+                            "attributes": {
+                              "class": "kc-img"
+                            },
+                            "children": [
+                              {
+                                "tag": "img",
+                                "attributes": {
+                                  "src": "../assets/images/kc/stock/city.jpg",
+                                  "alt": "City skyline at sunset",
+                                  "data-fluent-load-observed": "true",
+                                  "class": "is-loaded"
+                                },
+                                "children": []
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      "\n                ",
+                      {
+                        "tag": "div",
+                        "attributes": {
+                          "class": "kc-mobile-article__text"
+                        },
+                        "children": [
+                          {
+                            "tag": "p",
+                            "attributes": {
+                              "class": "kc-mobile-article__title"
+                            },
+                            "children": [
+                              "Sample season coverage"
+                            ]
+                          },
+                          {
+                            "tag": "p",
+                            "attributes": {
+                              "class": "kc-mobile-article__source"
+                            },
+                            "children": [
+                              "Sample source"
+                            ]
+                          }
+                        ]
+                      },
+                      "\n              "
+                    ]
+                  },
+                  "\n            "
+                ]
+              },
+              "\n            ",
+              {
+                "tag": "button",
+                "attributes": {
+                  "class": "kc-btn-flipper kc-mobile-news__previous",
+                  "type": "button",
+                  "aria-label": "Previous news items",
+                  "disabled": true
+                },
+                "children": [
+                  {
+                    "tag": "svg",
+                    "attributes": {
+                      "width": "16",
+                      "height": "16",
+                      "viewBox": "0 0 20 20",
+                      "aria-hidden": "true",
+                      "focusable": "false"
+                    },
+                    "children": [
+                      {
+                        "tag": "use",
+                        "attributes": {
+                          "href": "#kc-team-icon-arrow-left"
+                        },
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              "\n            ",
+              {
+                "tag": "button",
+                "attributes": {
+                  "class": "kc-btn-flipper kc-mobile-news__next",
+                  "type": "button",
+                  "aria-label": "Next news items"
+                },
+                "children": [
+                  {
+                    "tag": "svg",
+                    "attributes": {
+                      "width": "16",
+                      "height": "16",
+                      "viewBox": "0 0 20 20",
+                      "aria-hidden": "true",
+                      "focusable": "false"
+                    },
+                    "children": [
+                      {
+                        "tag": "use",
+                        "attributes": {
+                          "href": "#kc-team-icon-arrow-right"
+                        },
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              "\n          "
+            ]
+          }
         },
         {
           "type": "videos-landscape",
@@ -29296,7 +30909,85 @@ window.KC_ENTITIES = {
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
           ],
           "images": [],
-          "slots": []
+          "slots": [],
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": "kc-module kc-miscellaneous-quote",
+                "id": "kc-company-mod-3",
+                "data-kc": "Miscellaneous / Quote",
+                "aria-label": "Quote"
+              }
+            },
+            "content": [
+              "\n            ",
+              {
+                "tag": "figure",
+                "attributes": {
+                  "class": "kc-miscellaneous-quote__frame"
+                },
+                "children": [
+                  "\n              ",
+                  {
+                    "tag": "svg",
+                    "attributes": {
+                      "class": "kc-miscellaneous-quote__glyph",
+                      "width": "52",
+                      "height": "34",
+                      "viewBox": "0 0 24 24",
+                      "aria-hidden": "true",
+                      "focusable": "false"
+                    },
+                    "children": [
+                      {
+                        "tag": "path",
+                        "attributes": {
+                          "d": "M8 5C9.62875 5 10.9526 6.29802 10.9971 7.91602C11.0002 7.94363 11.0029 7.97156 11.0029 8C11.0029 10.9327 9.936 13.3818 8.88965 15.0811C8.3651 15.9329 7.84001 16.6051 7.44434 17.0664C7.24631 17.2973 7.0797 17.4767 6.96094 17.5996C6.9017 17.6609 6.85398 17.7081 6.82031 17.7412C6.80346 17.7578 6.78999 17.771 6.78027 17.7803C6.77548 17.7849 6.77151 17.7892 6.76855 17.792C6.76721 17.7933 6.76558 17.794 6.76465 17.7949L6.76367 17.7969C6.46146 18.08 5.98635 18.0648 5.70312 17.7627C5.41997 17.4605 5.4352 16.9863 5.7373 16.7031C5.73816 16.7023 5.73972 16.7006 5.74219 16.6982C5.74761 16.693 5.75709 16.6841 5.76953 16.6719C5.79442 16.6474 5.83279 16.6084 5.88281 16.5566C5.98286 16.4531 6.12878 16.2961 6.30566 16.0898C6.6604 15.6762 7.1363 15.067 7.6123 14.2939C8.19982 13.3398 8.77816 12.1484 9.1377 10.7754C8.78672 10.9194 8.40287 11 8 11C6.34315 11 5 9.65685 5 8C5 6.34315 6.34315 5 8 5ZM16 5C17.62875 5 18.9526 6.29802 18.9971 7.91602C19.0002 7.94363 19.0029 7.97156 19.0029 8C19.0029 10.9327 17.936 13.3818 16.8896 15.0811C16.3651 15.9329 15.84 16.6051 15.4443 17.0664C15.2463 17.2973 15.0797 17.4767 14.9609 17.5996C14.9017 17.6609 14.854 17.7081 14.8203 17.7412C14.8035 17.7578 14.79 17.771 14.7803 17.7803C14.7755 17.7849 14.7715 17.7892 14.7686 17.792C14.7672 17.7933 14.7656 17.794 14.7646 17.7949L14.7637 17.7969C14.4615 18.08 13.9863 18.0648 13.7031 17.7627C13.42 17.4605 13.4352 16.9863 13.7373 16.7031C13.7382 16.7023 13.7397 16.7006 13.7422 16.6982C13.7476 16.693 13.7571 16.6841 13.7695 16.6719C13.7944 16.6474 13.8328 16.6084 13.8828 16.5566C13.9829 16.4531 14.1288 16.2961 14.3057 16.0898C14.6604 15.6762 15.1363 15.067 15.6123 14.2939C16.1998 13.3398 16.7782 12.1484 17.1377 10.7754C16.7867 10.9194 16.4029 11 16 11C14.3431 11 13 9.65685 13 8C13 6.34315 14.3431 5 16 5Z",
+                          "fill": "currentColor"
+                        },
+                        "children": []
+                      }
+                    ]
+                  },
+                  "\n              ",
+                  {
+                    "tag": "svg",
+                    "attributes": {
+                      "class": "kc-miscellaneous-quote__glyph kc-miscellaneous-quote__glyph--close",
+                      "width": "52",
+                      "height": "34",
+                      "viewBox": "0 0 24 24",
+                      "aria-hidden": "true",
+                      "focusable": "false"
+                    },
+                    "children": [
+                      {
+                        "tag": "path",
+                        "attributes": {
+                          "d": "M8 5C9.62875 5 10.9526 6.29802 10.9971 7.91602C11.0002 7.94363 11.0029 7.97156 11.0029 8C11.0029 10.9327 9.936 13.3818 8.88965 15.0811C8.3651 15.9329 7.84001 16.6051 7.44434 17.0664C7.24631 17.2973 7.0797 17.4767 6.96094 17.5996C6.9017 17.6609 6.85398 17.7081 6.82031 17.7412C6.80346 17.7578 6.78999 17.771 6.78027 17.7803C6.77548 17.7849 6.77151 17.7892 6.76855 17.792C6.76721 17.7933 6.76558 17.794 6.76465 17.7949L6.76367 17.7969C6.46146 18.08 5.98635 18.0648 5.70312 17.7627C5.41997 17.4605 5.4352 16.9863 5.7373 16.7031C5.73816 16.7023 5.73972 16.7006 5.74219 16.6982C5.74761 16.693 5.75709 16.6841 5.76953 16.6719C5.79442 16.6474 5.83279 16.6084 5.88281 16.5566C5.98286 16.4531 6.12878 16.2961 6.30566 16.0898C6.6604 15.6762 7.1363 15.067 7.6123 14.2939C8.19982 13.3398 8.77816 12.1484 9.1377 10.7754C8.78672 10.9194 8.40287 11 8 11C6.34315 11 5 9.65685 5 8C5 6.34315 6.34315 5 8 5ZM16 5C17.62875 5 18.9526 6.29802 18.9971 7.91602C19.0002 7.94363 19.0029 7.97156 19.0029 8C19.0029 10.9327 17.936 13.3818 16.8896 15.0811C16.3651 15.9329 15.84 16.6051 15.4443 17.0664C15.2463 17.2973 15.0797 17.4767 14.9609 17.5996C14.9017 17.6609 14.854 17.7081 14.8203 17.7412C14.8035 17.7578 14.79 17.771 14.7803 17.7803C14.7755 17.7849 14.7715 17.7892 14.7686 17.792C14.7672 17.7933 14.7656 17.794 14.7646 17.7949L14.7637 17.7969C14.4615 18.08 13.9863 18.0648 13.7031 17.7627C13.42 17.4605 13.4352 16.9863 13.7373 16.7031C13.7382 16.7023 13.7397 16.6935 13.7422 16.6982C13.7476 16.693 13.7571 16.6841 13.7695 16.6719C13.7944 16.6474 13.8328 16.6084 13.8828 16.5566C13.9829 16.4531 14.1288 16.2961 14.3057 16.0898C14.6604 15.6762 15.1363 15.067 15.6123 14.2939C16.1998 13.3398 16.7782 12.1484 17.1377 10.7754C16.7867 10.9194 16.4029 11 16 11C14.3431 11 13 9.65685 13 8C13 6.34315 14.3431 5 16 5Z",
+                          "fill": "currentColor"
+                        },
+                        "children": []
+                      }
+                    ]
+                  },
+                  "\n              ",
+                  {
+                    "tag": "blockquote",
+                    "attributes": {
+                      "class": "kc-miscellaneous-quote__text"
+                    },
+                    "children": [
+                      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                    ]
+                  },
+                  "\n            "
+                ]
+              },
+              "\n          "
+            ]
+          }
         },
         {
           "type": "interesting-facts",
@@ -30845,7 +32536,85 @@ window.KC_ENTITIES = {
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
           ],
           "images": [],
-          "slots": []
+          "slots": [],
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": "kc-module kc-module--mobile kc-mobile-miscellaneous-quote",
+                "id": "kc-company-mobile-quote",
+                "data-kc": "Mobile / Miscellaneous / Quote",
+                "aria-label": "Quote"
+              }
+            },
+            "content": [
+              "\n              ",
+              {
+                "tag": "figure",
+                "attributes": {
+                  "class": "kc-mobile-miscellaneous-quote__frame"
+                },
+                "children": [
+                  "\n                ",
+                  {
+                    "tag": "svg",
+                    "attributes": {
+                      "class": "kc-mobile-miscellaneous-quote__glyph",
+                      "width": "52",
+                      "height": "34",
+                      "viewBox": "0 0 24 24",
+                      "aria-hidden": "true",
+                      "focusable": "false"
+                    },
+                    "children": [
+                      {
+                        "tag": "path",
+                        "attributes": {
+                          "d": "M8 5C9.62875 5 10.9526 6.29802 10.9971 7.91602C11.0002 7.94363 11.0029 7.97156 11.0029 8C11.0029 10.9327 9.936 13.3818 8.88965 15.0811C8.3651 15.9329 7.84001 16.6051 7.44434 17.0664C7.24631 17.2973 7.0797 17.4767 6.96094 17.5996C6.9017 17.6609 6.85398 17.7081 6.82031 17.7412C6.80346 17.7578 6.78999 17.771 6.78027 17.7803C6.77548 17.7849 6.77151 17.7892 6.76855 17.792C6.76721 17.7933 6.76558 17.794 6.76465 17.7949L6.76367 17.7969C6.46146 18.08 5.98635 18.0648 5.70312 17.7627C5.41997 17.4605 5.4352 16.9863 5.7373 16.7031C5.73816 16.7023 5.73972 16.7006 5.74219 16.6982C5.74761 16.693 5.75709 16.6841 5.76953 16.6719C5.79442 16.6474 5.83279 16.6084 5.88281 16.5566C5.98286 16.4531 6.12878 16.2961 6.30566 16.0898C6.6604 15.6762 7.1363 15.067 7.6123 14.2939C8.19982 13.3398 8.77816 12.1484 9.1377 10.7754C8.78672 10.9194 8.40287 11 8 11C6.34315 11 5 9.65685 5 8C5 6.34315 6.34315 5 8 5ZM16 5C17.62875 5 18.9526 6.29802 18.9971 7.91602C19.0002 7.94363 19.0029 7.97156 19.0029 8C19.0029 10.9327 17.936 13.3818 16.8896 15.0811C16.3651 15.9329 15.84 16.6051 15.4443 17.0664C15.2463 17.2973 15.0797 17.4767 14.9609 17.5996C14.9017 17.6609 14.854 17.7081 14.8203 17.7412C14.8035 17.7578 14.79 17.771 14.7803 17.7803C14.7755 17.7849 14.7715 17.7892 14.7686 17.792C14.7672 17.7933 14.7656 17.794 14.7646 17.7949L14.7637 17.7969C14.4615 18.08 13.9863 18.0648 13.7031 17.7627C13.42 17.4605 13.4352 16.9863 13.7373 16.7031C13.7382 16.7023 13.7397 16.7006 13.7422 16.6982C13.7476 16.693 13.7571 16.6841 13.7695 16.6719C13.7944 16.6474 13.8328 16.6084 13.8828 16.5566C13.9829 16.4531 14.1288 16.2961 14.3057 16.0898C14.6604 15.6762 15.1363 15.067 15.6123 14.2939C16.1998 13.3398 16.7782 12.1484 17.1377 10.7754C16.7867 10.9194 16.4029 11 16 11C14.3431 11 13 9.65685 13 8C13 6.34315 14.3431 5 16 5Z",
+                          "fill": "currentColor"
+                        },
+                        "children": []
+                      }
+                    ]
+                  },
+                  "\n                ",
+                  {
+                    "tag": "svg",
+                    "attributes": {
+                      "class": "kc-mobile-miscellaneous-quote__glyph kc-mobile-miscellaneous-quote__glyph--close",
+                      "width": "52",
+                      "height": "34",
+                      "viewBox": "0 0 24 24",
+                      "aria-hidden": "true",
+                      "focusable": "false"
+                    },
+                    "children": [
+                      {
+                        "tag": "path",
+                        "attributes": {
+                          "d": "M8 5C9.62875 5 10.9526 6.29802 10.9971 7.91602C11.0002 7.94363 11.0029 7.97156 11.0029 8C11.0029 10.9327 9.936 13.3818 8.88965 15.0811C8.3651 15.9329 7.84001 16.6051 7.44434 17.0664C7.24631 17.2973 7.0797 17.4767 6.96094 17.5996C6.9017 17.6609 6.85398 17.7081 6.82031 17.7412C6.80346 17.7578 6.78999 17.771 6.78027 17.7803C6.77548 17.7849 6.77151 17.7892 6.76855 17.792C6.76721 17.7933 6.76558 17.794 6.76465 17.7949L6.76367 17.7969C6.46146 18.08 5.98635 18.0648 5.70312 17.7627C5.41997 17.4605 5.4352 16.9863 5.7373 16.7031C5.73816 16.7023 5.73972 16.7006 5.74219 16.6982C5.74761 16.693 5.75709 16.6841 5.76953 16.6719C5.79442 16.6474 5.83279 16.6084 5.88281 16.5566C5.98286 16.4531 6.12878 16.2961 6.30566 16.0898C6.6604 15.6762 7.1363 15.067 7.6123 14.2939C8.19982 13.3398 8.77816 12.1484 9.1377 10.7754C8.78672 10.9194 8.40287 11 8 11C6.34315 11 5 9.65685 5 8C5 6.34315 6.34315 5 8 5ZM16 5C17.62875 5 18.9526 6.29802 18.9971 7.91602C19.0002 7.94363 19.0029 7.97156 19.0029 8C19.0029 10.9327 17.936 13.3818 16.8896 15.0811C16.3651 15.9329 15.84 16.6051 15.4443 17.0664C15.2463 17.2973 15.0797 17.4767 14.9609 17.5996C14.9017 17.6609 14.854 17.7081 14.8203 17.7412C14.8035 17.7578 14.79 17.771 14.7803 17.7803C14.7755 17.7849 14.7715 17.7892 14.7686 17.792C14.7672 17.7933 14.7656 17.794 14.7646 17.7949L14.7637 17.7969C14.4615 18.08 13.9863 18.0648 13.7031 17.7627C13.42 17.4605 13.4352 16.9863 13.7373 16.7031C13.7382 16.7023 13.7397 16.7006 13.7422 16.6982C13.7476 16.693 13.7571 16.6841 13.7695 16.6719C13.7944 16.6474 13.8328 16.6084 13.8828 16.5566C13.9829 16.4531 14.1288 16.2961 14.3057 16.0898C14.6604 15.6762 15.1363 15.067 15.6123 14.2939C16.1998 13.3398 16.7782 12.1484 17.1377 10.7754C16.7867 10.9194 16.4029 11 16 11C14.3431 11 13 9.65685 13 8C13 6.34315 14.3431 5 16 5Z",
+                          "fill": "currentColor"
+                        },
+                        "children": []
+                      }
+                    ]
+                  },
+                  "\n                ",
+                  {
+                    "tag": "blockquote",
+                    "attributes": {
+                      "class": "kc-mobile-miscellaneous-quote__text"
+                    },
+                    "children": [
+                      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                    ]
+                  },
+                  "\n              "
+                ]
+              },
+              "\n            "
+            ]
+          }
         },
         {
           "type": "interesting-facts",
@@ -47750,6 +49519,1338 @@ window.KC_ENTITIES = {
                   "attributes": {},
                   "children": [
                     "Book hotels"
+                  ]
+                },
+                "\n            "
+              ]
+            },
+            "\n          "
+          ]
+        }
+      },
+      "modules-desktop-poll-trivia-quantity-3-columns-1": {
+        "type": "poll-trivia",
+        "platform": "desktop",
+        "render": {
+          "root": {
+            "tag": "section",
+            "attributes": {
+              "class": "kc-module kc-miscellaneous-poll-trivia kc-miscellaneous-poll-trivia--quantity-3-columns-1 kc-module--fieldset-reset",
+              "data-kc": "Miscellaneous / Poll & Trivia",
+              "aria-label": "Poll and trivia"
+            }
+          },
+          "content": [
+            {
+              "tag": "fieldset",
+              "attributes": {},
+              "children": [
+                {
+                  "tag": "legend",
+                  "attributes": {
+                    "class": "kc-miscellaneous-poll-trivia__question"
+                  },
+                  "children": [
+                    "Trivia Question"
+                  ]
+                },
+                {
+                  "tag": "div",
+                  "attributes": {
+                    "class": "kc-miscellaneous-poll-trivia__options"
+                  },
+                  "children": [
+                    {
+                      "tag": "button",
+                      "attributes": {
+                        "class": "kc-miscellaneous-poll-trivia__option",
+                        "type": "button",
+                        "aria-label": "A: Lorem Ipsum"
+                      },
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attributes": {
+                            "class": "kc-btn-outline kc-miscellaneous-poll-trivia__letter",
+                            "aria-hidden": "true"
+                          },
+                          "children": [
+                            "A"
+                          ]
+                        },
+                        {
+                          "tag": "span",
+                          "attributes": {
+                            "class": "kc-btn-outline kc-miscellaneous-poll-trivia__choice",
+                            "aria-hidden": "true"
+                          },
+                          "children": [
+                            "Lorem Ipsum"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "button",
+                      "attributes": {
+                        "class": "kc-miscellaneous-poll-trivia__option",
+                        "type": "button",
+                        "aria-label": "B: Lorem Ipsum"
+                      },
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attributes": {
+                            "class": "kc-btn-outline kc-miscellaneous-poll-trivia__letter",
+                            "aria-hidden": "true"
+                          },
+                          "children": [
+                            "B"
+                          ]
+                        },
+                        {
+                          "tag": "span",
+                          "attributes": {
+                            "class": "kc-btn-outline kc-miscellaneous-poll-trivia__choice",
+                            "aria-hidden": "true"
+                          },
+                          "children": [
+                            "Lorem Ipsum"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "button",
+                      "attributes": {
+                        "class": "kc-miscellaneous-poll-trivia__option",
+                        "type": "button",
+                        "aria-label": "C: Lorem Ipsum"
+                      },
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attributes": {
+                            "class": "kc-btn-outline kc-miscellaneous-poll-trivia__letter",
+                            "aria-hidden": "true"
+                          },
+                          "children": [
+                            "C"
+                          ]
+                        },
+                        {
+                          "tag": "span",
+                          "attributes": {
+                            "class": "kc-btn-outline kc-miscellaneous-poll-trivia__choice",
+                            "aria-hidden": "true"
+                          },
+                          "children": [
+                            "Lorem Ipsum"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "modules-desktop-poll-trivia-quantity-4-columns-1": {
+        "type": "poll-trivia",
+        "platform": "desktop",
+        "render": {
+          "root": {
+            "tag": "section",
+            "attributes": {
+              "class": "kc-module kc-miscellaneous-poll-trivia kc-miscellaneous-poll-trivia--quantity-4-columns-1 kc-module--fieldset-reset",
+              "data-kc": "Miscellaneous / Poll & Trivia",
+              "aria-label": "Poll and trivia"
+            }
+          },
+          "content": [
+            {
+              "tag": "fieldset",
+              "attributes": {},
+              "children": [
+                {
+                  "tag": "legend",
+                  "attributes": {
+                    "class": "kc-miscellaneous-poll-trivia__question"
+                  },
+                  "children": [
+                    "Trivia Question"
+                  ]
+                },
+                {
+                  "tag": "div",
+                  "attributes": {
+                    "class": "kc-miscellaneous-poll-trivia__options"
+                  },
+                  "children": [
+                    {
+                      "tag": "button",
+                      "attributes": {
+                        "class": "kc-miscellaneous-poll-trivia__option",
+                        "type": "button",
+                        "aria-label": "A: Lorem Ipsum"
+                      },
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attributes": {
+                            "class": "kc-btn-outline kc-miscellaneous-poll-trivia__letter",
+                            "aria-hidden": "true"
+                          },
+                          "children": [
+                            "A"
+                          ]
+                        },
+                        {
+                          "tag": "span",
+                          "attributes": {
+                            "class": "kc-btn-outline kc-miscellaneous-poll-trivia__choice",
+                            "aria-hidden": "true"
+                          },
+                          "children": [
+                            "Lorem Ipsum"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "button",
+                      "attributes": {
+                        "class": "kc-miscellaneous-poll-trivia__option",
+                        "type": "button",
+                        "aria-label": "B: Lorem Ipsum"
+                      },
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attributes": {
+                            "class": "kc-btn-outline kc-miscellaneous-poll-trivia__letter",
+                            "aria-hidden": "true"
+                          },
+                          "children": [
+                            "B"
+                          ]
+                        },
+                        {
+                          "tag": "span",
+                          "attributes": {
+                            "class": "kc-btn-outline kc-miscellaneous-poll-trivia__choice",
+                            "aria-hidden": "true"
+                          },
+                          "children": [
+                            "Lorem Ipsum"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "button",
+                      "attributes": {
+                        "class": "kc-miscellaneous-poll-trivia__option",
+                        "type": "button",
+                        "aria-label": "C: Lorem Ipsum"
+                      },
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attributes": {
+                            "class": "kc-btn-outline kc-miscellaneous-poll-trivia__letter",
+                            "aria-hidden": "true"
+                          },
+                          "children": [
+                            "C"
+                          ]
+                        },
+                        {
+                          "tag": "span",
+                          "attributes": {
+                            "class": "kc-btn-outline kc-miscellaneous-poll-trivia__choice",
+                            "aria-hidden": "true"
+                          },
+                          "children": [
+                            "Lorem Ipsum"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "button",
+                      "attributes": {
+                        "class": "kc-miscellaneous-poll-trivia__option",
+                        "type": "button",
+                        "aria-label": "D: Lorem Ipsum"
+                      },
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attributes": {
+                            "class": "kc-btn-outline kc-miscellaneous-poll-trivia__letter",
+                            "aria-hidden": "true"
+                          },
+                          "children": [
+                            "D"
+                          ]
+                        },
+                        {
+                          "tag": "span",
+                          "attributes": {
+                            "class": "kc-btn-outline kc-miscellaneous-poll-trivia__choice",
+                            "aria-hidden": "true"
+                          },
+                          "children": [
+                            "Lorem Ipsum"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "modules-desktop-poll-trivia-quantity-4-columns-2": {
+        "type": "poll-trivia",
+        "platform": "desktop",
+        "render": {
+          "root": {
+            "tag": "section",
+            "attributes": {
+              "class": "kc-module kc-miscellaneous-poll-trivia kc-miscellaneous-poll-trivia--quantity-4-columns-2 kc-module--fieldset-reset",
+              "data-kc": "Miscellaneous / Poll & Trivia",
+              "aria-label": "Poll and trivia"
+            }
+          },
+          "content": [
+            {
+              "tag": "fieldset",
+              "attributes": {},
+              "children": [
+                {
+                  "tag": "legend",
+                  "attributes": {
+                    "class": "kc-miscellaneous-poll-trivia__question"
+                  },
+                  "children": [
+                    "Trivia Question"
+                  ]
+                },
+                {
+                  "tag": "div",
+                  "attributes": {
+                    "class": "kc-miscellaneous-poll-trivia__columns"
+                  },
+                  "children": [
+                    {
+                      "tag": "div",
+                      "attributes": {
+                        "class": "kc-col"
+                      },
+                      "children": [
+                        {
+                          "tag": "button",
+                          "attributes": {
+                            "class": "kc-miscellaneous-poll-trivia__option",
+                            "type": "button",
+                            "aria-label": "A: Jordan & Sam"
+                          },
+                          "children": [
+                            {
+                              "tag": "span",
+                              "attributes": {
+                                "class": "kc-btn-outline kc-miscellaneous-poll-trivia__letter",
+                                "aria-hidden": "true"
+                              },
+                              "children": [
+                                "A"
+                              ]
+                            },
+                            {
+                              "tag": "span",
+                              "attributes": {
+                                "class": "kc-btn-outline kc-miscellaneous-poll-trivia__choice",
+                                "aria-hidden": "true"
+                              },
+                              "children": [
+                                "Jordan & Sam"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "button",
+                          "attributes": {
+                            "class": "kc-miscellaneous-poll-trivia__option",
+                            "type": "button",
+                            "aria-label": "C: Jordan & Riley"
+                          },
+                          "children": [
+                            {
+                              "tag": "span",
+                              "attributes": {
+                                "class": "kc-btn-outline kc-miscellaneous-poll-trivia__letter",
+                                "aria-hidden": "true"
+                              },
+                              "children": [
+                                "C"
+                              ]
+                            },
+                            {
+                              "tag": "span",
+                              "attributes": {
+                                "class": "kc-btn-outline kc-miscellaneous-poll-trivia__choice",
+                                "aria-hidden": "true"
+                              },
+                              "children": [
+                                "Jordan & Riley"
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "div",
+                      "attributes": {
+                        "class": "kc-col"
+                      },
+                      "children": [
+                        {
+                          "tag": "button",
+                          "attributes": {
+                            "class": "kc-miscellaneous-poll-trivia__option",
+                            "type": "button",
+                            "aria-label": "B: Jordan & Morgan"
+                          },
+                          "children": [
+                            {
+                              "tag": "span",
+                              "attributes": {
+                                "class": "kc-btn-outline kc-miscellaneous-poll-trivia__letter",
+                                "aria-hidden": "true"
+                              },
+                              "children": [
+                                "B"
+                              ]
+                            },
+                            {
+                              "tag": "span",
+                              "attributes": {
+                                "class": "kc-btn-outline kc-miscellaneous-poll-trivia__choice",
+                                "aria-hidden": "true"
+                              },
+                              "children": [
+                                "Jordan & Morgan"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "button",
+                          "attributes": {
+                            "class": "kc-miscellaneous-poll-trivia__option",
+                            "type": "button",
+                            "aria-label": "D: No opinion"
+                          },
+                          "children": [
+                            {
+                              "tag": "span",
+                              "attributes": {
+                                "class": "kc-btn-outline kc-miscellaneous-poll-trivia__letter",
+                                "aria-hidden": "true"
+                              },
+                              "children": [
+                                "D"
+                              ]
+                            },
+                            {
+                              "tag": "span",
+                              "attributes": {
+                                "class": "kc-btn-outline kc-miscellaneous-poll-trivia__choice",
+                                "aria-hidden": "true"
+                              },
+                              "children": [
+                                "No opinion"
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "modules-desktop-quote": {
+        "type": "quote",
+        "platform": "desktop",
+        "render": {
+          "root": {
+            "tag": "section",
+            "attributes": {
+              "class": "kc-module kc-miscellaneous-quote",
+              "data-kc": "Miscellaneous / Quote",
+              "aria-label": "Quote"
+            }
+          },
+          "content": [
+            {
+              "tag": "figure",
+              "attributes": {
+                "class": "kc-miscellaneous-quote__frame"
+              },
+              "children": [
+                {
+                  "tag": "img",
+                  "attributes": {
+                    "class": "kc-miscellaneous-quote__glyph",
+                    "src": "../assets/icons/ic_fluent_text_quote_24_filled.svg",
+                    "alt": true,
+                    "aria-hidden": "true"
+                  },
+                  "children": []
+                },
+                {
+                  "tag": "img",
+                  "attributes": {
+                    "class": "kc-miscellaneous-quote__glyph kc-miscellaneous-quote__glyph--close",
+                    "src": "../assets/icons/ic_fluent_text_quote_24_filled.svg",
+                    "alt": true,
+                    "aria-hidden": "true"
+                  },
+                  "children": []
+                },
+                {
+                  "tag": "blockquote",
+                  "attributes": {
+                    "class": "kc-miscellaneous-quote__text"
+                  },
+                  "children": [
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "modules-mobile-news": {
+        "type": "news",
+        "platform": "mobile",
+        "render": {
+          "root": {
+            "tag": "section",
+            "attributes": {
+              "class": "kc-module kc-module--mobile kc-mobile-news",
+              "data-kc": "Mobile / News"
+            }
+          },
+          "content": [
+            "\n    ",
+            {
+              "tag": "div",
+              "attributes": {
+                "class": "kc-module-title"
+              },
+              "children": [
+                "\n      ",
+                {
+                  "tag": "h3",
+                  "attributes": {},
+                  "children": [
+                    "News"
+                  ]
+                },
+                "\n    "
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "div",
+              "attributes": {
+                "class": "kc-scroll-row kc-mobile-news__row",
+                "tabindex": "0",
+                "role": "region",
+                "aria-label": "News"
+              },
+              "children": [
+                "\n      ",
+                {
+                  "tag": "article",
+                  "attributes": {
+                    "class": "kc-mobile-article",
+                    "data-kc": "Mobile / Article",
+                    "style": "scroll-margin-inline-start: 42px;"
+                  },
+                  "children": [
+                    "\n        ",
+                    {
+                      "tag": "div",
+                      "attributes": {
+                        "class": "kc-mobile-article__media"
+                      },
+                      "children": [
+                        "\n          ",
+                        {
+                          "tag": "span",
+                          "attributes": {
+                            "class": "kc-img",
+                            "style": "width:240px;height:135px;border-radius:6px"
+                          },
+                          "children": [
+                            "\n            ",
+                            {
+                              "tag": "img",
+                              "attributes": {
+                                "src": "../assets/images/kc/stock/city.jpg",
+                                "alt": "City skyline at sunset",
+                                "onerror": "this.style.display='none'",
+                                "data-fluent-load-observed": "true",
+                                "class": "is-loaded"
+                              },
+                              "children": []
+                            },
+                            "\n          "
+                          ]
+                        },
+                        "\n        "
+                      ]
+                    },
+                    "\n        ",
+                    {
+                      "tag": "div",
+                      "attributes": {
+                        "class": "kc-mobile-article__text"
+                      },
+                      "children": [
+                        "\n          ",
+                        {
+                          "tag": "p",
+                          "attributes": {
+                            "class": "kc-mobile-article__title"
+                          },
+                          "children": [
+                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+                          ]
+                        },
+                        "\n          ",
+                        {
+                          "tag": "p",
+                          "attributes": {
+                            "class": "kc-mobile-article__source"
+                          },
+                          "children": [
+                            "Contoso News · 10h"
+                          ]
+                        },
+                        "\n        "
+                      ]
+                    },
+                    "\n      "
+                  ]
+                },
+                "\n      ",
+                {
+                  "tag": "article",
+                  "attributes": {
+                    "class": "kc-mobile-article",
+                    "data-kc": "Mobile / Article",
+                    "style": "scroll-margin-inline-start: 42px;"
+                  },
+                  "children": [
+                    "\n        ",
+                    {
+                      "tag": "div",
+                      "attributes": {
+                        "class": "kc-mobile-article__media"
+                      },
+                      "children": [
+                        "\n          ",
+                        {
+                          "tag": "span",
+                          "attributes": {
+                            "class": "kc-img",
+                            "style": "width:240px;height:135px;border-radius:6px"
+                          },
+                          "children": [
+                            "\n            ",
+                            {
+                              "tag": "img",
+                              "attributes": {
+                                "src": "../assets/images/kc/stock/concert.jpg",
+                                "alt": "Crowd at a live music performance",
+                                "onerror": "this.style.display='none'",
+                                "data-fluent-load-observed": "true",
+                                "class": "is-loaded"
+                              },
+                              "children": []
+                            },
+                            "\n          "
+                          ]
+                        },
+                        "\n        "
+                      ]
+                    },
+                    "\n        ",
+                    {
+                      "tag": "div",
+                      "attributes": {
+                        "class": "kc-mobile-article__text"
+                      },
+                      "children": [
+                        "\n          ",
+                        {
+                          "tag": "p",
+                          "attributes": {
+                            "class": "kc-mobile-article__title"
+                          },
+                          "children": [
+                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+                          ]
+                        },
+                        "\n          ",
+                        {
+                          "tag": "p",
+                          "attributes": {
+                            "class": "kc-mobile-article__source"
+                          },
+                          "children": [
+                            "Contoso News · 10h"
+                          ]
+                        },
+                        "\n        "
+                      ]
+                    },
+                    "\n      "
+                  ]
+                },
+                "\n      ",
+                {
+                  "tag": "article",
+                  "attributes": {
+                    "class": "kc-mobile-article",
+                    "data-kc": "Mobile / Article",
+                    "style": "scroll-margin-inline-start: 42px;"
+                  },
+                  "children": [
+                    "\n        ",
+                    {
+                      "tag": "div",
+                      "attributes": {
+                        "class": "kc-mobile-article__media"
+                      },
+                      "children": [
+                        "\n          ",
+                        {
+                          "tag": "span",
+                          "attributes": {
+                            "class": "kc-img",
+                            "style": "width:240px;height:135px;border-radius:6px"
+                          },
+                          "children": [
+                            "\n            ",
+                            {
+                              "tag": "img",
+                              "attributes": {
+                                "src": "../assets/images/kc/stock/jaipur.jpg",
+                                "alt": "Hawa Mahal palace facade in Jaipur",
+                                "onerror": "this.style.display='none'",
+                                "data-fluent-load-observed": "true",
+                                "class": "is-loaded"
+                              },
+                              "children": []
+                            },
+                            "\n          "
+                          ]
+                        },
+                        "\n        "
+                      ]
+                    },
+                    "\n        ",
+                    {
+                      "tag": "div",
+                      "attributes": {
+                        "class": "kc-mobile-article__text"
+                      },
+                      "children": [
+                        "\n          ",
+                        {
+                          "tag": "p",
+                          "attributes": {
+                            "class": "kc-mobile-article__title"
+                          },
+                          "children": [
+                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+                          ]
+                        },
+                        "\n          ",
+                        {
+                          "tag": "p",
+                          "attributes": {
+                            "class": "kc-mobile-article__source"
+                          },
+                          "children": [
+                            "Contoso News · 10h"
+                          ]
+                        },
+                        "\n        "
+                      ]
+                    },
+                    "\n      "
+                  ]
+                },
+                "\n    "
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "button",
+              "attributes": {
+                "class": "kc-btn-flipper kc-mobile-news__next",
+                "type": "button",
+                "aria-label": "Next"
+              },
+              "children": [
+                "\n      ",
+                {
+                  "tag": "img",
+                  "attributes": {
+                    "src": "../assets/icons/ic_fluent_chevron_right_16_regular.svg",
+                    "alt": true,
+                    "aria-hidden": "true"
+                  },
+                  "children": []
+                },
+                "\n    "
+              ]
+            },
+            "\n  ",
+            {
+              "tag": "button",
+              "attributes": {
+                "type": "button",
+                "class": "kc-btn-flipper kc-mobile-scroll-control kc-mobile-scroll-control--previous",
+                "aria-label": "Previous News",
+                "disabled": true
+              },
+              "children": [
+                {
+                  "tag": "svg",
+                  "attributes": {
+                    "width": "16",
+                    "height": "16",
+                    "viewBox": "0 0 16 16",
+                    "fill": "none",
+                    "xmlns": "http://www.w3.org/2000/svg",
+                    "aria-hidden": "true",
+                    "focusable": "false"
+                  },
+                  "children": [
+                    {
+                      "tag": "path",
+                      "attributes": {
+                        "d": "M5.64645 3.14645C5.45118 3.34171 5.45118 3.65829 5.64645 3.85355L9.79289 8L5.64645 12.1464C5.45118 12.3417 5.45118 12.6583 5.64645 12.8536C5.84171 13.0488 6.15829 13.0488 6.35355 12.8536L10.8536 8.35355C11.0488 8.15829 11.0488 7.84171 10.8536 7.64645L6.35355 3.14645C6.15829 2.95118 5.84171 2.95118 5.64645 3.14645Z",
+                        "fill": "currentColor"
+                      },
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "modules-mobile-quote": {
+        "type": "quote",
+        "platform": "mobile",
+        "render": {
+          "root": {
+            "tag": "section",
+            "attributes": {
+              "class": "kc-module kc-module--mobile kc-mobile-miscellaneous-quote",
+              "data-kc": "Mobile / Miscellaneous / Quote"
+            }
+          },
+          "content": [
+            "\n    ",
+            {
+              "tag": "figure",
+              "attributes": {
+                "class": "kc-mobile-miscellaneous-quote__frame"
+              },
+              "children": [
+                "\n      ",
+                {
+                  "tag": "img",
+                  "attributes": {
+                    "class": "kc-mobile-miscellaneous-quote__glyph",
+                    "src": "../assets/icons/ic_fluent_text_quote_24_filled.svg",
+                    "alt": true,
+                    "aria-hidden": "true"
+                  },
+                  "children": []
+                },
+                "\n      ",
+                {
+                  "tag": "img",
+                  "attributes": {
+                    "class": "kc-mobile-miscellaneous-quote__glyph kc-mobile-miscellaneous-quote__glyph--close",
+                    "src": "../assets/icons/ic_fluent_text_quote_24_filled.svg",
+                    "alt": true,
+                    "aria-hidden": "true"
+                  },
+                  "children": []
+                },
+                "\n      ",
+                {
+                  "tag": "blockquote",
+                  "attributes": {
+                    "class": "kc-mobile-miscellaneous-quote__text"
+                  },
+                  "children": [
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                  ]
+                },
+                "\n    "
+              ]
+            },
+            "\n  "
+          ]
+        }
+      },
+      "modules-mobile-poll-trivia-quantity-3-columns-1": {
+        "type": "poll-trivia",
+        "platform": "mobile",
+        "render": {
+          "root": {
+            "tag": "section",
+            "attributes": {
+              "class": "kc-module kc-module--mobile kc-mobile-miscellaneous-poll-trivia",
+              "data-kc": "Mobile / Miscellaneous / Poll & Trivia",
+              "data-kc-variant": "Quantity=3, Columns=1"
+            }
+          },
+          "content": [
+            "\n    ",
+            {
+              "tag": "strong",
+              "attributes": {
+                "class": "kc-mobile-miscellaneous-poll-trivia__question"
+              },
+              "children": [
+                "Which spot in Riverside Old Town is oldest?"
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "div",
+              "attributes": {
+                "class": "kc-mobile-miscellaneous-poll-trivia__options"
+              },
+              "children": [
+                "\n      ",
+                {
+                  "tag": "button",
+                  "attributes": {
+                    "class": "kc-mobile-miscellaneous-poll-trivia__option",
+                    "type": "button",
+                    "aria-label": "A: Lorem Ipsum"
+                  },
+                  "children": [
+                    "\n        ",
+                    {
+                      "tag": "span",
+                      "attributes": {
+                        "class": "kc-mobile-miscellaneous-poll-trivia__letter",
+                        "aria-hidden": "true"
+                      },
+                      "children": [
+                        "A"
+                      ]
+                    },
+                    "\n        ",
+                    {
+                      "tag": "span",
+                      "attributes": {
+                        "class": "kc-mobile-miscellaneous-poll-trivia__choice",
+                        "aria-hidden": "true"
+                      },
+                      "children": [
+                        "Lorem Ipsum"
+                      ]
+                    },
+                    "\n      "
+                  ]
+                },
+                "\n      ",
+                {
+                  "tag": "button",
+                  "attributes": {
+                    "class": "kc-mobile-miscellaneous-poll-trivia__option",
+                    "type": "button",
+                    "aria-label": "B: Lorem Ipsum"
+                  },
+                  "children": [
+                    "\n        ",
+                    {
+                      "tag": "span",
+                      "attributes": {
+                        "class": "kc-mobile-miscellaneous-poll-trivia__letter",
+                        "aria-hidden": "true"
+                      },
+                      "children": [
+                        "B"
+                      ]
+                    },
+                    "\n        ",
+                    {
+                      "tag": "span",
+                      "attributes": {
+                        "class": "kc-mobile-miscellaneous-poll-trivia__choice",
+                        "aria-hidden": "true"
+                      },
+                      "children": [
+                        "Lorem Ipsum"
+                      ]
+                    },
+                    "\n      "
+                  ]
+                },
+                "\n      ",
+                {
+                  "tag": "button",
+                  "attributes": {
+                    "class": "kc-mobile-miscellaneous-poll-trivia__option",
+                    "type": "button",
+                    "aria-label": "C: Lorem Ipsum"
+                  },
+                  "children": [
+                    "\n        ",
+                    {
+                      "tag": "span",
+                      "attributes": {
+                        "class": "kc-mobile-miscellaneous-poll-trivia__letter",
+                        "aria-hidden": "true"
+                      },
+                      "children": [
+                        "C"
+                      ]
+                    },
+                    "\n        ",
+                    {
+                      "tag": "span",
+                      "attributes": {
+                        "class": "kc-mobile-miscellaneous-poll-trivia__choice",
+                        "aria-hidden": "true"
+                      },
+                      "children": [
+                        "Lorem Ipsum"
+                      ]
+                    },
+                    "\n      "
+                  ]
+                },
+                "\n    "
+              ]
+            },
+            "\n  "
+          ]
+        }
+      },
+      "modules-mobile-poll-trivia-quantity-4-columns-1": {
+        "type": "poll-trivia",
+        "platform": "mobile",
+        "render": {
+          "root": {
+            "tag": "section",
+            "attributes": {
+              "class": "kc-module kc-module--mobile kc-mobile-miscellaneous-poll-trivia",
+              "data-kc": "Mobile / Miscellaneous / Poll & Trivia",
+              "data-kc-variant": "Quantity=4, Columns=1"
+            }
+          },
+          "content": [
+            "\n    ",
+            {
+              "tag": "strong",
+              "attributes": {
+                "class": "kc-mobile-miscellaneous-poll-trivia__question"
+              },
+              "children": [
+                "Which spot in Riverside Old Town is oldest?"
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "div",
+              "attributes": {
+                "class": "kc-mobile-miscellaneous-poll-trivia__options"
+              },
+              "children": [
+                "\n      ",
+                {
+                  "tag": "button",
+                  "attributes": {
+                    "class": "kc-mobile-miscellaneous-poll-trivia__option",
+                    "type": "button",
+                    "aria-label": "A: Lorem Ipsum"
+                  },
+                  "children": [
+                    "\n        ",
+                    {
+                      "tag": "span",
+                      "attributes": {
+                        "class": "kc-mobile-miscellaneous-poll-trivia__letter",
+                        "aria-hidden": "true"
+                      },
+                      "children": [
+                        "A"
+                      ]
+                    },
+                    "\n        ",
+                    {
+                      "tag": "span",
+                      "attributes": {
+                        "class": "kc-mobile-miscellaneous-poll-trivia__choice",
+                        "aria-hidden": "true"
+                      },
+                      "children": [
+                        "Lorem Ipsum"
+                      ]
+                    },
+                    "\n      "
+                  ]
+                },
+                "\n      ",
+                {
+                  "tag": "button",
+                  "attributes": {
+                    "class": "kc-mobile-miscellaneous-poll-trivia__option",
+                    "type": "button",
+                    "aria-label": "B: Lorem Ipsum"
+                  },
+                  "children": [
+                    "\n        ",
+                    {
+                      "tag": "span",
+                      "attributes": {
+                        "class": "kc-mobile-miscellaneous-poll-trivia__letter",
+                        "aria-hidden": "true"
+                      },
+                      "children": [
+                        "B"
+                      ]
+                    },
+                    "\n        ",
+                    {
+                      "tag": "span",
+                      "attributes": {
+                        "class": "kc-mobile-miscellaneous-poll-trivia__choice",
+                        "aria-hidden": "true"
+                      },
+                      "children": [
+                        "Lorem Ipsum"
+                      ]
+                    },
+                    "\n      "
+                  ]
+                },
+                "\n      ",
+                {
+                  "tag": "button",
+                  "attributes": {
+                    "class": "kc-mobile-miscellaneous-poll-trivia__option",
+                    "type": "button",
+                    "aria-label": "C: Lorem Ipsum"
+                  },
+                  "children": [
+                    "\n        ",
+                    {
+                      "tag": "span",
+                      "attributes": {
+                        "class": "kc-mobile-miscellaneous-poll-trivia__letter",
+                        "aria-hidden": "true"
+                      },
+                      "children": [
+                        "C"
+                      ]
+                    },
+                    "\n        ",
+                    {
+                      "tag": "span",
+                      "attributes": {
+                        "class": "kc-mobile-miscellaneous-poll-trivia__choice",
+                        "aria-hidden": "true"
+                      },
+                      "children": [
+                        "Lorem Ipsum"
+                      ]
+                    },
+                    "\n      "
+                  ]
+                },
+                "\n      ",
+                {
+                  "tag": "button",
+                  "attributes": {
+                    "class": "kc-mobile-miscellaneous-poll-trivia__option",
+                    "type": "button",
+                    "aria-label": "D: Lorem Ipsum"
+                  },
+                  "children": [
+                    "\n        ",
+                    {
+                      "tag": "span",
+                      "attributes": {
+                        "class": "kc-mobile-miscellaneous-poll-trivia__letter",
+                        "aria-hidden": "true"
+                      },
+                      "children": [
+                        "D"
+                      ]
+                    },
+                    "\n        ",
+                    {
+                      "tag": "span",
+                      "attributes": {
+                        "class": "kc-mobile-miscellaneous-poll-trivia__choice",
+                        "aria-hidden": "true"
+                      },
+                      "children": [
+                        "Lorem Ipsum"
+                      ]
+                    },
+                    "\n      "
+                  ]
+                },
+                "\n    "
+              ]
+            },
+            "\n  "
+          ]
+        }
+      },
+      "card-desktop-quote": {
+        "type": "quote",
+        "platform": "desktop",
+        "render": {
+          "root": {
+            "tag": "section",
+            "attributes": {
+              "class": "kc-module kc-miscellaneous-quote",
+              "id": "kc-mod-quote",
+              "data-kc": "Miscellaneous / Quote",
+              "aria-label": "Quote"
+            }
+          },
+          "content": [
+            "\n            ",
+            {
+              "tag": "figure",
+              "attributes": {
+                "class": "kc-miscellaneous-quote__frame"
+              },
+              "children": [
+                "\n              ",
+                {
+                  "tag": "img",
+                  "attributes": {
+                    "class": "kc-miscellaneous-quote__glyph",
+                    "src": "../assets/icons/ic_fluent_text_quote_24_filled.svg",
+                    "alt": true,
+                    "aria-hidden": "true"
+                  },
+                  "children": []
+                },
+                "\n              ",
+                {
+                  "tag": "img",
+                  "attributes": {
+                    "class": "kc-miscellaneous-quote__glyph kc-miscellaneous-quote__glyph--close",
+                    "src": "../assets/icons/ic_fluent_text_quote_24_filled.svg",
+                    "alt": true,
+                    "aria-hidden": "true"
+                  },
+                  "children": []
+                },
+                "\n              ",
+                {
+                  "tag": "blockquote",
+                  "attributes": {
+                    "class": "kc-miscellaneous-quote__text"
+                  },
+                  "children": [
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                  ]
+                },
+                "\n            "
+              ]
+            },
+            "\n          "
+          ]
+        }
+      },
+      "card-mobile-quote": {
+        "type": "quote",
+        "platform": "mobile",
+        "render": {
+          "root": {
+            "tag": "section",
+            "attributes": {
+              "class": "kc-module kc-module--mobile kc-mobile-miscellaneous-quote",
+              "id": "kc-mobile-quote",
+              "data-kc": "Mobile / Miscellaneous / Quote"
+            }
+          },
+          "content": [
+            "\n            ",
+            {
+              "tag": "figure",
+              "attributes": {
+                "class": "kc-mobile-miscellaneous-quote__frame"
+              },
+              "children": [
+                "\n              ",
+                {
+                  "tag": "img",
+                  "attributes": {
+                    "class": "kc-mobile-miscellaneous-quote__glyph",
+                    "src": "../assets/icons/ic_fluent_text_quote_24_filled.svg",
+                    "alt": true,
+                    "aria-hidden": "true"
+                  },
+                  "children": []
+                },
+                "\n              ",
+                {
+                  "tag": "img",
+                  "attributes": {
+                    "class": "kc-mobile-miscellaneous-quote__glyph kc-mobile-miscellaneous-quote__glyph--close",
+                    "src": "../assets/icons/ic_fluent_text_quote_24_filled.svg",
+                    "alt": true,
+                    "aria-hidden": "true"
+                  },
+                  "children": []
+                },
+                "\n              ",
+                {
+                  "tag": "blockquote",
+                  "attributes": {
+                    "class": "kc-mobile-miscellaneous-quote__text"
+                  },
+                  "children": [
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                   ]
                 },
                 "\n            "
