@@ -7,7 +7,6 @@
   <link rel="stylesheet" href="../css/site.css">
   <link rel="stylesheet" href="../assets/css/edge-chrome.css">
   <link rel="stylesheet" href="../assets/css/fluent-motion.css">
-  <script defer src="../assets/js/include.js"></script>
   <script defer src="../assets/js/fluent-motion.js"></script>
   <script defer src="../assets/js/edge-components.js"></script>
   <style>
@@ -153,14 +152,87 @@
     <div class="edge-components-viewport">
       <section class="edge-components-window" aria-label="Edge components preview window">
         <div class="edge-window">
-          <div data-include="edge-tab-band"></div>
-          <div data-include="edge-toolbar"></div>
-          <div data-include="edge-favorites-bar"></div>
+          <div class="edge-chrome-row edge-tab-row">
+            <div class="edge-tab-tools">
+              <button type="button" aria-label="Tab actions"><span class="edge-icon-fallback" data-icon-missing="tab_desktop_multiple" aria-hidden="true">T</span></button>
+            </div>
+            <div class="edge-tabs">
+              <div class="edge-active-tab">
+                <span class="edge-icon" data-icon="globe16" aria-hidden="true"></span>
+                <span class="edge-active-tab__title">New Tab</span>
+                <button class="edge-tab-dismiss" type="button" aria-label="Close tab"><span class="edge-icon" data-icon="dismiss12" aria-hidden="true"></span></button>
+              </div>
+              <button type="button" aria-label="New tab"><span class="edge-icon" data-icon="add16" aria-hidden="true"></span></button>
+            </div>
+            <div class="edge-window-controls">
+              <button type="button" aria-label="Minimize"><span class="edge-icon" data-icon="minimize16" aria-hidden="true"></span></button>
+              <button type="button" aria-label="Maximize"><span class="edge-icon" data-icon="maximize16" aria-hidden="true"></span></button>
+              <button type="button" aria-label="Close window"><span class="edge-icon" data-icon="dismiss16" aria-hidden="true"></span></button>
+            </div>
+          </div>
+          <div class="edge-chrome-row edge-toolbar">
+            <div class="edge-navigation-icons">
+              <button type="button" aria-label="Back"><span class="edge-icon" data-icon="back20" aria-hidden="true"></span></button>
+              <button type="button" aria-label="Refresh"><span class="edge-icon" data-icon="refresh16" aria-hidden="true"></span></button>
+            </div>
+            <div class="edge-address">
+              <button type="button" aria-label="Search"><span class="edge-icon" data-icon="search16" aria-hidden="true"></span></button>
+              <span class="edge-address__hint">Search or enter web address</span>
+              <div class="edge-address-actions" aria-label="Address bar actions">
+                <button type="button" aria-label="Favorites"><span class="edge-icon" data-icon="star20" aria-hidden="true"></span></button>
+                <button type="button" aria-label="Read aloud"><span class="edge-icon" data-icon="readAloud" aria-hidden="true"></span></button>
+                <button type="button" aria-label="Extensions"><span class="edge-icon" data-icon="extensions" aria-hidden="true"></span></button>
+              </div>
+            </div>
+            <div class="edge-toolbar-actions">
+              <button class="edge-toolbar-profile" type="button" aria-label="Olivia profile">
+              <img src="../assets/images/windows/avatar-yeti.png" alt="" aria-hidden="true" onerror="this.hidden = true">
+                <span class="edge-toolbar-profile__fallback" aria-hidden="true">OL</span>
+              </button>
+              <button type="button" aria-label="More options"><span class="edge-icon" data-icon="more20" aria-hidden="true"></span></button>
+              <button type="button" aria-label="Copilot"><img src="../assets/images/windows/taskbar/copilot.svg" width="20" height="20" alt="" aria-hidden="true"></button>
+            </div>
+          </div>
+          <div class="edge-chrome-row edge-favorites" aria-label="Favorites">
+            <div class="edge-favorites__items">
+              <a class="edge-favorite" href="#" aria-label="Outlook"><span class="edge-favorite__icon"><img src="../assets/images/windows/taskbar/outlook.svg" alt="" aria-hidden="true"></span><span class="edge-favorite__label">Outlook</span></a>
+              <a class="edge-favorite" href="#" aria-label="YouTube"><span class="edge-favorite__icon"><img src="../assets/images/brand/youtube.svg" alt="" aria-hidden="true"></span><span class="edge-favorite__label">YouTube</span></a>
+              <a class="edge-favorite" href="#" aria-label="Amazon"><span class="edge-favorite__icon"><img class="edge-amazon edge-amazon--light" src="../assets/images/brand/amazon-light.svg" alt="" aria-hidden="true"><img class="edge-amazon edge-amazon--dark" src="../assets/images/brand/amazon-dark.svg" alt="" aria-hidden="true"></span><span class="edge-favorite__label">Amazon</span></a>
+              <a class="edge-favorite" href="#" aria-label="Instagram"><span class="edge-favorite__icon"><img src="../assets/images/brand/instagram.png" alt="" aria-hidden="true"></span><span class="edge-favorite__label">Instagram</span></a>
+              <a class="edge-favorite" href="#" aria-label="LinkedIn"><span class="edge-favorite__icon"><img src="../assets/images/brand/linkedin.png" alt="" aria-hidden="true"></span><span class="edge-favorite__label">LinkedIn</span></a>
+            </div>
+          </div>
           <div class="edge-components-page">
-            <div data-include="msn-nav"></div>
+            <nav class="ntp-topnav" aria-label="MSN navigation">
+              <button class="ntp-launcher" type="button" aria-label="App launcher"><span class="edge-icon" data-icon="grid24" aria-hidden="true"></span></button>
+              <div class="p2-header__controls">
+                <label class="p2-header__toggle"><span class="ntp-toggle-label">Copilot Discover (Preview)</span><input type="checkbox" role="switch" checked aria-label="Copilot Discover (Preview)"></label>
+                <button class="p2-header__button" type="button" aria-label="Refresh"><span class="edge-icon" data-icon="refresh24" aria-hidden="true"></span></button>
+                <button class="p2-header__button" type="button" aria-label="Notifications"><span class="edge-icon" data-icon="alert24" aria-hidden="true"></span></button>
+                <button class="p2-header__button" type="button" aria-label="Feedback"><span class="edge-icon" data-icon="feedback24" aria-hidden="true"></span></button>
+                <button class="p2-header__profile" type="button" aria-label="Olivia profile"><span class="p2-header__avatar"><img src="../assets/images/windows/avatar.png" alt="" aria-hidden="true" onerror="this.remove()"><span>OL</span></span></button>
+              </div>
+            </nav>
             <section class="ntp-hero" aria-label="Search and shortcuts">
-              <div data-include="composer"></div>
-              <div data-include="shortcuts"></div>
+              <div class="ntp-search-shell">
+                <form class="ntp-search-slot" role="search">
+                  <button class="ntp-search-submit" type="submit" aria-label="Search"><span class="edge-icon" data-icon="search24" aria-hidden="true"></span></button>
+                  <input type="search" aria-label="Ask Copilot" placeholder="Ask Copilot">
+                  <button class="ntp-search-submit" type="button" aria-label="Copilot"><img src="../assets/images/windows/taskbar/copilot.svg" width="24" height="24" alt="" aria-hidden="true"></button>
+                </form>
+              </div>
+              <nav class="ntp-shortcuts" aria-label="Shortcuts">
+                <button class="ntp-shortcut" type="button" aria-label="Office"><span class="ntp-shortcut-icon"><img src="../assets/images/windows/taskbar/office.svg" alt="" aria-hidden="true"></span><span class="ntp-shortcut-label">Office</span></button>
+                <button class="ntp-shortcut" type="button" aria-label="Outlook"><span class="ntp-shortcut-icon"><img src="../assets/images/windows/taskbar/outlook.svg" alt="" aria-hidden="true"></span><span class="ntp-shortcut-label">Outlook</span></button>
+                <button class="ntp-shortcut" type="button" aria-label="SharePoint"><span class="ntp-shortcut-icon"><img src="../assets/images/windows/taskbar/sharepoint.svg" alt="" aria-hidden="true"></span><span class="ntp-shortcut-label">SharePoint</span></button>
+                <button class="ntp-shortcut" type="button" aria-label="OneNote"><span class="ntp-shortcut-icon"><img src="../assets/images/windows/taskbar/onenote.svg" alt="" aria-hidden="true"></span><span class="ntp-shortcut-label">OneNote</span></button>
+                <button class="ntp-shortcut" type="button" aria-label="OneDrive"><span class="ntp-shortcut-icon"><img src="../assets/images/windows/taskbar/onedrive.svg" alt="" aria-hidden="true"></span><span class="ntp-shortcut-label">OneDrive</span></button>
+                <button class="ntp-shortcut" type="button" aria-label="PowerPoint"><span class="ntp-shortcut-icon"><img src="../assets/images/windows/taskbar/powerpoint.svg" alt="" aria-hidden="true"></span><span class="ntp-shortcut-label">PowerPoint</span></button>
+                <button class="ntp-shortcut" type="button" aria-label="Excel"><span class="ntp-shortcut-icon"><img src="../assets/images/windows/taskbar/excel.svg" alt="" aria-hidden="true"></span><span class="ntp-shortcut-label">Excel</span></button>
+                <button class="ntp-shortcut" type="button" aria-label="Word"><span class="ntp-shortcut-icon"><img src="../assets/images/windows/taskbar/word.svg" alt="" aria-hidden="true"></span><span class="ntp-shortcut-label">Word</span></button>
+                <button class="ntp-shortcut" type="button" aria-label="Power BI"><span class="ntp-shortcut-icon"><img src="../assets/images/windows/taskbar/power-bi.svg" alt="" aria-hidden="true"></span><span class="ntp-shortcut-label">Power BI</span></button>
+                <button class="ntp-shortcut ntp-shortcut--add edge-shortcut-add" type="button" aria-label="Add shortcut"><span class="ntp-shortcut-icon"><span class="edge-icon" data-icon="add24" aria-hidden="true"></span></span><span class="ntp-shortcut-label">Add</span></button>
+              </nav>
             </section>
           </div>
         </div>

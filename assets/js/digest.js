@@ -33,6 +33,16 @@
 
     const media = document.createElement("div");
     media.className = "digest-slide-media";
+    const image = document.createElement("img");
+    image.className = "digest-slide-image";
+    image.src = index % 2 === 0
+      ? "../assets/images/msn/digest/digest-1.jpg"
+      : "../assets/images/msn/digest/digest-yeti.png";
+    image.alt = "";
+    image.loading = "lazy";
+    image.setAttribute("aria-hidden", "true");
+    image.onerror = () => { image.hidden = true; };
+    media.append(image);
     slide.append(media);
     return slide;
   }
@@ -79,6 +89,8 @@
       const clone = slide.cloneNode(true);
       clone.setAttribute("aria-hidden", "true");
       clone.inert = true;
+      const image = clone.querySelector(".digest-slide-image");
+      image.onerror = () => { image.hidden = true; };
       return clone;
     };
     slides.prepend(cloneSlide(slideNodes[slideNodes.length - 1]));

@@ -1,4 +1,3 @@
-document.addEventListener("includes:ready", () => {
 const app = document.querySelector(".edge-ntp-app");
 const controls = document.querySelector(".shell-controls");
 const stageViewport = document.querySelector(".edge-stage-viewport");
@@ -21,13 +20,12 @@ const iconPaths = {
   minimize16: "../assets/icons/subtract_16_regular.svg",
   maximize16: "../assets/icons/square_16_regular.svg",
   dismiss16: "../assets/icons/dismiss_16_regular.svg",
-  subtract16: "../assets/icons/subtract_16_regular.svg",
   back20: "../assets/icons/arrow_left_20_regular.svg",
   refresh16: "../assets/icons/arrow_clockwise_16_regular.svg",
   search16: "../assets/icons/ic_fluent_search_16_regular.svg",
   star20: "../assets/icons/star_20_regular.svg",
   more20: "../assets/icons/more_horizontal_20_regular.svg",
-  readAloud: "../assets/icons/ic_fluent_speaker_2_16_regular.svg",
+  readAloud: "../assets/icons/ic_fluent_star_add_24_regular.svg",
   extensions: "../assets/icons/ic_fluent_more_circle_24_regular.svg",
   grid24: "../assets/icons/ic_fluent_grid_24_filled.svg",
   search24: "../assets/icons/ic_fluent_search_20_regular.svg",
@@ -222,4 +220,3 @@ app.dataset.fullScreen = String(isFullScreen);
 applyTheme();
 applyWidth();
 hydrateIcons();
-});

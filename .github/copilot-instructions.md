@@ -1,14 +1,5 @@
 # Justin Suitos portfolio: [justinsuitos.com](http://justinsuitos.com/)
 Owner is a systems designer, not an engineer. Explain any manual step as short numbered steps.
-
-## Shared components (hard rule)
-- Every component has ONE definition, used by every board (Windows panel, Edge new tab page, component boards, case studies). Same markup pattern, same class names, same CSS file, same theme variables.
-- Before building anything, search the repo for an existing version and reuse it. Create a new component only if none exists, and say so in your reply.
-- Never rebuild, copy, fork or restyle an existing component for one page. If it looks wrong somewhere, fix the shared source.
-- Themes come only from shared [data-theme] variables. Never scope light/dark styles to one board's container. A component that works in dark mode on one board must work on all boards with no extra CSS.
-- Shared markup (no build step): /partials/<name>.html loaded by /assets/js/include.js through data-include="<name>". Never paste a second copy of a component's markup.
-- If a handoff conflicts with this rule, the rule wins. Flag the conflict; never build a duplicate.
-
 ## Relay protocol
 I receive work in blocks titled "=== HANDOFF W→P #NNN ===" from Justin's planning workspace. Follow them exactly.
 Handoffs no longer need a report back. When done, reply with one short line saying what changed.

@@ -477,6 +477,16 @@ html[data-theme="dark-navy"] {
   background: #BDBDBD;
 }
 
+.digest-1u-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.digest[data-image-missing="true"] .digest-1u-image {
+  visibility: hidden;
+}
+
 .digest-1u-text {
   display: flex;
   min-height: 0;
@@ -864,7 +874,7 @@ html[data-theme="dark-navy"] {
     height: auto;
     display: block;
     border: none;
-    background: var(--msn-media-placeholder);
+    background: linear-gradient(180deg, rgba(40, 37, 35, 0.00) 0%, rgba(40, 37, 35, 0.20) 40%, rgba(40, 37, 35, 0.80) 70%), url("../images/msn/digest/digest-1.jpg") lightgray 50% / cover no-repeat;
   }
 
   .demo .digest.digest--carousel {
@@ -1470,14 +1480,14 @@ html:is([data-theme="dark"], [data-theme="dark-navy"]) .msn-surface .trd05-bubbl
 }
 
 html:is([data-theme="dark"], [data-theme="dark-navy"]) .msn-surface .digest-2u-paddles button {
-  background: #FFFFFF;
-  color: #272320;
+  background: #272320;
+  color: var(--w-ink);
 }
 
 html:is([data-theme="dark"], [data-theme="dark-navy"]) .msn-surface .digest--carousel .digest-transport button {
   border-color: var(--w-stroke);
-  background: #FFFFFF;
-  color: #272320;
+  background: #272320;
+  color: var(--dg-icon);
 }
 
 html:is([data-theme="dark"], [data-theme="dark-navy"]) .msn-surface :focus-visible {
