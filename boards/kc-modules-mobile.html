@@ -10,6 +10,7 @@
   <script src="../assets/js/components/kc-module.js"></script>
   <script src="../assets/js/components/kc-modules/text-list.js"></script>
   <script src="../assets/js/components/kc-modules/image-list.js"></script>
+  <script src="../assets/js/components/kc-modules/media.js"></script>
   <script src="../assets/js/kc-mobile-carousels.js" defer></script>
   <style>
     * { box-sizing:border-box; }
@@ -487,70 +488,7 @@
 </div>
 <div class="kc-board-item">
   <p class="kc-board-label">Mobile / Videos / Landscape</p>
-  <section class="kc-module kc-module--mobile kc-mobile-videos-landscape" data-kc="Mobile / Videos / Landscape">
-    <div class="kc-module-title">
-      <h3>Videos</h3>
-    </div>
-    <div class="kc-scroll-row kc-mobile-videos-landscape__row">
-      <article class="kc-mobile-video" data-kc="Mobile / Video">
-        <div class="kc-mobile-video__media">
-          <span class="kc-img" style="width:240px;height:135px;border-radius:6px">
-            <img src="../assets/images/kc/stock/concert.jpg" alt="Crowd at a live music performance" onerror="this.style.display='none'">
-          </span>
-          <span class="kc-mobile-video__timestamp">1:23</span>
-          <span class="kc-mobile-video__play" aria-hidden="true">
-            <img src="../assets/icons/ic_fluent_play_24_filled.svg" alt="">
-          </span>
-        </div>
-        <div class="kc-mobile-video__text">
-          <p class="kc-mobile-video__title">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-          <div class="kc-mobile-video__meta">
-            <p>1.2M views · 2 days ago</p>
-            <p class="kc-attribution-link">Video app</p>
-          </div>
-        </div>
-      </article>
-      <article class="kc-mobile-video" data-kc="Mobile / Video">
-        <div class="kc-mobile-video__media">
-          <span class="kc-img" style="width:240px;height:135px;border-radius:6px">
-            <img src="../assets/images/kc/stock/guitar.jpg" alt="Hands playing an acoustic guitar" onerror="this.style.display='none'">
-          </span>
-          <span class="kc-mobile-video__timestamp">1:23</span>
-          <span class="kc-mobile-video__play" aria-hidden="true">
-            <img src="../assets/icons/ic_fluent_play_24_filled.svg" alt="">
-          </span>
-        </div>
-        <div class="kc-mobile-video__text">
-          <p class="kc-mobile-video__title">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-          <div class="kc-mobile-video__meta">
-            <p>1.2M views · 2 days ago</p>
-            <p class="kc-attribution-link">Video app</p>
-          </div>
-        </div>
-      </article>
-      <article class="kc-mobile-video" data-kc="Mobile / Video">
-        <div class="kc-mobile-video__media">
-          <span class="kc-img" style="width:240px;height:135px;border-radius:6px">
-            <img src="../assets/images/kc/stock/music-studio.jpg" alt="Audio mixing console in a recording studio" onerror="this.style.display='none'">
-          </span>
-          <span class="kc-mobile-video__timestamp">1:23</span>
-          <span class="kc-mobile-video__play" aria-hidden="true">
-            <img src="../assets/icons/ic_fluent_play_24_filled.svg" alt="">
-          </span>
-        </div>
-        <div class="kc-mobile-video__text">
-          <p class="kc-mobile-video__title">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-          <div class="kc-mobile-video__meta">
-            <p>1.2M views · 2 days ago</p>
-            <p class="kc-attribution-link">Video app</p>
-          </div>
-        </div>
-      </article>
-    </div>
-    <button class="kc-btn-flipper kc-mobile-videos-landscape__next" type="button" aria-label="Next">
-      <img src="../assets/icons/ic_fluent_chevron_right_16_regular.svg" alt="" aria-hidden="true">
-    </button>
-  </section>
+  <kc-module type="videos-landscape" platform="mobile" variant="modules-mobile-videos-landscape"></kc-module>
 </div>
 <div class="kc-board-item">
   <p class="kc-board-label">Mobile / News</p>
@@ -810,33 +748,7 @@
 </div>
 <div class="kc-board-item">
   <p class="kc-board-label">Mobile / Miscellaneous / Listen</p>
-  <section class="kc-module kc-module--mobile kc-mobile-miscellaneous-listen" data-kc="Mobile / Miscellaneous / Listen">
-    <div class="kc-module-title">
-      <h3>Listen</h3>
-    </div>
-    <div class="kc-mobile-miscellaneous-listen__row">
-      <div class="kc-mobile-miscellaneous-listen__items">
-        <a class="kc-btn-outline kc-mobile-miscellaneous-listen__service" href="#">
-          <span class="kc-monogram kc-monogram--round" style="width:32px;height:32px;font-size:14px" role="img" aria-label="Stream One">1</span>
-          <span class="kc-m-bold">Stream One</span>
-        </a>
-        <a class="kc-btn-outline kc-mobile-miscellaneous-listen__service" href="#">
-          <span class="kc-monogram" style="width:32px;height:32px;font-size:14px" role="img" aria-label="Radio Two">2</span>
-          <span class="kc-m-bold">Radio Two</span>
-        </a>
-      </div>
-      <div class="kc-mobile-miscellaneous-listen__items">
-        <a class="kc-btn-outline kc-mobile-miscellaneous-listen__service" href="#">
-          <span class="kc-monogram" style="width:32px;height:32px;font-size:14px" role="img" aria-label="Tune Three">3</span>
-          <span class="kc-m-bold">Tune Three</span>
-        </a>
-        <a class="kc-btn-outline kc-mobile-miscellaneous-listen__service" href="#">
-          <span class="kc-monogram" style="width:32px;height:32px;font-size:14px" role="img" aria-label="Wave Four">4</span>
-          <span class="kc-m-bold">Wave Four</span>
-        </a>
-      </div>
-    </div>
-  </section>
+  <kc-module type="listen" platform="mobile" variant="modules-mobile-listen"></kc-module>
 </div>
 <div class="kc-board-item">
   <p class="kc-board-label">Mobile / Miscellaneous / Map</p>

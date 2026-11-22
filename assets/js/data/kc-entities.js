@@ -1146,7 +1146,387 @@ window.KC_ENTITIES = {
               "height": 135,
               "src": null
             }
-          ]
+          ],
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": "kc-module kc-module--mobile kc-mobile-videos-landscape",
+                "id": "kc-animal-mobile-mod-4",
+                "data-kc": "Mobile / Videos / Landscape",
+                "aria-label": "Koi videos"
+              }
+            },
+            "content": [
+              {
+                "tag": "div",
+                "attributes": {
+                  "class": "kc-module-title"
+                },
+                "children": [
+                  {
+                    "tag": "h3",
+                    "attributes": {},
+                    "children": [
+                      "Videos"
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "div",
+                "attributes": {
+                  "class": "kc-scroll-row kc-mobile-videos-landscape__row"
+                },
+                "children": [
+                  {
+                    "tag": "article",
+                    "attributes": {
+                      "class": "kc-mobile-video",
+                      "data-kc": "Mobile / Video"
+                    },
+                    "children": [
+                      {
+                        "tag": "div",
+                        "attributes": {
+                          "class": "kc-mobile-video__media"
+                        },
+                        "children": [
+                          {
+                            "tag": "span",
+                            "attributes": {
+                              "class": "kc-img",
+                              "style": "width:240px;height:135px;border-radius:6px 6px 0 0"
+                            },
+                            "children": []
+                          },
+                          {
+                            "tag": "span",
+                            "attributes": {
+                              "class": "kc-mobile-video__timestamp"
+                            },
+                            "children": [
+                              "1:23"
+                            ]
+                          },
+                          {
+                            "tag": "span",
+                            "attributes": {
+                              "class": "kc-mobile-video__play",
+                              "aria-hidden": "true"
+                            },
+                            "children": [
+                              {
+                                "tag": "svg",
+                                "attributes": {
+                                  "width": "24",
+                                  "height": "24",
+                                  "viewBox": "0 0 24 24",
+                                  "fill": "none",
+                                  "xmlns": "http://www.w3.org/2000/svg"
+                                },
+                                "children": [
+                                  {
+                                    "tag": "path",
+                                    "attributes": {
+                                      "d": "M5 5.27368C5 3.56682 6.82609 2.48151 8.32538 3.2973L20.687 10.0235C22.2531 10.8756 22.2531 13.124 20.687 13.9762L8.32538 20.7024C6.82609 21.5181 5 20.4328 5 18.726V5.27368Z",
+                                      "fill": "currentColor"
+                                    },
+                                    "children": []
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "tag": "div",
+                        "attributes": {
+                          "class": "kc-mobile-video__text"
+                        },
+                        "children": [
+                          {
+                            "tag": "p",
+                            "attributes": {
+                              "class": "kc-mobile-video__title"
+                            },
+                            "children": [
+                              "A look inside a koi pond"
+                            ]
+                          },
+                          {
+                            "tag": "div",
+                            "attributes": {
+                              "class": "kc-mobile-video__meta"
+                            },
+                            "children": [
+                              {
+                                "tag": "p",
+                                "attributes": {
+                                  "aria-hidden": "true"
+                                },
+                                "children": []
+                              },
+                              {
+                                "tag": "p",
+                                "attributes": {
+                                  "class": "kc-attribution-link"
+                                },
+                                "children": [
+                                  "YouTube"
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "tag": "article",
+                    "attributes": {
+                      "class": "kc-mobile-video",
+                      "data-kc": "Mobile / Video"
+                    },
+                    "children": [
+                      {
+                        "tag": "div",
+                        "attributes": {
+                          "class": "kc-mobile-video__media"
+                        },
+                        "children": [
+                          {
+                            "tag": "span",
+                            "attributes": {
+                              "class": "kc-img",
+                              "style": "width:240px;height:135px;border-radius:6px 6px 0 0"
+                            },
+                            "children": []
+                          },
+                          {
+                            "tag": "span",
+                            "attributes": {
+                              "class": "kc-mobile-video__timestamp"
+                            },
+                            "children": [
+                              "1:23"
+                            ]
+                          },
+                          {
+                            "tag": "span",
+                            "attributes": {
+                              "class": "kc-mobile-video__play",
+                              "aria-hidden": "true"
+                            },
+                            "children": [
+                              {
+                                "tag": "svg",
+                                "attributes": {
+                                  "width": "24",
+                                  "height": "24",
+                                  "viewBox": "0 0 24 24",
+                                  "fill": "none",
+                                  "xmlns": "http://www.w3.org/2000/svg"
+                                },
+                                "children": [
+                                  {
+                                    "tag": "path",
+                                    "attributes": {
+                                      "d": "M5 5.27368C5 3.56682 6.82609 2.48151 8.32538 3.2973L20.687 10.0235C22.2531 10.8756 22.2531 13.124 20.687 13.9762L8.32538 20.7024C6.82609 21.5181 5 20.4328 5 18.726V5.27368Z",
+                                      "fill": "currentColor"
+                                    },
+                                    "children": []
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "tag": "div",
+                        "attributes": {
+                          "class": "kc-mobile-video__text"
+                        },
+                        "children": [
+                          {
+                            "tag": "p",
+                            "attributes": {
+                              "class": "kc-mobile-video__title"
+                            },
+                            "children": [
+                              "How koi get their distinctive colors"
+                            ]
+                          },
+                          {
+                            "tag": "div",
+                            "attributes": {
+                              "class": "kc-mobile-video__meta"
+                            },
+                            "children": [
+                              {
+                                "tag": "p",
+                                "attributes": {
+                                  "aria-hidden": "true"
+                                },
+                                "children": []
+                              },
+                              {
+                                "tag": "p",
+                                "attributes": {
+                                  "class": "kc-attribution-link"
+                                },
+                                "children": [
+                                  "YouTube"
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "tag": "article",
+                    "attributes": {
+                      "class": "kc-mobile-video",
+                      "data-kc": "Mobile / Video"
+                    },
+                    "children": [
+                      {
+                        "tag": "div",
+                        "attributes": {
+                          "class": "kc-mobile-video__media"
+                        },
+                        "children": [
+                          {
+                            "tag": "span",
+                            "attributes": {
+                              "class": "kc-img",
+                              "style": "width:240px;height:135px;border-radius:6px 6px 0 0"
+                            },
+                            "children": []
+                          },
+                          {
+                            "tag": "span",
+                            "attributes": {
+                              "class": "kc-mobile-video__timestamp"
+                            },
+                            "children": [
+                              "1:23"
+                            ]
+                          },
+                          {
+                            "tag": "span",
+                            "attributes": {
+                              "class": "kc-mobile-video__play",
+                              "aria-hidden": "true"
+                            },
+                            "children": [
+                              {
+                                "tag": "svg",
+                                "attributes": {
+                                  "width": "24",
+                                  "height": "24",
+                                  "viewBox": "0 0 24 24",
+                                  "fill": "none",
+                                  "xmlns": "http://www.w3.org/2000/svg"
+                                },
+                                "children": [
+                                  {
+                                    "tag": "path",
+                                    "attributes": {
+                                      "d": "M5 5.27368C5 3.56682 6.82609 2.48151 8.32538 3.2973L20.687 10.0235C22.2531 10.8756 22.2531 13.124 20.687 13.9762L8.32538 20.7024C6.82609 21.5181 5 20.4328 5 18.726V5.27368Z",
+                                      "fill": "currentColor"
+                                    },
+                                    "children": []
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "tag": "div",
+                        "attributes": {
+                          "class": "kc-mobile-video__text"
+                        },
+                        "children": [
+                          {
+                            "tag": "p",
+                            "attributes": {
+                              "class": "kc-mobile-video__title"
+                            },
+                            "children": [
+                              "Caring for koi through the seasons"
+                            ]
+                          },
+                          {
+                            "tag": "div",
+                            "attributes": {
+                              "class": "kc-mobile-video__meta"
+                            },
+                            "children": [
+                              {
+                                "tag": "p",
+                                "attributes": {
+                                  "aria-hidden": "true"
+                                },
+                                "children": []
+                              },
+                              {
+                                "tag": "p",
+                                "attributes": {
+                                  "class": "kc-attribution-link"
+                                },
+                                "children": [
+                                  "YouTube"
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "button",
+                "attributes": {
+                  "class": "kc-btn-flipper kc-mobile-videos-landscape__next",
+                  "type": "button",
+                  "aria-label": "Next koi videos"
+                },
+                "children": [
+                  {
+                    "tag": "svg",
+                    "attributes": {
+                      "width": "16",
+                      "height": "16",
+                      "viewBox": "0 0 16 16",
+                      "fill": "none",
+                      "xmlns": "http://www.w3.org/2000/svg",
+                      "aria-hidden": "true",
+                      "focusable": "false"
+                    },
+                    "children": [
+                      {
+                        "tag": "path",
+                        "attributes": {
+                          "d": "M5.64645 3.14645C5.45118 3.34171 5.45118 3.65829 5.64645 3.85355L9.79289 8L5.64645 12.1464C5.45118 12.3417 5.45118 12.6583 5.64645 12.8536C5.84171 13.0488 6.15829 13.0488 6.35355 12.8536L10.8536 8.35355C11.0488 8.15829 11.0488 7.84171 10.8536 7.64645L6.35355 3.14645C6.15829 2.95118 5.84171 2.95118 5.64645 3.14645Z",
+                          "fill": "currentColor"
+                        },
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
         },
         {
           "type": "interesting-facts",
@@ -4761,7 +5141,438 @@ window.KC_ENTITIES = {
             {
               "src": null
             }
-          ]
+          ],
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": "kc-module kc-module--mobile kc-mobile-videos-landscape",
+                "data-kc": "Mobile / Videos / Landscape",
+                "aria-label": "Videos"
+              }
+            },
+            "content": [
+              {
+                "tag": "div",
+                "attributes": {
+                  "class": "kc-module-title"
+                },
+                "children": [
+                  {
+                    "tag": "h3",
+                    "attributes": {},
+                    "children": [
+                      "Videos"
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "div",
+                "attributes": {
+                  "class": "kc-scroll-row kc-mobile-videos-landscape__row",
+                  "tabindex": "0",
+                  "role": "region",
+                  "aria-label": "Videos"
+                },
+                "children": [
+                  {
+                    "tag": "article",
+                    "attributes": {
+                      "class": "kc-mobile-video"
+                    },
+                    "children": [
+                      {
+                        "tag": "div",
+                        "attributes": {
+                          "class": "kc-mobile-video__media"
+                        },
+                        "children": [
+                          {
+                            "tag": "span",
+                            "attributes": {
+                              "class": "kc-img kc-img--cover"
+                            },
+                            "children": [
+                              {
+                                "tag": "img",
+                                "attributes": {
+                                  "src": "../assets/images/kc/modules/state/state-mobile-video-01.png",
+                                  "alt": "Idaho video thumbnail",
+                                  "onerror": "this.style.display='none'"
+                                },
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "tag": "span",
+                            "attributes": {
+                              "class": "kc-mobile-video__timestamp"
+                            },
+                            "children": [
+                              "1:23"
+                            ]
+                          },
+                          {
+                            "tag": "button",
+                            "attributes": {
+                              "type": "button",
+                              "class": "kc-mobile-video__play kc-btn-reset",
+                              "aria-label": "Play video"
+                            },
+                            "children": [
+                              {
+                                "tag": "svg",
+                                "attributes": {
+                                  "aria-hidden": "true",
+                                  "focusable": "false",
+                                  "width": "24",
+                                  "height": "24",
+                                  "viewBox": "0 0 24 24",
+                                  "fill": "none",
+                                  "xmlns": "http://www.w3.org/2000/svg"
+                                },
+                                "children": [
+                                  {
+                                    "tag": "path",
+                                    "attributes": {
+                                      "d": "M5 5.27368C5 3.56682 6.82609 2.48151 8.32538 3.2973L20.687 10.0235C22.2531 10.8756 22.2531 13.124 20.687 13.9762L8.32538 20.7024C6.82609 21.5181 5 20.4328 5 18.726V5.27368Z",
+                                      "fill": "currentColor"
+                                    },
+                                    "children": []
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "tag": "div",
+                        "attributes": {
+                          "class": "kc-mobile-video__text"
+                        },
+                        "children": [
+                          {
+                            "tag": "p",
+                            "attributes": {
+                              "class": "kc-mobile-video__title"
+                            },
+                            "children": [
+                              "Video Title Two Lines"
+                            ]
+                          },
+                          {
+                            "tag": "div",
+                            "attributes": {
+                              "class": "kc-mobile-video__meta"
+                            },
+                            "children": [
+                              {
+                                "tag": "p",
+                                "attributes": {},
+                                "children": [
+                                  "Views · Date"
+                                ]
+                              },
+                              {
+                                "tag": "p",
+                                "attributes": {},
+                                "children": [
+                                  "YouTube"
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "tag": "article",
+                    "attributes": {
+                      "class": "kc-mobile-video"
+                    },
+                    "children": [
+                      {
+                        "tag": "div",
+                        "attributes": {
+                          "class": "kc-mobile-video__media"
+                        },
+                        "children": [
+                          {
+                            "tag": "span",
+                            "attributes": {
+                              "class": "kc-img kc-img--crop-edge"
+                            },
+                            "children": [
+                              {
+                                "tag": "img",
+                                "attributes": {
+                                  "src": "../assets/images/kc/modules/state/state-mobile-video-02.png",
+                                  "alt": "Idaho video thumbnail",
+                                  "onerror": "this.style.display='none'"
+                                },
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "tag": "span",
+                            "attributes": {
+                              "class": "kc-mobile-video__timestamp"
+                            },
+                            "children": [
+                              "1:23"
+                            ]
+                          },
+                          {
+                            "tag": "button",
+                            "attributes": {
+                              "type": "button",
+                              "class": "kc-mobile-video__play kc-btn-reset",
+                              "aria-label": "Play video"
+                            },
+                            "children": [
+                              {
+                                "tag": "svg",
+                                "attributes": {
+                                  "aria-hidden": "true",
+                                  "focusable": "false",
+                                  "width": "24",
+                                  "height": "24",
+                                  "viewBox": "0 0 24 24",
+                                  "fill": "none",
+                                  "xmlns": "http://www.w3.org/2000/svg"
+                                },
+                                "children": [
+                                  {
+                                    "tag": "path",
+                                    "attributes": {
+                                      "d": "M5 5.27368C5 3.56682 6.82609 2.48151 8.32538 3.2973L20.687 10.0235C22.2531 10.8756 22.2531 13.124 20.687 13.9762L8.32538 20.7024C6.82609 21.5181 5 20.4328 5 18.726V5.27368Z",
+                                      "fill": "currentColor"
+                                    },
+                                    "children": []
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "tag": "div",
+                        "attributes": {
+                          "class": "kc-mobile-video__text"
+                        },
+                        "children": [
+                          {
+                            "tag": "p",
+                            "attributes": {
+                              "class": "kc-mobile-video__title"
+                            },
+                            "children": [
+                              "Video Title Two Lines"
+                            ]
+                          },
+                          {
+                            "tag": "div",
+                            "attributes": {
+                              "class": "kc-mobile-video__meta"
+                            },
+                            "children": [
+                              {
+                                "tag": "p",
+                                "attributes": {},
+                                "children": [
+                                  "Views · Date"
+                                ]
+                              },
+                              {
+                                "tag": "p",
+                                "attributes": {},
+                                "children": [
+                                  "YouTube"
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "tag": "article",
+                    "attributes": {
+                      "class": "kc-mobile-video"
+                    },
+                    "children": [
+                      {
+                        "tag": "div",
+                        "attributes": {
+                          "class": "kc-mobile-video__media"
+                        },
+                        "children": [
+                          {
+                            "tag": "span",
+                            "attributes": {
+                              "class": "kc-img"
+                            },
+                            "children": []
+                          },
+                          {
+                            "tag": "span",
+                            "attributes": {
+                              "class": "kc-mobile-video__timestamp"
+                            },
+                            "children": [
+                              "1:23"
+                            ]
+                          },
+                          {
+                            "tag": "button",
+                            "attributes": {
+                              "type": "button",
+                              "class": "kc-mobile-video__play kc-btn-reset",
+                              "aria-label": "Play video"
+                            },
+                            "children": [
+                              {
+                                "tag": "svg",
+                                "attributes": {
+                                  "aria-hidden": "true",
+                                  "focusable": "false",
+                                  "width": "24",
+                                  "height": "24",
+                                  "viewBox": "0 0 24 24",
+                                  "fill": "none",
+                                  "xmlns": "http://www.w3.org/2000/svg"
+                                },
+                                "children": [
+                                  {
+                                    "tag": "path",
+                                    "attributes": {
+                                      "d": "M5 5.27368C5 3.56682 6.82609 2.48151 8.32538 3.2973L20.687 10.0235C22.2531 10.8756 22.2531 13.124 20.687 13.9762L8.32538 20.7024C6.82609 21.5181 5 20.4328 5 18.726V5.27368Z",
+                                      "fill": "currentColor"
+                                    },
+                                    "children": []
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "tag": "div",
+                        "attributes": {
+                          "class": "kc-mobile-video__text"
+                        },
+                        "children": [
+                          {
+                            "tag": "p",
+                            "attributes": {
+                              "class": "kc-mobile-video__title"
+                            },
+                            "children": [
+                              "Video Title Two Lines"
+                            ]
+                          },
+                          {
+                            "tag": "div",
+                            "attributes": {
+                              "class": "kc-mobile-video__meta"
+                            },
+                            "children": [
+                              {
+                                "tag": "p",
+                                "attributes": {},
+                                "children": [
+                                  "Views · Date"
+                                ]
+                              },
+                              {
+                                "tag": "p",
+                                "attributes": {},
+                                "children": [
+                                  "YouTube"
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "button",
+                "attributes": {
+                  "type": "button",
+                  "class": "kc-btn-flipper state-prev",
+                  "aria-label": "Previous videos"
+                },
+                "children": [
+                  {
+                    "tag": "svg",
+                    "attributes": {
+                      "aria-hidden": "true",
+                      "focusable": "false",
+                      "width": "20",
+                      "height": "20",
+                      "viewBox": "0 0 20 20",
+                      "fill": "none",
+                      "xmlns": "http://www.w3.org/2000/svg"
+                    },
+                    "children": [
+                      {
+                        "tag": "path",
+                        "attributes": {
+                          "d": "M9.15898 16.8666C9.36292 17.0528 9.67918 17.0384 9.86536 16.8345C10.0515 16.6305 10.0371 16.3143 9.8332 16.1281L3.66535 10.4974H17.4961C17.7722 10.4974 17.9961 10.2735 17.9961 9.99736C17.9961 9.72122 17.7722 9.49736 17.4961 9.49736H3.66824L9.8332 3.86927C10.0371 3.68309 10.0515 3.36684 9.86536 3.16289C9.67918 2.95895 9.36292 2.94456 9.15898 3.13074L2.24263 9.44478C2.10268 9.57254 2.02285 9.74008 2.00314 9.91323C1.99851 9.94058 1.99609 9.96869 1.99609 9.99736C1.99609 10.0242 1.99821 10.0506 2.00229 10.0763C2.02047 10.2522 2.10058 10.4229 2.24263 10.5526L9.15898 16.8666Z",
+                          "fill": "currentColor"
+                        },
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "button",
+                "attributes": {
+                  "type": "button",
+                  "class": "kc-btn-flipper state-next",
+                  "aria-label": "Next videos"
+                },
+                "children": [
+                  {
+                    "tag": "svg",
+                    "attributes": {
+                      "aria-hidden": "true",
+                      "focusable": "false",
+                      "width": "20",
+                      "height": "20",
+                      "viewBox": "0 0 20 20",
+                      "fill": "none",
+                      "xmlns": "http://www.w3.org/2000/svg"
+                    },
+                    "children": [
+                      {
+                        "tag": "path",
+                        "attributes": {
+                          "d": "M10.8371 3.13074C10.6332 2.94456 10.3169 2.95895 10.1307 3.16289C9.94456 3.36683 9.95895 3.68309 10.1629 3.86927L16.3307 9.5H2.5C2.22386 9.5 2 9.72386 2 10C2 10.2761 2.22386 10.5 2.5 10.5H16.3279L10.1629 16.1281C9.95895 16.3143 9.94456 16.6305 10.1307 16.8345C10.3169 17.0384 10.6332 17.0528 10.8371 16.8666L17.7535 10.5526C17.8934 10.4248 17.9732 10.2573 17.993 10.0841C17.9976 10.0568 18 10.0287 18 10C18 9.97313 17.9979 9.94675 17.9938 9.92103C17.9756 9.74512 17.8955 9.57446 17.7535 9.44478L10.8371 3.13074Z",
+                          "fill": "currentColor"
+                        },
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
         },
         {
           "type": "places-to-visit",
@@ -6166,7 +6977,404 @@ window.KC_ENTITIES = {
             {
               "src": null
             }
-          ]
+          ],
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": "kc-module kc-module--mobile kc-mobile-videos-landscape",
+                "id": "kc-city-mobile-videos",
+                "data-kc": "Mobile / Videos / Landscape",
+                "aria-label": "Videos"
+              }
+            },
+            "content": [
+              {
+                "tag": "div",
+                "attributes": {
+                  "class": "kc-module-title"
+                },
+                "children": [
+                  {
+                    "tag": "h3",
+                    "attributes": {},
+                    "children": [
+                      "Videos"
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "div",
+                "attributes": {
+                  "class": "kc-scroll-row kc-mobile-videos-landscape__row",
+                  "tabindex": "0",
+                  "aria-label": "Videos, use left and right arrow keys to scroll"
+                },
+                "children": [
+                  {
+                    "tag": "article",
+                    "attributes": {
+                      "class": "kc-mobile-video"
+                    },
+                    "children": [
+                      {
+                        "tag": "div",
+                        "attributes": {
+                          "class": "kc-mobile-video__media"
+                        },
+                        "children": [
+                          {
+                            "tag": "span",
+                            "attributes": {
+                              "class": "kc-img kc-img--cover"
+                            },
+                            "children": [
+                              {
+                                "tag": "img",
+                                "attributes": {
+                                  "src": "../assets/images/kc/modules/city/city-mobile-video-01.png",
+                                  "alt": "Video thumbnail: football player in a game",
+                                  "onerror": "this.style.display='none'"
+                                },
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "tag": "span",
+                            "attributes": {
+                              "class": "kc-mobile-video__play",
+                              "aria-hidden": "true"
+                            },
+                            "children": [
+                              {
+                                "tag": "svg",
+                                "attributes": {
+                                  "width": "24",
+                                  "height": "24",
+                                  "viewBox": "0 0 24 24",
+                                  "fill": "none",
+                                  "xmlns": "http://www.w3.org/2000/svg"
+                                },
+                                "children": [
+                                  {
+                                    "tag": "path",
+                                    "attributes": {
+                                      "d": "M5 5.27368C5 3.56682 6.82609 2.48151 8.32538 3.2973L20.687 10.0235C22.2531 10.8756 22.2531 13.124 20.687 13.9762L8.32538 20.7024C6.82609 21.5181 5 20.4328 5 18.726V5.27368Z",
+                                      "fill": "currentColor"
+                                    },
+                                    "children": []
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "tag": "span",
+                            "attributes": {
+                              "class": "kc-mobile-video__timestamp"
+                            },
+                            "children": [
+                              "1:23"
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "tag": "div",
+                        "attributes": {
+                          "class": "kc-mobile-video__text"
+                        },
+                        "children": [
+                          {
+                            "tag": "p",
+                            "attributes": {
+                              "class": "kc-mobile-video__title"
+                            },
+                            "children": [
+                              "Video Title Two Lines"
+                            ]
+                          },
+                          {
+                            "tag": "div",
+                            "attributes": {
+                              "class": "kc-mobile-video__meta"
+                            },
+                            "children": [
+                              {
+                                "tag": "p",
+                                "attributes": {},
+                                "children": [
+                                  "Views · Date"
+                                ]
+                              },
+                              {
+                                "tag": "p",
+                                "attributes": {},
+                                "children": [
+                                  "YouTube"
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "tag": "article",
+                    "attributes": {
+                      "class": "kc-mobile-video"
+                    },
+                    "children": [
+                      {
+                        "tag": "div",
+                        "attributes": {
+                          "class": "kc-mobile-video__media"
+                        },
+                        "children": [
+                          {
+                            "tag": "span",
+                            "attributes": {
+                              "class": "kc-img kc-img--crop-edge"
+                            },
+                            "children": [
+                              {
+                                "tag": "img",
+                                "attributes": {
+                                  "src": "../assets/images/kc/modules/city/city-mobile-video-02.png",
+                                  "alt": "Video thumbnail: person wearing sunglasses and a cap",
+                                  "onerror": "this.style.display='none'"
+                                },
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "tag": "span",
+                            "attributes": {
+                              "class": "kc-mobile-video__play",
+                              "aria-hidden": "true"
+                            },
+                            "children": [
+                              {
+                                "tag": "svg",
+                                "attributes": {
+                                  "width": "24",
+                                  "height": "24",
+                                  "viewBox": "0 0 24 24",
+                                  "fill": "none",
+                                  "xmlns": "http://www.w3.org/2000/svg"
+                                },
+                                "children": [
+                                  {
+                                    "tag": "path",
+                                    "attributes": {
+                                      "d": "M5 5.27368C5 3.56682 6.82609 2.48151 8.32538 3.2973L20.687 10.0235C22.2531 10.8756 22.2531 13.124 20.687 13.9762L8.32538 20.7024C6.82609 21.5181 5 20.4328 5 18.726V5.27368Z",
+                                      "fill": "currentColor"
+                                    },
+                                    "children": []
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "tag": "span",
+                            "attributes": {
+                              "class": "kc-mobile-video__timestamp"
+                            },
+                            "children": [
+                              "1:23"
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "tag": "div",
+                        "attributes": {
+                          "class": "kc-mobile-video__text"
+                        },
+                        "children": [
+                          {
+                            "tag": "p",
+                            "attributes": {
+                              "class": "kc-mobile-video__title kc-mobile-video__title--one-line"
+                            },
+                            "children": [
+                              "Video Title Two Lines"
+                            ]
+                          },
+                          {
+                            "tag": "div",
+                            "attributes": {
+                              "class": "kc-mobile-video__meta"
+                            },
+                            "children": [
+                              {
+                                "tag": "p",
+                                "attributes": {},
+                                "children": [
+                                  "Views · Date"
+                                ]
+                              },
+                              {
+                                "tag": "p",
+                                "attributes": {},
+                                "children": [
+                                  "YouTube"
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "tag": "article",
+                    "attributes": {
+                      "class": "kc-mobile-video"
+                    },
+                    "children": [
+                      {
+                        "tag": "div",
+                        "attributes": {
+                          "class": "kc-mobile-video__media"
+                        },
+                        "children": [
+                          {
+                            "tag": "span",
+                            "attributes": {
+                              "class": "kc-img"
+                            },
+                            "children": []
+                          },
+                          {
+                            "tag": "span",
+                            "attributes": {
+                              "class": "kc-mobile-video__play",
+                              "aria-hidden": "true"
+                            },
+                            "children": [
+                              {
+                                "tag": "svg",
+                                "attributes": {
+                                  "width": "24",
+                                  "height": "24",
+                                  "viewBox": "0 0 24 24",
+                                  "fill": "none",
+                                  "xmlns": "http://www.w3.org/2000/svg"
+                                },
+                                "children": [
+                                  {
+                                    "tag": "path",
+                                    "attributes": {
+                                      "d": "M5 5.27368C5 3.56682 6.82609 2.48151 8.32538 3.2973L20.687 10.0235C22.2531 10.8756 22.2531 13.124 20.687 13.9762L8.32538 20.7024C6.82609 21.5181 5 20.4328 5 18.726V5.27368Z",
+                                      "fill": "currentColor"
+                                    },
+                                    "children": []
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "tag": "span",
+                            "attributes": {
+                              "class": "kc-mobile-video__timestamp"
+                            },
+                            "children": [
+                              "1:23"
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "tag": "div",
+                        "attributes": {
+                          "class": "kc-mobile-video__text"
+                        },
+                        "children": [
+                          {
+                            "tag": "p",
+                            "attributes": {
+                              "class": "kc-mobile-video__title"
+                            },
+                            "children": [
+                              "Video Title Two Lines"
+                            ]
+                          },
+                          {
+                            "tag": "div",
+                            "attributes": {
+                              "class": "kc-mobile-video__meta"
+                            },
+                            "children": [
+                              {
+                                "tag": "p",
+                                "attributes": {},
+                                "children": [
+                                  "Views · Date"
+                                ]
+                              },
+                              {
+                                "tag": "p",
+                                "attributes": {},
+                                "children": [
+                                  "YouTube"
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "button",
+                "attributes": {
+                  "class": "kc-btn-flipper kc-mobile-videos-landscape__previous",
+                  "type": "button",
+                  "aria-label": "Previous videos",
+                  "disabled": true
+                },
+                "children": [
+                  {
+                    "tag": "img",
+                    "attributes": {
+                      "src": "../assets/icons/ic_fluent_arrow_left_20_regular.svg",
+                      "alt": "",
+                      "aria-hidden": "true"
+                    },
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "tag": "button",
+                "attributes": {
+                  "class": "kc-btn-flipper kc-mobile-videos-landscape__next",
+                  "type": "button",
+                  "aria-label": "Next videos"
+                },
+                "children": [
+                  {
+                    "tag": "img",
+                    "attributes": {
+                      "src": "../assets/icons/ic_fluent_arrow_right_20_regular.svg",
+                      "alt": "",
+                      "aria-hidden": "true"
+                    },
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
         },
         {
           "type": "travel",
@@ -6627,7 +7835,159 @@ window.KC_ENTITIES = {
               "alt": ""
             }
           ],
-          "slots": []
+          "slots": [],
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": "kc-module kc-miscellaneous-listen",
+                "id": "kc-artist-mod-2",
+                "data-kc": "Miscellaneous / Listen",
+                "aria-label": "Listen to Janelle Monáe"
+              }
+            },
+            "content": [
+              {
+                "tag": "div",
+                "attributes": {
+                  "class": "kc-module-title kc-module-title--no-chevron kc-miscellaneous-listen__title"
+                },
+                "children": [
+                  {
+                    "tag": "h3",
+                    "attributes": {},
+                    "children": [
+                      "Listen"
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "div",
+                "attributes": {
+                  "class": "kc-miscellaneous-listen__row"
+                },
+                "children": [
+                  {
+                    "tag": "a",
+                    "attributes": {
+                      "class": "kc-miscellaneous-listen__service",
+                      "href": "https://open.spotify.com",
+                      "aria-label": "Spotify"
+                    },
+                    "children": [
+                      {
+                        "tag": "img",
+                        "attributes": {
+                          "src": "../assets/images/kc/brands/spotify.svg",
+                          "alt": "",
+                          "width": "32",
+                          "height": "32"
+                        },
+                        "children": []
+                      },
+                      {
+                        "tag": "span",
+                        "attributes": {
+                          "class": "kc-copy-bold"
+                        },
+                        "children": [
+                          "Spotify"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "tag": "a",
+                    "attributes": {
+                      "class": "kc-miscellaneous-listen__service",
+                      "href": "https://www.iheart.com",
+                      "aria-label": "iHeart Radio"
+                    },
+                    "children": [
+                      {
+                        "tag": "img",
+                        "attributes": {
+                          "src": "../assets/images/kc/brands/iheart-radio.svg",
+                          "alt": "",
+                          "width": "32",
+                          "height": "32"
+                        },
+                        "children": []
+                      },
+                      {
+                        "tag": "span",
+                        "attributes": {
+                          "class": "kc-copy-bold"
+                        },
+                        "children": [
+                          "iHeart Radio"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "tag": "a",
+                    "attributes": {
+                      "class": "kc-miscellaneous-listen__service",
+                      "href": "https://www.deezer.com",
+                      "aria-label": "Deezer"
+                    },
+                    "children": [
+                      {
+                        "tag": "img",
+                        "attributes": {
+                          "src": "../assets/images/kc/brands/deezer.svg",
+                          "alt": "",
+                          "width": "32",
+                          "height": "32"
+                        },
+                        "children": []
+                      },
+                      {
+                        "tag": "span",
+                        "attributes": {
+                          "class": "kc-copy-bold"
+                        },
+                        "children": [
+                          "Deezer"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "tag": "a",
+                    "attributes": {
+                      "class": "kc-miscellaneous-listen__service",
+                      "href": "https://tunein.com",
+                      "aria-label": "TuneIn"
+                    },
+                    "children": [
+                      {
+                        "tag": "img",
+                        "attributes": {
+                          "src": "../assets/images/kc/brands/tunein.svg",
+                          "alt": "",
+                          "width": "32",
+                          "height": "32"
+                        },
+                        "children": []
+                      },
+                      {
+                        "tag": "span",
+                        "attributes": {
+                          "class": "kc-copy-bold"
+                        },
+                        "children": [
+                          "TuneIn"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
         },
         {
           "type": "quote",
@@ -8442,7 +9802,175 @@ window.KC_ENTITIES = {
               "alt": ""
             }
           ],
-          "slots": []
+          "slots": [],
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": "kc-module kc-module--mobile kc-mobile-miscellaneous-listen",
+                "id": "kc-artist-mobile-mod-listen",
+                "data-kc": "Mobile / Miscellaneous / Listen",
+                "aria-label": "Listen to Janelle Monáe"
+              }
+            },
+            "content": [
+              {
+                "tag": "div",
+                "attributes": {
+                  "class": "kc-module-title"
+                },
+                "children": [
+                  {
+                    "tag": "h3",
+                    "attributes": {},
+                    "children": [
+                      "Listen"
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "div",
+                "attributes": {
+                  "class": "kc-mobile-miscellaneous-listen__row"
+                },
+                "children": [
+                  {
+                    "tag": "div",
+                    "attributes": {
+                      "class": "kc-mobile-miscellaneous-listen__items"
+                    },
+                    "children": [
+                      {
+                        "tag": "a",
+                        "attributes": {
+                          "class": "kc-mobile-miscellaneous-listen__service",
+                          "href": "https://open.spotify.com",
+                          "aria-label": "Spotify"
+                        },
+                        "children": [
+                          {
+                            "tag": "img",
+                            "attributes": {
+                              "src": "../assets/images/kc/brands/spotify.svg",
+                              "alt": "",
+                              "width": "32",
+                              "height": "32"
+                            },
+                            "children": []
+                          },
+                          {
+                            "tag": "span",
+                            "attributes": {
+                              "class": "kc-m-bold"
+                            },
+                            "children": [
+                              "Spotify"
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "tag": "a",
+                        "attributes": {
+                          "class": "kc-mobile-miscellaneous-listen__service",
+                          "href": "https://www.iheart.com",
+                          "aria-label": "iHeart Radio"
+                        },
+                        "children": [
+                          {
+                            "tag": "img",
+                            "attributes": {
+                              "src": "../assets/images/kc/brands/iheart-radio.svg",
+                              "alt": "",
+                              "width": "32",
+                              "height": "32"
+                            },
+                            "children": []
+                          },
+                          {
+                            "tag": "span",
+                            "attributes": {
+                              "class": "kc-m-bold"
+                            },
+                            "children": [
+                              "iHeart Radio"
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "tag": "div",
+                    "attributes": {
+                      "class": "kc-mobile-miscellaneous-listen__items"
+                    },
+                    "children": [
+                      {
+                        "tag": "a",
+                        "attributes": {
+                          "class": "kc-mobile-miscellaneous-listen__service",
+                          "href": "https://www.deezer.com",
+                          "aria-label": "Deezer"
+                        },
+                        "children": [
+                          {
+                            "tag": "img",
+                            "attributes": {
+                              "src": "../assets/images/kc/brands/deezer.svg",
+                              "alt": "",
+                              "width": "32",
+                              "height": "32"
+                            },
+                            "children": []
+                          },
+                          {
+                            "tag": "span",
+                            "attributes": {
+                              "class": "kc-m-bold"
+                            },
+                            "children": [
+                              "Deezer"
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "tag": "a",
+                        "attributes": {
+                          "class": "kc-mobile-miscellaneous-listen__service",
+                          "href": "https://tunein.com",
+                          "aria-label": "TuneIn"
+                        },
+                        "children": [
+                          {
+                            "tag": "img",
+                            "attributes": {
+                              "src": "../assets/images/kc/brands/tunein.svg",
+                              "alt": "",
+                              "width": "32",
+                              "height": "32"
+                            },
+                            "children": []
+                          },
+                          {
+                            "tag": "span",
+                            "attributes": {
+                              "class": "kc-m-bold"
+                            },
+                            "children": [
+                              "TuneIn"
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
         },
         {
           "type": "quote",
@@ -10051,7 +11579,159 @@ window.KC_ENTITIES = {
               "alt": ""
             }
           ],
-          "slots": []
+          "slots": [],
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": "kc-module kc-miscellaneous-listen",
+                "id": "kc-actor-mod-listen",
+                "data-kc": "Miscellaneous / Listen",
+                "aria-label": "Listen to Pharrell Williams"
+              }
+            },
+            "content": [
+              {
+                "tag": "div",
+                "attributes": {
+                  "class": "kc-module-title kc-miscellaneous-listen__title"
+                },
+                "children": [
+                  {
+                    "tag": "h3",
+                    "attributes": {},
+                    "children": [
+                      "Listen"
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "div",
+                "attributes": {
+                  "class": "kc-miscellaneous-listen__row"
+                },
+                "children": [
+                  {
+                    "tag": "a",
+                    "attributes": {
+                      "class": "kc-miscellaneous-listen__service",
+                      "href": "https://open.spotify.com",
+                      "aria-label": "Spotify"
+                    },
+                    "children": [
+                      {
+                        "tag": "img",
+                        "attributes": {
+                          "src": "../assets/images/kc/brands/spotify.svg",
+                          "alt": "",
+                          "width": "32",
+                          "height": "32"
+                        },
+                        "children": []
+                      },
+                      {
+                        "tag": "span",
+                        "attributes": {
+                          "class": "kc-copy"
+                        },
+                        "children": [
+                          "Spotify"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "tag": "a",
+                    "attributes": {
+                      "class": "kc-miscellaneous-listen__service",
+                      "href": "https://www.iheart.com",
+                      "aria-label": "iHeart Radio"
+                    },
+                    "children": [
+                      {
+                        "tag": "img",
+                        "attributes": {
+                          "src": "../assets/images/kc/brands/iheart-radio.svg",
+                          "alt": "",
+                          "width": "32",
+                          "height": "32"
+                        },
+                        "children": []
+                      },
+                      {
+                        "tag": "span",
+                        "attributes": {
+                          "class": "kc-copy"
+                        },
+                        "children": [
+                          "iHeart Radio"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "tag": "a",
+                    "attributes": {
+                      "class": "kc-miscellaneous-listen__service",
+                      "href": "https://www.deezer.com",
+                      "aria-label": "Deezer"
+                    },
+                    "children": [
+                      {
+                        "tag": "img",
+                        "attributes": {
+                          "src": "../assets/images/kc/brands/deezer.svg",
+                          "alt": "",
+                          "width": "32",
+                          "height": "32"
+                        },
+                        "children": []
+                      },
+                      {
+                        "tag": "span",
+                        "attributes": {
+                          "class": "kc-copy"
+                        },
+                        "children": [
+                          "Deezer"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "tag": "a",
+                    "attributes": {
+                      "class": "kc-miscellaneous-listen__service",
+                      "href": "https://tunein.com",
+                      "aria-label": "TuneIn"
+                    },
+                    "children": [
+                      {
+                        "tag": "img",
+                        "attributes": {
+                          "src": "../assets/images/kc/brands/tunein.svg",
+                          "alt": "",
+                          "width": "32",
+                          "height": "32"
+                        },
+                        "children": []
+                      },
+                      {
+                        "tag": "span",
+                        "attributes": {
+                          "class": "kc-copy"
+                        },
+                        "children": [
+                          "TuneIn"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
         },
         {
           "type": "quote",
@@ -11722,7 +13402,175 @@ window.KC_ENTITIES = {
               "alt": ""
             }
           ],
-          "slots": []
+          "slots": [],
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": "kc-module kc-module--mobile kc-mobile-miscellaneous-listen",
+                "id": "kc-actor-mobile-mod-listen",
+                "data-kc": "Mobile / Miscellaneous / Listen",
+                "aria-label": "Listen to Pharrell Williams"
+              }
+            },
+            "content": [
+              {
+                "tag": "div",
+                "attributes": {
+                  "class": "kc-module-title"
+                },
+                "children": [
+                  {
+                    "tag": "h3",
+                    "attributes": {},
+                    "children": [
+                      "Listen"
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "div",
+                "attributes": {
+                  "class": "kc-mobile-miscellaneous-listen__row"
+                },
+                "children": [
+                  {
+                    "tag": "div",
+                    "attributes": {
+                      "class": "kc-mobile-miscellaneous-listen__items"
+                    },
+                    "children": [
+                      {
+                        "tag": "a",
+                        "attributes": {
+                          "class": "kc-mobile-miscellaneous-listen__service",
+                          "href": "https://open.spotify.com",
+                          "aria-label": "Spotify"
+                        },
+                        "children": [
+                          {
+                            "tag": "img",
+                            "attributes": {
+                              "src": "../assets/images/kc/brands/spotify.svg",
+                              "alt": "",
+                              "width": "32",
+                              "height": "32"
+                            },
+                            "children": []
+                          },
+                          {
+                            "tag": "span",
+                            "attributes": {
+                              "class": "kc-m-bold"
+                            },
+                            "children": [
+                              "Spotify"
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "tag": "a",
+                        "attributes": {
+                          "class": "kc-mobile-miscellaneous-listen__service",
+                          "href": "https://www.iheart.com",
+                          "aria-label": "iHeart Radio"
+                        },
+                        "children": [
+                          {
+                            "tag": "img",
+                            "attributes": {
+                              "src": "../assets/images/kc/brands/iheart-radio.svg",
+                              "alt": "",
+                              "width": "32",
+                              "height": "32"
+                            },
+                            "children": []
+                          },
+                          {
+                            "tag": "span",
+                            "attributes": {
+                              "class": "kc-m-bold"
+                            },
+                            "children": [
+                              "iHeart Radio"
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "tag": "div",
+                    "attributes": {
+                      "class": "kc-mobile-miscellaneous-listen__items"
+                    },
+                    "children": [
+                      {
+                        "tag": "a",
+                        "attributes": {
+                          "class": "kc-mobile-miscellaneous-listen__service",
+                          "href": "https://www.deezer.com",
+                          "aria-label": "Deezer"
+                        },
+                        "children": [
+                          {
+                            "tag": "img",
+                            "attributes": {
+                              "src": "../assets/images/kc/brands/deezer.svg",
+                              "alt": "",
+                              "width": "32",
+                              "height": "32"
+                            },
+                            "children": []
+                          },
+                          {
+                            "tag": "span",
+                            "attributes": {
+                              "class": "kc-m-bold"
+                            },
+                            "children": [
+                              "Deezer"
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "tag": "a",
+                        "attributes": {
+                          "class": "kc-mobile-miscellaneous-listen__service",
+                          "href": "https://tunein.com",
+                          "aria-label": "TuneIn"
+                        },
+                        "children": [
+                          {
+                            "tag": "img",
+                            "attributes": {
+                              "src": "../assets/images/kc/brands/tunein.svg",
+                              "alt": "",
+                              "width": "32",
+                              "height": "32"
+                            },
+                            "children": []
+                          },
+                          {
+                            "tag": "span",
+                            "attributes": {
+                              "class": "kc-m-bold"
+                            },
+                            "children": [
+                              "TuneIn"
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
         },
         {
           "type": "main",
@@ -13249,7 +15097,159 @@ window.KC_ENTITIES = {
               "alt": ""
             }
           ],
-          "slots": []
+          "slots": [],
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": "kc-module kc-miscellaneous-listen",
+                "id": "kc-band-desktop-mod-listen",
+                "data-kc": "Miscellaneous / Listen",
+                "aria-label": "Listen to Red Hot Chili Peppers"
+              }
+            },
+            "content": [
+              {
+                "tag": "div",
+                "attributes": {
+                  "class": "kc-module-title kc-module-title--no-chevron kc-miscellaneous-listen__title"
+                },
+                "children": [
+                  {
+                    "tag": "h3",
+                    "attributes": {},
+                    "children": [
+                      "Listen"
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "div",
+                "attributes": {
+                  "class": "kc-miscellaneous-listen__row"
+                },
+                "children": [
+                  {
+                    "tag": "a",
+                    "attributes": {
+                      "class": "kc-miscellaneous-listen__service",
+                      "href": "https://open.spotify.com",
+                      "aria-label": "Spotify"
+                    },
+                    "children": [
+                      {
+                        "tag": "img",
+                        "attributes": {
+                          "src": "../assets/images/kc/brands/spotify.svg",
+                          "alt": "",
+                          "width": "32",
+                          "height": "32"
+                        },
+                        "children": []
+                      },
+                      {
+                        "tag": "span",
+                        "attributes": {
+                          "class": "kc-copy-bold"
+                        },
+                        "children": [
+                          "Spotify"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "tag": "a",
+                    "attributes": {
+                      "class": "kc-miscellaneous-listen__service",
+                      "href": "https://www.iheart.com",
+                      "aria-label": "iHeart Radio"
+                    },
+                    "children": [
+                      {
+                        "tag": "img",
+                        "attributes": {
+                          "src": "../assets/images/kc/brands/iheart-radio.svg",
+                          "alt": "",
+                          "width": "32",
+                          "height": "32"
+                        },
+                        "children": []
+                      },
+                      {
+                        "tag": "span",
+                        "attributes": {
+                          "class": "kc-copy-bold"
+                        },
+                        "children": [
+                          "iHeart Radio"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "tag": "a",
+                    "attributes": {
+                      "class": "kc-miscellaneous-listen__service",
+                      "href": "https://www.deezer.com",
+                      "aria-label": "Deezer"
+                    },
+                    "children": [
+                      {
+                        "tag": "img",
+                        "attributes": {
+                          "src": "../assets/images/kc/brands/deezer.svg",
+                          "alt": "",
+                          "width": "32",
+                          "height": "32"
+                        },
+                        "children": []
+                      },
+                      {
+                        "tag": "span",
+                        "attributes": {
+                          "class": "kc-copy-bold"
+                        },
+                        "children": [
+                          "Deezer"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "tag": "a",
+                    "attributes": {
+                      "class": "kc-miscellaneous-listen__service",
+                      "href": "https://tunein.com",
+                      "aria-label": "TuneIn"
+                    },
+                    "children": [
+                      {
+                        "tag": "img",
+                        "attributes": {
+                          "src": "../assets/images/kc/brands/tunein.svg",
+                          "alt": "",
+                          "width": "32",
+                          "height": "32"
+                        },
+                        "children": []
+                      },
+                      {
+                        "tag": "span",
+                        "attributes": {
+                          "class": "kc-copy-bold"
+                        },
+                        "children": [
+                          "TuneIn"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
         },
         {
           "type": "interesting-facts",
@@ -14264,7 +16264,175 @@ window.KC_ENTITIES = {
               "alt": ""
             }
           ],
-          "slots": []
+          "slots": [],
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": "kc-module kc-module--mobile kc-mobile-miscellaneous-listen",
+                "id": "kc-band-mobile-listen",
+                "data-kc": "Mobile / Miscellaneous / Listen",
+                "aria-label": "Listen to Red Hot Chili Peppers"
+              }
+            },
+            "content": [
+              {
+                "tag": "div",
+                "attributes": {
+                  "class": "kc-module-title"
+                },
+                "children": [
+                  {
+                    "tag": "h3",
+                    "attributes": {},
+                    "children": [
+                      "Listen"
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "div",
+                "attributes": {
+                  "class": "kc-mobile-miscellaneous-listen__row"
+                },
+                "children": [
+                  {
+                    "tag": "div",
+                    "attributes": {
+                      "class": "kc-mobile-miscellaneous-listen__items"
+                    },
+                    "children": [
+                      {
+                        "tag": "a",
+                        "attributes": {
+                          "class": "kc-mobile-miscellaneous-listen__service",
+                          "href": "https://open.spotify.com",
+                          "aria-label": "Spotify"
+                        },
+                        "children": [
+                          {
+                            "tag": "img",
+                            "attributes": {
+                              "src": "../assets/images/kc/brands/spotify.svg",
+                              "alt": "",
+                              "width": "32",
+                              "height": "32"
+                            },
+                            "children": []
+                          },
+                          {
+                            "tag": "span",
+                            "attributes": {
+                              "class": "kc-m-bold"
+                            },
+                            "children": [
+                              "Spotify"
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "tag": "a",
+                        "attributes": {
+                          "class": "kc-mobile-miscellaneous-listen__service",
+                          "href": "https://www.iheart.com",
+                          "aria-label": "iHeart Radio"
+                        },
+                        "children": [
+                          {
+                            "tag": "img",
+                            "attributes": {
+                              "src": "../assets/images/kc/brands/iheart-radio.svg",
+                              "alt": "",
+                              "width": "32",
+                              "height": "32"
+                            },
+                            "children": []
+                          },
+                          {
+                            "tag": "span",
+                            "attributes": {
+                              "class": "kc-m-bold"
+                            },
+                            "children": [
+                              "iHeart Radio"
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "tag": "div",
+                    "attributes": {
+                      "class": "kc-mobile-miscellaneous-listen__items"
+                    },
+                    "children": [
+                      {
+                        "tag": "a",
+                        "attributes": {
+                          "class": "kc-mobile-miscellaneous-listen__service",
+                          "href": "https://www.deezer.com",
+                          "aria-label": "Deezer"
+                        },
+                        "children": [
+                          {
+                            "tag": "img",
+                            "attributes": {
+                              "src": "../assets/images/kc/brands/deezer.svg",
+                              "alt": "",
+                              "width": "32",
+                              "height": "32"
+                            },
+                            "children": []
+                          },
+                          {
+                            "tag": "span",
+                            "attributes": {
+                              "class": "kc-m-bold"
+                            },
+                            "children": [
+                              "Deezer"
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "tag": "a",
+                        "attributes": {
+                          "class": "kc-mobile-miscellaneous-listen__service",
+                          "href": "https://tunein.com",
+                          "aria-label": "TuneIn"
+                        },
+                        "children": [
+                          {
+                            "tag": "img",
+                            "attributes": {
+                              "src": "../assets/images/kc/brands/tunein.svg",
+                              "alt": "",
+                              "width": "32",
+                              "height": "32"
+                            },
+                            "children": []
+                          },
+                          {
+                            "tag": "span",
+                            "attributes": {
+                              "class": "kc-m-bold"
+                            },
+                            "children": [
+                              "TuneIn"
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
         },
         {
           "type": "videos-landscape",
@@ -14299,7 +16467,424 @@ window.KC_ENTITIES = {
             {
               "src": null
             }
-          ]
+          ],
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": "kc-module kc-module--mobile kc-mobile-videos-landscape",
+                "id": "kc-band-mobile-videos",
+                "data-kc": "Mobile / Videos / Landscape",
+                "aria-label": "Videos"
+              }
+            },
+            "content": [
+              {
+                "tag": "div",
+                "attributes": {
+                  "class": "kc-module-title"
+                },
+                "children": [
+                  {
+                    "tag": "h3",
+                    "attributes": {},
+                    "children": [
+                      "Videos"
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "div",
+                "attributes": {
+                  "class": "kc-scroll-row kc-mobile-videos-landscape__row",
+                  "tabindex": "0",
+                  "aria-label": "Videos, use left and right arrow keys to scroll"
+                },
+                "children": [
+                  {
+                    "tag": "article",
+                    "attributes": {
+                      "class": "kc-mobile-video"
+                    },
+                    "children": [
+                      {
+                        "tag": "div",
+                        "attributes": {
+                          "class": "kc-mobile-video__media"
+                        },
+                        "children": [
+                          {
+                            "tag": "span",
+                            "attributes": {
+                              "class": "kc-img kc-img--cover"
+                            },
+                            "children": [
+                              {
+                                "tag": "img",
+                                "attributes": {
+                                  "src": "../assets/images/kc/modules/band/band-mobile-video-01.png",
+                                  "alt": "Video thumbnail of a Red Hot Chili Peppers performance",
+                                  "onerror": "this.style.display='none'"
+                                },
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "tag": "span",
+                            "attributes": {
+                              "class": "kc-mobile-video__timestamp"
+                            },
+                            "children": [
+                              "1:23"
+                            ]
+                          },
+                          {
+                            "tag": "button",
+                            "attributes": {
+                              "class": "kc-mobile-video__play kc-btn-reset",
+                              "type": "button",
+                              "aria-label": "Play video"
+                            },
+                            "children": [
+                              {
+                                "tag": "svg",
+                                "attributes": {
+                                  "width": "24",
+                                  "height": "24",
+                                  "viewBox": "0 0 24 24",
+                                  "aria-hidden": "true",
+                                  "focusable": "false"
+                                },
+                                "children": [
+                                  {
+                                    "tag": "use",
+                                    "attributes": {
+                                      "href": "#kc-band-icon-play"
+                                    },
+                                    "children": []
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "tag": "div",
+                        "attributes": {
+                          "class": "kc-mobile-video__text"
+                        },
+                        "children": [
+                          {
+                            "tag": "p",
+                            "attributes": {
+                              "class": "kc-mobile-video__title"
+                            },
+                            "children": [
+                              "Red"
+                            ]
+                          },
+                          {
+                            "tag": "div",
+                            "attributes": {
+                              "class": "kc-mobile-video__meta"
+                            },
+                            "children": [
+                              {
+                                "tag": "p",
+                                "attributes": {},
+                                "children": [
+                                  "Views · Date"
+                                ]
+                              },
+                              {
+                                "tag": "p",
+                                "attributes": {},
+                                "children": [
+                                  "YouTube"
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "tag": "article",
+                    "attributes": {
+                      "class": "kc-mobile-video"
+                    },
+                    "children": [
+                      {
+                        "tag": "div",
+                        "attributes": {
+                          "class": "kc-mobile-video__media"
+                        },
+                        "children": [
+                          {
+                            "tag": "span",
+                            "attributes": {
+                              "class": "kc-img kc-img--crop-edge"
+                            },
+                            "children": [
+                              {
+                                "tag": "img",
+                                "attributes": {
+                                  "src": "../assets/images/kc/modules/band/band-mobile-video-02.png",
+                                  "alt": "Video thumbnail of a Red Hot Chili Peppers video",
+                                  "onerror": "this.style.display='none'"
+                                },
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "tag": "span",
+                            "attributes": {
+                              "class": "kc-mobile-video__timestamp"
+                            },
+                            "children": [
+                              "1:23"
+                            ]
+                          },
+                          {
+                            "tag": "button",
+                            "attributes": {
+                              "class": "kc-mobile-video__play kc-btn-reset",
+                              "type": "button",
+                              "aria-label": "Play video"
+                            },
+                            "children": [
+                              {
+                                "tag": "svg",
+                                "attributes": {
+                                  "width": "24",
+                                  "height": "24",
+                                  "viewBox": "0 0 24 24",
+                                  "aria-hidden": "true",
+                                  "focusable": "false"
+                                },
+                                "children": [
+                                  {
+                                    "tag": "use",
+                                    "attributes": {
+                                      "href": "#kc-band-icon-play"
+                                    },
+                                    "children": []
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "tag": "div",
+                        "attributes": {
+                          "class": "kc-mobile-video__text"
+                        },
+                        "children": [
+                          {
+                            "tag": "p",
+                            "attributes": {
+                              "class": "kc-mobile-video__title"
+                            },
+                            "children": [
+                              "Video Title Two Lines"
+                            ]
+                          },
+                          {
+                            "tag": "div",
+                            "attributes": {
+                              "class": "kc-mobile-video__meta"
+                            },
+                            "children": [
+                              {
+                                "tag": "p",
+                                "attributes": {},
+                                "children": [
+                                  "Views · Date"
+                                ]
+                              },
+                              {
+                                "tag": "p",
+                                "attributes": {},
+                                "children": [
+                                  "YouTube"
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "tag": "article",
+                    "attributes": {
+                      "class": "kc-mobile-video"
+                    },
+                    "children": [
+                      {
+                        "tag": "div",
+                        "attributes": {
+                          "class": "kc-mobile-video__media"
+                        },
+                        "children": [
+                          {
+                            "tag": "span",
+                            "attributes": {
+                              "class": "kc-img"
+                            },
+                            "children": []
+                          },
+                          {
+                            "tag": "span",
+                            "attributes": {
+                              "class": "kc-mobile-video__timestamp"
+                            },
+                            "children": [
+                              "1:23"
+                            ]
+                          },
+                          {
+                            "tag": "button",
+                            "attributes": {
+                              "class": "kc-mobile-video__play kc-btn-reset",
+                              "type": "button",
+                              "aria-label": "Play video"
+                            },
+                            "children": [
+                              {
+                                "tag": "svg",
+                                "attributes": {
+                                  "width": "24",
+                                  "height": "24",
+                                  "viewBox": "0 0 24 24",
+                                  "aria-hidden": "true",
+                                  "focusable": "false"
+                                },
+                                "children": [
+                                  {
+                                    "tag": "use",
+                                    "attributes": {
+                                      "href": "#kc-band-icon-play"
+                                    },
+                                    "children": []
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "tag": "div",
+                        "attributes": {
+                          "class": "kc-mobile-video__text"
+                        },
+                        "children": [
+                          {
+                            "tag": "p",
+                            "attributes": {
+                              "class": "kc-mobile-video__title"
+                            },
+                            "children": [
+                              "Video Title Two Lines"
+                            ]
+                          },
+                          {
+                            "tag": "div",
+                            "attributes": {
+                              "class": "kc-mobile-video__meta"
+                            },
+                            "children": [
+                              {
+                                "tag": "p",
+                                "attributes": {},
+                                "children": [
+                                  "Views · Date"
+                                ]
+                              },
+                              {
+                                "tag": "p",
+                                "attributes": {},
+                                "children": [
+                                  "YouTube"
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "button",
+                "attributes": {
+                  "class": "kc-btn-flipper kc-mobile-videos-landscape__previous",
+                  "type": "button",
+                  "aria-label": "Previous videos",
+                  "disabled": true
+                },
+                "children": [
+                  {
+                    "tag": "svg",
+                    "attributes": {
+                      "width": "16",
+                      "height": "16",
+                      "viewBox": "0 0 20 20",
+                      "aria-hidden": "true",
+                      "focusable": "false"
+                    },
+                    "children": [
+                      {
+                        "tag": "use",
+                        "attributes": {
+                          "href": "#kc-band-icon-arrow-left"
+                        },
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "button",
+                "attributes": {
+                  "class": "kc-btn-flipper kc-mobile-videos-landscape__next",
+                  "type": "button",
+                  "aria-label": "Next videos"
+                },
+                "children": [
+                  {
+                    "tag": "svg",
+                    "attributes": {
+                      "width": "16",
+                      "height": "16",
+                      "viewBox": "0 0 20 20",
+                      "aria-hidden": "true",
+                      "focusable": "false"
+                    },
+                    "children": [
+                      {
+                        "tag": "use",
+                        "attributes": {
+                          "href": "#kc-band-icon-arrow-right"
+                        },
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
         },
         {
           "type": "attribution",
@@ -16775,7 +19360,379 @@ window.KC_ENTITIES = {
               "width": "240px",
               "height": "135px"
             }
-          ]
+          ],
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": "kc-module kc-module--mobile kc-mobile-videos-landscape",
+                "id": "kc-ingredient-mobile-videos",
+                "data-kc": "Mobile / Videos / Landscape",
+                "aria-labelledby": "kc-ingredient-mobile-videos-title"
+              }
+            },
+            "content": [
+              {
+                "tag": "div",
+                "attributes": {
+                  "class": "kc-module-title"
+                },
+                "children": [
+                  {
+                    "tag": "h3",
+                    "attributes": {
+                      "id": "kc-ingredient-mobile-videos-title"
+                    },
+                    "children": [
+                      "Videos"
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "div",
+                "attributes": {
+                  "class": "kc-scroll-row kc-mobile-videos-landscape__row",
+                  "tabindex": "0",
+                  "aria-label": "Summer squash videos"
+                },
+                "children": [
+                  {
+                    "tag": "article",
+                    "attributes": {
+                      "class": "kc-mobile-video",
+                      "data-kc": "Mobile / Video"
+                    },
+                    "children": [
+                      {
+                        "tag": "div",
+                        "attributes": {
+                          "class": "kc-mobile-video__media"
+                        },
+                        "children": [
+                          {
+                            "tag": "span",
+                            "attributes": {
+                              "class": "kc-img kc-img--cover",
+                              "style": "width:240px;height:135px;border-radius:6px 6px 0 0"
+                            },
+                            "children": [
+                              {
+                                "tag": "img",
+                                "attributes": {
+                                  "src": "../assets/images/kc/modules/ingredient/ingredient-mobile-video-01.png",
+                                  "alt": "",
+                                  "onerror": "this.style.display='none'"
+                                },
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "tag": "span",
+                            "attributes": {
+                              "class": "kc-mobile-video__timestamp"
+                            },
+                            "children": [
+                              "1:23"
+                            ]
+                          },
+                          {
+                            "tag": "span",
+                            "attributes": {
+                              "class": "kc-mobile-video__play",
+                              "aria-hidden": "true"
+                            },
+                            "children": [
+                              {
+                                "tag": "svg",
+                                "attributes": {
+                                  "width": "24",
+                                  "height": "24",
+                                  "viewBox": "0 0 24 24",
+                                  "fill": "none",
+                                  "xmlns": "http://www.w3.org/2000/svg"
+                                },
+                                "children": [
+                                  {
+                                    "tag": "path",
+                                    "attributes": {
+                                      "d": "M5 5.27368C5 3.56682 6.82609 2.48151 8.32538 3.2973L20.687 10.0235C22.2531 10.8756 22.2531 13.124 20.687 13.9762L8.32538 20.7024C6.82609 21.5181 5 20.4328 5 18.726V5.27368Z",
+                                      "fill": "currentColor"
+                                    },
+                                    "children": []
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "tag": "div",
+                        "attributes": {
+                          "class": "kc-mobile-video__text"
+                        },
+                        "children": [
+                          {
+                            "tag": "p",
+                            "attributes": {
+                              "class": "kc-mobile-video__title"
+                            },
+                            "children": [
+                              "Video Title Two Lines"
+                            ]
+                          },
+                          {
+                            "tag": "div",
+                            "attributes": {
+                              "class": "kc-mobile-video__meta"
+                            },
+                            "children": [
+                              {
+                                "tag": "p",
+                                "attributes": {},
+                                "children": [
+                                  "Views · Date"
+                                ]
+                              },
+                              {
+                                "tag": "p",
+                                "attributes": {
+                                  "class": "kc-attribution-link"
+                                },
+                                "children": [
+                                  "YouTube"
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "tag": "article",
+                    "attributes": {
+                      "class": "kc-mobile-video",
+                      "data-kc": "Mobile / Video"
+                    },
+                    "children": [
+                      {
+                        "tag": "div",
+                        "attributes": {
+                          "class": "kc-mobile-video__media"
+                        },
+                        "children": [
+                          {
+                            "tag": "span",
+                            "attributes": {
+                              "class": "kc-img kc-img--crop-edge",
+                              "style": "width:240px;height:135px;border-radius:6px 6px 0 0"
+                            },
+                            "children": [
+                              {
+                                "tag": "img",
+                                "attributes": {
+                                  "src": "../assets/images/kc/modules/ingredient/ingredient-mobile-video-02.png",
+                                  "alt": "",
+                                  "onerror": "this.style.display='none'"
+                                },
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "tag": "span",
+                            "attributes": {
+                              "class": "kc-mobile-video__timestamp"
+                            },
+                            "children": [
+                              "1:23"
+                            ]
+                          },
+                          {
+                            "tag": "span",
+                            "attributes": {
+                              "class": "kc-mobile-video__play",
+                              "aria-hidden": "true"
+                            },
+                            "children": [
+                              {
+                                "tag": "svg",
+                                "attributes": {
+                                  "width": "24",
+                                  "height": "24",
+                                  "viewBox": "0 0 24 24",
+                                  "fill": "none",
+                                  "xmlns": "http://www.w3.org/2000/svg"
+                                },
+                                "children": [
+                                  {
+                                    "tag": "path",
+                                    "attributes": {
+                                      "d": "M5 5.27368C5 3.56682 6.82609 2.48151 8.32538 3.2973L20.687 10.0235C22.2531 10.8756 22.2531 13.124 20.687 13.9762L8.32538 20.7024C6.82609 21.5181 5 20.4328 5 18.726V5.27368Z",
+                                      "fill": "currentColor"
+                                    },
+                                    "children": []
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "tag": "div",
+                        "attributes": {
+                          "class": "kc-mobile-video__text"
+                        },
+                        "children": [
+                          {
+                            "tag": "p",
+                            "attributes": {
+                              "class": "kc-mobile-video__title"
+                            },
+                            "children": [
+                              "Video Title Two Lines"
+                            ]
+                          },
+                          {
+                            "tag": "div",
+                            "attributes": {
+                              "class": "kc-mobile-video__meta"
+                            },
+                            "children": [
+                              {
+                                "tag": "p",
+                                "attributes": {},
+                                "children": [
+                                  "Views · Date"
+                                ]
+                              },
+                              {
+                                "tag": "p",
+                                "attributes": {
+                                  "class": "kc-attribution-link"
+                                },
+                                "children": [
+                                  "YouTube"
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "tag": "article",
+                    "attributes": {
+                      "class": "kc-mobile-video",
+                      "data-kc": "Mobile / Video"
+                    },
+                    "children": [
+                      {
+                        "tag": "div",
+                        "attributes": {
+                          "class": "kc-mobile-video__media"
+                        },
+                        "children": [
+                          {
+                            "tag": "span",
+                            "attributes": {
+                              "class": "kc-img",
+                              "style": "width:240px;height:135px;border-radius:6px 6px 0 0"
+                            },
+                            "children": []
+                          },
+                          {
+                            "tag": "span",
+                            "attributes": {
+                              "class": "kc-mobile-video__timestamp"
+                            },
+                            "children": [
+                              "1:23"
+                            ]
+                          },
+                          {
+                            "tag": "span",
+                            "attributes": {
+                              "class": "kc-mobile-video__play",
+                              "aria-hidden": "true"
+                            },
+                            "children": [
+                              {
+                                "tag": "svg",
+                                "attributes": {
+                                  "width": "24",
+                                  "height": "24",
+                                  "viewBox": "0 0 24 24",
+                                  "fill": "none",
+                                  "xmlns": "http://www.w3.org/2000/svg"
+                                },
+                                "children": [
+                                  {
+                                    "tag": "path",
+                                    "attributes": {
+                                      "d": "M5 5.27368C5 3.56682 6.82609 2.48151 8.32538 3.2973L20.687 10.0235C22.2531 10.8756 22.2531 13.124 20.687 13.9762L8.32538 20.7024C6.82609 21.5181 5 20.4328 5 18.726V5.27368Z",
+                                      "fill": "currentColor"
+                                    },
+                                    "children": []
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "tag": "div",
+                        "attributes": {
+                          "class": "kc-mobile-video__text"
+                        },
+                        "children": [
+                          {
+                            "tag": "p",
+                            "attributes": {
+                              "class": "kc-mobile-video__title"
+                            },
+                            "children": [
+                              "Video Title Two Lines"
+                            ]
+                          },
+                          {
+                            "tag": "div",
+                            "attributes": {
+                              "class": "kc-mobile-video__meta"
+                            },
+                            "children": [
+                              {
+                                "tag": "p",
+                                "attributes": {},
+                                "children": [
+                                  "Views · Date"
+                                ]
+                              },
+                              {
+                                "tag": "p",
+                                "attributes": {
+                                  "class": "kc-attribution-link"
+                                },
+                                "children": [
+                                  "YouTube"
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
         },
         {
           "type": "ingredients",
@@ -22275,7 +25232,337 @@ window.KC_ENTITIES = {
             {
               "src": null
             }
-          ]
+          ],
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": "kc-module kc-module--mobile kc-mobile-videos-landscape",
+                "id": "kc-team-mobile-videos",
+                "data-kc": "Mobile / Videos / Landscape",
+                "aria-label": "Videos"
+              }
+            },
+            "content": [
+              {
+                "tag": "div",
+                "attributes": {
+                  "class": "kc-module-title"
+                },
+                "children": [
+                  {
+                    "tag": "h3",
+                    "attributes": {},
+                    "children": [
+                      "Videos"
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "div",
+                "attributes": {
+                  "class": "kc-scroll-row kc-mobile-videos-landscape__row",
+                  "tabindex": "0",
+                  "aria-label": "Sample videos, use left and right arrow keys to scroll"
+                },
+                "children": [
+                  {
+                    "tag": "article",
+                    "attributes": {
+                      "class": "kc-mobile-video"
+                    },
+                    "children": [
+                      {
+                        "tag": "div",
+                        "attributes": {
+                          "class": "kc-mobile-video__media"
+                        },
+                        "children": [
+                          {
+                            "tag": "span",
+                            "attributes": {
+                              "class": "kc-img kc-img--cover"
+                            },
+                            "children": [
+                              {
+                                "tag": "img",
+                                "attributes": {
+                                  "src": "../assets/images/kc/modules/team/team-mobile-video-01.png",
+                                  "alt": "Video thumbnail for a Lakers feature",
+                                  "onerror": "this.style.display='none'"
+                                },
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "tag": "span",
+                            "attributes": {
+                              "class": "kc-mobile-video__timestamp"
+                            },
+                            "children": [
+                              "1:23"
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "tag": "div",
+                        "attributes": {
+                          "class": "kc-mobile-video__text"
+                        },
+                        "children": [
+                          {
+                            "tag": "p",
+                            "attributes": {
+                              "class": "kc-mobile-video__title"
+                            },
+                            "children": [
+                              "Sample team video"
+                            ]
+                          },
+                          {
+                            "tag": "div",
+                            "attributes": {
+                              "class": "kc-mobile-video__meta"
+                            },
+                            "children": [
+                              {
+                                "tag": "p",
+                                "attributes": {},
+                                "children": [
+                                  "Sample views · Today"
+                                ]
+                              },
+                              {
+                                "tag": "p",
+                                "attributes": {},
+                                "children": [
+                                  "YouTube"
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "tag": "article",
+                    "attributes": {
+                      "class": "kc-mobile-video"
+                    },
+                    "children": [
+                      {
+                        "tag": "div",
+                        "attributes": {
+                          "class": "kc-mobile-video__media"
+                        },
+                        "children": [
+                          {
+                            "tag": "span",
+                            "attributes": {
+                              "class": "kc-img kc-img--crop-edge"
+                            },
+                            "children": [
+                              {
+                                "tag": "img",
+                                "attributes": {
+                                  "src": "../assets/images/kc/modules/team/team-mobile-video-02.png",
+                                  "alt": "Video thumbnail for Lakers game highlights",
+                                  "onerror": "this.style.display='none'"
+                                },
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "tag": "span",
+                            "attributes": {
+                              "class": "kc-mobile-video__timestamp"
+                            },
+                            "children": [
+                              "2:14"
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "tag": "div",
+                        "attributes": {
+                          "class": "kc-mobile-video__text"
+                        },
+                        "children": [
+                          {
+                            "tag": "p",
+                            "attributes": {
+                              "class": "kc-mobile-video__title"
+                            },
+                            "children": [
+                              "Sample game highlights"
+                            ]
+                          },
+                          {
+                            "tag": "div",
+                            "attributes": {
+                              "class": "kc-mobile-video__meta"
+                            },
+                            "children": [
+                              {
+                                "tag": "p",
+                                "attributes": {},
+                                "children": [
+                                  "Sample views · Today"
+                                ]
+                              },
+                              {
+                                "tag": "p",
+                                "attributes": {},
+                                "children": [
+                                  "YouTube"
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "tag": "article",
+                    "attributes": {
+                      "class": "kc-mobile-video"
+                    },
+                    "children": [
+                      {
+                        "tag": "div",
+                        "attributes": {
+                          "class": "kc-mobile-video__media"
+                        },
+                        "children": [
+                          {
+                            "tag": "span",
+                            "attributes": {
+                              "class": "kc-img"
+                            },
+                            "children": []
+                          },
+                          {
+                            "tag": "span",
+                            "attributes": {
+                              "class": "kc-mobile-video__timestamp"
+                            },
+                            "children": [
+                              "3:06"
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "tag": "div",
+                        "attributes": {
+                          "class": "kc-mobile-video__text"
+                        },
+                        "children": [
+                          {
+                            "tag": "p",
+                            "attributes": {
+                              "class": "kc-mobile-video__title"
+                            },
+                            "children": [
+                              "Sample team interview"
+                            ]
+                          },
+                          {
+                            "tag": "div",
+                            "attributes": {
+                              "class": "kc-mobile-video__meta"
+                            },
+                            "children": [
+                              {
+                                "tag": "p",
+                                "attributes": {},
+                                "children": [
+                                  "Sample views · Today"
+                                ]
+                              },
+                              {
+                                "tag": "p",
+                                "attributes": {},
+                                "children": [
+                                  "YouTube"
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "button",
+                "attributes": {
+                  "class": "kc-btn-flipper kc-mobile-videos-landscape__previous",
+                  "type": "button",
+                  "aria-label": "Previous videos",
+                  "disabled": true
+                },
+                "children": [
+                  {
+                    "tag": "svg",
+                    "attributes": {
+                      "width": "16",
+                      "height": "16",
+                      "viewBox": "0 0 20 20",
+                      "aria-hidden": "true",
+                      "focusable": "false"
+                    },
+                    "children": [
+                      {
+                        "tag": "use",
+                        "attributes": {
+                          "href": "#kc-team-icon-arrow-left"
+                        },
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "button",
+                "attributes": {
+                  "class": "kc-btn-flipper kc-mobile-videos-landscape__next",
+                  "type": "button",
+                  "aria-label": "Next videos"
+                },
+                "children": [
+                  {
+                    "tag": "svg",
+                    "attributes": {
+                      "width": "16",
+                      "height": "16",
+                      "viewBox": "0 0 20 20",
+                      "aria-hidden": "true",
+                      "focusable": "false"
+                    },
+                    "children": [
+                      {
+                        "tag": "use",
+                        "attributes": {
+                          "href": "#kc-team-icon-arrow-right"
+                        },
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
         },
         {
           "type": "interesting-facts",
@@ -38097,6 +41384,843 @@ window.KC_ENTITIES = {
               }
             ]
           }
+        }
+      },
+      "modules-mobile-videos-landscape": {
+        "id": "modules-mobile-videos-landscape",
+        "type": "videos-landscape",
+        "platform": "mobile",
+        "figmaName": "kc-mobile-videos-landscape",
+        "render": {
+          "root": {
+            "tag": "section",
+            "attributes": {
+              "class": "kc-module kc-module--mobile kc-mobile-videos-landscape",
+              "data-kc": "Mobile / Videos / Landscape"
+            }
+          },
+          "content": [
+            {
+              "tag": "div",
+              "attributes": {
+                "class": "kc-module-title"
+              },
+              "children": [
+                {
+                  "tag": "h3",
+                  "attributes": {},
+                  "children": [
+                    "Videos"
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "div",
+              "attributes": {
+                "class": "kc-scroll-row kc-mobile-videos-landscape__row"
+              },
+              "children": [
+                {
+                  "tag": "article",
+                  "attributes": {
+                    "class": "kc-mobile-video",
+                    "data-kc": "Mobile / Video"
+                  },
+                  "children": [
+                    {
+                      "tag": "div",
+                      "attributes": {
+                        "class": "kc-mobile-video__media"
+                      },
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attributes": {
+                            "class": "kc-img",
+                            "style": "width:240px;height:135px;border-radius:6px"
+                          },
+                          "children": [
+                            {
+                              "tag": "img",
+                              "attributes": {
+                                "src": "../assets/images/kc/stock/concert.jpg",
+                                "alt": "Crowd at a live music performance",
+                                "onerror": "this.style.display='none'"
+                              },
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "span",
+                          "attributes": {
+                            "class": "kc-mobile-video__timestamp"
+                          },
+                          "children": [
+                            "1:23"
+                          ]
+                        },
+                        {
+                          "tag": "span",
+                          "attributes": {
+                            "class": "kc-mobile-video__play",
+                            "aria-hidden": "true"
+                          },
+                          "children": [
+                            {
+                              "tag": "img",
+                              "attributes": {
+                                "src": "../assets/icons/ic_fluent_play_24_filled.svg",
+                                "alt": ""
+                              },
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "div",
+                      "attributes": {
+                        "class": "kc-mobile-video__text"
+                      },
+                      "children": [
+                        {
+                          "tag": "p",
+                          "attributes": {
+                            "class": "kc-mobile-video__title"
+                          },
+                          "children": [
+                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+                          ]
+                        },
+                        {
+                          "tag": "div",
+                          "attributes": {
+                            "class": "kc-mobile-video__meta"
+                          },
+                          "children": [
+                            {
+                              "tag": "p",
+                              "attributes": {},
+                              "children": [
+                                "1.2M views · 2 days ago"
+                              ]
+                            },
+                            {
+                              "tag": "p",
+                              "attributes": {
+                                "class": "kc-attribution-link"
+                              },
+                              "children": [
+                                "Video app"
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "article",
+                  "attributes": {
+                    "class": "kc-mobile-video",
+                    "data-kc": "Mobile / Video"
+                  },
+                  "children": [
+                    {
+                      "tag": "div",
+                      "attributes": {
+                        "class": "kc-mobile-video__media"
+                      },
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attributes": {
+                            "class": "kc-img",
+                            "style": "width:240px;height:135px;border-radius:6px"
+                          },
+                          "children": [
+                            {
+                              "tag": "img",
+                              "attributes": {
+                                "src": "../assets/images/kc/stock/guitar.jpg",
+                                "alt": "Hands playing an acoustic guitar",
+                                "onerror": "this.style.display='none'"
+                              },
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "span",
+                          "attributes": {
+                            "class": "kc-mobile-video__timestamp"
+                          },
+                          "children": [
+                            "1:23"
+                          ]
+                        },
+                        {
+                          "tag": "span",
+                          "attributes": {
+                            "class": "kc-mobile-video__play",
+                            "aria-hidden": "true"
+                          },
+                          "children": [
+                            {
+                              "tag": "img",
+                              "attributes": {
+                                "src": "../assets/icons/ic_fluent_play_24_filled.svg",
+                                "alt": ""
+                              },
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "div",
+                      "attributes": {
+                        "class": "kc-mobile-video__text"
+                      },
+                      "children": [
+                        {
+                          "tag": "p",
+                          "attributes": {
+                            "class": "kc-mobile-video__title"
+                          },
+                          "children": [
+                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+                          ]
+                        },
+                        {
+                          "tag": "div",
+                          "attributes": {
+                            "class": "kc-mobile-video__meta"
+                          },
+                          "children": [
+                            {
+                              "tag": "p",
+                              "attributes": {},
+                              "children": [
+                                "1.2M views · 2 days ago"
+                              ]
+                            },
+                            {
+                              "tag": "p",
+                              "attributes": {
+                                "class": "kc-attribution-link"
+                              },
+                              "children": [
+                                "Video app"
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "article",
+                  "attributes": {
+                    "class": "kc-mobile-video",
+                    "data-kc": "Mobile / Video"
+                  },
+                  "children": [
+                    {
+                      "tag": "div",
+                      "attributes": {
+                        "class": "kc-mobile-video__media"
+                      },
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attributes": {
+                            "class": "kc-img",
+                            "style": "width:240px;height:135px;border-radius:6px"
+                          },
+                          "children": [
+                            {
+                              "tag": "img",
+                              "attributes": {
+                                "src": "../assets/images/kc/stock/music-studio.jpg",
+                                "alt": "Audio mixing console in a recording studio",
+                                "onerror": "this.style.display='none'"
+                              },
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "span",
+                          "attributes": {
+                            "class": "kc-mobile-video__timestamp"
+                          },
+                          "children": [
+                            "1:23"
+                          ]
+                        },
+                        {
+                          "tag": "span",
+                          "attributes": {
+                            "class": "kc-mobile-video__play",
+                            "aria-hidden": "true"
+                          },
+                          "children": [
+                            {
+                              "tag": "img",
+                              "attributes": {
+                                "src": "../assets/icons/ic_fluent_play_24_filled.svg",
+                                "alt": ""
+                              },
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "div",
+                      "attributes": {
+                        "class": "kc-mobile-video__text"
+                      },
+                      "children": [
+                        {
+                          "tag": "p",
+                          "attributes": {
+                            "class": "kc-mobile-video__title"
+                          },
+                          "children": [
+                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+                          ]
+                        },
+                        {
+                          "tag": "div",
+                          "attributes": {
+                            "class": "kc-mobile-video__meta"
+                          },
+                          "children": [
+                            {
+                              "tag": "p",
+                              "attributes": {},
+                              "children": [
+                                "1.2M views · 2 days ago"
+                              ]
+                            },
+                            {
+                              "tag": "p",
+                              "attributes": {
+                                "class": "kc-attribution-link"
+                              },
+                              "children": [
+                                "Video app"
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "button",
+              "attributes": {
+                "class": "kc-btn-flipper kc-mobile-videos-landscape__next",
+                "type": "button",
+                "aria-label": "Next"
+              },
+              "children": [
+                {
+                  "tag": "img",
+                  "attributes": {
+                    "src": "../assets/icons/ic_fluent_chevron_right_16_regular.svg",
+                    "alt": "",
+                    "aria-hidden": "true"
+                  },
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "modules-mobile-listen": {
+        "id": "modules-mobile-listen",
+        "type": "listen",
+        "platform": "mobile",
+        "figmaName": "kc-mobile-miscellaneous-listen",
+        "render": {
+          "root": {
+            "tag": "section",
+            "attributes": {
+              "class": "kc-module kc-module--mobile kc-mobile-miscellaneous-listen",
+              "data-kc": "Mobile / Miscellaneous / Listen"
+            }
+          },
+          "content": [
+            {
+              "tag": "div",
+              "attributes": {
+                "class": "kc-module-title"
+              },
+              "children": [
+                {
+                  "tag": "h3",
+                  "attributes": {},
+                  "children": [
+                    "Listen"
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "div",
+              "attributes": {
+                "class": "kc-mobile-miscellaneous-listen__row"
+              },
+              "children": [
+                {
+                  "tag": "div",
+                  "attributes": {
+                    "class": "kc-mobile-miscellaneous-listen__items"
+                  },
+                  "children": [
+                    {
+                      "tag": "a",
+                      "attributes": {
+                        "class": "kc-btn-outline kc-mobile-miscellaneous-listen__service",
+                        "href": "#"
+                      },
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attributes": {
+                            "class": "kc-monogram kc-monogram--round",
+                            "style": "width:32px;height:32px;font-size:14px",
+                            "role": "img",
+                            "aria-label": "Stream One"
+                          },
+                          "children": [
+                            "1"
+                          ]
+                        },
+                        {
+                          "tag": "span",
+                          "attributes": {
+                            "class": "kc-m-bold"
+                          },
+                          "children": [
+                            "Stream One"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "a",
+                      "attributes": {
+                        "class": "kc-btn-outline kc-mobile-miscellaneous-listen__service",
+                        "href": "#"
+                      },
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attributes": {
+                            "class": "kc-monogram",
+                            "style": "width:32px;height:32px;font-size:14px",
+                            "role": "img",
+                            "aria-label": "Radio Two"
+                          },
+                          "children": [
+                            "2"
+                          ]
+                        },
+                        {
+                          "tag": "span",
+                          "attributes": {
+                            "class": "kc-m-bold"
+                          },
+                          "children": [
+                            "Radio Two"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "div",
+                  "attributes": {
+                    "class": "kc-mobile-miscellaneous-listen__items"
+                  },
+                  "children": [
+                    {
+                      "tag": "a",
+                      "attributes": {
+                        "class": "kc-btn-outline kc-mobile-miscellaneous-listen__service",
+                        "href": "#"
+                      },
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attributes": {
+                            "class": "kc-monogram",
+                            "style": "width:32px;height:32px;font-size:14px",
+                            "role": "img",
+                            "aria-label": "Tune Three"
+                          },
+                          "children": [
+                            "3"
+                          ]
+                        },
+                        {
+                          "tag": "span",
+                          "attributes": {
+                            "class": "kc-m-bold"
+                          },
+                          "children": [
+                            "Tune Three"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "a",
+                      "attributes": {
+                        "class": "kc-btn-outline kc-mobile-miscellaneous-listen__service",
+                        "href": "#"
+                      },
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attributes": {
+                            "class": "kc-monogram",
+                            "style": "width:32px;height:32px;font-size:14px",
+                            "role": "img",
+                            "aria-label": "Wave Four"
+                          },
+                          "children": [
+                            "4"
+                          ]
+                        },
+                        {
+                          "tag": "span",
+                          "attributes": {
+                            "class": "kc-m-bold"
+                          },
+                          "children": [
+                            "Wave Four"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "modules-desktop-videos-landscape": {
+        "id": "modules-desktop-videos-landscape",
+        "type": "videos-landscape",
+        "platform": "desktop",
+        "figmaName": "Videos / Landscape",
+        "render": {
+          "root": {
+            "tag": "section",
+            "attributes": {
+              "class": [
+                "kc-module",
+                "kc-videos-landscape"
+              ],
+              "data-kc": "Videos / Landscape"
+            }
+          },
+          "content": [
+            {
+              "tag": "div",
+              "attributes": {
+                "class": [
+                  "kc-module-title"
+                ]
+              },
+              "children": [
+                {
+                  "tag": "h3",
+                  "text": "Video Title"
+                },
+                {
+                  "tag": "a",
+                  "attributes": {
+                    "class": [
+                      "kc-link"
+                    ],
+                    "href": "#",
+                    "aria-label": "See all Video Title"
+                  },
+                  "children": [
+                    {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-title-chevron"
+                        ]
+                      },
+                      "children": [
+                        {
+                          "tag": "img",
+                          "attributes": {
+                            "src": "../assets/icons/ic_fluent_chevron_right_16_regular.svg",
+                            "alt": "",
+                            "aria-hidden": "true"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "div",
+              "attributes": {
+                "class": [
+                  "kc-videos-landscape__row"
+                ]
+              },
+              "children": [
+                {
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-card",
+                      "kc-videos-landscape__tile"
+                    ]
+                  },
+                  "children": [
+                    {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-img"
+                        ],
+                        "style": "width:180px;height:100px;border-radius:6px"
+                      },
+                      "children": [
+                        {
+                          "tag": "img",
+                          "attributes": {
+                            "src": "../assets/images/kc/stock/concert.jpg",
+                            "alt": "Crowd at a live music performance"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "div",
+                      "attributes": {
+                        "class": [
+                          "kc-videos-landscape__gradient"
+                        ]
+                      }
+                    },
+                    {
+                      "tag": "div",
+                      "attributes": {
+                        "class": [
+                          "kc-videos-landscape__copy"
+                        ]
+                      },
+                      "children": [
+                        {
+                          "tag": "strong",
+                          "attributes": {
+                            "class": [
+                              "kc-copy-bold",
+                              "kc-white-copy"
+                            ]
+                          },
+                          "text": "Video Title"
+                        },
+                        {
+                          "tag": "span",
+                          "attributes": {
+                            "class": [
+                              "kc-copy-small",
+                              "kc-white-copy"
+                            ]
+                          },
+                          "text": "Northern Lights · 2019"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-card",
+                      "kc-videos-landscape__tile"
+                    ]
+                  },
+                  "children": [
+                    {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-img"
+                        ],
+                        "style": "width:180px;height:100px;border-radius:6px"
+                      },
+                      "children": [
+                        {
+                          "tag": "img",
+                          "attributes": {
+                            "src": "../assets/images/kc/stock/city.jpg",
+                            "alt": "City skyline at sunset"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "div",
+                      "attributes": {
+                        "class": [
+                          "kc-videos-landscape__gradient"
+                        ]
+                      }
+                    },
+                    {
+                      "tag": "div",
+                      "attributes": {
+                        "class": [
+                          "kc-videos-landscape__copy"
+                        ]
+                      },
+                      "children": [
+                        {
+                          "tag": "strong",
+                          "attributes": {
+                            "class": [
+                              "kc-copy-bold",
+                              "kc-white-copy"
+                            ]
+                          },
+                          "text": "Video Title"
+                        },
+                        {
+                          "tag": "span",
+                          "attributes": {
+                            "class": [
+                              "kc-copy-small",
+                              "kc-white-copy"
+                            ]
+                          },
+                          "text": "Northern Lights · 2019"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-card",
+                      "kc-videos-landscape__tile"
+                    ]
+                  },
+                  "children": [
+                    {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-img"
+                        ],
+                        "style": "width:180px;height:100px;border-radius:6px"
+                      },
+                      "children": [
+                        {
+                          "tag": "img",
+                          "attributes": {
+                            "src": "../assets/images/kc/stock/guitar.jpg",
+                            "alt": "Hands playing an acoustic guitar"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "div",
+                      "attributes": {
+                        "class": [
+                          "kc-videos-landscape__gradient"
+                        ]
+                      }
+                    },
+                    {
+                      "tag": "div",
+                      "attributes": {
+                        "class": [
+                          "kc-videos-landscape__copy"
+                        ]
+                      },
+                      "children": [
+                        {
+                          "tag": "strong",
+                          "attributes": {
+                            "class": [
+                              "kc-copy-bold",
+                              "kc-white-copy"
+                            ]
+                          },
+                          "text": "Video Title"
+                        },
+                        {
+                          "tag": "span",
+                          "attributes": {
+                            "class": [
+                              "kc-copy-small",
+                              "kc-white-copy"
+                            ]
+                          },
+                          "text": "Northern Lights · 2019"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "button",
+              "attributes": {
+                "class": [
+                  "kc-btn-flipper",
+                  "kc-videos-landscape__next"
+                ],
+                "type": "button",
+                "aria-label": "Next"
+              },
+              "children": [
+                {
+                  "tag": "img",
+                  "attributes": {
+                    "src": "../assets/icons/ic_fluent_chevron_right_16_regular.svg",
+                    "alt": "",
+                    "aria-hidden": "true"
+                  }
+                }
+              ]
+            }
+          ]
         }
       }
     }

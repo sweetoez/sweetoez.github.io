@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="../assets/css/kc-components.css"><script src="../assets/js/data/kc-entities.js"></script>  <script src="../assets/js/components/kc-module.js"></script>
   <script src="../assets/js/components/kc-modules/text-list.js"></script>
   <script src="../assets/js/components/kc-modules/image-list.js"></script>
+  <script src="../assets/js/components/kc-modules/media.js"></script>
   <script src="../assets/js/components/kc-hero.js"></script>
   <script src="../assets/js/kc-mobile-carousels.js" defer></script>
   <style>
@@ -66,19 +67,7 @@
             <button class="kc-btn-flipper kc-mobile-news__next" type="button" aria-label="Next news items"><svg width="16" height="16" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><use href="#kc-artist-icon-arrow-right"></use></svg></button>
           </section>
 
-          <section class="kc-module kc-module--mobile kc-mobile-miscellaneous-listen" id="kc-artist-mobile-mod-listen" data-kc="Mobile / Miscellaneous / Listen" aria-label="Listen to Janelle Monáe">
-            <div class="kc-module-title"><h3>Listen</h3></div>
-            <div class="kc-mobile-miscellaneous-listen__row">
-              <div class="kc-mobile-miscellaneous-listen__items">
-                <a class="kc-mobile-miscellaneous-listen__service" href="https://open.spotify.com" aria-label="Spotify"><img src="../assets/images/kc/brands/spotify.svg" alt="" width="32" height="32"><span class="kc-m-bold">Spotify</span></a>
-                <a class="kc-mobile-miscellaneous-listen__service" href="https://www.iheart.com" aria-label="iHeart Radio"><img src="../assets/images/kc/brands/iheart-radio.svg" alt="" width="32" height="32"><span class="kc-m-bold">iHeart Radio</span></a>
-              </div>
-              <div class="kc-mobile-miscellaneous-listen__items">
-                <a class="kc-mobile-miscellaneous-listen__service" href="https://www.deezer.com" aria-label="Deezer"><img src="../assets/images/kc/brands/deezer.svg" alt="" width="32" height="32"><span class="kc-m-bold">Deezer</span></a>
-                <a class="kc-mobile-miscellaneous-listen__service" href="https://tunein.com" aria-label="TuneIn"><img src="../assets/images/kc/brands/tunein.svg" alt="" width="32" height="32"><span class="kc-m-bold">TuneIn</span></a>
-              </div>
-            </div>
-          </section>
+          <kc-module entity="artist" platform="mobile" index="3"></kc-module>
 
           <section class="kc-module kc-module--mobile kc-mobile-miscellaneous-quote" id="kc-artist-mobile-mod-quote" data-kc="Mobile / Miscellaneous / Quote" aria-label="Quote from Janelle Monáe">
             <figure class="kc-mobile-miscellaneous-quote__frame">

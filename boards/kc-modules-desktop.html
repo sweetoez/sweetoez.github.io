@@ -10,6 +10,7 @@
   <script src="../assets/js/components/kc-module.js"></script>
   <script src="../assets/js/components/kc-modules/text-list.js"></script>
   <script src="../assets/js/components/kc-modules/image-list.js"></script>
+  <script src="../assets/js/components/kc-modules/media.js"></script>
   <style>
     * { box-sizing:border-box; }
     body { min-width:1136px; margin:0; padding:32px; background:#F2F2F2; color:#444; font-family:var(--kc-font); }
@@ -32,6 +33,8 @@
     const add = (section, label, cls, content, aria = "") => modules.push({ section, label, cls, content, aria });
     const addSample = (label, variant, aria = "") =>
       modules.push({ section: "Image List", label, imageListSample: variant, aria });
+    const addMediaSample = (label, variant) =>
+      modules.push({ section: "Videos", label, mediaSample: variant });
     const textListSamples = new Map([
       ["Text List / Awards", ["awards", "desktop-awards"]],
       ["Text List / Top Fact — Quantity=2", ["top-fact", "desktop-top-fact-2"]],
@@ -227,8 +230,7 @@
       `${title("Movie trailer")}<div class="kc-videos-trailer__frame">${image("videos-trailer", 1, 432, 242, 6, "The Long Field trailer")}<button class="kc-btn-on-image kc-videos-trailer__play" type="button" aria-label="Play trailer"><img src="../assets/icons/ic_fluent_play_24_filled.svg" alt="" aria-hidden="true"></button></div>`);
     add("Videos", "Videos / Tik Toks", "kc-videos-tik-toks",
       `${title("Popular short videos")}<div class="kc-videos-tik-toks__row">${[1, 2, 3, 4].map(n => `<div class="kc-card kc-videos-tik-toks__tile">${image("videos-tik-toks", n, 112, 206, 6, `Short video ${n}`)}<div class="kc-videos-tik-toks__gradient"></div><div class="kc-videos-tik-toks__copy"><strong class="kc-copy-bold kc-white-copy">XX weeks ago</strong><span class="kc-copy-small kc-white-copy">400K likes</span></div></div>`).join("")}</div><button class="kc-btn-flipper kc-videos-tik-toks__next" type="button" aria-label="Next"><img src="../assets/icons/ic_fluent_chevron_right_16_regular.svg" alt="" aria-hidden="true"></button>`);
-    add("Videos", "Videos / Landscape", "kc-videos-landscape",
-      `${title("Video Title")}<div class="kc-videos-landscape__row">${[1, 2, 3].map(n => `<div class="kc-card kc-videos-landscape__tile">${image("videos-landscape", n, 180, 100, 6, `Video ${n}`)}<div class="kc-videos-landscape__gradient"></div><div class="kc-videos-landscape__copy"><strong class="kc-copy-bold kc-white-copy">Video Title</strong><span class="kc-copy-small kc-white-copy">Northern Lights · 2019</span></div></div>`).join("")}</div><button class="kc-btn-flipper kc-videos-landscape__next" type="button" aria-label="Next"><img src="../assets/icons/ic_fluent_chevron_right_16_regular.svg" alt="" aria-hidden="true"></button>`);
+    addMediaSample("Videos / Landscape", "modules-desktop-videos-landscape");
 
     const options = [["A", "Lorem Ipsum"], ["B", "Lorem Ipsum"], ["C", "Lorem Ipsum"], ["D", "Lorem Ipsum"]];
     const pollRow = ([letter, text]) => `<button class="kc-miscellaneous-poll-trivia__option" type="button" aria-label="${letter}: ${text}"><span class="kc-btn-outline kc-miscellaneous-poll-trivia__letter" aria-hidden="true">${letter}</span><span class="kc-btn-outline kc-miscellaneous-poll-trivia__choice" aria-hidden="true">${text}</span></button>`;
@@ -280,7 +282,8 @@
         label.textContent = item.label;
         const sample = textListSamples.get(item.label);
         const imageListSample = item.imageListSample;
-        const root = document.createElement(sample || imageListSample ? "kc-module" : "section");
+        const mediaSample = item.mediaSample;
+        const root = document.createElement(sample || imageListSample || mediaSample ? "kc-module" : "section");
         if (sample) {
           root.setAttribute("type", sample[0]);
           root.setAttribute("variant", sample[1]);
@@ -290,6 +293,12 @@
           root.setAttribute("type", sampleData.type);
           root.setAttribute("platform", "desktop");
           root.setAttribute("variant", imageListSample);
+        } else if (mediaSample) {
+          const sampleData = window.KC_ENTITIES._samples.modules[mediaSample];
+          if (!sampleData) throw new Error(`Missing KC media sample "${mediaSample}".`);
+          root.setAttribute("type", sampleData.type);
+          root.setAttribute("platform", "desktop");
+          root.setAttribute("variant", mediaSample);
         } else {
           root.className = `kc-module ${item.cls}`;
           root.dataset.kc = item.label.split(" — ")[0];

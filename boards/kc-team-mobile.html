@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="../assets/css/kc-components.css"><script src="../assets/js/data/kc-entities.js"></script>  <script src="../assets/js/components/kc-module.js"></script>
   <script src="../assets/js/components/kc-modules/text-list.js"></script>
   <script src="../assets/js/components/kc-modules/image-list.js"></script>
+  <script src="../assets/js/components/kc-modules/media.js"></script>
   <script src="../assets/js/components/kc-hero.js"></script>
   <script src="../assets/js/kc-mobile-carousels.js" defer></script>
   <style>
@@ -53,25 +54,7 @@
             <button class="kc-btn-flipper kc-mobile-news__next" type="button" aria-label="Next news items"><svg width="16" height="16" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><use href="#kc-team-icon-arrow-right"></use></svg></button>
           </section>
 
-          <section class="kc-module kc-module--mobile kc-mobile-videos-landscape" id="kc-team-mobile-videos" data-kc="Mobile / Videos / Landscape" aria-label="Videos">
-            <div class="kc-module-title"><h3>Videos</h3></div>
-            <div class="kc-scroll-row kc-mobile-videos-landscape__row" tabindex="0" aria-label="Sample videos, use left and right arrow keys to scroll">
-              <article class="kc-mobile-video">
-                <div class="kc-mobile-video__media"><span class="kc-img kc-img--cover"><img src="../assets/images/kc/modules/team/team-mobile-video-01.png" alt="Video thumbnail for a Lakers feature" onerror="this.style.display='none'"></span><span class="kc-mobile-video__timestamp">1:23</span></div>
-                <div class="kc-mobile-video__text"><p class="kc-mobile-video__title">Sample team video</p><div class="kc-mobile-video__meta"><p>Sample views · Today</p><p>YouTube</p></div></div>
-              </article>
-              <article class="kc-mobile-video">
-                <div class="kc-mobile-video__media"><span class="kc-img kc-img--crop-edge"><img src="../assets/images/kc/modules/team/team-mobile-video-02.png" alt="Video thumbnail for Lakers game highlights" onerror="this.style.display='none'"></span><span class="kc-mobile-video__timestamp">2:14</span></div>
-                <div class="kc-mobile-video__text"><p class="kc-mobile-video__title">Sample game highlights</p><div class="kc-mobile-video__meta"><p>Sample views · Today</p><p>YouTube</p></div></div>
-              </article>
-              <article class="kc-mobile-video">
-                <div class="kc-mobile-video__media"><span class="kc-img"></span><span class="kc-mobile-video__timestamp">3:06</span></div>
-                <div class="kc-mobile-video__text"><p class="kc-mobile-video__title">Sample team interview</p><div class="kc-mobile-video__meta"><p>Sample views · Today</p><p>YouTube</p></div></div>
-              </article>
-            </div>
-            <button class="kc-btn-flipper kc-mobile-videos-landscape__previous" type="button" aria-label="Previous videos" disabled><svg width="16" height="16" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><use href="#kc-team-icon-arrow-left"></use></svg></button>
-            <button class="kc-btn-flipper kc-mobile-videos-landscape__next" type="button" aria-label="Next videos"><svg width="16" height="16" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><use href="#kc-team-icon-arrow-right"></use></svg></button>
-          </section>
+          <kc-module entity="team" platform="mobile" index="3"></kc-module>
 
           <kc-module entity="team" platform="mobile" index="4"></kc-module>
 

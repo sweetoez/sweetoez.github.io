@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="../assets/css/kc-components.css"><script src="../assets/js/data/kc-entities.js"></script>  <script src="../assets/js/components/kc-module.js"></script>
   <script src="../assets/js/components/kc-modules/text-list.js"></script>
   <script src="../assets/js/components/kc-modules/image-list.js"></script>
+  <script src="../assets/js/components/kc-modules/media.js"></script>
   <script src="../assets/js/components/kc-hero.js"></script>
   <style>
     * { box-sizing:border-box; }
@@ -94,39 +95,9 @@
 
           <kc-module entity="band" platform="mobile" index="1"></kc-module>
 
-          <section class="kc-module kc-module--mobile kc-mobile-miscellaneous-listen" id="kc-band-mobile-listen" data-kc="Mobile / Miscellaneous / Listen" aria-label="Listen to Red Hot Chili Peppers">
-            <div class="kc-module-title"><h3>Listen</h3></div>
-            <div class="kc-mobile-miscellaneous-listen__row">
-              <div class="kc-mobile-miscellaneous-listen__items">
-                <a class="kc-mobile-miscellaneous-listen__service" href="https://open.spotify.com" aria-label="Spotify"><img src="../assets/images/kc/brands/spotify.svg" alt="" width="32" height="32"><span class="kc-m-bold">Spotify</span></a>
-                <a class="kc-mobile-miscellaneous-listen__service" href="https://www.iheart.com" aria-label="iHeart Radio"><img src="../assets/images/kc/brands/iheart-radio.svg" alt="" width="32" height="32"><span class="kc-m-bold">iHeart Radio</span></a>
-              </div>
-              <div class="kc-mobile-miscellaneous-listen__items">
-                <a class="kc-mobile-miscellaneous-listen__service" href="https://www.deezer.com" aria-label="Deezer"><img src="../assets/images/kc/brands/deezer.svg" alt="" width="32" height="32"><span class="kc-m-bold">Deezer</span></a>
-                <a class="kc-mobile-miscellaneous-listen__service" href="https://tunein.com" aria-label="TuneIn"><img src="../assets/images/kc/brands/tunein.svg" alt="" width="32" height="32"><span class="kc-m-bold">TuneIn</span></a>
-              </div>
-            </div>
-          </section>
+          <kc-module entity="band" platform="mobile" index="2"></kc-module>
 
-          <section class="kc-module kc-module--mobile kc-mobile-videos-landscape" id="kc-band-mobile-videos" data-kc="Mobile / Videos / Landscape" aria-label="Videos">
-            <div class="kc-module-title"><h3>Videos</h3></div>
-            <div class="kc-scroll-row kc-mobile-videos-landscape__row" tabindex="0" aria-label="Videos, use left and right arrow keys to scroll">
-              <article class="kc-mobile-video">
-                <div class="kc-mobile-video__media"><span class="kc-img kc-img--cover"><img src="../assets/images/kc/modules/band/band-mobile-video-01.png" alt="Video thumbnail of a Red Hot Chili Peppers performance" onerror="this.style.display='none'"></span><span class="kc-mobile-video__timestamp">1:23</span><button class="kc-mobile-video__play kc-btn-reset" type="button" aria-label="Play video"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#kc-band-icon-play"></use></svg></button></div>
-                <div class="kc-mobile-video__text"><p class="kc-mobile-video__title">Red</p><div class="kc-mobile-video__meta"><p>Views · Date</p><p>YouTube</p></div></div>
-              </article>
-              <article class="kc-mobile-video">
-                <div class="kc-mobile-video__media"><span class="kc-img kc-img--crop-edge"><img src="../assets/images/kc/modules/band/band-mobile-video-02.png" alt="Video thumbnail of a Red Hot Chili Peppers video" onerror="this.style.display='none'"></span><span class="kc-mobile-video__timestamp">1:23</span><button class="kc-mobile-video__play kc-btn-reset" type="button" aria-label="Play video"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#kc-band-icon-play"></use></svg></button></div>
-                <div class="kc-mobile-video__text"><p class="kc-mobile-video__title">Video Title Two Lines</p><div class="kc-mobile-video__meta"><p>Views · Date</p><p>YouTube</p></div></div>
-              </article>
-              <article class="kc-mobile-video">
-                <div class="kc-mobile-video__media"><span class="kc-img"></span><span class="kc-mobile-video__timestamp">1:23</span><button class="kc-mobile-video__play kc-btn-reset" type="button" aria-label="Play video"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#kc-band-icon-play"></use></svg></button></div>
-                <div class="kc-mobile-video__text"><p class="kc-mobile-video__title">Video Title Two Lines</p><div class="kc-mobile-video__meta"><p>Views · Date</p><p>YouTube</p></div></div>
-              </article>
-            </div>
-            <button class="kc-btn-flipper kc-mobile-videos-landscape__previous" type="button" aria-label="Previous videos" disabled><svg width="16" height="16" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><use href="#kc-band-icon-arrow-left"></use></svg></button>
-            <button class="kc-btn-flipper kc-mobile-videos-landscape__next" type="button" aria-label="Next videos"><svg width="16" height="16" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><use href="#kc-band-icon-arrow-right"></use></svg></button>
-          </section>
+          <kc-module entity="band" platform="mobile" index="3"></kc-module>
 
           <div class="kc-card-more" id="kc-band-mobile-more" hidden>
             <kc-module entity="band" platform="mobile" index="4"></kc-module>

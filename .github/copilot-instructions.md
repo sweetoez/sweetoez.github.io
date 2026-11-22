@@ -55,6 +55,7 @@ Controls are native HTML in plain CSS with Fluent states (rest, hover, pressed, 
 - <kc-hero> is done (#137). Pages use <kc-hero entity platform>.
 - Module registry + text-list family done (#138).
 - image-list family done (#139).
+- media family done (#140).
 - Standing KC rules: widths 472 / 360; one 1px `#DDD` seam; last visible item radius `0 0 6 6`; Title Case; #059 logo rows centered on the image edge with real brand SVGs; #060 scroll rows edge to edge with a 16px inner start inset; the 20px Video + Image overhang; and #085 module images under `/assets/images/kc/modules/<slug>/`.
 
 ## KC hero + carousel rules (#059)
