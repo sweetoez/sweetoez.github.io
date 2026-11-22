@@ -9,15 +9,17 @@
   <link rel="stylesheet" href="../assets/css/msn-shell.css">
   <link rel="stylesheet" href="../assets/css/windows-desktop.css">
   <link rel="stylesheet" href="../assets/css/windows-shell.css">
+  <link rel="stylesheet" href="../assets/css/edge-chrome.css">
   <link rel="stylesheet" href="../assets/css/edge-ntp.css">
   <link rel="stylesheet" href="../assets/css/fluent-motion.css">
   <script defer src="../assets/js/fluent-motion.js"></script>
   <script defer src="../assets/js/digest.js"></script>
   <script defer src="../assets/js/edge-ntp.js"></script>
+  <script defer src="../assets/js/msn-feed-rows.js"></script>
 </head>
 <body class="demo">
   <div class="shell-app edge-ntp-app" data-theme="light">
-    <header class="shell-controls" aria-label="Edge new tab page demo controls">
+    <nav class="shell-controls" aria-label="Demo controls">
       <div class="control-group" role="group" aria-label="Theme">
         <span class="control-label">Theme</span>
         <div class="segmented-control">
@@ -38,7 +40,8 @@
           <output id="edge-width-readout" for="edge-width">1978 px</output>
         </label>
       </div>
-    </header>
+      <a class="edge-full-screen-link" href="?full=1">Full screen</a>
+    </nav>
 
     <div class="edge-stage-viewport">
       <div class="win-stage-fit edge-stage-fit">
@@ -49,43 +52,59 @@
 
           <section class="edge-window" aria-label="Edge new tab page">
             <div class="edge-chrome-row edge-tab-row">
-              <div class="edge-active-tab">
-                <img src="../assets/icons/globe_16_regular.svg" alt="" aria-hidden="true">
-                <span>New Tab</span>
-                <button class="edge-tab-dismiss" type="button" aria-label="Close tab"><img src="../assets/icons/dismiss_12_regular.svg" alt="" aria-hidden="true"></button>
+              <div class="edge-tab-tools">
+                <button type="button" aria-label="Tab actions"><span class="edge-icon-fallback" data-icon-missing="tab_desktop_multiple" aria-hidden="true">T</span></button>
+              </div>
+              <div class="edge-tabs">
+                <div class="edge-active-tab">
+                  <span class="edge-icon" data-icon="globe16" aria-hidden="true"></span>
+                  <span class="edge-active-tab__title">New Tab</span>
+                  <button class="edge-tab-dismiss" type="button" aria-label="Close tab"><span class="edge-icon" data-icon="dismiss12" aria-hidden="true"></span></button>
+                </div>
+                <button type="button" aria-label="New tab"><span class="edge-icon" data-icon="add16" aria-hidden="true"></span></button>
               </div>
               <div class="edge-window-controls">
-                <button type="button" aria-label="Minimize"><img src="../assets/icons/subtract_16_regular.svg" alt="" aria-hidden="true"></button>
-                <button type="button" aria-label="Maximize"><img src="../assets/icons/square_16_regular.svg" alt="" aria-hidden="true"></button>
-                <button type="button" aria-label="Close window"><img src="../assets/icons/dismiss_16_regular.svg" alt="" aria-hidden="true"></button>
+                <button type="button" aria-label="Minimize"><span class="edge-icon" data-icon="minimize16" aria-hidden="true"></span></button>
+                <button type="button" aria-label="Maximize"><span class="edge-icon" data-icon="maximize16" aria-hidden="true"></span></button>
+                <button type="button" aria-label="Close window"><span class="edge-icon" data-icon="dismiss16" aria-hidden="true"></span></button>
               </div>
             </div>
             <div class="edge-chrome-row edge-toolbar">
               <div class="edge-navigation-icons">
-                <button type="button" aria-label="Back"><img src="../assets/icons/arrow_left_20_regular.svg" alt="" aria-hidden="true"></button>
-                <button type="button" aria-label="Forward"><img src="../assets/icons/ic_fluent_arrow_right_20_regular.svg" alt="" aria-hidden="true"></button>
-                <button type="button" aria-label="Refresh"><img src="../assets/icons/arrow_clockwise_20_regular.svg" alt="" aria-hidden="true"></button>
+                <button type="button" aria-label="Back"><span class="edge-icon" data-icon="back20" aria-hidden="true"></span></button>
+                <button type="button" aria-label="Refresh"><span class="edge-icon" data-icon="refresh16" aria-hidden="true"></span></button>
               </div>
-              <div class="edge-address">Search or enter web address</div>
-              <button type="button" aria-label="Profile"><span class="edge-profile-dot"></span></button>
-              <button type="button" aria-label="More options"><img src="../assets/icons/more_horizontal_20_regular.svg" alt="" aria-hidden="true"></button>
+              <div class="edge-address">
+                <button type="button" aria-label="Search"><span class="edge-icon" data-icon="search16" aria-hidden="true"></span></button>
+                <span class="edge-address__hint">Search or enter web address</span>
+                <div class="edge-address-actions" aria-label="Address bar actions">
+                  <button type="button" aria-label="Favorites"><span class="edge-icon" data-icon="star20" aria-hidden="true"></span></button>
+                  <button type="button" aria-label="Read aloud"><span class="edge-icon-fallback" data-icon-missing="read_aloud" aria-hidden="true">R</span></button>
+                  <button type="button" aria-label="Extensions"><span class="edge-icon-fallback" data-icon-missing="puzzle_piece" aria-hidden="true">P</span></button>
+                </div>
+              </div>
+              <div class="edge-toolbar-actions">
+                <button class="edge-toolbar-profile" type="button" aria-label="Olivia profile">
+                  <img src="../assets/images/windows/avatar.png" alt="" aria-hidden="true" onerror="this.hidden = true">
+                  <span class="edge-toolbar-profile__fallback" aria-hidden="true">OL</span>
+                </button>
+                <button type="button" aria-label="More options"><span class="edge-icon" data-icon="more20" aria-hidden="true"></span></button>
+                <button type="button" aria-label="Copilot"><img src="../assets/images/windows/taskbar/copilot.svg" width="20" height="20" alt="" aria-hidden="true"></button>
+              </div>
             </div>
             <div class="edge-chrome-row edge-favorites" aria-label="Favorites">
-              <div class="edge-favorite"><span class="edge-favorite__icon"></span><span class="edge-favorite__label">News</span></div>
-              <div class="edge-favorite"><span class="edge-favorite__icon"></span><span class="edge-favorite__label">Weather</span></div>
-              <div class="edge-favorite"><span class="edge-favorite__icon"></span><span class="edge-favorite__label">Money</span></div>
-              <div class="edge-favorite"><span class="edge-favorite__icon"></span><span class="edge-favorite__label">Sports</span></div>
-              <div class="edge-favorite"><span class="edge-favorite__icon"></span><span class="edge-favorite__label">Shopping</span></div>
+              <div class="edge-favorites__items">
+                <a class="edge-favorite" href="#" aria-label="Outlook"><span class="edge-favorite__icon"><img src="../assets/images/windows/taskbar/outlook.svg" alt="" aria-hidden="true"></span><span class="edge-favorite__label">Outlook</span></a>
+                <a class="edge-favorite" href="#" aria-label="YouTube"><span class="edge-favorite__icon"><span class="edge-favorite__fallback" style="background:#FF0000">Y</span></span><span class="edge-favorite__label">YouTube</span></a>
+                <a class="edge-favorite" href="#" aria-label="Amazon"><span class="edge-favorite__icon"><span class="edge-favorite__fallback" style="background:#FE9900">A</span></span><span class="edge-favorite__label">Amazon</span></a>
+                <a class="edge-favorite" href="#" aria-label="Instagram"><span class="edge-favorite__icon"><span class="edge-favorite__fallback" style="background:#E1306C">I</span></span><span class="edge-favorite__label">Instagram</span></a>
+                <a class="edge-favorite" href="#" aria-label="LinkedIn"><span class="edge-favorite__icon"><span class="edge-favorite__fallback" style="background:#0A66C2">L</span></span><span class="edge-favorite__label">LinkedIn</span></a>
+              </div>
             </div>
 
             <main class="edge-page edge-content msn-surface" aria-label="MSN new tab content">
-              <nav class="ntp-topnav" aria-label="New tab navigation">
-                <div class="ntp-brand">
-                  <button class="ntp-launcher" type="button" aria-label="App launcher">
-                    <span class="ntp-missing-icon" aria-hidden="true" data-icon-missing="grid-20-regular"></span>
-                  </button>
-                  <img class="ntp-brand-logo" src="../assets/images/brand/msn.svg" alt="MSN">
-                </div>
+              <nav class="ntp-topnav" aria-label="MSN navigation">
+                <button class="ntp-launcher" type="button" aria-label="App launcher"><span class="ntp-missing-icon edge-icon-fallback" data-icon-missing="grid_dots" aria-hidden="true">A</span></button>
                 <div class="p2-header__controls" aria-label="MSN controls">
                   <label class="p2-header__toggle">
                     <span class="ntp-toggle-label">Copilot Discover (Preview)</span>
@@ -106,32 +125,35 @@
                 </div>
               </nav>
               <section class="ntp-hero" aria-label="Search and shortcuts">
-                <form class="ntp-search-slot" role="search">
-                  <span class="win-icon ntp-search-icon" data-icon="search" aria-hidden="true"></span>
-                  <input type="search" aria-label="Search the web" placeholder="Search the web">
-                  <button class="ntp-search-submit" type="submit" aria-label="Search">
-                    <span class="ntp-missing-icon ntp-missing-icon--mic" aria-hidden="true" data-icon-missing="mic-20-regular"></span>
-                  </button>
-                </form>
-                <div class="ntp-shortcuts" aria-label="Shortcuts">
-                  <button class="ntp-shortcut" type="button" aria-label="News"><span class="ntp-shortcut-icon" aria-hidden="true"></span><span class="ntp-shortcut-label">News</span></button>
-                  <button class="ntp-shortcut" type="button" aria-label="Weather"><span class="ntp-shortcut-icon" aria-hidden="true"></span><span class="ntp-shortcut-label">Weather</span></button>
-                  <button class="ntp-shortcut" type="button" aria-label="Money"><span class="ntp-shortcut-icon" aria-hidden="true"></span><span class="ntp-shortcut-label">Money</span></button>
-                  <button class="ntp-shortcut" type="button" aria-label="Sports"><span class="ntp-shortcut-icon" aria-hidden="true"></span><span class="ntp-shortcut-label">Sports</span></button>
-                  <button class="ntp-shortcut" type="button" aria-label="Shopping"><span class="ntp-shortcut-icon" aria-hidden="true"></span><span class="ntp-shortcut-label">Shopping</span></button>
-                  <button class="ntp-shortcut" type="button" aria-label="Discover"><span class="ntp-shortcut-icon" aria-hidden="true"></span><span class="ntp-shortcut-label">Discover</span></button>
-                  <button class="ntp-shortcut" type="button" aria-label="Widgets"><span class="ntp-shortcut-icon" aria-hidden="true"></span><span class="ntp-shortcut-label">Widgets</span></button>
-                  <button class="ntp-shortcut" type="button" aria-label="Search"><span class="ntp-shortcut-icon" aria-hidden="true"></span><span class="ntp-shortcut-label">Search</span></button>
-                  <button class="ntp-shortcut ntp-shortcut--add" type="button" aria-label="Add shortcut"><span class="ntp-shortcut-icon" aria-hidden="true"><span class="win-icon" data-icon="add"></span></span><span class="ntp-shortcut-label">Add</span></button>
+                <div class="ntp-search-shell">
+                  <form class="ntp-search-slot" role="search">
+                    <button class="ntp-search-submit" type="submit" aria-label="Search"><span class="edge-icon" data-icon="search24" aria-hidden="true"></span></button>
+                    <input type="search" aria-label="Ask Copilot" placeholder="Ask Copilot">
+                    <button class="ntp-search-submit" type="button" aria-label="Copilot"><img src="../assets/images/windows/taskbar/copilot.svg" width="24" height="24" alt="" aria-hidden="true"></button>
+                  </form>
                 </div>
+                <nav class="ntp-shortcuts" aria-label="Shortcuts">
+                  <button class="ntp-shortcut" type="button" aria-label="Office"><span class="ntp-shortcut-icon"><span class="ntp-shortcut-fallback">O</span></span><span class="ntp-shortcut-label">Office</span></button>
+                  <button class="ntp-shortcut" type="button" aria-label="Outlook"><span class="ntp-shortcut-icon"><img src="../assets/images/windows/taskbar/outlook.svg" alt="" aria-hidden="true"></span><span class="ntp-shortcut-label">Outlook</span></button>
+                  <button class="ntp-shortcut" type="button" aria-label="SharePoint"><span class="ntp-shortcut-icon"><span class="ntp-shortcut-fallback">S</span></span><span class="ntp-shortcut-label">SharePoint</span></button>
+                  <button class="ntp-shortcut" type="button" aria-label="OneNote"><span class="ntp-shortcut-icon"><span class="ntp-shortcut-fallback">N</span></span><span class="ntp-shortcut-label">OneNote</span></button>
+                  <button class="ntp-shortcut" type="button" aria-label="OneDrive"><span class="ntp-shortcut-icon"><span class="ntp-shortcut-fallback">D</span></span><span class="ntp-shortcut-label">OneDrive</span></button>
+                  <button class="ntp-shortcut" type="button" aria-label="PowerPoint"><span class="ntp-shortcut-icon"><span class="ntp-shortcut-fallback">P</span></span><span class="ntp-shortcut-label">PowerPoint</span></button>
+                  <button class="ntp-shortcut" type="button" aria-label="Excel"><span class="ntp-shortcut-icon"><span class="ntp-shortcut-fallback">X</span></span><span class="ntp-shortcut-label">Excel</span></button>
+                  <button class="ntp-shortcut" type="button" aria-label="Word"><span class="ntp-shortcut-icon"><span class="ntp-shortcut-fallback">W</span></span><span class="ntp-shortcut-label">Word</span></button>
+                  <button class="ntp-shortcut" type="button" aria-label="Power BI"><span class="ntp-shortcut-icon"><span class="ntp-shortcut-fallback">BI</span></span><span class="ntp-shortcut-label">Power BI</span></button>
+                  <button class="ntp-shortcut ntp-shortcut--add" type="button" aria-label="Add shortcut"><span class="ntp-shortcut-icon"><span class="edge-icon" data-icon="add24" aria-hidden="true"></span></span><span class="ntp-shortcut-label">Add</span></button>
+                </nav>
               </section>
               <section class="edge-section edge-widget-section" aria-labelledby="widget-heading">
                 <header class="edge-widget-header">
-                  <h1 class="edge-greeting" id="widget-heading">Good morning, Olivia</h1>
-                  <ul class="edge-chip-list" aria-label="Quick information">
-                    <li class="edge-chip"><span>F1 Belgian Grand Prix</span><strong>LIVE</strong></li>
-                    <li class="edge-chip"><span>MSFT +3.97%</span></li>
-                    <li class="edge-chip"><span>Seattle, WA 77°</span></li>
+                  <h1 class="edge-greeting" id="widget-heading">Good afternoon</h1>
+                  <ul class="edge-chip-list" aria-label="Topics">
+                    <li class="edge-chip">For you</li>
+                    <li class="edge-chip">News</li>
+                    <li class="edge-chip">Sports</li>
+                    <li class="edge-chip">Money</li>
+                    <li class="edge-chip">Weather</li>
                   </ul>
                 </header>
                 <div class="edge-widget-grid">
@@ -157,13 +179,42 @@
                       </ul>
                     </div>
                   </article>
-                  <article class="card u1 seg-widget seg-trend span-1" aria-label="Trending on Copilot">
-                    <button class="seg-more" type="button" aria-label="More options"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="12" r="1.75" fill="currentColor"></circle><circle cx="12" cy="12" r="1.75" fill="currentColor"></circle><circle cx="18" cy="12" r="1.75" fill="currentColor"></circle></svg></button>
-                    <div class="trd">
-                      <h2 class="trd-title">Trending on Copilot</h2>
-                      <div class="trd-stage">
-                        <div class="trd-img-area"><img class="trd-img" src="../assets/images/msn/widgets/trd-1.jpg" alt="" width="256" height="250" loading="lazy" onerror="this.style.visibility='hidden'"></div>
-                        <div class="trd-bubble-area"><p class="trd-bubble">How can I reduce plastic waste to take my trash out less often?</p></div>
+                  <article class="card u1 seg-widget seg-fin span-1" aria-label="Stock, Contoso Ltd">
+                    <button class="seg-more" type="button" aria-label="More options"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="12" r="1.75" fill="currentColor"/><circle cx="12" cy="12" r="1.75" fill="currentColor"/><circle cx="18" cy="12" r="1.75" fill="currentColor"/></svg></button>
+                    <div class="fin">
+                      <div class="fin-body">
+                        <div class="fin-title"><span class="fin-name">Contoso Ltd</span><span class="fin-tick">CNTS</span></div>
+                        <div class="fin-area">
+                          <div class="fin-price"><span class="fin-val">136.75</span><span class="fin-chg">+3.97%</span></div>
+                          <div class="stk-chart">
+                            <div class="stk-yaxis" aria-hidden="true">
+                              <span style="top:0">140</span><span style="top:34px">135</span><span style="top:68px">130</span><span style="top:102px">125</span><span style="top:136px">120</span>
+                            </div>
+                            <div class="stk-plot">
+                              <div class="stk-grid" aria-hidden="true"><i style="top:7px"></i><i style="top:41px"></i><i style="top:75px"></i><i style="top:109px"></i><i style="top:143px"></i></div>
+                              <div class="stk-graph">
+                                <svg class="stk-svg" viewBox="0 0 248.43 150" preserveAspectRatio="none" aria-hidden="true">
+                                  <defs>
+                                    <linearGradient id="edgeStkFill" x1="0" y1="0" x2="0" y2="1">
+                                      <stop offset="0" stop-color="#01712B" stop-opacity="0.30"/>
+                                      <stop offset="1" stop-color="#01712B" stop-opacity="0"/>
+                                    </linearGradient>
+                                  </defs>
+                                  <polygon class="stk-area" fill="url(#edgeStkFill)" points="2.5,123.9 6.0,118.6 8.0,109.0 11.2,109.0 12.8,96.2 14.8,91.0 18.0,94.6 19.6,93.0 21.2,85.0 25.2,96.6 29.2,106.2 33.6,97.0 36.8,82.6 39.6,79.4 42.4,69.4 46.8,67.4 48.4,81.0 55.2,71.8 61.6,65.0 63.6,56.2 73.6,45.8 74.8,70.2 78.0,75.4 79.2,85.0 84.4,81.8 88.8,62.2 90.4,66.6 93.6,64.2 96.8,71.8 99.2,76.2 102.4,98.6 108.0,98.6 115.2,73.8 123.6,56.2 128.0,69.4 132.8,61.0 139.2,81.0 142.8,83.4 146.4,91.0 149.6,81.0 157.6,65.0 162.0,67.8 163.6,75.4 169.2,44.6 173.6,59.8 175.2,77.4 179.6,83.4 183.2,71.0 185.2,56.2 187.2,46.6 190.0,50.6 193.6,49.0 196.0,27.0 200.0,24.2 204.1,18.9 208.4,31.0 216.8,87.0 220.8,93.0 223.6,107.4 227.2,107.4 228.4,117.0 230.4,115.4 234.0,87.8 244.1,36.1 244.1,129.5 2.5,129.5"/>
+                                  <polyline class="stk-line" points="2.5,123.9 6.0,118.6 8.0,109.0 11.2,109.0 12.8,96.2 14.8,91.0 18.0,94.6 19.6,93.0 21.2,85.0 25.2,96.6 29.2,106.2 33.6,97.0 36.8,82.6 39.6,79.4 42.4,69.4 46.8,67.4 48.4,81.0 55.2,71.8 61.6,65.0 63.6,56.2 73.6,45.8 74.8,70.2 78.0,75.4 79.2,85.0 84.4,81.8 88.8,62.2 90.4,66.6 93.6,64.2 96.8,71.8 99.2,76.2 102.4,98.6 108.0,98.6 115.2,73.8 123.6,56.2 128.0,69.4 132.8,61.0 139.2,81.0 142.8,83.4 146.4,91.0 149.6,81.0 157.6,65.0 162.0,67.8 163.6,75.4 169.2,44.6 173.6,59.8 175.2,77.4 179.6,83.4 183.2,71.0 185.2,56.2 187.2,46.6 190.0,50.6 193.6,49.0 196.0,27.0 200.0,24.2 204.1,18.9 208.4,31.0 216.8,87.0 220.8,93.0 223.6,107.4 227.2,107.4 228.4,117.0 230.4,115.4 234.0,87.8 244.1,36.1"/>
+                                </svg>
+                                <div class="stk-base" aria-hidden="true"></div>
+                                <div class="stk-dot" aria-hidden="true"></div>
+                                <div class="stk-badge"><span>128.35</span></div>
+                              </div>
+                              <div class="stk-xaxis" aria-hidden="true">
+                                <div class="stk-xcol"><i class="stk-tick"></i><span>10:00 am</span></div>
+                                <div class="stk-xcol"><i class="stk-tick"></i><span>12:00 pm</span></div>
+                                <div class="stk-xcol"><i class="stk-tick"></i><span>2:00 pm</span></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </article>

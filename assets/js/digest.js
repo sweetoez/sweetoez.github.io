@@ -24,7 +24,7 @@
     return element;
   }
 
-  function createSlide(story, index, titleTag) {
+  function createSlide(index) {
     const slide = document.createElement("div");
     slide.className = "digest-slide";
     slide.setAttribute("role", "group");
@@ -41,9 +41,13 @@
     image.setAttribute("aria-hidden", "true");
     image.onerror = () => { image.hidden = true; };
     media.append(image);
+    slide.append(media);
+    return slide;
+  }
 
+  function createCaption(story, titleTag) {
     const content = document.createElement("div");
-    content.className = "digest-slide-content";
+    content.className = "digest-caption";
     const publisher = document.createElement("div");
     publisher.className = "digest-publisher";
     publisher.append(
@@ -54,8 +58,7 @@
     publisher.firstElementChild.setAttribute("aria-hidden", "true");
     const title = makeText(titleTag, "digest-title", story.title);
     content.append(publisher, title);
-    slide.append(media, content);
-    return slide;
+    return content;
   }
 
   function makePaddle(template, direction, label) {
@@ -78,8 +81,22 @@
     slides.className = "digest-track__slides";
     const track = document.createElement("div");
     track.className = "digest-track";
-    stories.forEach((story, index) => slides.append(createSlide(story, index, titleTag)));
+    stories.forEach((story, index) => slides.append(createSlide(index)));
+    const slideNodes = [...slides.children];
+    const cloneSlide = (slide) => {
+      const clone = slide.cloneNode(true);
+      clone.setAttribute("aria-hidden", "true");
+      clone.inert = true;
+      const image = clone.querySelector(".digest-slide-image");
+      image.onerror = () => { image.hidden = true; };
+      return clone;
+    };
+    slides.prepend(cloneSlide(slideNodes[slideNodes.length - 1]));
+    slides.append(cloneSlide(slideNodes[0]));
     track.append(slides);
+    const caption = createCaption(stories[0], titleTag);
+    const publisher = caption.querySelector(".digest-publisher");
+    const title = caption.querySelector(".digest-title");
 
     const pagination = document.createElement("div");
     pagination.className = "digest-pagination";
@@ -99,19 +116,37 @@
     controls.className = "digest-controls";
     const transport = document.createElement("div");
     transport.className = "digest-transport";
-    transport.append(makePaddle(previousTemplate, -1, "Previous story"));
-    transport.append(makePaddle(nextTemplate, 1, "Next story"));
+    const previous = makePaddle(previousTemplate, -1, "Previous story");
+    const next = makePaddle(nextTemplate, 1, "Next story");
+    const autoplayToggle = digest.closest(".edge-page")
+      ? document.createElement("button")
+      : null;
+    if (autoplayToggle) {
+      autoplayToggle.type = "button";
+      autoplayToggle.className = "digest-autoplay-toggle";
+      autoplayToggle.setAttribute("aria-label", "Pause stories");
+      autoplayToggle.setAttribute("aria-pressed", "false");
+      const autoplayIcon = document.createElement("img");
+      autoplayIcon.alt = "";
+      autoplayIcon.setAttribute("aria-hidden", "true");
+      autoplayToggle.append(autoplayIcon);
+      transport.append(previous, next, autoplayToggle);
+    } else {
+      transport.append(previous, next);
+    }
     controls.append(pagination, transport);
 
     digest.classList.add("digest--carousel");
     digest.setAttribute("role", "region");
     digest.setAttribute("aria-roledescription", "carousel");
     digest.setAttribute("aria-label", "Top stories");
-    digest.replaceChildren(track, controls);
+    digest.replaceChildren(track, caption, controls);
 
-    const slideNodes = [...slides.children];
     let activeStory = 0;
+    let trackPosition = 1;
+    let hasRenderedCaption = false;
     const automaticPauses = document.hidden ? new Set(["visibility"]) : new Set();
+    let manuallyPaused = false;
     let remaining = dwell;
     let startedAt = 0;
     let frame = 0;
@@ -124,6 +159,16 @@
       digest.setAttribute("aria-live", isPaused() ? "polite" : "off");
     }
 
+    function renderAutoplayToggle() {
+      if (!autoplayToggle) return;
+      autoplayToggle.disabled = reducedMotion.matches;
+      autoplayToggle.setAttribute("aria-label", manuallyPaused ? "Play stories" : "Pause stories");
+      autoplayToggle.setAttribute("aria-pressed", String(manuallyPaused));
+      autoplayToggle.querySelector("img").src = manuallyPaused
+        ? "../assets/icons/ic_fluent_play_24_filled.svg"
+        : "../assets/icons/ic_fluent_pause_32_filled.svg";
+    }
+
     function renderProgress(progress) {
       bars.forEach((bar, index) => {
         const active = index === activeStory;
@@ -134,15 +179,50 @@
       });
     }
 
-    function renderStory() {
-      slides.style.transform = `translateX(-${activeStory * 100}%)`;
+    function renderCaption() {
+      caption.classList.remove("is-changing");
+      publisher.children[0].textContent = stories[activeStory].monogram;
+      publisher.children[1].textContent = stories[activeStory].publisher;
+      title.textContent = stories[activeStory].title;
+      if (hasRenderedCaption && !reducedMotion.matches) {
+        void caption.offsetWidth;
+        caption.classList.add("is-changing");
+      }
+      hasRenderedCaption = true;
+    }
+
+    function positionForStory(nextStory, direction) {
+      if (!reducedMotion.matches && direction > 0 && activeStory === stories.length - 1 && nextStory === 0) {
+        return stories.length + 1;
+      }
+      if (!reducedMotion.matches && direction < 0 && activeStory === 0 && nextStory === stories.length - 1) {
+        return 0;
+      }
+      return nextStory + 1;
+    }
+
+    function renderStory(position = activeStory + 1) {
+      trackPosition = position;
+      slides.style.transform = `translateX(-${position * 100}%)`;
       slideNodes.forEach((slide, index) => {
         const active = index === activeStory;
         slide.setAttribute("aria-hidden", String(!active));
         slide.inert = !active;
       });
+      renderCaption();
       renderProgress(reducedMotion.matches ? 1 : 0);
     }
+
+    slides.addEventListener("transitionend", (event) => {
+      if (event.target !== slides || event.propertyName !== "transform") return;
+      if (trackPosition !== 0 && trackPosition !== stories.length + 1) return;
+
+      trackPosition = trackPosition === 0 ? stories.length : 1;
+      slides.classList.add("is-instant");
+      slides.style.transform = `translateX(-${trackPosition * 100}%)`;
+      void slides.offsetWidth;
+      slides.classList.remove("is-instant");
+    });
 
     function pauseClock() {
       if (frame) cancelAnimationFrame(frame);
@@ -166,10 +246,12 @@
 
         const elapsed = now - startedAt;
         if (elapsed >= remaining) {
-          activeStory = (activeStory + 1) % stories.length;
+          const nextStory = (activeStory + 1) % stories.length;
+          const position = positionForStory(nextStory, 1);
+          activeStory = nextStory;
           remaining = dwell;
           startedAt = now;
-          renderStory();
+          renderStory(position);
         } else {
           renderProgress(1 - (remaining - elapsed) / dwell);
         }
@@ -189,24 +271,39 @@
       renderLiveState();
     }
 
-    function goToStory(index) {
+    function goToStory(index, direction = 0) {
       pauseClock();
-      activeStory = (index + stories.length) % stories.length;
+      const nextStory = (index + stories.length) % stories.length;
+      const position = positionForStory(nextStory, direction);
+      activeStory = nextStory;
       remaining = dwell;
-      renderStory();
+      renderStory(position);
       startClock();
     }
 
     transport.querySelectorAll("[data-digest-nav]").forEach((button) => {
       button.addEventListener("click", () => {
-        goToStory(activeStory + Number(button.dataset.digestNav));
+        const direction = Number(button.dataset.digestNav);
+        goToStory(activeStory + direction, direction);
       });
+    });
+    autoplayToggle?.addEventListener("click", () => {
+      manuallyPaused = !manuallyPaused;
+      if (!manuallyPaused) {
+        automaticPauses.delete("pointer");
+        automaticPauses.delete("focus");
+      }
+      if (isPaused()) pauseClock();
+      else startClock();
+      renderAutoplayToggle();
+      renderLiveState();
     });
     bars.forEach((bar, index) => bar.addEventListener("click", () => goToStory(index)));
     digest.addEventListener("keydown", (event) => {
       if (event.key === "ArrowLeft" || event.key === "ArrowRight") {
         event.preventDefault();
-        goToStory(activeStory + (event.key === "ArrowRight" ? 1 : -1));
+        const direction = event.key === "ArrowRight" ? 1 : -1;
+        goToStory(activeStory + direction, direction);
       }
     });
 
@@ -227,6 +324,7 @@
         renderProgress(1 - remaining / dwell);
         startClock();
       }
+      renderAutoplayToggle();
       renderLiveState();
     });
 
@@ -239,6 +337,7 @@
     }
 
     renderStory();
+    renderAutoplayToggle();
     renderLiveState();
     startClock();
   }

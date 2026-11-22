@@ -1,16 +1,28 @@
 .edge-ntp-app {
   position: relative;
+  display: flex;
   height: 100vh;
   min-height: 0;
+  flex-direction: column;
   padding: 20px;
   overflow: hidden;
   background: #1B1B1B;
   color: #FFFFFF;
 }
 
+.edge-ntp-app[data-full-screen="true"] {
+  padding: 0;
+}
+
+.shell-controls[aria-label="Demo controls"] {
+  flex: none;
+}
+
 .edge-stage-viewport {
   position: relative;
   width: 100%;
+  min-height: 0;
+  flex: none;
   margin: 0 auto;
   overflow: hidden;
 }
@@ -18,16 +30,17 @@
 .edge-stage-fit {
   top: 0;
   left: 50%;
-  width: 2222px;
-  height: 1302px;
+  /* STAND-IN: the desktop is at least 1920px and grows 48px past the window. */
+  width: var(--edge-desktop-width, 1920px);
+  height: 1200px;
   border-radius: 8px;
   transform: translateX(-50%) scale(1);
   transform-origin: top center;
 }
 
 .edge-desktop {
-  width: 2222px;
-  height: 1302px;
+  width: var(--edge-desktop-width, 1920px);
+  height: 1200px;
   border-radius: 8px;
 }
 
@@ -36,44 +49,22 @@
 }
 
 .edge-window {
-  top: 40px;
-  height: 1214px;
+  top: 0;
+  height: 1152px;
   box-shadow: 0 32px 64px rgba(0, 0, 0, .28), 0 2px 21px rgba(0, 0, 0, .22);
   transition: width var(--fluent-dur-normal) var(--fluent-ease);
 }
 
-.edge-chrome-row {
-  height: 40px;
-  flex-basis: 40px;
-}
-
-.edge-active-tab,
-.edge-favorite {
-  color: #242424;
-}
-
-.edge-address {
-  height: 32px;
-  border-color: rgba(0, 0, 0, .06);
-  background: #FFFFFF;
-  color: #616161;
-}
-
-.edge-profile-dot {
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background: #D3D3D3;
-}
-
 .edge-page.edge-content {
   width: calc(100% - 8px);
-  height: 1094px;
-  flex: 0 0 1094px;
+  height: auto;
+  min-height: 0;
+  flex: 1 1 0;
   margin: 0 4px;
   overflow-x: hidden;
   overflow-y: auto;
-  background: #F8F4F1;
+  /* STAND-IN: page surfaces match the assumed Windows panel surface. */
+  background: var(--edge-page-surface);
   color: #272320;
   container-name: edge-page stage;
   container-type: inline-size;
@@ -81,290 +72,40 @@
   scrollbar-width: thin;
 }
 
-.ntp-topnav {
-  display: flex;
-  width: 100%;
-  height: 80px;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 24px;
-  background: transparent;
-}
-
-.ntp-brand {
-  display: flex;
-  min-width: 56px;
-  align-items: center;
-  gap: 8px;
-}
-
-.ntp-launcher {
-  display: flex;
-  width: 32px;
-  height: 32px;
-  flex: none;
-  align-items: center;
-  justify-content: center;
-  padding: 0;
-  border: 0;
-  border-radius: 8px;
-  background: transparent;
-  color: #272320;
-}
-
-.ntp-missing-icon {
-  display: block;
-  width: 20px;
-  height: 20px;
-}
-
-.ntp-brand-logo {
-  display: block;
-  width: 24px;
-  height: 24px;
-  flex: none;
-  object-fit: contain;
-}
-
-.ntp-topnav .p2-header__controls {
-  display: flex;
-  min-width: 0;
-  align-items: center;
-  gap: 8px;
-}
-
-.ntp-topnav .p2-header__toggle {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  color: #272320;
-  font-size: 14px;
-  font-weight: 410;
-  line-height: 20px;
-  white-space: nowrap;
-}
-
-.ntp-topnav .p2-header__button,
-.ntp-topnav .p2-header__profile {
-  display: flex;
-  width: 40px;
-  min-width: 40px;
-  height: 40px;
-  flex: none;
-  align-items: center;
-  justify-content: center;
-  padding: 0;
-  border: 0;
-  border-radius: 12px;
-  background: transparent;
-  color: #272320;
-}
-
-.ntp-topnav .p2-header__button .win-icon {
-  width: 24px;
-  height: 24px;
-}
-
-.ntp-topnav .p2-header__avatar {
-  position: relative;
-  display: flex;
-  width: 24px;
-  height: 24px;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  border: 1px solid rgba(0, 0, 0, .08);
-  border-radius: 50%;
-  background: #D3D3D3;
-  color: #272320;
-  font-size: 9px;
-  line-height: 1;
-}
-
-.ntp-topnav .p2-header__avatar img {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.ntp-topnav .p2-header__toggle input:focus-visible,
-.ntp-topnav button:focus-visible,
-.ntp-search-slot input:focus-visible,
-.ntp-search-submit:focus-visible,
-.ntp-shortcut:focus-visible {
-  outline: 2px solid #0F6CBD;
-  outline-offset: 2px;
-}
-
-.ntp-topnav button:hover:not(:disabled) {
-  background: rgba(0, 0, 0, .04);
-}
-
-.ntp-topnav button:active:not(:disabled) {
-  background: rgba(0, 0, 0, .08);
-  transform: scale(.98);
-}
-
-.ntp-topnav button:disabled,
-.ntp-search-submit:disabled,
-.ntp-shortcut:disabled {
-  cursor: not-allowed;
-  opacity: .4;
-}
-
-.ntp-hero {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 24px;
-  padding-top: 24px;
-}
-
-.ntp-search-slot {
-  display: flex;
-  width: 716px;
-  max-width: calc(100% - 48px);
-  height: 48px;
-  align-items: center;
-  gap: 12px;
-  padding: 0 8px 0 16px;
-  border: 1px solid rgba(0, 0, 0, .08);
-  border-radius: 32px;
-  background: #FFFFFF;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, .06);
-}
-
-.ntp-search-slot:focus-within {
-  border-color: #0F6CBD;
-}
-
-.ntp-search-icon {
-  display: inline-flex;
-  width: 20px;
-  height: 20px;
-  flex: none;
-  align-items: center;
-  justify-content: center;
-  color: #272320;
-}
-
-.ntp-search-slot input {
-  width: 100%;
-  min-width: 0;
-  height: 100%;
-  flex: 1;
-  padding: 0;
-  border: 0;
-  outline: 0;
-  background: transparent;
-  color: #272320;
-  font: 400 16px/22px var(--font-body);
-}
-
-.ntp-search-slot input::placeholder {
-  color: rgba(0, 0, 0, .6);
-  opacity: 1;
-}
-
-.ntp-search-submit {
-  display: flex;
-  width: 32px;
-  height: 32px;
-  flex: none;
-  align-items: center;
-  justify-content: center;
-  padding: 0;
-  border: 0;
-  border-radius: 50%;
-  background: #F3F3F3;
-  color: #272320;
-}
-
-.ntp-search-submit:hover:not(:disabled) {
-  background: #EAEAEA;
-}
-
-.ntp-search-submit:active:not(:disabled) {
-  background: #DADADA;
-  transform: scale(.98);
-}
-
-.ntp-missing-icon--mic {
-  width: 20px;
-  height: 20px;
-}
-
-.ntp-shortcuts {
-  display: flex;
-  width: calc(100% - 48px);
-  max-width: 1000px;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 8px;
-}
-
-.ntp-shortcut {
-  display: flex;
-  width: 80px;
-  height: 72px;
-  flex: 0 0 80px;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
-  padding: 0;
-  border: 0;
-  border-radius: 8px;
-  background: transparent;
-  color: #272320;
-  cursor: pointer;
-}
-
-.ntp-shortcut-icon {
-  display: flex;
-  width: 48px;
-  height: 48px;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid rgba(0, 0, 0, .08);
-  border-radius: 12px;
-  background: rgba(255, 255, 255, .7);
-}
-
-.ntp-shortcut-label {
-  max-width: 80px;
-  overflow: hidden;
-  color: #272320;
-  font-size: 12px;
-  font-weight: 650;
-  line-height: 16px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.ntp-shortcut:hover:not(:disabled) {
-  background: rgba(0, 0, 0, .04);
-}
-
-.ntp-shortcut:active:not(:disabled) {
-  background: rgba(0, 0, 0, .08);
-  transform: scale(.98);
-}
-
-.ntp-shortcut--add .win-icon {
-  width: 20px;
-  height: 20px;
-}
-
 .edge-taskbar {
   top: auto;
   bottom: 0;
+  left: 0;
   width: 100%;
 }
 
 .edge-taskbar .win-taskbar__button {
   display: block;
+}
+
+.edge-full-screen-link {
+  min-height: 32px;
+  padding: 5px 12px;
+  border: 1px solid #D9D9D5;
+  border-radius: 999px;
+  background: #FFFFFF;
+  color: #272320;
+  font-size: 13px;
+  line-height: 20px;
+  text-decoration: none;
+}
+
+.edge-full-screen-link:focus-visible {
+  outline: 2px solid #0F6CBD;
+  outline-offset: 2px;
+}
+
+.edge-ntp-app[data-full-screen="true"] .shell-controls {
+  display: none;
+}
+
+.edge-ntp-app[data-full-screen="true"] .edge-stage-viewport {
+  height: 100%;
 }
 
 .edge-shorts-grid {
@@ -514,7 +255,8 @@
 }
 
 .edge-widget-section {
-  padding-top: 32px;
+  /* STAND-IN: vertical separation from shortcuts. */
+  padding-top: 40px;
 }
 
 .edge-widget-header {
@@ -537,6 +279,9 @@
 }
 
 .edge-greeting {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 26px;
   white-space: nowrap;
 }
 
@@ -552,11 +297,12 @@
 
 .edge-chip {
   display: flex;
-  min-height: 36px;
+  /* STAND-IN: topic chips use the handoff's 32px pill treatment. */
+  min-height: 32px;
   align-items: center;
   gap: 4px;
-  padding: 8px;
-  border-radius: 12px;
+  padding: 0 12px;
+  border-radius: 16px;
   background: rgba(255, 255, 255, .8);
   box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .1);
   color: #272320;
@@ -592,6 +338,11 @@
 
 .edge-widget-grid > .digest {
   grid-column: span 1;
+}
+
+.edge-widget-grid > .seg-sports,
+.edge-widget-grid > .seg-fin {
+  display: none;
 }
 
 .edge-card-section {
@@ -637,88 +388,15 @@ html[data-theme="dark"] .edge-chip strong {
   color: #E5EBFA;
 }
 
-html[data-theme="dark"] .ntp-launcher,
-html[data-theme="dark"] .ntp-topnav .p2-header__toggle,
-html[data-theme="dark"] .ntp-topnav .p2-header__button,
-html[data-theme="dark"] .ntp-topnav .p2-header__profile,
-html[data-theme="dark"] .ntp-search-icon,
-html[data-theme="dark"] .ntp-shortcut {
+html[data-theme="dark"] .edge-page.edge-content .digest--carousel .digest-caption .digest-title {
   color: #E5EBFA;
 }
 
-html[data-theme="dark"] .ntp-topnav .p2-header__avatar {
-  border-color: rgba(255, 255, 255, .1);
-  background: #3A3A3A;
-  color: #E5EBFA;
-}
-
-html[data-theme="dark"] .ntp-search-slot {
-  border-color: rgba(255, 255, 255, .1);
-  background: rgba(255, 255, 255, .06);
-  box-shadow: none;
-}
-
-html[data-theme="dark"] .ntp-search-slot input {
-  color: #E5EBFA;
-}
-
-html[data-theme="dark"] .ntp-search-slot input::placeholder {
-  color: rgba(255, 255, 255, .7);
-}
-
-html[data-theme="dark"] .ntp-search-submit {
-  background: rgba(255, 255, 255, .1);
-  color: #E5EBFA;
-}
-
-html[data-theme="dark"] .ntp-shortcut-icon {
-  border-color: rgba(255, 255, 255, .08);
-  background: rgba(50, 63, 96, .65);
-}
-
-html[data-theme="dark"] .edge-tab-row,
-html[data-theme="dark"] .edge-toolbar,
-html[data-theme="dark"] .edge-favorites {
-  background: #202020;
-}
-
-html[data-theme="dark"] .edge-active-tab,
-html[data-theme="dark"] .edge-favorite {
-  color: rgba(255, 255, 255, .786);
-}
-
-html[data-theme="dark"] .edge-active-tab {
-  background: #202020;
-}
-
-html[data-theme="dark"] .edge-address {
-  border-color: rgba(255, 255, 255, .08);
-  background: rgba(255, 255, 255, .06);
-  color: rgba(255, 255, 255, .786);
-}
-
-html[data-theme="dark"] .edge-chrome-row button:hover:not(:disabled) {
-  background: rgba(255, 255, 255, .06);
-}
-
-html[data-theme="dark"] .edge-chrome-row button:active:not(:disabled) {
-  background: rgba(255, 255, 255, .1);
-}
-
-html[data-theme="dark"] .edge-chrome-row button img {
-  filter: brightness(0) invert(1);
-}
-
-html[data-theme="dark"] .ntp-shortcut-label {
-  color: #E5EBFA;
-}
-
-html[data-theme="dark"] .ntp-topnav button:hover:not(:disabled) {
-  background: rgba(255, 255, 255, .06);
-}
-
-html[data-theme="dark"] .ntp-topnav button:active:not(:disabled) {
-  background: rgba(255, 255, 255, .1);
+html[data-theme="dark"] .edge-page.edge-content .digest-2u-paddles button,
+html[data-theme="dark"] .edge-page.edge-content .digest-1u-paddles button,
+html[data-theme="dark"] .edge-page.edge-content .digest--carousel .digest-transport button {
+  background: #FFFFFF;
+  color: #272320;
 }
 
 html[data-theme="dark"] .edge-taskbar {
@@ -736,22 +414,6 @@ html[data-theme="dark"] .feeds-button:hover:not(:disabled) {
 }
 
 @container edge-page (max-width: 655px) {
-  .ntp-toggle-label {
-    display: none;
-  }
-
-  .ntp-shortcut:nth-child(8) {
-    display: none;
-  }
-
-  .ntp-shortcuts {
-    display: grid;
-    width: calc(100% - 48px);
-    max-width: 352px;
-    grid-template-columns: repeat(4, 80px);
-    gap: 16px 8px;
-  }
-
   .edge-card-grid > .edge-feed-article[data-feed-article="5"],
   .edge-card-grid > .edge-feed-article[data-feed-article="6"] {
     display: none;
@@ -768,10 +430,6 @@ html[data-theme="dark"] .feeds-button:hover:not(:disabled) {
 }
 
 @container edge-page (min-width: 656px) and (max-width: 971px) {
-  .ntp-shortcut:nth-child(8) {
-    display: none;
-  }
-
   .edge-shorts-grid {
     max-width: 736px;
     grid-auto-columns: calc((100% - 16px) / 2);
@@ -843,8 +501,8 @@ html[data-theme="dark"] .feeds-button:hover:not(:disabled) {
     grid-column: span 2;
   }
 
-  .edge-widget-grid > .seg-trend {
-    display: none;
+  .edge-widget-grid > .seg-sports {
+    display: flex;
   }
 
   .edge-shorts-grid {
@@ -876,7 +534,7 @@ html[data-theme="dark"] .feeds-button:hover:not(:disabled) {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
-  .edge-widget-grid > .seg-trend {
+  .edge-widget-grid > .seg-fin {
     display: flex;
   }
 

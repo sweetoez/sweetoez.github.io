@@ -619,6 +619,8 @@ output {
   transition: transform var(--fluent-dur-slower) var(--fluent-ease);
 }
 
+.demo .digest--carousel .digest-track__slides.is-instant { transition: none; }
+
 .demo .digest--carousel .digest-slide {
   position: relative;
   display: flex;
@@ -631,10 +633,11 @@ output {
 
 .demo .digest--carousel .digest-slide-media {
   position: relative;
-  width: 100%;
+  width: calc(100% + 1px);
   flex: none;
   aspect-ratio: 312 / 172;
   overflow: hidden;
+  margin-right: -1px;
   border-radius: var(--dg-1u-img-radius);
   background: #D3D3D3;
 }
@@ -646,7 +649,7 @@ output {
   object-fit: cover;
 }
 
-.demo .digest--carousel .digest-slide-content {
+.demo .digest--carousel .digest-caption {
   display: flex;
   min-height: 0;
   flex: none;
@@ -655,13 +658,22 @@ output {
   color: #242424;
 }
 
-.demo .digest--carousel .digest-slide-content .digest-publisher {
+.demo .digest--carousel .digest-caption .digest-publisher {
   color: var(--dg-1u-meta);
 }
 
-.demo .digest--carousel .digest-slide-content .digest-title {
+.demo .digest--carousel .digest-caption .digest-title {
   margin-top: 4px;
   color: #242424;
+}
+
+@keyframes digest-caption-appear {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.demo .digest--carousel .digest-caption.is-changing {
+  animation: digest-caption-appear var(--fluent-dur-normal) var(--fluent-ease);
 }
 
 .demo .digest--carousel .digest-controls {
@@ -739,6 +751,17 @@ output {
   color: var(--dg-icon);
 }
 
+.demo .digest--carousel .digest-transport .digest-autoplay-toggle img {
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+
+.demo .digest--carousel .digest-transport .digest-autoplay-toggle:disabled {
+  cursor: not-allowed;
+  opacity: .5;
+}
+
 .demo .digest--carousel .digest-transport button:focus-visible {
   outline: 2px solid #272320;
   outline-offset: 2px;
@@ -749,6 +772,9 @@ output {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .demo .digest--carousel .digest-track__slides { transition: none; }
+  .demo .digest--carousel .digest-caption.is-changing { animation: none; }
+
   .demo .digest--carousel .digest-bar::after {
     transform: scaleX(0);
   }
@@ -800,9 +826,10 @@ output {
 
   .demo .digest--carousel .digest-slide-media {
     position: absolute;
-    inset: 0;
+    inset: 0 -1px 0 0;
     width: auto;
     height: auto;
+    margin: 0;
     min-height: 100%;
     aspect-ratio: auto;
     border-radius: 0;
@@ -819,26 +846,26 @@ output {
     background: none;
   }
 
-  .demo .digest--carousel .digest-slide-content {
-    position: relative;
+  .demo .digest--carousel .digest-caption {
+    position: absolute;
+    inset: 0 128px 52px 20px;
     z-index: 1;
-    flex: 1;
     justify-content: flex-end;
-    padding: 18px 128px 52px 20px;
+    padding: 18px 0 0;
     color: #FFFFFF;
   }
 
-  .demo .digest--carousel .digest-slide-content .digest-publisher,
-  .demo .digest--carousel .digest-slide-content .digest-title {
+  .demo .digest--carousel .digest-caption .digest-publisher,
+  .demo .digest--carousel .digest-caption .digest-title {
     color: #FFFFFF;
   }
 
-  .demo .digest--carousel .digest-slide-content .digest-monogram {
+  .demo .digest--carousel .digest-caption .digest-monogram {
     background: rgba(255, 255, 255, .20);
     color: #FFFFFF;
   }
 
-  .demo .digest--carousel .digest-slide-content .digest-title {
+  .demo .digest--carousel .digest-caption .digest-title {
     margin-top: 0;
   }
 

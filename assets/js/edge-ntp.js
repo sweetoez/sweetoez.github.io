@@ -2,6 +2,7 @@ const app = document.querySelector(".edge-ntp-app");
 const controls = document.querySelector(".shell-controls");
 const stageViewport = document.querySelector(".edge-stage-viewport");
 const stageFit = document.querySelector(".edge-stage-fit");
+const desktop = document.querySelector(".edge-desktop");
 const edgeWindow = document.querySelector(".edge-window");
 const widthSlider = document.querySelector("#edge-width");
 const widthReadout = document.querySelector("#edge-width-readout");
@@ -13,6 +14,19 @@ const moreFeedGrid = document.querySelector("#edge-feed-grid-more");
 const articleTemplate = document.querySelector("#edge-article-template");
 const adTemplate = document.querySelector("#edge-ad-template");
 const iconPaths = {
+  globe16: "../assets/icons/globe_16_regular.svg",
+  dismiss12: "../assets/icons/dismiss_12_regular.svg",
+  add16: "../assets/icons/ic_fluent_add_16_regular.svg",
+  minimize16: "../assets/icons/subtract_16_regular.svg",
+  maximize16: "../assets/icons/square_16_regular.svg",
+  dismiss16: "../assets/icons/dismiss_16_regular.svg",
+  back20: "../assets/icons/arrow_left_20_regular.svg",
+  refresh16: "../assets/icons/arrow_clockwise_16_regular.svg",
+  search16: "../assets/icons/ic_fluent_search_16_regular.svg",
+  star20: "../assets/icons/star_20_regular.svg",
+  more20: "../assets/icons/more_horizontal_20_regular.svg",
+  search24: "../assets/icons/ic_fluent_search_20_regular.svg",
+  add24: "../assets/icons/ic_fluent_add_24_regular.svg",
   search: "../assets/icons/ic_fluent_search_20_regular.svg",
   refresh: "../assets/icons/ic_fluent_arrow_clockwise_24_regular.svg",
   notifications: "../assets/icons/ic_fluent_alert_24_regular.svg",
@@ -24,6 +38,7 @@ const iconPaths = {
 const widthStorageKey = "edge-ntp-width";
 const themeStorageKey = "edge-ntp-theme";
 const iconCache = new Map();
+const isFullScreen = new URLSearchParams(location.search).get("full") === "1";
 const headlines = [
   "Five pantry staples that last longer than you think",
   "A beginner's guide to tidy home networks",
@@ -76,12 +91,18 @@ function applyTheme() {
 }
 
 function updateDesktopScale() {
+  const desktopWidth = Math.max(1920, width + 48);
+  stageFit.style.width = `${desktopWidth}px`;
+  desktop.style.width = `${desktopWidth}px`;
+  const availableHeight = isFullScreen
+    ? window.innerHeight
+    : Math.max(0, window.innerHeight - controls.getBoundingClientRect().height - 72);
   const scale = Math.min(
     1,
-    stageViewport.clientWidth / 2222,
-    Math.max(0, window.innerHeight - controls.getBoundingClientRect().height - 72) / 1302,
+    stageViewport.clientWidth / desktopWidth,
+    availableHeight / 1200,
   );
-  stageViewport.style.height = `${1302 * scale}px`;
+  stageViewport.style.height = `${1200 * scale}px`;
   stageFit.style.transform = `translateX(-50%) scale(${scale})`;
 }
 
@@ -190,9 +211,9 @@ document.querySelector(".feeds-button").addEventListener("click", () => {
 });
 
 window.addEventListener("resize", updateDesktopScale);
-new ResizeObserver(updateDesktopScale).observe(app);
 populateFeed(feedGrid, headlines);
 populateFeed(moreFeedGrid, moreHeadlines);
+app.dataset.fullScreen = String(isFullScreen);
 applyTheme();
 applyWidth();
 hydrateIcons();
