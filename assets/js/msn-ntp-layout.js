@@ -139,30 +139,41 @@ document.querySelector(".feeds-button").addEventListener("click", () => {
   window.scrollTo({ top, behavior });
 });
 
-document.querySelectorAll(".card-section[data-headlines]").forEach((section) => {
+let articleIndex = 5;
+let adIndex = 0;
+const articles = window.MSN_CONTENT.articles;
+const ads = window.MSN_CONTENT.ads;
+
+document.querySelectorAll(".card-section[data-articles]").forEach((section) => {
   const grid = section.querySelector(".card-grid");
-  const headlines = section.dataset.headlines.split("|");
   const count = Number(section.dataset.articles);
   section.querySelector(".section-title").textContent = section.dataset.title;
   let pairCount = 0;
 
   for (let index = 0; index < count; index += 1) {
+    const story = articles[articleIndex % articles.length];
     const article = document.createElement("msn-card");
     article.setAttribute("variant", "article");
-    article.setAttribute("title", headlines[index % headlines.length]);
-    article.setAttribute("publisher", "Quantis");
+    article.setAttribute("title", story.title);
+    article.setAttribute("publisher", story.publisher);
     article.setAttribute("time", "1d");
-    article.setAttribute("image", "../assets/images/msn/digest/digest-1.jpg");
+    article.setAttribute("image", story.image);
+    article.setAttribute("image-alt", story.alt);
     grid.insertBefore(article, grid.querySelector(".column-overlay"));
     pairCount += 1;
+    articleIndex += 1;
 
     if (pairCount === 2) {
+      const adContent = ads[adIndex % ads.length];
       const ad = document.createElement("msn-card");
       ad.setAttribute("variant", "ad");
-      ad.setAttribute("title", "Switch plans in seconds. Northwind Mobile gives you coverage that moves with you, wherever you go.");
-      ad.setAttribute("publisher", "Northwind Mobile");
+      ad.setAttribute("title", adContent.headline);
+      ad.setAttribute("publisher", adContent.advertiser);
+      ad.setAttribute("image", adContent.image);
+      ad.setAttribute("image-alt", adContent.alt);
       grid.insertBefore(ad, grid.querySelector(".column-overlay"));
       pairCount = 0;
+      adIndex += 1;
     }
   }
 

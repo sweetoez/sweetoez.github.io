@@ -1222,6 +1222,22 @@ html:is([data-theme="dark"], [data-theme="dark-navy"]) .win-panel__rail-label {
   background: #D3D3D3;
 }
 
+.digest-slide-media > img {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.digest-slide-media::after {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 38%, rgba(0, 0, 0, .68) 100%);
+  content: "";
+  pointer-events: none;
+}
 
 .demo .digest--carousel .digest-caption {
   display: flex;

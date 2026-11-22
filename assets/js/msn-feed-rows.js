@@ -22,6 +22,9 @@ document.querySelectorAll(".card-grid, .edge-card-grid").forEach((grid) => {
     for (let index = 0; index < needed; index += 1) {
       const card = cards[index % cards.length].cloneNode(true);
       card.setAttribute("data-feed-row-fill", "");
+      card.setAttribute("aria-hidden", "true");
+      card.inert = true;
+      card.style.visibility = "hidden";
       grid.insertBefore(card, overlay);
     }
   }

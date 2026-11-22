@@ -1,11 +1,8 @@
 (() => {
-  const stories = [
-    { publisher: "Trailhead", monogram: "T", title: "Five quiet trails worth the early alarm this weekend" },
-    { publisher: "Tide Report", monogram: "R", title: "Why coastal towns are redesigning their seawalls" },
-    { publisher: "Night Market", monogram: "N", title: "The late-night food scene rewriting city maps" },
-    { publisher: "Field Notes", monogram: "F", title: "What a year of rooftop gardens taught one city block" },
-    { publisher: "Open Studio", monogram: "O", title: "Inside the small workshops reviving hand-set type" },
-  ];
+  const stories = window.MSN_CONTENT?.digest;
+  if (!Array.isArray(stories) || stories.length !== 5) {
+    throw new Error("The shared MSN digest content must contain exactly five stories.");
+  }
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
   function readDwell(digest) {
@@ -24,7 +21,7 @@
     return element;
   }
 
-  function createSlide(index) {
+  function createSlide(index, story) {
     const slide = document.createElement("div");
     slide.className = "digest-slide";
     slide.setAttribute("role", "group");
@@ -33,6 +30,11 @@
 
     const media = document.createElement("div");
     media.className = "digest-slide-media";
+    const image = document.createElement("img");
+    image.src = story.image;
+    image.alt = story.alt;
+    image.onerror = () => { image.style.visibility = "hidden"; };
+    media.append(image);
     slide.append(media);
     return slide;
   }
@@ -43,7 +45,7 @@
     const publisher = document.createElement("div");
     publisher.className = "digest-publisher";
     publisher.append(
-      makeText("span", "digest-monogram", story.monogram),
+      makeText("span", "digest-monogram", story.publisher.charAt(0)),
       makeText("span", "", story.publisher),
       makeText("span", "", "· 1h"),
     );
@@ -73,7 +75,7 @@
     slides.className = "digest-track__slides";
     const track = document.createElement("div");
     track.className = "digest-track";
-    stories.forEach((story, index) => slides.append(createSlide(index)));
+    stories.forEach((story, index) => slides.append(createSlide(index, story)));
     const slideNodes = [...slides.children];
     const cloneSlide = (slide) => {
       const clone = slide.cloneNode(true);
@@ -171,7 +173,7 @@
 
     function renderCaption() {
       caption.classList.remove("is-changing");
-      publisher.children[0].textContent = stories[activeStory].monogram;
+      publisher.children[0].textContent = stories[activeStory].publisher.charAt(0);
       publisher.children[1].textContent = stories[activeStory].publisher;
       title.textContent = stories[activeStory].title;
       if (hasRenderedCaption && !reducedMotion.matches) {

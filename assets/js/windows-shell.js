@@ -33,29 +33,10 @@ const iconPaths = {
 };
 const iconCache = new Map();
 const storySections = [
-  {
-    gridId: "win-feed-grid",
-    stories: [
-      { title: "Five pantry staples that stay fresh well beyond their printed dates", publisher: "Morning Brief", time: "24m" },
-      { title: "A beginner's guide to keeping your home network fast and secure", publisher: "Home Notes", time: "1h" },
-      { title: "The quiet comeback of overnight trains is changing weekend travel", publisher: "Transit Journal", time: "3h" },
-      { title: "Why small design systems help growing teams work better", publisher: "Studio Weekly", time: "5h" },
-      { title: "Weekend recipes with one pan and fresh seasonal ingredients", publisher: "Table Stories", time: "7h" },
-      { title: "How community gardens are reshaping city blocks each season", publisher: "Neighborhood Post", time: "9h" },
-    ],
-  },
-  {
-    gridId: "win-feed-grid-more",
-    stories: [
-      { title: "Five neighborhood trails to explore before the next sunny weekend", publisher: "Field Notes", time: "12h" },
-      { title: "Ways to make an older apartment brighter and more spacious", publisher: "City Ledger", time: "18h" },
-      { title: "What new local transit plans could mean for your daily commute", publisher: "Local Outlook", time: "1d" },
-      { title: "A practical guide to better screen habits throughout the week", publisher: "Everyday Guide", time: "1d" },
-      { title: "The small kitchen tools that make weeknight cooking easier", publisher: "Weekend Edit", time: "2d" },
-      { title: "How designers are making public spaces work for more people", publisher: "Design Dispatch", time: "2d" },
-    ],
-  },
+  { gridId: "win-feed-grid", count: 6 },
+  { gridId: "win-feed-grid-more", count: 6 },
 ];
+const storyTimes = ["24m", "1h", "3h", "5h", "7h", "9h", "12h", "18h", "1d", "1d", "2d", "2d"];
 let scaleMode = "fit";
 
 function readSavedTheme() {
@@ -90,14 +71,19 @@ function updateScale() {
 }
 
 function populateStories() {
-  storySections.forEach(({ gridId, stories }) => {
-    const cards = stories.map(({ title, publisher, time }) => {
+  const articles = window.MSN_CONTENT.articles;
+  let storyIndex = 0;
+  storySections.forEach(({ gridId, count }) => {
+    const cards = Array.from({ length: count }, () => {
+      const story = articles[storyIndex % articles.length];
       const card = document.createElement("msn-card");
       card.setAttribute("variant", "article");
-      card.setAttribute("title", title);
-      card.setAttribute("publisher", publisher);
-      card.setAttribute("time", time);
-      card.setAttribute("image", "../assets/images/msn/digest/digest-1.jpg");
+      card.setAttribute("title", story.title);
+      card.setAttribute("publisher", story.publisher);
+      card.setAttribute("time", storyTimes[storyIndex] || "1d");
+      card.setAttribute("image", story.image);
+      card.setAttribute("image-alt", story.alt);
+      storyIndex += 1;
       return card;
     });
     document.getElementById(gridId).replaceChildren(...cards);

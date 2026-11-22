@@ -15,14 +15,15 @@ class MsnCard extends HTMLElement {
     const href = escapeHtml(this.getAttribute("href") || "#");
     const sponsor = escapeHtml(this.getAttribute("sponsor") || "Sponsored");
     const cta = escapeHtml(this.getAttribute("cta") || "");
-    const image = this.getAttribute("image");
+    const image = escapeHtml(this.getAttribute("image") || "");
+    const imageAlt = escapeHtml(this.getAttribute("image-alt") || "");
     const publisherIcon = this.getAttribute("publisher-icon");
 
     if (variant === "ad") {
       this.innerHTML = `<article class="ad-card">
   <div class="ad-card__content">
     <div class="ad-card__media">
-      ${image ? `<img src="${image}" alt="" aria-hidden="true" onerror="this.style.visibility='hidden'">` : ""}
+      ${image ? `<img src="${image}" alt="${imageAlt}" onerror="this.style.visibility='hidden'">` : ""}
       <button class="ad-card__more" type="button" aria-label="More options">
         <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="6" cy="12" r="1.75" fill="currentColor"/><circle cx="12" cy="12" r="1.75" fill="currentColor"/><circle cx="18" cy="12" r="1.75" fill="currentColor"/></svg>
       </button>
@@ -51,7 +52,7 @@ class MsnCard extends HTMLElement {
 
     this.innerHTML = `<article class="article-1u win-story-card" data-variant="subtitle">
   <div class="article-media article-media--standard">
-    ${image ? `<img src="${image}" alt="" width="288" height="172" onerror="this.style.visibility='hidden'">` : `<div aria-hidden="true"></div>`}
+    ${image ? `<img src="${image}" alt="${imageAlt}" width="288" height="172" onerror="this.style.visibility='hidden'">` : `<div aria-hidden="true"></div>`}
     <button class="hover-actions" type="button" aria-label="More options">
       <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="6" cy="12" r="1.75" fill="currentColor"/><circle cx="12" cy="12" r="1.75" fill="currentColor"/><circle cx="18" cy="12" r="1.75" fill="currentColor"/></svg>
     </button>

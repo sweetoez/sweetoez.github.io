@@ -10,6 +10,8 @@ const widthButtons = [...document.querySelectorAll("[data-width]")];
 const themeButtons = [...document.querySelectorAll("[data-theme-choice]")];
 const feedGrid = document.querySelector("#edge-feed-grid");
 const moreFeedGrid = document.querySelector("#edge-feed-grid-more");
+const feedArticles = window.MSN_CONTENT.articles;
+const feedAds = window.MSN_CONTENT.ads;
 const iconPaths = {
   globe16: "../assets/icons/globe_16_regular.svg",
   dismiss12: "../assets/icons/dismiss_12_regular.svg",
@@ -42,22 +44,6 @@ const widthStorageKey = "edge-ntp-width";
 const themeStorageKey = "edge-ntp-theme";
 const iconCache = new Map();
 const isFullScreen = new URLSearchParams(location.search).get("full") === "1";
-const headlines = [
-  "Five pantry staples that last longer than you think",
-  "A beginner's guide to tidy home networks",
-  "The quiet comeback of the overnight train",
-  "Why small design systems scale better than big ones",
-  "Weekend recipes built around one great pan",
-  "A Symbol of Beauty: Exploring the Secret Lives of Peacocks",
-];
-const moreHeadlines = [
-  "Five neighborhood trails to explore before the next sunny weekend",
-  "Ways to make an older apartment brighter and more spacious",
-  "What new local transit plans could mean for your daily commute",
-  "A practical guide to better screen habits throughout the week",
-  "The small kitchen tools that make weeknight cooking easier",
-  "How designers are making public spaces work for more people",
-];
 
 function readPreference(key, validate, fallback) {
   try {
@@ -119,28 +105,36 @@ function applyWidth() {
   updateDesktopScale();
 }
 
-function populateFeed(grid, stories) {
+function populateFeed(grid, articleStart, adStart) {
   const cards = [];
-  stories.forEach((headline, index) => {
+  let adCount = 0;
+  for (let index = 0; index < 6; index += 1) {
+    const story = feedArticles[(articleStart + index) % feedArticles.length];
     const article = document.createElement("msn-card");
     article.setAttribute("variant", "article");
-    article.setAttribute("title", headline);
-    article.setAttribute("publisher", "Quantis");
+    article.setAttribute("title", story.title);
+    article.setAttribute("publisher", story.publisher);
     article.setAttribute("time", "1d");
+    article.setAttribute("image", story.image);
+    article.setAttribute("image-alt", story.alt);
     article.classList.add("edge-feed-article");
     article.dataset.feedArticle = String(index + 1);
     cards.push(article);
 
     if ((index + 1) % 2 === 0) {
+      const adContent = feedAds[(adStart + adCount) % feedAds.length];
       const ad = document.createElement("msn-card");
       ad.setAttribute("variant", "ad");
-      ad.setAttribute("title", "Switch plans in seconds. Northwind Mobile gives you coverage that moves with you, wherever you go.");
-      ad.setAttribute("publisher", "Northwind Mobile");
+      ad.setAttribute("title", adContent.headline);
+      ad.setAttribute("publisher", adContent.advertiser);
+      ad.setAttribute("image", adContent.image);
+      ad.setAttribute("image-alt", adContent.alt);
       ad.classList.add("edge-feed-ad");
-      ad.dataset.feedAd = String((index + 1) / 2);
+      ad.dataset.feedAd = String(adCount + 1);
       cards.push(ad);
+      adCount += 1;
     }
-  });
+  }
   grid.replaceChildren(...cards);
 }
 
@@ -218,8 +212,8 @@ document.querySelector(".feeds-button").addEventListener("click", () => {
 });
 
 window.addEventListener("resize", updateDesktopScale);
-populateFeed(feedGrid, headlines);
-populateFeed(moreFeedGrid, moreHeadlines);
+populateFeed(feedGrid, 5, 0);
+populateFeed(moreFeedGrid, 11, 3);
 app.dataset.fullScreen = String(isFullScreen);
 applyTheme();
 applyWidth();
