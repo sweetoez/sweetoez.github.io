@@ -6,6 +6,8 @@
   <title>Country Knowledge Card — Mobile</title>
   <link rel="stylesheet" href="../assets/css/msn-components.css">
   <link rel="stylesheet" href="../assets/css/kc-components.css">
+  <script src="../assets/js/data/kc-entities.js"></script>
+  <script src="../assets/js/components/kc-hero.js"></script>
   <script src="../assets/js/kc-mobile-carousels.js" defer></script>
   <style>
     * { box-sizing:border-box; }
@@ -23,40 +25,7 @@
       <p class="kc-card-board-label">Country — Mobile</p>
       <div class="kc-full-knowledge-card kc-country-mobile-frame" data-kc="Full Knowledge Card">
         <article class="kc-card-stack kc-country-mobile kc-theme-orange" data-kc="Segment / Country" aria-label="India knowledge card">
-          <article class="kc-mobile-designer kc-mobile-designer--non-cutout kc-mobile-designer--website kc-mobile-designer--top-to-bottom" data-kc="Mobile / Designer / Style=Non-cutout, Website=Yes, Gradient Direction=Top to Bottom">
-            <div class="kc-mobile-designer__header">
-              <div class="kc-mobile-designer__image">
-                <span class="kc-img kc-mobile-designer__image-fill"><img src="../assets/images/kc/hero/mobile/country.png" alt="India"></span>
-                <div class="kc-mobile-designer__gradient" aria-hidden="true"></div>
-              </div>
-              <div class="kc-mobile-designer__title">
-                <h3 class="kc-mobile-designer__entity">India</h3>
-                <p class="kc-mobile-designer__category">Country in South Asia</p>
-              </div>
-              <div class="kc-mobile-designer__top-actions">
-                <button class="kc-btn-on-image kc-hero-button kc-hero-button--small" type="button" aria-label="Share"><img src="../assets/icons/ic_fluent_share_16_regular.svg" alt="" aria-hidden="true"></button>
-                <button class="kc-btn-on-image kc-hero-button kc-hero-button--small" type="button" aria-label="See all images"><img src="../assets/icons/ic_fluent_image_multiple_16_regular.svg" alt="" aria-hidden="true"></button>
-              </div>
-              <ul class="kc-hero-social kc-mobile-designer__social" data-kc="Social Media">
-                <li><a href="https://en.wikipedia.org/wiki/India" class="kc-hero-social__badge" aria-label="India on Wikipedia"><img src="../assets/images/kc/brands/wikipedia.svg" alt="" width="32" height="32"></a></li>
-              </ul>
-            </div>
-            <section class="kc-module kc-module--mobile kc-mobile-hero-text-list">
-              <div class="kc-mobile-hero-tabs" data-kc="Tabs">
-                <div class="kc-mobile-hero-tabs-container" role="tablist">
-                  <button class="kc-mobile-hero-tab kc-mobile-hero-tab--selected" type="button" role="tab" aria-selected="true">Overview</button>
-                  <button class="kc-mobile-hero-tab" type="button" role="tab" aria-selected="false">Travel</button>
-                  <button class="kc-mobile-hero-tab" type="button" role="tab" aria-selected="false">History</button>
-                  <button class="kc-mobile-hero-tab" type="button" role="tab" aria-selected="false">Culture</button>
-                  <button class="kc-mobile-hero-tab" type="button" role="tab" aria-selected="false">Economy</button>
-                </div>
-              </div>
-              <div class="kc-mobile-hero-text">
-                <p>India is a country in South Asia. It is the seventh-largest country by area and the most populous country in the world.</p>
-                <div class="kc-mobile-hero-website"><span class="kc-mobile-hero-website__globe" aria-hidden="true"></span><a href="http://india.gov.in/">india.gov.in</a></div>
-              </div>
-            </section>
-          </article>
+          <kc-hero entity="country" platform="mobile"></kc-hero>
 
           <section class="kc-module kc-module--mobile kc-mobile-image-list-carousel" id="kc-country-mobile-mod-1" data-kc="Mobile/ Image List / Carousel">
             <div class="kc-scroll-row">

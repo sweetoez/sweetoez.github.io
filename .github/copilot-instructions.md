@@ -52,6 +52,7 @@ Controls are native HTML in plain CSS with Fluent states (rest, hover, pressed, 
 - One definition per hero and module, shared by every KC page. Never copy, fork, or restyle a component per entity. Entity differences such as accent color, background, and visible logos come from data and shared modifier classes.
 - Content and fixed module order come only from `/assets/js/data/kc-entities.js`. There is no reorder UI.
 - Convert one component or one module family per handoff. Every conversion must match `_shots/kc-baseline/` pixel for pixel on every affected page, desktop and mobile, with See more collapsed and expanded.
+- <kc-hero> is done (#137). Pages use <kc-hero entity platform>.
 - Standing KC rules: widths 472 / 360; one 1px `#DDD` seam; last visible item radius `0 0 6 6`; Title Case; #059 logo rows centered on the image edge with real brand SVGs; #060 scroll rows edge to edge with a 16px inner start inset; the 20px Video + Image overhang; and #085 module images under `/assets/images/kc/modules/<slug>/`.
 
 ## KC hero + carousel rules (#059)

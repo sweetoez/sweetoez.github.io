@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Team Knowledge Card — Mobile</title>
   <link rel="stylesheet" href="../assets/css/msn-components.css">
-  <link rel="stylesheet" href="../assets/css/kc-components.css">
+  <link rel="stylesheet" href="../assets/css/kc-components.css"><script src="../assets/js/data/kc-entities.js"></script><script src="../assets/js/components/kc-hero.js"></script>
   <script src="../assets/js/kc-mobile-carousels.js" defer></script>
   <style>
     * { box-sizing:border-box; }
@@ -24,39 +24,7 @@
       <h1 class="kc-card-board-label">Team — Mobile</h1>
       <div class="kc-full-knowledge-card kc-team-mobile-frame" data-kc="Full Knowledge Card">
         <article class="kc-card-stack kc-mobile-designer-card kc-team-mobile kc-theme-purple-2" data-kc="Segment / Team" aria-label="Los Angeles Lakers knowledge card">
-          <article class="kc-mobile-designer kc-mobile-designer--top-to-bottom kc-mobile-designer--website" data-kc="Mobile / Designer / Gradient=Top to Bottom, Website=Yes">
-            <div class="kc-mobile-designer__header">
-              <div class="kc-mobile-designer__image">
-                <span class="kc-img kc-mobile-designer__image-fill"><img src="../assets/images/kc/hero/mobile/team.png" alt="Los Angeles Lakers"></span>
-                <div class="kc-mobile-designer__gradient" aria-hidden="true"></div>
-              </div>
-              <div class="kc-mobile-designer__title">
-                <h2 class="kc-mobile-designer__entity">Los Angeles Lakers</h2>
-                <p class="kc-mobile-designer__category">NBA basketball team</p>
-              </div>
-              <div class="kc-mobile-designer__top-actions">
-                <button class="kc-btn-on-image kc-hero-button kc-hero-button--small" type="button" aria-label="Share">
-                  <svg width="12" height="12" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><use href="#kc-team-icon-share"></use></svg>
-                </button>
-                <button class="kc-btn-on-image kc-hero-button kc-hero-button--small" type="button" aria-label="See all images">
-                  <svg width="12" height="12" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><use href="#kc-team-icon-images"></use></svg>
-                </button>
-              </div>
-              <ul class="kc-hero-social kc-mobile-designer__social" aria-label="Social profiles">
-                <li><span class="kc-hero-social__badge" role="img" aria-label="Instagram"><img src="../assets/images/kc/brands/instagram.svg" alt="" width="32" height="32"></span></li>
-                <li><span class="kc-hero-social__badge" role="img" aria-label="Twitter"><img src="../assets/images/kc/brands/twitter.svg" alt="" width="32" height="32"></span></li>
-                <li><span class="kc-hero-social__badge" role="img" aria-label="Facebook"><img src="../assets/images/kc/brands/facebook.svg" alt="" width="32" height="32"></span></li>
-                <li><span class="kc-hero-social__badge" role="img" aria-label="IMDb"><img src="../assets/images/kc/brands/imdb.svg" alt="" width="32" height="32"></span></li>
-                <li><span class="kc-hero-social__badge" role="img" aria-label="TikTok"><img src="../assets/images/kc/brands/tiktok.svg" alt="" width="32" height="32"></span></li>
-              </ul>
-            </div>
-            <section class="kc-module kc-module--mobile kc-mobile-hero-text-list">
-              <div class="kc-mobile-hero-text">
-                <p>The Los Angeles Lakers are a professional basketball team in the NBA. Founded in 1947 in Minneapolis, the team moved to Los Angeles in 1960.</p>
-                <div class="kc-mobile-hero-website"><span class="kc-mobile-hero-website__globe" aria-hidden="true"></span><a href="https://www.nba.com/lakers">nba.com/lakers</a></div>
-              </div>
-            </section>
-          </article>
+          <kc-hero entity="team" platform="mobile"></kc-hero>
 
           <section class="kc-module kc-module--mobile kc-mobile-image-list-carousel" id="kc-team-mobile-carousel" data-kc="Mobile / Image List / Carousel" aria-label="Team photos">
             <div class="kc-scroll-row" tabindex="0" aria-label="Team photos, use left and right arrow keys to scroll">

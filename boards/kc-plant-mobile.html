@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Plant Knowledge Card — Mobile</title>
   <link rel="stylesheet" href="../assets/css/msn-components.css">
-  <link rel="stylesheet" href="../assets/css/kc-components.css">
+  <link rel="stylesheet" href="../assets/css/kc-components.css"><script src="../assets/js/data/kc-entities.js"></script><script src="../assets/js/components/kc-hero.js"></script>
   <script src="../assets/js/kc-mobile-carousels.js" defer></script>
   <style>
     * { box-sizing:border-box; }
@@ -24,31 +24,7 @@
       <h1 class="kc-card-board-label">Plant — Mobile</h1>
       <div class="kc-full-knowledge-card kc-plant-mobile-frame" data-kc="Full Knowledge Card">
         <article class="kc-card-stack kc-mobile-designer-card kc-plant-mobile kc-theme-orange" data-kc="Segment / Plant" aria-label="Dahlia knowledge card">
-          <article class="kc-mobile-designer kc-mobile-designer--top-to-bottom" data-kc="Mobile / Designer / Gradient=Top to Bottom / Website=No">
-            <div class="kc-mobile-designer__header">
-              <div class="kc-mobile-designer__image">
-                <span class="kc-img kc-mobile-designer__image-fill"><img src="../assets/images/kc/hero/mobile/dahlia.jpg" alt="Red Dahlietta Anna flower"></span>
-                <div class="kc-mobile-designer__gradient" aria-hidden="true"></div>
-              </div>
-              <div class="kc-mobile-designer__title">
-                <h2 class="kc-mobile-designer__entity">Dahlia</h2>
-                <p class="kc-mobile-designer__category">Genus of flowering plants</p>
-              </div>
-              <div class="kc-mobile-designer__top-actions">
-                <button class="kc-btn-on-image kc-hero-button kc-hero-button--small" type="button" aria-label="Share">
-                  <svg width="12" height="12" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><use href="#kc-plant-share"></use></svg>
-                </button>
-                <button class="kc-btn-on-image kc-hero-button kc-hero-button--small" type="button" aria-label="See all images">
-                  <svg width="12" height="12" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><use href="#kc-plant-images"></use></svg>
-                </button>
-              </div>
-            </div>
-            <section class="kc-module kc-module--mobile kc-mobile-hero-text-list">
-              <div class="kc-mobile-hero-text">
-                <p>Dahlias are flowering perennials in the aster family, native to Mexico and Central America.</p>
-              </div>
-            </section>
-          </article>
+          <kc-hero entity="plant" platform="mobile"></kc-hero>
 
           <section class="kc-module kc-module--mobile kc-mobile-image-list-carousel" id="kc-plant-mobile-carousel" data-kc="Mobile / Image List / Carousel" aria-label="Dahlia photos">
             <div class="kc-scroll-row" tabindex="0" aria-label="Dahlia photos, use left and right arrow keys to scroll">

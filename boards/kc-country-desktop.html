@@ -6,6 +6,8 @@
   <title>Country Knowledge Card — Desktop</title>
   <link rel="stylesheet" href="../assets/css/msn-components.css">
   <link rel="stylesheet" href="../assets/css/kc-components.css">
+  <script src="../assets/js/data/kc-entities.js"></script>
+  <script src="../assets/js/components/kc-hero.js"></script>
   <style>
     * { box-sizing:border-box; }
     body { min-width:1344px; margin:0; padding:32px; background:var(--kc-gray-5); color:var(--kc-gray-1); font-family:var(--kc-font); }
@@ -22,33 +24,7 @@
       <p class="kc-card-board-label">Country — Desktop</p>
       <div class="kc-full-knowledge-card kc-country-desktop-frame" data-kc="Full Knowledge Card">
         <article class="kc-card-stack kc-country-desktop kc-theme-orange" data-kc="Segment / Country" aria-label="India knowledge card">
-          <article class="kc-hero kc-hero-designer kc-hero-designer--non-cutout kc-hero-designer--top-to-bottom" data-kc="Designer">
-            <div class="kc-hero-header">
-              <span class="kc-img kc-hero-img kc-hero-designer__image"><img src="../assets/images/kc/hero/desktop/country.png" alt="India"></span>
-              <div class="kc-hero-title kc-hero-designer__title">
-                <div class="kc-hero-title__text kc-hero-designer__title__text">
-                  <h2 class="kc-hero-designer__title__name">India</h2>
-                  <p class="kc-hero-designer__title__category">Country in South Asia</p>
-                </div>
-              </div>
-              <ul class="kc-hero-social kc-hero-designer__social" data-kc="Social Media">
-                <li><a href="https://en.wikipedia.org/wiki/India" class="kc-hero-social__badge" aria-label="India on Wikipedia"><img src="../assets/images/kc/brands/wikipedia.svg" alt="" width="32" height="32"></a></li>
-              </ul>
-              <div class="kc-hero-top-actions kc-hero-designer__actions" data-kc="Top Actions">
-                <button class="kc-btn-on-image kc-hero-button kc-hero-button--large kc-hero-button--share" type="button">
-                  <img src="../assets/icons/ic_fluent_share_16_regular.svg" alt="" aria-hidden="true">
-                  <span class="kc-hero-button__label">Share</span>
-                </button>
-                <button class="kc-btn-on-image kc-hero-button kc-hero-button--large kc-hero-button--all-images" type="button">
-                  <img src="../assets/icons/ic_fluent_image_multiple_16_regular.svg" alt="" aria-hidden="true">
-                  <span class="kc-hero-button__label">All images</span>
-                </button>
-              </div>
-            </div>
-            <div class="kc-text-list">
-              <p class="kc-hero-body kc-clamp-2">India is a country in South Asia. It is the seventh-largest country by area and the most populous country in the world.</p>
-            </div>
-          </article>
+          <kc-hero entity="country" platform="desktop"></kc-hero>
 
           <section class="kc-module kc-text-list-top-fact kc-text-list-top-fact--with-image" id="kc-country-mod-1" data-kc="Text List / Top Fact" aria-label="Capital and population">
             <div class="kc-country-top-fact__flag-slot">

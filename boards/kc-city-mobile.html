@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>City Knowledge Card — Mobile</title>
   <link rel="stylesheet" href="../assets/css/msn-components.css">
-  <link rel="stylesheet" href="../assets/css/kc-components.css">
+  <link rel="stylesheet" href="../assets/css/kc-components.css"><script src="../assets/js/data/kc-entities.js"></script><script src="../assets/js/components/kc-hero.js"></script>
   <style>
     * { box-sizing:border-box; }
     body { min-width:1344px; margin:0; padding:32px; background:var(--kc-gray-5); color:var(--kc-gray-1); font-family:var(--kc-font); }
@@ -70,40 +70,7 @@
       <h1 class="kc-card-board-label">City — Mobile</h1>
       <div class="kc-full-knowledge-card kc-city-mobile-frame" data-kc="Full Knowledge Card">
         <article class="kc-card-stack kc-mobile-designer-card kc-city-mobile" data-kc="Segment / City" aria-label="San Francisco knowledge card">
-          <article class="kc-mobile-designer kc-mobile-designer--top-to-bottom kc-mobile-designer--website" data-kc="Mobile / Designer / Gradient=Top to Bottom, Website=Yes">
-            <div class="kc-mobile-designer__header">
-              <div class="kc-mobile-designer__image">
-                <span class="kc-img kc-mobile-designer__image-fill"><img src="../assets/images/kc/hero/mobile/city.png" alt="Golden Gate Bridge, San Francisco"></span>
-                <div class="kc-mobile-designer__gradient" aria-hidden="true"></div>
-              </div>
-              <div class="kc-mobile-designer__title">
-                <h2 class="kc-mobile-designer__entity">San Francisco</h2>
-                <p class="kc-mobile-designer__category">City in California</p>
-              </div>
-              <div class="kc-mobile-designer__top-actions">
-                <button class="kc-btn-on-image kc-hero-button kc-hero-button--small" type="button" aria-label="Share"><img src="../assets/icons/ic_fluent_share_16_regular.svg" alt="" aria-hidden="true"></button>
-                <button class="kc-btn-on-image kc-hero-button kc-hero-button--small" type="button" aria-label="See all images"><img src="../assets/icons/ic_fluent_image_multiple_16_regular.svg" alt="" aria-hidden="true"></button>
-              </div>
-              <ul class="kc-hero-social kc-mobile-designer__social" data-kc="Social Media">
-                <li><a href="https://en.wikipedia.org/wiki/San_Francisco" class="kc-hero-social__badge" aria-label="San Francisco on Wikipedia"><img src="../assets/images/kc/brands/wikipedia.svg" alt="" width="32" height="32"></a></li>
-              </ul>
-            </div>
-            <section class="kc-module kc-module--mobile kc-mobile-hero-text-list">
-              <div class="kc-mobile-hero-tabs" data-kc="Tabs">
-                <div class="kc-mobile-hero-tabs-container" role="tablist" aria-label="San Francisco topics">
-                  <button class="kc-mobile-hero-tab kc-mobile-hero-tab--selected" type="button" role="tab" aria-selected="true">Growing tab</button>
-                  <button class="kc-mobile-hero-tab" type="button" role="tab" aria-selected="false">Growing tab</button>
-                  <button class="kc-mobile-hero-tab" type="button" role="tab" aria-selected="false">Growing tab</button>
-                  <button class="kc-mobile-hero-tab" type="button" role="tab" aria-selected="false">Growing tab</button>
-                  <button class="kc-mobile-hero-tab" type="button" role="tab" aria-selected="false">Growing tab</button>
-                </div>
-              </div>
-              <div class="kc-mobile-hero-text">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad ...</p>
-                <div class="kc-mobile-hero-website"><span class="kc-mobile-hero-website__globe" aria-hidden="true"></span><a href="#">website</a></div>
-              </div>
-            </section>
-          </article>
+          <kc-hero entity="city" platform="mobile"></kc-hero>
 
           <section class="kc-module kc-module--mobile kc-mobile-text-list-quick-facts kc-mobile-text-list-quick-facts--see-more" id="kc-city-mobile-facts" data-kc="Mobile / Text List / Quick Facts" aria-label="Quick facts about San Francisco">
             <div class="kc-mobile-text-list-quick-facts__list" role="list">

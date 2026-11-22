@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>KC Hero Cards — Mobile</title>
   <link rel="stylesheet" href="../assets/css/msn-components.css">
-  <link rel="stylesheet" href="../assets/css/kc-components.css">
+  <link rel="stylesheet" href="../assets/css/kc-components.css"><script src="../assets/js/data/kc-entities.js"></script><script src="../assets/js/components/kc-hero.js"></script>
   <style>
     * { box-sizing:border-box; }
     body { min-width:560px; margin:0; padding:32px 48px; background:var(--kc-gray-5); color:var(--kc-gray-1); font-family:var(--kc-font); }
@@ -33,121 +33,20 @@
     </section>
   </main>
   <script>
-    const bodyCopy = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad ...";
-    const socialItems = [["Instagram", "instagram"], ["Twitter", "twitter"], ["Facebook", "facebook"], ["IMDb", "imdb"], ["TikTok", "tiktok"]];
-    const social = extraClass => `<ul class="kc-hero-social ${extraClass}" data-kc="Social Media">${socialItems.map(([label, slug]) => `<li><a href="#" class="kc-hero-social__badge" aria-label="${label}"><img src="../assets/images/kc/brands/${slug}.svg" alt="" width="32" height="32"></a></li>`).join("")}</ul>`;
-    const heroPhotos = {
-      cinema: "Rows of red seats in a dark cinema, used as illustrative film artwork",
-      city: "City skyline at sunset",
-      concert: "Crowd at a live music performance",
-      guitar: "Hands playing an acoustic guitar",
-      lake: "Mountain lake beside a forest and cabin",
-      portrait: "Illustrative stock portrait of a person in a gray sweater",
-      portraitColor: "Illustrative stock portrait of a person against a blue background"
-    };
-    const heroPhoto = path => {
-      if (path.includes("single-portrait")) return ["portrait-a", heroPhotos.portrait];
-      if (path.includes("single-square")) return ["guitar", heroPhotos.guitar];
-      if (path.includes("single-landscape")) return ["mountain-lake", heroPhotos.lake];
-      if (path.includes("cutout")) return ["portrait-b", heroPhotos.portraitColor];
-      if (path.includes("designer-place")) return ["city", heroPhotos.city];
-      return ["city", heroPhotos.city];
-    };
-    const image = (path, alt, classes) => {
-      const [file, description] = heroPhoto(path);
-      return `<span class="kc-img ${classes}"><img src="../assets/images/kc/stock/${file}.jpg" alt="${description}"></span>`;
-    };
-    const textList = (website, address) => `<section class="kc-module kc-module--mobile kc-mobile-hero-text-list">
-      <div class="kc-mobile-hero-tabs">
-        <div class="kc-mobile-hero-tabs-container" role="tablist">
-          <button class="kc-mobile-hero-tab kc-mobile-hero-tab--selected" type="button" role="tab" aria-selected="true">Overview</button>
-          ${Array.from({ length:4 }, () => '<button class="kc-mobile-hero-tab" type="button" role="tab" aria-selected="false">Growing tab</button>').join("")}
-        </div>
-      </div>
-      <div class="kc-mobile-hero-text">
-        <p>${bodyCopy}</p>
-        ${website ? `<div class="kc-mobile-hero-website"><span class="kc-mobile-hero-website__globe" aria-hidden="true"></span><a href="https://${address}">${address}</a></div>` : ""}
-      </div>
-    </section>`;
-    const designerVariants = [
-      ["Style=Non-cutout, Website=No, Gradient Direction=Top to Bottom", "non-cutout", "top-to-bottom", false],
-      ["Style=Cutout, Website=No, Gradient Direction=Top to Bottom", "cutout", "top-to-bottom", false],
-      ["Style=Non-cutout, Website=Yes, Gradient Direction=Top to Bottom", "non-cutout", "top-to-bottom", true],
-      ["Style=Cutout, Website=Yes, Gradient Direction=Top to Bottom", "cutout", "top-to-bottom", true],
-      ["Style=Non-cutout, Website=No, Gradient Direction=Left to Right", "non-cutout", "left-to-right", false],
-      ["Style=Cutout, Website=No, Gradient Direction=Left to Right", "cutout", "left-to-right", false],
-      ["Style=Non-cutout, Website=Yes, Gradient Direction=Left to Right", "non-cutout", "left-to-right", true],
-      ["Style=Cutout, Website=Yes, Gradient Direction=Left to Right", "cutout", "left-to-right", true]
-    ];
-    const entityData = {
-      "non-cutout": ["Riverside Old Town", "City in Northland", "riversideoldtown.example", "mobile-designer-place.jpg"],
-      cutout: ["Avery Lane", "Singer-songwriter", "averylane.example", "mobile-designer-cutout.png"]
-    };
-    document.querySelector("#designer-items").innerHTML = designerVariants.map(([variant, style, direction, website]) => {
-      const [entity, category, address, asset] = entityData[style];
-      const classes = `kc-mobile-designer kc-mobile-designer--${style}${website ? " kc-mobile-designer--website" : ""} kc-mobile-designer--${direction}`;
-      const header = `<div class="kc-mobile-designer__header">
-        <div class="kc-mobile-designer__image">
-          ${image(asset, entity, "kc-mobile-designer__image-fill")}
-          <div class="kc-mobile-designer__gradient" aria-hidden="true"></div>
-        </div>
-        <div class="kc-mobile-designer__title">
-          <h3 class="kc-mobile-designer__entity">${entity}</h3>
-          <p class="kc-mobile-designer__category">${category}</p>
-        </div>
-        <div class="kc-mobile-designer__top-actions">
-          <button class="kc-btn-on-image kc-hero-button kc-hero-button--small" type="button" aria-label="Share"><img src="../assets/icons/ic_fluent_share_16_regular.svg" alt="" aria-hidden="true"></button>
-          <button class="kc-btn-on-image kc-hero-button kc-hero-button--small" type="button" aria-label="See all images"><img src="../assets/icons/ic_fluent_image_multiple_16_regular.svg" alt="" aria-hidden="true"></button>
-        </div>
-        ${social("kc-mobile-designer__social")}
-      </div>`;
-      return `<div class="kc-hero-board-item">
-        <p class="kc-hero-board-label">Mobile / Designer / ${variant}</p>
-        <article class="${classes}" data-kc="Mobile / Designer / ${variant}">${header}${textList(website, address)}</article>
-      </div>`;
-    }).join("");
-    const singleVariants = [
-      ["Layout=Portrait, Website=No", "portrait", false],
-      ["Layout=Portrait, Website=Yes", "portrait", true],
-      ["Layout=Square, Website=No", "square", false],
-      ["Layout=Square, Website=Yes", "square", true],
-      ["Layout=Landscape, Website=No", "landscape", false],
-      ["Layout=Landscape, Website=Yes", "landscape", true]
-    ];
-    const singleData = {
-      portrait: ["The Long Field", "2024 film", "thelongfield.example", "mobile-single-portrait.jpg"],
-      square: ["Slow Tide", "Song by Avery Lane", "averylane.example", "mobile-single-square.jpg"],
-      landscape: ["Mountain Lake", "Alpine landscape", "mountainlake.example", "mobile-single-landscape.jpg"]
-    };
-    document.querySelector("#single-image-items").innerHTML = singleVariants.map(([variant, layout, website]) => {
-      const [entity, category, address, asset] = singleData[layout];
-      const classes = `kc-mobile-single-image kc-mobile-single-image--${layout}${website ? " kc-mobile-single-image--website" : ""}`;
-      const header = `<div class="kc-mobile-single-image__header">
-        <div class="kc-mobile-single-image__band"></div>
-        ${image(asset, entity, "kc-mobile-single-image__thumb")}
-        <button class="kc-mobile-single-image__share" type="button" aria-label="Share"><img src="../assets/icons/ic_fluent_share_16_regular.svg" alt="" aria-hidden="true"></button>
-        <div class="kc-mobile-single-image__title">
-          <h3 class="kc-mobile-single-image__entity">${entity}</h3>
-          <p class="kc-mobile-single-image__category">${category}</p>
-        </div>
-        ${social("kc-mobile-single-image__social")}
-      </div>`;
-      return `<div class="kc-hero-board-item">
-        <p class="kc-hero-board-label">Mobile / Single Image / ${variant}</p>
-        <article class="${classes}" data-kc="Mobile / Single Image / ${variant}">${header}${textList(website, address)}</article>
-      </div>`;
-    }).join("");
-    document.querySelectorAll(".kc-mobile-hero-tabs-container").forEach(tablist => {
-      tablist.addEventListener("click", event => {
-        const tab = event.target.closest(".kc-mobile-hero-tab");
-        if (!tab || !tablist.contains(tab)) return;
-        tablist.querySelectorAll(".kc-mobile-hero-tab").forEach(item => {
-          const selected = item === tab;
-          item.classList.toggle("kc-mobile-hero-tab--selected", selected);
-          item.setAttribute("aria-selected", String(selected));
-        });
-      });
-    });
+    const samples = window.KC_ENTITIES._samples.heroes.mobile;
+
+    function renderSamples(containerId, kind) {
+      document.querySelector(`#${containerId}`).innerHTML = samples
+        .filter(sample => sample.kind === kind)
+        .map(sample => `<div class="kc-hero-board-item">
+          <p class="kc-hero-board-label">${sample.label}</p>
+          <kc-hero platform="mobile" variant="${sample.id}"></kc-hero>
+        </div>`)
+        .join("");
+    }
+
+    renderSamples("designer-items", "designer");
+    renderSamples("single-image-items", "single-image");
   </script>
 </body>
 </html>
