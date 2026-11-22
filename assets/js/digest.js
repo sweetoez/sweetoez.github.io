@@ -44,12 +44,23 @@
     content.className = "digest-caption";
     const publisher = document.createElement("div");
     publisher.className = "digest-publisher";
+    const logoFrame = makeText("span", "digest-monogram", "");
+    logoFrame.setAttribute("aria-hidden", "true");
+    const logo = document.createElement("img");
+    logo.className = "msn-card__publisher-logo";
+    logo.alt = "";
+    logo.width = 16;
+    logo.height = 16;
+    logo.addEventListener("error", () => {
+      logo.style.visibility = "hidden";
+      logoFrame.style.backgroundColor = "#D3D3D3";
+    });
+    logoFrame.append(logo);
     publisher.append(
-      makeText("span", "digest-monogram", story.publisher.charAt(0)),
-      makeText("span", "", story.publisher),
-      makeText("span", "", "· 1h"),
+      logoFrame,
+      makeText("span", "", ""),
+      makeText("span", "", ""),
     );
-    publisher.firstElementChild.setAttribute("aria-hidden", "true");
     const title = makeText(titleTag, "digest-title", story.title);
     content.append(publisher, title);
     return content;
@@ -173,9 +184,17 @@
 
     function renderCaption() {
       caption.classList.remove("is-changing");
-      publisher.children[0].textContent = stories[activeStory].publisher.charAt(0);
-      publisher.children[1].textContent = stories[activeStory].publisher;
-      title.textContent = stories[activeStory].title;
+      const story = stories[activeStory];
+      const entry = window.MSN_CONTENT.publishers.find((item) => item.key === story.publisherKey);
+      if (!entry) throw new Error(`Unknown MSN publisher: ${story.publisherKey}`);
+      const logoFrame = publisher.children[0];
+      const logo = logoFrame.querySelector("img");
+      logo.style.visibility = "";
+      logoFrame.style.backgroundColor = "";
+      logo.src = entry.logo;
+      publisher.children[1].textContent = entry.name;
+      publisher.children[2].textContent = `· ${story.time}`;
+      title.textContent = story.title;
       if (hasRenderedCaption && !reducedMotion.matches) {
         void caption.offsetWidth;
         caption.classList.add("is-changing");

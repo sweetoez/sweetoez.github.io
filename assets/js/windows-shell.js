@@ -36,7 +36,6 @@ const storySections = [
   { gridId: "win-feed-grid", count: 6 },
   { gridId: "win-feed-grid-more", count: 6 },
 ];
-const storyTimes = ["24m", "1h", "3h", "5h", "7h", "9h", "12h", "18h", "1d", "1d", "2d", "2d"];
 let scaleMode = "fit";
 
 function readSavedTheme() {
@@ -82,7 +81,7 @@ function populateStories() {
       card.setAttribute("variant", "article");
       card.setAttribute("title", story.title);
       card.setAttribute("publisher-key", story.publisherKey);
-      card.setAttribute("time", storyTimes[originalIndex] || "1d");
+      card.setAttribute("time", story.time);
       card.setAttribute("image", story.image);
       card.setAttribute("image-alt", story.alt);
       storyIndex += 1;

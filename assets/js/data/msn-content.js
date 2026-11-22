@@ -1,10 +1,33 @@
 (() => {
   const imageBase = "../assets/images/msn/";
-  const publishers = Array.from({ length: 21 }, (_, index) => {
-    const number = String(index + 1).padStart(2, "0");
+  // This order separates similar logo colors in the responsive feed grids.
+  const publishers = [
+    [7, "Amber Arc"],
+    [19, "Meadow Monthly"],
+    [15, "Flare Report"],
+    [21, "Tide Tribune"],
+    [14, "Crystal View"],
+    [8, "Ember Circle"],
+    [20, "Verdant Loop"],
+    [4, "Crimson Bulletin"],
+    [5, "Metro Meridian"],
+    [10, "Prism Dispatch"],
+    [13, "Northline News"],
+    [9, "Blue Current"],
+    [11, "Kindred Chronicle"],
+    [17, "Ember Wave"],
+    [2, "Moss Monthly"],
+    [3, "Pearl Press"],
+    [18, "Citrus Grove"],
+    [6, "Golden Cube"],
+    [1, "Night Current"],
+    [12, "Bright Signal"],
+    [16, "Azure Three"],
+  ].map(([index, name]) => {
+    const number = String(index).padStart(2, "0");
     return {
       key: `unsure-${number}`,
-      name: `Publisher ${number}`,
+      name,
       logo: `../assets/images/brand/publishers/publisher-unsure-${number}.png`,
     };
   });
@@ -124,23 +147,31 @@
     },
   ];
 
+  const articleTimes = [
+    "12m", "24m", "42m", "1h", "2h", "3h", "4h", "5h",
+    "6h", "7h", "9h", "11h", "13h", "16h", "19h", "1d",
+  ];
   articles.forEach((article, index) => {
     article.publisherKey = publishers[index].key;
+    article.time = articleTimes[index];
   });
+  const adPublisherKeys = [
+    "unsure-18", "unsure-06", "unsure-01",
+    "unsure-12", "unsure-16", "unsure-14",
+  ];
   ads.forEach((ad, index) => {
-    ad.publisherKey = publishers[articles.length + index % (publishers.length - articles.length)].key;
+    ad.publisherKey = adPublisherKeys[index];
   });
 
   const digestArticles = [
-    ["train", articles[11], "Transit Journal"],
-    ["trails", articles[12], "Field Notes"],
-    ["transportation", articles[13], "Local Outlook"],
-    ["travel", articles[14], "City Ledger"],
-    ["work-spaces", articles[15], "Everyday Guide"],
+    ["train", articles[11]],
+    ["trails", articles[12]],
+    ["transportation", articles[13]],
+    ["travel", articles[14]],
+    ["work-spaces", articles[15]],
   ];
-  const digest = digestArticles.map(([slug, article, publisher]) => ({
+  const digest = digestArticles.map(([slug, article]) => ({
     ...article,
-    publisher,
     image: `${imageBase}digest/${slug}.jpg`,
   }));
 

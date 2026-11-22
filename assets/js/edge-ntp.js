@@ -114,7 +114,7 @@ function populateFeed(grid, articleStart, adStart) {
     article.setAttribute("variant", "article");
     article.setAttribute("title", story.title);
     article.setAttribute("publisher-key", story.publisherKey);
-    article.setAttribute("time", "1d");
+    article.setAttribute("time", story.time);
     article.setAttribute("image", story.image);
     article.setAttribute("image-alt", story.alt);
     article.classList.add("edge-feed-article");
