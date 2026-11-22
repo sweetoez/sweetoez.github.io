@@ -86,7 +86,6 @@ let theme = readPreference(themeStorageKey, (value) => value === "light" || valu
 
 function applyTheme() {
   document.documentElement.dataset.theme = theme;
-  app.dataset.theme = theme;
   wallpaper.src = `../assets/images/windows/wallpaper-${theme}.jpg`;
   themeButtons.forEach((button) => {
     button.setAttribute("aria-pressed", String(button.dataset.themeChoice === theme));

@@ -57,7 +57,6 @@ async function inlineComponentIcon(slot) {
 
 function applyComponentTheme(theme) {
   document.documentElement.dataset.theme = theme;
-  componentBoard.dataset.theme = theme;
   componentThemeButtons.forEach((button) => {
     button.setAttribute("aria-pressed", String(button.dataset.themeChoice === theme));
   });

@@ -21,8 +21,7 @@
 }
 
 html[data-theme="dark"],
-.shell-app[data-theme="dark"],
-.edge-components-board[data-theme="dark"] {
+html[data-theme="dark-navy"] {
   --edge-tab-surface: #1C1C1C;
   --edge-chrome-surface: #292929;
   --edge-page-surface: #151A28;
@@ -465,13 +464,11 @@ html[data-theme="dark"],
   display: none;
 }
 
-html[data-theme="dark"] .edge-amazon--light,
-.shell-app[data-theme="dark"] .edge-amazon--light {
+html[data-theme="dark"] .edge-amazon--light {
   display: none;
 }
 
-html[data-theme="dark"] .edge-amazon--dark,
-.shell-app[data-theme="dark"] .edge-amazon--dark {
+html[data-theme="dark"] .edge-amazon--dark {
   display: block;
 }
 
@@ -847,81 +844,64 @@ html[data-theme="dark"] .edge-amazon--dark,
   }
 }
 
-html[data-theme="dark"] .edge-tab-row::after,
-.shell-app[data-theme="dark"] .edge-tab-row::after {
+html[data-theme="dark"] .edge-tab-row::after {
   background: #292929;
   box-shadow: 0 0 2px rgba(0, 0, 0, .25);
 }
 
 html[data-theme="dark"] .edge-chrome-row button:hover:not(:disabled),
-.shell-app[data-theme="dark"] .edge-chrome-row button:hover:not(:disabled),
-html[data-theme="dark"] .ntp-topnav button:hover:not(:disabled),
-.shell-app[data-theme="dark"] .ntp-topnav button:hover:not(:disabled) {
+html[data-theme="dark"] .ntp-topnav button:hover:not(:disabled) {
   background: rgba(255, 255, 255, .08);
 }
 
 html[data-theme="dark"] .edge-chrome-row button:active:not(:disabled),
-.shell-app[data-theme="dark"] .edge-chrome-row button:active:not(:disabled),
-html[data-theme="dark"] .ntp-topnav button:active:not(:disabled),
-.shell-app[data-theme="dark"] .ntp-topnav button:active:not(:disabled) {
+html[data-theme="dark"] .ntp-topnav button:active:not(:disabled) {
   background: rgba(255, 255, 255, .12);
 }
 
-html[data-theme="dark"] .edge-address,
-.shell-app[data-theme="dark"] .edge-address {
+html[data-theme="dark"] .edge-address {
   border-color: #656565;
   background: #292929;
 }
 
-html[data-theme="dark"] .edge-address > button,
-.shell-app[data-theme="dark"] .edge-address > button {
+html[data-theme="dark"] .edge-address > button {
   color: #999999;
 }
 
-html[data-theme="dark"] .edge-favorite:hover,
-.shell-app[data-theme="dark"] .edge-favorite:hover {
+html[data-theme="dark"] .edge-favorite:hover {
   background: rgba(255, 255, 255, .08);
 }
 
-html[data-theme="dark"] .edge-favorites,
-.shell-app[data-theme="dark"] .edge-favorites {
+html[data-theme="dark"] .edge-favorites {
   border-bottom-color: rgba(255, 255, 255, .08);
 }
 
-html[data-theme="dark"] .ntp-search-slot,
-.shell-app[data-theme="dark"] .ntp-search-slot {
+html[data-theme="dark"] .ntp-search-slot {
   background: #0E111B;
   color: var(--msn-primary);
 }
 
-html[data-theme="dark"] .ntp-search-slot input,
-.shell-app[data-theme="dark"] .ntp-search-slot input {
+html[data-theme="dark"] .ntp-search-slot input {
   color: var(--msn-primary);
   caret-color: var(--msn-primary);
 }
 
-html[data-theme="dark"] .ntp-search-slot input::placeholder,
-.shell-app[data-theme="dark"] .ntp-search-slot input::placeholder {
+html[data-theme="dark"] .ntp-search-slot input::placeholder {
   color: rgba(164, 173, 200, .8);
 }
 
 html[data-theme="dark"] .ntp-search-submit,
-.shell-app[data-theme="dark"] .ntp-search-submit,
 html[data-theme="dark"] .ntp-shortcut,
-.shell-app[data-theme="dark"] .ntp-shortcut,
-html[data-theme="dark"] .ntp-shortcut-label,
-.shell-app[data-theme="dark"] .ntp-shortcut-label {
+html[data-theme="dark"] .ntp-shortcut-label {
   color: var(--msn-primary);
 }
 
-html[data-theme="dark"] .ntp-shortcut-icon,
-.shell-app[data-theme="dark"] .ntp-shortcut-icon {
+html[data-theme="dark"] .ntp-shortcut-icon {
   border-color: rgba(255, 255, 255, .08);
   background: rgba(50, 63, 96, .65);
 }
 
-html[data-theme="dark"] .ntp-shortcut-fallback,
-.shell-app[data-theme="dark"] .ntp-shortcut-fallback {
+html[data-theme="dark"] .ntp-shortcut-fallback {
   color: var(--msn-primary);
 }
 

@@ -24,7 +24,7 @@ let width = initialWidth;
 
 function renderShell() {
   shell.dataset.scenario = scenario;
-  shell.dataset.theme = theme;
+  document.documentElement.dataset.theme = theme;
   edgeWidth.value = String(width);
   edgeWindow.style.width = `${width}px`;
   edgeWidthReadout.value = `${width} px`;

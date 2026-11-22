@@ -60,7 +60,7 @@ let scaleMode = "fit";
 function readSavedTheme() {
   try {
     const savedTheme = localStorage.getItem(themeStorageKey);
-    return ["light", "dark"].includes(savedTheme) ? savedTheme : "light";
+    return ["light", "light-warm", "dark", "dark-navy"].includes(savedTheme) ? savedTheme : "light";
   } catch (error) {
     console.error("Could not read the Windows panel theme preference.", error);
     return "light";
@@ -70,7 +70,7 @@ function readSavedTheme() {
 function applyTheme(theme, save = false) {
   document.documentElement.dataset.theme = theme;
   themeSelect.value = theme;
-  wallpaper.src = `../assets/images/windows/wallpaper-${theme === "dark" ? "dark" : "light"}.jpg`;
+  wallpaper.src = `../assets/images/windows/wallpaper-${theme === "dark" || theme === "dark-navy" ? "dark" : "light"}.jpg`;
 
   if (!save) return;
 
@@ -168,6 +168,6 @@ document.querySelector(".p2-refresh__button").addEventListener("click", () => {
 window.addEventListener("resize", updateScale);
 populateStories();
 document.documentElement.dataset.embed = String(isEmbed);
-applyTheme(isEmbed && ["light", "dark"].includes(embedTheme) ? embedTheme : readSavedTheme());
+applyTheme(isEmbed && ["light", "light-warm", "dark", "dark-navy"].includes(embedTheme) ? embedTheme : readSavedTheme());
 updateScale();
 hydrateIcons();

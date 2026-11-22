@@ -13,7 +13,7 @@
   font-family: "Segoe UI Variable Text", "Segoe UI", Selawik, system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
 }
 
-.shell-app[data-theme="dark"] {
+html:is([data-theme="dark"], [data-theme="dark-navy"]) .shell-app {
   --shell-text: #FFFFFF;
   --shell-surface: #2B2B2B;
   --tab-surface: #1F1F1F;
