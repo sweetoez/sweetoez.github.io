@@ -6,6 +6,9 @@
   <title>Knowledge Card modules — Desktop</title>
   <link rel="stylesheet" href="../assets/css/msn-components.css">
   <link rel="stylesheet" href="../assets/css/kc-components.css">
+  <script src="../assets/js/data/kc-entities.js"></script>
+  <script src="../assets/js/components/kc-module.js"></script>
+  <script src="../assets/js/components/kc-modules/text-list.js"></script>
   <style>
     * { box-sizing:border-box; }
     body { min-width:1136px; margin:0; padding:32px; background:#F2F2F2; color:#444; font-family:var(--kc-font); }
@@ -26,6 +29,16 @@
     const board = document.querySelector("#kc-board");
     const modules = [];
     const add = (section, label, cls, content, aria = "") => modules.push({ section, label, cls, content, aria });
+    const textListSamples = new Map([
+      ["Text List / Awards", ["awards", "desktop-awards"]],
+      ["Text List / Top Fact — Quantity=2", ["top-fact", "desktop-top-fact-2"]],
+      ["Text List / Top Fact — Quantity=3", ["top-fact", "desktop-top-fact-3"]],
+      ["Text List / Top Fact/Text List/Attributions", ["attributions", "desktop-attributions"]],
+      ["Text List / Quick Facts — Elements=Text Only, See more=No", ["quick-facts", "desktop-quick-facts-text-only"]],
+      ["Text List / Quick Facts — Elements=Text Only, See more=Yes", ["quick-facts", "desktop-quick-facts-see-more"]],
+      ["Text List / Quick Facts — Elements=Image, See more=No", ["quick-facts", "desktop-quick-facts-image"]],
+      ["Text List / Attribution", ["attribution", "desktop-attribution"]]
+    ]);
     const title = (text, chevron = true, width = "") => {
       const widthAttr = width ? `style="width:${width}px"` : "";
       const arrow = chevron ? '<a class="kc-link" href="#" aria-label="See all ' + text + '"><span class="kc-title-chevron"><img src="../assets/icons/ic_fluent_chevron_right_16_regular.svg" alt="" aria-hidden="true"></span></a>' : "";
@@ -204,8 +217,7 @@
 
     add("Text List", "Text List / Accolades", "kc-text-list-accolades",
       `${title("Accolades")}${["5x", "10x", "15x"].map(count => `<div class="kc-text-list-accolades__item"><div class="kc-text-list-accolades__title"><span>Accolade Title</span><span class="kc-text-list-accolades__pill">${count}</span></div><div class="kc-text-list-accolades__dates"><span class="kc-copy">2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, ...</span><button class="kc-btn-reset kc-link" type="button" aria-label="Show all years"><img src="../assets/icons/ic_fluent_add_24_regular.svg" alt="" aria-hidden="true"></button></div></div>`).join("")}`);
-    add("Text List", "Text List / Awards", "kc-text-list-awards",
-      `${title("Awards")}<div class="kc-text-list-awards__list">${[1, 2, 3].map(() => `<div class="kc-text-list-awards__award"><strong class="kc-t-highlight-s">Award Title</strong><span class="kc-copy">Wins: Year 1, Year 2. Nominations: X</span></div>`).join("")}</div>`);
+    add("Text List", "Text List / Awards", "", "");
     const songPairs = [
       [["Paper Lanterns", "3:42"], ["Slow Tide", "4:05"]],
       [["Glass Garden", "3:18"], ["Morning Static", "2:57"]],
@@ -214,21 +226,14 @@
     add("Text List", "Text List / Songs", "kc-text-list-songs",
       `${title("Songs")}<div class="kc-text-list-songs__list">${songPairs.map(row => `<div class="kc-text-list-songs__row">${row.map(([name, time]) => `<div class="kc-text-list-songs__option"><span class="kc-copy-bold">${name}</span><span class="kc-copy" style="width:60px;text-align:right">${time}</span></div>`).join("")}</div>`).join("")}</div>`);
 
-    ["2", "3"].forEach(quantity => add("Text List", `Text List / Top Fact — Quantity=${quantity}`, `kc-text-list-top-fact kc-text-list-top-fact--quantity-${quantity}`,
-      Array.from({ length: Number(quantity) }, (_, i) => `${i ? '<span class="kc-divider--v"></span>' : ""}<div class="kc-text-list-top-fact__item"><span class="kc-copy-bold">Life Span</span><strong class="kc-t-highlight-l kc-gray-copy">12 - 17</strong><span class="kc-copy">years</span></div>`).join(""), "Top facts"));
+    ["2", "3"].forEach(quantity => add("Text List", `Text List / Top Fact — Quantity=${quantity}`, "", "", ""));
 
-    add("Text List", "Text List / Top Fact/Text List/Attributions", "kc-text-list-top-fact-text-list-attributions",
-      `<p>Module images: <a href="https://unsplash.com/license">Unsplash License</a>. Data: Open Encyclopedia&nbsp; example.org&nbsp; example.net Hero image: City skyline at sunset</p>`, "Attributions");
+    add("Text List", "Text List / Top Fact/Text List/Attributions", "", "", "");
 
-    const quickFacts = `<div class="kc-text-list-quick-facts__fact"><dt class="kc-copy-bold">Fact title</dt><dd class="kc-copy">Lorem ipsum Dolor sit amet</dd></div>`;
-    add("Text List", "Text List / Quick Facts — Elements=Text Only, See more=No", "kc-text-list-quick-facts kc-text-list-quick-facts--text-only",
-      `<dl class="kc-text-list-quick-facts__list">${quickFacts.repeat(4)}</dl>`, "Quick facts");
-    add("Text List", "Text List / Quick Facts — Elements=Text Only, See more=Yes", "kc-text-list-quick-facts kc-text-list-quick-facts--text-only kc-text-list-quick-facts--see-more",
-      `<dl class="kc-text-list-quick-facts__list">${quickFacts.repeat(4)}</dl><div class="kc-text-list-quick-facts__more"><button class="kc-btn-reset kc-link" type="button" aria-expanded="false">See more</button><img src="../assets/icons/ic_fluent_chevron_down_12_regular.svg" alt="" aria-hidden="true"></div>`, "Quick facts");
-    add("Text List", "Text List / Quick Facts — Elements=Image, See more=No", "kc-text-list-quick-facts kc-text-list-quick-facts--image",
-      `<div class="kc-text-list-quick-facts__frame"><div class="kc-text-list-quick-facts__image-row"><div class="kc-text-list-quick-facts__artist">${image("text-list-quick-facts", 1, 40, 40, 50, "Avery Lane")}<div class="kc-text-list-quick-facts__pair"><span class="kc-copy-bold">Artist</span><span class="kc-copy">Avery Lane</span></div></div>${[["Album", "Northern Lights"], ["Genre", "Pop"], ["Released", "2019"], ["Duration", "4:23"]].map(x => `<div class="kc-text-list-quick-facts__pair"><span class="kc-copy-bold">${x[0]}</span><span class="kc-copy">${x[1]}</span></div>`).join("")}</div></div>`, "Quick facts");
-    add("Text List", "Text List / Attribution", "kc-text-list-attribution",
-      `<p class="kc-copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut ...</p>`, "Attribution");
+    add("Text List", "Text List / Quick Facts — Elements=Text Only, See more=No", "", "", "");
+    add("Text List", "Text List / Quick Facts — Elements=Text Only, See more=Yes", "", "", "");
+    add("Text List", "Text List / Quick Facts — Elements=Image, See more=No", "", "", "");
+    add("Text List", "Text List / Attribution", "", "", "");
 
     add("Videos", "Videos / Trailer", "kc-videos-trailer",
       `${title("Movie trailer")}<div class="kc-videos-trailer__frame">${image("videos-trailer", 1, 432, 242, 6, "The Long Field trailer")}<button class="kc-btn-on-image kc-videos-trailer__play" type="button" aria-label="Play trailer"><img src="../assets/icons/ic_fluent_play_24_filled.svg" alt="" aria-hidden="true"></button></div>`);
@@ -285,11 +290,17 @@
         const label = document.createElement("p");
         label.className = "kc-board-label";
         label.textContent = item.label;
-        const root = document.createElement("section");
-        root.className = `kc-module ${item.cls}`;
-        root.dataset.kc = item.label.split(" — ")[0];
-        if (item.aria) root.setAttribute("aria-label", item.aria);
-        root.innerHTML = item.content;
+        const sample = textListSamples.get(item.label);
+        const root = document.createElement(sample ? "kc-module" : "section");
+        if (sample) {
+          root.setAttribute("type", sample[0]);
+          root.setAttribute("variant", sample[1]);
+        } else {
+          root.className = `kc-module ${item.cls}`;
+          root.dataset.kc = item.label.split(" — ")[0];
+          if (item.aria) root.setAttribute("aria-label", item.aria);
+          root.innerHTML = item.content;
+        }
         wrapper.append(label, root);
         grid.append(wrapper);
       }

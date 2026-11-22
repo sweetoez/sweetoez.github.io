@@ -127,7 +127,113 @@ window.KC_ENTITIES = {
             "years"
           ],
           "images": [],
-          "slots": []
+          "slots": [],
+          "platform": "desktop",
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": [
+                  "kc-module",
+                  "kc-text-list-top-fact",
+                  "kc-text-list-top-fact--quantity-2"
+                ],
+                "id": "kc-animal-desktop-mod-1",
+                "data-kc": "Text List / Top Fact",
+                "data-kc-variant": "Quantity=2",
+                "aria-label": "Koi lifespan and length"
+              }
+            },
+            "content": {
+              "items": [
+                {
+                  "attributes": {
+                    "class": [
+                      "kc-text-list-top-fact__item"
+                    ]
+                  },
+                  "fields": [
+                    {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-copy-bold"
+                        ]
+                      },
+                      "text": "Life Span"
+                    },
+                    {
+                      "tag": "strong",
+                      "attributes": {
+                        "class": [
+                          "kc-t-highlight-l",
+                          "kc-gray-copy"
+                        ]
+                      },
+                      "text": "12 - 17"
+                    },
+                    {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-copy"
+                        ]
+                      },
+                      "text": "years"
+                    }
+                  ]
+                },
+                {
+                  "attributes": {
+                    "class": [
+                      "kc-text-list-top-fact__item"
+                    ]
+                  },
+                  "fields": [
+                    {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-copy-bold"
+                        ]
+                      },
+                      "text": "Life Span"
+                    },
+                    {
+                      "tag": "strong",
+                      "attributes": {
+                        "class": [
+                          "kc-t-highlight-l",
+                          "kc-gray-copy"
+                        ]
+                      },
+                      "text": "12 - 17"
+                    },
+                    {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-copy"
+                        ]
+                      },
+                      "text": "years"
+                    }
+                  ]
+                }
+              ],
+              "slot": null,
+              "separator": {
+                "tag": "span",
+                "attributes": {
+                  "class": [
+                    "kc-divider--v"
+                  ],
+                  "aria-hidden": "true"
+                }
+              },
+              "separatorCount": 1
+            }
+          }
         },
         {
           "type": "interesting-facts",
@@ -201,7 +307,47 @@ window.KC_ENTITIES = {
             ". Data: en.wikipedia.org · anothersite.com · coolfacts.com. Hero image: Koi in a pond (Getty Images)"
           ],
           "images": [],
-          "slots": []
+          "slots": [],
+          "platform": "desktop",
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": [
+                  "kc-module",
+                  "kc-text-list-top-fact-text-list-attributions",
+                  "kc-module--card-last"
+                ],
+                "id": "kc-animal-desktop-mod-5",
+                "data-kc": "Text List / Top Fact/Text List/Attributions",
+                "aria-label": "Attributions"
+              }
+            },
+            "content": {
+              "paragraphs": [
+                {
+                  "attributes": {},
+                  "segments": [
+                    {
+                      "kind": "text",
+                      "value": "Module images: "
+                    },
+                    {
+                      "kind": "link",
+                      "attributes": {
+                        "href": "https://unsplash.com/license"
+                      },
+                      "value": "Unsplash License"
+                    },
+                    {
+                      "kind": "text",
+                      "value": ". Data: en.wikipedia.org · anothersite.com · coolfacts.com. Hero image: Koi in a pond (Getty Images)"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
         }
       ]
     },
@@ -392,7 +538,113 @@ window.KC_ENTITIES = {
               "role": "background"
             }
           ],
-          "slots": []
+          "slots": [],
+          "platform": "mobile",
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": [
+                  "kc-module",
+                  "kc-module--mobile",
+                  "kc-mobile-text-list-top-fact",
+                  "kc-mobile-text-list-top-fact--2"
+                ],
+                "id": "kc-animal-mobile-mod-2",
+                "data-kc": "Mobile / Text List / Top Fact",
+                "data-kc-variant": "Quantity=2",
+                "aria-label": "Koi lifespan",
+                "style": "background-color:var(--kc-placeholder);background-image:url('../assets/images/kc/modules/animal/animal-mobile-top-fact-bg-01.png');background-size:cover;background-position:center;background-repeat:no-repeat"
+              }
+            },
+            "content": {
+              "items": [
+                {
+                  "attributes": {
+                    "class": [
+                      "kc-mobile-text-list-top-fact__item"
+                    ]
+                  },
+                  "fields": [
+                    {
+                      "tag": "strong",
+                      "attributes": {
+                        "class": [
+                          "kc-m-bold"
+                        ]
+                      },
+                      "text": "Life Span"
+                    },
+                    {
+                      "tag": "strong",
+                      "attributes": {
+                        "class": [
+                          "kc-m-num"
+                        ]
+                      },
+                      "text": "12 - 17"
+                    },
+                    {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-m-reg"
+                        ]
+                      },
+                      "text": "years"
+                    }
+                  ]
+                },
+                {
+                  "attributes": {
+                    "class": [
+                      "kc-mobile-text-list-top-fact__item"
+                    ]
+                  },
+                  "fields": [
+                    {
+                      "tag": "strong",
+                      "attributes": {
+                        "class": [
+                          "kc-m-bold"
+                        ]
+                      },
+                      "text": "Life Span"
+                    },
+                    {
+                      "tag": "strong",
+                      "attributes": {
+                        "class": [
+                          "kc-m-num"
+                        ]
+                      },
+                      "text": "12 - 17"
+                    },
+                    {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-m-reg"
+                        ]
+                      },
+                      "text": "years"
+                    }
+                  ]
+                }
+              ],
+              "slot": null,
+              "separator": {
+                "tag": "span",
+                "attributes": {
+                  "class": [
+                    "kc-divider--v"
+                  ],
+                  "aria-hidden": "true"
+                }
+              },
+              "separatorCount": 1
+            }
+          }
         },
         {
           "type": "interesting-facts",
@@ -486,7 +738,50 @@ window.KC_ENTITIES = {
           ],
           "images": [],
           "slots": [],
-          "seeMore": true
+          "seeMore": true,
+          "platform": "mobile",
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": [
+                  "kc-module",
+                  "kc-module--mobile",
+                  "kc-mobile-text-list-attribution"
+                ],
+                "id": "kc-animal-mobile-mod-7",
+                "data-kc": "Mobile / Text List / Attribution",
+                "aria-label": "Attribution"
+              }
+            },
+            "content": {
+              "paragraphs": [
+                {
+                  "attributes": {},
+                  "segments": [
+                    {
+                      "kind": "text",
+                      "value": "Module images: "
+                    },
+                    {
+                      "kind": "link",
+                      "attributes": {
+                        "class": [
+                          "kc-m-text-button"
+                        ],
+                        "href": "https://unsplash.com/license"
+                      },
+                      "value": "Unsplash License"
+                    },
+                    {
+                      "kind": "text",
+                      "value": ". Data: en.wikipedia.org · anothersite.com · coolfacts.com. Hero image: Koi in a pond (Getty Images)"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
         }
       ]
     }
@@ -645,7 +940,115 @@ window.KC_ENTITIES = {
               "alt": "Flag of India"
             }
           ],
-          "slots": []
+          "slots": [],
+          "platform": "desktop",
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": [
+                  "kc-module",
+                  "kc-text-list-top-fact",
+                  "kc-text-list-top-fact--with-image"
+                ],
+                "id": "kc-country-mod-1",
+                "data-kc": "Text List / Top Fact",
+                "aria-label": "Capital and population"
+              }
+            },
+            "content": {
+              "items": [
+                {
+                  "attributes": {
+                    "class": [
+                      "kc-text-list-top-fact__item"
+                    ]
+                  },
+                  "fields": [
+                    {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-copy-bold"
+                        ]
+                      },
+                      "text": "Capital"
+                    },
+                    {
+                      "tag": "strong",
+                      "attributes": {
+                        "class": [
+                          "kc-t-highlight-l",
+                          "kc-gray-copy"
+                        ]
+                      },
+                      "text": "New Delhi"
+                    }
+                  ]
+                },
+                {
+                  "attributes": {
+                    "class": [
+                      "kc-text-list-top-fact__item"
+                    ]
+                  },
+                  "fields": [
+                    {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-copy-bold"
+                        ]
+                      },
+                      "text": "Population"
+                    },
+                    {
+                      "tag": "strong",
+                      "attributes": {
+                        "class": [
+                          "kc-t-highlight-l",
+                          "kc-gray-copy"
+                        ]
+                      },
+                      "text": "1.4 billion"
+                    }
+                  ]
+                }
+              ],
+              "slot": {
+                "attributes": {
+                  "class": [
+                    "kc-country-top-fact__flag-slot"
+                  ]
+                },
+                "frame": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-img",
+                      "kc-country-top-fact__flag",
+                      "kc-img--cover"
+                    ]
+                  }
+                },
+                "image": {
+                  "src": "../assets/images/kc/modules/country/country-desktop-top-fact-flag-01.png",
+                  "alt": "Flag of India",
+                  "onerror": "this.style.display='none'"
+                }
+              },
+              "separator": {
+                "tag": "span",
+                "attributes": {
+                  "class": [
+                    "kc-divider--v"
+                  ],
+                  "aria-hidden": "true"
+                }
+              },
+              "separatorCount": 2
+            }
+          }
         },
         {
           "type": "map",
@@ -732,7 +1135,150 @@ window.KC_ENTITIES = {
             "8 territories"
           ],
           "images": [],
-          "slots": []
+          "slots": [],
+          "platform": "desktop",
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": [
+                  "kc-module",
+                  "kc-text-list-top-fact",
+                  "kc-text-list-top-fact--quantity-3"
+                ],
+                "id": "kc-country-mod-5",
+                "data-kc": "Text List / Top Fact",
+                "aria-label": "Area, languages, and states"
+              }
+            },
+            "content": {
+              "items": [
+                {
+                  "attributes": {
+                    "class": [
+                      "kc-text-list-top-fact__item"
+                    ]
+                  },
+                  "fields": [
+                    {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-copy-bold"
+                        ]
+                      },
+                      "text": "Area"
+                    },
+                    {
+                      "tag": "strong",
+                      "attributes": {
+                        "class": [
+                          "kc-t-highlight-l",
+                          "kc-gray-copy"
+                        ]
+                      },
+                      "text": "3.29M"
+                    },
+                    {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-copy"
+                        ]
+                      },
+                      "text": "km²"
+                    }
+                  ]
+                },
+                {
+                  "attributes": {
+                    "class": [
+                      "kc-text-list-top-fact__item"
+                    ]
+                  },
+                  "fields": [
+                    {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-copy-bold"
+                        ]
+                      },
+                      "text": "Languages"
+                    },
+                    {
+                      "tag": "strong",
+                      "attributes": {
+                        "class": [
+                          "kc-t-highlight-l",
+                          "kc-gray-copy"
+                        ]
+                      },
+                      "text": "22"
+                    },
+                    {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-copy"
+                        ]
+                      },
+                      "text": "scheduled"
+                    }
+                  ]
+                },
+                {
+                  "attributes": {
+                    "class": [
+                      "kc-text-list-top-fact__item"
+                    ]
+                  },
+                  "fields": [
+                    {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-copy-bold"
+                        ]
+                      },
+                      "text": "States"
+                    },
+                    {
+                      "tag": "strong",
+                      "attributes": {
+                        "class": [
+                          "kc-t-highlight-l",
+                          "kc-gray-copy"
+                        ]
+                      },
+                      "text": "28"
+                    },
+                    {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-copy",
+                          "kc-country-top-fact__sub-label--uppercase"
+                        ]
+                      },
+                      "text": "8 territories"
+                    }
+                  ]
+                }
+              ],
+              "slot": null,
+              "separator": {
+                "tag": "span",
+                "attributes": {
+                  "class": [
+                    "kc-divider--v"
+                  ],
+                  "aria-hidden": "true"
+                }
+              },
+              "separatorCount": 2
+            }
+          }
         },
         {
           "type": "timeline",
@@ -769,7 +1315,79 @@ window.KC_ENTITIES = {
             ". Hero image: Holy town Varanasi and the river Ganges (Photo agency)"
           ],
           "images": [],
-          "slots": []
+          "slots": [],
+          "platform": "desktop",
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": [
+                  "kc-module",
+                  "kc-text-list-top-fact-text-list-attributions"
+                ],
+                "id": "kc-country-mod-7",
+                "data-kc": "Text List / Top Fact/Text List/Attributions",
+                "aria-label": "Attributions"
+              }
+            },
+            "content": {
+              "paragraphs": [
+                {
+                  "attributes": {},
+                  "segments": [
+                    {
+                      "kind": "text",
+                      "value": "Module images: "
+                    },
+                    {
+                      "kind": "link",
+                      "attributes": {
+                        "href": "https://unsplash.com/license"
+                      },
+                      "value": "Unsplash License"
+                    },
+                    {
+                      "kind": "text",
+                      "value": ". Data: "
+                    },
+                    {
+                      "kind": "link",
+                      "attributes": {
+                        "href": "https://example.org/"
+                      },
+                      "value": "example.org"
+                    },
+                    {
+                      "kind": "text",
+                      "value": " · "
+                    },
+                    {
+                      "kind": "link",
+                      "attributes": {
+                        "href": "https://anothersite.com/"
+                      },
+                      "value": "anothersite.com"
+                    },
+                    {
+                      "kind": "text",
+                      "value": " · "
+                    },
+                    {
+                      "kind": "link",
+                      "attributes": {
+                        "href": "https://coolfacts.com/"
+                      },
+                      "value": "coolfacts.com"
+                    },
+                    {
+                      "kind": "text",
+                      "value": ". Hero image: Holy town Varanasi and the river Ganges (Photo agency)"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
         }
       ]
     },
@@ -991,7 +1609,94 @@ window.KC_ENTITIES = {
             "1.4 billion"
           ],
           "images": [],
-          "slots": []
+          "slots": [],
+          "platform": "mobile",
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": [
+                  "kc-module",
+                  "kc-module--mobile",
+                  "kc-mobile-text-list-top-fact",
+                  "kc-mobile-text-list-top-fact--2"
+                ],
+                "id": "kc-country-mobile-mod-2",
+                "data-kc": "Mobile / Text List / Top Fact",
+                "data-kc-variant": "Quantity=2",
+                "aria-label": "Capital and population"
+              }
+            },
+            "content": {
+              "items": [
+                {
+                  "attributes": {
+                    "class": [
+                      "kc-mobile-text-list-top-fact__item"
+                    ]
+                  },
+                  "fields": [
+                    {
+                      "tag": "strong",
+                      "attributes": {
+                        "class": [
+                          "kc-m-bold"
+                        ]
+                      },
+                      "text": "Capital"
+                    },
+                    {
+                      "tag": "strong",
+                      "attributes": {
+                        "class": [
+                          "kc-m-num"
+                        ]
+                      },
+                      "text": "New Delhi"
+                    }
+                  ]
+                },
+                {
+                  "attributes": {
+                    "class": [
+                      "kc-mobile-text-list-top-fact__item"
+                    ]
+                  },
+                  "fields": [
+                    {
+                      "tag": "strong",
+                      "attributes": {
+                        "class": [
+                          "kc-m-bold"
+                        ]
+                      },
+                      "text": "Population"
+                    },
+                    {
+                      "tag": "strong",
+                      "attributes": {
+                        "class": [
+                          "kc-m-num"
+                        ]
+                      },
+                      "text": "1.4 billion"
+                    }
+                  ]
+                }
+              ],
+              "slot": null,
+              "separator": {
+                "tag": "span",
+                "attributes": {
+                  "class": [
+                    "kc-divider--v"
+                  ],
+                  "aria-hidden": "true"
+                }
+              },
+              "separatorCount": 1
+            }
+          }
         },
         {
           "type": "map",
@@ -1080,7 +1785,149 @@ window.KC_ENTITIES = {
             "8 territories"
           ],
           "images": [],
-          "slots": []
+          "slots": [],
+          "platform": "mobile",
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": [
+                  "kc-module",
+                  "kc-module--mobile",
+                  "kc-mobile-text-list-top-fact",
+                  "kc-mobile-text-list-top-fact--3"
+                ],
+                "id": "kc-country-mobile-mod-6",
+                "data-kc": "Mobile / Text List / Top Fact",
+                "data-kc-variant": "Quantity=3",
+                "aria-label": "Area, languages, and states"
+              }
+            },
+            "content": {
+              "items": [
+                {
+                  "attributes": {
+                    "class": [
+                      "kc-mobile-text-list-top-fact__item"
+                    ]
+                  },
+                  "fields": [
+                    {
+                      "tag": "strong",
+                      "attributes": {
+                        "class": [
+                          "kc-m-bold"
+                        ]
+                      },
+                      "text": "Area"
+                    },
+                    {
+                      "tag": "strong",
+                      "attributes": {
+                        "class": [
+                          "kc-m-num"
+                        ]
+                      },
+                      "text": "3.29M"
+                    },
+                    {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-m-reg"
+                        ]
+                      },
+                      "text": "km²"
+                    }
+                  ]
+                },
+                {
+                  "attributes": {
+                    "class": [
+                      "kc-mobile-text-list-top-fact__item"
+                    ]
+                  },
+                  "fields": [
+                    {
+                      "tag": "strong",
+                      "attributes": {
+                        "class": [
+                          "kc-m-bold"
+                        ]
+                      },
+                      "text": "Languages"
+                    },
+                    {
+                      "tag": "strong",
+                      "attributes": {
+                        "class": [
+                          "kc-m-num"
+                        ]
+                      },
+                      "text": "22"
+                    },
+                    {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-m-reg"
+                        ]
+                      },
+                      "text": "scheduled"
+                    }
+                  ]
+                },
+                {
+                  "attributes": {
+                    "class": [
+                      "kc-mobile-text-list-top-fact__item"
+                    ]
+                  },
+                  "fields": [
+                    {
+                      "tag": "strong",
+                      "attributes": {
+                        "class": [
+                          "kc-m-bold"
+                        ]
+                      },
+                      "text": "States"
+                    },
+                    {
+                      "tag": "strong",
+                      "attributes": {
+                        "class": [
+                          "kc-m-num"
+                        ]
+                      },
+                      "text": "28"
+                    },
+                    {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-m-reg",
+                          "kc-country-top-fact__sub-label--uppercase"
+                        ]
+                      },
+                      "text": "8 territories"
+                    }
+                  ]
+                }
+              ],
+              "slot": null,
+              "separator": {
+                "tag": "span",
+                "attributes": {
+                  "class": [
+                    "kc-divider--v"
+                  ],
+                  "aria-hidden": "true"
+                }
+              },
+              "separatorCount": 2
+            }
+          }
         },
         {
           "type": "timeline",
@@ -1114,7 +1961,92 @@ window.KC_ENTITIES = {
           ],
           "images": [],
           "slots": [],
-          "seeMore": true
+          "seeMore": true,
+          "platform": "mobile",
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": [
+                  "kc-module",
+                  "kc-module--mobile",
+                  "kc-mobile-text-list-attribution"
+                ],
+                "id": "kc-country-mobile-mod-8",
+                "data-kc": "Mobile / Text List / Attribution",
+                "aria-label": "Attribution"
+              }
+            },
+            "content": {
+              "paragraphs": [
+                {
+                  "attributes": {},
+                  "segments": [
+                    {
+                      "kind": "text",
+                      "value": "Module images: "
+                    },
+                    {
+                      "kind": "link",
+                      "attributes": {
+                        "class": [
+                          "kc-m-text-button"
+                        ],
+                        "href": "https://unsplash.com/license"
+                      },
+                      "value": "Unsplash License"
+                    },
+                    {
+                      "kind": "text",
+                      "value": ". Data: "
+                    },
+                    {
+                      "kind": "link",
+                      "attributes": {
+                        "class": [
+                          "kc-m-text-button"
+                        ],
+                        "href": "https://example.org/"
+                      },
+                      "value": "example.org"
+                    },
+                    {
+                      "kind": "text",
+                      "value": " · "
+                    },
+                    {
+                      "kind": "link",
+                      "attributes": {
+                        "class": [
+                          "kc-m-text-button"
+                        ],
+                        "href": "https://anothersite.com/"
+                      },
+                      "value": "anothersite.com"
+                    },
+                    {
+                      "kind": "text",
+                      "value": " · "
+                    },
+                    {
+                      "kind": "link",
+                      "attributes": {
+                        "class": [
+                          "kc-m-text-button"
+                        ],
+                        "href": "https://coolfacts.com/"
+                      },
+                      "value": "coolfacts.com"
+                    },
+                    {
+                      "kind": "text",
+                      "value": ". Hero image: Holy town Varanasi and the river Ganges (Photo agency)"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
         }
       ]
     }
@@ -1282,7 +2214,150 @@ window.KC_ENTITIES = {
             "years"
           ],
           "images": [],
-          "slots": []
+          "slots": [],
+          "platform": "desktop",
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": [
+                  "kc-module",
+                  "kc-text-list-top-fact",
+                  "kc-text-list-top-fact--quantity-3"
+                ],
+                "id": "kc-state-mod-1",
+                "data-kc": "Text List / Top Fact",
+                "aria-label": "Top facts"
+              }
+            },
+            "content": {
+              "items": [
+                {
+                  "attributes": {
+                    "class": [
+                      "kc-text-list-top-fact__item"
+                    ]
+                  },
+                  "fields": [
+                    {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-copy-bold"
+                        ]
+                      },
+                      "text": "Life Span"
+                    },
+                    {
+                      "tag": "strong",
+                      "attributes": {
+                        "class": [
+                          "kc-t-highlight-l",
+                          "kc-gray-copy"
+                        ]
+                      },
+                      "text": "12 - 17"
+                    },
+                    {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-copy",
+                          "state-hidden-year"
+                        ]
+                      },
+                      "text": "years"
+                    }
+                  ]
+                },
+                {
+                  "attributes": {
+                    "class": [
+                      "kc-text-list-top-fact__item"
+                    ]
+                  },
+                  "fields": [
+                    {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-copy-bold"
+                        ]
+                      },
+                      "text": "Life Span"
+                    },
+                    {
+                      "tag": "strong",
+                      "attributes": {
+                        "class": [
+                          "kc-t-highlight-l",
+                          "kc-gray-copy"
+                        ]
+                      },
+                      "text": "12 - 17"
+                    },
+                    {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-copy"
+                        ]
+                      },
+                      "text": "years"
+                    }
+                  ]
+                },
+                {
+                  "attributes": {
+                    "class": [
+                      "kc-text-list-top-fact__item"
+                    ]
+                  },
+                  "fields": [
+                    {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-copy-bold"
+                        ]
+                      },
+                      "text": "Life Span"
+                    },
+                    {
+                      "tag": "strong",
+                      "attributes": {
+                        "class": [
+                          "kc-t-highlight-l",
+                          "kc-gray-copy"
+                        ]
+                      },
+                      "text": "12 - 17"
+                    },
+                    {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-copy"
+                        ]
+                      },
+                      "text": "years"
+                    }
+                  ]
+                }
+              ],
+              "slot": null,
+              "separator": {
+                "tag": "span",
+                "attributes": {
+                  "class": [
+                    "kc-divider--v"
+                  ],
+                  "aria-hidden": "true"
+                }
+              },
+              "separatorCount": 2
+            }
+          }
         },
         {
           "type": "map",
@@ -1370,7 +2445,35 @@ window.KC_ENTITIES = {
             "Images: Getty Images. Data: en.wikipedia.org · anothersite.com · coolfacts.com Hero image: Holy town Varanasi and the river Ganges"
           ],
           "images": [],
-          "slots": []
+          "slots": [],
+          "platform": "desktop",
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": [
+                  "kc-module",
+                  "kc-text-list-top-fact-text-list-attributions"
+                ],
+                "id": "kc-state-mod-6",
+                "data-kc": "Text List / Top Fact/Text List/Attributions",
+                "aria-label": "Attributions"
+              }
+            },
+            "content": {
+              "paragraphs": [
+                {
+                  "attributes": {},
+                  "segments": [
+                    {
+                      "kind": "text",
+                      "value": "Images: Getty Images. Data: en.wikipedia.org · anothersite.com · coolfacts.com Hero image: Holy town Varanasi and the river Ganges"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
         }
       ]
     },
@@ -1625,7 +2728,137 @@ window.KC_ENTITIES = {
             "years"
           ],
           "images": [],
-          "slots": []
+          "slots": [],
+          "platform": "mobile",
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": [
+                  "kc-module",
+                  "kc-module--mobile",
+                  "kc-mobile-text-list-top-fact",
+                  "kc-mobile-text-list-top-fact--3"
+                ],
+                "data-kc": "Mobile / Text List / Top Fact",
+                "aria-label": "Top facts"
+              }
+            },
+            "content": {
+              "items": [
+                {
+                  "attributes": {
+                    "class": [
+                      "kc-mobile-text-list-top-fact__item"
+                    ]
+                  },
+                  "fields": [
+                    {
+                      "tag": "strong",
+                      "attributes": {
+                        "class": [
+                          "kc-m-bold"
+                        ]
+                      },
+                      "text": "Life Span"
+                    },
+                    {
+                      "tag": "strong",
+                      "attributes": {
+                        "class": [
+                          "kc-m-num"
+                        ]
+                      },
+                      "text": "12 - 17"
+                    }
+                  ]
+                },
+                {
+                  "attributes": {
+                    "class": [
+                      "kc-mobile-text-list-top-fact__item"
+                    ]
+                  },
+                  "fields": [
+                    {
+                      "tag": "strong",
+                      "attributes": {
+                        "class": [
+                          "kc-m-bold"
+                        ]
+                      },
+                      "text": "Life Span"
+                    },
+                    {
+                      "tag": "strong",
+                      "attributes": {
+                        "class": [
+                          "kc-m-num"
+                        ]
+                      },
+                      "text": "12 - 17"
+                    },
+                    {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-m-reg"
+                        ]
+                      },
+                      "text": "years"
+                    }
+                  ]
+                },
+                {
+                  "attributes": {
+                    "class": [
+                      "kc-mobile-text-list-top-fact__item"
+                    ]
+                  },
+                  "fields": [
+                    {
+                      "tag": "strong",
+                      "attributes": {
+                        "class": [
+                          "kc-m-bold"
+                        ]
+                      },
+                      "text": "Life Span"
+                    },
+                    {
+                      "tag": "strong",
+                      "attributes": {
+                        "class": [
+                          "kc-m-num"
+                        ]
+                      },
+                      "text": "12 - 17"
+                    },
+                    {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-m-reg"
+                        ]
+                      },
+                      "text": "years"
+                    }
+                  ]
+                }
+              ],
+              "slot": null,
+              "separator": {
+                "tag": "span",
+                "attributes": {
+                  "class": [
+                    "kc-divider--v"
+                  ],
+                  "aria-hidden": "true"
+                }
+              },
+              "separatorCount": 2
+            }
+          }
         },
         {
           "type": "map",
@@ -1709,7 +2942,35 @@ window.KC_ENTITIES = {
             "Images: Getty Images. Data: en.wikipedia.org · anothersite.com · coolfacts.com Hero image: Holy town Varanasi and the river Ganges"
           ],
           "images": [],
-          "slots": []
+          "slots": [],
+          "platform": "mobile",
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": [
+                  "kc-module",
+                  "kc-module--mobile",
+                  "kc-mobile-text-list-attribution",
+                  "kc-module--card-last"
+                ],
+                "aria-label": "Attribution"
+              }
+            },
+            "content": {
+              "paragraphs": [
+                {
+                  "attributes": {},
+                  "segments": [
+                    {
+                      "kind": "text",
+                      "value": "Images: Getty Images. Data: en.wikipedia.org · anothersite.com · coolfacts.com Hero image: Holy town Varanasi and the river Ganges"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
         }
       ]
     }
@@ -1876,7 +3137,140 @@ window.KC_ENTITIES = {
             "Years"
           ],
           "images": [],
-          "slots": []
+          "slots": [],
+          "platform": "desktop",
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": [
+                  "kc-module",
+                  "kc-text-list-top-fact",
+                  "kc-text-list-top-fact--quantity-3"
+                ],
+                "id": "kc-city-mod-1",
+                "data-kc": "Text List / Top Fact",
+                "aria-label": "Life span"
+              }
+            },
+            "content": {
+              "items": [
+                {
+                  "attributes": {
+                    "class": [
+                      "kc-text-list-top-fact__item"
+                    ]
+                  },
+                  "fields": [
+                    {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-copy-bold"
+                        ]
+                      },
+                      "text": "Life Span"
+                    },
+                    {
+                      "tag": "strong",
+                      "attributes": {
+                        "class": [
+                          "kc-t-highlight-l",
+                          "kc-gray-copy"
+                        ]
+                      },
+                      "text": "12 - 17"
+                    },
+                    {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-copy"
+                        ]
+                      },
+                      "text": "years"
+                    }
+                  ]
+                },
+                {
+                  "attributes": {
+                    "class": [
+                      "kc-text-list-top-fact__item"
+                    ]
+                  },
+                  "fields": [
+                    {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-copy-bold"
+                        ]
+                      },
+                      "text": "Life Span"
+                    },
+                    {
+                      "tag": "strong",
+                      "attributes": {
+                        "class": [
+                          "kc-t-highlight-l",
+                          "kc-gray-copy"
+                        ]
+                      },
+                      "text": "12 - 17"
+                    }
+                  ]
+                },
+                {
+                  "attributes": {
+                    "class": [
+                      "kc-text-list-top-fact__item"
+                    ]
+                  },
+                  "fields": [
+                    {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-copy-bold"
+                        ]
+                      },
+                      "text": "Life Span"
+                    },
+                    {
+                      "tag": "strong",
+                      "attributes": {
+                        "class": [
+                          "kc-t-highlight-l",
+                          "kc-gray-copy"
+                        ]
+                      },
+                      "text": "12 - 17"
+                    },
+                    {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-copy"
+                        ]
+                      },
+                      "text": "Years"
+                    }
+                  ]
+                }
+              ],
+              "slot": null,
+              "separator": {
+                "tag": "span",
+                "attributes": {
+                  "class": [
+                    "kc-divider--v"
+                  ],
+                  "aria-hidden": "true"
+                }
+              },
+              "separatorCount": 2
+            }
+          }
         },
         {
           "type": "map",
@@ -2014,7 +3408,35 @@ window.KC_ENTITIES = {
             "Images: Getty Images. Data: en.wikipedia.org · anothersite.com · coolfacts.com Hero image: Holy town Varanasi and the river Ganges"
           ],
           "images": [],
-          "slots": []
+          "slots": [],
+          "platform": "desktop",
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": [
+                  "kc-module",
+                  "kc-text-list-top-fact-text-list-attributions"
+                ],
+                "id": "kc-city-mod-8",
+                "data-kc": "Text List / Top Fact/Text List/Attributions",
+                "aria-label": "Attributions"
+              }
+            },
+            "content": {
+              "paragraphs": [
+                {
+                  "attributes": {},
+                  "segments": [
+                    {
+                      "kind": "text",
+                      "value": "Images: Getty Images. Data: en.wikipedia.org · anothersite.com · coolfacts.com Hero image: Holy town Varanasi and the river Ganges"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
         }
       ]
     },
@@ -2200,7 +3622,197 @@ window.KC_ENTITIES = {
             "See more"
           ],
           "images": [],
-          "slots": []
+          "slots": [],
+          "platform": "mobile",
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": [
+                  "kc-module",
+                  "kc-module--mobile",
+                  "kc-mobile-text-list-quick-facts",
+                  "kc-mobile-text-list-quick-facts--see-more"
+                ],
+                "id": "kc-city-mobile-facts",
+                "data-kc": "Mobile / Text List / Quick Facts",
+                "aria-label": "Quick facts about San Francisco"
+              }
+            },
+            "content": {
+              "photoSlot": null,
+              "list": {
+                "tag": "div",
+                "attributes": {
+                  "class": [
+                    "kc-mobile-text-list-quick-facts__list"
+                  ],
+                  "role": "list"
+                },
+                "items": [
+                  {
+                    "attributes": {
+                      "class": [
+                        "kc-mobile-text-list-quick-facts__fact"
+                      ],
+                      "role": "listitem"
+                    },
+                    "label": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-m-bold"
+                        ]
+                      },
+                      "text": "Fact title"
+                    },
+                    "value": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-m-reg"
+                        ]
+                      },
+                      "text": "Lorem ipsum · Dolor sit amet"
+                    }
+                  },
+                  {
+                    "attributes": {
+                      "class": [
+                        "kc-mobile-text-list-quick-facts__fact"
+                      ],
+                      "role": "listitem"
+                    },
+                    "label": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-m-bold"
+                        ]
+                      },
+                      "text": "Fact title"
+                    },
+                    "value": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-m-reg"
+                        ]
+                      },
+                      "text": "Lorem ipsum · Dolor sit amet"
+                    }
+                  },
+                  {
+                    "attributes": {
+                      "class": [
+                        "kc-mobile-text-list-quick-facts__fact"
+                      ],
+                      "role": "listitem"
+                    },
+                    "label": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-m-bold"
+                        ]
+                      },
+                      "text": "Fact title"
+                    },
+                    "value": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-m-reg"
+                        ]
+                      },
+                      "text": "Lorem ipsum · Dolor sit amet"
+                    }
+                  },
+                  {
+                    "attributes": {
+                      "class": [
+                        "kc-mobile-text-list-quick-facts__fact"
+                      ],
+                      "role": "listitem"
+                    },
+                    "label": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-m-bold"
+                        ]
+                      },
+                      "text": "Fact title"
+                    },
+                    "value": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-m-reg"
+                        ]
+                      },
+                      "text": "Lorem ipsum · Dolor sit amet"
+                    }
+                  }
+                ],
+                "separator": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-mobile-text-list-quick-facts__line"
+                    ],
+                    "role": "presentation"
+                  }
+                },
+                "separatorsAfter": [
+                  0,
+                  1,
+                  2
+                ]
+              },
+              "imageRow": null,
+              "more": {
+                "attributes": {
+                  "class": [
+                    "kc-mobile-text-list-quick-facts__more"
+                  ]
+                },
+                "button": {
+                  "tag": "button",
+                  "attributes": {
+                    "class": [
+                      "kc-btn-reset",
+                      "kc-m-text-button"
+                    ],
+                    "type": "button",
+                    "aria-expanded": "false",
+                    "aria-controls": "kc-city-mobile-more",
+                    "data-city-more": ""
+                  },
+                  "text": "See more"
+                },
+                "icon": {
+                  "tag": "svg",
+                  "attributes": {
+                    "width": "12",
+                    "height": "12",
+                    "viewbox": "0 0 12 12",
+                    "aria-hidden": "true",
+                    "focusable": "false"
+                  },
+                  "children": [
+                    {
+                      "tag": "path",
+                      "attributes": {
+                        "d": "M2.14645 4.64645C2.34171 4.45118 2.65829 4.45118 2.85355 4.64645L6 7.79289L9.14645 4.64645C9.34171 4.45118 9.65829 4.45118 9.85355 4.64645C10.0488 4.84171 10.0488 5.15829 9.85355 5.35355L6.35355 8.85355C6.15829 9.04882 5.84171 9.04882 5.64645 8.85355L2.14645 5.35355C1.95118 5.15829 1.95118 4.84171 2.14645 4.64645Z",
+                        "fill": "currentColor"
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
         },
         {
           "type": "map",
@@ -2308,7 +3920,36 @@ window.KC_ENTITIES = {
             "Images: Getty Images. Data: en.wikipedia.org · anothersite.com · coolfacts.com Hero image: Holy town Varanasi and the river Ganges"
           ],
           "images": [],
-          "slots": []
+          "slots": [],
+          "platform": "mobile",
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": [
+                  "kc-module",
+                  "kc-module--mobile",
+                  "kc-mobile-text-list-attribution"
+                ],
+                "id": "kc-city-mobile-attribution",
+                "data-kc": "Mobile / Text List / Attribution",
+                "aria-label": "Attribution"
+              }
+            },
+            "content": {
+              "paragraphs": [
+                {
+                  "attributes": {},
+                  "segments": [
+                    {
+                      "kind": "text",
+                      "value": "Images: Getty Images. Data: en.wikipedia.org · anothersite.com · coolfacts.com Hero image: Holy town Varanasi and the river Ganges"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
         }
       ]
     }
@@ -2523,7 +4164,141 @@ window.KC_ENTITIES = {
             "2003–present"
           ],
           "images": [],
-          "slots": []
+          "slots": [],
+          "platform": "desktop",
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": [
+                  "kc-module",
+                  "kc-text-list-quick-facts",
+                  "kc-text-list-quick-facts--text-only"
+                ],
+                "id": "kc-artist-mod-1",
+                "data-kc": "Text List / Quick Facts",
+                "data-kc-variant": "Text Only, See more=No",
+                "aria-label": "Quick facts about Janelle Monáe"
+              }
+            },
+            "content": {
+              "photoSlot": null,
+              "list": {
+                "tag": "dl",
+                "attributes": {
+                  "class": [
+                    "kc-text-list-quick-facts__list"
+                  ]
+                },
+                "items": [
+                  {
+                    "attributes": {
+                      "class": [
+                        "kc-text-list-quick-facts__fact"
+                      ]
+                    },
+                    "label": {
+                      "tag": "dt",
+                      "attributes": {
+                        "class": [
+                          "kc-copy-bold"
+                        ]
+                      },
+                      "text": "Born"
+                    },
+                    "value": {
+                      "tag": "dd",
+                      "attributes": {
+                        "class": [
+                          "kc-copy"
+                        ]
+                      },
+                      "text": "December 1, 1985 · Kansas City, Kansas"
+                    }
+                  },
+                  {
+                    "attributes": {
+                      "class": [
+                        "kc-text-list-quick-facts__fact"
+                      ]
+                    },
+                    "label": {
+                      "tag": "dt",
+                      "attributes": {
+                        "class": [
+                          "kc-copy-bold"
+                        ]
+                      },
+                      "text": "Genres"
+                    },
+                    "value": {
+                      "tag": "dd",
+                      "attributes": {
+                        "class": [
+                          "kc-copy"
+                        ]
+                      },
+                      "text": "R&B, soul, funk, and pop"
+                    }
+                  },
+                  {
+                    "attributes": {
+                      "class": [
+                        "kc-text-list-quick-facts__fact"
+                      ]
+                    },
+                    "label": {
+                      "tag": "dt",
+                      "attributes": {
+                        "class": [
+                          "kc-copy-bold"
+                        ]
+                      },
+                      "text": "Labels"
+                    },
+                    "value": {
+                      "tag": "dd",
+                      "attributes": {
+                        "class": [
+                          "kc-copy"
+                        ]
+                      },
+                      "text": "Bad Boy, Wondaland, Atlantic"
+                    }
+                  },
+                  {
+                    "attributes": {
+                      "class": [
+                        "kc-text-list-quick-facts__fact"
+                      ]
+                    },
+                    "label": {
+                      "tag": "dt",
+                      "attributes": {
+                        "class": [
+                          "kc-copy-bold"
+                        ]
+                      },
+                      "text": "Active"
+                    },
+                    "value": {
+                      "tag": "dd",
+                      "attributes": {
+                        "class": [
+                          "kc-copy"
+                        ]
+                      },
+                      "text": "2003–present"
+                    }
+                  }
+                ],
+                "separator": null,
+                "separatorsAfter": []
+              },
+              "imageRow": null,
+              "more": null
+            }
+          }
         },
         {
           "type": "listen",
@@ -2642,7 +4417,150 @@ window.KC_ENTITIES = {
             "Wins: 1 · Nominations: 13"
           ],
           "images": [],
-          "slots": []
+          "slots": [],
+          "platform": "desktop",
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": [
+                  "kc-module",
+                  "kc-text-list-awards"
+                ],
+                "id": "kc-artist-mod-6",
+                "data-kc": "Text List / Awards",
+                "aria-labelledby": "kc-artist-awards-title"
+              }
+            },
+            "content": {
+              "heading": {
+                "tag": "div",
+                "attributes": {
+                  "class": [
+                    "kc-module-title"
+                  ]
+                },
+                "title": {
+                  "tag": "h3",
+                  "attributes": {
+                    "id": "kc-artist-awards-title"
+                  },
+                  "text": "Awards"
+                },
+                "decoration": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-title-chevron"
+                    ],
+                    "aria-hidden": "true"
+                  },
+                  "wrapper": null,
+                  "icon": {
+                    "tag": "svg",
+                    "attributes": {
+                      "width": "16",
+                      "height": "16",
+                      "viewbox": "0 0 16 16",
+                      "fill": "none",
+                      "xmlns": "http://www.w3.org/2000/svg"
+                    },
+                    "children": [
+                      {
+                        "tag": "path",
+                        "attributes": {
+                          "d": "M5.64645 3.14645C5.45118 3.34171 5.45118 3.65829 5.64645 3.85355L9.79289 8L5.64645 12.1464C5.45118 12.3417 5.45118 12.6583 5.64645 12.8536C5.84171 13.0488 6.15829 13.0488 6.35355 12.8536L10.8536 8.35355C11.0488 8.15829 11.0488 7.84171 10.8536 7.64645L6.35355 3.14645C6.15829 2.95118 5.84171 2.95118 5.64645 3.14645Z",
+                          "fill": "currentColor"
+                        }
+                      }
+                    ]
+                  }
+                }
+              },
+              "list": {
+                "tag": "div",
+                "attributes": {
+                  "class": [
+                    "kc-text-list-awards__list"
+                  ]
+                },
+                "items": [
+                  {
+                    "tag": "div",
+                    "attributes": {
+                      "class": [
+                        "kc-text-list-awards__award"
+                      ]
+                    },
+                    "fields": [
+                      {
+                        "tag": "strong",
+                        "attributes": {},
+                        "text": "Grammy Awards"
+                      },
+                      {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-copy"
+                          ]
+                        },
+                        "text": "Wins: 0 · Nominations: 10"
+                      }
+                    ]
+                  },
+                  {
+                    "tag": "div",
+                    "attributes": {
+                      "class": [
+                        "kc-text-list-awards__award"
+                      ]
+                    },
+                    "fields": [
+                      {
+                        "tag": "strong",
+                        "attributes": {},
+                        "text": "MTV Video Music Awards"
+                      },
+                      {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-copy"
+                          ]
+                        },
+                        "text": "Wins: 1 · Nominations: 7"
+                      }
+                    ]
+                  },
+                  {
+                    "tag": "div",
+                    "attributes": {
+                      "class": [
+                        "kc-text-list-awards__award"
+                      ]
+                    },
+                    "fields": [
+                      {
+                        "tag": "strong",
+                        "attributes": {},
+                        "text": "NAACP Image Awards"
+                      },
+                      {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-copy"
+                          ]
+                        },
+                        "text": "Wins: 1 · Nominations: 13"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          }
         },
         {
           "type": "main",
@@ -2694,7 +4612,47 @@ window.KC_ENTITIES = {
             ". Data: en.wikipedia.org · GRAMMY.com. Hero image: Janelle Monáe (Getty Images)"
           ],
           "images": [],
-          "slots": []
+          "slots": [],
+          "platform": "desktop",
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": [
+                  "kc-module",
+                  "kc-text-list-top-fact-text-list-attributions",
+                  "kc-module--card-last"
+                ],
+                "id": "kc-artist-mod-8",
+                "data-kc": "Attributions",
+                "aria-label": "Attributions"
+              }
+            },
+            "content": {
+              "paragraphs": [
+                {
+                  "attributes": {},
+                  "segments": [
+                    {
+                      "kind": "text",
+                      "value": "Module photos: "
+                    },
+                    {
+                      "kind": "link",
+                      "attributes": {
+                        "href": "https://unsplash.com/license"
+                      },
+                      "value": "Unsplash License"
+                    },
+                    {
+                      "kind": "text",
+                      "value": ". Data: en.wikipedia.org · GRAMMY.com. Hero image: Janelle Monáe (Getty Images)"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
         }
       ]
     },
@@ -2956,7 +4914,200 @@ window.KC_ENTITIES = {
             "See more"
           ],
           "images": [],
-          "slots": []
+          "slots": [],
+          "platform": "mobile",
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": [
+                  "kc-module",
+                  "kc-module--mobile",
+                  "kc-mobile-text-list-quick-facts",
+                  "kc-mobile-text-list-quick-facts--see-more"
+                ],
+                "id": "kc-artist-mobile-mod-facts",
+                "data-kc": "Mobile / Text List / Quick Facts",
+                "data-kc-variant": "Elements=Text Only, See more=Yes",
+                "aria-label": "Quick facts about Janelle Monáe"
+              }
+            },
+            "content": {
+              "photoSlot": null,
+              "list": {
+                "tag": "div",
+                "attributes": {
+                  "class": [
+                    "kc-mobile-text-list-quick-facts__list"
+                  ],
+                  "role": "list"
+                },
+                "items": [
+                  {
+                    "attributes": {
+                      "class": [
+                        "kc-mobile-text-list-quick-facts__fact"
+                      ],
+                      "role": "listitem"
+                    },
+                    "label": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-m-bold"
+                        ]
+                      },
+                      "text": "Born"
+                    },
+                    "value": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-m-reg"
+                        ]
+                      },
+                      "text": "December 1, 1985 · Kansas City, Kansas"
+                    }
+                  },
+                  {
+                    "attributes": {
+                      "class": [
+                        "kc-mobile-text-list-quick-facts__fact"
+                      ],
+                      "role": "listitem"
+                    },
+                    "label": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-m-bold"
+                        ]
+                      },
+                      "text": "Genres"
+                    },
+                    "value": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-m-reg"
+                        ]
+                      },
+                      "text": "R&B, soul, funk, and pop"
+                    }
+                  },
+                  {
+                    "attributes": {
+                      "class": [
+                        "kc-mobile-text-list-quick-facts__fact"
+                      ],
+                      "role": "listitem"
+                    },
+                    "label": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-m-bold"
+                        ]
+                      },
+                      "text": "Labels"
+                    },
+                    "value": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-m-reg"
+                        ]
+                      },
+                      "text": "Bad Boy, Wondaland, Atlantic"
+                    }
+                  },
+                  {
+                    "attributes": {
+                      "class": [
+                        "kc-mobile-text-list-quick-facts__fact"
+                      ],
+                      "id": "kc-artist-mobile-extra-facts",
+                      "role": "listitem",
+                      "data-extra-fact": "",
+                      "hidden": ""
+                    },
+                    "label": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-m-bold"
+                        ]
+                      },
+                      "text": "Active"
+                    },
+                    "value": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-m-reg"
+                        ]
+                      },
+                      "text": "2003–present"
+                    }
+                  }
+                ],
+                "separator": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-mobile-text-list-quick-facts__line"
+                    ],
+                    "role": "presentation"
+                  }
+                },
+                "separatorsAfter": [
+                  0,
+                  1,
+                  2,
+                  3
+                ]
+              },
+              "imageRow": null,
+              "more": {
+                "attributes": {
+                  "class": [
+                    "kc-mobile-text-list-quick-facts__more"
+                  ]
+                },
+                "button": {
+                  "tag": "button",
+                  "attributes": {
+                    "class": [
+                      "kc-btn-reset",
+                      "kc-m-text-button"
+                    ],
+                    "type": "button",
+                    "aria-expanded": "false",
+                    "aria-controls": "kc-artist-mobile-extra-facts"
+                  },
+                  "text": "See more"
+                },
+                "icon": {
+                  "tag": "svg",
+                  "attributes": {
+                    "width": "12",
+                    "height": "12",
+                    "viewbox": "0 0 12 12",
+                    "aria-hidden": "true",
+                    "focusable": "false"
+                  },
+                  "children": [
+                    {
+                      "tag": "use",
+                      "attributes": {
+                        "href": "#kc-artist-icon-chevron-down"
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
         },
         {
           "type": "news",
@@ -3115,7 +5266,133 @@ window.KC_ENTITIES = {
           ],
           "images": [],
           "slots": [],
-          "seeMore": true
+          "seeMore": true,
+          "platform": "mobile",
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": [
+                  "kc-module",
+                  "kc-module--mobile",
+                  "kc-mobile-reviews-awards"
+                ],
+                "id": "kc-artist-mobile-mod-awards",
+                "data-kc": "Mobile / Text List / Awards",
+                "aria-label": "Awards"
+              }
+            },
+            "content": {
+              "heading": {
+                "tag": "div",
+                "attributes": {
+                  "class": [
+                    "kc-module-title"
+                  ]
+                },
+                "title": {
+                  "tag": "h3",
+                  "attributes": {},
+                  "text": "Awards"
+                },
+                "decoration": null
+              },
+              "list": {
+                "tag": "div",
+                "attributes": {
+                  "class": [
+                    "kc-mobile-reviews-awards__list"
+                  ]
+                },
+                "items": [
+                  {
+                    "tag": "div",
+                    "attributes": {
+                      "class": [
+                        "kc-mobile-reviews-awards__award"
+                      ]
+                    },
+                    "fields": [
+                      {
+                        "tag": "strong",
+                        "attributes": {
+                          "class": [
+                            "kc-m-title"
+                          ]
+                        },
+                        "text": "Grammy Awards"
+                      },
+                      {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-m-reg"
+                          ]
+                        },
+                        "text": "Wins: 0 · Nominations: 10"
+                      }
+                    ]
+                  },
+                  {
+                    "tag": "div",
+                    "attributes": {
+                      "class": [
+                        "kc-mobile-reviews-awards__award"
+                      ]
+                    },
+                    "fields": [
+                      {
+                        "tag": "strong",
+                        "attributes": {
+                          "class": [
+                            "kc-m-title"
+                          ]
+                        },
+                        "text": "MTV Video Music Awards"
+                      },
+                      {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-m-reg"
+                          ]
+                        },
+                        "text": "Wins: 1 · Nominations: 7"
+                      }
+                    ]
+                  },
+                  {
+                    "tag": "div",
+                    "attributes": {
+                      "class": [
+                        "kc-mobile-reviews-awards__award"
+                      ]
+                    },
+                    "fields": [
+                      {
+                        "tag": "strong",
+                        "attributes": {
+                          "class": [
+                            "kc-m-title"
+                          ]
+                        },
+                        "text": "NAACP Image Awards"
+                      },
+                      {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-m-reg"
+                          ]
+                        },
+                        "text": "Wins: 1 · Nominations: 13"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          }
         },
         {
           "type": "main",
@@ -3172,7 +5449,36 @@ window.KC_ENTITIES = {
           ],
           "images": [],
           "slots": [],
-          "seeMore": true
+          "seeMore": true,
+          "platform": "mobile",
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": [
+                  "kc-module",
+                  "kc-module--mobile",
+                  "kc-mobile-text-list-attribution"
+                ],
+                "id": "kc-artist-mobile-mod-attribution",
+                "data-kc": "Mobile / Text List / Attribution",
+                "aria-label": "Attribution"
+              }
+            },
+            "content": {
+              "paragraphs": [
+                {
+                  "attributes": {},
+                  "segments": [
+                    {
+                      "kind": "text",
+                      "value": "Hero image: Janelle Monáe"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
         }
       ]
     }
@@ -3419,7 +5725,179 @@ window.KC_ENTITIES = {
             "See more"
           ],
           "images": [],
-          "slots": []
+          "slots": [],
+          "platform": "desktop",
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": [
+                  "kc-module",
+                  "kc-text-list-quick-facts",
+                  "kc-text-list-quick-facts--text-only",
+                  "kc-text-list-quick-facts--see-more"
+                ],
+                "id": "kc-actor-mod-facts",
+                "data-kc": "Text List / Quick Facts",
+                "aria-label": "Quick facts about Pharrell Williams"
+              }
+            },
+            "content": {
+              "photoSlot": null,
+              "list": {
+                "tag": "dl",
+                "attributes": {
+                  "class": [
+                    "kc-text-list-quick-facts__list"
+                  ]
+                },
+                "items": [
+                  {
+                    "attributes": {
+                      "class": [
+                        "kc-text-list-quick-facts__fact"
+                      ]
+                    },
+                    "label": {
+                      "tag": "dt",
+                      "attributes": {
+                        "class": [
+                          "kc-copy-bold"
+                        ]
+                      },
+                      "text": "Role"
+                    },
+                    "value": {
+                      "tag": "dd",
+                      "attributes": {
+                        "class": [
+                          "kc-copy"
+                        ]
+                      },
+                      "text": "Musician and producer"
+                    }
+                  },
+                  {
+                    "attributes": {
+                      "class": [
+                        "kc-text-list-quick-facts__fact"
+                      ]
+                    },
+                    "label": {
+                      "tag": "dt",
+                      "attributes": {
+                        "class": [
+                          "kc-copy-bold"
+                        ]
+                      },
+                      "text": "Awards"
+                    },
+                    "value": {
+                      "tag": "dd",
+                      "attributes": {
+                        "class": [
+                          "kc-copy"
+                        ]
+                      },
+                      "text": "13 Grammy Awards"
+                    }
+                  },
+                  {
+                    "attributes": {
+                      "class": [
+                        "kc-text-list-quick-facts__fact"
+                      ]
+                    },
+                    "label": {
+                      "tag": "dt",
+                      "attributes": {
+                        "class": [
+                          "kc-copy-bold"
+                        ]
+                      },
+                      "text": "Song"
+                    },
+                    "value": {
+                      "tag": "dd",
+                      "attributes": {
+                        "class": [
+                          "kc-copy"
+                        ]
+                      },
+                      "text": "“Happy”"
+                    }
+                  },
+                  {
+                    "attributes": {
+                      "class": [
+                        "kc-text-list-quick-facts__fact"
+                      ]
+                    },
+                    "label": {
+                      "tag": "dt",
+                      "attributes": {
+                        "class": [
+                          "kc-copy-bold"
+                        ]
+                      },
+                      "text": "Known for"
+                    },
+                    "value": {
+                      "tag": "dd",
+                      "attributes": {
+                        "class": [
+                          "kc-copy"
+                        ]
+                      },
+                      "text": "Music and production"
+                    }
+                  }
+                ],
+                "separator": null,
+                "separatorsAfter": []
+              },
+              "imageRow": null,
+              "more": {
+                "attributes": {
+                  "class": [
+                    "kc-text-list-quick-facts__more"
+                  ]
+                },
+                "button": {
+                  "tag": "button",
+                  "attributes": {
+                    "class": [
+                      "kc-btn-reset",
+                      "kc-link"
+                    ],
+                    "type": "button"
+                  },
+                  "text": "See more"
+                },
+                "icon": {
+                  "tag": "svg",
+                  "attributes": {
+                    "width": "12",
+                    "height": "12",
+                    "viewbox": "0 0 12 12",
+                    "fill": "none",
+                    "xmlns": "http://www.w3.org/2000/svg",
+                    "aria-hidden": "true",
+                    "focusable": "false"
+                  },
+                  "children": [
+                    {
+                      "tag": "path",
+                      "attributes": {
+                        "d": "M2.14645 4.64645C2.34171 4.45118 2.65829 4.45118 2.85355 4.64645L6 7.79289L9.14645 4.64645C9.34171 4.45118 9.65829 4.45118 9.85355 4.64645C10.0488 4.84171 10.0488 5.15829 9.85355 5.35355L6.35355 8.85355C6.15829 9.04882 5.84171 9.04882 5.64645 8.85355L2.14645 5.35355C1.95118 5.15829 1.95118 4.84171 2.14645 4.64645Z",
+                        "fill": "currentColor"
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
         },
         {
           "type": "listen",
@@ -3578,7 +6056,36 @@ window.KC_ENTITIES = {
             "Hero image: Pharrell Williams"
           ],
           "images": [],
-          "slots": []
+          "slots": [],
+          "platform": "desktop",
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": [
+                  "kc-module",
+                  "kc-text-list-top-fact-text-list-attributions",
+                  "kc-module--card-last"
+                ],
+                "id": "kc-actor-mod-attributions",
+                "data-kc": "Attributions",
+                "aria-label": "Attributions"
+              }
+            },
+            "content": {
+              "paragraphs": [
+                {
+                  "attributes": {},
+                  "segments": [
+                    {
+                      "kind": "text",
+                      "value": "Hero image: Pharrell Williams"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
         }
       ]
     },
@@ -3839,7 +6346,199 @@ window.KC_ENTITIES = {
             "See more"
           ],
           "images": [],
-          "slots": []
+          "slots": [],
+          "platform": "mobile",
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": [
+                  "kc-module",
+                  "kc-module--mobile",
+                  "kc-mobile-text-list-quick-facts",
+                  "kc-mobile-text-list-quick-facts--see-more"
+                ],
+                "id": "kc-actor-mobile-mod-facts",
+                "data-kc": "Mobile / Text List / Quick Facts",
+                "data-kc-variant": "Elements=Text Only, See more=Yes",
+                "aria-label": "Quick facts about Pharrell Williams"
+              }
+            },
+            "content": {
+              "photoSlot": null,
+              "list": {
+                "tag": "div",
+                "attributes": {
+                  "class": [
+                    "kc-mobile-text-list-quick-facts__list"
+                  ],
+                  "role": "list"
+                },
+                "items": [
+                  {
+                    "attributes": {
+                      "class": [
+                        "kc-mobile-text-list-quick-facts__fact"
+                      ],
+                      "role": "listitem"
+                    },
+                    "label": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-m-bold"
+                        ]
+                      },
+                      "text": "Role"
+                    },
+                    "value": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-m-reg"
+                        ]
+                      },
+                      "text": "Musician and producer"
+                    }
+                  },
+                  {
+                    "attributes": {
+                      "class": [
+                        "kc-mobile-text-list-quick-facts__fact",
+                        "kc-actor-mobile__fact--highlight"
+                      ],
+                      "role": "listitem"
+                    },
+                    "label": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-m-bold"
+                        ]
+                      },
+                      "text": "Awards"
+                    },
+                    "value": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-m-reg"
+                        ]
+                      },
+                      "text": "13 Grammy Awards"
+                    }
+                  },
+                  {
+                    "attributes": {
+                      "class": [
+                        "kc-mobile-text-list-quick-facts__fact"
+                      ],
+                      "role": "listitem"
+                    },
+                    "label": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-m-bold"
+                        ]
+                      },
+                      "text": "Song"
+                    },
+                    "value": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-m-reg"
+                        ]
+                      },
+                      "text": "“Happy”"
+                    }
+                  },
+                  {
+                    "attributes": {
+                      "class": [
+                        "kc-mobile-text-list-quick-facts__fact"
+                      ],
+                      "role": "listitem"
+                    },
+                    "label": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-m-bold"
+                        ]
+                      },
+                      "text": "Known for"
+                    },
+                    "value": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-m-reg"
+                        ]
+                      },
+                      "text": "Music and production"
+                    }
+                  }
+                ],
+                "separator": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-mobile-text-list-quick-facts__line"
+                    ],
+                    "role": "presentation"
+                  }
+                },
+                "separatorsAfter": [
+                  0,
+                  1,
+                  2,
+                  3
+                ]
+              },
+              "imageRow": null,
+              "more": {
+                "attributes": {
+                  "class": [
+                    "kc-mobile-text-list-quick-facts__more"
+                  ]
+                },
+                "button": {
+                  "tag": "button",
+                  "attributes": {
+                    "class": [
+                      "kc-btn-reset",
+                      "kc-m-text-button"
+                    ],
+                    "type": "button"
+                  },
+                  "text": "See more"
+                },
+                "icon": {
+                  "tag": "svg",
+                  "attributes": {
+                    "width": "12",
+                    "height": "12",
+                    "viewbox": "0 0 12 12",
+                    "fill": "none",
+                    "xmlns": "http://www.w3.org/2000/svg",
+                    "aria-hidden": "true",
+                    "focusable": "false"
+                  },
+                  "children": [
+                    {
+                      "tag": "path",
+                      "attributes": {
+                        "d": "M2.14645 4.64645C2.34171 4.45118 2.65829 4.45118 2.85355 4.64645L6 7.79289L9.14645 4.64645C9.34171 4.45118 9.65829 4.45118 9.85355 4.64645C10.0488 4.84171 10.0488 5.15829 9.85355 5.35355L6.35355 8.85355C6.15829 9.04882 5.84171 9.04882 5.64645 8.85355L2.14645 5.35355C1.95118 5.15829 1.95118 4.84171 2.14645 4.64645Z",
+                        "fill": "currentColor"
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
         },
         {
           "type": "listen",
@@ -4007,7 +6706,36 @@ window.KC_ENTITIES = {
           ],
           "images": [],
           "slots": [],
-          "seeMore": true
+          "seeMore": true,
+          "platform": "mobile",
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": [
+                  "kc-module",
+                  "kc-module--mobile",
+                  "kc-mobile-text-list-attribution"
+                ],
+                "id": "kc-actor-mobile-mod-attributions",
+                "data-kc": "Mobile / Text List / Attribution",
+                "aria-label": "Attribution"
+              }
+            },
+            "content": {
+              "paragraphs": [
+                {
+                  "attributes": {},
+                  "segments": [
+                    {
+                      "kind": "text",
+                      "value": "Hero image: Pharrell Williams"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
         }
       ]
     }
@@ -4303,7 +7031,148 @@ window.KC_ENTITIES = {
             "Wins: Year 1, Year 2. Nominations: X"
           ],
           "images": [],
-          "slots": []
+          "slots": [],
+          "platform": "desktop",
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": [
+                  "kc-module",
+                  "kc-text-list-awards"
+                ],
+                "id": "kc-band-desktop-mod-awards",
+                "data-kc": "Text List / Awards",
+                "aria-labelledby": "kc-band-desktop-awards-title"
+              }
+            },
+            "content": {
+              "heading": {
+                "tag": "div",
+                "attributes": {
+                  "class": [
+                    "kc-module-title"
+                  ]
+                },
+                "title": {
+                  "tag": "h3",
+                  "attributes": {
+                    "id": "kc-band-desktop-awards-title"
+                  },
+                  "text": "Awards"
+                },
+                "decoration": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-title-chevron"
+                    ],
+                    "aria-hidden": "true"
+                  },
+                  "wrapper": null,
+                  "icon": {
+                    "tag": "svg",
+                    "attributes": {
+                      "width": "16",
+                      "height": "16",
+                      "viewbox": "0 0 16 16",
+                      "focusable": "false"
+                    },
+                    "children": [
+                      {
+                        "tag": "use",
+                        "attributes": {
+                          "href": "#kc-band-chevron-right"
+                        }
+                      }
+                    ]
+                  }
+                }
+              },
+              "list": {
+                "tag": "div",
+                "attributes": {
+                  "class": [
+                    "kc-text-list-awards__list"
+                  ]
+                },
+                "items": [
+                  {
+                    "tag": "div",
+                    "attributes": {
+                      "class": [
+                        "kc-text-list-awards__award"
+                      ]
+                    },
+                    "fields": [
+                      {
+                        "tag": "strong",
+                        "attributes": {},
+                        "text": "Award Title"
+                      },
+                      {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-copy"
+                          ]
+                        },
+                        "text": "Wins: Year 1, Year 2. Nominations: X"
+                      }
+                    ]
+                  },
+                  {
+                    "tag": "div",
+                    "attributes": {
+                      "class": [
+                        "kc-text-list-awards__award"
+                      ]
+                    },
+                    "fields": [
+                      {
+                        "tag": "strong",
+                        "attributes": {},
+                        "text": "Award Title"
+                      },
+                      {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-copy"
+                          ]
+                        },
+                        "text": "Wins: Year 1, Year 2. Nominations: X"
+                      }
+                    ]
+                  },
+                  {
+                    "tag": "div",
+                    "attributes": {
+                      "class": [
+                        "kc-text-list-awards__award"
+                      ]
+                    },
+                    "fields": [
+                      {
+                        "tag": "strong",
+                        "attributes": {},
+                        "text": "Award Title"
+                      },
+                      {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-copy"
+                          ]
+                        },
+                        "text": "Wins: Year 1, Year 2. Nominations: X"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          }
         },
         {
           "type": "attributions",
@@ -4313,7 +7182,35 @@ window.KC_ENTITIES = {
             "Images: Getty Images. Data: en.wikipedia.org · anothersite.com · coolfacts.com Hero image: Holy town Varanasi and the river Ganges"
           ],
           "images": [],
-          "slots": []
+          "slots": [],
+          "platform": "desktop",
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": [
+                  "kc-module",
+                  "kc-text-list-top-fact-text-list-attributions"
+                ],
+                "id": "kc-band-desktop-mod-attribution",
+                "data-kc": "Text List / Top Fact/Text List/Attributions",
+                "aria-label": "Attributions"
+              }
+            },
+            "content": {
+              "paragraphs": [
+                {
+                  "attributes": {},
+                  "segments": [
+                    {
+                      "kind": "text",
+                      "value": "Images: Getty Images. Data: en.wikipedia.org · anothersite.com · coolfacts.com Hero image: Holy town Varanasi and the river Ganges"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
         }
       ]
     },
@@ -4575,7 +7472,195 @@ window.KC_ENTITIES = {
             "See more"
           ],
           "images": [],
-          "slots": []
+          "slots": [],
+          "platform": "mobile",
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": [
+                  "kc-module",
+                  "kc-module--mobile",
+                  "kc-mobile-text-list-quick-facts",
+                  "kc-mobile-text-list-quick-facts--see-more"
+                ],
+                "id": "kc-band-mobile-facts",
+                "data-kc": "Mobile / Text List / Quick Facts",
+                "data-kc-variant": "See more=Yes",
+                "aria-label": "Quick facts about Red Hot Chili Peppers"
+              }
+            },
+            "content": {
+              "photoSlot": null,
+              "list": {
+                "tag": "div",
+                "attributes": {
+                  "class": [
+                    "kc-mobile-text-list-quick-facts__list"
+                  ],
+                  "role": "list"
+                },
+                "items": [
+                  {
+                    "attributes": {
+                      "class": [
+                        "kc-mobile-text-list-quick-facts__fact"
+                      ],
+                      "role": "listitem"
+                    },
+                    "label": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-m-bold"
+                        ]
+                      },
+                      "text": "Fact title"
+                    },
+                    "value": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-m-reg"
+                        ]
+                      },
+                      "text": "Lorem ipsum · Dolor sit amet"
+                    }
+                  },
+                  {
+                    "attributes": {
+                      "class": [
+                        "kc-mobile-text-list-quick-facts__fact"
+                      ],
+                      "role": "listitem"
+                    },
+                    "label": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-m-bold"
+                        ]
+                      },
+                      "text": "Fact title"
+                    },
+                    "value": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-m-reg"
+                        ]
+                      },
+                      "text": "Lorem ipsum · Dolor sit amet"
+                    }
+                  },
+                  {
+                    "attributes": {
+                      "class": [
+                        "kc-mobile-text-list-quick-facts__fact"
+                      ],
+                      "role": "listitem"
+                    },
+                    "label": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-m-bold"
+                        ]
+                      },
+                      "text": "Fact title"
+                    },
+                    "value": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-m-reg"
+                        ]
+                      },
+                      "text": "Lorem ipsum · Dolor sit amet"
+                    }
+                  },
+                  {
+                    "attributes": {
+                      "class": [
+                        "kc-mobile-text-list-quick-facts__fact"
+                      ],
+                      "role": "listitem"
+                    },
+                    "label": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-m-bold"
+                        ]
+                      },
+                      "text": "Fact title"
+                    },
+                    "value": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-m-reg"
+                        ]
+                      },
+                      "text": "Lorem ipsum · Dolor sit amet"
+                    }
+                  }
+                ],
+                "separator": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-mobile-text-list-quick-facts__line"
+                    ],
+                    "role": "presentation"
+                  }
+                },
+                "separatorsAfter": [
+                  0,
+                  1,
+                  2,
+                  3
+                ]
+              },
+              "imageRow": null,
+              "more": {
+                "attributes": {
+                  "class": [
+                    "kc-mobile-text-list-quick-facts__more"
+                  ]
+                },
+                "button": {
+                  "tag": "button",
+                  "attributes": {
+                    "class": [
+                      "kc-btn-reset",
+                      "kc-m-text-button"
+                    ],
+                    "type": "button"
+                  },
+                  "text": "See more"
+                },
+                "icon": {
+                  "tag": "svg",
+                  "attributes": {
+                    "width": "12",
+                    "height": "12",
+                    "viewbox": "0 0 12 12",
+                    "aria-hidden": "true",
+                    "focusable": "false"
+                  },
+                  "children": [
+                    {
+                      "tag": "use",
+                      "attributes": {
+                        "href": "#kc-band-icon-chevron-down"
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
         },
         {
           "type": "listen",
@@ -4651,7 +7736,36 @@ window.KC_ENTITIES = {
             "Images: Getty Images. Data: en.wikipedia.org · anothersite.com · coolfacts.com Hero image: Holy town Varanasi and the river Ganges"
           ],
           "images": [],
-          "slots": []
+          "slots": [],
+          "platform": "mobile",
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": [
+                  "kc-module",
+                  "kc-module--mobile",
+                  "kc-mobile-text-list-attribution"
+                ],
+                "id": "kc-band-mobile-attribution",
+                "data-kc": "Mobile / Text List / Attribution",
+                "aria-label": "Attribution"
+              }
+            },
+            "content": {
+              "paragraphs": [
+                {
+                  "attributes": {},
+                  "segments": [
+                    {
+                      "kind": "text",
+                      "value": "Images: Getty Images. Data: en.wikipedia.org · anothersite.com · coolfacts.com Hero image: Holy town Varanasi and the river Ganges"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
         }
       ]
     }
@@ -4896,7 +8010,35 @@ window.KC_ENTITIES = {
             "Images: Getty Images. Data: en.wikipedia.org · anothersite.com · coolfacts.com Hero image: Holy town Varanasi and the river Ganges"
           ],
           "images": [],
-          "slots": []
+          "slots": [],
+          "platform": "desktop",
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": [
+                  "kc-module",
+                  "kc-text-list-top-fact-text-list-attributions"
+                ],
+                "id": "kc-food-mod-5",
+                "data-kc": "Text List / Top Fact/Text List/Attributions",
+                "aria-label": "Attributions"
+              }
+            },
+            "content": {
+              "paragraphs": [
+                {
+                  "attributes": {},
+                  "segments": [
+                    {
+                      "kind": "text",
+                      "value": "Images: Getty Images. Data: en.wikipedia.org · anothersite.com · coolfacts.com Hero image: Holy town Varanasi and the river Ganges"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
         }
       ]
     },
@@ -5118,7 +8260,37 @@ window.KC_ENTITIES = {
             "Images: Getty Images. Data: en.wikipedia.org · anothersite.com · coolfacts.com Hero image: Holy town Varanasi and the river Ganges"
           ],
           "images": [],
-          "slots": []
+          "slots": [],
+          "platform": "mobile",
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": [
+                  "kc-module",
+                  "kc-module--mobile",
+                  "kc-mobile-text-list-attribution",
+                  "kc-module--card-last"
+                ],
+                "id": "kc-food-mobile-attribution",
+                "data-kc": "Mobile / Text List / Attribution",
+                "aria-label": "Attribution"
+              }
+            },
+            "content": {
+              "paragraphs": [
+                {
+                  "attributes": {},
+                  "segments": [
+                    {
+                      "kind": "text",
+                      "value": "Images: Getty Images. Data: en.wikipedia.org · anothersite.com · coolfacts.com Hero image: Holy town Varanasi and the river Ganges"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
         }
       ]
     }
@@ -5327,7 +8499,35 @@ window.KC_ENTITIES = {
             "Images: Getty Images. Data: en.wikipedia.org · anothersite.com · coolfacts.com Hero image: Holy town Varanasi and the river Ganges"
           ],
           "images": [],
-          "slots": []
+          "slots": [],
+          "platform": "desktop",
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": [
+                  "kc-module",
+                  "kc-text-list-top-fact-text-list-attributions"
+                ],
+                "id": "kc-ingredient-mod-4",
+                "data-kc": "Text List / Top Fact/Text List/Attributions",
+                "aria-label": "Attributions"
+              }
+            },
+            "content": {
+              "paragraphs": [
+                {
+                  "attributes": {},
+                  "segments": [
+                    {
+                      "kind": "text",
+                      "value": "Images: Getty Images. Data: en.wikipedia.org · anothersite.com · coolfacts.com Hero image: Holy town Varanasi and the river Ganges"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
         }
       ]
     },
@@ -5623,7 +8823,37 @@ window.KC_ENTITIES = {
             "Images: Getty Images. Data: en.wikipedia.org · anothersite.com · coolfacts.com Hero image: Holy town Varanasi and the river Ganges"
           ],
           "images": [],
-          "slots": []
+          "slots": [],
+          "platform": "mobile",
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": [
+                  "kc-module",
+                  "kc-module--mobile",
+                  "kc-mobile-text-list-attribution",
+                  "kc-module--card-last"
+                ],
+                "id": "kc-ingredient-mobile-attribution",
+                "data-kc": "Mobile / Text List / Attribution",
+                "aria-label": "Attribution"
+              }
+            },
+            "content": {
+              "paragraphs": [
+                {
+                  "attributes": {},
+                  "segments": [
+                    {
+                      "kind": "text",
+                      "value": "Images: Getty Images. Data: en.wikipedia.org · anothersite.com · coolfacts.com Hero image: Holy town Varanasi and the river Ganges"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
         }
       ]
     }
@@ -5785,7 +9015,149 @@ window.KC_ENTITIES = {
             "Earths"
           ],
           "images": [],
-          "slots": []
+          "slots": [],
+          "platform": "desktop",
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": [
+                  "kc-module",
+                  "kc-text-list-top-fact",
+                  "kc-text-list-top-fact--quantity-3"
+                ],
+                "id": "kc-planet-desktop-mod-fact-one",
+                "data-kc": "Text List / Top Fact",
+                "aria-label": "Jupiter day, year, and mass"
+              }
+            },
+            "content": {
+              "items": [
+                {
+                  "attributes": {
+                    "class": [
+                      "kc-text-list-top-fact__item"
+                    ]
+                  },
+                  "fields": [
+                    {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-copy-bold"
+                        ]
+                      },
+                      "text": "Day"
+                    },
+                    {
+                      "tag": "strong",
+                      "attributes": {
+                        "class": [
+                          "kc-t-highlight-l",
+                          "kc-gray-copy"
+                        ]
+                      },
+                      "text": "9 h 56"
+                    },
+                    {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-copy"
+                        ]
+                      },
+                      "text": "min"
+                    }
+                  ]
+                },
+                {
+                  "attributes": {
+                    "class": [
+                      "kc-text-list-top-fact__item"
+                    ]
+                  },
+                  "fields": [
+                    {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-copy-bold"
+                        ]
+                      },
+                      "text": "Year"
+                    },
+                    {
+                      "tag": "strong",
+                      "attributes": {
+                        "class": [
+                          "kc-t-highlight-l",
+                          "kc-gray-copy"
+                        ]
+                      },
+                      "text": "11.86"
+                    },
+                    {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-copy"
+                        ]
+                      },
+                      "text": "Earth years"
+                    }
+                  ]
+                },
+                {
+                  "attributes": {
+                    "class": [
+                      "kc-text-list-top-fact__item"
+                    ]
+                  },
+                  "fields": [
+                    {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-copy-bold"
+                        ]
+                      },
+                      "text": "Mass"
+                    },
+                    {
+                      "tag": "strong",
+                      "attributes": {
+                        "class": [
+                          "kc-t-highlight-l",
+                          "kc-gray-copy"
+                        ]
+                      },
+                      "text": "318"
+                    },
+                    {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-copy"
+                        ]
+                      },
+                      "text": "Earths"
+                    }
+                  ]
+                }
+              ],
+              "slot": null,
+              "separator": {
+                "tag": "span",
+                "attributes": {
+                  "class": [
+                    "kc-divider--v"
+                  ],
+                  "aria-hidden": "true"
+                }
+              },
+              "separatorCount": 2
+            }
+          }
         },
         {
           "type": "interesting-facts",
@@ -5824,7 +9196,149 @@ window.KC_ENTITIES = {
             "Earths"
           ],
           "images": [],
-          "slots": []
+          "slots": [],
+          "platform": "desktop",
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": [
+                  "kc-module",
+                  "kc-text-list-top-fact",
+                  "kc-text-list-top-fact--quantity-3"
+                ],
+                "id": "kc-planet-desktop-mod-fact-two",
+                "data-kc": "Text List / Top Fact",
+                "aria-label": "Jupiter distance, year, and mass"
+              }
+            },
+            "content": {
+              "items": [
+                {
+                  "attributes": {
+                    "class": [
+                      "kc-text-list-top-fact__item"
+                    ]
+                  },
+                  "fields": [
+                    {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-copy-bold"
+                        ]
+                      },
+                      "text": "Distance from Sun"
+                    },
+                    {
+                      "tag": "strong",
+                      "attributes": {
+                        "class": [
+                          "kc-t-highlight-l",
+                          "kc-gray-copy"
+                        ]
+                      },
+                      "text": "5.2"
+                    },
+                    {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-copy"
+                        ]
+                      },
+                      "text": "AU"
+                    }
+                  ]
+                },
+                {
+                  "attributes": {
+                    "class": [
+                      "kc-text-list-top-fact__item"
+                    ]
+                  },
+                  "fields": [
+                    {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-copy-bold"
+                        ]
+                      },
+                      "text": "Year"
+                    },
+                    {
+                      "tag": "strong",
+                      "attributes": {
+                        "class": [
+                          "kc-t-highlight-l",
+                          "kc-gray-copy"
+                        ]
+                      },
+                      "text": "11.86"
+                    },
+                    {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-copy"
+                        ]
+                      },
+                      "text": "Earth years"
+                    }
+                  ]
+                },
+                {
+                  "attributes": {
+                    "class": [
+                      "kc-text-list-top-fact__item"
+                    ]
+                  },
+                  "fields": [
+                    {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-copy-bold"
+                        ]
+                      },
+                      "text": "Mass"
+                    },
+                    {
+                      "tag": "strong",
+                      "attributes": {
+                        "class": [
+                          "kc-t-highlight-l",
+                          "kc-gray-copy"
+                        ]
+                      },
+                      "text": "318"
+                    },
+                    {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-copy"
+                        ]
+                      },
+                      "text": "Earths"
+                    }
+                  ]
+                }
+              ],
+              "slot": null,
+              "separator": {
+                "tag": "span",
+                "attributes": {
+                  "class": [
+                    "kc-divider--v"
+                  ],
+                  "aria-hidden": "true"
+                }
+              },
+              "separatorCount": 2
+            }
+          }
         },
         {
           "type": "timeline",
@@ -5852,7 +9366,36 @@ window.KC_ENTITIES = {
             "Hero image: Jupiter"
           ],
           "images": [],
-          "slots": []
+          "slots": [],
+          "platform": "desktop",
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": [
+                  "kc-module",
+                  "kc-text-list-top-fact-text-list-attributions",
+                  "kc-module--card-last"
+                ],
+                "id": "kc-planet-desktop-mod-attributions",
+                "data-kc": "Text List / Top Fact/Text List/Attributions",
+                "aria-label": "Attributions"
+              }
+            },
+            "content": {
+              "paragraphs": [
+                {
+                  "attributes": {},
+                  "segments": [
+                    {
+                      "kind": "text",
+                      "value": "Hero image: Jupiter"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
         }
       ]
     },
@@ -6041,7 +9584,256 @@ window.KC_ENTITIES = {
             "See more"
           ],
           "images": [],
-          "slots": []
+          "slots": [],
+          "platform": "mobile",
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": [
+                  "kc-module",
+                  "kc-module--mobile",
+                  "kc-mobile-text-list-quick-facts",
+                  "kc-mobile-text-list-quick-facts--see-more"
+                ],
+                "id": "kc-planet-mobile-quick-facts",
+                "data-kc": "Mobile / Text List / Quick Facts",
+                "data-kc-variant": "See more=Yes",
+                "aria-label": "Quick facts about Jupiter"
+              }
+            },
+            "content": {
+              "photoSlot": null,
+              "list": {
+                "tag": "div",
+                "attributes": {
+                  "class": [
+                    "kc-mobile-text-list-quick-facts__list"
+                  ],
+                  "role": "list"
+                },
+                "items": [
+                  {
+                    "attributes": {
+                      "class": [
+                        "kc-mobile-text-list-quick-facts__fact"
+                      ],
+                      "role": "listitem"
+                    },
+                    "label": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-m-bold"
+                        ]
+                      },
+                      "text": "Diameter"
+                    },
+                    "value": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-m-reg"
+                        ]
+                      },
+                      "text": "139,820 km"
+                    }
+                  },
+                  {
+                    "attributes": {
+                      "class": [
+                        "kc-mobile-text-list-quick-facts__fact"
+                      ],
+                      "role": "listitem"
+                    },
+                    "label": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-m-bold"
+                        ]
+                      },
+                      "text": "Moons"
+                    },
+                    "value": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-m-reg"
+                        ]
+                      },
+                      "text": "95"
+                    }
+                  },
+                  {
+                    "attributes": {
+                      "class": [
+                        "kc-mobile-text-list-quick-facts__fact"
+                      ],
+                      "role": "listitem"
+                    },
+                    "label": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-m-bold"
+                        ]
+                      },
+                      "text": "Day"
+                    },
+                    "value": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-m-reg"
+                        ]
+                      },
+                      "text": "9 h 56 min"
+                    }
+                  },
+                  {
+                    "attributes": {
+                      "class": [
+                        "kc-mobile-text-list-quick-facts__fact"
+                      ],
+                      "role": "listitem"
+                    },
+                    "label": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-m-bold"
+                        ]
+                      },
+                      "text": "Year"
+                    },
+                    "value": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-m-reg"
+                        ]
+                      },
+                      "text": "11.86 Earth years"
+                    }
+                  },
+                  {
+                    "attributes": {
+                      "class": [
+                        "kc-mobile-text-list-quick-facts__fact"
+                      ],
+                      "id": "kc-planet-mobile-extra-distance",
+                      "role": "listitem",
+                      "data-extra-fact": "",
+                      "hidden": ""
+                    },
+                    "label": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-m-bold"
+                        ]
+                      },
+                      "text": "Distance"
+                    },
+                    "value": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-m-reg"
+                        ]
+                      },
+                      "text": "5.2 AU"
+                    }
+                  },
+                  {
+                    "attributes": {
+                      "class": [
+                        "kc-mobile-text-list-quick-facts__fact"
+                      ],
+                      "role": "listitem",
+                      "data-extra-fact": "",
+                      "hidden": ""
+                    },
+                    "label": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-m-bold"
+                        ]
+                      },
+                      "text": "Mass"
+                    },
+                    "value": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-m-reg"
+                        ]
+                      },
+                      "text": "318 Earths"
+                    }
+                  }
+                ],
+                "separator": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-mobile-text-list-quick-facts__line"
+                    ],
+                    "role": "presentation"
+                  }
+                },
+                "separatorsAfter": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4
+                ]
+              },
+              "imageRow": null,
+              "more": {
+                "attributes": {
+                  "class": [
+                    "kc-mobile-text-list-quick-facts__more"
+                  ]
+                },
+                "button": {
+                  "tag": "button",
+                  "attributes": {
+                    "class": [
+                      "kc-btn-reset",
+                      "kc-m-text-button"
+                    ],
+                    "type": "button",
+                    "aria-expanded": "false",
+                    "aria-controls": "kc-planet-mobile-extra-distance"
+                  },
+                  "text": "See more"
+                },
+                "icon": {
+                  "tag": "svg",
+                  "attributes": {
+                    "width": "12",
+                    "height": "12",
+                    "viewbox": "0 0 12 12",
+                    "aria-hidden": "true",
+                    "focusable": "false"
+                  },
+                  "children": [
+                    {
+                      "tag": "path",
+                      "attributes": {
+                        "d": "M2.14645 4.64645C2.34171 4.45118 2.65829 4.45118 2.85355 4.64645L6 7.79289L9.14645 4.64645C9.34171 4.45118 9.65829 4.45118 9.85355 4.64645C10.0488 4.84171 10.0488 5.15829 9.85355 5.35355L6.35355 8.85355C6.15829 9.04882 5.84171 9.04882 5.64645 8.85355L2.14645 5.35355C1.95118 5.15829 1.95118 4.84171 2.14645 4.64645Z",
+                        "fill": "currentColor"
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
         },
         {
           "type": "interesting-facts",
@@ -6079,7 +9871,139 @@ window.KC_ENTITIES = {
             "min"
           ],
           "images": [],
-          "slots": []
+          "slots": [],
+          "platform": "mobile",
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": [
+                  "kc-module",
+                  "kc-module--mobile",
+                  "kc-mobile-text-list-top-fact",
+                  "kc-mobile-text-list-top-fact--3"
+                ],
+                "id": "kc-planet-mobile-top-facts-one",
+                "data-kc": "Mobile / Text List / Top Fact",
+                "data-kc-variant": "Quantity=3",
+                "aria-label": "Jupiter diameter, moons, and day"
+              }
+            },
+            "content": {
+              "items": [
+                {
+                  "attributes": {
+                    "class": [
+                      "kc-mobile-text-list-top-fact__item"
+                    ]
+                  },
+                  "fields": [
+                    {
+                      "tag": "strong",
+                      "attributes": {
+                        "class": [
+                          "kc-m-bold"
+                        ]
+                      },
+                      "text": "Diameter"
+                    },
+                    {
+                      "tag": "strong",
+                      "attributes": {
+                        "class": [
+                          "kc-m-num"
+                        ]
+                      },
+                      "text": "139,820"
+                    },
+                    {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-m-reg"
+                        ]
+                      },
+                      "text": "km"
+                    }
+                  ]
+                },
+                {
+                  "attributes": {
+                    "class": [
+                      "kc-mobile-text-list-top-fact__item"
+                    ]
+                  },
+                  "fields": [
+                    {
+                      "tag": "strong",
+                      "attributes": {
+                        "class": [
+                          "kc-m-bold"
+                        ]
+                      },
+                      "text": "Moons"
+                    },
+                    {
+                      "tag": "strong",
+                      "attributes": {
+                        "class": [
+                          "kc-m-num"
+                        ]
+                      },
+                      "text": "95"
+                    }
+                  ]
+                },
+                {
+                  "attributes": {
+                    "class": [
+                      "kc-mobile-text-list-top-fact__item"
+                    ]
+                  },
+                  "fields": [
+                    {
+                      "tag": "strong",
+                      "attributes": {
+                        "class": [
+                          "kc-m-bold"
+                        ]
+                      },
+                      "text": "Day"
+                    },
+                    {
+                      "tag": "strong",
+                      "attributes": {
+                        "class": [
+                          "kc-m-num"
+                        ]
+                      },
+                      "text": "9 h 56"
+                    },
+                    {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-m-reg"
+                        ]
+                      },
+                      "text": "min"
+                    }
+                  ]
+                }
+              ],
+              "slot": null,
+              "separator": {
+                "tag": "span",
+                "attributes": {
+                  "class": [
+                    "kc-divider--v"
+                  ],
+                  "aria-hidden": "true"
+                }
+              },
+              "separatorCount": 2
+            }
+          }
         },
         {
           "type": "top-fact",
@@ -6097,7 +10021,149 @@ window.KC_ENTITIES = {
             "Earths"
           ],
           "images": [],
-          "slots": []
+          "slots": [],
+          "platform": "mobile",
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": [
+                  "kc-module",
+                  "kc-module--mobile",
+                  "kc-mobile-text-list-top-fact",
+                  "kc-mobile-text-list-top-fact--3",
+                  "kc-planet-mobile-top-facts-two"
+                ],
+                "id": "kc-planet-mobile-top-facts-two",
+                "data-kc": "Mobile / Text List / Top Fact",
+                "data-kc-variant": "Quantity=3",
+                "aria-label": "Jupiter distance, year, and mass"
+              }
+            },
+            "content": {
+              "items": [
+                {
+                  "attributes": {
+                    "class": [
+                      "kc-mobile-text-list-top-fact__item"
+                    ]
+                  },
+                  "fields": [
+                    {
+                      "tag": "strong",
+                      "attributes": {
+                        "class": [
+                          "kc-m-bold"
+                        ]
+                      },
+                      "text": "Distance from Sun"
+                    },
+                    {
+                      "tag": "strong",
+                      "attributes": {
+                        "class": [
+                          "kc-m-num"
+                        ]
+                      },
+                      "text": "5.2"
+                    },
+                    {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-m-reg"
+                        ]
+                      },
+                      "text": "AU"
+                    }
+                  ]
+                },
+                {
+                  "attributes": {
+                    "class": [
+                      "kc-mobile-text-list-top-fact__item"
+                    ]
+                  },
+                  "fields": [
+                    {
+                      "tag": "strong",
+                      "attributes": {
+                        "class": [
+                          "kc-m-bold"
+                        ]
+                      },
+                      "text": "Year"
+                    },
+                    {
+                      "tag": "strong",
+                      "attributes": {
+                        "class": [
+                          "kc-m-num"
+                        ]
+                      },
+                      "text": "11.86"
+                    },
+                    {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-m-reg"
+                        ]
+                      },
+                      "text": "Earth years"
+                    }
+                  ]
+                },
+                {
+                  "attributes": {
+                    "class": [
+                      "kc-mobile-text-list-top-fact__item"
+                    ]
+                  },
+                  "fields": [
+                    {
+                      "tag": "strong",
+                      "attributes": {
+                        "class": [
+                          "kc-m-bold"
+                        ]
+                      },
+                      "text": "Mass"
+                    },
+                    {
+                      "tag": "strong",
+                      "attributes": {
+                        "class": [
+                          "kc-m-num"
+                        ]
+                      },
+                      "text": "318"
+                    },
+                    {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-m-reg"
+                        ]
+                      },
+                      "text": "Earths"
+                    }
+                  ]
+                }
+              ],
+              "slot": null,
+              "separator": {
+                "tag": "span",
+                "attributes": {
+                  "class": [
+                    "kc-divider--v"
+                  ],
+                  "aria-hidden": "true"
+                }
+              },
+              "separatorCount": 2
+            }
+          }
         },
         {
           "type": "timeline",
@@ -6125,7 +10191,37 @@ window.KC_ENTITIES = {
           ],
           "images": [],
           "slots": [],
-          "seeMore": true
+          "seeMore": true,
+          "platform": "mobile",
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": [
+                  "kc-module",
+                  "kc-module--mobile",
+                  "kc-mobile-text-list-attribution",
+                  "kc-module--card-last"
+                ],
+                "id": "kc-planet-mobile-attribution",
+                "data-kc": "Mobile / Text List / Attribution",
+                "aria-label": "Attribution"
+              }
+            },
+            "content": {
+              "paragraphs": [
+                {
+                  "attributes": {},
+                  "segments": [
+                    {
+                      "kind": "text",
+                      "value": "Hero image: Jupiter"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
         }
       ]
     }
@@ -6294,7 +10390,95 @@ window.KC_ENTITIES = {
             "Mexico"
           ],
           "images": [],
-          "slots": []
+          "slots": [],
+          "platform": "desktop",
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": [
+                  "kc-module",
+                  "kc-text-list-top-fact",
+                  "kc-text-list-top-fact--quantity-2"
+                ],
+                "id": "kc-plant-desktop-mod-top-fact",
+                "data-kc": "Text List / Top Fact",
+                "data-kc-variant": "Quantity=2",
+                "aria-label": "Dahlia height and native range"
+              }
+            },
+            "content": {
+              "items": [
+                {
+                  "attributes": {
+                    "class": [
+                      "kc-text-list-top-fact__item"
+                    ]
+                  },
+                  "fields": [
+                    {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-copy-bold"
+                        ]
+                      },
+                      "text": "Garden height"
+                    },
+                    {
+                      "tag": "strong",
+                      "attributes": {
+                        "class": [
+                          "kc-t-highlight-l",
+                          "kc-gray-copy"
+                        ]
+                      },
+                      "text": "1–5+ ft"
+                    }
+                  ]
+                },
+                {
+                  "attributes": {
+                    "class": [
+                      "kc-text-list-top-fact__item"
+                    ]
+                  },
+                  "fields": [
+                    {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-copy-bold"
+                        ]
+                      },
+                      "text": "Native to"
+                    },
+                    {
+                      "tag": "strong",
+                      "attributes": {
+                        "class": [
+                          "kc-t-highlight-l",
+                          "kc-gray-copy"
+                        ]
+                      },
+                      "text": "Mexico"
+                    }
+                  ]
+                }
+              ],
+              "slot": null,
+              "separator": {
+                "tag": "span",
+                "attributes": {
+                  "class": [
+                    "kc-divider--v"
+                  ],
+                  "aria-hidden": "true"
+                }
+              },
+              "separatorCount": 1
+            }
+          }
         },
         {
           "type": "interesting-facts",
@@ -6353,7 +10537,124 @@ window.KC_ENTITIES = {
             "Britannica"
           ],
           "images": [],
-          "slots": []
+          "slots": [],
+          "platform": "desktop",
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": [
+                  "kc-module",
+                  "kc-text-list-top-fact-text-list-attributions",
+                  "kc-module--card-last"
+                ],
+                "id": "kc-plant-desktop-mod-attributions",
+                "data-kc": "Attributions",
+                "aria-label": "Attributions"
+              }
+            },
+            "content": {
+              "paragraphs": [
+                {
+                  "attributes": {},
+                  "segments": [
+                    {
+                      "kind": "text",
+                      "value": "Photos (resized): Andy Mabbett, "
+                    },
+                    {
+                      "kind": "link",
+                      "attributes": {
+                        "href": "https://commons.wikimedia.org/wiki/File:Dahlia_%27Dahlietta_Anna%27_-_2020-05-08_-_Andy_Mabbett_-_02.jpg"
+                      },
+                      "value": "flower"
+                    },
+                    {
+                      "kind": "text",
+                      "value": " and "
+                    },
+                    {
+                      "kind": "link",
+                      "attributes": {
+                        "href": "https://commons.wikimedia.org/wiki/File:Dahlia_%27Dahlietta_Anna%27_-_2020-05-08_-_Andy_Mabbett_-_03.jpg"
+                      },
+                      "value": "plant"
+                    },
+                    {
+                      "kind": "text",
+                      "value": "; Dominicus Johannes Bergsma, "
+                    },
+                    {
+                      "kind": "link",
+                      "attributes": {
+                        "href": "https://commons.wikimedia.org/wiki/File:Dahlia_%27Moonfire%27_006.JPG"
+                      },
+                      "value": "flower"
+                    },
+                    {
+                      "kind": "text",
+                      "value": ", "
+                    },
+                    {
+                      "kind": "link",
+                      "attributes": {
+                        "href": "https://commons.wikimedia.org/wiki/File:Dahlia_%27Moonfire%27_002.JPG"
+                      },
+                      "value": "foliage"
+                    },
+                    {
+                      "kind": "text",
+                      "value": " and "
+                    },
+                    {
+                      "kind": "link",
+                      "attributes": {
+                        "href": "https://commons.wikimedia.org/wiki/File:Bloemknop_van_een_Dahlia_%27Moonfire%27._20-08-2023._(d.j.b).jpg"
+                      },
+                      "value": "bud"
+                    },
+                    {
+                      "kind": "text",
+                      "value": ". "
+                    },
+                    {
+                      "kind": "link",
+                      "attributes": {
+                        "href": "https://creativecommons.org/licenses/by-sa/4.0/"
+                      },
+                      "value": "CC BY-SA 4.0"
+                    },
+                    {
+                      "kind": "text",
+                      "value": ". Facts: "
+                    },
+                    {
+                      "kind": "link",
+                      "attributes": {
+                        "href": "https://www.rhs.org.uk/plants/dahlia/growing-guide"
+                      },
+                      "value": "RHS"
+                    },
+                    {
+                      "kind": "text",
+                      "value": " and "
+                    },
+                    {
+                      "kind": "link",
+                      "attributes": {
+                        "href": "https://www.britannica.com/plant/Dahlia"
+                      },
+                      "value": "Britannica"
+                    },
+                    {
+                      "kind": "text",
+                      "value": "."
+                    }
+                  ]
+                }
+              ]
+            }
+          }
         }
       ]
     },
@@ -6517,7 +10818,158 @@ window.KC_ENTITIES = {
             "Summer to first frost"
           ],
           "images": [],
-          "slots": []
+          "slots": [],
+          "platform": "mobile",
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": [
+                  "kc-module",
+                  "kc-module--mobile",
+                  "kc-mobile-text-list-quick-facts"
+                ],
+                "id": "kc-plant-mobile-facts",
+                "data-kc": "Mobile / Text List / Quick Facts",
+                "data-kc-variant": "See more=No",
+                "aria-label": "Quick facts about dahlias"
+              }
+            },
+            "content": {
+              "photoSlot": null,
+              "list": {
+                "tag": "div",
+                "attributes": {
+                  "class": [
+                    "kc-mobile-text-list-quick-facts__list"
+                  ],
+                  "role": "list"
+                },
+                "items": [
+                  {
+                    "attributes": {
+                      "class": [
+                        "kc-mobile-text-list-quick-facts__fact"
+                      ],
+                      "role": "listitem"
+                    },
+                    "label": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-m-bold"
+                        ]
+                      },
+                      "text": "Family"
+                    },
+                    "value": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-m-reg"
+                        ]
+                      },
+                      "text": "Asteraceae"
+                    }
+                  },
+                  {
+                    "attributes": {
+                      "class": [
+                        "kc-mobile-text-list-quick-facts__fact"
+                      ],
+                      "role": "listitem"
+                    },
+                    "label": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-m-bold"
+                        ]
+                      },
+                      "text": "Garden height"
+                    },
+                    "value": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-m-reg"
+                        ]
+                      },
+                      "text": "1–5+ ft"
+                    }
+                  },
+                  {
+                    "attributes": {
+                      "class": [
+                        "kc-mobile-text-list-quick-facts__fact"
+                      ],
+                      "role": "listitem"
+                    },
+                    "label": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-m-bold"
+                        ]
+                      },
+                      "text": "Native"
+                    },
+                    "value": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-m-reg"
+                        ]
+                      },
+                      "text": "Mexico and Central America"
+                    }
+                  },
+                  {
+                    "attributes": {
+                      "class": [
+                        "kc-mobile-text-list-quick-facts__fact"
+                      ],
+                      "role": "listitem"
+                    },
+                    "label": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-m-bold"
+                        ]
+                      },
+                      "text": "Bloom"
+                    },
+                    "value": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-m-reg"
+                        ]
+                      },
+                      "text": "Summer to first frost"
+                    }
+                  }
+                ],
+                "separator": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-mobile-text-list-quick-facts__line"
+                    ],
+                    "role": "presentation"
+                  }
+                },
+                "separatorsAfter": [
+                  0,
+                  1,
+                  2
+                ]
+              },
+              "imageRow": null,
+              "more": null
+            }
+          }
         },
         {
           "type": "top-fact",
@@ -6530,7 +10982,94 @@ window.KC_ENTITIES = {
             "Mexico"
           ],
           "images": [],
-          "slots": []
+          "slots": [],
+          "platform": "mobile",
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": [
+                  "kc-module",
+                  "kc-module--mobile",
+                  "kc-mobile-text-list-top-fact",
+                  "kc-mobile-text-list-top-fact--2"
+                ],
+                "id": "kc-plant-mobile-top-facts",
+                "data-kc": "Mobile / Text List / Top Fact",
+                "data-kc-variant": "Quantity=2",
+                "aria-label": "Height and native range"
+              }
+            },
+            "content": {
+              "items": [
+                {
+                  "attributes": {
+                    "class": [
+                      "kc-mobile-text-list-top-fact__item"
+                    ]
+                  },
+                  "fields": [
+                    {
+                      "tag": "strong",
+                      "attributes": {
+                        "class": [
+                          "kc-m-bold"
+                        ]
+                      },
+                      "text": "Garden height"
+                    },
+                    {
+                      "tag": "strong",
+                      "attributes": {
+                        "class": [
+                          "kc-m-num"
+                        ]
+                      },
+                      "text": "1–5+ ft"
+                    }
+                  ]
+                },
+                {
+                  "attributes": {
+                    "class": [
+                      "kc-mobile-text-list-top-fact__item"
+                    ]
+                  },
+                  "fields": [
+                    {
+                      "tag": "strong",
+                      "attributes": {
+                        "class": [
+                          "kc-m-bold"
+                        ]
+                      },
+                      "text": "Native to"
+                    },
+                    {
+                      "tag": "strong",
+                      "attributes": {
+                        "class": [
+                          "kc-m-reg"
+                        ]
+                      },
+                      "text": "Mexico"
+                    }
+                  ]
+                }
+              ],
+              "slot": null,
+              "separator": {
+                "tag": "span",
+                "attributes": {
+                  "class": [
+                    "kc-divider--v"
+                  ],
+                  "aria-hidden": "true"
+                }
+              },
+              "separatorCount": 1
+            }
+          }
         },
         {
           "type": "interesting-facts",
@@ -6593,7 +11132,125 @@ window.KC_ENTITIES = {
             "."
           ],
           "images": [],
-          "slots": []
+          "slots": [],
+          "platform": "mobile",
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": [
+                  "kc-module",
+                  "kc-module--mobile",
+                  "kc-mobile-text-list-attribution",
+                  "kc-module--card-last"
+                ],
+                "id": "kc-plant-mobile-attribution",
+                "data-kc": "Mobile / Text List / Attribution",
+                "aria-label": "Attribution"
+              }
+            },
+            "content": {
+              "paragraphs": [
+                {
+                  "attributes": {},
+                  "segments": [
+                    {
+                      "kind": "text",
+                      "value": "Photos (resized): Andy Mabbett, "
+                    },
+                    {
+                      "kind": "link",
+                      "attributes": {
+                        "href": "https://commons.wikimedia.org/wiki/File:Dahlia_%27Dahlietta_Anna%27_-_2020-05-08_-_Andy_Mabbett_-_02.jpg"
+                      },
+                      "value": "flower"
+                    },
+                    {
+                      "kind": "text",
+                      "value": " and "
+                    },
+                    {
+                      "kind": "link",
+                      "attributes": {
+                        "href": "https://commons.wikimedia.org/wiki/File:Dahlia_%27Dahlietta_Anna%27_-_2020-05-08_-_Andy_Mabbett_-_03.jpg"
+                      },
+                      "value": "plant"
+                    },
+                    {
+                      "kind": "text",
+                      "value": "; Dominicus Johannes Bergsma, "
+                    },
+                    {
+                      "kind": "link",
+                      "attributes": {
+                        "href": "https://commons.wikimedia.org/wiki/File:Dahlia_%27Moonfire%27_006.JPG"
+                      },
+                      "value": "flower"
+                    },
+                    {
+                      "kind": "text",
+                      "value": ", "
+                    },
+                    {
+                      "kind": "link",
+                      "attributes": {
+                        "href": "https://commons.wikimedia.org/wiki/File:Dahlia_%27Moonfire%27_002.JPG"
+                      },
+                      "value": "foliage"
+                    },
+                    {
+                      "kind": "text",
+                      "value": " and "
+                    },
+                    {
+                      "kind": "link",
+                      "attributes": {
+                        "href": "https://commons.wikimedia.org/wiki/File:Bloemknop_van_een_Dahlia_%27Moonfire%27._20-08-2023._(d.j.b).jpg"
+                      },
+                      "value": "bud"
+                    },
+                    {
+                      "kind": "text",
+                      "value": ". "
+                    },
+                    {
+                      "kind": "link",
+                      "attributes": {
+                        "href": "https://creativecommons.org/licenses/by-sa/4.0/"
+                      },
+                      "value": "CC BY-SA 4.0"
+                    },
+                    {
+                      "kind": "text",
+                      "value": ". Facts: "
+                    },
+                    {
+                      "kind": "link",
+                      "attributes": {
+                        "href": "https://www.rhs.org.uk/plants/dahlia/growing-guide"
+                      },
+                      "value": "RHS"
+                    },
+                    {
+                      "kind": "text",
+                      "value": " and "
+                    },
+                    {
+                      "kind": "link",
+                      "attributes": {
+                        "href": "https://www.britannica.com/plant/Dahlia"
+                      },
+                      "value": "Britannica"
+                    },
+                    {
+                      "kind": "text",
+                      "value": "."
+                    }
+                  ]
+                }
+              ]
+            }
+          }
         }
       ]
     }
@@ -6810,7 +11467,125 @@ window.KC_ENTITIES = {
             {
               "src": null
             }
-          ]
+          ],
+          "platform": "desktop",
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": [
+                  "kc-module",
+                  "kc-text-list-quick-facts",
+                  "kc-text-list-quick-facts--image",
+                  "kc-team-desktop__quick-facts"
+                ],
+                "id": "kc-team-desktop-facts",
+                "data-kc": "Text List / Quick Facts",
+                "data-kc-variant": "Elements=Image, See more=No",
+                "aria-label": "Quick facts about the Los Angeles Lakers"
+              }
+            },
+            "content": {
+              "photoSlot": {
+                "tag": "span",
+                "attributes": {
+                  "class": [
+                    "kc-img",
+                    "kc-team-desktop__image"
+                  ]
+                }
+              },
+              "list": {
+                "tag": "dl",
+                "attributes": {
+                  "class": [
+                    "kc-text-list-quick-facts__list"
+                  ]
+                },
+                "items": [
+                  {
+                    "attributes": {
+                      "class": [
+                        "kc-text-list-quick-facts__fact"
+                      ]
+                    },
+                    "label": {
+                      "tag": "dt",
+                      "attributes": {
+                        "class": [
+                          "kc-copy-bold"
+                        ]
+                      },
+                      "text": "Founded"
+                    },
+                    "value": {
+                      "tag": "dd",
+                      "attributes": {
+                        "class": [
+                          "kc-copy"
+                        ]
+                      },
+                      "text": "1947"
+                    }
+                  },
+                  {
+                    "attributes": {
+                      "class": [
+                        "kc-text-list-quick-facts__fact"
+                      ]
+                    },
+                    "label": {
+                      "tag": "dt",
+                      "attributes": {
+                        "class": [
+                          "kc-copy-bold"
+                        ]
+                      },
+                      "text": "Arena"
+                    },
+                    "value": {
+                      "tag": "dd",
+                      "attributes": {
+                        "class": [
+                          "kc-copy"
+                        ]
+                      },
+                      "text": "Crypto.com Arena"
+                    }
+                  },
+                  {
+                    "attributes": {
+                      "class": [
+                        "kc-text-list-quick-facts__fact"
+                      ]
+                    },
+                    "label": {
+                      "tag": "dt",
+                      "attributes": {
+                        "class": [
+                          "kc-copy-bold"
+                        ]
+                      },
+                      "text": "Championships"
+                    },
+                    "value": {
+                      "tag": "dd",
+                      "attributes": {
+                        "class": [
+                          "kc-copy"
+                        ]
+                      },
+                      "text": "17"
+                    }
+                  }
+                ],
+                "separator": null,
+                "separatorsAfter": []
+              },
+              "imageRow": null,
+              "more": null
+            }
+          }
         },
         {
           "type": "main",
@@ -6883,7 +11658,95 @@ window.KC_ENTITIES = {
             "17 titles"
           ],
           "images": [],
-          "slots": []
+          "slots": [],
+          "platform": "desktop",
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": [
+                  "kc-module",
+                  "kc-text-list-awards",
+                  "kc-team-desktop__awards"
+                ],
+                "id": "kc-team-desktop-awards",
+                "data-kc": "Text List / Awards",
+                "aria-labelledby": "kc-team-desktop-awards-title"
+              }
+            },
+            "content": {
+              "heading": {
+                "tag": "div",
+                "attributes": {
+                  "class": [
+                    "kc-module-title"
+                  ]
+                },
+                "title": {
+                  "tag": "h3",
+                  "attributes": {
+                    "id": "kc-team-desktop-awards-title"
+                  },
+                  "text": "Awards"
+                },
+                "decoration": null
+              },
+              "list": {
+                "tag": "div",
+                "attributes": {
+                  "class": [
+                    "kc-text-list-awards__list"
+                  ]
+                },
+                "items": [
+                  {
+                    "tag": "div",
+                    "attributes": {
+                      "class": [
+                        "kc-text-list-awards__award"
+                      ]
+                    },
+                    "fields": [
+                      {
+                        "tag": "strong",
+                        "attributes": {},
+                        "text": "NBA Championships"
+                      },
+                      {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-copy"
+                          ]
+                        },
+                        "text": "17 titles"
+                      }
+                    ]
+                  },
+                  {
+                    "tag": "div",
+                    "attributes": {
+                      "class": [
+                        "kc-text-list-awards__award"
+                      ],
+                      "hidden": ""
+                    },
+                    "fields": []
+                  },
+                  {
+                    "tag": "div",
+                    "attributes": {
+                      "class": [
+                        "kc-text-list-awards__award"
+                      ],
+                      "hidden": ""
+                    },
+                    "fields": []
+                  }
+                ]
+              }
+            }
+          }
         },
         {
           "type": "attributions",
@@ -6893,7 +11756,37 @@ window.KC_ENTITIES = {
             "Hero image: Los Angeles Lakers"
           ],
           "images": [],
-          "slots": []
+          "slots": [],
+          "platform": "desktop",
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": [
+                  "kc-module",
+                  "kc-text-list-top-fact-text-list-attributions",
+                  "kc-team-desktop__attribution",
+                  "kc-module--card-last"
+                ],
+                "id": "kc-team-desktop-attribution",
+                "data-kc": "Text List / Attributions",
+                "aria-label": "Attribution"
+              }
+            },
+            "content": {
+              "paragraphs": [
+                {
+                  "attributes": {},
+                  "segments": [
+                    {
+                      "kind": "text",
+                      "value": "Hero image: Los Angeles Lakers"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
         }
       ]
     },
@@ -7131,7 +12024,130 @@ window.KC_ENTITIES = {
             "17"
           ],
           "images": [],
-          "slots": []
+          "slots": [],
+          "platform": "mobile",
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": [
+                  "kc-module",
+                  "kc-module--mobile",
+                  "kc-mobile-text-list-quick-facts"
+                ],
+                "id": "kc-team-mobile-facts",
+                "data-kc": "Mobile / Text List / Quick Facts",
+                "aria-label": "Quick facts about the Los Angeles Lakers"
+              }
+            },
+            "content": {
+              "photoSlot": null,
+              "list": {
+                "tag": "div",
+                "attributes": {
+                  "class": [
+                    "kc-mobile-text-list-quick-facts__list"
+                  ],
+                  "role": "list"
+                },
+                "items": [
+                  {
+                    "attributes": {
+                      "class": [
+                        "kc-mobile-text-list-quick-facts__fact"
+                      ],
+                      "role": "listitem"
+                    },
+                    "label": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-m-bold"
+                        ]
+                      },
+                      "text": "Founded"
+                    },
+                    "value": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-m-reg"
+                        ]
+                      },
+                      "text": "1947"
+                    }
+                  },
+                  {
+                    "attributes": {
+                      "class": [
+                        "kc-mobile-text-list-quick-facts__fact"
+                      ],
+                      "role": "listitem"
+                    },
+                    "label": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-m-bold"
+                        ]
+                      },
+                      "text": "Arena"
+                    },
+                    "value": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-m-reg"
+                        ]
+                      },
+                      "text": "Crypto.com Arena"
+                    }
+                  },
+                  {
+                    "attributes": {
+                      "class": [
+                        "kc-mobile-text-list-quick-facts__fact"
+                      ],
+                      "role": "listitem"
+                    },
+                    "label": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-m-bold"
+                        ]
+                      },
+                      "text": "Championships"
+                    },
+                    "value": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-m-reg"
+                        ]
+                      },
+                      "text": "17"
+                    }
+                  }
+                ],
+                "separator": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-mobile-text-list-quick-facts__line"
+                    ],
+                    "role": "presentation"
+                  }
+                },
+                "separatorsAfter": [
+                  0,
+                  1
+                ]
+              },
+              "imageRow": null,
+              "more": null
+            }
+          }
         },
         {
           "type": "news",
@@ -7264,7 +12280,77 @@ window.KC_ENTITIES = {
           ],
           "images": [],
           "slots": [],
-          "seeMore": true
+          "seeMore": true,
+          "platform": "mobile",
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": [
+                  "kc-module",
+                  "kc-module--mobile",
+                  "kc-mobile-reviews-awards"
+                ],
+                "id": "kc-team-mobile-awards",
+                "data-kc": "Mobile / Text List / Awards",
+                "aria-label": "Awards"
+              }
+            },
+            "content": {
+              "heading": {
+                "tag": "div",
+                "attributes": {
+                  "class": [
+                    "kc-module-title"
+                  ]
+                },
+                "title": {
+                  "tag": "h3",
+                  "attributes": {},
+                  "text": "Awards"
+                },
+                "decoration": null
+              },
+              "list": {
+                "tag": "div",
+                "attributes": {
+                  "class": [
+                    "kc-mobile-reviews-awards__list"
+                  ]
+                },
+                "items": [
+                  {
+                    "tag": "div",
+                    "attributes": {
+                      "class": [
+                        "kc-mobile-reviews-awards__award"
+                      ]
+                    },
+                    "fields": [
+                      {
+                        "tag": "strong",
+                        "attributes": {
+                          "class": [
+                            "kc-m-title"
+                          ]
+                        },
+                        "text": "NBA Championships"
+                      },
+                      {
+                        "tag": "span",
+                        "attributes": {
+                          "class": [
+                            "kc-m-reg"
+                          ]
+                        },
+                        "text": "17 titles"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          }
         },
         {
           "type": "attribution",
@@ -7275,7 +12361,36 @@ window.KC_ENTITIES = {
           ],
           "images": [],
           "slots": [],
-          "seeMore": true
+          "seeMore": true,
+          "platform": "mobile",
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": [
+                  "kc-module",
+                  "kc-module--mobile",
+                  "kc-mobile-text-list-attribution"
+                ],
+                "id": "kc-team-mobile-attribution",
+                "data-kc": "Mobile / Text List / Attribution",
+                "aria-label": "Attribution"
+              }
+            },
+            "content": {
+              "paragraphs": [
+                {
+                  "attributes": {},
+                  "segments": [
+                    {
+                      "kind": "text",
+                      "value": "Hero image: Los Angeles Lakers"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
         }
       ]
     }
@@ -7484,7 +12599,123 @@ window.KC_ENTITIES = {
             "12 - 17"
           ],
           "images": [],
-          "slots": []
+          "slots": [],
+          "platform": "desktop",
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": [
+                  "kc-module",
+                  "kc-text-list-top-fact",
+                  "kc-text-list-top-fact--quantity-3"
+                ],
+                "id": "kc-company-mod-1",
+                "data-kc": "Text List / Top Fact",
+                "aria-label": "Life span"
+              }
+            },
+            "content": {
+              "items": [
+                {
+                  "attributes": {
+                    "class": [
+                      "kc-text-list-top-fact__item"
+                    ]
+                  },
+                  "fields": [
+                    {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-copy-bold"
+                        ]
+                      },
+                      "text": "Life Span"
+                    },
+                    {
+                      "tag": "strong",
+                      "attributes": {
+                        "class": [
+                          "kc-t-highlight-l",
+                          "kc-gray-copy"
+                        ]
+                      },
+                      "text": "12 - 17"
+                    }
+                  ]
+                },
+                {
+                  "attributes": {
+                    "class": [
+                      "kc-text-list-top-fact__item"
+                    ]
+                  },
+                  "fields": [
+                    {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-copy-bold"
+                        ]
+                      },
+                      "text": "Life Span"
+                    },
+                    {
+                      "tag": "strong",
+                      "attributes": {
+                        "class": [
+                          "kc-t-highlight-l",
+                          "kc-gray-copy",
+                          "kc-company-top-fact__value--two-line"
+                        ]
+                      },
+                      "text": "12 - 17"
+                    }
+                  ]
+                },
+                {
+                  "attributes": {
+                    "class": [
+                      "kc-text-list-top-fact__item"
+                    ]
+                  },
+                  "fields": [
+                    {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-copy-bold"
+                        ]
+                      },
+                      "text": "Life Span"
+                    },
+                    {
+                      "tag": "strong",
+                      "attributes": {
+                        "class": [
+                          "kc-t-highlight-l",
+                          "kc-gray-copy"
+                        ]
+                      },
+                      "text": "12 - 17"
+                    }
+                  ]
+                }
+              ],
+              "slot": null,
+              "separator": {
+                "tag": "span",
+                "attributes": {
+                  "class": [
+                    "kc-divider--v"
+                  ],
+                  "aria-hidden": "true"
+                }
+              },
+              "separatorCount": 2
+            }
+          }
         },
         {
           "type": "quick-facts",
@@ -7495,7 +12726,141 @@ window.KC_ENTITIES = {
             "Lorem ipsum · Dolor sit amet"
           ],
           "images": [],
-          "slots": []
+          "slots": [],
+          "platform": "desktop",
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": [
+                  "kc-module",
+                  "kc-text-list-quick-facts",
+                  "kc-text-list-quick-facts--text-only"
+                ],
+                "id": "kc-company-mod-2",
+                "data-kc": "Text List / Quick Facts",
+                "data-kc-variant": "Text Only, See more=No",
+                "aria-label": "Quick facts about Microsoft"
+              }
+            },
+            "content": {
+              "photoSlot": null,
+              "list": {
+                "tag": "dl",
+                "attributes": {
+                  "class": [
+                    "kc-text-list-quick-facts__list"
+                  ]
+                },
+                "items": [
+                  {
+                    "attributes": {
+                      "class": [
+                        "kc-text-list-quick-facts__fact"
+                      ]
+                    },
+                    "label": {
+                      "tag": "dt",
+                      "attributes": {
+                        "class": [
+                          "kc-copy-bold"
+                        ]
+                      },
+                      "text": "Fact title"
+                    },
+                    "value": {
+                      "tag": "dd",
+                      "attributes": {
+                        "class": [
+                          "kc-copy"
+                        ]
+                      },
+                      "text": "Lorem ipsum · Dolor sit amet"
+                    }
+                  },
+                  {
+                    "attributes": {
+                      "class": [
+                        "kc-text-list-quick-facts__fact"
+                      ]
+                    },
+                    "label": {
+                      "tag": "dt",
+                      "attributes": {
+                        "class": [
+                          "kc-copy-bold"
+                        ]
+                      },
+                      "text": "Fact title"
+                    },
+                    "value": {
+                      "tag": "dd",
+                      "attributes": {
+                        "class": [
+                          "kc-copy"
+                        ]
+                      },
+                      "text": "Lorem ipsum · Dolor sit amet"
+                    }
+                  },
+                  {
+                    "attributes": {
+                      "class": [
+                        "kc-text-list-quick-facts__fact"
+                      ]
+                    },
+                    "label": {
+                      "tag": "dt",
+                      "attributes": {
+                        "class": [
+                          "kc-copy-bold"
+                        ]
+                      },
+                      "text": "Fact title"
+                    },
+                    "value": {
+                      "tag": "dd",
+                      "attributes": {
+                        "class": [
+                          "kc-copy"
+                        ]
+                      },
+                      "text": "Lorem ipsum · Dolor sit amet"
+                    }
+                  },
+                  {
+                    "attributes": {
+                      "class": [
+                        "kc-text-list-quick-facts__fact"
+                      ]
+                    },
+                    "label": {
+                      "tag": "dt",
+                      "attributes": {
+                        "class": [
+                          "kc-copy-bold"
+                        ]
+                      },
+                      "text": "Fact title"
+                    },
+                    "value": {
+                      "tag": "dd",
+                      "attributes": {
+                        "class": [
+                          "kc-copy"
+                        ]
+                      },
+                      "text": "Lorem ipsum · Dolor sit amet"
+                    }
+                  }
+                ],
+                "separator": null,
+                "separatorsAfter": []
+              },
+              "imageRow": null,
+              "more": null
+            }
+          }
         },
         {
           "type": "quote",
@@ -7594,7 +12959,36 @@ window.KC_ENTITIES = {
             "Images: Getty Images. Data: en.wikipedia.org · anothersite.com · coolfacts.com Hero image: Holy town Varanasi and the river Ganges"
           ],
           "images": [],
-          "slots": []
+          "slots": [],
+          "platform": "desktop",
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": [
+                  "kc-module",
+                  "kc-text-list-top-fact-text-list-attributions",
+                  "kc-module--card-last"
+                ],
+                "id": "kc-company-mod-7",
+                "data-kc": "Text List / Top Fact/Text List/Attributions",
+                "aria-label": "Attributions"
+              }
+            },
+            "content": {
+              "paragraphs": [
+                {
+                  "attributes": {},
+                  "segments": [
+                    {
+                      "kind": "text",
+                      "value": "Images: Getty Images. Data: en.wikipedia.org · anothersite.com · coolfacts.com Hero image: Holy town Varanasi and the river Ganges"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
         }
       ]
     },
@@ -7819,7 +13213,95 @@ window.KC_ENTITIES = {
             "12 - 17"
           ],
           "images": [],
-          "slots": []
+          "slots": [],
+          "platform": "mobile",
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": [
+                  "kc-module",
+                  "kc-module--mobile",
+                  "kc-mobile-text-list-top-fact",
+                  "kc-mobile-text-list-top-fact--2"
+                ],
+                "id": "kc-company-mobile-top-fact",
+                "data-kc": "Mobile / Text List / Top Fact",
+                "data-kc-variant": "Quantity=2",
+                "aria-label": "Life span"
+              }
+            },
+            "content": {
+              "items": [
+                {
+                  "attributes": {
+                    "class": [
+                      "kc-mobile-text-list-top-fact__item"
+                    ]
+                  },
+                  "fields": [
+                    {
+                      "tag": "strong",
+                      "attributes": {
+                        "class": [
+                          "kc-m-bold"
+                        ]
+                      },
+                      "text": "Life Span"
+                    },
+                    {
+                      "tag": "strong",
+                      "attributes": {
+                        "class": [
+                          "kc-m-num"
+                        ]
+                      },
+                      "text": "12 - 17"
+                    }
+                  ]
+                },
+                {
+                  "attributes": {
+                    "class": [
+                      "kc-mobile-text-list-top-fact__item"
+                    ]
+                  },
+                  "fields": [
+                    {
+                      "tag": "strong",
+                      "attributes": {
+                        "class": [
+                          "kc-m-bold"
+                        ]
+                      },
+                      "text": "Life Span"
+                    },
+                    {
+                      "tag": "strong",
+                      "attributes": {
+                        "class": [
+                          "kc-m-num",
+                          "kc-company-mobile__value-tall"
+                        ]
+                      },
+                      "text": "12 - 17"
+                    }
+                  ]
+                }
+              ],
+              "slot": null,
+              "separator": {
+                "tag": "span",
+                "attributes": {
+                  "class": [
+                    "kc-divider--v"
+                  ],
+                  "aria-hidden": "true"
+                }
+              },
+              "separatorCount": 1
+            }
+          }
         },
         {
           "type": "quick-facts",
@@ -7837,7 +13319,197 @@ window.KC_ENTITIES = {
             "See more"
           ],
           "images": [],
-          "slots": []
+          "slots": [],
+          "platform": "mobile",
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": [
+                  "kc-module",
+                  "kc-module--mobile",
+                  "kc-mobile-text-list-quick-facts",
+                  "kc-mobile-text-list-quick-facts--see-more"
+                ],
+                "id": "kc-company-mobile-quick-facts",
+                "data-kc": "Mobile / Text List / Quick Facts",
+                "data-kc-variant": "See more=Yes",
+                "aria-label": "Quick facts about Microsoft"
+              }
+            },
+            "content": {
+              "photoSlot": null,
+              "list": {
+                "tag": "div",
+                "attributes": {
+                  "class": [
+                    "kc-mobile-text-list-quick-facts__list"
+                  ],
+                  "role": "list"
+                },
+                "items": [
+                  {
+                    "attributes": {
+                      "class": [
+                        "kc-mobile-text-list-quick-facts__fact"
+                      ],
+                      "role": "listitem"
+                    },
+                    "label": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-m-bold"
+                        ]
+                      },
+                      "text": "Fact title"
+                    },
+                    "value": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-m-reg"
+                        ]
+                      },
+                      "text": "Lorem ipsum · Dolor sit amet"
+                    }
+                  },
+                  {
+                    "attributes": {
+                      "class": [
+                        "kc-mobile-text-list-quick-facts__fact"
+                      ],
+                      "role": "listitem"
+                    },
+                    "label": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-m-bold"
+                        ]
+                      },
+                      "text": "Fact title"
+                    },
+                    "value": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-m-reg"
+                        ]
+                      },
+                      "text": "Lorem ipsum · Dolor sit amet"
+                    }
+                  },
+                  {
+                    "attributes": {
+                      "class": [
+                        "kc-mobile-text-list-quick-facts__fact"
+                      ],
+                      "role": "listitem"
+                    },
+                    "label": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-m-bold"
+                        ]
+                      },
+                      "text": "Fact title"
+                    },
+                    "value": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-m-reg"
+                        ]
+                      },
+                      "text": "Lorem ipsum · Dolor sit amet"
+                    }
+                  },
+                  {
+                    "attributes": {
+                      "class": [
+                        "kc-mobile-text-list-quick-facts__fact"
+                      ],
+                      "role": "listitem"
+                    },
+                    "label": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-m-bold"
+                        ]
+                      },
+                      "text": "Fact title"
+                    },
+                    "value": {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-m-reg"
+                        ]
+                      },
+                      "text": "Lorem ipsum · Dolor sit amet"
+                    }
+                  }
+                ],
+                "separator": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-mobile-text-list-quick-facts__line"
+                    ],
+                    "role": "presentation"
+                  }
+                },
+                "separatorsAfter": [
+                  0,
+                  1,
+                  2
+                ]
+              },
+              "imageRow": null,
+              "more": {
+                "attributes": {
+                  "class": [
+                    "kc-mobile-text-list-quick-facts__more"
+                  ]
+                },
+                "button": {
+                  "tag": "button",
+                  "attributes": {
+                    "class": [
+                      "kc-btn-reset",
+                      "kc-m-text-button"
+                    ],
+                    "type": "button",
+                    "aria-expanded": "false",
+                    "aria-controls": "kc-company-mobile-more"
+                  },
+                  "text": "See more"
+                },
+                "icon": {
+                  "tag": "svg",
+                  "attributes": {
+                    "width": "12",
+                    "height": "12",
+                    "viewbox": "0 0 12 12",
+                    "aria-hidden": "true",
+                    "focusable": "false"
+                  },
+                  "children": [
+                    {
+                      "tag": "path",
+                      "attributes": {
+                        "d": "M2.14645 4.64645C2.34171 4.45118 2.65829 4.45118 2.85355 4.64645L6 7.79289L9.14645 4.64645C9.34171 4.45118 9.65829 4.45118 9.85355 4.64645C10.0488 4.84171 10.0488 5.15829 9.85355 5.35355L6.35355 8.85355C6.15829 9.04882 5.84171 9.04882 5.64645 8.85355L2.14645 5.35355C1.95118 5.15829 1.95118 4.84171 2.14645 4.64645Z",
+                        "fill": "currentColor"
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
         },
         {
           "type": "quote",
@@ -7904,7 +13576,36 @@ window.KC_ENTITIES = {
             "Images: Getty Images. Data: en.wikipedia.org · anothersite.com · coolfacts.com Hero image: Holy town Varanasi and the river Ganges"
           ],
           "images": [],
-          "slots": []
+          "slots": [],
+          "platform": "mobile",
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": [
+                  "kc-module",
+                  "kc-module--mobile",
+                  "kc-mobile-text-list-attribution"
+                ],
+                "id": "kc-company-mobile-attribution",
+                "data-kc": "Mobile / Text List / Attribution",
+                "aria-label": "Attribution"
+              }
+            },
+            "content": {
+              "paragraphs": [
+                {
+                  "attributes": {},
+                  "segments": [
+                    {
+                      "kind": "text",
+                      "value": "Images: Getty Images. Data: en.wikipedia.org · anothersite.com · coolfacts.com Hero image: Holy town Varanasi and the river Ganges"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
         }
       ]
     }
@@ -13896,6 +19597,1823 @@ window.KC_ENTITIES = {
             "icon": "../assets/icons/ic_fluent_image_multiple_16_regular.svg"
           }
         ]
+      }
+    },
+    "modules": {
+      "desktop-awards": {
+        "type": "awards",
+        "platform": "desktop",
+        "figmaName": "Text List / Awards",
+        "variant": "",
+        "render": {
+          "root": {
+            "tag": "section",
+            "attributes": {
+              "class": [
+                "kc-module",
+                "kc-text-list-awards"
+              ],
+              "data-kc": "Text List / Awards"
+            }
+          },
+          "content": {
+            "heading": {
+              "tag": "div",
+              "attributes": {
+                "class": [
+                  "kc-module-title"
+                ]
+              },
+              "title": {
+                "tag": "h3",
+                "attributes": {},
+                "text": "Awards"
+              },
+              "decoration": {
+                "tag": "a",
+                "attributes": {
+                  "class": [
+                    "kc-link"
+                  ],
+                  "href": "#",
+                  "aria-label": "See all Awards"
+                },
+                "wrapper": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-title-chevron"
+                    ]
+                  }
+                },
+                "icon": {
+                  "tag": "img",
+                  "attributes": {
+                    "src": "../assets/icons/ic_fluent_chevron_right_16_regular.svg",
+                    "alt": "",
+                    "aria-hidden": "true"
+                  }
+                }
+              }
+            },
+            "list": {
+              "tag": "div",
+              "attributes": {
+                "class": [
+                  "kc-text-list-awards__list"
+                ]
+              },
+              "items": [
+                {
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-text-list-awards__award"
+                    ]
+                  },
+                  "fields": [
+                    {
+                      "tag": "strong",
+                      "attributes": {
+                        "class": [
+                          "kc-t-highlight-s"
+                        ]
+                      },
+                      "text": "Award Title"
+                    },
+                    {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-copy"
+                        ]
+                      },
+                      "text": "Wins: Year 1, Year 2. Nominations: X"
+                    }
+                  ]
+                },
+                {
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-text-list-awards__award"
+                    ]
+                  },
+                  "fields": [
+                    {
+                      "tag": "strong",
+                      "attributes": {
+                        "class": [
+                          "kc-t-highlight-s"
+                        ]
+                      },
+                      "text": "Award Title"
+                    },
+                    {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-copy"
+                        ]
+                      },
+                      "text": "Wins: Year 1, Year 2. Nominations: X"
+                    }
+                  ]
+                },
+                {
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-text-list-awards__award"
+                    ]
+                  },
+                  "fields": [
+                    {
+                      "tag": "strong",
+                      "attributes": {
+                        "class": [
+                          "kc-t-highlight-s"
+                        ]
+                      },
+                      "text": "Award Title"
+                    },
+                    {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-copy"
+                        ]
+                      },
+                      "text": "Wins: Year 1, Year 2. Nominations: X"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      },
+      "desktop-top-fact-2": {
+        "type": "top-fact",
+        "platform": "desktop",
+        "figmaName": "Text List / Top Fact — Quantity=2",
+        "variant": "",
+        "render": {
+          "root": {
+            "tag": "section",
+            "attributes": {
+              "class": [
+                "kc-module",
+                "kc-text-list-top-fact",
+                "kc-text-list-top-fact--quantity-2"
+              ],
+              "data-kc": "Text List / Top Fact",
+              "aria-label": "Top facts"
+            }
+          },
+          "content": {
+            "items": [
+              {
+                "attributes": {
+                  "class": [
+                    "kc-text-list-top-fact__item"
+                  ]
+                },
+                "fields": [
+                  {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-copy-bold"
+                      ]
+                    },
+                    "text": "Life Span"
+                  },
+                  {
+                    "tag": "strong",
+                    "attributes": {
+                      "class": [
+                        "kc-t-highlight-l",
+                        "kc-gray-copy"
+                      ]
+                    },
+                    "text": "12 - 17"
+                  },
+                  {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-copy"
+                      ]
+                    },
+                    "text": "years"
+                  }
+                ]
+              },
+              {
+                "attributes": {
+                  "class": [
+                    "kc-text-list-top-fact__item"
+                  ]
+                },
+                "fields": [
+                  {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-copy-bold"
+                      ]
+                    },
+                    "text": "Life Span"
+                  },
+                  {
+                    "tag": "strong",
+                    "attributes": {
+                      "class": [
+                        "kc-t-highlight-l",
+                        "kc-gray-copy"
+                      ]
+                    },
+                    "text": "12 - 17"
+                  },
+                  {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-copy"
+                      ]
+                    },
+                    "text": "years"
+                  }
+                ]
+              }
+            ],
+            "slot": null,
+            "separator": {
+              "tag": "span",
+              "attributes": {
+                "class": [
+                  "kc-divider--v"
+                ]
+              }
+            },
+            "separatorCount": 1
+          }
+        }
+      },
+      "desktop-top-fact-3": {
+        "type": "top-fact",
+        "platform": "desktop",
+        "figmaName": "Text List / Top Fact — Quantity=3",
+        "variant": "",
+        "render": {
+          "root": {
+            "tag": "section",
+            "attributes": {
+              "class": [
+                "kc-module",
+                "kc-text-list-top-fact",
+                "kc-text-list-top-fact--quantity-3"
+              ],
+              "data-kc": "Text List / Top Fact",
+              "aria-label": "Top facts"
+            }
+          },
+          "content": {
+            "items": [
+              {
+                "attributes": {
+                  "class": [
+                    "kc-text-list-top-fact__item"
+                  ]
+                },
+                "fields": [
+                  {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-copy-bold"
+                      ]
+                    },
+                    "text": "Life Span"
+                  },
+                  {
+                    "tag": "strong",
+                    "attributes": {
+                      "class": [
+                        "kc-t-highlight-l",
+                        "kc-gray-copy"
+                      ]
+                    },
+                    "text": "12 - 17"
+                  },
+                  {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-copy"
+                      ]
+                    },
+                    "text": "years"
+                  }
+                ]
+              },
+              {
+                "attributes": {
+                  "class": [
+                    "kc-text-list-top-fact__item"
+                  ]
+                },
+                "fields": [
+                  {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-copy-bold"
+                      ]
+                    },
+                    "text": "Life Span"
+                  },
+                  {
+                    "tag": "strong",
+                    "attributes": {
+                      "class": [
+                        "kc-t-highlight-l",
+                        "kc-gray-copy"
+                      ]
+                    },
+                    "text": "12 - 17"
+                  },
+                  {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-copy"
+                      ]
+                    },
+                    "text": "years"
+                  }
+                ]
+              },
+              {
+                "attributes": {
+                  "class": [
+                    "kc-text-list-top-fact__item"
+                  ]
+                },
+                "fields": [
+                  {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-copy-bold"
+                      ]
+                    },
+                    "text": "Life Span"
+                  },
+                  {
+                    "tag": "strong",
+                    "attributes": {
+                      "class": [
+                        "kc-t-highlight-l",
+                        "kc-gray-copy"
+                      ]
+                    },
+                    "text": "12 - 17"
+                  },
+                  {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-copy"
+                      ]
+                    },
+                    "text": "years"
+                  }
+                ]
+              }
+            ],
+            "slot": null,
+            "separator": {
+              "tag": "span",
+              "attributes": {
+                "class": [
+                  "kc-divider--v"
+                ]
+              }
+            },
+            "separatorCount": 2
+          }
+        }
+      },
+      "desktop-attributions": {
+        "type": "attributions",
+        "platform": "desktop",
+        "figmaName": "Text List / Top Fact/Text List/Attributions",
+        "variant": "",
+        "render": {
+          "root": {
+            "tag": "section",
+            "attributes": {
+              "class": [
+                "kc-module",
+                "kc-text-list-top-fact-text-list-attributions"
+              ],
+              "data-kc": "Text List / Top Fact/Text List/Attributions",
+              "aria-label": "Attributions"
+            }
+          },
+          "content": {
+            "paragraphs": [
+              {
+                "attributes": {},
+                "segments": [
+                  {
+                    "kind": "text",
+                    "value": "Module images: "
+                  },
+                  {
+                    "kind": "link",
+                    "attributes": {
+                      "href": "https://unsplash.com/license"
+                    },
+                    "value": "Unsplash License"
+                  },
+                  {
+                    "kind": "text",
+                    "value": ". Data: Open Encyclopedia  example.org  example.net Hero image: City skyline at sunset"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "desktop-quick-facts-text-only": {
+        "type": "quick-facts",
+        "platform": "desktop",
+        "figmaName": "Text List / Quick Facts — Elements=Text Only, See more=No",
+        "variant": "",
+        "render": {
+          "root": {
+            "tag": "section",
+            "attributes": {
+              "class": [
+                "kc-module",
+                "kc-text-list-quick-facts",
+                "kc-text-list-quick-facts--text-only"
+              ],
+              "data-kc": "Text List / Quick Facts",
+              "aria-label": "Quick facts"
+            }
+          },
+          "content": {
+            "photoSlot": null,
+            "list": {
+              "tag": "dl",
+              "attributes": {
+                "class": [
+                  "kc-text-list-quick-facts__list"
+                ]
+              },
+              "items": [
+                {
+                  "attributes": {
+                    "class": [
+                      "kc-text-list-quick-facts__fact"
+                    ]
+                  },
+                  "label": {
+                    "tag": "dt",
+                    "attributes": {
+                      "class": [
+                        "kc-copy-bold"
+                      ]
+                    },
+                    "text": "Fact title"
+                  },
+                  "value": {
+                    "tag": "dd",
+                    "attributes": {
+                      "class": [
+                        "kc-copy"
+                      ]
+                    },
+                    "text": "Lorem ipsum Dolor sit amet"
+                  }
+                },
+                {
+                  "attributes": {
+                    "class": [
+                      "kc-text-list-quick-facts__fact"
+                    ]
+                  },
+                  "label": {
+                    "tag": "dt",
+                    "attributes": {
+                      "class": [
+                        "kc-copy-bold"
+                      ]
+                    },
+                    "text": "Fact title"
+                  },
+                  "value": {
+                    "tag": "dd",
+                    "attributes": {
+                      "class": [
+                        "kc-copy"
+                      ]
+                    },
+                    "text": "Lorem ipsum Dolor sit amet"
+                  }
+                },
+                {
+                  "attributes": {
+                    "class": [
+                      "kc-text-list-quick-facts__fact"
+                    ]
+                  },
+                  "label": {
+                    "tag": "dt",
+                    "attributes": {
+                      "class": [
+                        "kc-copy-bold"
+                      ]
+                    },
+                    "text": "Fact title"
+                  },
+                  "value": {
+                    "tag": "dd",
+                    "attributes": {
+                      "class": [
+                        "kc-copy"
+                      ]
+                    },
+                    "text": "Lorem ipsum Dolor sit amet"
+                  }
+                },
+                {
+                  "attributes": {
+                    "class": [
+                      "kc-text-list-quick-facts__fact"
+                    ]
+                  },
+                  "label": {
+                    "tag": "dt",
+                    "attributes": {
+                      "class": [
+                        "kc-copy-bold"
+                      ]
+                    },
+                    "text": "Fact title"
+                  },
+                  "value": {
+                    "tag": "dd",
+                    "attributes": {
+                      "class": [
+                        "kc-copy"
+                      ]
+                    },
+                    "text": "Lorem ipsum Dolor sit amet"
+                  }
+                }
+              ],
+              "separator": null,
+              "separatorsAfter": []
+            },
+            "imageRow": null,
+            "more": null
+          }
+        }
+      },
+      "desktop-quick-facts-see-more": {
+        "type": "quick-facts",
+        "platform": "desktop",
+        "figmaName": "Text List / Quick Facts — Elements=Text Only, See more=Yes",
+        "variant": "",
+        "render": {
+          "root": {
+            "tag": "section",
+            "attributes": {
+              "class": [
+                "kc-module",
+                "kc-text-list-quick-facts",
+                "kc-text-list-quick-facts--text-only",
+                "kc-text-list-quick-facts--see-more"
+              ],
+              "data-kc": "Text List / Quick Facts",
+              "aria-label": "Quick facts"
+            }
+          },
+          "content": {
+            "photoSlot": null,
+            "list": {
+              "tag": "dl",
+              "attributes": {
+                "class": [
+                  "kc-text-list-quick-facts__list"
+                ]
+              },
+              "items": [
+                {
+                  "attributes": {
+                    "class": [
+                      "kc-text-list-quick-facts__fact"
+                    ]
+                  },
+                  "label": {
+                    "tag": "dt",
+                    "attributes": {
+                      "class": [
+                        "kc-copy-bold"
+                      ]
+                    },
+                    "text": "Fact title"
+                  },
+                  "value": {
+                    "tag": "dd",
+                    "attributes": {
+                      "class": [
+                        "kc-copy"
+                      ]
+                    },
+                    "text": "Lorem ipsum Dolor sit amet"
+                  }
+                },
+                {
+                  "attributes": {
+                    "class": [
+                      "kc-text-list-quick-facts__fact"
+                    ]
+                  },
+                  "label": {
+                    "tag": "dt",
+                    "attributes": {
+                      "class": [
+                        "kc-copy-bold"
+                      ]
+                    },
+                    "text": "Fact title"
+                  },
+                  "value": {
+                    "tag": "dd",
+                    "attributes": {
+                      "class": [
+                        "kc-copy"
+                      ]
+                    },
+                    "text": "Lorem ipsum Dolor sit amet"
+                  }
+                },
+                {
+                  "attributes": {
+                    "class": [
+                      "kc-text-list-quick-facts__fact"
+                    ]
+                  },
+                  "label": {
+                    "tag": "dt",
+                    "attributes": {
+                      "class": [
+                        "kc-copy-bold"
+                      ]
+                    },
+                    "text": "Fact title"
+                  },
+                  "value": {
+                    "tag": "dd",
+                    "attributes": {
+                      "class": [
+                        "kc-copy"
+                      ]
+                    },
+                    "text": "Lorem ipsum Dolor sit amet"
+                  }
+                },
+                {
+                  "attributes": {
+                    "class": [
+                      "kc-text-list-quick-facts__fact"
+                    ]
+                  },
+                  "label": {
+                    "tag": "dt",
+                    "attributes": {
+                      "class": [
+                        "kc-copy-bold"
+                      ]
+                    },
+                    "text": "Fact title"
+                  },
+                  "value": {
+                    "tag": "dd",
+                    "attributes": {
+                      "class": [
+                        "kc-copy"
+                      ]
+                    },
+                    "text": "Lorem ipsum Dolor sit amet"
+                  }
+                }
+              ],
+              "separator": null,
+              "separatorsAfter": []
+            },
+            "imageRow": null,
+            "more": {
+              "attributes": {
+                "class": [
+                  "kc-text-list-quick-facts__more"
+                ]
+              },
+              "button": {
+                "tag": "button",
+                "attributes": {
+                  "class": [
+                    "kc-btn-reset",
+                    "kc-link"
+                  ],
+                  "type": "button",
+                  "aria-expanded": "false"
+                },
+                "text": "See more"
+              },
+              "icon": {
+                "tag": "img",
+                "attributes": {
+                  "src": "../assets/icons/ic_fluent_chevron_down_12_regular.svg",
+                  "alt": "",
+                  "aria-hidden": "true"
+                }
+              }
+            }
+          }
+        }
+      },
+      "desktop-quick-facts-image": {
+        "type": "quick-facts",
+        "platform": "desktop",
+        "figmaName": "Text List / Quick Facts — Elements=Image, See more=No",
+        "variant": "",
+        "render": {
+          "root": {
+            "tag": "section",
+            "attributes": {
+              "class": [
+                "kc-module",
+                "kc-text-list-quick-facts",
+                "kc-text-list-quick-facts--image"
+              ],
+              "data-kc": "Text List / Quick Facts",
+              "aria-label": "Quick facts"
+            }
+          },
+          "content": {
+            "photoSlot": null,
+            "list": null,
+            "imageRow": {
+              "frame": {
+                "tag": "div",
+                "attributes": {
+                  "class": [
+                    "kc-text-list-quick-facts__frame"
+                  ]
+                }
+              },
+              "row": {
+                "tag": "div",
+                "attributes": {
+                  "class": [
+                    "kc-text-list-quick-facts__image-row"
+                  ]
+                }
+              },
+              "artist": {
+                "attributes": {
+                  "class": [
+                    "kc-text-list-quick-facts__artist"
+                  ]
+                },
+                "avatar": {
+                  "tag": "span",
+                  "attributes": {
+                    "class": [
+                      "kc-img"
+                    ],
+                    "style": "width:40px;height:40px;border-radius:50px"
+                  },
+                  "image": {
+                    "src": "../assets/images/kc/stock/portrait-e.jpg",
+                    "alt": "Illustrative stock portrait of a person against a red wall",
+                    "class": []
+                  }
+                },
+                "pair": {
+                  "attributes": {
+                    "class": [
+                      "kc-text-list-quick-facts__pair"
+                    ]
+                  },
+                  "label": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-copy-bold"
+                      ]
+                    },
+                    "text": "Artist"
+                  },
+                  "value": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-copy"
+                      ]
+                    },
+                    "text": "Avery Lane"
+                  }
+                }
+              },
+              "pairs": [
+                {
+                  "attributes": {
+                    "class": [
+                      "kc-text-list-quick-facts__pair"
+                    ]
+                  },
+                  "label": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-copy-bold"
+                      ]
+                    },
+                    "text": "Album"
+                  },
+                  "value": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-copy"
+                      ]
+                    },
+                    "text": "Northern Lights"
+                  }
+                },
+                {
+                  "attributes": {
+                    "class": [
+                      "kc-text-list-quick-facts__pair"
+                    ]
+                  },
+                  "label": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-copy-bold"
+                      ]
+                    },
+                    "text": "Genre"
+                  },
+                  "value": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-copy"
+                      ]
+                    },
+                    "text": "Pop"
+                  }
+                },
+                {
+                  "attributes": {
+                    "class": [
+                      "kc-text-list-quick-facts__pair"
+                    ]
+                  },
+                  "label": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-copy-bold"
+                      ]
+                    },
+                    "text": "Released"
+                  },
+                  "value": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-copy"
+                      ]
+                    },
+                    "text": "2019"
+                  }
+                },
+                {
+                  "attributes": {
+                    "class": [
+                      "kc-text-list-quick-facts__pair"
+                    ]
+                  },
+                  "label": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-copy-bold"
+                      ]
+                    },
+                    "text": "Duration"
+                  },
+                  "value": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-copy"
+                      ]
+                    },
+                    "text": "4:23"
+                  }
+                }
+              ]
+            },
+            "more": null
+          }
+        }
+      },
+      "desktop-attribution": {
+        "type": "attribution",
+        "platform": "desktop",
+        "figmaName": "Text List / Attribution",
+        "variant": "",
+        "render": {
+          "root": {
+            "tag": "section",
+            "attributes": {
+              "class": [
+                "kc-module",
+                "kc-text-list-attribution"
+              ],
+              "data-kc": "Text List / Attribution",
+              "aria-label": "Attribution"
+            }
+          },
+          "content": {
+            "paragraphs": [
+              {
+                "attributes": {
+                  "class": [
+                    "kc-copy"
+                  ]
+                },
+                "segments": [
+                  {
+                    "kind": "text",
+                    "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut ..."
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "mobile-awards": {
+        "type": "awards",
+        "platform": "mobile",
+        "figmaName": "Mobile / Text List / Awards",
+        "variant": "",
+        "render": {
+          "root": {
+            "tag": "section",
+            "attributes": {
+              "class": [
+                "kc-module",
+                "kc-module--mobile",
+                "kc-mobile-reviews-awards"
+              ],
+              "data-kc": "Mobile / Text List / Awards"
+            }
+          },
+          "content": {
+            "heading": {
+              "tag": "div",
+              "attributes": {
+                "class": [
+                  "kc-module-title"
+                ]
+              },
+              "title": {
+                "tag": "h3",
+                "attributes": {},
+                "text": "Awards"
+              },
+              "decoration": null
+            },
+            "list": {
+              "tag": "div",
+              "attributes": {
+                "class": [
+                  "kc-mobile-reviews-awards__list"
+                ]
+              },
+              "items": [
+                {
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-mobile-reviews-awards__award"
+                    ]
+                  },
+                  "fields": [
+                    {
+                      "tag": "strong",
+                      "attributes": {
+                        "class": [
+                          "kc-m-title"
+                        ]
+                      },
+                      "text": "Golden Reel Award"
+                    },
+                    {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-m-reg"
+                        ]
+                      },
+                      "text": "Wins: 2019, 2021. Nominations: 4"
+                    }
+                  ]
+                },
+                {
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-mobile-reviews-awards__award"
+                    ]
+                  },
+                  "fields": [
+                    {
+                      "tag": "strong",
+                      "attributes": {
+                        "class": [
+                          "kc-m-title"
+                        ]
+                      },
+                      "text": "Critics Circle Award"
+                    },
+                    {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-m-reg"
+                        ]
+                      },
+                      "text": "Wins: 2019, 2021. Nominations: 4"
+                    }
+                  ]
+                },
+                {
+                  "tag": "div",
+                  "attributes": {
+                    "class": [
+                      "kc-mobile-reviews-awards__award"
+                    ]
+                  },
+                  "fields": [
+                    {
+                      "tag": "strong",
+                      "attributes": {
+                        "class": [
+                          "kc-m-title"
+                        ]
+                      },
+                      "text": "Screen Notes Award"
+                    },
+                    {
+                      "tag": "span",
+                      "attributes": {
+                        "class": [
+                          "kc-m-reg"
+                        ]
+                      },
+                      "text": "Wins: 2019, 2021. Nominations: 4"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      },
+      "mobile-attribution": {
+        "type": "attribution",
+        "platform": "mobile",
+        "figmaName": "Mobile / Text List / Attribution",
+        "variant": "",
+        "render": {
+          "root": {
+            "tag": "section",
+            "attributes": {
+              "class": [
+                "kc-module",
+                "kc-module--mobile",
+                "kc-mobile-text-list-attribution"
+              ],
+              "data-kc": "Mobile / Text List / Attribution"
+            }
+          },
+          "content": {
+            "paragraphs": [
+              {
+                "attributes": {},
+                "segments": [
+                  {
+                    "kind": "text",
+                    "value": "Module images: "
+                  },
+                  {
+                    "kind": "link",
+                    "attributes": {
+                      "class": [
+                        "kc-m-text-button"
+                      ],
+                      "href": "https://unsplash.com/license"
+                    },
+                    "value": "Unsplash License"
+                  },
+                  {
+                    "kind": "text",
+                    "value": ". Data: Open Encyclopedia  "
+                  },
+                  {
+                    "kind": "link",
+                    "attributes": {
+                      "class": [
+                        "kc-m-text-button"
+                      ],
+                      "href": "http://contoso.com/"
+                    },
+                    "value": "contoso.com"
+                  },
+                  {
+                    "kind": "text",
+                    "value": "  "
+                  },
+                  {
+                    "kind": "link",
+                    "attributes": {
+                      "class": [
+                        "kc-m-text-button"
+                      ],
+                      "href": "http://example.org/"
+                    },
+                    "value": "example.org"
+                  },
+                  {
+                    "kind": "text",
+                    "value": " Hero image: City skyline at sunset"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "mobile-top-fact-2": {
+        "type": "top-fact",
+        "platform": "mobile",
+        "figmaName": "Mobile / Text List / Top Fact — Quantity=2",
+        "variant": "Quantity=2",
+        "render": {
+          "root": {
+            "tag": "section",
+            "attributes": {
+              "class": [
+                "kc-module",
+                "kc-module--mobile",
+                "kc-mobile-text-list-top-fact",
+                "kc-mobile-text-list-top-fact--2"
+              ],
+              "data-kc": "Mobile / Text List / Top Fact",
+              "data-kc-variant": "Quantity=2"
+            }
+          },
+          "content": {
+            "items": [
+              {
+                "attributes": {
+                  "class": [
+                    "kc-mobile-text-list-top-fact__item"
+                  ]
+                },
+                "fields": [
+                  {
+                    "tag": "strong",
+                    "attributes": {
+                      "class": [
+                        "kc-m-bold"
+                      ]
+                    },
+                    "text": "Life Span"
+                  },
+                  {
+                    "tag": "strong",
+                    "attributes": {
+                      "class": [
+                        "kc-m-num"
+                      ]
+                    },
+                    "text": "12 - 17"
+                  },
+                  {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-m-reg"
+                      ]
+                    },
+                    "text": "years"
+                  }
+                ]
+              },
+              {
+                "attributes": {
+                  "class": [
+                    "kc-mobile-text-list-top-fact__item"
+                  ]
+                },
+                "fields": [
+                  {
+                    "tag": "strong",
+                    "attributes": {
+                      "class": [
+                        "kc-m-bold"
+                      ]
+                    },
+                    "text": "Life Span"
+                  },
+                  {
+                    "tag": "strong",
+                    "attributes": {
+                      "class": [
+                        "kc-m-num"
+                      ]
+                    },
+                    "text": "12 - 17"
+                  },
+                  {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-m-reg"
+                      ]
+                    },
+                    "text": "years"
+                  }
+                ]
+              }
+            ],
+            "slot": null,
+            "separator": {
+              "tag": "span",
+              "attributes": {
+                "class": [
+                  "kc-divider--v"
+                ]
+              }
+            },
+            "separatorCount": 1
+          }
+        }
+      },
+      "mobile-top-fact-3": {
+        "type": "top-fact",
+        "platform": "mobile",
+        "figmaName": "Mobile / Text List / Top Fact — Quantity=3",
+        "variant": "Quantity=3",
+        "render": {
+          "root": {
+            "tag": "section",
+            "attributes": {
+              "class": [
+                "kc-module",
+                "kc-module--mobile",
+                "kc-mobile-text-list-top-fact",
+                "kc-mobile-text-list-top-fact--3"
+              ],
+              "data-kc": "Mobile / Text List / Top Fact",
+              "data-kc-variant": "Quantity=3"
+            }
+          },
+          "content": {
+            "items": [
+              {
+                "attributes": {
+                  "class": [
+                    "kc-mobile-text-list-top-fact__item"
+                  ]
+                },
+                "fields": [
+                  {
+                    "tag": "strong",
+                    "attributes": {
+                      "class": [
+                        "kc-m-bold"
+                      ]
+                    },
+                    "text": "Life Span"
+                  },
+                  {
+                    "tag": "strong",
+                    "attributes": {
+                      "class": [
+                        "kc-m-num"
+                      ]
+                    },
+                    "text": "12 - 17"
+                  },
+                  {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-m-reg"
+                      ]
+                    },
+                    "text": "years"
+                  }
+                ]
+              },
+              {
+                "attributes": {
+                  "class": [
+                    "kc-mobile-text-list-top-fact__item"
+                  ]
+                },
+                "fields": [
+                  {
+                    "tag": "strong",
+                    "attributes": {
+                      "class": [
+                        "kc-m-bold"
+                      ]
+                    },
+                    "text": "Life Span"
+                  },
+                  {
+                    "tag": "strong",
+                    "attributes": {
+                      "class": [
+                        "kc-m-num"
+                      ]
+                    },
+                    "text": "12 - 17"
+                  },
+                  {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-m-reg"
+                      ]
+                    },
+                    "text": "years"
+                  }
+                ]
+              },
+              {
+                "attributes": {
+                  "class": [
+                    "kc-mobile-text-list-top-fact__item"
+                  ]
+                },
+                "fields": [
+                  {
+                    "tag": "strong",
+                    "attributes": {
+                      "class": [
+                        "kc-m-bold"
+                      ]
+                    },
+                    "text": "Life Span"
+                  },
+                  {
+                    "tag": "strong",
+                    "attributes": {
+                      "class": [
+                        "kc-m-num"
+                      ]
+                    },
+                    "text": "12 - 17"
+                  },
+                  {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-m-reg"
+                      ]
+                    },
+                    "text": "years"
+                  }
+                ]
+              }
+            ],
+            "slot": null,
+            "separator": {
+              "tag": "span",
+              "attributes": {
+                "class": [
+                  "kc-divider--v"
+                ]
+              }
+            },
+            "separatorCount": 2
+          }
+        }
+      },
+      "mobile-quick-facts-text-only": {
+        "type": "quick-facts",
+        "platform": "mobile",
+        "figmaName": "Mobile / Text List / Quick Facts — See more=No",
+        "variant": "Elements=Text Only, See more=No",
+        "render": {
+          "root": {
+            "tag": "section",
+            "attributes": {
+              "class": [
+                "kc-module",
+                "kc-module--mobile",
+                "kc-mobile-text-list-quick-facts"
+              ],
+              "data-kc": "Mobile / Text List / Quick Facts",
+              "data-kc-variant": "Elements=Text Only, See more=No"
+            }
+          },
+          "content": {
+            "photoSlot": null,
+            "list": {
+              "tag": "div",
+              "attributes": {
+                "class": [
+                  "kc-mobile-text-list-quick-facts__list"
+                ],
+                "role": "list"
+              },
+              "items": [
+                {
+                  "attributes": {
+                    "class": [
+                      "kc-mobile-text-list-quick-facts__fact"
+                    ],
+                    "role": "listitem"
+                  },
+                  "label": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-m-bold"
+                      ]
+                    },
+                    "text": "Fact title"
+                  },
+                  "value": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-m-reg"
+                      ]
+                    },
+                    "text": "Lorem ipsum  Dolor sit amet"
+                  }
+                },
+                {
+                  "attributes": {
+                    "class": [
+                      "kc-mobile-text-list-quick-facts__fact"
+                    ],
+                    "role": "listitem"
+                  },
+                  "label": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-m-bold"
+                      ]
+                    },
+                    "text": "Fact title"
+                  },
+                  "value": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-m-reg"
+                      ]
+                    },
+                    "text": "Lorem ipsum  Dolor sit amet"
+                  }
+                },
+                {
+                  "attributes": {
+                    "class": [
+                      "kc-mobile-text-list-quick-facts__fact"
+                    ],
+                    "role": "listitem"
+                  },
+                  "label": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-m-bold"
+                      ]
+                    },
+                    "text": "Fact title"
+                  },
+                  "value": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-m-reg"
+                      ]
+                    },
+                    "text": "Lorem ipsum  Dolor sit amet"
+                  }
+                },
+                {
+                  "attributes": {
+                    "class": [
+                      "kc-mobile-text-list-quick-facts__fact"
+                    ],
+                    "role": "listitem"
+                  },
+                  "label": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-m-bold"
+                      ]
+                    },
+                    "text": "Fact title"
+                  },
+                  "value": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-m-reg"
+                      ]
+                    },
+                    "text": "Lorem ipsum  Dolor sit amet"
+                  }
+                }
+              ],
+              "separator": {
+                "tag": "span",
+                "attributes": {
+                  "class": [
+                    "kc-mobile-text-list-quick-facts__line"
+                  ],
+                  "role": "presentation"
+                }
+              },
+              "separatorsAfter": [
+                0,
+                1,
+                2
+              ]
+            },
+            "imageRow": null,
+            "more": null
+          }
+        }
+      },
+      "mobile-quick-facts-see-more": {
+        "type": "quick-facts",
+        "platform": "mobile",
+        "figmaName": "Mobile / Text List / Quick Facts — See more=Yes",
+        "variant": "Elements=Text Only, See more=Yes",
+        "render": {
+          "root": {
+            "tag": "section",
+            "attributes": {
+              "class": [
+                "kc-module",
+                "kc-module--mobile",
+                "kc-mobile-text-list-quick-facts",
+                "kc-mobile-text-list-quick-facts--see-more"
+              ],
+              "data-kc": "Mobile / Text List / Quick Facts",
+              "data-kc-variant": "Elements=Text Only, See more=Yes"
+            }
+          },
+          "content": {
+            "photoSlot": null,
+            "list": {
+              "tag": "div",
+              "attributes": {
+                "class": [
+                  "kc-mobile-text-list-quick-facts__list"
+                ],
+                "role": "list"
+              },
+              "items": [
+                {
+                  "attributes": {
+                    "class": [
+                      "kc-mobile-text-list-quick-facts__fact"
+                    ],
+                    "role": "listitem"
+                  },
+                  "label": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-m-bold"
+                      ]
+                    },
+                    "text": "Fact title"
+                  },
+                  "value": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-m-reg"
+                      ]
+                    },
+                    "text": "Lorem ipsum  Dolor sit amet"
+                  }
+                },
+                {
+                  "attributes": {
+                    "class": [
+                      "kc-mobile-text-list-quick-facts__fact"
+                    ],
+                    "role": "listitem"
+                  },
+                  "label": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-m-bold"
+                      ]
+                    },
+                    "text": "Fact title"
+                  },
+                  "value": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-m-reg"
+                      ]
+                    },
+                    "text": "Lorem ipsum  Dolor sit amet"
+                  }
+                },
+                {
+                  "attributes": {
+                    "class": [
+                      "kc-mobile-text-list-quick-facts__fact"
+                    ],
+                    "role": "listitem"
+                  },
+                  "label": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-m-bold"
+                      ]
+                    },
+                    "text": "Fact title"
+                  },
+                  "value": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-m-reg"
+                      ]
+                    },
+                    "text": "Lorem ipsum  Dolor sit amet"
+                  }
+                },
+                {
+                  "attributes": {
+                    "class": [
+                      "kc-mobile-text-list-quick-facts__fact"
+                    ],
+                    "role": "listitem"
+                  },
+                  "label": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-m-bold"
+                      ]
+                    },
+                    "text": "Fact title"
+                  },
+                  "value": {
+                    "tag": "span",
+                    "attributes": {
+                      "class": [
+                        "kc-m-reg"
+                      ]
+                    },
+                    "text": "Lorem ipsum  Dolor sit amet"
+                  }
+                }
+              ],
+              "separator": {
+                "tag": "span",
+                "attributes": {
+                  "class": [
+                    "kc-mobile-text-list-quick-facts__line"
+                  ],
+                  "role": "presentation"
+                }
+              },
+              "separatorsAfter": [
+                0,
+                1,
+                2,
+                3
+              ]
+            },
+            "imageRow": null,
+            "more": {
+              "attributes": {
+                "class": [
+                  "kc-mobile-text-list-quick-facts__more"
+                ]
+              },
+              "button": {
+                "tag": "button",
+                "attributes": {
+                  "class": [
+                    "kc-btn-reset",
+                    "kc-m-text-button"
+                  ],
+                  "type": "button",
+                  "aria-expanded": "false"
+                },
+                "text": "See more"
+              },
+              "icon": {
+                "tag": "img",
+                "attributes": {
+                  "src": "../assets/icons/ic_fluent_chevron_down_12_regular.svg",
+                  "alt": "",
+                  "aria-hidden": "true"
+                }
+              }
+            }
+          }
+        }
+      },
+      "card-desktop-attribution": {
+        "type": "attribution",
+        "platform": "desktop",
+        "figmaName": "Text List / Attribution",
+        "variant": "",
+        "render": {
+          "root": {
+            "tag": "section",
+            "attributes": {
+              "class": [
+                "kc-module",
+                "kc-text-list-attribution",
+                "kc-module--card-last"
+              ],
+              "id": "kc-mod-attribution",
+              "data-kc": "Text List / Attribution",
+              "aria-label": "Attribution"
+            }
+          },
+          "content": {
+            "paragraphs": [
+              {
+                "attributes": {
+                  "class": [
+                    "kc-copy"
+                  ]
+                },
+                "segments": [
+                  {
+                    "kind": "text",
+                    "value": "Images: "
+                  },
+                  {
+                    "kind": "link",
+                    "attributes": {
+                      "href": "https://unsplash.com/license"
+                    },
+                    "value": "Unsplash License"
+                  },
+                  {
+                    "kind": "text",
+                    "value": "."
+                  }
+                ]
+              }
+            ]
+          }
+        }
       }
     }
   }

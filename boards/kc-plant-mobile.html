@@ -5,7 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Plant Knowledge Card — Mobile</title>
   <link rel="stylesheet" href="../assets/css/msn-components.css">
-  <link rel="stylesheet" href="../assets/css/kc-components.css"><script src="../assets/js/data/kc-entities.js"></script><script src="../assets/js/components/kc-hero.js"></script>
+  <link rel="stylesheet" href="../assets/css/kc-components.css"><script src="../assets/js/data/kc-entities.js"></script>  <script src="../assets/js/components/kc-module.js"></script>
+  <script src="../assets/js/components/kc-modules/text-list.js"></script>
+  <script src="../assets/js/components/kc-hero.js"></script>
   <script src="../assets/js/kc-mobile-carousels.js" defer></script>
   <style>
     * { box-sizing:border-box; }
@@ -38,29 +40,9 @@
             <button class="kc-btn-flipper kc-plant-mobile-carousel__next" type="button" aria-label="Next carousel images"><svg width="16" height="16" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><use href="#kc-plant-arrow-right"></use></svg></button>
           </section>
 
-          <section class="kc-module kc-module--mobile kc-mobile-text-list-quick-facts" id="kc-plant-mobile-facts" data-kc="Mobile / Text List / Quick Facts" data-kc-variant="See more=No" aria-label="Quick facts about dahlias">
-            <div class="kc-mobile-text-list-quick-facts__list" role="list">
-              <div class="kc-mobile-text-list-quick-facts__fact" role="listitem"><span class="kc-m-bold">Family</span><span class="kc-m-reg">Asteraceae</span></div>
-              <span class="kc-mobile-text-list-quick-facts__line" role="presentation"></span>
-              <div class="kc-mobile-text-list-quick-facts__fact" role="listitem"><span class="kc-m-bold">Garden height</span><span class="kc-m-reg">1–5+ ft</span></div>
-              <span class="kc-mobile-text-list-quick-facts__line" role="presentation"></span>
-              <div class="kc-mobile-text-list-quick-facts__fact" role="listitem"><span class="kc-m-bold">Native</span><span class="kc-m-reg">Mexico and Central America</span></div>
-              <span class="kc-mobile-text-list-quick-facts__line" role="presentation"></span>
-              <div class="kc-mobile-text-list-quick-facts__fact" role="listitem"><span class="kc-m-bold">Bloom</span><span class="kc-m-reg">Summer to first frost</span></div>
-            </div>
-          </section>
+          <kc-module entity="plant" platform="mobile" index="1"></kc-module>
 
-          <section class="kc-module kc-module--mobile kc-mobile-text-list-top-fact kc-mobile-text-list-top-fact--2" id="kc-plant-mobile-top-facts" data-kc="Mobile / Text List / Top Fact" data-kc-variant="Quantity=2" aria-label="Height and native range">
-            <div class="kc-mobile-text-list-top-fact__item">
-              <strong class="kc-m-bold">Garden height</strong>
-              <strong class="kc-m-num">1–5+ ft</strong>
-            </div>
-            <span class="kc-divider--v" aria-hidden="true"></span>
-            <div class="kc-mobile-text-list-top-fact__item">
-              <strong class="kc-m-bold">Native to</strong>
-              <strong class="kc-m-reg">Mexico</strong>
-            </div>
-          </section>
+          <kc-module entity="plant" platform="mobile" index="2"></kc-module>
 
           <section class="kc-module kc-module--mobile kc-mobile-image-list-interesting-facts kc-mobile-image-list-interesting-facts--1-image" id="kc-plant-mobile-interesting-one" data-kc="Mobile / Image List / Interesting Facts" data-kc-variant="Image Amount=1-Image" aria-label="Dahlia growing and flower facts">
             <div class="kc-mobile-image-list-interesting-facts__text">
@@ -95,9 +77,7 @@
           </section>
 
           <div class="kc-card-more" id="kc-plant-mobile-more" hidden>
-            <section class="kc-module kc-module--mobile kc-mobile-text-list-attribution kc-module--card-last" id="kc-plant-mobile-attribution" data-kc="Mobile / Text List / Attribution" aria-label="Attribution">
-              <p>Photos (resized): Andy Mabbett, <a href="https://commons.wikimedia.org/wiki/File:Dahlia_%27Dahlietta_Anna%27_-_2020-05-08_-_Andy_Mabbett_-_02.jpg">flower</a> and <a href="https://commons.wikimedia.org/wiki/File:Dahlia_%27Dahlietta_Anna%27_-_2020-05-08_-_Andy_Mabbett_-_03.jpg">plant</a>; Dominicus Johannes Bergsma, <a href="https://commons.wikimedia.org/wiki/File:Dahlia_%27Moonfire%27_006.JPG">flower</a>, <a href="https://commons.wikimedia.org/wiki/File:Dahlia_%27Moonfire%27_002.JPG">foliage</a> and <a href="https://commons.wikimedia.org/wiki/File:Bloemknop_van_een_Dahlia_%27Moonfire%27._20-08-2023._(d.j.b).jpg">bud</a>. <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>. Facts: <a href="https://www.rhs.org.uk/plants/dahlia/growing-guide">RHS</a> and <a href="https://www.britannica.com/plant/Dahlia">Britannica</a>.</p>
-            </section>
+            <kc-module entity="plant" platform="mobile" index="5"></kc-module>
           </div>
 
           <button class="kc-mobile-expansion-see-more" type="button" aria-expanded="false" aria-controls="kc-plant-mobile-more">

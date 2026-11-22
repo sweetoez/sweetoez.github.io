@@ -6,6 +6,9 @@
   <title>Knowledge Card modules — Mobile</title>
   <link rel="stylesheet" href="../assets/css/msn-components.css">
   <link rel="stylesheet" href="../assets/css/kc-components.css">
+  <script src="../assets/js/data/kc-entities.js"></script>
+  <script src="../assets/js/components/kc-module.js"></script>
+  <script src="../assets/js/components/kc-modules/text-list.js"></script>
   <script src="../assets/js/kc-mobile-carousels.js" defer></script>
   <style>
     * { box-sizing:border-box; }
@@ -601,25 +604,7 @@
 </div>
 <div class="kc-board-item">
   <p class="kc-board-label">Mobile / Text List / Awards</p>
-  <section class="kc-module kc-module--mobile kc-mobile-reviews-awards" data-kc="Mobile / Text List / Awards">
-    <div class="kc-module-title">
-      <h3>Awards</h3>
-    </div>
-    <div class="kc-mobile-reviews-awards__list">
-      <div class="kc-mobile-reviews-awards__award">
-        <strong class="kc-m-title">Golden Reel Award</strong>
-        <span class="kc-m-reg">Wins: 2019, 2021. Nominations: 4</span>
-      </div>
-      <div class="kc-mobile-reviews-awards__award">
-        <strong class="kc-m-title">Critics Circle Award</strong>
-        <span class="kc-m-reg">Wins: 2019, 2021. Nominations: 4</span>
-      </div>
-      <div class="kc-mobile-reviews-awards__award">
-        <strong class="kc-m-title">Screen Notes Award</strong>
-        <span class="kc-m-reg">Wins: 2019, 2021. Nominations: 4</span>
-      </div>
-    </div>
-  </section>
+  <kc-module type="awards" variant="mobile-awards"></kc-module>
 </div>
 <div class="kc-board-item">
   <p class="kc-board-label">Mobile / Text List / Songs</p>
@@ -707,9 +692,7 @@
 </div>
 <div class="kc-board-item">
   <p class="kc-board-label">Mobile / Text List / Attribution</p>
-  <section class="kc-module kc-module--mobile kc-mobile-text-list-attribution" data-kc="Mobile / Text List / Attribution">
-    <p>Module images: <a class="kc-m-text-button" href="https://unsplash.com/license">Unsplash License</a>. Data: Open Encyclopedia&nbsp; <a class="kc-m-text-button" href="http://contoso.com/">contoso.com</a>&nbsp; <a class="kc-m-text-button" href="http://example.org/">example.org</a> Hero image: City skyline at sunset</p>
-  </section>
+  <kc-module type="attribution" variant="mobile-attribution"></kc-module>
 </div>
 <div class="kc-board-item">
   <p class="kc-board-label">Mobile / Text List</p>
@@ -719,108 +702,19 @@
 </div>
 <div class="kc-board-item">
   <p class="kc-board-label">Mobile / Text List / Top Fact — Quantity=2</p>
-  <section class="kc-module kc-module--mobile kc-mobile-text-list-top-fact kc-mobile-text-list-top-fact--2" data-kc="Mobile / Text List / Top Fact" data-kc-variant="Quantity=2">
-    <div class="kc-mobile-text-list-top-fact__item">
-      <strong class="kc-m-bold">Life Span</strong>
-      <strong class="kc-m-num">12 - 17</strong>
-      <span class="kc-m-reg">years</span>
-    </div>
-    <span class="kc-divider--v">
-    </span>
-    <div class="kc-mobile-text-list-top-fact__item">
-      <strong class="kc-m-bold">Life Span</strong>
-      <strong class="kc-m-num">12 - 17</strong>
-      <span class="kc-m-reg">years</span>
-    </div>
-  </section>
+  <kc-module type="top-fact" variant="mobile-top-fact-2"></kc-module>
 </div>
 <div class="kc-board-item">
   <p class="kc-board-label">Mobile / Text List / Top Fact — Quantity=3</p>
-  <section class="kc-module kc-module--mobile kc-mobile-text-list-top-fact kc-mobile-text-list-top-fact--3" data-kc="Mobile / Text List / Top Fact" data-kc-variant="Quantity=3">
-    <div class="kc-mobile-text-list-top-fact__item">
-      <strong class="kc-m-bold">Life Span</strong>
-      <strong class="kc-m-num">12 - 17</strong>
-      <span class="kc-m-reg">years</span>
-    </div>
-    <span class="kc-divider--v">
-    </span>
-    <div class="kc-mobile-text-list-top-fact__item">
-      <strong class="kc-m-bold">Life Span</strong>
-      <strong class="kc-m-num">12 - 17</strong>
-      <span class="kc-m-reg">years</span>
-    </div>
-    <span class="kc-divider--v">
-    </span>
-    <div class="kc-mobile-text-list-top-fact__item">
-      <strong class="kc-m-bold">Life Span</strong>
-      <strong class="kc-m-num">12 - 17</strong>
-      <span class="kc-m-reg">years</span>
-    </div>
-  </section>
+  <kc-module type="top-fact" variant="mobile-top-fact-3"></kc-module>
 </div>
 <div class="kc-board-item">
   <p class="kc-board-label">Mobile / Text List / Quick Facts — See more=No</p>
-  <section class="kc-module kc-module--mobile kc-mobile-text-list-quick-facts" data-kc="Mobile / Text List / Quick Facts" data-kc-variant="Elements=Text Only, See more=No">
-    <div class="kc-mobile-text-list-quick-facts__list" role="list">
-    <div class="kc-mobile-text-list-quick-facts__fact" role="listitem">
-      <span class="kc-m-bold">Fact title</span>
-      <span class="kc-m-reg">Lorem ipsum&nbsp; Dolor sit amet</span>
-    </div>
-    <span class="kc-mobile-text-list-quick-facts__line" role="presentation">
-    </span>
-    <div class="kc-mobile-text-list-quick-facts__fact" role="listitem">
-      <span class="kc-m-bold">Fact title</span>
-      <span class="kc-m-reg">Lorem ipsum&nbsp; Dolor sit amet</span>
-    </div>
-    <span class="kc-mobile-text-list-quick-facts__line" role="presentation">
-    </span>
-    <div class="kc-mobile-text-list-quick-facts__fact" role="listitem">
-      <span class="kc-m-bold">Fact title</span>
-      <span class="kc-m-reg">Lorem ipsum&nbsp; Dolor sit amet</span>
-    </div>
-    <span class="kc-mobile-text-list-quick-facts__line" role="presentation">
-    </span>
-    <div class="kc-mobile-text-list-quick-facts__fact" role="listitem">
-      <span class="kc-m-bold">Fact title</span>
-      <span class="kc-m-reg">Lorem ipsum&nbsp; Dolor sit amet</span>
-    </div>
-    </div>
-  </section>
+  <kc-module type="quick-facts" variant="mobile-quick-facts-text-only"></kc-module>
 </div>
 <div class="kc-board-item">
   <p class="kc-board-label">Mobile / Text List / Quick Facts — See more=Yes</p>
-  <section class="kc-module kc-module--mobile kc-mobile-text-list-quick-facts kc-mobile-text-list-quick-facts--see-more" data-kc="Mobile / Text List / Quick Facts" data-kc-variant="Elements=Text Only, See more=Yes">
-    <div class="kc-mobile-text-list-quick-facts__list" role="list">
-    <div class="kc-mobile-text-list-quick-facts__fact" role="listitem">
-      <span class="kc-m-bold">Fact title</span>
-      <span class="kc-m-reg">Lorem ipsum&nbsp; Dolor sit amet</span>
-    </div>
-    <span class="kc-mobile-text-list-quick-facts__line" role="presentation">
-    </span>
-    <div class="kc-mobile-text-list-quick-facts__fact" role="listitem">
-      <span class="kc-m-bold">Fact title</span>
-      <span class="kc-m-reg">Lorem ipsum&nbsp; Dolor sit amet</span>
-    </div>
-    <span class="kc-mobile-text-list-quick-facts__line" role="presentation">
-    </span>
-    <div class="kc-mobile-text-list-quick-facts__fact" role="listitem">
-      <span class="kc-m-bold">Fact title</span>
-      <span class="kc-m-reg">Lorem ipsum&nbsp; Dolor sit amet</span>
-    </div>
-    <span class="kc-mobile-text-list-quick-facts__line" role="presentation">
-    </span>
-    <div class="kc-mobile-text-list-quick-facts__fact" role="listitem">
-      <span class="kc-m-bold">Fact title</span>
-      <span class="kc-m-reg">Lorem ipsum&nbsp; Dolor sit amet</span>
-    </div>
-    <span class="kc-mobile-text-list-quick-facts__line" role="presentation">
-    </span>
-    </div>
-    <div class="kc-mobile-text-list-quick-facts__more">
-      <button class="kc-btn-reset kc-m-text-button" type="button" aria-expanded="false">See more</button>
-      <img src="../assets/icons/ic_fluent_chevron_down_12_regular.svg" alt="" aria-hidden="true">
-    </div>
-  </section>
+  <kc-module type="quick-facts" variant="mobile-quick-facts-see-more"></kc-module>
 </div>
 <div class="kc-board-item">
   <p class="kc-board-label">Mobile / Videos / Trailer</p>

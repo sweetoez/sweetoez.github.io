@@ -5,7 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Band Knowledge Card — Desktop</title>
   <link rel="stylesheet" href="../assets/css/msn-components.css">
-  <link rel="stylesheet" href="../assets/css/kc-components.css"><script src="../assets/js/data/kc-entities.js"></script><script src="../assets/js/components/kc-hero.js"></script>
+  <link rel="stylesheet" href="../assets/css/kc-components.css"><script src="../assets/js/data/kc-entities.js"></script>  <script src="../assets/js/components/kc-module.js"></script>
+  <script src="../assets/js/components/kc-modules/text-list.js"></script>
+  <script src="../assets/js/components/kc-hero.js"></script>
   <style>
     * { box-sizing:border-box; }
     body { min-width:1344px; margin:0; padding:32px; background:var(--kc-gray-5); color:var(--kc-gray-1); font-family:var(--kc-font); }
@@ -120,21 +122,9 @@
             </div>
           </section>
 
-          <section class="kc-module kc-text-list-awards" id="kc-band-desktop-mod-awards" data-kc="Text List / Awards" aria-labelledby="kc-band-desktop-awards-title">
-            <div class="kc-module-title">
-              <h3 id="kc-band-desktop-awards-title">Awards</h3>
-              <span class="kc-title-chevron" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" focusable="false"><use href="#kc-band-chevron-right"></use></svg></span>
-            </div>
-            <div class="kc-text-list-awards__list">
-              <div class="kc-text-list-awards__award"><strong>Award Title</strong><span class="kc-copy">Wins: Year 1, Year 2. Nominations: X</span></div>
-              <div class="kc-text-list-awards__award"><strong>Award Title</strong><span class="kc-copy">Wins: Year 1, Year 2. Nominations: X</span></div>
-              <div class="kc-text-list-awards__award"><strong>Award Title</strong><span class="kc-copy">Wins: Year 1, Year 2. Nominations: X</span></div>
-            </div>
-          </section>
+          <kc-module entity="band" platform="desktop" index="3"></kc-module>
 
-          <section class="kc-module kc-text-list-top-fact-text-list-attributions" id="kc-band-desktop-mod-attribution" data-kc="Text List / Top Fact/Text List/Attributions" aria-label="Attributions">
-            <p>Images: Getty Images. Data: en.wikipedia.org · anothersite.com · coolfacts.com Hero image: Holy town Varanasi and the river Ganges</p>
-          </section>
+          <kc-module entity="band" platform="desktop" index="4"></kc-module>
         </article>
 
         <form class="kc-modules-panel" data-portfolio="Modules panel (not in Figma)" aria-label="Modules">

@@ -5,7 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Planet Knowledge Card — Mobile</title>
   <link rel="stylesheet" href="../assets/css/msn-components.css">
-  <link rel="stylesheet" href="../assets/css/kc-components.css"><script src="../assets/js/data/kc-entities.js"></script><script src="../assets/js/components/kc-hero.js"></script>
+  <link rel="stylesheet" href="../assets/css/kc-components.css"><script src="../assets/js/data/kc-entities.js"></script>  <script src="../assets/js/components/kc-module.js"></script>
+  <script src="../assets/js/components/kc-modules/text-list.js"></script>
+  <script src="../assets/js/components/kc-hero.js"></script>
   <script src="../assets/js/kc-mobile-carousels.js" defer></script>
   <style>
     * { box-sizing:border-box; }
@@ -37,25 +39,7 @@
             <button class="kc-btn-flipper kc-planet-mobile-carousel__next" type="button" aria-label="Next carousel images"><svg width="16" height="16" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M10.8371 3.13074C10.6332 2.94456 10.3169 2.95895 10.1307 3.16289C9.94456 3.36683 9.95895 3.68309 10.1629 3.86927L16.3307 9.5H2.5C2.22386 9.5 2 9.72386 2 10C2 10.2761 2.22386 10.5 2.5 10.5H16.3279L10.1629 16.1281C9.95895 16.3143 9.94456 16.6305 10.1307 16.8345C10.3169 17.0384 10.6332 17.0528 10.8371 16.8666L17.7535 10.5526C17.8934 10.4248 17.9732 10.2573 17.993 10.0841C17.9976 10.0568 18 10.0287 18 10C18 9.97313 17.9979 9.94675 17.9938 9.92103C17.9756 9.74512 17.8955 9.57446 17.7535 9.44478L10.8371 3.13074Z" fill="currentColor"/></svg></button>
           </section>
 
-          <section class="kc-module kc-module--mobile kc-mobile-text-list-quick-facts kc-mobile-text-list-quick-facts--see-more" id="kc-planet-mobile-quick-facts" data-kc="Mobile / Text List / Quick Facts" data-kc-variant="See more=Yes" aria-label="Quick facts about Jupiter">
-            <div class="kc-mobile-text-list-quick-facts__list" role="list">
-              <div class="kc-mobile-text-list-quick-facts__fact" role="listitem"><span class="kc-m-bold">Diameter</span><span class="kc-m-reg">139,820 km</span></div>
-              <span class="kc-mobile-text-list-quick-facts__line" role="presentation"></span>
-              <div class="kc-mobile-text-list-quick-facts__fact" role="listitem"><span class="kc-m-bold">Moons</span><span class="kc-m-reg">95</span></div>
-              <span class="kc-mobile-text-list-quick-facts__line" role="presentation"></span>
-              <div class="kc-mobile-text-list-quick-facts__fact" role="listitem"><span class="kc-m-bold">Day</span><span class="kc-m-reg">9 h 56 min</span></div>
-              <span class="kc-mobile-text-list-quick-facts__line" role="presentation"></span>
-              <div class="kc-mobile-text-list-quick-facts__fact" role="listitem"><span class="kc-m-bold">Year</span><span class="kc-m-reg">11.86 Earth years</span></div>
-              <span class="kc-mobile-text-list-quick-facts__line" role="presentation" data-extra-fact hidden></span>
-              <span class="kc-mobile-text-list-quick-facts__fact" id="kc-planet-mobile-extra-distance" role="listitem" data-extra-fact hidden><span class="kc-m-bold">Distance</span><span class="kc-m-reg">5.2 AU</span></span>
-              <span class="kc-mobile-text-list-quick-facts__line" role="presentation" data-extra-fact hidden></span>
-              <span class="kc-mobile-text-list-quick-facts__fact" role="listitem" data-extra-fact hidden><span class="kc-m-bold">Mass</span><span class="kc-m-reg">318 Earths</span></span>
-            </div>
-            <div class="kc-mobile-text-list-quick-facts__more">
-              <button class="kc-btn-reset kc-m-text-button" type="button" aria-expanded="false" aria-controls="kc-planet-mobile-extra-distance">See more</button>
-              <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2.14645 4.64645C2.34171 4.45118 2.65829 4.45118 2.85355 4.64645L6 7.79289L9.14645 4.64645C9.34171 4.45118 9.65829 4.45118 9.85355 4.64645C10.0488 4.84171 10.0488 5.15829 9.85355 5.35355L6.35355 8.85355C6.15829 9.04882 5.84171 9.04882 5.64645 8.85355L2.14645 5.35355C1.95118 5.15829 1.95118 4.84171 2.14645 4.64645Z" fill="currentColor"/></svg>
-            </div>
-          </section>
+          <kc-module entity="planet" platform="mobile" index="1"></kc-module>
 
           <section class="kc-module kc-module--mobile kc-mobile-image-list-interesting-facts kc-mobile-image-list-interesting-facts--2-image" id="kc-planet-mobile-interesting-facts" data-kc="Mobile / Image List / Interesting Facts" data-kc-variant="Image Amount=2-Image" aria-label="Interesting facts about Jupiter">
             <div class="kc-mobile-image-list-interesting-facts__row">
@@ -75,44 +59,9 @@
             </div>
           </section>
 
-          <section class="kc-module kc-module--mobile kc-mobile-text-list-top-fact kc-mobile-text-list-top-fact--3" id="kc-planet-mobile-top-facts-one" data-kc="Mobile / Text List / Top Fact" data-kc-variant="Quantity=3" aria-label="Jupiter diameter, moons, and day">
-            <div class="kc-mobile-text-list-top-fact__item">
-              <strong class="kc-m-bold">Diameter</strong>
-              <strong class="kc-m-num">139,820</strong>
-              <span class="kc-m-reg">km</span>
-            </div>
-            <span class="kc-divider--v" aria-hidden="true"></span>
-            <div class="kc-mobile-text-list-top-fact__item">
-              <strong class="kc-m-bold">Moons</strong>
-              <strong class="kc-m-num">95</strong>
-            </div>
-            <span class="kc-divider--v" aria-hidden="true"></span>
-            <div class="kc-mobile-text-list-top-fact__item">
-              <strong class="kc-m-bold">Day</strong>
-              <strong class="kc-m-num">9 h 56</strong>
-              <span class="kc-m-reg">min</span>
-            </div>
-          </section>
+          <kc-module entity="planet" platform="mobile" index="3"></kc-module>
 
-          <section class="kc-module kc-module--mobile kc-mobile-text-list-top-fact kc-mobile-text-list-top-fact--3 kc-planet-mobile-top-facts-two" id="kc-planet-mobile-top-facts-two" data-kc="Mobile / Text List / Top Fact" data-kc-variant="Quantity=3" aria-label="Jupiter distance, year, and mass">
-            <div class="kc-mobile-text-list-top-fact__item">
-              <strong class="kc-m-bold">Distance from Sun</strong>
-              <strong class="kc-m-num">5.2</strong>
-              <span class="kc-m-reg">AU</span>
-            </div>
-            <span class="kc-divider--v" aria-hidden="true"></span>
-            <div class="kc-mobile-text-list-top-fact__item">
-              <strong class="kc-m-bold">Year</strong>
-              <strong class="kc-m-num">11.86</strong>
-              <span class="kc-m-reg">Earth years</span>
-            </div>
-            <span class="kc-divider--v" aria-hidden="true"></span>
-            <div class="kc-mobile-text-list-top-fact__item">
-              <strong class="kc-m-bold">Mass</strong>
-              <strong class="kc-m-num">318</strong>
-              <span class="kc-m-reg">Earths</span>
-            </div>
-          </section>
+          <kc-module entity="planet" platform="mobile" index="4"></kc-module>
 
           <section class="kc-module kc-module--mobile kc-mobile-miscellaneous-timeline" id="kc-planet-mobile-timeline" data-kc="Mobile / Miscellaneous / Timeline" aria-label="Jupiter timeline">
             <ol class="kc-mobile-miscellaneous-timeline__list">
@@ -148,9 +97,7 @@
           </section>
 
           <div class="kc-card-more" id="kc-planet-mobile-more" hidden>
-            <section class="kc-module kc-module--mobile kc-mobile-text-list-attribution kc-module--card-last" id="kc-planet-mobile-attribution" data-kc="Mobile / Text List / Attribution" aria-label="Attribution">
-              <p>Hero image: Jupiter</p>
-            </section>
+            <kc-module entity="planet" platform="mobile" index="6"></kc-module>
           </div>
           <button class="kc-mobile-expansion-see-more" type="button" data-kc="Mobile / Expansion / See more" aria-expanded="false" aria-controls="kc-planet-mobile-more">
             <span class="kc-mobile-expansion-see-more__line" aria-hidden="true"></span>

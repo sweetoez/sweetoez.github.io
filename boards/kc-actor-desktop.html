@@ -5,7 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Actor Knowledge Card — Desktop</title>
   <link rel="stylesheet" href="../assets/css/msn-components.css">
-  <link rel="stylesheet" href="../assets/css/kc-components.css"><script src="../assets/js/data/kc-entities.js"></script><script src="../assets/js/components/kc-hero.js"></script>
+  <link rel="stylesheet" href="../assets/css/kc-components.css"><script src="../assets/js/data/kc-entities.js"></script>  <script src="../assets/js/components/kc-module.js"></script>
+  <script src="../assets/js/components/kc-modules/text-list.js"></script>
+  <script src="../assets/js/components/kc-hero.js"></script>
   <style>
     * { box-sizing:border-box; }
     body { min-width:1344px; margin:0; padding:32px; background:var(--kc-gray-5); color:var(--kc-gray-1); font-family:var(--kc-font); }
@@ -39,18 +41,7 @@
             </button>
           </section>
 
-          <section class="kc-module kc-text-list-quick-facts kc-text-list-quick-facts--text-only kc-text-list-quick-facts--see-more" id="kc-actor-mod-facts" data-kc="Text List / Quick Facts" aria-label="Quick facts about Pharrell Williams">
-            <dl class="kc-text-list-quick-facts__list">
-              <div class="kc-text-list-quick-facts__fact"><dt class="kc-copy-bold">Role</dt><dd class="kc-copy">Musician and producer</dd></div>
-              <div class="kc-text-list-quick-facts__fact"><dt class="kc-copy-bold">Awards</dt><dd class="kc-copy">13 Grammy Awards</dd></div>
-              <div class="kc-text-list-quick-facts__fact"><dt class="kc-copy-bold">Song</dt><dd class="kc-copy">“Happy”</dd></div>
-              <div class="kc-text-list-quick-facts__fact"><dt class="kc-copy-bold">Known for</dt><dd class="kc-copy">Music and production</dd></div>
-            </dl>
-            <div class="kc-text-list-quick-facts__more">
-              <button class="kc-btn-reset kc-link" type="button">See more</button>
-              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M2.14645 4.64645C2.34171 4.45118 2.65829 4.45118 2.85355 4.64645L6 7.79289L9.14645 4.64645C9.34171 4.45118 9.65829 4.45118 9.85355 4.64645C10.0488 4.84171 10.0488 5.15829 9.85355 5.35355L6.35355 8.85355C6.15829 9.04882 5.84171 9.04882 5.64645 8.85355L2.14645 5.35355C1.95118 5.15829 1.95118 4.84171 2.14645 4.64645Z" fill="currentColor"/></svg>
-            </div>
-          </section>
+          <kc-module entity="actor" platform="desktop" index="1"></kc-module>
 
           <section class="kc-module kc-miscellaneous-listen" id="kc-actor-mod-listen" data-kc="Miscellaneous / Listen" aria-label="Listen to Pharrell Williams">
             <div class="kc-module-title kc-miscellaneous-listen__title"><h3>Listen</h3></div>
@@ -129,9 +120,7 @@
             </div>
           </section>
 
-          <section class="kc-module kc-text-list-top-fact-text-list-attributions kc-module--card-last" id="kc-actor-mod-attributions" data-kc="Attributions" aria-label="Attributions">
-            <p>Hero image: Pharrell Williams</p>
-          </section>
+          <kc-module entity="actor" platform="desktop" index="7"></kc-module>
         </article>
 
         <svg class="kc-icon-defs" aria-hidden="true" focusable="false">

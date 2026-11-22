@@ -5,7 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Team Knowledge Card — Mobile</title>
   <link rel="stylesheet" href="../assets/css/msn-components.css">
-  <link rel="stylesheet" href="../assets/css/kc-components.css"><script src="../assets/js/data/kc-entities.js"></script><script src="../assets/js/components/kc-hero.js"></script>
+  <link rel="stylesheet" href="../assets/css/kc-components.css"><script src="../assets/js/data/kc-entities.js"></script>  <script src="../assets/js/components/kc-module.js"></script>
+  <script src="../assets/js/components/kc-modules/text-list.js"></script>
+  <script src="../assets/js/components/kc-hero.js"></script>
   <script src="../assets/js/kc-mobile-carousels.js" defer></script>
   <style>
     * { box-sizing:border-box; }
@@ -38,15 +40,7 @@
             <button class="kc-btn-flipper kc-team-mobile-carousel__next" type="button" aria-label="Next carousel images"><svg width="16" height="16" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><use href="#kc-team-icon-arrow-right"></use></svg></button>
           </section>
 
-          <section class="kc-module kc-module--mobile kc-mobile-text-list-quick-facts" id="kc-team-mobile-facts" data-kc="Mobile / Text List / Quick Facts" aria-label="Quick facts about the Los Angeles Lakers">
-            <div class="kc-mobile-text-list-quick-facts__list" role="list">
-              <div class="kc-mobile-text-list-quick-facts__fact" role="listitem"><span class="kc-m-bold">Founded</span><span class="kc-m-reg">1947</span></div>
-              <span class="kc-mobile-text-list-quick-facts__line" role="presentation"></span>
-              <div class="kc-mobile-text-list-quick-facts__fact" role="listitem"><span class="kc-m-bold">Arena</span><span class="kc-m-reg">Crypto.com Arena</span></div>
-              <span class="kc-mobile-text-list-quick-facts__line" role="presentation"></span>
-              <div class="kc-mobile-text-list-quick-facts__fact" role="listitem"><span class="kc-m-bold">Championships</span><span class="kc-m-reg">17</span></div>
-            </div>
-          </section>
+          <kc-module entity="team" platform="mobile" index="1"></kc-module>
 
           <section class="kc-module kc-module--mobile kc-mobile-news" id="kc-team-mobile-news" data-kc="Mobile / News" aria-label="News">
             <div class="kc-module-title"><h3>News</h3></div>
@@ -115,13 +109,8 @@
           </section>
 
           <div class="kc-card-more" id="kc-team-mobile-more" hidden>
-            <section class="kc-module kc-module--mobile kc-mobile-reviews-awards" id="kc-team-mobile-awards" data-kc="Mobile / Text List / Awards" aria-label="Awards">
-              <div class="kc-module-title"><h3>Awards</h3></div>
-              <div class="kc-mobile-reviews-awards__list"><div class="kc-mobile-reviews-awards__award"><strong class="kc-m-title">NBA Championships</strong><span class="kc-m-reg">17 titles</span></div></div>
-            </section>
-            <section class="kc-module kc-module--mobile kc-mobile-text-list-attribution" id="kc-team-mobile-attribution" data-kc="Mobile / Text List / Attribution" aria-label="Attribution">
-              <p>Hero image: Los Angeles Lakers</p>
-            </section>
+            <kc-module entity="team" platform="mobile" index="6"></kc-module>
+            <kc-module entity="team" platform="mobile" index="7"></kc-module>
           </div>
 
           <button class="kc-mobile-expansion-see-more" type="button" aria-expanded="false" aria-controls="kc-team-mobile-more">

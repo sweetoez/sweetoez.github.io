@@ -5,7 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Company Knowledge Card — Desktop</title>
   <link rel="stylesheet" href="../assets/css/msn-components.css">
-  <link rel="stylesheet" href="../assets/css/kc-components.css"><script src="../assets/js/data/kc-entities.js"></script><script src="../assets/js/components/kc-hero.js"></script>
+  <link rel="stylesheet" href="../assets/css/kc-components.css"><script src="../assets/js/data/kc-entities.js"></script>  <script src="../assets/js/components/kc-module.js"></script>
+  <script src="../assets/js/components/kc-modules/text-list.js"></script>
+  <script src="../assets/js/components/kc-hero.js"></script>
   <style>
     * { box-sizing:border-box; }
     body { min-width:1344px; margin:0; padding:32px; background:var(--kc-gray-5); color:var(--kc-gray-1); font-family:var(--kc-font); }
@@ -89,31 +91,9 @@
         <article class="kc-card-stack kc-company-desktop" data-kc="Segment / Company" aria-label="Microsoft knowledge card">
           <kc-hero entity="company" platform="desktop"></kc-hero>
 
-          <section class="kc-module kc-text-list-top-fact kc-text-list-top-fact--quantity-3" id="kc-company-mod-1" data-kc="Text List / Top Fact" aria-label="Life span">
-            <div class="kc-text-list-top-fact__item">
-              <span class="kc-copy-bold">Life Span</span>
-              <strong class="kc-t-highlight-l kc-gray-copy">12 - 17</strong>
-            </div>
-            <span class="kc-divider--v" aria-hidden="true"></span>
-            <div class="kc-text-list-top-fact__item">
-              <span class="kc-copy-bold">Life Span</span>
-              <strong class="kc-t-highlight-l kc-gray-copy kc-company-top-fact__value--two-line">12 - 17</strong>
-            </div>
-            <span class="kc-divider--v" aria-hidden="true"></span>
-            <div class="kc-text-list-top-fact__item">
-              <span class="kc-copy-bold">Life Span</span>
-              <strong class="kc-t-highlight-l kc-gray-copy">12 - 17</strong>
-            </div>
-          </section>
+          <kc-module entity="company" platform="desktop" index="0"></kc-module>
 
-          <section class="kc-module kc-text-list-quick-facts kc-text-list-quick-facts--text-only" id="kc-company-mod-2" data-kc="Text List / Quick Facts" data-kc-variant="Text Only, See more=No" aria-label="Quick facts about Microsoft">
-            <dl class="kc-text-list-quick-facts__list">
-              <div class="kc-text-list-quick-facts__fact"><dt class="kc-copy-bold">Fact title</dt><dd class="kc-copy">Lorem ipsum · Dolor sit amet</dd></div>
-              <div class="kc-text-list-quick-facts__fact"><dt class="kc-copy-bold">Fact title</dt><dd class="kc-copy">Lorem ipsum · Dolor sit amet</dd></div>
-              <div class="kc-text-list-quick-facts__fact"><dt class="kc-copy-bold">Fact title</dt><dd class="kc-copy">Lorem ipsum · Dolor sit amet</dd></div>
-              <div class="kc-text-list-quick-facts__fact"><dt class="kc-copy-bold">Fact title</dt><dd class="kc-copy">Lorem ipsum · Dolor sit amet</dd></div>
-            </dl>
-          </section>
+          <kc-module entity="company" platform="desktop" index="1"></kc-module>
 
           <section class="kc-module kc-miscellaneous-quote" id="kc-company-mod-3" data-kc="Miscellaneous / Quote" aria-label="Quote">
             <figure class="kc-miscellaneous-quote__frame">
@@ -216,9 +196,7 @@
             </ol>
           </section>
 
-          <section class="kc-module kc-text-list-top-fact-text-list-attributions kc-module--card-last" id="kc-company-mod-7" data-kc="Text List / Top Fact/Text List/Attributions" aria-label="Attributions">
-            <p>Images: Getty Images. Data: en.wikipedia.org · anothersite.com · coolfacts.com Hero image: Holy town Varanasi and the river Ganges</p>
-          </section>
+          <kc-module entity="company" platform="desktop" index="6"></kc-module>
         </article>
 
         <svg class="kc-icon-defs" aria-hidden="true" focusable="false">

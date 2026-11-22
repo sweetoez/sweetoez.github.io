@@ -7,6 +7,8 @@
   <link rel="stylesheet" href="../assets/css/msn-components.css">
   <link rel="stylesheet" href="../assets/css/kc-components.css">
   <script src="../assets/js/data/kc-entities.js"></script>
+    <script src="../assets/js/components/kc-module.js"></script>
+  <script src="../assets/js/components/kc-modules/text-list.js"></script>
   <script src="../assets/js/components/kc-hero.js"></script>
   <script src="../assets/js/kc-mobile-carousels.js" defer></script>
   <style>
@@ -39,19 +41,7 @@
             <button class="kc-btn-flipper kc-animal-carousel__next" type="button" aria-label="Next carousel images"><svg width="16" height="16" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M10.8371 3.13074C10.6332 2.94456 10.3169 2.95895 10.1307 3.16289C9.94456 3.36683 9.95895 3.68309 10.1629 3.86927L16.3307 9.5H2.5C2.22386 9.5 2 9.72386 2 10C2 10.2761 2.22386 10.5 2.5 10.5H16.3279L10.1629 16.1281C9.95895 16.3143 9.94456 16.6305 10.1307 16.8345C10.3169 17.0384 10.6332 17.0528 10.8371 16.8666L17.7535 10.5526C17.8934 10.4248 17.9732 10.2573 17.993 10.0841C17.9976 10.0568 18 10.0287 18 10C18 9.97313 17.9979 9.94675 17.9938 9.92103C17.9756 9.74512 17.8955 9.57446 17.7535 9.44478L10.8371 3.13074Z" fill="currentColor"/></svg></button>
           </section>
 
-          <section class="kc-module kc-module--mobile kc-mobile-text-list-top-fact kc-mobile-text-list-top-fact--2" id="kc-animal-mobile-mod-2" data-kc="Mobile / Text List / Top Fact" data-kc-variant="Quantity=2" aria-label="Koi lifespan" style="background-color:var(--kc-placeholder);background-image:url(&#x27;../assets/images/kc/modules/animal/animal-mobile-top-fact-bg-01.png&#x27;);background-size:cover;background-position:center;background-repeat:no-repeat">
-            <div class="kc-mobile-text-list-top-fact__item">
-              <strong class="kc-m-bold">Life Span</strong>
-              <strong class="kc-m-num">12 - 17</strong>
-              <span class="kc-m-reg">years</span>
-            </div>
-            <span class="kc-divider--v" aria-hidden="true"></span>
-            <div class="kc-mobile-text-list-top-fact__item">
-              <strong class="kc-m-bold">Life Span</strong>
-              <strong class="kc-m-num">12 - 17</strong>
-              <span class="kc-m-reg">years</span>
-            </div>
-          </section>
+          <kc-module entity="animal" platform="mobile" index="1"></kc-module>
 
           <section class="kc-module kc-module--mobile kc-mobile-image-list-interesting-facts kc-mobile-image-list-interesting-facts--1-image kc-animal-mobile__facts-intro" id="kc-animal-mobile-mod-3" data-kc="Mobile / Image List / Interesting Facts" data-kc-variant="Image Amount=1-Image" aria-label="Koi facts">
             <div class="kc-mobile-image-list-interesting-facts__text">
@@ -132,9 +122,7 @@
           </section>
 
           <div class="kc-card-more" id="kc-animal-mobile-more" hidden>
-            <section class="kc-module kc-module--mobile kc-mobile-text-list-attribution" id="kc-animal-mobile-mod-7" data-kc="Mobile / Text List / Attribution" aria-label="Attribution">
-              <p>Module images: <a class="kc-m-text-button" href="https://unsplash.com/license">Unsplash License</a>. Data: en.wikipedia.org · anothersite.com · coolfacts.com. Hero image: Koi in a pond (Getty Images)</p>
-            </section>
+            <kc-module entity="animal" platform="mobile" index="6"></kc-module>
           </div>
 
           <button class="kc-mobile-expansion-see-more" type="button" data-kc="Mobile / Expansion / See more" aria-expanded="false" aria-controls="kc-animal-mobile-more">

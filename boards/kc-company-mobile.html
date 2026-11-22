@@ -5,7 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Company Knowledge Card — Mobile</title>
   <link rel="stylesheet" href="../assets/css/msn-components.css">
-  <link rel="stylesheet" href="../assets/css/kc-components.css"><script src="../assets/js/data/kc-entities.js"></script><script src="../assets/js/components/kc-hero.js"></script>
+  <link rel="stylesheet" href="../assets/css/kc-components.css"><script src="../assets/js/data/kc-entities.js"></script>  <script src="../assets/js/components/kc-module.js"></script>
+  <script src="../assets/js/components/kc-modules/text-list.js"></script>
+  <script src="../assets/js/components/kc-hero.js"></script>
   <style>
     * { box-sizing:border-box; }
     body { min-width:1344px; margin:0; padding:32px; background:var(--kc-gray-5); color:var(--kc-gray-1); font-family:var(--kc-font); }
@@ -103,33 +105,9 @@
         <article class="kc-card-stack kc-mobile-designer-card kc-company-mobile" data-kc="Segment / Company" aria-label="Microsoft knowledge card">
           <kc-hero entity="company" platform="mobile"></kc-hero>
 
-          <section class="kc-module kc-module--mobile kc-mobile-text-list-top-fact kc-mobile-text-list-top-fact--2" id="kc-company-mobile-top-fact" data-kc="Mobile / Text List / Top Fact" data-kc-variant="Quantity=2" aria-label="Life span">
-            <div class="kc-mobile-text-list-top-fact__item">
-              <strong class="kc-m-bold">Life Span</strong>
-              <strong class="kc-m-num">12 - 17</strong>
-            </div>
-            <span class="kc-divider--v" aria-hidden="true"></span>
-            <div class="kc-mobile-text-list-top-fact__item">
-              <strong class="kc-m-bold">Life Span</strong>
-              <strong class="kc-m-num kc-company-mobile__value-tall">12 - 17</strong>
-            </div>
-          </section>
+          <kc-module entity="company" platform="mobile" index="0"></kc-module>
 
-          <section class="kc-module kc-module--mobile kc-mobile-text-list-quick-facts kc-mobile-text-list-quick-facts--see-more" id="kc-company-mobile-quick-facts" data-kc="Mobile / Text List / Quick Facts" data-kc-variant="See more=Yes" aria-label="Quick facts about Microsoft">
-            <div class="kc-mobile-text-list-quick-facts__list" role="list">
-              <div class="kc-mobile-text-list-quick-facts__fact" role="listitem"><span class="kc-m-bold">Fact title</span><span class="kc-m-reg">Lorem ipsum · Dolor sit amet</span></div>
-              <span class="kc-mobile-text-list-quick-facts__line" role="presentation"></span>
-              <div class="kc-mobile-text-list-quick-facts__fact" role="listitem"><span class="kc-m-bold">Fact title</span><span class="kc-m-reg">Lorem ipsum · Dolor sit amet</span></div>
-              <span class="kc-mobile-text-list-quick-facts__line" role="presentation"></span>
-              <div class="kc-mobile-text-list-quick-facts__fact" role="listitem"><span class="kc-m-bold">Fact title</span><span class="kc-m-reg">Lorem ipsum · Dolor sit amet</span></div>
-              <span class="kc-mobile-text-list-quick-facts__line" role="presentation"></span>
-              <div class="kc-mobile-text-list-quick-facts__fact" role="listitem"><span class="kc-m-bold">Fact title</span><span class="kc-m-reg">Lorem ipsum · Dolor sit amet</span></div>
-            </div>
-            <div class="kc-mobile-text-list-quick-facts__more">
-              <button class="kc-btn-reset kc-m-text-button" type="button" aria-expanded="false" aria-controls="kc-company-mobile-more">See more</button>
-              <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2.14645 4.64645C2.34171 4.45118 2.65829 4.45118 2.85355 4.64645L6 7.79289L9.14645 4.64645C9.34171 4.45118 9.65829 4.45118 9.85355 4.64645C10.0488 4.84171 10.0488 5.15829 9.85355 5.35355L6.35355 8.85355C6.15829 9.04882 5.84171 9.04882 5.64645 8.85355L2.14645 5.35355C1.95118 5.15829 1.95118 4.84171 2.14645 4.64645Z" fill="currentColor"/></svg>
-            </div>
-          </section>
+          <kc-module entity="company" platform="mobile" index="1"></kc-module>
 
           <div class="kc-card-more" id="kc-company-mobile-more" hidden>
             <section class="kc-module kc-module--mobile kc-mobile-miscellaneous-quote" id="kc-company-mobile-quote" data-kc="Mobile / Miscellaneous / Quote" aria-label="Quote">
@@ -221,9 +199,7 @@
               </ol>
             </section>
 
-            <section class="kc-module kc-module--mobile kc-mobile-text-list-attribution" id="kc-company-mobile-attribution" data-kc="Mobile / Text List / Attribution" aria-label="Attribution">
-              <p>Images: Getty Images. Data: en.wikipedia.org · anothersite.com · coolfacts.com Hero image: Holy town Varanasi and the river Ganges</p>
-            </section>
+            <kc-module entity="company" platform="mobile" index="5"></kc-module>
           </div>
           <button class="kc-mobile-expansion-see-more" type="button" data-kc="Mobile / Expansion / See more" aria-expanded="false" aria-controls="kc-company-mobile-more">
             <span class="kc-mobile-expansion-see-more__line" aria-hidden="true"></span>

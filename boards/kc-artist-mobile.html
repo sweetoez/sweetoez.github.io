@@ -5,7 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Artist Knowledge Card — Mobile</title>
   <link rel="stylesheet" href="../assets/css/msn-components.css">
-  <link rel="stylesheet" href="../assets/css/kc-components.css"><script src="../assets/js/data/kc-entities.js"></script><script src="../assets/js/components/kc-hero.js"></script>
+  <link rel="stylesheet" href="../assets/css/kc-components.css"><script src="../assets/js/data/kc-entities.js"></script>  <script src="../assets/js/components/kc-module.js"></script>
+  <script src="../assets/js/components/kc-modules/text-list.js"></script>
+  <script src="../assets/js/components/kc-hero.js"></script>
   <script src="../assets/js/kc-mobile-carousels.js" defer></script>
   <style>
     * { box-sizing:border-box; }
@@ -38,22 +40,7 @@
             <button class="kc-btn-flipper kc-artist-mobile-carousel__next" type="button" aria-label="Next carousel images"><svg width="16" height="16" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><use href="#kc-artist-icon-arrow-right"></use></svg></button>
           </section>
 
-          <section class="kc-module kc-module--mobile kc-mobile-text-list-quick-facts kc-mobile-text-list-quick-facts--see-more" id="kc-artist-mobile-mod-facts" data-kc="Mobile / Text List / Quick Facts" data-kc-variant="Elements=Text Only, See more=Yes" aria-label="Quick facts about Janelle Monáe">
-            <div class="kc-mobile-text-list-quick-facts__list" role="list">
-              <div class="kc-mobile-text-list-quick-facts__fact" role="listitem"><span class="kc-m-bold">Born</span><span class="kc-m-reg">December 1, 1985 · Kansas City, Kansas</span></div>
-              <span class="kc-mobile-text-list-quick-facts__line" role="presentation"></span>
-              <div class="kc-mobile-text-list-quick-facts__fact" role="listitem"><span class="kc-m-bold">Genres</span><span class="kc-m-reg">R&amp;B, soul, funk, and pop</span></div>
-              <span class="kc-mobile-text-list-quick-facts__line" role="presentation"></span>
-              <div class="kc-mobile-text-list-quick-facts__fact" role="listitem"><span class="kc-m-bold">Labels</span><span class="kc-m-reg">Bad Boy, Wondaland, Atlantic</span></div>
-              <span class="kc-mobile-text-list-quick-facts__line" role="presentation"></span>
-              <div class="kc-mobile-text-list-quick-facts__fact" id="kc-artist-mobile-extra-facts" role="listitem" data-extra-fact hidden><span class="kc-m-bold">Active</span><span class="kc-m-reg">2003–present</span></div>
-              <span class="kc-mobile-text-list-quick-facts__line" role="presentation" data-extra-fact hidden></span>
-            </div>
-            <div class="kc-mobile-text-list-quick-facts__more">
-              <button class="kc-btn-reset kc-m-text-button" type="button" aria-expanded="false" aria-controls="kc-artist-mobile-extra-facts">See more</button>
-              <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true" focusable="false"><use href="#kc-artist-icon-chevron-down"></use></svg>
-            </div>
-          </section>
+          <kc-module entity="artist" platform="mobile" index="1"></kc-module>
 
           <section class="kc-module kc-module--mobile kc-mobile-news" id="kc-artist-mobile-mod-news" data-kc="Mobile / News" aria-label="News">
             <div class="kc-module-title"><h3>News</h3></div>
@@ -141,14 +128,7 @@
               </div>
             </section>
 
-            <section class="kc-module kc-module--mobile kc-mobile-reviews-awards" id="kc-artist-mobile-mod-awards" data-kc="Mobile / Text List / Awards" aria-label="Awards">
-              <div class="kc-module-title"><h3>Awards</h3></div>
-              <div class="kc-mobile-reviews-awards__list">
-                <div class="kc-mobile-reviews-awards__award"><strong class="kc-m-title">Grammy Awards</strong><span class="kc-m-reg">Wins: 0 · Nominations: 10</span></div>
-                <div class="kc-mobile-reviews-awards__award"><strong class="kc-m-title">MTV Video Music Awards</strong><span class="kc-m-reg">Wins: 1 · Nominations: 7</span></div>
-                <div class="kc-mobile-reviews-awards__award"><strong class="kc-m-title">NAACP Image Awards</strong><span class="kc-m-reg">Wins: 1 · Nominations: 13</span></div>
-              </div>
-            </section>
+            <kc-module entity="artist" platform="mobile" index="7"></kc-module>
 
             <section class="kc-module kc-module--mobile kc-mobile-image-list-main kc-mobile-image-list-main--rectangle" id="kc-artist-mobile-mod-films" data-kc="Mobile / Image List / Main" data-kc-variant="Shape=Rectangle" aria-labelledby="kc-artist-mobile-films-title">
               <div class="kc-module-title"><h3 id="kc-artist-mobile-films-title">Films</h3></div>
@@ -161,9 +141,7 @@
               </div>
             </section>
 
-            <section class="kc-module kc-module--mobile kc-mobile-text-list-attribution" id="kc-artist-mobile-mod-attribution" data-kc="Mobile / Text List / Attribution" aria-label="Attribution">
-              <p>Hero image: Janelle Monáe</p>
-            </section>
+            <kc-module entity="artist" platform="mobile" index="9"></kc-module>
           </div>
 
           <button class="kc-mobile-expansion-see-more" type="button" aria-expanded="false" aria-controls="kc-artist-mobile-more">

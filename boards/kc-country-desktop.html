@@ -7,6 +7,8 @@
   <link rel="stylesheet" href="../assets/css/msn-components.css">
   <link rel="stylesheet" href="../assets/css/kc-components.css">
   <script src="../assets/js/data/kc-entities.js"></script>
+    <script src="../assets/js/components/kc-module.js"></script>
+  <script src="../assets/js/components/kc-modules/text-list.js"></script>
   <script src="../assets/js/components/kc-hero.js"></script>
   <style>
     * { box-sizing:border-box; }
@@ -26,21 +28,7 @@
         <article class="kc-card-stack kc-country-desktop kc-theme-orange" data-kc="Segment / Country" aria-label="India knowledge card">
           <kc-hero entity="country" platform="desktop"></kc-hero>
 
-          <section class="kc-module kc-text-list-top-fact kc-text-list-top-fact--with-image" id="kc-country-mod-1" data-kc="Text List / Top Fact" aria-label="Capital and population">
-            <div class="kc-country-top-fact__flag-slot">
-              <span class="kc-img kc-country-top-fact__flag kc-img--cover"><img src="../assets/images/kc/modules/country/country-desktop-top-fact-flag-01.png" alt="Flag of India" onerror="this.style.display='none'"></span>
-            </div>
-            <span class="kc-divider--v" aria-hidden="true"></span>
-            <div class="kc-text-list-top-fact__item">
-              <span class="kc-copy-bold">Capital</span>
-              <strong class="kc-t-highlight-l kc-gray-copy">New Delhi</strong>
-            </div>
-            <span class="kc-divider--v" aria-hidden="true"></span>
-            <div class="kc-text-list-top-fact__item">
-              <span class="kc-copy-bold">Population</span>
-              <strong class="kc-t-highlight-l kc-gray-copy">1.4 billion</strong>
-            </div>
-          </section>
+          <kc-module entity="country" platform="desktop" index="0"></kc-module>
 
           <section class="kc-module kc-miscellaneous-map" id="kc-country-mod-2" data-kc="Miscellaneous / Map" aria-label="Map of New Delhi">
             <div class="kc-miscellaneous-map__frame" style="background-color:var(--kc-placeholder)">
@@ -88,25 +76,7 @@
             </div>
           </section>
 
-          <section class="kc-module kc-text-list-top-fact kc-text-list-top-fact--quantity-3" id="kc-country-mod-5" data-kc="Text List / Top Fact" aria-label="Area, languages, and states">
-            <div class="kc-text-list-top-fact__item">
-              <span class="kc-copy-bold">Area</span>
-              <strong class="kc-t-highlight-l kc-gray-copy">3.29M</strong>
-              <span class="kc-copy">km²</span>
-            </div>
-            <span class="kc-divider--v" aria-hidden="true"></span>
-            <div class="kc-text-list-top-fact__item">
-              <span class="kc-copy-bold">Languages</span>
-              <strong class="kc-t-highlight-l kc-gray-copy">22</strong>
-              <span class="kc-copy">scheduled</span>
-            </div>
-            <span class="kc-divider--v" aria-hidden="true"></span>
-            <div class="kc-text-list-top-fact__item">
-              <span class="kc-copy-bold">States</span>
-              <strong class="kc-t-highlight-l kc-gray-copy">28</strong>
-              <span class="kc-copy kc-country-top-fact__sub-label--uppercase">8 territories</span>
-            </div>
-          </section>
+          <kc-module entity="country" platform="desktop" index="4"></kc-module>
 
           <section class="kc-module kc-miscellaneous-timeline" id="kc-country-mod-6" data-kc="Miscellaneous / Timeline" aria-label="India timeline">
             <span class="kc-img kc-country-timeline__portrait kc-img--cover"><img src="../assets/images/kc/modules/country/country-desktop-top-fact-history-01.png" alt="Historical image related to India" onerror="this.style.display='none'"></span>
@@ -135,9 +105,7 @@
             </ol>
           </section>
 
-          <section class="kc-module kc-text-list-top-fact-text-list-attributions" id="kc-country-mod-7" data-kc="Text List / Top Fact/Text List/Attributions" aria-label="Attributions">
-            <p>Module images: <a href="https://unsplash.com/license">Unsplash License</a>. Data: <a href="https://example.org/">example.org</a> · <a href="https://anothersite.com/">anothersite.com</a> · <a href="https://coolfacts.com/">coolfacts.com</a>. Hero image: Holy town Varanasi and the river Ganges (Photo agency)</p>
-          </section>
+          <kc-module entity="country" platform="desktop" index="6"></kc-module>
         </article>
 
         <form class="kc-modules-panel" data-portfolio="Modules panel (not in Figma)" aria-label="Modules">

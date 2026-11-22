@@ -5,7 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Ingredient Knowledge Card — Mobile</title>
   <link rel="stylesheet" href="../assets/css/msn-components.css">
-  <link rel="stylesheet" href="../assets/css/kc-components.css"><script src="../assets/js/data/kc-entities.js"></script><script src="../assets/js/components/kc-hero.js"></script>
+  <link rel="stylesheet" href="../assets/css/kc-components.css"><script src="../assets/js/data/kc-entities.js"></script>  <script src="../assets/js/components/kc-module.js"></script>
+  <script src="../assets/js/components/kc-modules/text-list.js"></script>
+  <script src="../assets/js/components/kc-hero.js"></script>
   <script src="../assets/js/kc-mobile-carousels.js" defer></script>
   <style>
     * { box-sizing:border-box; }
@@ -204,9 +206,7 @@
           </section>
 
           <div class="kc-card-more" id="kc-ingredient-mobile-more" hidden>
-            <section class="kc-module kc-module--mobile kc-mobile-text-list-attribution kc-module--card-last" id="kc-ingredient-mobile-attribution" data-kc="Mobile / Text List / Attribution" aria-label="Attribution">
-              <p>Images: Getty Images. Data: en.wikipedia.org · anothersite.com · coolfacts.com Hero image: Holy town Varanasi and the river Ganges</p>
-            </section>
+            <kc-module entity="ingredient" platform="mobile" index="5"></kc-module>
           </div>
           <button class="kc-mobile-expansion-see-more" type="button" data-kc="Mobile / Expansion / See more" aria-expanded="false" aria-controls="kc-ingredient-mobile-more">
             <span class="kc-mobile-expansion-see-more__line" aria-hidden="true"></span>

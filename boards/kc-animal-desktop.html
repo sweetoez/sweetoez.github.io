@@ -7,6 +7,8 @@
   <link rel="stylesheet" href="../assets/css/msn-components.css">
   <link rel="stylesheet" href="../assets/css/kc-components.css">
   <script src="../assets/js/data/kc-entities.js"></script>
+    <script src="../assets/js/components/kc-module.js"></script>
+  <script src="../assets/js/components/kc-modules/text-list.js"></script>
   <script src="../assets/js/components/kc-hero.js"></script>
   <style>
     * { box-sizing:border-box; }
@@ -26,19 +28,7 @@
         <article class="kc-card-stack kc-animal-desktop kc-theme-orange" data-kc="Segment / Animal" aria-label="Koi knowledge card">
           <kc-hero entity="animal" platform="desktop"></kc-hero>
 
-          <section class="kc-module kc-text-list-top-fact kc-text-list-top-fact--quantity-2" id="kc-animal-desktop-mod-1" data-kc="Text List / Top Fact" data-kc-variant="Quantity=2" aria-label="Koi lifespan and length">
-            <div class="kc-text-list-top-fact__item">
-              <span class="kc-copy-bold">Life Span</span>
-              <strong class="kc-t-highlight-l kc-gray-copy">12 - 17</strong>
-              <span class="kc-copy">years</span>
-            </div>
-            <span class="kc-divider--v" aria-hidden="true"></span>
-            <div class="kc-text-list-top-fact__item">
-              <span class="kc-copy-bold">Life Span</span>
-              <strong class="kc-t-highlight-l kc-gray-copy">12 - 17</strong>
-              <span class="kc-copy">years</span>
-            </div>
-          </section>
+          <kc-module entity="animal" platform="desktop" index="0"></kc-module>
 
           <section class="kc-module kc-image-list-interesting-facts kc-image-list-interesting-facts--none" id="kc-animal-desktop-mod-2" data-kc="Image List / Interesting Facts" data-kc-variant="Image Amount=None" aria-label="Interesting fact about koi" style="background-color:var(--kc-placeholder);background-image:url(&#x27;../assets/images/kc/modules/animal/animal-desktop-facts-bg-top-01.png&#x27;);background-size:cover;background-position:center;background-repeat:no-repeat">
             <div class="kc-image-list-interesting-facts__text">
@@ -89,9 +79,7 @@
             </fieldset>
           </section>
 
-          <section class="kc-module kc-text-list-top-fact-text-list-attributions kc-module--card-last" id="kc-animal-desktop-mod-5" data-kc="Text List / Top Fact/Text List/Attributions" aria-label="Attributions">
-            <p>Module images: <a href="https://unsplash.com/license">Unsplash License</a>. Data: en.wikipedia.org · anothersite.com · coolfacts.com. Hero image: Koi in a pond (Getty Images)</p>
-          </section>
+          <kc-module entity="animal" platform="desktop" index="4"></kc-module>
         </article>
 
         <form class="kc-modules-panel" data-portfolio="Modules panel (not in Figma)" aria-label="Modules">

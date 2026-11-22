@@ -5,7 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Artist Knowledge Card — Desktop</title>
   <link rel="stylesheet" href="../assets/css/msn-components.css">
-  <link rel="stylesheet" href="../assets/css/kc-components.css"><script src="../assets/js/data/kc-entities.js"></script><script src="../assets/js/components/kc-hero.js"></script>
+  <link rel="stylesheet" href="../assets/css/kc-components.css"><script src="../assets/js/data/kc-entities.js"></script>  <script src="../assets/js/components/kc-module.js"></script>
+  <script src="../assets/js/components/kc-modules/text-list.js"></script>
+  <script src="../assets/js/components/kc-hero.js"></script>
   <style>
     * { box-sizing:border-box; }
     body { min-width:1344px; margin:0; padding:32px; background:var(--kc-gray-5); color:var(--kc-gray-1); font-family:var(--kc-font); }
@@ -25,14 +27,7 @@
         <article class="kc-card-stack kc-artist-desktop kc-theme-green" data-kc="Segment / Artist" aria-label="Janelle Monáe knowledge card">
           <kc-hero entity="artist" platform="desktop"></kc-hero>
 
-          <section class="kc-module kc-text-list-quick-facts kc-text-list-quick-facts--text-only" id="kc-artist-mod-1" data-kc="Text List / Quick Facts" data-kc-variant="Text Only, See more=No" aria-label="Quick facts about Janelle Monáe">
-            <dl class="kc-text-list-quick-facts__list">
-              <div class="kc-text-list-quick-facts__fact"><dt class="kc-copy-bold">Born</dt><dd class="kc-copy">December 1, 1985 · Kansas City, Kansas</dd></div>
-              <div class="kc-text-list-quick-facts__fact"><dt class="kc-copy-bold">Genres</dt><dd class="kc-copy">R&amp;B, soul, funk, and pop</dd></div>
-              <div class="kc-text-list-quick-facts__fact"><dt class="kc-copy-bold">Labels</dt><dd class="kc-copy">Bad Boy, Wondaland, Atlantic</dd></div>
-              <div class="kc-text-list-quick-facts__fact"><dt class="kc-copy-bold">Active</dt><dd class="kc-copy">2003–present</dd></div>
-            </dl>
-          </section>
+          <kc-module entity="artist" platform="desktop" index="0"></kc-module>
 
           <section class="kc-module kc-miscellaneous-listen" id="kc-artist-mod-2" data-kc="Miscellaneous / Listen" aria-label="Listen to Janelle Monáe">
             <div class="kc-module-title kc-module-title--no-chevron kc-miscellaneous-listen__title"><h3>Listen</h3></div>
@@ -92,17 +87,7 @@
             </div>
           </section>
 
-          <section class="kc-module kc-text-list-awards" id="kc-artist-mod-6" data-kc="Text List / Awards" aria-labelledby="kc-artist-awards-title">
-            <div class="kc-module-title">
-              <h3 id="kc-artist-awards-title">Awards</h3>
-              <span class="kc-title-chevron" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.64645 3.14645C5.45118 3.34171 5.45118 3.65829 5.64645 3.85355L9.79289 8L5.64645 12.1464C5.45118 12.3417 5.45118 12.6583 5.64645 12.8536C5.84171 13.0488 6.15829 13.0488 6.35355 12.8536L10.8536 8.35355C11.0488 8.15829 11.0488 7.84171 10.8536 7.64645L6.35355 3.14645C6.15829 2.95118 5.84171 2.95118 5.64645 3.14645Z" fill="currentColor"/></svg></span>
-            </div>
-            <div class="kc-text-list-awards__list">
-              <div class="kc-text-list-awards__award"><strong>Grammy Awards</strong><span class="kc-copy">Wins: 0 · Nominations: 10</span></div>
-              <div class="kc-text-list-awards__award"><strong>MTV Video Music Awards</strong><span class="kc-copy">Wins: 1 · Nominations: 7</span></div>
-              <div class="kc-text-list-awards__award"><strong>NAACP Image Awards</strong><span class="kc-copy">Wins: 1 · Nominations: 13</span></div>
-            </div>
-          </section>
+          <kc-module entity="artist" platform="desktop" index="5"></kc-module>
 
           <section class="kc-module kc-image-list-main kc-image-list-main--rectangle" id="kc-artist-mod-7" data-kc="Image List / Main" data-kc-variant="Shape=Rectangle" aria-labelledby="kc-artist-films-title">
             <div class="kc-module-title">
@@ -118,9 +103,7 @@
             </div>
           </section>
 
-          <section class="kc-module kc-text-list-top-fact-text-list-attributions kc-module--card-last" id="kc-artist-mod-8" data-kc="Attributions" aria-label="Attributions">
-            <p>Module photos: <a href="https://unsplash.com/license">Unsplash License</a>. Data: en.wikipedia.org · GRAMMY.com. Hero image: Janelle Monáe (Getty Images)</p>
-          </section>
+          <kc-module entity="artist" platform="desktop" index="7"></kc-module>
         </article>
 
         <svg class="kc-icon-defs" aria-hidden="true" focusable="false">

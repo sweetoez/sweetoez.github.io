@@ -5,7 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Food Knowledge Card — Desktop</title>
   <link rel="stylesheet" href="../assets/css/msn-components.css">
-  <link rel="stylesheet" href="../assets/css/kc-components.css"><script src="../assets/js/data/kc-entities.js"></script><script src="../assets/js/components/kc-hero.js"></script>
+  <link rel="stylesheet" href="../assets/css/kc-components.css"><script src="../assets/js/data/kc-entities.js"></script>  <script src="../assets/js/components/kc-module.js"></script>
+  <script src="../assets/js/components/kc-modules/text-list.js"></script>
+  <script src="../assets/js/components/kc-hero.js"></script>
   <style>
     * { box-sizing:border-box; }
     body { min-width:1344px; margin:0; padding:32px; background:var(--kc-gray-5); color:var(--kc-gray-1); font-family:var(--kc-font); }
@@ -131,9 +133,7 @@
             </fieldset>
           </section>
 
-          <section class="kc-module kc-text-list-top-fact-text-list-attributions" id="kc-food-mod-5" data-kc="Text List / Top Fact/Text List/Attributions" aria-label="Attributions">
-            <p>Images: Getty Images. Data: en.wikipedia.org · anothersite.com · coolfacts.com Hero image: Holy town Varanasi and the river Ganges</p>
-          </section>
+          <kc-module entity="food" platform="desktop" index="4"></kc-module>
         </article>
 
         <form class="kc-modules-panel" data-portfolio="Modules panel (not in Figma)" aria-label="Modules">

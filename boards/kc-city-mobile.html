@@ -5,7 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>City Knowledge Card — Mobile</title>
   <link rel="stylesheet" href="../assets/css/msn-components.css">
-  <link rel="stylesheet" href="../assets/css/kc-components.css"><script src="../assets/js/data/kc-entities.js"></script><script src="../assets/js/components/kc-hero.js"></script>
+  <link rel="stylesheet" href="../assets/css/kc-components.css"><script src="../assets/js/data/kc-entities.js"></script>  <script src="../assets/js/components/kc-module.js"></script>
+  <script src="../assets/js/components/kc-modules/text-list.js"></script>
+  <script src="../assets/js/components/kc-hero.js"></script>
   <style>
     * { box-sizing:border-box; }
     body { min-width:1344px; margin:0; padding:32px; background:var(--kc-gray-5); color:var(--kc-gray-1); font-family:var(--kc-font); }
@@ -72,21 +74,7 @@
         <article class="kc-card-stack kc-mobile-designer-card kc-city-mobile" data-kc="Segment / City" aria-label="San Francisco knowledge card">
           <kc-hero entity="city" platform="mobile"></kc-hero>
 
-          <section class="kc-module kc-module--mobile kc-mobile-text-list-quick-facts kc-mobile-text-list-quick-facts--see-more" id="kc-city-mobile-facts" data-kc="Mobile / Text List / Quick Facts" aria-label="Quick facts about San Francisco">
-            <div class="kc-mobile-text-list-quick-facts__list" role="list">
-              <div class="kc-mobile-text-list-quick-facts__fact" role="listitem"><span class="kc-m-bold">Fact title</span><span class="kc-m-reg">Lorem ipsum · Dolor sit amet</span></div>
-              <span class="kc-mobile-text-list-quick-facts__line" role="presentation"></span>
-              <div class="kc-mobile-text-list-quick-facts__fact" role="listitem"><span class="kc-m-bold">Fact title</span><span class="kc-m-reg">Lorem ipsum · Dolor sit amet</span></div>
-              <span class="kc-mobile-text-list-quick-facts__line" role="presentation"></span>
-              <div class="kc-mobile-text-list-quick-facts__fact" role="listitem"><span class="kc-m-bold">Fact title</span><span class="kc-m-reg">Lorem ipsum · Dolor sit amet</span></div>
-              <span class="kc-mobile-text-list-quick-facts__line" role="presentation"></span>
-              <div class="kc-mobile-text-list-quick-facts__fact" role="listitem"><span class="kc-m-bold">Fact title</span><span class="kc-m-reg">Lorem ipsum · Dolor sit amet</span></div>
-            </div>
-            <div class="kc-mobile-text-list-quick-facts__more">
-              <button class="kc-btn-reset kc-m-text-button" type="button" aria-expanded="false" aria-controls="kc-city-mobile-more" data-city-more>See more</button>
-              <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2.14645 4.64645C2.34171 4.45118 2.65829 4.45118 2.85355 4.64645L6 7.79289L9.14645 4.64645C9.34171 4.45118 9.65829 4.45118 9.85355 4.64645C10.0488 4.84171 10.0488 5.15829 9.85355 5.35355L6.35355 8.85355C6.15829 9.04882 5.84171 9.04882 5.64645 8.85355L2.14645 5.35355C1.95118 5.15829 1.95118 4.84171 2.14645 4.64645Z" fill="currentColor"/></svg>
-            </div>
-          </section>
+          <kc-module entity="city" platform="mobile" index="0"></kc-module>
 
           <section class="kc-module kc-module--mobile kc-mobile-miscellaneous-map" id="kc-city-mobile-map" data-kc="Mobile / Miscellaneous / Map" aria-label="Map of San Francisco">
             <div class="kc-mobile-miscellaneous-map__frame" style="background-color:var(--kc-placeholder)">
@@ -157,9 +145,7 @@
           </section>
 
           <div class="kc-card-more" id="kc-city-mobile-more" hidden>
-            <section class="kc-module kc-module--mobile kc-mobile-text-list-attribution" id="kc-city-mobile-attribution" data-kc="Mobile / Text List / Attribution" aria-label="Attribution">
-              <p>Images: Getty Images. Data: en.wikipedia.org · anothersite.com · coolfacts.com Hero image: Holy town Varanasi and the river Ganges</p>
-            </section>
+            <kc-module entity="city" platform="mobile" index="5"></kc-module>
           </div>
 
           <button class="kc-mobile-expansion-see-more" type="button" data-kc="Mobile / Expansion / See more" aria-expanded="false" aria-controls="kc-city-mobile-more">

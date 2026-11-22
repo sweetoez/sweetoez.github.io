@@ -5,7 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Team Knowledge Card — Desktop</title>
   <link rel="stylesheet" href="../assets/css/msn-components.css">
-  <link rel="stylesheet" href="../assets/css/kc-components.css"><script src="../assets/js/data/kc-entities.js"></script><script src="../assets/js/components/kc-hero.js"></script>
+  <link rel="stylesheet" href="../assets/css/kc-components.css"><script src="../assets/js/data/kc-entities.js"></script>  <script src="../assets/js/components/kc-module.js"></script>
+  <script src="../assets/js/components/kc-modules/text-list.js"></script>
+  <script src="../assets/js/components/kc-hero.js"></script>
   <style>
     * { box-sizing:border-box; }
     body { min-width:1344px; margin:0; padding:32px; background:var(--kc-gray-5); color:var(--kc-gray-1); font-family:var(--kc-font); }
@@ -25,14 +27,7 @@
         <article class="kc-card-stack kc-team-desktop kc-theme-purple-2" data-kc="Segment / Team" aria-label="Los Angeles Lakers knowledge card">
           <kc-hero entity="team" platform="desktop"></kc-hero>
 
-          <section class="kc-module kc-text-list-quick-facts kc-text-list-quick-facts--image kc-team-desktop__quick-facts" id="kc-team-desktop-facts" data-kc="Text List / Quick Facts" data-kc-variant="Elements=Image, See more=No" aria-label="Quick facts about the Los Angeles Lakers">
-            <span class="kc-img kc-team-desktop__image"></span>
-            <dl class="kc-text-list-quick-facts__list">
-              <div class="kc-text-list-quick-facts__fact"><dt class="kc-copy-bold">Founded</dt><dd class="kc-copy">1947</dd></div>
-              <div class="kc-text-list-quick-facts__fact"><dt class="kc-copy-bold">Arena</dt><dd class="kc-copy">Crypto.com Arena</dd></div>
-              <div class="kc-text-list-quick-facts__fact"><dt class="kc-copy-bold">Championships</dt><dd class="kc-copy">17</dd></div>
-            </dl>
-          </section>
+          <kc-module entity="team" platform="desktop" index="0"></kc-module>
 
           <section class="kc-module kc-image-list-main kc-image-list-main--square kc-team-desktop__players" id="kc-team-desktop-players" data-kc="Image List / Main" data-kc-variant="Shape=Square" aria-labelledby="kc-team-desktop-players-title">
             <div class="kc-module-title kc-module-title--no-chevron"><h3 id="kc-team-desktop-players-title">Players</h3></div>
@@ -60,18 +55,9 @@
             </div>
           </section>
 
-          <section class="kc-module kc-text-list-awards kc-team-desktop__awards" id="kc-team-desktop-awards" data-kc="Text List / Awards" aria-labelledby="kc-team-desktop-awards-title">
-            <div class="kc-module-title"><h3 id="kc-team-desktop-awards-title">Awards</h3></div>
-            <div class="kc-text-list-awards__list">
-              <div class="kc-text-list-awards__award"><strong>NBA Championships</strong><span class="kc-copy">17 titles</span></div>
-              <div class="kc-text-list-awards__award" hidden></div>
-              <div class="kc-text-list-awards__award" hidden></div>
-            </div>
-          </section>
+          <kc-module entity="team" platform="desktop" index="3"></kc-module>
 
-          <section class="kc-module kc-text-list-top-fact-text-list-attributions kc-team-desktop__attribution kc-module--card-last" id="kc-team-desktop-attribution" data-kc="Text List / Attributions" aria-label="Attribution">
-            <p>Hero image: Los Angeles Lakers</p>
-          </section>
+          <kc-module entity="team" platform="desktop" index="4"></kc-module>
         </article>
 
         <form class="kc-modules-panel" aria-label="Modules">

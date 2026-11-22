@@ -7,6 +7,8 @@
   <link rel="stylesheet" href="../assets/css/msn-components.css">
   <link rel="stylesheet" href="../assets/css/kc-components.css">
   <script src="../assets/js/data/kc-entities.js"></script>
+  <script src="../assets/js/components/kc-module.js"></script>
+  <script src="../assets/js/components/kc-modules/text-list.js"></script>
   <script src="../assets/js/components/kc-hero.js"></script>
   <script src="../assets/js/kc-mobile-carousels.js" defer></script>
   <style>
@@ -39,17 +41,7 @@
             <button class="kc-btn-flipper kc-country-carousel__next" type="button" aria-label="Next carousel images"><img src="../assets/icons/ic_fluent_arrow_right_20_regular.svg" alt="" aria-hidden="true"></button>
           </section>
 
-          <section class="kc-module kc-module--mobile kc-mobile-text-list-top-fact kc-mobile-text-list-top-fact--2" id="kc-country-mobile-mod-2" data-kc="Mobile / Text List / Top Fact" data-kc-variant="Quantity=2" aria-label="Capital and population">
-            <div class="kc-mobile-text-list-top-fact__item">
-              <strong class="kc-m-bold">Capital</strong>
-              <strong class="kc-m-num">New Delhi</strong>
-            </div>
-            <span class="kc-divider--v" aria-hidden="true"></span>
-            <div class="kc-mobile-text-list-top-fact__item">
-              <strong class="kc-m-bold">Population</strong>
-              <strong class="kc-m-num">1.4 billion</strong>
-            </div>
-          </section>
+          <kc-module entity="country" platform="mobile" index="1"></kc-module>
 
           <section class="kc-module kc-module--mobile kc-mobile-miscellaneous-map" id="kc-country-mobile-mod-3" data-kc="Mobile / Miscellaneous / Map" aria-label="Map of New Delhi">
             <div class="kc-mobile-miscellaneous-map__frame" style="background-color:var(--kc-placeholder)">
@@ -95,25 +87,7 @@
             </div>
           </section>
 
-          <section class="kc-module kc-module--mobile kc-mobile-text-list-top-fact kc-mobile-text-list-top-fact--3" id="kc-country-mobile-mod-6" data-kc="Mobile / Text List / Top Fact" data-kc-variant="Quantity=3" aria-label="Area, languages, and states">
-            <div class="kc-mobile-text-list-top-fact__item">
-              <strong class="kc-m-bold">Area</strong>
-              <strong class="kc-m-num">3.29M</strong>
-              <span class="kc-m-reg">km²</span>
-            </div>
-            <span class="kc-divider--v" aria-hidden="true"></span>
-            <div class="kc-mobile-text-list-top-fact__item">
-              <strong class="kc-m-bold">Languages</strong>
-              <strong class="kc-m-num">22</strong>
-              <span class="kc-m-reg">scheduled</span>
-            </div>
-            <span class="kc-divider--v" aria-hidden="true"></span>
-            <div class="kc-mobile-text-list-top-fact__item">
-              <strong class="kc-m-bold">States</strong>
-              <strong class="kc-m-num">28</strong>
-              <span class="kc-m-reg kc-country-top-fact__sub-label--uppercase">8 territories</span>
-            </div>
-          </section>
+          <kc-module entity="country" platform="mobile" index="5"></kc-module>
 
           <div class="kc-card-more" id="kc-country-mobile-more" hidden>
             <section class="kc-module kc-module--mobile kc-mobile-miscellaneous-timeline" id="kc-country-mobile-mod-7" data-kc="Mobile / Miscellaneous / Timeline" aria-label="India timeline">
@@ -142,9 +116,7 @@
               </ol>
             </section>
 
-            <section class="kc-module kc-module--mobile kc-mobile-text-list-attribution" id="kc-country-mobile-mod-8" data-kc="Mobile / Text List / Attribution" aria-label="Attribution">
-              <p>Module images: <a class="kc-m-text-button" href="https://unsplash.com/license">Unsplash License</a>. Data: <a class="kc-m-text-button" href="https://example.org/">example.org</a> · <a class="kc-m-text-button" href="https://anothersite.com/">anothersite.com</a> · <a class="kc-m-text-button" href="https://coolfacts.com/">coolfacts.com</a>. Hero image: Holy town Varanasi and the river Ganges (Photo agency)</p>
-            </section>
+            <kc-module entity="country" platform="mobile" index="7"></kc-module>
           </div>
 
           <button class="kc-mobile-expansion-see-more" type="button" data-kc="Mobile / Expansion / See more" aria-expanded="false" aria-controls="kc-country-mobile-more">

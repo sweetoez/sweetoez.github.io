@@ -5,7 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Planet Knowledge Card — Desktop</title>
   <link rel="stylesheet" href="../assets/css/msn-components.css">
-  <link rel="stylesheet" href="../assets/css/kc-components.css"><script src="../assets/js/data/kc-entities.js"></script><script src="../assets/js/components/kc-hero.js"></script>
+  <link rel="stylesheet" href="../assets/css/kc-components.css"><script src="../assets/js/data/kc-entities.js"></script>  <script src="../assets/js/components/kc-module.js"></script>
+  <script src="../assets/js/components/kc-modules/text-list.js"></script>
+  <script src="../assets/js/components/kc-hero.js"></script>
   <style>
     * { box-sizing:border-box; }
     body { min-width:1344px; margin:0; padding:32px; background:var(--kc-gray-5); color:var(--kc-gray-1); font-family:var(--kc-font); }
@@ -59,13 +61,7 @@
         <article class="kc-card-stack kc-planet-desktop kc-theme-orange" data-kc="Segment / Celestial Body" aria-label="Jupiter knowledge card">
           <kc-hero entity="planet" platform="desktop"></kc-hero>
 
-          <section class="kc-module kc-text-list-top-fact kc-text-list-top-fact--quantity-3" id="kc-planet-desktop-mod-fact-one" data-kc="Text List / Top Fact" aria-label="Jupiter day, year, and mass">
-            <div class="kc-text-list-top-fact__item"><span class="kc-copy-bold">Day</span><strong class="kc-t-highlight-l kc-gray-copy">9 h 56</strong><span class="kc-copy">min</span></div>
-            <span class="kc-divider--v" aria-hidden="true"></span>
-            <div class="kc-text-list-top-fact__item"><span class="kc-copy-bold">Year</span><strong class="kc-t-highlight-l kc-gray-copy">11.86</strong><span class="kc-copy">Earth years</span></div>
-            <span class="kc-divider--v" aria-hidden="true"></span>
-            <div class="kc-text-list-top-fact__item"><span class="kc-copy-bold">Mass</span><strong class="kc-t-highlight-l kc-gray-copy">318</strong><span class="kc-copy">Earths</span></div>
-          </section>
+          <kc-module entity="planet" platform="desktop" index="0"></kc-module>
 
           <section class="kc-module kc-image-list-interesting-facts kc-image-list-interesting-facts--2-image" id="kc-planet-desktop-mod-interesting" data-kc="Image List / Interesting Facts" aria-label="Interesting facts about Jupiter">
             <div class="kc-image-list-interesting-facts__row kc-planet-fact-row--first">
@@ -82,13 +78,7 @@
             </div>
           </section>
 
-          <section class="kc-module kc-text-list-top-fact kc-text-list-top-fact--quantity-3" id="kc-planet-desktop-mod-fact-two" data-kc="Text List / Top Fact" aria-label="Jupiter distance, year, and mass">
-            <div class="kc-text-list-top-fact__item"><span class="kc-copy-bold">Distance from Sun</span><strong class="kc-t-highlight-l kc-gray-copy">5.2</strong><span class="kc-copy">AU</span></div>
-            <span class="kc-divider--v" aria-hidden="true"></span>
-            <div class="kc-text-list-top-fact__item"><span class="kc-copy-bold">Year</span><strong class="kc-t-highlight-l kc-gray-copy">11.86</strong><span class="kc-copy">Earth years</span></div>
-            <span class="kc-divider--v" aria-hidden="true"></span>
-            <div class="kc-text-list-top-fact__item"><span class="kc-copy-bold">Mass</span><strong class="kc-t-highlight-l kc-gray-copy">318</strong><span class="kc-copy">Earths</span></div>
-          </section>
+          <kc-module entity="planet" platform="desktop" index="2"></kc-module>
 
           <section class="kc-module kc-miscellaneous-timeline" id="kc-planet-desktop-mod-timeline" data-kc="Miscellaneous / Timeline" aria-label="Jupiter timeline">
             <div class="kc-module-title kc-module-title--no-chevron"><h3>Timeline</h3></div>
@@ -100,9 +90,7 @@
             </ol>
           </section>
 
-          <section class="kc-module kc-text-list-top-fact-text-list-attributions kc-module--card-last" id="kc-planet-desktop-mod-attributions" data-kc="Text List / Top Fact/Text List/Attributions" aria-label="Attributions">
-            <p>Hero image: Jupiter</p>
-          </section>
+          <kc-module entity="planet" platform="desktop" index="4"></kc-module>
         </article>
 
         <form class="kc-modules-panel" aria-label="Modules">

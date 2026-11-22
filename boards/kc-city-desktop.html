@@ -5,7 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>City Knowledge Card — Desktop</title>
   <link rel="stylesheet" href="../assets/css/msn-components.css">
-  <link rel="stylesheet" href="../assets/css/kc-components.css"><script src="../assets/js/data/kc-entities.js"></script><script src="../assets/js/components/kc-hero.js"></script>
+  <link rel="stylesheet" href="../assets/css/kc-components.css"><script src="../assets/js/data/kc-entities.js"></script>  <script src="../assets/js/components/kc-module.js"></script>
+  <script src="../assets/js/components/kc-modules/text-list.js"></script>
+  <script src="../assets/js/components/kc-hero.js"></script>
   <style>
     * { box-sizing:border-box; }
     body { min-width:1344px; margin:0; padding:32px; background:var(--kc-gray-5); color:var(--kc-gray-1); font-family:var(--kc-font); }
@@ -71,24 +73,7 @@
         <article class="kc-card-stack kc-city-desktop" data-kc="Segment / City" aria-label="San Francisco knowledge card">
           <kc-hero entity="city" platform="desktop"></kc-hero>
 
-          <section class="kc-module kc-text-list-top-fact kc-text-list-top-fact--quantity-3" id="kc-city-mod-1" data-kc="Text List / Top Fact" aria-label="Life span">
-            <div class="kc-text-list-top-fact__item">
-              <span class="kc-copy-bold">Life Span</span>
-              <strong class="kc-t-highlight-l kc-gray-copy">12 - 17</strong>
-              <span class="kc-copy">years</span>
-            </div>
-            <span class="kc-divider--v" aria-hidden="true"></span>
-            <div class="kc-text-list-top-fact__item">
-              <span class="kc-copy-bold">Life Span</span>
-              <strong class="kc-t-highlight-l kc-gray-copy">12 - 17</strong>
-            </div>
-            <span class="kc-divider--v" aria-hidden="true"></span>
-            <div class="kc-text-list-top-fact__item">
-              <span class="kc-copy-bold">Life Span</span>
-              <strong class="kc-t-highlight-l kc-gray-copy">12 - 17</strong>
-              <span class="kc-copy">Years</span>
-            </div>
-          </section>
+          <kc-module entity="city" platform="desktop" index="0"></kc-module>
 
           <section class="kc-module kc-miscellaneous-map" id="kc-city-mod-2" data-kc="Miscellaneous / Map" aria-label="Map of San Francisco">
             <div class="kc-miscellaneous-map__frame" style="background-color:var(--kc-placeholder)">
@@ -194,9 +179,7 @@
             </fieldset>
           </section>
 
-          <section class="kc-module kc-text-list-top-fact-text-list-attributions" id="kc-city-mod-8" data-kc="Text List / Top Fact/Text List/Attributions" aria-label="Attributions">
-            <p>Images: Getty Images. Data: en.wikipedia.org · anothersite.com · coolfacts.com Hero image: Holy town Varanasi and the river Ganges</p>
-          </section>
+          <kc-module entity="city" platform="desktop" index="7"></kc-module>
         </article>
 
         <form class="kc-modules-panel" data-portfolio="Modules panel (not in Figma)" aria-label="Modules">
