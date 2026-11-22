@@ -1,3 +1,4 @@
+document.addEventListener("includes:ready", () => {
 const desktop = document.querySelector(".win-desktop");
 const stageFit = document.querySelector(".win-stage-fit");
 const themeSelect = document.querySelector("#win-theme");
@@ -171,3 +172,4 @@ document.documentElement.dataset.embed = String(isEmbed);
 applyTheme(isEmbed && ["light", "dark"].includes(embedTheme) ? embedTheme : readSavedTheme());
 updateScale();
 hydrateIcons();
+});

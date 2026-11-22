@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>MSN responsive NTP layout</title>
   <link rel="stylesheet" href="../assets/css/msn-components.css">
+  <script defer src="../assets/js/include.js"></script>
 
   <style>
     .page-shell {
@@ -768,28 +769,10 @@
 
     <div class="stage-scroll">
       <div class="stage">
-        <nav class="ntp-topnav" aria-label="New tab navigation">
-          <div class="ntp-brand"><span class="ntp-brand-logo"><img src="../assets/images/brand/msn.svg" alt="" onerror="this.style.visibility='hidden'"></span><span>Discover</span></div>
-          <div class="ntp-actions">
-            <button class="ntp-action" type="button" aria-label="Settings"><img src="../assets/icons/settings_20_regular.svg" alt="" aria-hidden="true"></button>
-            <button class="ntp-action" type="button" aria-label="Notifications"><img src="../assets/icons/alert_20_regular.svg" alt="" aria-hidden="true"></button>
-            <button class="ntp-action" type="button" aria-label="Profile"><span class="ntp-avatar"><img src="../assets/images/msn/shell/avatar-32.jpg" alt="" onerror="this.style.visibility='hidden'"></span></button>
-          </div>
-        </nav>
+        <div data-include="msn-nav"></div>
         <section class="ntp-hero" aria-label="Search and shortcuts">
-          <form class="ntp-search-slot" role="search">
-            <img class="ntp-search-icon" src="../assets/icons/search_20_regular.svg" alt="" aria-hidden="true">
-            <input type="search" aria-label="Ask Copilot" placeholder="Ask Copilot">
-            <button class="ntp-search-submit" type="submit" aria-label="Submit search"><img src="../assets/icons/arrow_up_20_regular.svg" alt="" aria-hidden="true"></button>
-          </form>
-          <div class="ntp-shortcuts" aria-label="Shortcuts">
-            <div class="ntp-shortcut" aria-hidden="true"><span class="ntp-shortcut-icon"></span><span class="ntp-shortcut-label"></span></div>
-            <div class="ntp-shortcut" aria-hidden="true"><span class="ntp-shortcut-icon"></span><span class="ntp-shortcut-label"></span></div>
-            <div class="ntp-shortcut" aria-hidden="true"><span class="ntp-shortcut-icon"></span><span class="ntp-shortcut-label"></span></div>
-            <div class="ntp-shortcut" aria-hidden="true"><span class="ntp-shortcut-icon"></span><span class="ntp-shortcut-label"></span></div>
-            <div class="ntp-shortcut" aria-hidden="true"><span class="ntp-shortcut-icon"></span><span class="ntp-shortcut-label"></span></div>
-            <div class="ntp-shortcut" aria-hidden="true"><span class="ntp-shortcut-icon"></span><span class="ntp-shortcut-label"></span></div>
-          </div>
+          <div data-include="composer"></div>
+          <div data-include="shortcuts"></div>
         </section>
         <section class="layout-section widget-section" aria-labelledby="widget-heading">
           <header class="widget-header">
@@ -842,7 +825,6 @@
               </div>
               <div class="digest-1u">
                 <div class="digest-1u-frame">
-                  <img class="digest-1u-image" src="../assets/images/msn/digest-1.jpg" alt="" aria-hidden="true" data-digest-image onerror="this.style.visibility='hidden'">
                 </div>
                 <div class="digest-1u-text">
                   <div class="digest-publisher">

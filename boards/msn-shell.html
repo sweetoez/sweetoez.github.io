@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="../assets/css/msn-components.css">
   <link rel="stylesheet" href="../assets/css/msn-shell.css">
   <link rel="stylesheet" href="../assets/css/edge-chrome.css">
+  <script defer src="../assets/js/include.js"></script>
 
   <script defer src="../assets/js/msn-shell.js"></script>
   <link rel="stylesheet" href="../assets/css/fluent-motion.css">
@@ -50,50 +51,16 @@
 
     <div class="desktop-fit">
       <section class="desktop-canvas" aria-label="Windows desktop">
-        <div class="desktop-wallpaper">
-          <img src="../assets/images/msn/shell/wallpaper-light.jpg" alt="" aria-hidden="true" onerror="this.style.visibility='hidden'">
-        </div>
+        <div data-include="desktop"></div>
 
         <section class="edge-window" aria-label="Edge new tab page">
-          <div class="edge-chrome-row edge-tab-row">
-            <div class="edge-active-tab">
-              <img src="../assets/icons/globe_16_regular.svg" alt="" aria-hidden="true">
-              <span>New tab</span>
-              <button class="edge-tab-dismiss" type="button" aria-label="Close tab"><img src="../assets/icons/dismiss_12_regular.svg" alt="" aria-hidden="true"></button>
-            </div>
-            <div class="edge-window-controls">
-              <button type="button" aria-label="Minimize"><img src="../assets/icons/subtract_16_regular.svg" alt="" aria-hidden="true"></button>
-              <button type="button" aria-label="Maximize"><img src="../assets/icons/square_16_regular.svg" alt="" aria-hidden="true"></button>
-              <button type="button" aria-label="Close window"><img src="../assets/icons/dismiss_16_regular.svg" alt="" aria-hidden="true"></button>
-            </div>
-          </div>
-          <div class="edge-chrome-row edge-toolbar">
-            <div class="edge-navigation-icons">
-              <button type="button" aria-label="Back"><img src="../assets/icons/arrow_left_20_regular.svg" alt="" aria-hidden="true"></button>
-              <button type="button" aria-label="Reload"><img src="../assets/icons/arrow_clockwise_20_regular.svg" alt="" aria-hidden="true"></button>
-              <button type="button" aria-label="Home"><img src="../assets/icons/home_20_regular.svg" alt="" aria-hidden="true"></button>
-            </div>
-            <div class="edge-address">Search or enter web address</div>
-            <button type="button" aria-label="Favorites"><img src="../assets/icons/star_20_regular.svg" alt="" aria-hidden="true"></button>
-            <button type="button" aria-label="More options"><img src="../assets/icons/more_horizontal_20_regular.svg" alt="" aria-hidden="true"></button>
-          </div>
-          <div class="edge-chrome-row edge-favorites" aria-label="Favorites">
-            <div class="edge-favorite"><span class="edge-favorite__icon"></span><span class="edge-favorite__label">News</span></div>
-            <div class="edge-favorite"><span class="edge-favorite__icon"></span><span class="edge-favorite__label">Weather</span></div>
-            <div class="edge-favorite"><span class="edge-favorite__icon"></span><span class="edge-favorite__label">Money</span></div>
-            <div class="edge-favorite"><span class="edge-favorite__icon"></span><span class="edge-favorite__label">Sports</span></div>
-            <div class="edge-favorite"><span class="edge-favorite__icon"></span><span class="edge-favorite__label">Shopping</span></div>
-          </div>
+          <div data-include="edge-tab-band"></div>
+          <div data-include="edge-toolbar"></div>
+          <div data-include="edge-favorites-bar"></div>
           <iframe class="edge-page" src="msn-ntp-layout.html?embed=1&amp;theme=light" title="Edge new tab page content"></iframe>
         </section>
 
-        <div class="taskbar" aria-label="Windows taskbar">
-          <div class="taskbar-apps" aria-hidden="true">
-            <span class="taskbar-slot"><span class="taskbar-item"></span></span><span class="taskbar-slot"><span class="taskbar-item"></span></span><span class="taskbar-slot"><span class="taskbar-item"></span></span>
-            <span class="taskbar-slot"><span class="taskbar-item"></span></span><span class="taskbar-slot"><span class="taskbar-item"></span></span><span class="taskbar-slot"><span class="taskbar-item"></span></span>
-          </div>
-          <div class="taskbar-clock"><span>10:30 AM</span><span>11/17/2026</span></div>
-        </div>
+        <div data-include="taskbar"></div>
       </section>
     </div>
     <iframe class="windows-panel-preview" src="windows-panel-shell.html?embed=1&amp;theme=light" title="Windows panel"></iframe>

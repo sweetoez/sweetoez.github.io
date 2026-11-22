@@ -1,3 +1,4 @@
+document.addEventListener("includes:ready", () => {
 const componentBoard = document.querySelector(".edge-components-board");
 const componentWindow = document.querySelector(".edge-components-window");
 const componentWidth = document.querySelector("#edge-component-width");
@@ -15,7 +16,7 @@ const componentIcons = {
   search16: "../assets/icons/ic_fluent_search_16_regular.svg",
   star20: "../assets/icons/star_20_regular.svg",
   more20: "../assets/icons/more_horizontal_20_regular.svg",
-  readAloud: "../assets/icons/ic_fluent_star_add_24_regular.svg",
+  readAloud: "../assets/icons/ic_fluent_speaker_2_16_regular.svg",
   extensions: "../assets/icons/ic_fluent_more_circle_24_regular.svg",
   grid24: "../assets/icons/ic_fluent_grid_24_filled.svg",
   refresh24: "../assets/icons/ic_fluent_arrow_clockwise_24_regular.svg",
@@ -88,3 +89,4 @@ document.querySelectorAll(".ntp-search-slot").forEach((form) => {
 });
 
 updateComponentWidth();
+});
