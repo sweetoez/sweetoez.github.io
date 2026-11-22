@@ -240,10 +240,6 @@
       flex: none;
     }
 
-    .widget-grid:not([data-layout="default"]) > .seg-widget.seg-trend {
-      display: flex;
-    }
-
     .card-section {
       gap: 24px;
       padding: 32px 24px;
@@ -682,9 +678,6 @@
         min-width: 616px;
       }
 
-      .widget-grid[data-layout="default"] > .seg-widget.seg-trend {
-        display: none;
-      }
     }
 
     @container stage (min-width: 1296px) {
@@ -712,9 +705,6 @@
         min-width: 616px;
       }
 
-      .widget-grid[data-layout="default"] > .seg-widget.seg-trend {
-        display: flex;
-      }
     }
 
     @container stage (max-width: 347px) {
@@ -743,6 +733,7 @@
   <link rel="stylesheet" href="../assets/css/fluent-motion.css">
   <script defer src="../assets/js/fluent-motion.js"></script>
   <script defer src="../assets/js/digest.js"></script>
+  <script defer src="../assets/js/msn-feed-rows.js"></script>
 
 </head>
 <body class="demo">
@@ -901,16 +892,41 @@
               </div>
             </article>
 
-            <article class="card u1 seg-widget seg-trend span-1 widget-item" aria-label="Trending on Copilot">
+            <article class="card u1 seg-widget seg-fin span-1 widget-item" aria-label="Stock, Contoso Ltd">
               <button class="seg-more" type="button" aria-label="More options"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="12" r="1.75" fill="currentColor"/><circle cx="12" cy="12" r="1.75" fill="currentColor"/><circle cx="18" cy="12" r="1.75" fill="currentColor"/></svg></button>
-              <div class="trd">
-                <h3 class="trd-title">Trending on Copilot</h3>
-                <div class="trd-stage">
-                  <div class="trd-img-area">
-                    <img class="trd-img" src="../assets/images/msn/widgets/trd-1.jpg" alt="" width="256" height="250" onerror="this.style.visibility='hidden'">
-                  </div>
-                  <div class="trd-bubble-area">
-                    <p class="trd-bubble">How can I reduce plastic waste to take my trash out less often?</p>
+              <div class="fin">
+                <div class="fin-body">
+                  <div class="fin-title"><span class="fin-name">Contoso Ltd</span><span class="fin-tick">CNTS</span></div>
+                  <div class="fin-area">
+                    <div class="fin-price"><span class="fin-val">136.75</span><span class="fin-chg">+3.97%</span></div>
+                    <div class="stk-chart">
+                      <div class="stk-yaxis" aria-hidden="true">
+                        <span style="top:0">140</span><span style="top:34px">135</span><span style="top:68px">130</span><span style="top:102px">125</span><span style="top:136px">120</span>
+                      </div>
+                      <div class="stk-plot">
+                        <div class="stk-grid" aria-hidden="true"><i style="top:7px"></i><i style="top:41px"></i><i style="top:75px"></i><i style="top:109px"></i><i style="top:143px"></i></div>
+                        <div class="stk-graph">
+                          <svg class="stk-svg" viewBox="0 0 248.43 150" preserveAspectRatio="none" aria-hidden="true">
+                            <defs>
+                              <linearGradient id="stkFill" x1="0" y1="0" x2="0" y2="1">
+                                <stop offset="0" stop-color="#01712B" stop-opacity="0.30"/>
+                                <stop offset="1" stop-color="#01712B" stop-opacity="0"/>
+                              </linearGradient>
+                            </defs>
+                            <polygon class="stk-area" fill="url(#stkFill)" points="2.5,123.9 6.0,118.6 8.0,109.0 11.2,109.0 12.8,96.2 14.8,91.0 18.0,94.6 19.6,93.0 21.2,85.0 25.2,96.6 29.2,106.2 33.6,97.0 36.8,82.6 39.6,79.4 42.4,69.4 46.8,67.4 48.4,81.0 55.2,71.8 61.6,65.0 63.6,56.2 73.6,45.8 74.8,70.2 78.0,75.4 79.2,85.0 84.4,81.8 88.8,62.2 90.4,66.6 93.6,64.2 96.8,71.8 99.2,76.2 102.4,98.6 108.0,98.6 115.2,73.8 123.6,56.2 128.0,69.4 132.8,61.0 139.2,81.0 142.8,83.4 146.4,91.0 149.6,81.0 157.6,65.0 162.0,67.8 163.6,75.4 169.2,44.6 173.6,59.8 175.2,77.4 179.6,83.4 183.2,71.0 185.2,56.2 187.2,46.6 190.0,50.6 193.6,49.0 196.0,27.0 200.0,24.2 204.1,18.9 208.4,31.0 216.8,87.0 220.8,93.0 223.6,107.4 227.2,107.4 228.4,117.0 230.4,115.4 234.0,87.8 244.1,36.1 244.1,129.5 2.5,129.5"/>
+                            <polyline class="stk-line" points="2.5,123.9 6.0,118.6 8.0,109.0 11.2,109.0 12.8,96.2 14.8,91.0 18.0,94.6 19.6,93.0 21.2,85.0 25.2,96.6 29.2,106.2 33.6,97.0 36.8,82.6 39.6,79.4 42.4,69.4 46.8,67.4 48.4,81.0 55.2,71.8 61.6,65.0 63.6,56.2 73.6,45.8 74.8,70.2 78.0,75.4 79.2,85.0 84.4,81.8 88.8,62.2 90.4,66.6 93.6,64.2 96.8,71.8 99.2,76.2 102.4,98.6 108.0,98.6 115.2,73.8 123.6,56.2 128.0,69.4 132.8,61.0 139.2,81.0 142.8,83.4 146.4,91.0 149.6,81.0 157.6,65.0 162.0,67.8 163.6,75.4 169.2,44.6 173.6,59.8 175.2,77.4 179.6,83.4 183.2,71.0 185.2,56.2 187.2,46.6 190.0,50.6 193.6,49.0 196.0,27.0 200.0,24.2 204.1,18.9 208.4,31.0 216.8,87.0 220.8,93.0 223.6,107.4 227.2,107.4 228.4,117.0 230.4,115.4 234.0,87.8 244.1,36.1"/>
+                          </svg>
+                          <div class="stk-base" aria-hidden="true"></div>
+                          <div class="stk-dot" aria-hidden="true"></div>
+                          <div class="stk-badge"><span>128.35</span></div>
+                        </div>
+                        <div class="stk-xaxis" aria-hidden="true">
+                          <div class="stk-xcol"><i class="stk-tick"></i><span>10:00 am</span></div>
+                          <div class="stk-xcol"><i class="stk-tick"></i><span>12:00 pm</span></div>
+                          <div class="stk-xcol"><i class="stk-tick"></i><span>2:00 pm</span></div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>

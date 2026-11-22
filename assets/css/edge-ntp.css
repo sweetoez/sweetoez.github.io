@@ -374,14 +374,14 @@ html[data-theme="dark"] .edge-page.edge-content {
 
 html[data-theme="dark"] .edge-greeting,
 html[data-theme="dark"] .edge-section-title {
-  color: #E5EBFA;
+  color: var(--msn-primary);
 }
 
 html[data-theme="dark"] .edge-chip {
-  border: 1px solid rgba(255, 255, 255, .1);
-  background: rgba(157, 168, 217, .1);
+  border: 1px solid var(--msn-card-stroke);
+  background: var(--msn-card);
   box-shadow: none;
-  color: #E5EBFA;
+  color: var(--msn-primary);
 }
 
 html[data-theme="dark"] .edge-chip strong {

@@ -44,7 +44,9 @@ html[data-theme="dark"] .win-desktop {
   --win-app-stroke: rgba(255, 255, 255, .06);
   --win-shell-shadow: 0 9px 18px rgba(0, 0, 0, .37), 0 2px 6px rgba(0, 0, 0, .37);
   --win-wallpaper: linear-gradient(180deg, #24303D 0%, #3A4E5C 45%, #6A6470 62%, #1B2530 100%);
-  --win-taskbar-bg: rgba(32, 32, 32, .9);
+  --win-taskbar-bg:
+    linear-gradient(rgba(32, 32, 32, .5), rgba(32, 32, 32, .5)),
+    linear-gradient(rgba(32, 32, 32, .96), rgba(32, 32, 32, .96));
   --win-taskbar-hover: rgba(255, 255, 255, .06);
   --win-taskbar-pressed: rgba(255, 255, 255, .04);
   --win-foreground: #FFFFFF;
@@ -88,12 +90,6 @@ html[data-theme="dark"] .win-desktop {
   background: var(--win-taskbar-bg);
   backdrop-filter: blur(30px);
   color: var(--win-foreground);
-}
-
-html[data-theme="dark"] .win-desktop .win-taskbar {
-  background:
-    linear-gradient(rgba(32, 32, 32, .5), rgba(32, 32, 32, .5)),
-    linear-gradient(rgba(32, 32, 32, .96), rgba(32, 32, 32, .96));
 }
 
 .win-taskbar__left,

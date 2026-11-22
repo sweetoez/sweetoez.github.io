@@ -25,6 +25,9 @@
   font: 400 13px/20px var(--font-body);
 }
 
+html[data-embed="true"] .win-debugbar { display: none; }
+html[data-embed="true"] .win-stage-fit { top: 50%; }
+
 .win-debugbar__button,
 .win-debugbar__select {
   min-height: 32px;
@@ -53,7 +56,7 @@
   left: 12px;
   z-index: 2;
   width: 1052px;
-  height: 1140px;
+  height: 1128px;
   overflow: hidden;
   border: 1px solid var(--win-shell-stroke);
   border-radius: 7px;
@@ -73,16 +76,14 @@
   pointer-events: none;
 }
 
-html[data-theme="light"] .win-desktop .win-acrylic-light,
-html[data-theme="light-warm"] .win-desktop .win-acrylic-light {
+html[data-theme="light"] .win-desktop .win-acrylic-light {
   isolation: isolate;
   background: none;
   -webkit-backdrop-filter: none;
   backdrop-filter: none;
 }
 
-html[data-theme="light"] .win-desktop .win-acrylic-light::before,
-html[data-theme="light-warm"] .win-desktop .win-acrylic-light::before {
+html[data-theme="light"] .win-desktop .win-acrylic-light::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -92,8 +93,7 @@ html[data-theme="light-warm"] .win-desktop .win-acrylic-light::before {
   backdrop-filter: blur(30px) saturate(140%);
 }
 
-html[data-theme="light"] .win-desktop .win-acrylic-light::after,
-html[data-theme="light-warm"] .win-desktop .win-acrylic-light::after {
+html[data-theme="light"] .win-desktop .win-acrylic-light::after {
   content: "";
   position: absolute;
   inset: 0;
@@ -103,8 +103,7 @@ html[data-theme="light-warm"] .win-desktop .win-acrylic-light::after {
   mix-blend-mode: luminosity;
 }
 
-html[data-theme="light"] .win-desktop .win-noise,
-html[data-theme="light-warm"] .win-desktop .win-noise {
+html[data-theme="light"] .win-desktop .win-noise {
   display: block;
   position: absolute;
   inset: 0;
@@ -115,11 +114,9 @@ html[data-theme="light-warm"] .win-desktop .win-noise {
   pointer-events: none;
 }
 
-html[data-theme="light"] .win-desktop .win-noise-legacy,
-html[data-theme="light-warm"] .win-desktop .win-noise-legacy { display: none; }
+html[data-theme="light"] .win-desktop .win-noise-legacy { display: none; }
 
-html[data-theme="light"] .win-desktop .win-panel__rail,
-html[data-theme="light-warm"] .win-desktop .win-panel__rail { background: transparent; }
+html[data-theme="light"] .win-desktop .win-panel__rail { background: transparent; }
 
 .win-panel__rail {
   position: absolute;
@@ -169,8 +166,7 @@ html[data-theme="light-warm"] .win-desktop .win-panel__rail { background: transp
   container-type: inline-size;
 }
 
-html[data-theme="light"] .win-desktop .win-app-surface,
-html[data-theme="light-warm"] .win-desktop .win-app-surface {
+html[data-theme="light"] .win-desktop .win-app-surface {
   box-shadow: inset 1px 0 0 rgba(0, 0, 0, .0578);
 }
 
@@ -311,22 +307,14 @@ html[data-theme="light-warm"] .win-desktop .win-app-surface {
 html[data-theme="dark"] .win-desktop .win-app-surface .p2-rail__item:not([aria-current="page"]):hover:not(:disabled),
 html[data-theme="dark"] .win-desktop .win-app-surface .p2-rail__settings:hover:not(:disabled),
 html[data-theme="dark"] .win-desktop .win-app-surface .p2-header__button:hover:not(:disabled),
-html[data-theme="dark"] .win-desktop .win-app-surface .p2-header__profile:hover:not(:disabled),
-html[data-theme="dark-navy"] .win-desktop .win-app-surface .p2-rail__item:not([aria-current="page"]):hover:not(:disabled),
-html[data-theme="dark-navy"] .win-desktop .win-app-surface .p2-rail__settings:hover:not(:disabled),
-html[data-theme="dark-navy"] .win-desktop .win-app-surface .p2-header__button:hover:not(:disabled),
-html[data-theme="dark-navy"] .win-desktop .win-app-surface .p2-header__profile:hover:not(:disabled) {
+html[data-theme="dark"] .win-desktop .win-app-surface .p2-header__profile:hover:not(:disabled) {
   background: rgba(255, 255, 255, .06);
 }
 
 html[data-theme="dark"] .win-desktop .win-app-surface .p2-rail__item:active:not(:disabled),
 html[data-theme="dark"] .win-desktop .win-app-surface .p2-rail__settings:active:not(:disabled),
 html[data-theme="dark"] .win-desktop .win-app-surface .p2-header__button:active:not(:disabled),
-html[data-theme="dark"] .win-desktop .win-app-surface .p2-header__profile:active:not(:disabled),
-html[data-theme="dark-navy"] .win-desktop .win-app-surface .p2-rail__item:active:not(:disabled),
-html[data-theme="dark-navy"] .win-desktop .win-app-surface .p2-rail__settings:active:not(:disabled),
-html[data-theme="dark-navy"] .win-desktop .win-app-surface .p2-header__button:active:not(:disabled),
-html[data-theme="dark-navy"] .win-desktop .win-app-surface .p2-header__profile:active:not(:disabled) {
+html[data-theme="dark"] .win-desktop .win-app-surface .p2-header__profile:active:not(:disabled) {
   background: rgba(255, 255, 255, .1);
 }
 
@@ -341,9 +329,7 @@ html[data-theme="dark-navy"] .win-desktop .win-app-surface .p2-header__profile:a
 }
 
 html[data-theme="dark"] .win-desktop button:focus-visible,
-html[data-theme="dark"] .win-desktop input:focus-visible,
-html[data-theme="dark-navy"] .win-desktop button:focus-visible,
-html[data-theme="dark-navy"] .win-desktop input:focus-visible {
+html[data-theme="dark"] .win-desktop input:focus-visible {
   box-shadow: 0 0 0 1px #FFFFFF;
 }
 
@@ -367,14 +353,7 @@ html[data-outlines="true"][data-theme="dark"] .win-desktop .win-app-surface,
 html[data-outlines="true"][data-theme="dark"] .win-desktop .win-taskbar,
 html[data-outlines="true"][data-theme="dark"] .win-desktop .win-feed-scroll,
 html[data-outlines="true"][data-theme="dark"] .win-desktop .prong-widget-grid,
-html[data-outlines="true"][data-theme="dark"] .win-desktop .prong-feed-grid,
-html[data-outlines="true"][data-theme="dark-navy"] .win-desktop .win-wallpaper,
-html[data-outlines="true"][data-theme="dark-navy"] .win-desktop .win-panel,
-html[data-outlines="true"][data-theme="dark-navy"] .win-desktop .win-app-surface,
-html[data-outlines="true"][data-theme="dark-navy"] .win-desktop .win-taskbar,
-html[data-outlines="true"][data-theme="dark-navy"] .win-desktop .win-feed-scroll,
-html[data-outlines="true"][data-theme="dark-navy"] .win-desktop .prong-widget-grid,
-html[data-outlines="true"][data-theme="dark-navy"] .win-desktop .prong-feed-grid {
+html[data-outlines="true"][data-theme="dark"] .win-desktop .prong-feed-grid {
   outline-color: rgba(255, 255, 255, .75);
 }
 
@@ -552,60 +531,50 @@ html[data-outlines="true"][data-theme="dark-navy"] .win-desktop .prong-feed-grid
   box-shadow: none;
 }
 
-html[data-theme="dark"] .win-desktop .win-panel__rail .p2-rail__item[aria-current="page"],
-html[data-theme="dark-navy"] .win-desktop .win-panel__rail .p2-rail__item[aria-current="page"] {
+html[data-theme="dark"] .win-desktop .win-panel__rail .p2-rail__item[aria-current="page"] {
   border-color: rgba(255, 255, 255, .08);
   background: rgba(255, 255, 255, .0605);
-  color: rgba(255, 255, 255, .90);
+  color: #FFFFFF;
 }
 
-html[data-theme="dark"] .win-desktop .win-panel__rail .p2-rail__item[aria-current="page"]::before,
-html[data-theme="dark-navy"] .win-desktop .win-panel__rail .p2-rail__item[aria-current="page"]::before {
+html[data-theme="dark"] .win-desktop .win-panel__rail .p2-rail__item[aria-current="page"]::before {
   background: #60CDFF;
 }
 
+html[data-theme="dark"] .win-desktop .win-panel__rail {
+  background: var(--win-taskbar-bg);
+  color: #FFFFFF;
+}
+
+html[data-theme="dark"] .win-desktop .win-panel__rail button:focus-visible {
+  outline-color: #FFFFFF;
+  box-shadow: 0 0 0 1px #272320;
+}
+
 html[data-theme="dark"] .win-desktop .win-app-surface .p2-header__toggle,
-html[data-theme="dark"] .win-desktop .win-app-surface .p2-header__button,
-html[data-theme="dark-navy"] .win-desktop .win-app-surface .p2-header__toggle,
-html[data-theme="dark-navy"] .win-desktop .win-app-surface .p2-header__button { color: #E5EBFA; }
+html[data-theme="dark"] .win-desktop .win-app-surface .p2-header__button { color: #E5EBFA; }
 
-html[data-theme="dark"] .win-panel__toggle-title,
-html[data-theme="dark-navy"] .win-panel__toggle-title { color: #E5EBFA; }
+html[data-theme="dark"] .win-panel__toggle-title { color: #E5EBFA; }
 
-html[data-theme="dark"] .win-panel__toggle-preview,
-html[data-theme="dark-navy"] .win-panel__toggle-preview { color: #C2CADF; }
+html[data-theme="dark"] .win-panel__toggle-preview { color: #C2CADF; }
 
 html[data-theme="dark"] .win-desktop .win-panel__rail .p2-rail__item:not([aria-current="page"]):hover:not(:disabled),
 html[data-theme="dark"] .win-desktop .win-panel__rail .p2-rail__settings:hover:not(:disabled),
 html[data-theme="dark"] .win-desktop .win-app-surface .p2-header__button:hover:not(:disabled),
-html[data-theme="dark"] .win-desktop .win-app-surface .p2-header__profile:hover:not(:disabled),
-html[data-theme="dark-navy"] .win-desktop .win-panel__rail .p2-rail__item:not([aria-current="page"]):hover:not(:disabled),
-html[data-theme="dark-navy"] .win-desktop .win-panel__rail .p2-rail__settings:hover:not(:disabled),
-html[data-theme="dark-navy"] .win-desktop .win-app-surface .p2-header__button:hover:not(:disabled),
-html[data-theme="dark-navy"] .win-desktop .win-app-surface .p2-header__profile:hover:not(:disabled) {
+html[data-theme="dark"] .win-desktop .win-app-surface .p2-header__profile:hover:not(:disabled) {
   background: rgba(255, 255, 255, .0605);
 }
 
 html[data-theme="dark"] .win-desktop .win-panel__rail .p2-rail__item:not([aria-current="page"]):active:not(:disabled),
 html[data-theme="dark"] .win-desktop .win-panel__rail .p2-rail__settings:active:not(:disabled),
 html[data-theme="dark"] .win-desktop .win-app-surface .p2-header__button:active:not(:disabled),
-html[data-theme="dark"] .win-desktop .win-app-surface .p2-header__profile:active:not(:disabled),
-html[data-theme="dark-navy"] .win-desktop .win-panel__rail .p2-rail__item:not([aria-current="page"]):active:not(:disabled),
-html[data-theme="dark-navy"] .win-desktop .win-panel__rail .p2-rail__settings:active:not(:disabled),
-html[data-theme="dark-navy"] .win-desktop .win-app-surface .p2-header__button:active:not(:disabled),
-html[data-theme="dark-navy"] .win-desktop .win-app-surface .p2-header__profile:active:not(:disabled) {
+html[data-theme="dark"] .win-desktop .win-app-surface .p2-header__profile:active:not(:disabled) {
   background: rgba(255, 255, 255, .0419);
 }
 
-html[data-theme="dark"] .win-desktop .win-taskbar__search,
-html[data-theme="dark-navy"] .win-desktop .win-taskbar__search {
+html[data-theme="dark"] .win-desktop .win-taskbar__search {
   border: 1px solid rgba(255, 255, 255, .0698);
   background: rgba(255, 255, 255, .0605); /* Stand-in */
   color: rgba(255, 255, 255, .786);
 }
 
-html[data-theme="dark"] .win-desktop .win-taskbar__search .win-icon,
-html[data-theme="dark-navy"] .win-desktop .win-taskbar__search .win-icon { color: #FFFFFF; }
-
-html[data-theme="dark"] .win-desktop .win-taskbar__battery-fill,
-html[data-theme="dark-navy"] .win-desktop .win-taskbar__battery-fill { fill: #6CCB5F; } /* Stand-in */

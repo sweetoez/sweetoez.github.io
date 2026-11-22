@@ -461,6 +461,20 @@ html[data-theme="dark"],
   object-fit: contain;
 }
 
+.edge-amazon--dark {
+  display: none;
+}
+
+html[data-theme="dark"] .edge-amazon--light,
+.shell-app[data-theme="dark"] .edge-amazon--light {
+  display: none;
+}
+
+html[data-theme="dark"] .edge-amazon--dark,
+.shell-app[data-theme="dark"] .edge-amazon--dark {
+  display: block;
+}
+
 .edge-favorite__fallback {
   display: inline-flex;
   width: 16px;
@@ -877,13 +891,13 @@ html[data-theme="dark"] .edge-favorites,
 html[data-theme="dark"] .ntp-search-slot,
 .shell-app[data-theme="dark"] .ntp-search-slot {
   background: #0E111B;
-  color: #E5EBFA;
+  color: var(--msn-primary);
 }
 
 html[data-theme="dark"] .ntp-search-slot input,
 .shell-app[data-theme="dark"] .ntp-search-slot input {
-  color: #E5EBFA;
-  caret-color: #E5EBFA;
+  color: var(--msn-primary);
+  caret-color: var(--msn-primary);
 }
 
 html[data-theme="dark"] .ntp-search-slot input::placeholder,
@@ -897,7 +911,7 @@ html[data-theme="dark"] .ntp-shortcut,
 .shell-app[data-theme="dark"] .ntp-shortcut,
 html[data-theme="dark"] .ntp-shortcut-label,
 .shell-app[data-theme="dark"] .ntp-shortcut-label {
-  color: #E5EBFA;
+  color: var(--msn-primary);
 }
 
 html[data-theme="dark"] .ntp-shortcut-icon,
@@ -908,7 +922,7 @@ html[data-theme="dark"] .ntp-shortcut-icon,
 
 html[data-theme="dark"] .ntp-shortcut-fallback,
 .shell-app[data-theme="dark"] .ntp-shortcut-fallback {
-  color: #E5EBFA;
+  color: var(--msn-primary);
 }
 
 @media (prefers-reduced-motion: reduce) {

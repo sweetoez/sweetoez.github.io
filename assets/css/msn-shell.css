@@ -435,6 +435,17 @@
 .shell-app[data-scenario="prong"] .edge-window { display: none; }
 .shell-app[data-scenario="edge"] .prong-panel { display: none; }
 .shell-app[data-scenario="prong"] .edge-width-controls { display: none; }
+.shell-app[data-scenario="prong"] .desktop-fit { display: none; }
+.windows-panel-preview {
+  display: block;
+  width: 100%;
+  max-width: 1920px;
+  aspect-ratio: 8 / 5;
+  margin: 0 auto;
+  border: 0;
+  border-radius: 12px;
+}
+.shell-app:not([data-scenario="prong"]) .windows-panel-preview { display: none; }
 
 @media (max-width: 700px) {
   .shell-app { padding: 12px; }

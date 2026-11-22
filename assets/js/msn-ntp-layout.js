@@ -17,7 +17,7 @@ if (isEmbed) {
 const defaultWidgets = [...widgetGrid.querySelectorAll(":scope > .widget-item")];
 const defaultWidgetByName = {
   sports: widgetGrid.querySelector(".seg-sports"),
-  trending: widgetGrid.querySelector(".seg-trend"),
+  finance: widgetGrid.querySelector(".seg-fin"),
 };
 const widgetTemplates = {
   podcast: document.querySelector("#podcast-template"),
@@ -27,7 +27,7 @@ const widgetTemplates = {
 };
 const widgetLayouts = {
   default: null,
-  "three-1u": ["podcast", "sports", "trending"],
+  "three-1u": ["podcast", "sports", "finance"],
   "two-1u-half": ["podcast", "sports", "half"],
   "gem-2u-half": ["gem2", "half"],
   "gem-2u-1u": ["gem2", "sports"],
@@ -72,18 +72,25 @@ function renderWidgetLayout(columns) {
   const items = widgetLayouts[selectedLayout] ? [...widgetLayouts[selectedLayout]] : null;
 
   if (items && columns === 4) {
-    items.push(items.includes("trending") ? "podcast" : "trending");
+    items.push(items.includes("finance") ? "podcast" : "finance");
   }
 
   const nodes = items
     ? items.map((item) => {
-      if (item === "sports" || item === "trending") return defaultWidgetByName[item].cloneNode(true);
+      if (item === "sports" || item === "finance") return defaultWidgetByName[item].cloneNode(true);
       if (item === "gem2" && columns === 1) item = "gem1";
       return widgetTemplates[item].content.firstElementChild.cloneNode(true);
     })
     : defaultWidgets;
 
-  widgetGrid.replaceChildren(...nodes, columnOverlay);
+  let remaining = columns;
+  const visibleNodes = nodes.filter((node) => {
+    const span = Math.min(columns, node.classList.contains("span-2") ? 2 : 1);
+    if (span > remaining) return false;
+    remaining -= span;
+    return true;
+  });
+  widgetGrid.replaceChildren(...visibleNodes, columnOverlay);
   renderedWidgetLayout = key;
 }
 

@@ -6,6 +6,9 @@ const outlinesToggle = document.querySelector("[data-outlines-toggle]");
 const wallpaper = document.querySelector(".win-wallpaper img");
 const storyTemplate = document.querySelector("#win-story-template");
 const themeStorageKey = "windows-panel-theme";
+const params = new URLSearchParams(location.search);
+const isEmbed = params.get("embed") === "1";
+const embedTheme = params.get("theme");
 const iconPaths = {
   apps: "../assets/icons/ic_fluent_apps_20_regular.svg",
   grid: "../assets/icons/ic_fluent_grid_24_filled.svg",
@@ -57,7 +60,7 @@ let scaleMode = "fit";
 function readSavedTheme() {
   try {
     const savedTheme = localStorage.getItem(themeStorageKey);
-    return ["light", "dark", "light-warm", "dark-navy"].includes(savedTheme) ? savedTheme : "light";
+    return ["light", "dark"].includes(savedTheme) ? savedTheme : "light";
   } catch (error) {
     console.error("Could not read the Windows panel theme preference.", error);
     return "light";
@@ -67,7 +70,7 @@ function readSavedTheme() {
 function applyTheme(theme, save = false) {
   document.documentElement.dataset.theme = theme;
   themeSelect.value = theme;
-  wallpaper.src = `../assets/images/windows/wallpaper-${theme === "dark" || theme === "dark-navy" ? "dark" : "light"}.jpg`;
+  wallpaper.src = `../assets/images/windows/wallpaper-${theme === "dark" ? "dark" : "light"}.jpg`;
 
   if (!save) return;
 
@@ -80,7 +83,7 @@ function applyTheme(theme, save = false) {
 
 function updateScale() {
   const scale = scaleMode === "fit"
-    ? Math.min((window.innerWidth - 32) / 1920, (window.innerHeight - 88) / 1200)
+    ? Math.min((window.innerWidth - (isEmbed ? 0 : 32)) / 1920, (window.innerHeight - (isEmbed ? 0 : 88)) / 1200)
     : 1;
   stageFit.style.transform = `translate(-50%, -50%) scale(${Math.max(.01, scale)})`;
   scaleToggle.setAttribute("aria-pressed", String(scaleMode === "fit"));
@@ -164,6 +167,7 @@ document.querySelector(".p2-refresh__button").addEventListener("click", () => {
 
 window.addEventListener("resize", updateScale);
 populateStories();
-applyTheme(readSavedTheme());
+document.documentElement.dataset.embed = String(isEmbed);
+applyTheme(isEmbed && ["light", "dark"].includes(embedTheme) ? embedTheme : readSavedTheme());
 updateScale();
 hydrateIcons();

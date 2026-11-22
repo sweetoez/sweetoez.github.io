@@ -5,22 +5,11 @@ const edgeWindow = document.querySelector(".edge-window");
 const edgeWidth = document.querySelector("#edge-width");
 const edgeWidthReadout = document.querySelector("#edge-width-readout");
 const edgePage = document.querySelector(".edge-page");
+const windowsPanel = document.querySelector(".windows-panel-preview");
 const wallpaper = document.querySelector(".desktop-wallpaper img");
-const feedGrid = document.querySelector("#prong-feed-grid");
-const articleTemplate = document.querySelector("#prong-article-template");
-const adTemplate = document.querySelector("#prong-ad-template");
-const headlines = [
-  "Five pantry staples that last longer than you think",
-  "A beginner's guide to tidy home networks",
-  "The quiet comeback of the overnight train",
-  "Why small design systems scale better than big ones",
-  "Weekend recipes built around one great pan",
-  "A Symbol of Beauty: Exploring the Secret Lives of Peacocks",
-];
 const widthPresets = [...document.querySelectorAll("[data-width]")];
 const scenarioButtons = [...document.querySelectorAll("[data-scenario]")];
 const themeButtons = [...document.querySelectorAll("[data-theme-choice]")];
-const railItems = [...document.querySelectorAll(".p2-rail__item")];
 const searchParams = new URLSearchParams(location.search);
 const initialScenario = ["edge", "prong"].includes(searchParams.get("s")) ? searchParams.get("s") : "edge";
 const initialTheme = ["light", "dark"].includes(searchParams.get("theme")) ? searchParams.get("theme") : "light";
@@ -56,6 +45,9 @@ function renderShell() {
   if (iframeTheme !== theme) {
     edgePage.src = `msn-ntp-layout.html?embed=1&theme=${theme}`;
   }
+  if (new URL(windowsPanel.src).searchParams.get("theme") !== theme) {
+    windowsPanel.src = `windows-panel-shell.html?embed=1&theme=${theme}`;
+  }
   updateDesktopScale();
   updateUrl();
 }
@@ -76,20 +68,6 @@ function updateUrl() {
   history.replaceState(null, "", `${location.pathname}?${params.toString()}`);
 }
 
-function populateFeed() {
-  const cards = [];
-  headlines.forEach((headline, index) => {
-    const article = articleTemplate.content.firstElementChild.cloneNode(true);
-    article.querySelector(".article-title").textContent = headline;
-    cards.push(article);
-
-    if ((index + 1) % 2 === 0) {
-      cards.push(adTemplate.content.firstElementChild.cloneNode(true));
-    }
-  });
-  feedGrid.replaceChildren(...cards);
-}
-
 scenarioButtons.forEach((button) => {
   button.addEventListener("click", () => {
     scenario = button.dataset.scenario;
@@ -101,13 +79,6 @@ themeButtons.forEach((button) => {
   button.addEventListener("click", () => {
     theme = button.dataset.themeChoice;
     renderShell();
-  });
-});
-
-railItems.forEach((button) => {
-  button.addEventListener("click", () => {
-    railItems.forEach((item) => item.removeAttribute("aria-current"));
-    button.setAttribute("aria-current", "page");
   });
 });
 
@@ -125,5 +96,4 @@ widthPresets.forEach((button) => {
 
 window.addEventListener("resize", updateDesktopScale);
 new ResizeObserver(updateDesktopScale).observe(shell);
-populateFeed();
 renderShell();
