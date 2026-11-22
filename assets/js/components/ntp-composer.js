@@ -13,7 +13,7 @@ class NtpComposer extends HTMLElement {
     </button>
     <input type="search" placeholder="Ask Copilot" aria-label="Ask Copilot">
     <button class="ntp-search-submit" type="button" aria-label="Copilot">
-      <img src="../assets/images/windows/taskbar/copilot.svg" width="24" height="24" alt="" aria-hidden="true">
+      <img src="../assets/images/windows/taskbar/copilot-tile.svg" width="24" height="24" alt="" aria-hidden="true">
     </button>
   </form>
 </div>`;

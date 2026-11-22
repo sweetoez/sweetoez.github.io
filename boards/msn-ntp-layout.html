@@ -107,7 +107,7 @@
     .greeting,
     .section-title {
       margin: 0;
-      color: #272320;
+      color: var(--msn-primary);
       font-size: 28px;
       font-weight: 650;
       line-height: 32px;
@@ -139,9 +139,9 @@
       padding: 8px;
       overflow: hidden;
       border-radius: 12px;
-      background: rgba(255, 255, 255, 0.80);
-      box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.10);
-      color: #272320;
+      background: var(--msn-card);
+      box-shadow: inset 0 0 0 1px var(--msn-card-stroke);
+      color: var(--msn-primary);
       font-size: 14px;
       font-weight: 450;
       line-height: 20px;
@@ -443,9 +443,9 @@
       padding: 0 16px;
       border: 1px solid rgba(0, 0, 0, 0.08);
       border-radius: 20px;
-      background: #FFFFFF;
+      background: var(--msn-card);
       box-shadow: 0 4px 8px rgba(0, 0, 0, .14);
-      color: #242424;
+      color: var(--msn-primary);
       font: 600 14px/20px "Segoe UI Variable Text", "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
     }
     .feeds-button span { font-family: inherit; }
@@ -737,7 +737,7 @@
     </div>
 
     <div class="stage-scroll">
-      <div class="stage">
+      <div class="stage msn-surface">
         <nav class="ntp-topnav" aria-label="New tab navigation">
           <div class="ntp-brand"><span class="ntp-brand-logo"><img src="../assets/images/brand/msn.svg" alt="" onerror="this.style.visibility='hidden'"></span><span>Discover</span></div>
           <div class="ntp-actions">

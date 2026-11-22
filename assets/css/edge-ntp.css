@@ -363,10 +363,6 @@ html[data-theme="dark"] .edge-chip {
   color: var(--msn-primary);
 }
 
-html[data-theme="dark"] .edge-chip strong {
-  color: var(--msn-primary);
-}
-
 html[data-theme="dark"] .edge-page.edge-content .digest--carousel .digest-caption .digest-title {
   color: #E5EBFA;
 }
