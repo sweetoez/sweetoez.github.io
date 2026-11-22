@@ -303,7 +303,7 @@
 }
 
 .edge-chip strong {
-  color: #AC1922;
+  color: var(--msn-live-red);
   font-weight: 650;
 }
 

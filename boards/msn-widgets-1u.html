@@ -272,7 +272,6 @@
     :root{
       --w-ink:#272320;
       --w-ink-2:#4C4642;
-      --w-green:#01712B;
       --w-surface:rgba(255,255,255,0.80);
       --w-stroke:rgba(0,0,0,0.10);
       --w-font:"Segoe Sans","Segoe UI Variable Text","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;
@@ -290,8 +289,8 @@
     .spt-badge{width:40px;height:40px;border-radius:9999px;background:var(--b);color:#FFFFFF;display:flex;align-items:center;justify-content:center;font-size:10px;line-height:12px;font-weight:650;}
     .spt-abbr{font-size:14px;line-height:20px;font-weight:650;color:var(--w-ink);}
     .spt-mid{flex:1 1 0;min-width:0;display:flex;flex-direction:column;align-items:center;gap:4px;text-align:center;}
-    .spt-live{display:inline-flex;align-items:center;gap:6px;height:28px;padding:0 8px;border-radius:8px;background:rgba(1,113,43,0.10);font-size:14px;line-height:20px;font-weight:450;color:var(--w-green);}
-    .spt-live i{width:8px;height:8px;border-radius:9999px;background:var(--w-green);}
+    .spt-live{display:inline-flex;align-items:center;gap:6px;height:28px;padding:0 8px;border-radius:8px;background:rgba(172,25,34,0.10);font-size:14px;line-height:20px;font-weight:450;color:var(--msn-live-red);}
+    .spt-live i{width:8px;height:8px;border-radius:9999px;background:var(--msn-live-red);}
     .spt-status{font-size:14px;line-height:20px;font-weight:450;color:var(--w-ink);}
     .spt-score{display:inline-flex;align-items:center;gap:4px;font-size:24px;line-height:32px;font-weight:650;color:var(--w-ink);}
     .spt-play{width:12px;height:12px;color:var(--w-ink);}
@@ -828,8 +827,8 @@
                         <svg class="stk-svg" viewBox="0 0 248.43 150" preserveAspectRatio="none" aria-hidden="true">
                           <defs>
                             <linearGradient id="stkFill" x1="0" y1="0" x2="0" y2="1">
-                              <stop offset="0" stop-color="#01712B" stop-opacity="0.30"/>
-                              <stop offset="1" stop-color="#01712B" stop-opacity="0"/>
+                              <stop offset="0" stop-color="var(--msn-stock-up)" stop-opacity="0.30"/>
+                              <stop offset="1" stop-color="var(--msn-stock-up)" stop-opacity="0"/>
                             </linearGradient>
                           </defs>
                           <polygon class="stk-area" fill="url(#stkFill)" points="2.5,123.9 6.0,118.6 8.0,109.0 11.2,109.0 12.8,96.2 14.8,91.0 18.0,94.6 19.6,93.0 21.2,85.0 25.2,96.6 29.2,106.2 33.6,97.0 36.8,82.6 39.6,79.4 42.4,69.4 46.8,67.4 48.4,81.0 55.2,71.8 61.6,65.0 63.6,56.2 73.6,45.8 74.8,70.2 78.0,75.4 79.2,85.0 84.4,81.8 88.8,62.2 90.4,66.6 93.6,64.2 96.8,71.8 99.2,76.2 102.4,98.6 108.0,98.6 115.2,73.8 123.6,56.2 128.0,69.4 132.8,61.0 139.2,81.0 142.8,83.4 146.4,91.0 149.6,81.0 157.6,65.0 162.0,67.8 163.6,75.4 169.2,44.6 173.6,59.8 175.2,77.4 179.6,83.4 183.2,71.0 185.2,56.2 187.2,46.6 190.0,50.6 193.6,49.0 196.0,27.0 200.0,24.2 204.1,18.9 208.4,31.0 216.8,87.0 220.8,93.0 223.6,107.4 227.2,107.4 228.4,117.0 230.4,115.4 234.0,87.8 244.1,36.1 244.1,129.5 2.5,129.5"/>
