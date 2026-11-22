@@ -10,6 +10,7 @@
   <script src="../assets/js/components/kc-module.js"></script>
   <script src="../assets/js/components/kc-modules/text-list.js"></script>
   <script src="../assets/js/components/kc-modules/image-list.js"></script>
+  <script src="../assets/js/components/kc-modules/travel-map.js"></script>
   <script src="../assets/js/components/kc-modules/media.js"></script>
   <script src="../assets/js/kc-mobile-carousels.js" defer></script>
   <style>
@@ -538,53 +539,7 @@
 </div>
 <div class="kc-board-item">
   <p class="kc-board-label">Mobile / Miscellaneous / Timeline</p>
-  <section class="kc-module kc-module--mobile kc-mobile-miscellaneous-timeline" data-kc="Mobile / Miscellaneous / Timeline">
-    <div class="kc-module-title">
-      <h3>Timeline</h3>
-    </div>
-    <ol class="kc-mobile-miscellaneous-timeline__list" style="list-style:none;padding:0;margin:0">
-      <li class="kc-mobile-miscellaneous-timeline__entry">
-        <span class="kc-mobile-miscellaneous-timeline__rail">
-        </span>
-        <div class="kc-mobile-miscellaneous-timeline__content">
-          <strong class="kc-mobile-miscellaneous-timeline__year">1901</strong>
-          <p class="kc-mobile-miscellaneous-timeline__quote">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-        </div>
-      </li>
-      <li class="kc-mobile-miscellaneous-timeline__entry">
-        <span class="kc-mobile-miscellaneous-timeline__rail">
-        </span>
-        <div class="kc-mobile-miscellaneous-timeline__content">
-          <strong class="kc-mobile-miscellaneous-timeline__year">1902</strong>
-          <p class="kc-mobile-miscellaneous-timeline__quote">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-        </div>
-      </li>
-      <li class="kc-mobile-miscellaneous-timeline__entry">
-        <span class="kc-mobile-miscellaneous-timeline__rail">
-        </span>
-        <div class="kc-mobile-miscellaneous-timeline__content">
-          <strong class="kc-mobile-miscellaneous-timeline__year">1903</strong>
-          <p class="kc-mobile-miscellaneous-timeline__quote">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-        </div>
-      </li>
-      <li class="kc-mobile-miscellaneous-timeline__entry">
-        <span class="kc-mobile-miscellaneous-timeline__rail">
-        </span>
-        <div class="kc-mobile-miscellaneous-timeline__content">
-          <strong class="kc-mobile-miscellaneous-timeline__year">1904</strong>
-          <p class="kc-mobile-miscellaneous-timeline__quote">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-        </div>
-      </li>
-      <li class="kc-mobile-miscellaneous-timeline__entry">
-        <span class="kc-mobile-miscellaneous-timeline__rail">
-        </span>
-        <div class="kc-mobile-miscellaneous-timeline__content">
-          <strong class="kc-mobile-miscellaneous-timeline__year">1905</strong>
-          <p class="kc-mobile-miscellaneous-timeline__quote">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-        </div>
-      </li>
-    </ol>
-  </section>
+  <kc-module type="timeline" platform="mobile" variant="modules-mobile-timeline"></kc-module>
 </div>
 <div class="kc-board-item">
   <p class="kc-board-label">Mobile / Miscellaneous / Quote</p>
@@ -598,77 +553,11 @@
 </div>
 <div class="kc-board-item">
   <p class="kc-board-label">Mobile / Miscellaneous / Serving Size</p>
-  <section class="kc-module kc-module--mobile kc-mobile-miscellaneous-serving-size" data-kc="Mobile / Miscellaneous / Serving Size">
-    <div class="kc-module-title">
-      <h3>Serving Size: Food (100g)</h3>
-    </div>
-    <div class="kc-mobile-miscellaneous-serving-size__content">
-      <div class="kc-mobile-miscellaneous-serving-size__circles">
-        <div class="kc-mobile-miscellaneous-serving-size__circle">
-          <span class="kc-m-bold">Calories</span>
-          <strong>000</strong>
-          <span class="kc-m-foot">XX%</span>
-        </div>
-        <div class="kc-mobile-miscellaneous-serving-size__circle">
-          <span class="kc-m-bold">Fat</span>
-          <strong>000</strong>
-          <span class="kc-m-foot">XX%</span>
-        </div>
-        <div class="kc-mobile-miscellaneous-serving-size__circle">
-          <span class="kc-m-bold">Carbs</span>
-          <strong>000</strong>
-          <span class="kc-m-foot">XX%</span>
-        </div>
-        <div class="kc-mobile-miscellaneous-serving-size__circle">
-          <span class="kc-m-bold">Sugar</span>
-          <strong>000</strong>
-          <span class="kc-m-foot">XX%</span>
-        </div>
-      </div>
-      <span class="kc-mobile-miscellaneous-serving-size__foot">% Daily value*</span>
-    </div>
-  </section>
+  <kc-module type="serving-size" platform="mobile" variant="modules-mobile-serving-size"></kc-module>
 </div>
 <div class="kc-board-item">
   <p class="kc-board-label">Mobile / Miscellaneous / Visit Times</p>
-  <section class="kc-module kc-module--mobile kc-mobile-miscellaneous-visit-times" data-kc="Mobile / Miscellaneous / Visit Times">
-    <div class="kc-module-title">
-      <h3>Best Times to Visit</h3>
-    </div>
-    <div class="kc-mobile-miscellaneous-visit-times__graph" role="img" aria-label="Visit times values: 52, 52, 79, 79, 79, 79, 52">
-      <span class="kc-mobile-miscellaneous-visit-times__grid" style="top:0">
-      </span>
-      <span class="kc-mobile-miscellaneous-visit-times__grid" style="top:40px">
-      </span>
-      <span class="kc-mobile-miscellaneous-visit-times__grid" style="top:80px">
-      </span>
-      <div class="kc-mobile-miscellaneous-visit-times__bars">
-        <span class="kc-mobile-miscellaneous-visit-times__bar" style="height:52px">
-        </span>
-        <span class="kc-mobile-miscellaneous-visit-times__bar" style="height:52px">
-        </span>
-        <span class="kc-mobile-miscellaneous-visit-times__bar" style="height:79px">
-        </span>
-        <span class="kc-mobile-miscellaneous-visit-times__bar" style="height:79px">
-        </span>
-        <span class="kc-mobile-miscellaneous-visit-times__bar" style="height:79px">
-        </span>
-        <span class="kc-mobile-miscellaneous-visit-times__bar" style="height:79px">
-        </span>
-        <span class="kc-mobile-miscellaneous-visit-times__bar" style="height:52px">
-        </span>
-      </div>
-      <div class="kc-mobile-miscellaneous-visit-times__years">
-        <span class="kc-mobile-miscellaneous-visit-times__year">2018</span>
-        <span class="kc-mobile-miscellaneous-visit-times__year">2019</span>
-        <span class="kc-mobile-miscellaneous-visit-times__year">2020</span>
-        <span class="kc-mobile-miscellaneous-visit-times__year">2021</span>
-        <span class="kc-mobile-miscellaneous-visit-times__year">2022</span>
-        <span class="kc-mobile-miscellaneous-visit-times__year">2023</span>
-        <span class="kc-mobile-miscellaneous-visit-times__year">2024</span>
-      </div>
-    </div>
-  </section>
+  <kc-module type="visit-times" platform="mobile" variant="modules-mobile-visit-times"></kc-module>
 </div>
 <div class="kc-board-item">
   <p class="kc-board-label">Mobile / Miscellaneous / Poll &amp; Trivia — Quantity=3, Columns=1</p>
@@ -731,20 +620,7 @@
 </div>
 <div class="kc-board-item">
   <p class="kc-board-label">Mobile / Miscellaneous / Travel</p>
-  <section class="kc-module kc-module--mobile kc-mobile-miscellaneous-travel" data-kc="Mobile / Miscellaneous / Travel">
-    <a class="kc-btn-outline kc-mobile-miscellaneous-travel__action" href="#">
-      <img src="../assets/icons/ic_fluent_book_globe_20_regular.svg" alt="" aria-hidden="true">
-      <span>Travel guide</span>
-    </a>
-    <a class="kc-btn-outline kc-mobile-miscellaneous-travel__action" href="#">
-      <img src="../assets/icons/ic_fluent_airplane_20_regular.svg" alt="" aria-hidden="true">
-      <span>Book flights</span>
-    </a>
-    <a class="kc-btn-outline kc-mobile-miscellaneous-travel__action" href="#">
-      <img src="../assets/icons/ic_fluent_bed_20_regular.svg" alt="" aria-hidden="true">
-      <span>Book hotels</span>
-    </a>
-  </section>
+  <kc-module type="travel" platform="mobile" variant="modules-mobile-travel"></kc-module>
 </div>
 <div class="kc-board-item">
   <p class="kc-board-label">Mobile / Miscellaneous / Listen</p>
@@ -752,13 +628,7 @@
 </div>
 <div class="kc-board-item">
   <p class="kc-board-label">Mobile / Miscellaneous / Map</p>
-  <section class="kc-module kc-module--mobile kc-mobile-miscellaneous-map" data-kc="Mobile / Miscellaneous / Map">
-    <div class="kc-mobile-miscellaneous-map__frame">
-      <img src="../assets/images/kc/maps/new-delhi.png" alt="Map of New Delhi, India">
-      <a class="kc-btn-on-image kc-miscellaneous-map__expand" href="https://commons.wikimedia.org/wiki/File:New_Delhi_map_no_titles.png" aria-label="Open map of New Delhi"><img src="../assets/icons/ic_fluent_arrow_maximize_20_regular.svg" alt="" aria-hidden="true"></a>
-      <span class="kc-miscellaneous-map__credit"><a href="https://commons.wikimedia.org/wiki/File:New_Delhi_map_no_titles.png">Winston Samuel</a> · <a href="https://www.openstreetmap.org/copyright">© OpenStreetMap contributors</a> · <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></span>
-    </div>
-  </section>
+  <kc-module type="map" platform="mobile" variant="modules-mobile-map"></kc-module>
 </div>
     </div>
   </main>

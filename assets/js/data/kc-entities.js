@@ -1984,7 +1984,102 @@ window.KC_ENTITIES = {
               "alt": ""
             }
           ],
-          "slots": []
+          "slots": [],
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": "kc-module kc-miscellaneous-map",
+                "id": "kc-country-mod-2",
+                "data-kc": "Miscellaneous / Map",
+                "aria-label": "Map of New Delhi"
+              }
+            },
+            "content": [
+              "\n            ",
+              {
+                "tag": "div",
+                "attributes": {
+                  "class": "kc-miscellaneous-map__frame",
+                  "style": "background-color:var(--kc-placeholder)"
+                },
+                "children": [
+                  "\n              ",
+                  {
+                    "tag": "img",
+                    "attributes": {
+                      "src": "../assets/images/kc/modules/country/country-desktop-top-fact-map-01.png",
+                      "alt": "Map of New Delhi, India",
+                      "onerror": "this.style.display='none'"
+                    },
+                    "children": []
+                  },
+                  "\n              ",
+                  {
+                    "tag": "a",
+                    "attributes": {
+                      "class": "kc-btn-on-image kc-miscellaneous-map__expand",
+                      "href": "https://commons.wikimedia.org/wiki/File:New_Delhi_map_no_titles.png",
+                      "aria-label": "Open map of New Delhi"
+                    },
+                    "children": [
+                      "\n                ",
+                      {
+                        "tag": "img",
+                        "attributes": {
+                          "src": "../assets/icons/ic_fluent_arrow_maximize_20_regular.svg",
+                          "alt": true,
+                          "aria-hidden": "true"
+                        },
+                        "children": []
+                      },
+                      "\n              "
+                    ]
+                  },
+                  "\n              ",
+                  {
+                    "tag": "span",
+                    "attributes": {
+                      "class": "kc-miscellaneous-map__credit"
+                    },
+                    "children": [
+                      {
+                        "tag": "a",
+                        "attributes": {
+                          "href": "https://commons.wikimedia.org/wiki/File:New_Delhi_map_no_titles.png"
+                        },
+                        "children": [
+                          "Winston Samuel"
+                        ]
+                      },
+                      " · ",
+                      {
+                        "tag": "a",
+                        "attributes": {
+                          "href": "https://www.openstreetmap.org/copyright"
+                        },
+                        "children": [
+                          "© OpenStreetMap contributors"
+                        ]
+                      },
+                      " · ",
+                      {
+                        "tag": "a",
+                        "attributes": {
+                          "href": "https://creativecommons.org/licenses/by-sa/4.0/"
+                        },
+                        "children": [
+                          "CC BY-SA 4.0"
+                        ]
+                      }
+                    ]
+                  },
+                  "\n            "
+                ]
+              },
+              "\n          "
+            ]
+          }
         },
         {
           "type": "places-to-visit",
@@ -2513,7 +2608,198 @@ window.KC_ENTITIES = {
               "alt": "Historical image related to India"
             }
           ],
-          "slots": []
+          "slots": [],
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": "kc-module kc-miscellaneous-timeline",
+                "id": "kc-country-mod-6",
+                "data-kc": "Miscellaneous / Timeline",
+                "aria-label": "India timeline"
+              }
+            },
+            "content": [
+              "\n            ",
+              {
+                "tag": "span",
+                "attributes": {
+                  "class": "kc-img kc-country-timeline__portrait kc-img--cover"
+                },
+                "children": [
+                  {
+                    "tag": "img",
+                    "attributes": {
+                      "src": "../assets/images/kc/modules/country/country-desktop-top-fact-history-01.png",
+                      "alt": "Historical image related to India",
+                      "onerror": "this.style.display='none'",
+                      "data-fluent-load-observed": "true",
+                      "class": "is-loaded"
+                    },
+                    "children": []
+                  }
+                ]
+              },
+              "\n            ",
+              {
+                "tag": "ol",
+                "attributes": {
+                  "class": "kc-miscellaneous-timeline__list"
+                },
+                "children": [
+                  "\n              ",
+                  {
+                    "tag": "li",
+                    "attributes": {
+                      "class": "kc-miscellaneous-timeline__entry"
+                    },
+                    "children": [
+                      "\n                ",
+                      {
+                        "tag": "span",
+                        "attributes": {
+                          "class": "kc-miscellaneous-timeline__rail",
+                          "aria-hidden": "true"
+                        },
+                        "children": []
+                      },
+                      "\n                ",
+                      {
+                        "tag": "div",
+                        "attributes": {
+                          "class": "kc-miscellaneous-timeline__content"
+                        },
+                        "children": [
+                          "\n                  ",
+                          {
+                            "tag": "strong",
+                            "attributes": {
+                              "class": "kc-miscellaneous-timeline__year"
+                            },
+                            "children": [
+                              "1857"
+                            ]
+                          },
+                          "\n                  ",
+                          {
+                            "tag": "p",
+                            "attributes": {
+                              "class": "kc-miscellaneous-timeline__quote"
+                            },
+                            "children": [
+                              "Last Mughal Emperor Bahadur Shah Zafar was deposed by British East India Company and India transferred to British Crown."
+                            ]
+                          },
+                          "\n                "
+                        ]
+                      },
+                      "\n              "
+                    ]
+                  },
+                  "\n              ",
+                  {
+                    "tag": "li",
+                    "attributes": {
+                      "class": "kc-miscellaneous-timeline__entry"
+                    },
+                    "children": [
+                      "\n                ",
+                      {
+                        "tag": "span",
+                        "attributes": {
+                          "class": "kc-miscellaneous-timeline__rail",
+                          "aria-hidden": "true"
+                        },
+                        "children": []
+                      },
+                      "\n                ",
+                      {
+                        "tag": "div",
+                        "attributes": {
+                          "class": "kc-miscellaneous-timeline__content"
+                        },
+                        "children": [
+                          "\n                  ",
+                          {
+                            "tag": "strong",
+                            "attributes": {
+                              "class": "kc-miscellaneous-timeline__year"
+                            },
+                            "children": [
+                              "1947"
+                            ]
+                          },
+                          "\n                  ",
+                          {
+                            "tag": "p",
+                            "attributes": {
+                              "class": "kc-miscellaneous-timeline__quote"
+                            },
+                            "children": [
+                              "Indian Independence Act is an Act of the Parliament of the United Kingdom that partitioned British India into the two new independent dominions of India and Pakistan"
+                            ]
+                          },
+                          "\n                "
+                        ]
+                      },
+                      "\n              "
+                    ]
+                  },
+                  "\n              ",
+                  {
+                    "tag": "li",
+                    "attributes": {
+                      "class": "kc-miscellaneous-timeline__entry"
+                    },
+                    "children": [
+                      "\n                ",
+                      {
+                        "tag": "span",
+                        "attributes": {
+                          "class": "kc-miscellaneous-timeline__rail",
+                          "aria-hidden": "true"
+                        },
+                        "children": []
+                      },
+                      "\n                ",
+                      {
+                        "tag": "div",
+                        "attributes": {
+                          "class": "kc-miscellaneous-timeline__content"
+                        },
+                        "children": [
+                          "\n                  ",
+                          {
+                            "tag": "strong",
+                            "attributes": {
+                              "class": "kc-miscellaneous-timeline__year"
+                            },
+                            "children": [
+                              "1950"
+                            ]
+                          },
+                          "\n                  ",
+                          {
+                            "tag": "p",
+                            "attributes": {
+                              "class": "kc-miscellaneous-timeline__quote"
+                            },
+                            "children": [
+                              "India became a republic nation."
+                            ]
+                          },
+                          "\n                "
+                        ]
+                      },
+                      "\n              "
+                    ]
+                  },
+                  "\n            "
+                ]
+              },
+              "\n          "
+            ]
+          }
         },
         {
           "type": "attributions",
@@ -3071,7 +3357,100 @@ window.KC_ENTITIES = {
               "alt": ""
             }
           ],
-          "slots": []
+          "slots": [],
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": "kc-module kc-module--mobile kc-mobile-miscellaneous-map",
+                "id": "kc-country-mobile-mod-3",
+                "data-kc": "Mobile / Miscellaneous / Map",
+                "aria-label": "Map of New Delhi"
+              }
+            },
+            "content": [
+              "\n            ",
+              {
+                "tag": "div",
+                "attributes": {
+                  "class": "kc-mobile-miscellaneous-map__frame",
+                  "style": "background-color:var(--kc-placeholder)"
+                },
+                "children": [
+                  "\n              ",
+                  {
+                    "tag": "img",
+                    "attributes": {
+                      "src": "../assets/images/kc/modules/country/country-mobile-map-01.png",
+                      "alt": "Map of New Delhi, India",
+                      "onerror": "this.style.display='none'"
+                    },
+                    "children": []
+                  },
+                  "\n              ",
+                  {
+                    "tag": "a",
+                    "attributes": {
+                      "class": "kc-btn-on-image kc-miscellaneous-map__expand",
+                      "href": "https://commons.wikimedia.org/wiki/File:New_Delhi_map_no_titles.png",
+                      "aria-label": "Open map of New Delhi"
+                    },
+                    "children": [
+                      {
+                        "tag": "img",
+                        "attributes": {
+                          "src": "../assets/icons/ic_fluent_arrow_maximize_20_regular.svg",
+                          "alt": true,
+                          "aria-hidden": "true"
+                        },
+                        "children": []
+                      }
+                    ]
+                  },
+                  "\n              ",
+                  {
+                    "tag": "span",
+                    "attributes": {
+                      "class": "kc-miscellaneous-map__credit"
+                    },
+                    "children": [
+                      {
+                        "tag": "a",
+                        "attributes": {
+                          "href": "https://commons.wikimedia.org/wiki/File:New_Delhi_map_no_titles.png"
+                        },
+                        "children": [
+                          "Winston Samuel"
+                        ]
+                      },
+                      " · ",
+                      {
+                        "tag": "a",
+                        "attributes": {
+                          "href": "https://www.openstreetmap.org/copyright"
+                        },
+                        "children": [
+                          "© OpenStreetMap contributors"
+                        ]
+                      },
+                      " · ",
+                      {
+                        "tag": "a",
+                        "attributes": {
+                          "href": "https://creativecommons.org/licenses/by-sa/4.0/"
+                        },
+                        "children": [
+                          "CC BY-SA 4.0"
+                        ]
+                      }
+                    ]
+                  },
+                  "\n            "
+                ]
+              },
+              "\n          "
+            ]
+          }
         },
         {
           "type": "places-to-visit",
@@ -3592,7 +3971,179 @@ window.KC_ENTITIES = {
           ],
           "images": [],
           "slots": [],
-          "seeMore": true
+          "seeMore": true,
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": "kc-module kc-module--mobile kc-mobile-miscellaneous-timeline",
+                "id": "kc-country-mobile-mod-7",
+                "data-kc": "Mobile / Miscellaneous / Timeline",
+                "aria-label": "India timeline"
+              }
+            },
+            "content": [
+              "\n              ",
+              {
+                "tag": "ol",
+                "attributes": {
+                  "class": "kc-mobile-miscellaneous-timeline__list",
+                  "style": "list-style:none;padding:0;margin:0"
+                },
+                "children": [
+                  "\n                ",
+                  {
+                    "tag": "li",
+                    "attributes": {
+                      "class": "kc-mobile-miscellaneous-timeline__entry"
+                    },
+                    "children": [
+                      "\n                  ",
+                      {
+                        "tag": "span",
+                        "attributes": {
+                          "class": "kc-mobile-miscellaneous-timeline__rail",
+                          "aria-hidden": "true"
+                        },
+                        "children": []
+                      },
+                      "\n                  ",
+                      {
+                        "tag": "div",
+                        "attributes": {
+                          "class": "kc-mobile-miscellaneous-timeline__content"
+                        },
+                        "children": [
+                          "\n                    ",
+                          {
+                            "tag": "strong",
+                            "attributes": {
+                              "class": "kc-mobile-miscellaneous-timeline__year"
+                            },
+                            "children": [
+                              "1857"
+                            ]
+                          },
+                          "\n                    ",
+                          {
+                            "tag": "p",
+                            "attributes": {
+                              "class": "kc-mobile-miscellaneous-timeline__quote"
+                            },
+                            "children": [
+                              "Last Mughal Emperor Bahadur Shah Zafar was deposed by British East India Company and India transferred to British Crown."
+                            ]
+                          },
+                          "\n                  "
+                        ]
+                      },
+                      "\n                "
+                    ]
+                  },
+                  "\n                ",
+                  {
+                    "tag": "li",
+                    "attributes": {
+                      "class": "kc-mobile-miscellaneous-timeline__entry"
+                    },
+                    "children": [
+                      "\n                  ",
+                      {
+                        "tag": "span",
+                        "attributes": {
+                          "class": "kc-mobile-miscellaneous-timeline__rail",
+                          "aria-hidden": "true"
+                        },
+                        "children": []
+                      },
+                      "\n                  ",
+                      {
+                        "tag": "div",
+                        "attributes": {
+                          "class": "kc-mobile-miscellaneous-timeline__content"
+                        },
+                        "children": [
+                          "\n                    ",
+                          {
+                            "tag": "strong",
+                            "attributes": {
+                              "class": "kc-mobile-miscellaneous-timeline__year"
+                            },
+                            "children": [
+                              "1947"
+                            ]
+                          },
+                          "\n                    ",
+                          {
+                            "tag": "p",
+                            "attributes": {
+                              "class": "kc-mobile-miscellaneous-timeline__quote"
+                            },
+                            "children": [
+                              "Indian Independence Act is an Act of the Parliament of the United Kingdom that partitioned British India into the two new independent dominions of India and Pakistan"
+                            ]
+                          },
+                          "\n                  "
+                        ]
+                      },
+                      "\n                "
+                    ]
+                  },
+                  "\n                ",
+                  {
+                    "tag": "li",
+                    "attributes": {
+                      "class": "kc-mobile-miscellaneous-timeline__entry"
+                    },
+                    "children": [
+                      "\n                  ",
+                      {
+                        "tag": "span",
+                        "attributes": {
+                          "class": "kc-mobile-miscellaneous-timeline__rail",
+                          "aria-hidden": "true"
+                        },
+                        "children": []
+                      },
+                      "\n                  ",
+                      {
+                        "tag": "div",
+                        "attributes": {
+                          "class": "kc-mobile-miscellaneous-timeline__content"
+                        },
+                        "children": [
+                          "\n                    ",
+                          {
+                            "tag": "strong",
+                            "attributes": {
+                              "class": "kc-mobile-miscellaneous-timeline__year"
+                            },
+                            "children": [
+                              "1950"
+                            ]
+                          },
+                          "\n                    ",
+                          {
+                            "tag": "p",
+                            "attributes": {
+                              "class": "kc-mobile-miscellaneous-timeline__quote"
+                            },
+                            "children": [
+                              "India became a republic nation."
+                            ]
+                          },
+                          "\n                  "
+                        ]
+                      },
+                      "\n                "
+                    ]
+                  },
+                  "\n              "
+                ]
+              },
+              "\n            "
+            ]
+          }
         },
         {
           "type": "attribution",
@@ -4019,7 +4570,71 @@ window.KC_ENTITIES = {
               "alt": "Map showing Idaho and surrounding states"
             }
           ],
-          "slots": []
+          "slots": [],
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": "kc-module kc-miscellaneous-map",
+                "id": "kc-state-mod-2",
+                "data-kc": "Miscellaneous / Map",
+                "aria-label": "Map"
+              }
+            },
+            "content": [
+              {
+                "tag": "div",
+                "attributes": {
+                  "class": "kc-miscellaneous-map__frame"
+                },
+                "children": [
+                  {
+                    "tag": "img",
+                    "attributes": {
+                      "src": "../assets/images/kc/modules/state/state-desktop-top-fact-map-01.png",
+                      "alt": "Map showing Idaho and surrounding states",
+                      "onerror": "this.style.display='none'"
+                    },
+                    "children": []
+                  },
+                  {
+                    "tag": "button",
+                    "attributes": {
+                      "type": "button",
+                      "class": "kc-btn-on-image kc-miscellaneous-map__expand",
+                      "aria-label": "Expand map"
+                    },
+                    "children": [
+                      {
+                        "tag": "svg",
+                        "attributes": {
+                          "aria-hidden": "true",
+                          "focusable": "false",
+                          "width": "20",
+                          "height": "20",
+                          "viewBox": "0 0 20 20",
+                          "fill": "none",
+                          "xmlns": "http://www.w3.org/2000/svg"
+                        },
+                        "children": [
+                          "\n",
+                          {
+                            "tag": "path",
+                            "attributes": {
+                              "d": "M15.5 4C15.7761 4 16 4.22386 16 4.5V10.5C16 10.7761 15.7761 11 15.5 11C15.2239 11 15 10.7761 15 10.5V5.70703L5.70703 15H10.5C10.7761 15 11 15.2239 11 15.5C11 15.7761 10.7761 16 10.5 16H4.5C4.22386 16 4 15.7761 4 15.5V9.5C4 9.22386 4.22386 9 4.5 9C4.77614 9 5 9.22386 5 9.5V14.293L14.293 5H9.5C9.22386 5 9 4.77614 9 4.5C9 4.22386 9.22386 4 9.5 4H15.5Z",
+                              "fill": "currentColor"
+                            },
+                            "children": []
+                          },
+                          "\n"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
         },
         {
           "type": "places-to-visit",
@@ -5106,7 +5721,36 @@ window.KC_ENTITIES = {
               "alt": "Map showing Idaho and surrounding states"
             }
           ],
-          "slots": []
+          "slots": [],
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": "kc-module kc-module--mobile kc-mobile-miscellaneous-map",
+                "data-kc": "Mobile / Miscellaneous / Map",
+                "aria-label": "Map"
+              }
+            },
+            "content": [
+              {
+                "tag": "div",
+                "attributes": {
+                  "class": "kc-mobile-miscellaneous-map__frame"
+                },
+                "children": [
+                  {
+                    "tag": "img",
+                    "attributes": {
+                      "src": "../assets/images/kc/modules/state/state-mobile-map-01.png",
+                      "alt": "Map showing Idaho and surrounding states",
+                      "onerror": "this.style.display='none'"
+                    },
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
         },
         {
           "type": "videos-landscape",
@@ -6095,7 +6739,64 @@ window.KC_ENTITIES = {
               "alt": ""
             }
           ],
-          "slots": []
+          "slots": [],
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": "kc-module kc-miscellaneous-map",
+                "id": "kc-city-mod-2",
+                "data-kc": "Miscellaneous / Map",
+                "aria-label": "Map of San Francisco"
+              }
+            },
+            "content": [
+              "\n            ",
+              {
+                "tag": "div",
+                "attributes": {
+                  "class": "kc-miscellaneous-map__frame",
+                  "style": "background-color:var(--kc-placeholder)"
+                },
+                "children": [
+                  "\n              ",
+                  {
+                    "tag": "img",
+                    "attributes": {
+                      "src": "../assets/images/kc/modules/city/city-desktop-top-fact-map-01.png",
+                      "alt": "Map of San Francisco",
+                      "onerror": "this.style.display='none'"
+                    },
+                    "children": []
+                  },
+                  "\n              ",
+                  {
+                    "tag": "button",
+                    "attributes": {
+                      "class": "kc-btn-on-image kc-miscellaneous-map__expand",
+                      "type": "button",
+                      "aria-label": "Expand map of San Francisco"
+                    },
+                    "children": [
+                      "\n                ",
+                      {
+                        "tag": "img",
+                        "attributes": {
+                          "src": "../assets/icons/ic_fluent_arrow_maximize_20_regular.svg",
+                          "alt": true,
+                          "aria-hidden": "true"
+                        },
+                        "children": []
+                      },
+                      "\n              "
+                    ]
+                  },
+                  "\n            "
+                ]
+              },
+              "\n          "
+            ]
+          }
         },
         {
           "type": "travel",
@@ -6120,7 +6821,99 @@ window.KC_ENTITIES = {
               "alt": ""
             }
           ],
-          "slots": []
+          "slots": [],
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": "kc-module kc-miscellaneous-travel",
+                "id": "kc-city-mod-3",
+                "data-kc": "Miscellaneous / Travel",
+                "aria-label": "Travel"
+              }
+            },
+            "content": [
+              "\n            ",
+              {
+                "tag": "a",
+                "attributes": {
+                  "class": "kc-btn-outline kc-miscellaneous-travel__action",
+                  "href": "#"
+                },
+                "children": [
+                  {
+                    "tag": "img",
+                    "attributes": {
+                      "src": "../assets/icons/ic_fluent_book_globe_20_regular.svg",
+                      "alt": true,
+                      "aria-hidden": "true"
+                    },
+                    "children": []
+                  },
+                  {
+                    "tag": "span",
+                    "attributes": {},
+                    "children": [
+                      "Travel guide"
+                    ]
+                  }
+                ]
+              },
+              "\n            ",
+              {
+                "tag": "a",
+                "attributes": {
+                  "class": "kc-btn-outline kc-miscellaneous-travel__action",
+                  "href": "#"
+                },
+                "children": [
+                  {
+                    "tag": "img",
+                    "attributes": {
+                      "src": "../assets/icons/ic_fluent_airplane_20_regular.svg",
+                      "alt": true,
+                      "aria-hidden": "true"
+                    },
+                    "children": []
+                  },
+                  {
+                    "tag": "span",
+                    "attributes": {},
+                    "children": [
+                      "Book flights"
+                    ]
+                  }
+                ]
+              },
+              "\n            ",
+              {
+                "tag": "a",
+                "attributes": {
+                  "class": "kc-btn-outline kc-miscellaneous-travel__action",
+                  "href": "#"
+                },
+                "children": [
+                  {
+                    "tag": "img",
+                    "attributes": {
+                      "src": "../assets/icons/ic_fluent_bed_20_regular.svg",
+                      "alt": true,
+                      "aria-hidden": "true"
+                    },
+                    "children": []
+                  },
+                  {
+                    "tag": "span",
+                    "attributes": {},
+                    "children": [
+                      "Book hotels"
+                    ]
+                  }
+                ]
+              },
+              "\n          "
+            ]
+          }
         },
         {
           "type": "visit-times",
@@ -6147,7 +6940,343 @@ window.KC_ENTITIES = {
               "alt": ""
             }
           ],
-          "slots": []
+          "slots": [],
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": "kc-module kc-miscellaneous-visit-times",
+                "id": "kc-city-mod-4",
+                "data-kc": "Miscellaneous / Visit Times",
+                "aria-label": "Best times to visit"
+              }
+            },
+            "content": [
+              "\n            ",
+              {
+                "tag": "div",
+                "attributes": {
+                  "class": "kc-module-title"
+                },
+                "children": [
+                  {
+                    "tag": "h3",
+                    "attributes": {},
+                    "children": [
+                      "Best times to visit"
+                    ]
+                  },
+                  {
+                    "tag": "a",
+                    "attributes": {
+                      "class": "kc-link",
+                      "href": "#",
+                      "aria-label": "See all Best times to visit"
+                    },
+                    "children": [
+                      {
+                        "tag": "span",
+                        "attributes": {
+                          "class": "kc-title-chevron"
+                        },
+                        "children": [
+                          {
+                            "tag": "img",
+                            "attributes": {
+                              "src": "../assets/icons/ic_fluent_chevron_right_16_regular.svg",
+                              "alt": true,
+                              "aria-hidden": "true"
+                            },
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              "\n            ",
+              {
+                "tag": "div",
+                "attributes": {
+                  "class": "kc-miscellaneous-visit-times__graph",
+                  "role": "img",
+                  "aria-label": "Visit times 2015–2026, highest 2020–2023"
+                },
+                "children": [
+                  "\n              ",
+                  {
+                    "tag": "span",
+                    "attributes": {
+                      "class": "kc-miscellaneous-visit-times__grid",
+                      "style": "top:0px"
+                    },
+                    "children": []
+                  },
+                  "\n              ",
+                  {
+                    "tag": "span",
+                    "attributes": {
+                      "class": "kc-miscellaneous-visit-times__grid",
+                      "style": "top:40px"
+                    },
+                    "children": []
+                  },
+                  "\n              ",
+                  {
+                    "tag": "span",
+                    "attributes": {
+                      "class": "kc-miscellaneous-visit-times__grid",
+                      "style": "top:80px"
+                    },
+                    "children": []
+                  },
+                  "\n              ",
+                  {
+                    "tag": "span",
+                    "attributes": {
+                      "class": "kc-miscellaneous-visit-times__bar",
+                      "style": "left:12px;top:50px;height:29px"
+                    },
+                    "children": []
+                  },
+                  "\n              ",
+                  {
+                    "tag": "span",
+                    "attributes": {
+                      "class": "kc-miscellaneous-visit-times__bar",
+                      "style": "left:48.01px;top:50px;height:29px"
+                    },
+                    "children": []
+                  },
+                  "\n              ",
+                  {
+                    "tag": "span",
+                    "attributes": {
+                      "class": "kc-miscellaneous-visit-times__bar",
+                      "style": "left:84.01px;top:50px;height:29px"
+                    },
+                    "children": []
+                  },
+                  "\n              ",
+                  {
+                    "tag": "span",
+                    "attributes": {
+                      "class": "kc-miscellaneous-visit-times__bar",
+                      "style": "left:120.01px;top:27px;height:52px"
+                    },
+                    "children": []
+                  },
+                  "\n              ",
+                  {
+                    "tag": "span",
+                    "attributes": {
+                      "class": "kc-miscellaneous-visit-times__bar",
+                      "style": "left:156.01px;top:27px;height:52px"
+                    },
+                    "children": []
+                  },
+                  "\n              ",
+                  {
+                    "tag": "span",
+                    "attributes": {
+                      "class": "kc-miscellaneous-visit-times__bar",
+                      "style": "left:192.01px;top:0px;height:79px"
+                    },
+                    "children": []
+                  },
+                  "\n              ",
+                  {
+                    "tag": "span",
+                    "attributes": {
+                      "class": "kc-miscellaneous-visit-times__bar",
+                      "style": "left:228.01px;top:0px;height:79px"
+                    },
+                    "children": []
+                  },
+                  "\n              ",
+                  {
+                    "tag": "span",
+                    "attributes": {
+                      "class": "kc-miscellaneous-visit-times__bar",
+                      "style": "left:264.01px;top:0px;height:79px"
+                    },
+                    "children": []
+                  },
+                  "\n              ",
+                  {
+                    "tag": "span",
+                    "attributes": {
+                      "class": "kc-miscellaneous-visit-times__bar",
+                      "style": "left:300.01px;top:0px;height:79px"
+                    },
+                    "children": []
+                  },
+                  "\n              ",
+                  {
+                    "tag": "span",
+                    "attributes": {
+                      "class": "kc-miscellaneous-visit-times__bar",
+                      "style": "left:336.01px;top:27px;height:52px"
+                    },
+                    "children": []
+                  },
+                  "\n              ",
+                  {
+                    "tag": "span",
+                    "attributes": {
+                      "class": "kc-miscellaneous-visit-times__bar",
+                      "style": "left:372.01px;top:60px;height:19px"
+                    },
+                    "children": []
+                  },
+                  "\n              ",
+                  {
+                    "tag": "span",
+                    "attributes": {
+                      "class": "kc-miscellaneous-visit-times__bar",
+                      "style": "left:408.01px;top:60px;height:19px"
+                    },
+                    "children": []
+                  },
+                  "\n              ",
+                  {
+                    "tag": "span",
+                    "attributes": {
+                      "class": "kc-miscellaneous-visit-times__year",
+                      "style": "left:0px;top:83px"
+                    },
+                    "children": [
+                      "2015"
+                    ]
+                  },
+                  "\n              ",
+                  {
+                    "tag": "span",
+                    "attributes": {
+                      "class": "kc-miscellaneous-visit-times__year",
+                      "style": "left:35.97px;top:83px"
+                    },
+                    "children": [
+                      "2016"
+                    ]
+                  },
+                  "\n              ",
+                  {
+                    "tag": "span",
+                    "attributes": {
+                      "class": "kc-miscellaneous-visit-times__year",
+                      "style": "left:71.94px;top:83px"
+                    },
+                    "children": [
+                      "2017"
+                    ]
+                  },
+                  "\n              ",
+                  {
+                    "tag": "span",
+                    "attributes": {
+                      "class": "kc-miscellaneous-visit-times__year",
+                      "style": "left:107.91px;top:83px"
+                    },
+                    "children": [
+                      "2018"
+                    ]
+                  },
+                  "\n              ",
+                  {
+                    "tag": "span",
+                    "attributes": {
+                      "class": "kc-miscellaneous-visit-times__year",
+                      "style": "left:143.88px;top:83px"
+                    },
+                    "children": [
+                      "2019"
+                    ]
+                  },
+                  "\n              ",
+                  {
+                    "tag": "span",
+                    "attributes": {
+                      "class": "kc-miscellaneous-visit-times__year",
+                      "style": "left:179.85px;top:83px"
+                    },
+                    "children": [
+                      "2020"
+                    ]
+                  },
+                  "\n              ",
+                  {
+                    "tag": "span",
+                    "attributes": {
+                      "class": "kc-miscellaneous-visit-times__year",
+                      "style": "left:215.82px;top:83px"
+                    },
+                    "children": [
+                      "2021"
+                    ]
+                  },
+                  "\n              ",
+                  {
+                    "tag": "span",
+                    "attributes": {
+                      "class": "kc-miscellaneous-visit-times__year",
+                      "style": "left:251.79px;top:83px"
+                    },
+                    "children": [
+                      "2022"
+                    ]
+                  },
+                  "\n              ",
+                  {
+                    "tag": "span",
+                    "attributes": {
+                      "class": "kc-miscellaneous-visit-times__year",
+                      "style": "left:287.76px;top:84px"
+                    },
+                    "children": [
+                      "2023"
+                    ]
+                  },
+                  "\n              ",
+                  {
+                    "tag": "span",
+                    "attributes": {
+                      "class": "kc-miscellaneous-visit-times__year",
+                      "style": "left:323.73px;top:84px"
+                    },
+                    "children": [
+                      "2024"
+                    ]
+                  },
+                  "\n              ",
+                  {
+                    "tag": "span",
+                    "attributes": {
+                      "class": "kc-miscellaneous-visit-times__year",
+                      "style": "left:359.7px;top:84px"
+                    },
+                    "children": [
+                      "2025"
+                    ]
+                  },
+                  "\n              ",
+                  {
+                    "tag": "span",
+                    "attributes": {
+                      "class": "kc-miscellaneous-visit-times__year",
+                      "style": "left:395.67px;top:84px"
+                    },
+                    "children": [
+                      "2026"
+                    ]
+                  },
+                  "\n            "
+                ]
+              },
+              "\n          "
+            ]
+          }
         },
         {
           "type": "places-to-visit",
@@ -6934,7 +8063,42 @@ window.KC_ENTITIES = {
               "alt": "Map of San Francisco"
             }
           ],
-          "slots": []
+          "slots": [],
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": "kc-module kc-module--mobile kc-mobile-miscellaneous-map",
+                "id": "kc-city-mobile-map",
+                "data-kc": "Mobile / Miscellaneous / Map",
+                "aria-label": "Map of San Francisco"
+              }
+            },
+            "content": [
+              "\n            ",
+              {
+                "tag": "div",
+                "attributes": {
+                  "class": "kc-mobile-miscellaneous-map__frame",
+                  "style": "background-color:var(--kc-placeholder)"
+                },
+                "children": [
+                  "\n              ",
+                  {
+                    "tag": "img",
+                    "attributes": {
+                      "src": "../assets/images/kc/modules/city/city-mobile-map-01.png",
+                      "alt": "Map of San Francisco",
+                      "onerror": "this.style.display='none'"
+                    },
+                    "children": []
+                  },
+                  "\n            "
+                ]
+              },
+              "\n          "
+            ]
+          }
         },
         {
           "type": "videos-landscape",
@@ -7399,7 +8563,108 @@ window.KC_ENTITIES = {
               "alt": ""
             }
           ],
-          "slots": []
+          "slots": [],
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": "kc-module kc-module--mobile kc-mobile-miscellaneous-travel",
+                "id": "kc-city-mobile-travel",
+                "data-kc": "Mobile / Miscellaneous / Travel",
+                "aria-label": "Travel"
+              }
+            },
+            "content": [
+              "\n            ",
+              {
+                "tag": "a",
+                "attributes": {
+                  "class": "kc-btn-outline kc-mobile-miscellaneous-travel__action",
+                  "href": "#"
+                },
+                "children": [
+                  "\n              ",
+                  {
+                    "tag": "img",
+                    "attributes": {
+                      "src": "../assets/icons/ic_fluent_book_globe_20_regular.svg",
+                      "alt": true,
+                      "aria-hidden": "true"
+                    },
+                    "children": []
+                  },
+                  "\n              ",
+                  {
+                    "tag": "span",
+                    "attributes": {},
+                    "children": [
+                      "Travel guide"
+                    ]
+                  },
+                  "\n            "
+                ]
+              },
+              "\n            ",
+              {
+                "tag": "a",
+                "attributes": {
+                  "class": "kc-btn-outline kc-mobile-miscellaneous-travel__action",
+                  "href": "#"
+                },
+                "children": [
+                  "\n              ",
+                  {
+                    "tag": "img",
+                    "attributes": {
+                      "src": "../assets/icons/ic_fluent_airplane_20_regular.svg",
+                      "alt": true,
+                      "aria-hidden": "true"
+                    },
+                    "children": []
+                  },
+                  "\n              ",
+                  {
+                    "tag": "span",
+                    "attributes": {},
+                    "children": [
+                      "Book flights"
+                    ]
+                  },
+                  "\n            "
+                ]
+              },
+              "\n            ",
+              {
+                "tag": "a",
+                "attributes": {
+                  "class": "kc-btn-outline kc-mobile-miscellaneous-travel__action",
+                  "href": "#"
+                },
+                "children": [
+                  "\n              ",
+                  {
+                    "tag": "img",
+                    "attributes": {
+                      "src": "../assets/icons/ic_fluent_bed_20_regular.svg",
+                      "alt": true,
+                      "aria-hidden": "true"
+                    },
+                    "children": []
+                  },
+                  "\n              ",
+                  {
+                    "tag": "span",
+                    "attributes": {},
+                    "children": [
+                      "Book hotels"
+                    ]
+                  },
+                  "\n            "
+                ]
+              },
+              "\n          "
+            ]
+          }
         },
         {
           "type": "visit-times",
@@ -7416,7 +8681,229 @@ window.KC_ENTITIES = {
             "2024"
           ],
           "images": [],
-          "slots": []
+          "slots": [],
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": "kc-module kc-module--mobile kc-mobile-miscellaneous-visit-times",
+                "id": "kc-city-mobile-visit",
+                "data-kc": "Mobile / Miscellaneous / Visit Times",
+                "aria-label": "Best times to visit"
+              }
+            },
+            "content": [
+              "\n            ",
+              {
+                "tag": "div",
+                "attributes": {
+                  "class": "kc-module-title"
+                },
+                "children": [
+                  {
+                    "tag": "h3",
+                    "attributes": {},
+                    "children": [
+                      "Best Times to Visit"
+                    ]
+                  }
+                ]
+              },
+              "\n            ",
+              {
+                "tag": "div",
+                "attributes": {
+                  "class": "kc-mobile-miscellaneous-visit-times__graph",
+                  "role": "img",
+                  "aria-label": "Visit times 2018–2024, highest 2021–2024"
+                },
+                "children": [
+                  "\n              ",
+                  {
+                    "tag": "span",
+                    "attributes": {
+                      "class": "kc-mobile-miscellaneous-visit-times__grid",
+                      "style": "top:0"
+                    },
+                    "children": []
+                  },
+                  "\n              ",
+                  {
+                    "tag": "span",
+                    "attributes": {
+                      "class": "kc-mobile-miscellaneous-visit-times__grid",
+                      "style": "top:40px"
+                    },
+                    "children": []
+                  },
+                  "\n              ",
+                  {
+                    "tag": "span",
+                    "attributes": {
+                      "class": "kc-mobile-miscellaneous-visit-times__grid",
+                      "style": "top:80px"
+                    },
+                    "children": []
+                  },
+                  "\n              ",
+                  {
+                    "tag": "div",
+                    "attributes": {
+                      "class": "kc-mobile-miscellaneous-visit-times__bars"
+                    },
+                    "children": [
+                      "\n                ",
+                      {
+                        "tag": "span",
+                        "attributes": {
+                          "class": "kc-mobile-miscellaneous-visit-times__bar",
+                          "style": "height:52px;opacity:.2"
+                        },
+                        "children": []
+                      },
+                      "\n                ",
+                      {
+                        "tag": "span",
+                        "attributes": {
+                          "class": "kc-mobile-miscellaneous-visit-times__bar",
+                          "style": "height:52px;opacity:.2"
+                        },
+                        "children": []
+                      },
+                      "\n                ",
+                      {
+                        "tag": "span",
+                        "attributes": {
+                          "class": "kc-mobile-miscellaneous-visit-times__bar",
+                          "style": "height:79px;opacity:.2"
+                        },
+                        "children": []
+                      },
+                      "\n                ",
+                      {
+                        "tag": "span",
+                        "attributes": {
+                          "class": "kc-mobile-miscellaneous-visit-times__bar",
+                          "style": "height:79px;opacity:.5"
+                        },
+                        "children": []
+                      },
+                      "\n                ",
+                      {
+                        "tag": "span",
+                        "attributes": {
+                          "class": "kc-mobile-miscellaneous-visit-times__bar",
+                          "style": "height:79px;opacity:.5"
+                        },
+                        "children": []
+                      },
+                      "\n                ",
+                      {
+                        "tag": "span",
+                        "attributes": {
+                          "class": "kc-mobile-miscellaneous-visit-times__bar",
+                          "style": "height:79px"
+                        },
+                        "children": []
+                      },
+                      "\n                ",
+                      {
+                        "tag": "span",
+                        "attributes": {
+                          "class": "kc-mobile-miscellaneous-visit-times__bar",
+                          "style": "height:52px"
+                        },
+                        "children": []
+                      },
+                      "\n              "
+                    ]
+                  },
+                  "\n              ",
+                  {
+                    "tag": "div",
+                    "attributes": {
+                      "class": "kc-mobile-miscellaneous-visit-times__years"
+                    },
+                    "children": [
+                      "\n                ",
+                      {
+                        "tag": "span",
+                        "attributes": {
+                          "class": "kc-mobile-miscellaneous-visit-times__year"
+                        },
+                        "children": [
+                          "2018"
+                        ]
+                      },
+                      "\n                ",
+                      {
+                        "tag": "span",
+                        "attributes": {
+                          "class": "kc-mobile-miscellaneous-visit-times__year"
+                        },
+                        "children": [
+                          "2019"
+                        ]
+                      },
+                      "\n                ",
+                      {
+                        "tag": "span",
+                        "attributes": {
+                          "class": "kc-mobile-miscellaneous-visit-times__year"
+                        },
+                        "children": [
+                          "2020"
+                        ]
+                      },
+                      "\n                ",
+                      {
+                        "tag": "span",
+                        "attributes": {
+                          "class": "kc-mobile-miscellaneous-visit-times__year"
+                        },
+                        "children": [
+                          "2021"
+                        ]
+                      },
+                      "\n                ",
+                      {
+                        "tag": "span",
+                        "attributes": {
+                          "class": "kc-mobile-miscellaneous-visit-times__year"
+                        },
+                        "children": [
+                          "2022"
+                        ]
+                      },
+                      "\n                ",
+                      {
+                        "tag": "span",
+                        "attributes": {
+                          "class": "kc-mobile-miscellaneous-visit-times__year"
+                        },
+                        "children": [
+                          "2023"
+                        ]
+                      },
+                      "\n                ",
+                      {
+                        "tag": "span",
+                        "attributes": {
+                          "class": "kc-mobile-miscellaneous-visit-times__year"
+                        },
+                        "children": [
+                          "2024"
+                        ]
+                      },
+                      "\n              "
+                    ]
+                  },
+                  "\n            "
+                ]
+              },
+              "\n          "
+            ]
+          }
         },
         {
           "type": "attribution",
@@ -17081,7 +18568,179 @@ window.KC_ENTITIES = {
             "% Daily value*"
           ],
           "images": [],
-          "slots": []
+          "slots": [],
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": "kc-module kc-miscellaneous-serving-size",
+                "id": "kc-food-mod-1",
+                "data-kc": "Miscellaneous / Serving Size",
+                "aria-label": "Serving size"
+              }
+            },
+            "content": [
+              "\n            ",
+              {
+                "tag": "strong",
+                "attributes": {
+                  "class": "kc-miscellaneous-serving-size__label"
+                },
+                "children": [
+                  "Serving Size: Food (size)"
+                ]
+              },
+              "\n            ",
+              {
+                "tag": "div",
+                "attributes": {
+                  "class": "kc-miscellaneous-serving-size__content"
+                },
+                "children": [
+                  "\n              ",
+                  {
+                    "tag": "div",
+                    "attributes": {
+                      "class": "kc-miscellaneous-serving-size__circles"
+                    },
+                    "children": [
+                      "\n                ",
+                      {
+                        "tag": "div",
+                        "attributes": {
+                          "class": "kc-miscellaneous-serving-size__circle"
+                        },
+                        "children": [
+                          {
+                            "tag": "span",
+                            "attributes": {
+                              "class": "kc-copy-bold"
+                            },
+                            "children": [
+                              "Calories"
+                            ]
+                          },
+                          {
+                            "tag": "strong",
+                            "attributes": {},
+                            "children": [
+                              "000"
+                            ]
+                          }
+                        ]
+                      },
+                      "\n                ",
+                      {
+                        "tag": "div",
+                        "attributes": {
+                          "class": "kc-miscellaneous-serving-size__circle"
+                        },
+                        "children": [
+                          {
+                            "tag": "span",
+                            "attributes": {
+                              "class": "kc-copy-bold"
+                            },
+                            "children": [
+                              "Fat"
+                            ]
+                          },
+                          {
+                            "tag": "strong",
+                            "attributes": {},
+                            "children": [
+                              "000"
+                            ]
+                          }
+                        ]
+                      },
+                      "\n                ",
+                      {
+                        "tag": "div",
+                        "attributes": {
+                          "class": "kc-miscellaneous-serving-size__circle"
+                        },
+                        "children": [
+                          {
+                            "tag": "span",
+                            "attributes": {
+                              "class": "kc-copy-bold"
+                            },
+                            "children": [
+                              "Carbs"
+                            ]
+                          },
+                          {
+                            "tag": "strong",
+                            "attributes": {},
+                            "children": [
+                              "000"
+                            ]
+                          },
+                          {
+                            "tag": "span",
+                            "attributes": {
+                              "class": "kc-copy-small"
+                            },
+                            "children": [
+                              "XX%"
+                            ]
+                          }
+                        ]
+                      },
+                      "\n                ",
+                      {
+                        "tag": "div",
+                        "attributes": {
+                          "class": "kc-miscellaneous-serving-size__circle"
+                        },
+                        "children": [
+                          {
+                            "tag": "span",
+                            "attributes": {
+                              "class": "kc-copy-bold"
+                            },
+                            "children": [
+                              "Sugar"
+                            ]
+                          },
+                          {
+                            "tag": "strong",
+                            "attributes": {},
+                            "children": [
+                              "000"
+                            ]
+                          },
+                          {
+                            "tag": "span",
+                            "attributes": {
+                              "class": "kc-copy-small"
+                            },
+                            "children": [
+                              "XX%"
+                            ]
+                          }
+                        ]
+                      },
+                      "\n              "
+                    ]
+                  },
+                  "\n              ",
+                  {
+                    "tag": "span",
+                    "attributes": {
+                      "class": "kc-miscellaneous-serving-size__foot"
+                    },
+                    "children": [
+                      "% Daily value*"
+                    ]
+                  },
+                  "\n            "
+                ]
+              },
+              "\n          "
+            ]
+          }
         },
         {
           "type": "interesting-facts",
@@ -17802,7 +19461,189 @@ window.KC_ENTITIES = {
             "% Daily value*"
           ],
           "images": [],
-          "slots": []
+          "slots": [],
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": "kc-module kc-module--mobile kc-mobile-miscellaneous-serving-size",
+                "id": "kc-food-mobile-serving",
+                "data-kc": "Mobile / Miscellaneous / Serving Size",
+                "aria-labelledby": "kc-food-mobile-serving-title"
+              }
+            },
+            "content": [
+              "\n            ",
+              {
+                "tag": "div",
+                "attributes": {
+                  "class": "kc-module-title"
+                },
+                "children": [
+                  "\n              ",
+                  {
+                    "tag": "h3",
+                    "attributes": {
+                      "id": "kc-food-mobile-serving-title"
+                    },
+                    "children": [
+                      "Serving Size: Food (100g)"
+                    ]
+                  },
+                  "\n            "
+                ]
+              },
+              "\n            ",
+              {
+                "tag": "div",
+                "attributes": {
+                  "class": "kc-mobile-miscellaneous-serving-size__content"
+                },
+                "children": [
+                  "\n              ",
+                  {
+                    "tag": "div",
+                    "attributes": {
+                      "class": "kc-mobile-miscellaneous-serving-size__circles kc-theme-red-2"
+                    },
+                    "children": [
+                      "\n                ",
+                      {
+                        "tag": "div",
+                        "attributes": {
+                          "class": "kc-mobile-miscellaneous-serving-size__circle"
+                        },
+                        "children": [
+                          {
+                            "tag": "span",
+                            "attributes": {
+                              "class": "kc-m-bold"
+                            },
+                            "children": [
+                              "Calories"
+                            ]
+                          },
+                          {
+                            "tag": "strong",
+                            "attributes": {},
+                            "children": [
+                              "000"
+                            ]
+                          }
+                        ]
+                      },
+                      "\n                ",
+                      {
+                        "tag": "div",
+                        "attributes": {
+                          "class": "kc-mobile-miscellaneous-serving-size__circle"
+                        },
+                        "children": [
+                          {
+                            "tag": "span",
+                            "attributes": {
+                              "class": "kc-m-bold"
+                            },
+                            "children": [
+                              "Fat"
+                            ]
+                          },
+                          {
+                            "tag": "strong",
+                            "attributes": {},
+                            "children": [
+                              "000"
+                            ]
+                          }
+                        ]
+                      },
+                      "\n                ",
+                      {
+                        "tag": "div",
+                        "attributes": {
+                          "class": "kc-mobile-miscellaneous-serving-size__circle"
+                        },
+                        "children": [
+                          {
+                            "tag": "span",
+                            "attributes": {
+                              "class": "kc-m-bold"
+                            },
+                            "children": [
+                              "Carbs"
+                            ]
+                          },
+                          {
+                            "tag": "strong",
+                            "attributes": {},
+                            "children": [
+                              "000"
+                            ]
+                          },
+                          {
+                            "tag": "span",
+                            "attributes": {
+                              "class": "kc-m-foot"
+                            },
+                            "children": [
+                              "XX%"
+                            ]
+                          }
+                        ]
+                      },
+                      "\n                ",
+                      {
+                        "tag": "div",
+                        "attributes": {
+                          "class": "kc-mobile-miscellaneous-serving-size__circle"
+                        },
+                        "children": [
+                          {
+                            "tag": "span",
+                            "attributes": {
+                              "class": "kc-m-bold"
+                            },
+                            "children": [
+                              "Sugar"
+                            ]
+                          },
+                          {
+                            "tag": "strong",
+                            "attributes": {},
+                            "children": [
+                              "000"
+                            ]
+                          },
+                          {
+                            "tag": "span",
+                            "attributes": {
+                              "class": "kc-m-foot"
+                            },
+                            "children": [
+                              "XX%"
+                            ]
+                          }
+                        ]
+                      },
+                      "\n              "
+                    ]
+                  },
+                  "\n              ",
+                  {
+                    "tag": "span",
+                    "attributes": {
+                      "class": "kc-mobile-miscellaneous-serving-size__foot"
+                    },
+                    "children": [
+                      "% Daily value*"
+                    ]
+                  },
+                  "\n            "
+                ]
+              },
+              "\n          "
+            ]
+          }
         },
         {
           "type": "interesting-facts",
@@ -18394,7 +20235,179 @@ window.KC_ENTITIES = {
             "% Daily value*"
           ],
           "images": [],
-          "slots": []
+          "slots": [],
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": "kc-module kc-miscellaneous-serving-size",
+                "id": "kc-ingredient-mod-1",
+                "data-kc": "Miscellaneous / Serving Size",
+                "aria-label": "Serving size"
+              }
+            },
+            "content": [
+              "\n            ",
+              {
+                "tag": "strong",
+                "attributes": {
+                  "class": "kc-miscellaneous-serving-size__label"
+                },
+                "children": [
+                  "Serving Size: Food (size)"
+                ]
+              },
+              "\n            ",
+              {
+                "tag": "div",
+                "attributes": {
+                  "class": "kc-miscellaneous-serving-size__content"
+                },
+                "children": [
+                  "\n              ",
+                  {
+                    "tag": "div",
+                    "attributes": {
+                      "class": "kc-miscellaneous-serving-size__circles"
+                    },
+                    "children": [
+                      "\n                ",
+                      {
+                        "tag": "div",
+                        "attributes": {
+                          "class": "kc-miscellaneous-serving-size__circle"
+                        },
+                        "children": [
+                          {
+                            "tag": "span",
+                            "attributes": {
+                              "class": "kc-copy-bold"
+                            },
+                            "children": [
+                              "Title"
+                            ]
+                          },
+                          {
+                            "tag": "strong",
+                            "attributes": {},
+                            "children": [
+                              "000"
+                            ]
+                          }
+                        ]
+                      },
+                      "\n                ",
+                      {
+                        "tag": "div",
+                        "attributes": {
+                          "class": "kc-miscellaneous-serving-size__circle"
+                        },
+                        "children": [
+                          {
+                            "tag": "span",
+                            "attributes": {
+                              "class": "kc-copy-bold"
+                            },
+                            "children": [
+                              "Title"
+                            ]
+                          },
+                          {
+                            "tag": "strong",
+                            "attributes": {},
+                            "children": [
+                              "000"
+                            ]
+                          },
+                          {
+                            "tag": "span",
+                            "attributes": {
+                              "class": "kc-copy-small"
+                            },
+                            "children": [
+                              "XX%"
+                            ]
+                          }
+                        ]
+                      },
+                      "\n                ",
+                      {
+                        "tag": "div",
+                        "attributes": {
+                          "class": "kc-miscellaneous-serving-size__circle"
+                        },
+                        "children": [
+                          {
+                            "tag": "span",
+                            "attributes": {
+                              "class": "kc-copy-bold"
+                            },
+                            "children": [
+                              "Title"
+                            ]
+                          },
+                          {
+                            "tag": "strong",
+                            "attributes": {},
+                            "children": [
+                              "000"
+                            ]
+                          }
+                        ]
+                      },
+                      "\n                ",
+                      {
+                        "tag": "div",
+                        "attributes": {
+                          "class": "kc-miscellaneous-serving-size__circle"
+                        },
+                        "children": [
+                          {
+                            "tag": "span",
+                            "attributes": {
+                              "class": "kc-copy-bold"
+                            },
+                            "children": [
+                              "Title"
+                            ]
+                          },
+                          {
+                            "tag": "strong",
+                            "attributes": {},
+                            "children": [
+                              "000"
+                            ]
+                          },
+                          {
+                            "tag": "span",
+                            "attributes": {
+                              "class": "kc-copy-small"
+                            },
+                            "children": [
+                              "XX%"
+                            ]
+                          }
+                        ]
+                      },
+                      "\n              "
+                    ]
+                  },
+                  "\n              ",
+                  {
+                    "tag": "span",
+                    "attributes": {
+                      "class": "kc-miscellaneous-serving-size__foot"
+                    },
+                    "children": [
+                      "% Daily value*"
+                    ]
+                  },
+                  "\n            "
+                ]
+              },
+              "\n          "
+            ]
+          }
         },
         {
           "type": "interesting-facts",
@@ -19142,7 +21155,201 @@ window.KC_ENTITIES = {
             "% Daily value*"
           ],
           "images": [],
-          "slots": []
+          "slots": [],
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": "kc-module kc-module--mobile kc-mobile-miscellaneous-serving-size",
+                "id": "kc-ingredient-mobile-serving-size",
+                "data-kc": "Mobile / Miscellaneous / Serving Size",
+                "aria-labelledby": "kc-ingredient-mobile-serving-title"
+              }
+            },
+            "content": [
+              "\n            ",
+              {
+                "tag": "div",
+                "attributes": {
+                  "class": "kc-module-title"
+                },
+                "children": [
+                  {
+                    "tag": "h3",
+                    "attributes": {
+                      "id": "kc-ingredient-mobile-serving-title"
+                    },
+                    "children": [
+                      "Serving Size: Food (100g)"
+                    ]
+                  }
+                ]
+              },
+              "\n            ",
+              {
+                "tag": "div",
+                "attributes": {
+                  "class": "kc-mobile-miscellaneous-serving-size__content"
+                },
+                "children": [
+                  "\n              ",
+                  {
+                    "tag": "div",
+                    "attributes": {
+                      "class": "kc-mobile-miscellaneous-serving-size__circles"
+                    },
+                    "children": [
+                      "\n                ",
+                      {
+                        "tag": "div",
+                        "attributes": {
+                          "class": "kc-mobile-miscellaneous-serving-size__circle"
+                        },
+                        "children": [
+                          "\n                  ",
+                          {
+                            "tag": "span",
+                            "attributes": {
+                              "class": "kc-m-bold"
+                            },
+                            "children": [
+                              "Title"
+                            ]
+                          },
+                          "\n                  ",
+                          {
+                            "tag": "strong",
+                            "attributes": {},
+                            "children": [
+                              "000"
+                            ]
+                          },
+                          "\n                "
+                        ]
+                      },
+                      "\n                ",
+                      {
+                        "tag": "div",
+                        "attributes": {
+                          "class": "kc-mobile-miscellaneous-serving-size__circle"
+                        },
+                        "children": [
+                          "\n                  ",
+                          {
+                            "tag": "span",
+                            "attributes": {
+                              "class": "kc-m-bold"
+                            },
+                            "children": [
+                              "Title"
+                            ]
+                          },
+                          "\n                  ",
+                          {
+                            "tag": "strong",
+                            "attributes": {},
+                            "children": [
+                              "000"
+                            ]
+                          },
+                          "\n                  ",
+                          {
+                            "tag": "span",
+                            "attributes": {
+                              "class": "kc-m-foot"
+                            },
+                            "children": [
+                              "XX%"
+                            ]
+                          },
+                          "\n                "
+                        ]
+                      },
+                      "\n                ",
+                      {
+                        "tag": "div",
+                        "attributes": {
+                          "class": "kc-mobile-miscellaneous-serving-size__circle"
+                        },
+                        "children": [
+                          "\n                  ",
+                          {
+                            "tag": "span",
+                            "attributes": {
+                              "class": "kc-m-bold"
+                            },
+                            "children": [
+                              "Title"
+                            ]
+                          },
+                          "\n                  ",
+                          {
+                            "tag": "strong",
+                            "attributes": {},
+                            "children": [
+                              "000"
+                            ]
+                          },
+                          "\n                "
+                        ]
+                      },
+                      "\n                ",
+                      {
+                        "tag": "div",
+                        "attributes": {
+                          "class": "kc-mobile-miscellaneous-serving-size__circle"
+                        },
+                        "children": [
+                          "\n                  ",
+                          {
+                            "tag": "span",
+                            "attributes": {
+                              "class": "kc-m-bold"
+                            },
+                            "children": [
+                              "Title"
+                            ]
+                          },
+                          "\n                  ",
+                          {
+                            "tag": "strong",
+                            "attributes": {},
+                            "children": [
+                              "000"
+                            ]
+                          },
+                          "\n                  ",
+                          {
+                            "tag": "span",
+                            "attributes": {
+                              "class": "kc-m-foot"
+                            },
+                            "children": [
+                              "XX%"
+                            ]
+                          },
+                          "\n                "
+                        ]
+                      },
+                      "\n              "
+                    ]
+                  },
+                  "\n              ",
+                  {
+                    "tag": "span",
+                    "attributes": {
+                      "class": "kc-mobile-miscellaneous-serving-size__foot"
+                    },
+                    "children": [
+                      "% Daily value*"
+                    ]
+                  },
+                  "\n            "
+                ]
+              },
+              "\n          "
+            ]
+          }
         },
         {
           "type": "interesting-facts",
@@ -20576,7 +22783,219 @@ window.KC_ENTITIES = {
             "Juno arrives at Jupiter."
           ],
           "images": [],
-          "slots": []
+          "slots": [],
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": "kc-module kc-miscellaneous-timeline",
+                "id": "kc-planet-desktop-mod-timeline",
+                "data-kc": "Miscellaneous / Timeline",
+                "aria-label": "Jupiter timeline"
+              }
+            },
+            "content": [
+              "\n            ",
+              {
+                "tag": "div",
+                "attributes": {
+                  "class": "kc-module-title kc-module-title--no-chevron"
+                },
+                "children": [
+                  {
+                    "tag": "h3",
+                    "attributes": {},
+                    "children": [
+                      "Timeline"
+                    ]
+                  }
+                ]
+              },
+              "\n            ",
+              {
+                "tag": "ol",
+                "attributes": {
+                  "class": "kc-miscellaneous-timeline__list"
+                },
+                "children": [
+                  "\n              ",
+                  {
+                    "tag": "li",
+                    "attributes": {
+                      "class": "kc-miscellaneous-timeline__entry"
+                    },
+                    "children": [
+                      {
+                        "tag": "span",
+                        "attributes": {
+                          "class": "kc-miscellaneous-timeline__rail",
+                          "aria-hidden": "true"
+                        },
+                        "children": []
+                      },
+                      {
+                        "tag": "div",
+                        "attributes": {
+                          "class": "kc-miscellaneous-timeline__content"
+                        },
+                        "children": [
+                          {
+                            "tag": "strong",
+                            "attributes": {
+                              "class": "kc-miscellaneous-timeline__year"
+                            },
+                            "children": [
+                              "1610"
+                            ]
+                          },
+                          {
+                            "tag": "p",
+                            "attributes": {
+                              "class": "kc-miscellaneous-timeline__quote"
+                            },
+                            "children": [
+                              "Galileo spots Jupiter's four largest moons."
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "\n              ",
+                  {
+                    "tag": "li",
+                    "attributes": {
+                      "class": "kc-miscellaneous-timeline__entry"
+                    },
+                    "children": [
+                      {
+                        "tag": "span",
+                        "attributes": {
+                          "class": "kc-miscellaneous-timeline__rail",
+                          "aria-hidden": "true"
+                        },
+                        "children": []
+                      },
+                      {
+                        "tag": "div",
+                        "attributes": {
+                          "class": "kc-miscellaneous-timeline__content"
+                        },
+                        "children": [
+                          {
+                            "tag": "strong",
+                            "attributes": {
+                              "class": "kc-miscellaneous-timeline__year"
+                            },
+                            "children": [
+                              "1979"
+                            ]
+                          },
+                          {
+                            "tag": "p",
+                            "attributes": {
+                              "class": "kc-miscellaneous-timeline__quote"
+                            },
+                            "children": [
+                              "Voyager 1 and 2 fly by Jupiter."
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "\n              ",
+                  {
+                    "tag": "li",
+                    "attributes": {
+                      "class": "kc-miscellaneous-timeline__entry"
+                    },
+                    "children": [
+                      {
+                        "tag": "span",
+                        "attributes": {
+                          "class": "kc-miscellaneous-timeline__rail",
+                          "aria-hidden": "true"
+                        },
+                        "children": []
+                      },
+                      {
+                        "tag": "div",
+                        "attributes": {
+                          "class": "kc-miscellaneous-timeline__content"
+                        },
+                        "children": [
+                          {
+                            "tag": "strong",
+                            "attributes": {
+                              "class": "kc-miscellaneous-timeline__year"
+                            },
+                            "children": [
+                              "1995"
+                            ]
+                          },
+                          {
+                            "tag": "p",
+                            "attributes": {
+                              "class": "kc-miscellaneous-timeline__quote"
+                            },
+                            "children": [
+                              "Galileo probe enters Jupiter's atmosphere."
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "\n              ",
+                  {
+                    "tag": "li",
+                    "attributes": {
+                      "class": "kc-miscellaneous-timeline__entry"
+                    },
+                    "children": [
+                      {
+                        "tag": "span",
+                        "attributes": {
+                          "class": "kc-miscellaneous-timeline__rail",
+                          "aria-hidden": "true"
+                        },
+                        "children": []
+                      },
+                      {
+                        "tag": "div",
+                        "attributes": {
+                          "class": "kc-miscellaneous-timeline__content"
+                        },
+                        "children": [
+                          {
+                            "tag": "strong",
+                            "attributes": {
+                              "class": "kc-miscellaneous-timeline__year"
+                            },
+                            "children": [
+                              "2016"
+                            ]
+                          },
+                          {
+                            "tag": "p",
+                            "attributes": {
+                              "class": "kc-miscellaneous-timeline__quote"
+                            },
+                            "children": [
+                              "Juno arrives at Jupiter."
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "\n            "
+                ]
+              },
+              "\n          "
+            ]
+          }
         },
         {
           "type": "attributions",
@@ -21718,7 +24137,227 @@ window.KC_ENTITIES = {
             "Juno arrives at Jupiter."
           ],
           "images": [],
-          "slots": []
+          "slots": [],
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": "kc-module kc-module--mobile kc-mobile-miscellaneous-timeline",
+                "id": "kc-planet-mobile-timeline",
+                "data-kc": "Mobile / Miscellaneous / Timeline",
+                "aria-label": "Jupiter timeline"
+              }
+            },
+            "content": [
+              "\n            ",
+              {
+                "tag": "ol",
+                "attributes": {
+                  "class": "kc-mobile-miscellaneous-timeline__list"
+                },
+                "children": [
+                  "\n              ",
+                  {
+                    "tag": "li",
+                    "attributes": {
+                      "class": "kc-mobile-miscellaneous-timeline__entry"
+                    },
+                    "children": [
+                      "\n                ",
+                      {
+                        "tag": "span",
+                        "attributes": {
+                          "class": "kc-mobile-miscellaneous-timeline__rail",
+                          "aria-hidden": "true"
+                        },
+                        "children": []
+                      },
+                      "\n                ",
+                      {
+                        "tag": "div",
+                        "attributes": {
+                          "class": "kc-mobile-miscellaneous-timeline__content"
+                        },
+                        "children": [
+                          "\n                  ",
+                          {
+                            "tag": "strong",
+                            "attributes": {
+                              "class": "kc-mobile-miscellaneous-timeline__year"
+                            },
+                            "children": [
+                              "1610"
+                            ]
+                          },
+                          "\n                  ",
+                          {
+                            "tag": "p",
+                            "attributes": {
+                              "class": "kc-mobile-miscellaneous-timeline__quote"
+                            },
+                            "children": [
+                              "Galileo spots Jupiter's four largest moons."
+                            ]
+                          },
+                          "\n                "
+                        ]
+                      },
+                      "\n              "
+                    ]
+                  },
+                  "\n              ",
+                  {
+                    "tag": "li",
+                    "attributes": {
+                      "class": "kc-mobile-miscellaneous-timeline__entry"
+                    },
+                    "children": [
+                      "\n                ",
+                      {
+                        "tag": "span",
+                        "attributes": {
+                          "class": "kc-mobile-miscellaneous-timeline__rail",
+                          "aria-hidden": "true"
+                        },
+                        "children": []
+                      },
+                      "\n                ",
+                      {
+                        "tag": "div",
+                        "attributes": {
+                          "class": "kc-mobile-miscellaneous-timeline__content"
+                        },
+                        "children": [
+                          "\n                  ",
+                          {
+                            "tag": "strong",
+                            "attributes": {
+                              "class": "kc-mobile-miscellaneous-timeline__year"
+                            },
+                            "children": [
+                              "1979"
+                            ]
+                          },
+                          "\n                  ",
+                          {
+                            "tag": "p",
+                            "attributes": {
+                              "class": "kc-mobile-miscellaneous-timeline__quote"
+                            },
+                            "children": [
+                              "Voyager 1 and 2 fly by Jupiter."
+                            ]
+                          },
+                          "\n                "
+                        ]
+                      },
+                      "\n              "
+                    ]
+                  },
+                  "\n              ",
+                  {
+                    "tag": "li",
+                    "attributes": {
+                      "class": "kc-mobile-miscellaneous-timeline__entry"
+                    },
+                    "children": [
+                      "\n                ",
+                      {
+                        "tag": "span",
+                        "attributes": {
+                          "class": "kc-mobile-miscellaneous-timeline__rail",
+                          "aria-hidden": "true"
+                        },
+                        "children": []
+                      },
+                      "\n                ",
+                      {
+                        "tag": "div",
+                        "attributes": {
+                          "class": "kc-mobile-miscellaneous-timeline__content"
+                        },
+                        "children": [
+                          "\n                  ",
+                          {
+                            "tag": "strong",
+                            "attributes": {
+                              "class": "kc-mobile-miscellaneous-timeline__year"
+                            },
+                            "children": [
+                              "1995"
+                            ]
+                          },
+                          "\n                  ",
+                          {
+                            "tag": "p",
+                            "attributes": {
+                              "class": "kc-mobile-miscellaneous-timeline__quote"
+                            },
+                            "children": [
+                              "Galileo probe enters Jupiter's atmosphere."
+                            ]
+                          },
+                          "\n                "
+                        ]
+                      },
+                      "\n              "
+                    ]
+                  },
+                  "\n              ",
+                  {
+                    "tag": "li",
+                    "attributes": {
+                      "class": "kc-mobile-miscellaneous-timeline__entry"
+                    },
+                    "children": [
+                      "\n                ",
+                      {
+                        "tag": "span",
+                        "attributes": {
+                          "class": "kc-mobile-miscellaneous-timeline__rail",
+                          "aria-hidden": "true"
+                        },
+                        "children": []
+                      },
+                      "\n                ",
+                      {
+                        "tag": "div",
+                        "attributes": {
+                          "class": "kc-mobile-miscellaneous-timeline__content"
+                        },
+                        "children": [
+                          "\n                  ",
+                          {
+                            "tag": "strong",
+                            "attributes": {
+                              "class": "kc-mobile-miscellaneous-timeline__year"
+                            },
+                            "children": [
+                              "2016"
+                            ]
+                          },
+                          "\n                  ",
+                          {
+                            "tag": "p",
+                            "attributes": {
+                              "class": "kc-mobile-miscellaneous-timeline__quote"
+                            },
+                            "children": [
+                              "Juno arrives at Jupiter."
+                            ]
+                          },
+                          "\n                "
+                        ]
+                      },
+                      "\n              "
+                    ]
+                  },
+                  "\n            "
+                ]
+              },
+              "\n          "
+            ]
+          }
         },
         {
           "type": "attribution",
@@ -27220,7 +29859,423 @@ window.KC_ENTITIES = {
             "1977"
           ],
           "images": [],
-          "slots": []
+          "slots": [],
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": "kc-module kc-miscellaneous-timeline",
+                "id": "kc-company-mod-6",
+                "data-kc": "Miscellaneous / Timeline",
+                "aria-label": "Microsoft timeline"
+              }
+            },
+            "content": [
+              "\n            ",
+              {
+                "tag": "ol",
+                "attributes": {
+                  "class": "kc-miscellaneous-timeline__list"
+                },
+                "children": [
+                  "\n              ",
+                  {
+                    "tag": "li",
+                    "attributes": {
+                      "class": "kc-miscellaneous-timeline__entry"
+                    },
+                    "children": [
+                      "\n                ",
+                      {
+                        "tag": "span",
+                        "attributes": {
+                          "class": "kc-miscellaneous-timeline__rail",
+                          "aria-hidden": "true"
+                        },
+                        "children": []
+                      },
+                      "\n                ",
+                      {
+                        "tag": "div",
+                        "attributes": {
+                          "class": "kc-miscellaneous-timeline__content"
+                        },
+                        "children": [
+                          "\n                  ",
+                          {
+                            "tag": "strong",
+                            "attributes": {
+                              "class": "kc-miscellaneous-timeline__year"
+                            },
+                            "children": [
+                              "2022"
+                            ]
+                          },
+                          "\n                  ",
+                          {
+                            "tag": "p",
+                            "attributes": {
+                              "class": "kc-miscellaneous-timeline__quote"
+                            },
+                            "children": [
+                              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                            ]
+                          },
+                          "\n                "
+                        ]
+                      },
+                      "\n              "
+                    ]
+                  },
+                  "\n              ",
+                  {
+                    "tag": "li",
+                    "attributes": {
+                      "class": "kc-miscellaneous-timeline__entry"
+                    },
+                    "children": [
+                      "\n                ",
+                      {
+                        "tag": "span",
+                        "attributes": {
+                          "class": "kc-miscellaneous-timeline__rail",
+                          "aria-hidden": "true"
+                        },
+                        "children": []
+                      },
+                      "\n                ",
+                      {
+                        "tag": "div",
+                        "attributes": {
+                          "class": "kc-miscellaneous-timeline__content"
+                        },
+                        "children": [
+                          "\n                  ",
+                          {
+                            "tag": "strong",
+                            "attributes": {
+                              "class": "kc-miscellaneous-timeline__year"
+                            },
+                            "children": [
+                              "2018"
+                            ]
+                          },
+                          "\n                  ",
+                          {
+                            "tag": "p",
+                            "attributes": {
+                              "class": "kc-miscellaneous-timeline__quote"
+                            },
+                            "children": [
+                              "Microsoft partnered with 17 American intelligence agencies to develop cloud computing products."
+                            ]
+                          },
+                          "\n                "
+                        ]
+                      },
+                      "\n              "
+                    ]
+                  },
+                  "\n              ",
+                  {
+                    "tag": "li",
+                    "attributes": {
+                      "class": "kc-miscellaneous-timeline__entry"
+                    },
+                    "children": [
+                      "\n                ",
+                      {
+                        "tag": "span",
+                        "attributes": {
+                          "class": "kc-miscellaneous-timeline__rail",
+                          "aria-hidden": "true"
+                        },
+                        "children": []
+                      },
+                      "\n                ",
+                      {
+                        "tag": "div",
+                        "attributes": {
+                          "class": "kc-miscellaneous-timeline__content"
+                        },
+                        "children": [
+                          "\n                  ",
+                          {
+                            "tag": "strong",
+                            "attributes": {
+                              "class": "kc-miscellaneous-timeline__year"
+                            },
+                            "children": [
+                              "2015"
+                            ]
+                          },
+                          "\n                  ",
+                          {
+                            "tag": "p",
+                            "attributes": {
+                              "class": "kc-miscellaneous-timeline__quote"
+                            },
+                            "children": [
+                              "Microsoft announced the release of their first Interactive whiteboard, Microsoft Surface Hub."
+                            ]
+                          },
+                          "\n                "
+                        ]
+                      },
+                      "\n              "
+                    ]
+                  },
+                  "\n              ",
+                  {
+                    "tag": "li",
+                    "attributes": {
+                      "class": "kc-miscellaneous-timeline__entry"
+                    },
+                    "children": [
+                      "\n                ",
+                      {
+                        "tag": "span",
+                        "attributes": {
+                          "class": "kc-miscellaneous-timeline__rail",
+                          "aria-hidden": "true"
+                        },
+                        "children": []
+                      },
+                      "\n                ",
+                      {
+                        "tag": "div",
+                        "attributes": {
+                          "class": "kc-miscellaneous-timeline__content"
+                        },
+                        "children": [
+                          "\n                  ",
+                          {
+                            "tag": "strong",
+                            "attributes": {
+                              "class": "kc-miscellaneous-timeline__year"
+                            },
+                            "children": [
+                              "2011"
+                            ]
+                          },
+                          "\n                  ",
+                          {
+                            "tag": "p",
+                            "attributes": {
+                              "class": "kc-miscellaneous-timeline__quote"
+                            },
+                            "children": [
+                              "Microsoft unveiled Windows 8, an operating system designed to power both personal computers and tablet computers."
+                            ]
+                          },
+                          "\n                "
+                        ]
+                      },
+                      "\n              "
+                    ]
+                  },
+                  "\n              ",
+                  {
+                    "tag": "li",
+                    "attributes": {
+                      "class": "kc-miscellaneous-timeline__entry"
+                    },
+                    "children": [
+                      "\n                ",
+                      {
+                        "tag": "span",
+                        "attributes": {
+                          "class": "kc-miscellaneous-timeline__rail",
+                          "aria-hidden": "true"
+                        },
+                        "children": []
+                      },
+                      "\n                ",
+                      {
+                        "tag": "div",
+                        "attributes": {
+                          "class": "kc-miscellaneous-timeline__content"
+                        },
+                        "children": [
+                          "\n                  ",
+                          {
+                            "tag": "strong",
+                            "attributes": {
+                              "class": "kc-miscellaneous-timeline__year"
+                            },
+                            "children": [
+                              "2009"
+                            ]
+                          },
+                          "\n                  ",
+                          {
+                            "tag": "p",
+                            "attributes": {
+                              "class": "kc-miscellaneous-timeline__quote"
+                            },
+                            "children": [
+                              "Microsoft announced its intent to open a chain of Microsoft-branded retail stores, and on October 22, 2009, the first retail Microsoft Store opened in Scottsdale, Arizona."
+                            ]
+                          },
+                          "\n                "
+                        ]
+                      },
+                      "\n              "
+                    ]
+                  },
+                  "\n              ",
+                  {
+                    "tag": "li",
+                    "attributes": {
+                      "class": "kc-miscellaneous-timeline__entry"
+                    },
+                    "children": [
+                      "\n                ",
+                      {
+                        "tag": "span",
+                        "attributes": {
+                          "class": "kc-miscellaneous-timeline__rail",
+                          "aria-hidden": "true"
+                        },
+                        "children": []
+                      },
+                      "\n                ",
+                      {
+                        "tag": "div",
+                        "attributes": {
+                          "class": "kc-miscellaneous-timeline__content"
+                        },
+                        "children": [
+                          "\n                  ",
+                          {
+                            "tag": "strong",
+                            "attributes": {
+                              "class": "kc-miscellaneous-timeline__year"
+                            },
+                            "children": [
+                              "1990"
+                            ]
+                          },
+                          "\n                  ",
+                          {
+                            "tag": "p",
+                            "attributes": {
+                              "class": "kc-miscellaneous-timeline__quote"
+                            },
+                            "children": [
+                              "Microsoft introduced the Microsoft Office suite which bundled separate applications such as Microsoft Word and Microsoft Excel."
+                            ]
+                          },
+                          "\n                "
+                        ]
+                      },
+                      "\n              "
+                    ]
+                  },
+                  "\n              ",
+                  {
+                    "tag": "li",
+                    "attributes": {
+                      "class": "kc-miscellaneous-timeline__entry"
+                    },
+                    "children": [
+                      "\n                ",
+                      {
+                        "tag": "span",
+                        "attributes": {
+                          "class": "kc-miscellaneous-timeline__rail",
+                          "aria-hidden": "true"
+                        },
+                        "children": []
+                      },
+                      "\n                ",
+                      {
+                        "tag": "div",
+                        "attributes": {
+                          "class": "kc-miscellaneous-timeline__content"
+                        },
+                        "children": [
+                          "\n                  ",
+                          {
+                            "tag": "strong",
+                            "attributes": {
+                              "class": "kc-miscellaneous-timeline__year"
+                            },
+                            "children": [
+                              "1983"
+                            ]
+                          },
+                          "\n                  ",
+                          {
+                            "tag": "p",
+                            "attributes": {
+                              "class": "kc-miscellaneous-timeline__quote"
+                            },
+                            "children": [
+                              "The company expanded into new markets with the release of the Microsoft Mouse."
+                            ]
+                          },
+                          "\n                "
+                        ]
+                      },
+                      "\n              "
+                    ]
+                  },
+                  "\n              ",
+                  {
+                    "tag": "li",
+                    "attributes": {
+                      "class": "kc-miscellaneous-timeline__entry"
+                    },
+                    "children": [
+                      "\n                ",
+                      {
+                        "tag": "span",
+                        "attributes": {
+                          "class": "kc-miscellaneous-timeline__rail",
+                          "aria-hidden": "true"
+                        },
+                        "children": []
+                      },
+                      "\n                ",
+                      {
+                        "tag": "div",
+                        "attributes": {
+                          "class": "kc-miscellaneous-timeline__content"
+                        },
+                        "children": [
+                          "\n                  ",
+                          {
+                            "tag": "strong",
+                            "attributes": {
+                              "class": "kc-miscellaneous-timeline__year"
+                            },
+                            "children": [
+                              "1977"
+                            ]
+                          },
+                          "\n                  ",
+                          {
+                            "tag": "p",
+                            "attributes": {
+                              "class": "kc-miscellaneous-timeline__quote"
+                            },
+                            "children": [
+                              "The company expanded into new markets with the release of the Microsoft Mouse."
+                            ]
+                          },
+                          "\n                "
+                        ]
+                      },
+                      "\n              "
+                    ]
+                  },
+                  "\n            "
+                ]
+              },
+              "\n          "
+            ]
+          }
         },
         {
           "type": "attributions",
@@ -28019,7 +31074,423 @@ window.KC_ENTITIES = {
             "The company expanded into new markets with the release of the Microsoft Mouse."
           ],
           "images": [],
-          "slots": []
+          "slots": [],
+          "render": {
+            "root": {
+              "tag": "section",
+              "attributes": {
+                "class": "kc-module kc-module--mobile kc-mobile-miscellaneous-timeline",
+                "id": "kc-company-mobile-timeline",
+                "data-kc": "Mobile / Miscellaneous / Timeline",
+                "aria-label": "Microsoft timeline"
+              }
+            },
+            "content": [
+              "\n              ",
+              {
+                "tag": "ol",
+                "attributes": {
+                  "class": "kc-mobile-miscellaneous-timeline__list"
+                },
+                "children": [
+                  "\n                ",
+                  {
+                    "tag": "li",
+                    "attributes": {
+                      "class": "kc-mobile-miscellaneous-timeline__entry"
+                    },
+                    "children": [
+                      "\n                  ",
+                      {
+                        "tag": "span",
+                        "attributes": {
+                          "class": "kc-mobile-miscellaneous-timeline__rail",
+                          "aria-hidden": "true"
+                        },
+                        "children": []
+                      },
+                      "\n                  ",
+                      {
+                        "tag": "div",
+                        "attributes": {
+                          "class": "kc-mobile-miscellaneous-timeline__content"
+                        },
+                        "children": [
+                          "\n                    ",
+                          {
+                            "tag": "strong",
+                            "attributes": {
+                              "class": "kc-mobile-miscellaneous-timeline__year"
+                            },
+                            "children": [
+                              "2022"
+                            ]
+                          },
+                          "\n                    ",
+                          {
+                            "tag": "p",
+                            "attributes": {
+                              "class": "kc-mobile-miscellaneous-timeline__quote"
+                            },
+                            "children": [
+                              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                            ]
+                          },
+                          "\n                  "
+                        ]
+                      },
+                      "\n                "
+                    ]
+                  },
+                  "\n                ",
+                  {
+                    "tag": "li",
+                    "attributes": {
+                      "class": "kc-mobile-miscellaneous-timeline__entry"
+                    },
+                    "children": [
+                      "\n                  ",
+                      {
+                        "tag": "span",
+                        "attributes": {
+                          "class": "kc-mobile-miscellaneous-timeline__rail",
+                          "aria-hidden": "true"
+                        },
+                        "children": []
+                      },
+                      "\n                  ",
+                      {
+                        "tag": "div",
+                        "attributes": {
+                          "class": "kc-mobile-miscellaneous-timeline__content"
+                        },
+                        "children": [
+                          "\n                    ",
+                          {
+                            "tag": "strong",
+                            "attributes": {
+                              "class": "kc-mobile-miscellaneous-timeline__year"
+                            },
+                            "children": [
+                              "2018"
+                            ]
+                          },
+                          "\n                    ",
+                          {
+                            "tag": "p",
+                            "attributes": {
+                              "class": "kc-mobile-miscellaneous-timeline__quote"
+                            },
+                            "children": [
+                              "Microsoft partnered with 17 American intelligence agencies to develop cloud computing products."
+                            ]
+                          },
+                          "\n                  "
+                        ]
+                      },
+                      "\n                "
+                    ]
+                  },
+                  "\n                ",
+                  {
+                    "tag": "li",
+                    "attributes": {
+                      "class": "kc-mobile-miscellaneous-timeline__entry"
+                    },
+                    "children": [
+                      "\n                  ",
+                      {
+                        "tag": "span",
+                        "attributes": {
+                          "class": "kc-mobile-miscellaneous-timeline__rail",
+                          "aria-hidden": "true"
+                        },
+                        "children": []
+                      },
+                      "\n                  ",
+                      {
+                        "tag": "div",
+                        "attributes": {
+                          "class": "kc-mobile-miscellaneous-timeline__content"
+                        },
+                        "children": [
+                          "\n                    ",
+                          {
+                            "tag": "strong",
+                            "attributes": {
+                              "class": "kc-mobile-miscellaneous-timeline__year"
+                            },
+                            "children": [
+                              "2015"
+                            ]
+                          },
+                          "\n                    ",
+                          {
+                            "tag": "p",
+                            "attributes": {
+                              "class": "kc-mobile-miscellaneous-timeline__quote"
+                            },
+                            "children": [
+                              "Microsoft announced the release of their first Interactive whiteboard, Microsoft Surface Hub."
+                            ]
+                          },
+                          "\n                  "
+                        ]
+                      },
+                      "\n                "
+                    ]
+                  },
+                  "\n                ",
+                  {
+                    "tag": "li",
+                    "attributes": {
+                      "class": "kc-mobile-miscellaneous-timeline__entry"
+                    },
+                    "children": [
+                      "\n                  ",
+                      {
+                        "tag": "span",
+                        "attributes": {
+                          "class": "kc-mobile-miscellaneous-timeline__rail",
+                          "aria-hidden": "true"
+                        },
+                        "children": []
+                      },
+                      "\n                  ",
+                      {
+                        "tag": "div",
+                        "attributes": {
+                          "class": "kc-mobile-miscellaneous-timeline__content"
+                        },
+                        "children": [
+                          "\n                    ",
+                          {
+                            "tag": "strong",
+                            "attributes": {
+                              "class": "kc-mobile-miscellaneous-timeline__year"
+                            },
+                            "children": [
+                              "2011"
+                            ]
+                          },
+                          "\n                    ",
+                          {
+                            "tag": "p",
+                            "attributes": {
+                              "class": "kc-mobile-miscellaneous-timeline__quote"
+                            },
+                            "children": [
+                              "Microsoft unveiled Windows 8, an operating system designed to power both personal computers and tablet computers."
+                            ]
+                          },
+                          "\n                  "
+                        ]
+                      },
+                      "\n                "
+                    ]
+                  },
+                  "\n                ",
+                  {
+                    "tag": "li",
+                    "attributes": {
+                      "class": "kc-mobile-miscellaneous-timeline__entry"
+                    },
+                    "children": [
+                      "\n                  ",
+                      {
+                        "tag": "span",
+                        "attributes": {
+                          "class": "kc-mobile-miscellaneous-timeline__rail",
+                          "aria-hidden": "true"
+                        },
+                        "children": []
+                      },
+                      "\n                  ",
+                      {
+                        "tag": "div",
+                        "attributes": {
+                          "class": "kc-mobile-miscellaneous-timeline__content"
+                        },
+                        "children": [
+                          "\n                    ",
+                          {
+                            "tag": "strong",
+                            "attributes": {
+                              "class": "kc-mobile-miscellaneous-timeline__year"
+                            },
+                            "children": [
+                              "2009"
+                            ]
+                          },
+                          "\n                    ",
+                          {
+                            "tag": "p",
+                            "attributes": {
+                              "class": "kc-mobile-miscellaneous-timeline__quote"
+                            },
+                            "children": [
+                              "Microsoft announced its intent to open a chain of Microsoft-branded retail stores, and on October 22, 2009, the first retail Microsoft Store opened in Scottsdale, Arizona."
+                            ]
+                          },
+                          "\n                  "
+                        ]
+                      },
+                      "\n                "
+                    ]
+                  },
+                  "\n                ",
+                  {
+                    "tag": "li",
+                    "attributes": {
+                      "class": "kc-mobile-miscellaneous-timeline__entry"
+                    },
+                    "children": [
+                      "\n                  ",
+                      {
+                        "tag": "span",
+                        "attributes": {
+                          "class": "kc-mobile-miscellaneous-timeline__rail",
+                          "aria-hidden": "true"
+                        },
+                        "children": []
+                      },
+                      "\n                  ",
+                      {
+                        "tag": "div",
+                        "attributes": {
+                          "class": "kc-mobile-miscellaneous-timeline__content"
+                        },
+                        "children": [
+                          "\n                    ",
+                          {
+                            "tag": "strong",
+                            "attributes": {
+                              "class": "kc-mobile-miscellaneous-timeline__year"
+                            },
+                            "children": [
+                              "1990"
+                            ]
+                          },
+                          "\n                    ",
+                          {
+                            "tag": "p",
+                            "attributes": {
+                              "class": "kc-mobile-miscellaneous-timeline__quote"
+                            },
+                            "children": [
+                              "Microsoft introduced the Microsoft Office suite which bundled separate applications such as Microsoft Word and Microsoft Excel."
+                            ]
+                          },
+                          "\n                  "
+                        ]
+                      },
+                      "\n                "
+                    ]
+                  },
+                  "\n                ",
+                  {
+                    "tag": "li",
+                    "attributes": {
+                      "class": "kc-mobile-miscellaneous-timeline__entry"
+                    },
+                    "children": [
+                      "\n                  ",
+                      {
+                        "tag": "span",
+                        "attributes": {
+                          "class": "kc-mobile-miscellaneous-timeline__rail",
+                          "aria-hidden": "true"
+                        },
+                        "children": []
+                      },
+                      "\n                  ",
+                      {
+                        "tag": "div",
+                        "attributes": {
+                          "class": "kc-mobile-miscellaneous-timeline__content"
+                        },
+                        "children": [
+                          "\n                    ",
+                          {
+                            "tag": "strong",
+                            "attributes": {
+                              "class": "kc-mobile-miscellaneous-timeline__year"
+                            },
+                            "children": [
+                              "1983"
+                            ]
+                          },
+                          "\n                    ",
+                          {
+                            "tag": "p",
+                            "attributes": {
+                              "class": "kc-mobile-miscellaneous-timeline__quote"
+                            },
+                            "children": [
+                              "The company expanded into new markets with the release of the Microsoft Mouse."
+                            ]
+                          },
+                          "\n                  "
+                        ]
+                      },
+                      "\n                "
+                    ]
+                  },
+                  "\n                ",
+                  {
+                    "tag": "li",
+                    "attributes": {
+                      "class": "kc-mobile-miscellaneous-timeline__entry"
+                    },
+                    "children": [
+                      "\n                  ",
+                      {
+                        "tag": "span",
+                        "attributes": {
+                          "class": "kc-mobile-miscellaneous-timeline__rail",
+                          "aria-hidden": "true"
+                        },
+                        "children": []
+                      },
+                      "\n                  ",
+                      {
+                        "tag": "div",
+                        "attributes": {
+                          "class": "kc-mobile-miscellaneous-timeline__content"
+                        },
+                        "children": [
+                          "\n                    ",
+                          {
+                            "tag": "strong",
+                            "attributes": {
+                              "class": "kc-mobile-miscellaneous-timeline__year"
+                            },
+                            "children": [
+                              "1977"
+                            ]
+                          },
+                          "\n                    ",
+                          {
+                            "tag": "p",
+                            "attributes": {
+                              "class": "kc-mobile-miscellaneous-timeline__quote"
+                            },
+                            "children": [
+                              "The company expanded into new markets with the release of the Microsoft Mouse."
+                            ]
+                          },
+                          "\n                  "
+                        ]
+                      },
+                      "\n                "
+                    ]
+                  },
+                  "\n              "
+                ]
+              },
+              "\n            "
+            ]
+          }
         },
         {
           "type": "attribution",
@@ -42220,6 +45691,2071 @@ window.KC_ENTITIES = {
                 }
               ]
             }
+          ]
+        }
+      },
+      "modules-desktop-timeline": {
+        "type": "timeline",
+        "platform": "desktop",
+        "render": {
+          "root": {
+            "tag": "section",
+            "attributes": {
+              "class": "kc-module kc-miscellaneous-timeline",
+              "data-kc": "Miscellaneous / Timeline"
+            }
+          },
+          "content": [
+            {
+              "tag": "div",
+              "attributes": {
+                "class": "kc-module-title"
+              },
+              "children": [
+                {
+                  "tag": "h3",
+                  "attributes": {},
+                  "children": [
+                    "Timeline title"
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "ol",
+              "attributes": {
+                "class": "kc-miscellaneous-timeline__list",
+                "style": "list-style:none;padding:0"
+              },
+              "children": [
+                {
+                  "tag": "li",
+                  "attributes": {
+                    "class": "kc-miscellaneous-timeline__entry"
+                  },
+                  "children": [
+                    {
+                      "tag": "span",
+                      "attributes": {
+                        "class": "kc-miscellaneous-timeline__rail"
+                      },
+                      "children": []
+                    },
+                    {
+                      "tag": "div",
+                      "attributes": {
+                        "class": "kc-miscellaneous-timeline__content"
+                      },
+                      "children": [
+                        {
+                          "tag": "strong",
+                          "attributes": {
+                            "class": "kc-miscellaneous-timeline__year"
+                          },
+                          "children": [
+                            "1901"
+                          ]
+                        },
+                        {
+                          "tag": "p",
+                          "attributes": {
+                            "class": "kc-miscellaneous-timeline__quote"
+                          },
+                          "children": [
+                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "li",
+                  "attributes": {
+                    "class": "kc-miscellaneous-timeline__entry"
+                  },
+                  "children": [
+                    {
+                      "tag": "span",
+                      "attributes": {
+                        "class": "kc-miscellaneous-timeline__rail"
+                      },
+                      "children": []
+                    },
+                    {
+                      "tag": "div",
+                      "attributes": {
+                        "class": "kc-miscellaneous-timeline__content"
+                      },
+                      "children": [
+                        {
+                          "tag": "strong",
+                          "attributes": {
+                            "class": "kc-miscellaneous-timeline__year"
+                          },
+                          "children": [
+                            "1902"
+                          ]
+                        },
+                        {
+                          "tag": "p",
+                          "attributes": {
+                            "class": "kc-miscellaneous-timeline__quote"
+                          },
+                          "children": [
+                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "li",
+                  "attributes": {
+                    "class": "kc-miscellaneous-timeline__entry"
+                  },
+                  "children": [
+                    {
+                      "tag": "span",
+                      "attributes": {
+                        "class": "kc-miscellaneous-timeline__rail"
+                      },
+                      "children": []
+                    },
+                    {
+                      "tag": "div",
+                      "attributes": {
+                        "class": "kc-miscellaneous-timeline__content"
+                      },
+                      "children": [
+                        {
+                          "tag": "strong",
+                          "attributes": {
+                            "class": "kc-miscellaneous-timeline__year"
+                          },
+                          "children": [
+                            "1903"
+                          ]
+                        },
+                        {
+                          "tag": "p",
+                          "attributes": {
+                            "class": "kc-miscellaneous-timeline__quote"
+                          },
+                          "children": [
+                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "li",
+                  "attributes": {
+                    "class": "kc-miscellaneous-timeline__entry"
+                  },
+                  "children": [
+                    {
+                      "tag": "span",
+                      "attributes": {
+                        "class": "kc-miscellaneous-timeline__rail"
+                      },
+                      "children": []
+                    },
+                    {
+                      "tag": "div",
+                      "attributes": {
+                        "class": "kc-miscellaneous-timeline__content"
+                      },
+                      "children": [
+                        {
+                          "tag": "strong",
+                          "attributes": {
+                            "class": "kc-miscellaneous-timeline__year"
+                          },
+                          "children": [
+                            "1904"
+                          ]
+                        },
+                        {
+                          "tag": "p",
+                          "attributes": {
+                            "class": "kc-miscellaneous-timeline__quote"
+                          },
+                          "children": [
+                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "li",
+                  "attributes": {
+                    "class": "kc-miscellaneous-timeline__entry"
+                  },
+                  "children": [
+                    {
+                      "tag": "span",
+                      "attributes": {
+                        "class": "kc-miscellaneous-timeline__rail"
+                      },
+                      "children": []
+                    },
+                    {
+                      "tag": "div",
+                      "attributes": {
+                        "class": "kc-miscellaneous-timeline__content"
+                      },
+                      "children": [
+                        {
+                          "tag": "strong",
+                          "attributes": {
+                            "class": "kc-miscellaneous-timeline__year"
+                          },
+                          "children": [
+                            "1905"
+                          ]
+                        },
+                        {
+                          "tag": "p",
+                          "attributes": {
+                            "class": "kc-miscellaneous-timeline__quote"
+                          },
+                          "children": [
+                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "modules-desktop-serving-size": {
+        "type": "serving-size",
+        "platform": "desktop",
+        "render": {
+          "root": {
+            "tag": "section",
+            "attributes": {
+              "class": "kc-module kc-miscellaneous-serving-size",
+              "data-kc": "Miscellaneous / Serving Size",
+              "aria-label": "Serving size"
+            }
+          },
+          "content": [
+            {
+              "tag": "strong",
+              "attributes": {
+                "class": "kc-miscellaneous-serving-size__label"
+              },
+              "children": [
+                "Serving Size: Food (size)"
+              ]
+            },
+            {
+              "tag": "div",
+              "attributes": {
+                "class": "kc-miscellaneous-serving-size__content"
+              },
+              "children": [
+                {
+                  "tag": "div",
+                  "attributes": {
+                    "class": "kc-miscellaneous-serving-size__circles"
+                  },
+                  "children": [
+                    {
+                      "tag": "div",
+                      "attributes": {
+                        "class": "kc-miscellaneous-serving-size__circle"
+                      },
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attributes": {
+                            "class": "kc-copy-bold"
+                          },
+                          "children": [
+                            "Calories"
+                          ]
+                        },
+                        {
+                          "tag": "strong",
+                          "attributes": {},
+                          "children": [
+                            "000"
+                          ]
+                        },
+                        {
+                          "tag": "span",
+                          "attributes": {
+                            "class": "kc-copy-small"
+                          },
+                          "children": [
+                            "XX%"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "div",
+                      "attributes": {
+                        "class": "kc-miscellaneous-serving-size__circle"
+                      },
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attributes": {
+                            "class": "kc-copy-bold"
+                          },
+                          "children": [
+                            "Fat"
+                          ]
+                        },
+                        {
+                          "tag": "strong",
+                          "attributes": {},
+                          "children": [
+                            "000"
+                          ]
+                        },
+                        {
+                          "tag": "span",
+                          "attributes": {
+                            "class": "kc-copy-small"
+                          },
+                          "children": [
+                            "XX%"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "div",
+                      "attributes": {
+                        "class": "kc-miscellaneous-serving-size__circle"
+                      },
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attributes": {
+                            "class": "kc-copy-bold"
+                          },
+                          "children": [
+                            "Carbs"
+                          ]
+                        },
+                        {
+                          "tag": "strong",
+                          "attributes": {},
+                          "children": [
+                            "000"
+                          ]
+                        },
+                        {
+                          "tag": "span",
+                          "attributes": {
+                            "class": "kc-copy-small"
+                          },
+                          "children": [
+                            "XX%"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "div",
+                      "attributes": {
+                        "class": "kc-miscellaneous-serving-size__circle"
+                      },
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attributes": {
+                            "class": "kc-copy-bold"
+                          },
+                          "children": [
+                            "Sugar"
+                          ]
+                        },
+                        {
+                          "tag": "strong",
+                          "attributes": {},
+                          "children": [
+                            "000"
+                          ]
+                        },
+                        {
+                          "tag": "span",
+                          "attributes": {
+                            "class": "kc-copy-small"
+                          },
+                          "children": [
+                            "XX%"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "span",
+                  "attributes": {
+                    "class": "kc-miscellaneous-serving-size__foot"
+                  },
+                  "children": [
+                    "% Daily value*"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "modules-desktop-visit-times": {
+        "type": "visit-times",
+        "platform": "desktop",
+        "render": {
+          "root": {
+            "tag": "section",
+            "attributes": {
+              "class": "kc-module kc-miscellaneous-visit-times",
+              "data-kc": "Miscellaneous / Visit Times"
+            }
+          },
+          "content": [
+            {
+              "tag": "div",
+              "attributes": {
+                "class": "kc-module-title"
+              },
+              "children": [
+                {
+                  "tag": "h3",
+                  "attributes": {},
+                  "children": [
+                    "Best times to visit"
+                  ]
+                },
+                {
+                  "tag": "a",
+                  "attributes": {
+                    "class": "kc-link",
+                    "href": "#",
+                    "aria-label": "See all Best times to visit"
+                  },
+                  "children": [
+                    {
+                      "tag": "span",
+                      "attributes": {
+                        "class": "kc-title-chevron"
+                      },
+                      "children": [
+                        {
+                          "tag": "img",
+                          "attributes": {
+                            "src": "../assets/icons/ic_fluent_chevron_right_16_regular.svg",
+                            "alt": true,
+                            "aria-hidden": "true"
+                          },
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "div",
+              "attributes": {
+                "class": "kc-miscellaneous-visit-times__graph",
+                "role": "img",
+                "aria-label": "Visitor numbers 2015–2026, highest 2020–2023"
+              },
+              "children": [
+                {
+                  "tag": "span",
+                  "attributes": {
+                    "class": "kc-miscellaneous-visit-times__grid",
+                    "style": "top:0px"
+                  },
+                  "children": []
+                },
+                {
+                  "tag": "span",
+                  "attributes": {
+                    "class": "kc-miscellaneous-visit-times__grid",
+                    "style": "top:40px"
+                  },
+                  "children": []
+                },
+                {
+                  "tag": "span",
+                  "attributes": {
+                    "class": "kc-miscellaneous-visit-times__grid",
+                    "style": "top:80px"
+                  },
+                  "children": []
+                },
+                {
+                  "tag": "span",
+                  "attributes": {
+                    "class": "kc-miscellaneous-visit-times__bar",
+                    "style": "left:12px;top:50px;height:29px"
+                  },
+                  "children": []
+                },
+                {
+                  "tag": "span",
+                  "attributes": {
+                    "class": "kc-miscellaneous-visit-times__bar",
+                    "style": "left:48.01px;top:50px;height:29px"
+                  },
+                  "children": []
+                },
+                {
+                  "tag": "span",
+                  "attributes": {
+                    "class": "kc-miscellaneous-visit-times__bar",
+                    "style": "left:84.01px;top:50px;height:29px"
+                  },
+                  "children": []
+                },
+                {
+                  "tag": "span",
+                  "attributes": {
+                    "class": "kc-miscellaneous-visit-times__bar",
+                    "style": "left:120.01px;top:27px;height:52px"
+                  },
+                  "children": []
+                },
+                {
+                  "tag": "span",
+                  "attributes": {
+                    "class": "kc-miscellaneous-visit-times__bar",
+                    "style": "left:156.01px;top:27px;height:52px"
+                  },
+                  "children": []
+                },
+                {
+                  "tag": "span",
+                  "attributes": {
+                    "class": "kc-miscellaneous-visit-times__bar",
+                    "style": "left:192.01px;top:0px;height:79px"
+                  },
+                  "children": []
+                },
+                {
+                  "tag": "span",
+                  "attributes": {
+                    "class": "kc-miscellaneous-visit-times__bar",
+                    "style": "left:228.01px;top:0px;height:79px"
+                  },
+                  "children": []
+                },
+                {
+                  "tag": "span",
+                  "attributes": {
+                    "class": "kc-miscellaneous-visit-times__bar",
+                    "style": "left:264.01px;top:0px;height:79px"
+                  },
+                  "children": []
+                },
+                {
+                  "tag": "span",
+                  "attributes": {
+                    "class": "kc-miscellaneous-visit-times__bar",
+                    "style": "left:300.01px;top:0px;height:79px"
+                  },
+                  "children": []
+                },
+                {
+                  "tag": "span",
+                  "attributes": {
+                    "class": "kc-miscellaneous-visit-times__bar",
+                    "style": "left:336.01px;top:27px;height:52px"
+                  },
+                  "children": []
+                },
+                {
+                  "tag": "span",
+                  "attributes": {
+                    "class": "kc-miscellaneous-visit-times__bar",
+                    "style": "left:372.01px;top:60px;height:19px"
+                  },
+                  "children": []
+                },
+                {
+                  "tag": "span",
+                  "attributes": {
+                    "class": "kc-miscellaneous-visit-times__bar",
+                    "style": "left:408.01px;top:60px;height:19px"
+                  },
+                  "children": []
+                },
+                {
+                  "tag": "span",
+                  "attributes": {
+                    "class": "kc-miscellaneous-visit-times__year",
+                    "style": "left:0px;top:83px"
+                  },
+                  "children": [
+                    "2015"
+                  ]
+                },
+                {
+                  "tag": "span",
+                  "attributes": {
+                    "class": "kc-miscellaneous-visit-times__year",
+                    "style": "left:35.97px;top:83px"
+                  },
+                  "children": [
+                    "2016"
+                  ]
+                },
+                {
+                  "tag": "span",
+                  "attributes": {
+                    "class": "kc-miscellaneous-visit-times__year",
+                    "style": "left:71.94px;top:83px"
+                  },
+                  "children": [
+                    "2017"
+                  ]
+                },
+                {
+                  "tag": "span",
+                  "attributes": {
+                    "class": "kc-miscellaneous-visit-times__year",
+                    "style": "left:107.91px;top:83px"
+                  },
+                  "children": [
+                    "2018"
+                  ]
+                },
+                {
+                  "tag": "span",
+                  "attributes": {
+                    "class": "kc-miscellaneous-visit-times__year",
+                    "style": "left:143.88px;top:83px"
+                  },
+                  "children": [
+                    "2019"
+                  ]
+                },
+                {
+                  "tag": "span",
+                  "attributes": {
+                    "class": "kc-miscellaneous-visit-times__year",
+                    "style": "left:179.85px;top:83px"
+                  },
+                  "children": [
+                    "2020"
+                  ]
+                },
+                {
+                  "tag": "span",
+                  "attributes": {
+                    "class": "kc-miscellaneous-visit-times__year",
+                    "style": "left:215.82px;top:83px"
+                  },
+                  "children": [
+                    "2021"
+                  ]
+                },
+                {
+                  "tag": "span",
+                  "attributes": {
+                    "class": "kc-miscellaneous-visit-times__year",
+                    "style": "left:251.79px;top:83px"
+                  },
+                  "children": [
+                    "2022"
+                  ]
+                },
+                {
+                  "tag": "span",
+                  "attributes": {
+                    "class": "kc-miscellaneous-visit-times__year",
+                    "style": "left:287.76px;top:84px"
+                  },
+                  "children": [
+                    "2023"
+                  ]
+                },
+                {
+                  "tag": "span",
+                  "attributes": {
+                    "class": "kc-miscellaneous-visit-times__year",
+                    "style": "left:323.73px;top:84px"
+                  },
+                  "children": [
+                    "2024"
+                  ]
+                },
+                {
+                  "tag": "span",
+                  "attributes": {
+                    "class": "kc-miscellaneous-visit-times__year",
+                    "style": "left:359.7px;top:84px"
+                  },
+                  "children": [
+                    "2025"
+                  ]
+                },
+                {
+                  "tag": "span",
+                  "attributes": {
+                    "class": "kc-miscellaneous-visit-times__year",
+                    "style": "left:395.66999999999996px;top:84px"
+                  },
+                  "children": [
+                    "2026"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "modules-desktop-travel": {
+        "type": "travel",
+        "platform": "desktop",
+        "render": {
+          "root": {
+            "tag": "section",
+            "attributes": {
+              "class": "kc-module kc-miscellaneous-travel",
+              "data-kc": "Miscellaneous / Travel",
+              "aria-label": "Travel"
+            }
+          },
+          "content": [
+            {
+              "tag": "a",
+              "attributes": {
+                "class": "kc-btn-outline kc-miscellaneous-travel__action",
+                "href": "#"
+              },
+              "children": [
+                {
+                  "tag": "img",
+                  "attributes": {
+                    "src": "../assets/icons/ic_fluent_book_globe_20_regular.svg",
+                    "alt": true,
+                    "aria-hidden": "true"
+                  },
+                  "children": []
+                },
+                {
+                  "tag": "span",
+                  "attributes": {},
+                  "children": [
+                    "Travel guide"
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "a",
+              "attributes": {
+                "class": "kc-btn-outline kc-miscellaneous-travel__action",
+                "href": "#"
+              },
+              "children": [
+                {
+                  "tag": "img",
+                  "attributes": {
+                    "src": "../assets/icons/ic_fluent_airplane_20_regular.svg",
+                    "alt": true,
+                    "aria-hidden": "true"
+                  },
+                  "children": []
+                },
+                {
+                  "tag": "span",
+                  "attributes": {},
+                  "children": [
+                    "Book flights"
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "a",
+              "attributes": {
+                "class": "kc-btn-outline kc-miscellaneous-travel__action",
+                "href": "#"
+              },
+              "children": [
+                {
+                  "tag": "img",
+                  "attributes": {
+                    "src": "../assets/icons/ic_fluent_bed_20_regular.svg",
+                    "alt": true,
+                    "aria-hidden": "true"
+                  },
+                  "children": []
+                },
+                {
+                  "tag": "span",
+                  "attributes": {},
+                  "children": [
+                    "Book hotels"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "modules-desktop-map": {
+        "type": "map",
+        "platform": "desktop",
+        "render": {
+          "root": {
+            "tag": "section",
+            "attributes": {
+              "class": "kc-module kc-miscellaneous-map",
+              "data-kc": "Miscellaneous / Map",
+              "aria-label": "Map"
+            }
+          },
+          "content": [
+            {
+              "tag": "div",
+              "attributes": {
+                "class": "kc-miscellaneous-map__frame"
+              },
+              "children": [
+                {
+                  "tag": "img",
+                  "attributes": {
+                    "src": "../assets/images/kc/maps/new-delhi.png",
+                    "alt": "Map of New Delhi, India"
+                  },
+                  "children": []
+                },
+                {
+                  "tag": "a",
+                  "attributes": {
+                    "class": "kc-btn-on-image kc-miscellaneous-map__expand",
+                    "href": "https://commons.wikimedia.org/wiki/File:New_Delhi_map_no_titles.png",
+                    "aria-label": "Open map of New Delhi"
+                  },
+                  "children": [
+                    {
+                      "tag": "img",
+                      "attributes": {
+                        "src": "../assets/icons/ic_fluent_arrow_maximize_20_regular.svg",
+                        "alt": true,
+                        "aria-hidden": "true"
+                      },
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "tag": "span",
+                  "attributes": {
+                    "class": "kc-miscellaneous-map__credit"
+                  },
+                  "children": [
+                    {
+                      "tag": "a",
+                      "attributes": {
+                        "href": "https://commons.wikimedia.org/wiki/File:New_Delhi_map_no_titles.png"
+                      },
+                      "children": [
+                        "Winston Samuel"
+                      ]
+                    },
+                    " · ",
+                    {
+                      "tag": "a",
+                      "attributes": {
+                        "href": "https://www.openstreetmap.org/copyright"
+                      },
+                      "children": [
+                        "© OpenStreetMap contributors"
+                      ]
+                    },
+                    " · ",
+                    {
+                      "tag": "a",
+                      "attributes": {
+                        "href": "https://creativecommons.org/licenses/by-sa/4.0/"
+                      },
+                      "children": [
+                        "CC BY-SA 4.0"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "modules-mobile-timeline": {
+        "type": "timeline",
+        "platform": "mobile",
+        "render": {
+          "root": {
+            "tag": "section",
+            "attributes": {
+              "class": "kc-module kc-module--mobile kc-mobile-miscellaneous-timeline",
+              "data-kc": "Mobile / Miscellaneous / Timeline"
+            }
+          },
+          "content": [
+            "\n    ",
+            {
+              "tag": "div",
+              "attributes": {
+                "class": "kc-module-title"
+              },
+              "children": [
+                "\n      ",
+                {
+                  "tag": "h3",
+                  "attributes": {},
+                  "children": [
+                    "Timeline"
+                  ]
+                },
+                "\n    "
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "ol",
+              "attributes": {
+                "class": "kc-mobile-miscellaneous-timeline__list",
+                "style": "list-style:none;padding:0;margin:0"
+              },
+              "children": [
+                "\n      ",
+                {
+                  "tag": "li",
+                  "attributes": {
+                    "class": "kc-mobile-miscellaneous-timeline__entry"
+                  },
+                  "children": [
+                    "\n        ",
+                    {
+                      "tag": "span",
+                      "attributes": {
+                        "class": "kc-mobile-miscellaneous-timeline__rail"
+                      },
+                      "children": [
+                        "\n        "
+                      ]
+                    },
+                    "\n        ",
+                    {
+                      "tag": "div",
+                      "attributes": {
+                        "class": "kc-mobile-miscellaneous-timeline__content"
+                      },
+                      "children": [
+                        "\n          ",
+                        {
+                          "tag": "strong",
+                          "attributes": {
+                            "class": "kc-mobile-miscellaneous-timeline__year"
+                          },
+                          "children": [
+                            "1901"
+                          ]
+                        },
+                        "\n          ",
+                        {
+                          "tag": "p",
+                          "attributes": {
+                            "class": "kc-mobile-miscellaneous-timeline__quote"
+                          },
+                          "children": [
+                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."
+                          ]
+                        },
+                        "\n        "
+                      ]
+                    },
+                    "\n      "
+                  ]
+                },
+                "\n      ",
+                {
+                  "tag": "li",
+                  "attributes": {
+                    "class": "kc-mobile-miscellaneous-timeline__entry"
+                  },
+                  "children": [
+                    "\n        ",
+                    {
+                      "tag": "span",
+                      "attributes": {
+                        "class": "kc-mobile-miscellaneous-timeline__rail"
+                      },
+                      "children": [
+                        "\n        "
+                      ]
+                    },
+                    "\n        ",
+                    {
+                      "tag": "div",
+                      "attributes": {
+                        "class": "kc-mobile-miscellaneous-timeline__content"
+                      },
+                      "children": [
+                        "\n          ",
+                        {
+                          "tag": "strong",
+                          "attributes": {
+                            "class": "kc-mobile-miscellaneous-timeline__year"
+                          },
+                          "children": [
+                            "1902"
+                          ]
+                        },
+                        "\n          ",
+                        {
+                          "tag": "p",
+                          "attributes": {
+                            "class": "kc-mobile-miscellaneous-timeline__quote"
+                          },
+                          "children": [
+                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."
+                          ]
+                        },
+                        "\n        "
+                      ]
+                    },
+                    "\n      "
+                  ]
+                },
+                "\n      ",
+                {
+                  "tag": "li",
+                  "attributes": {
+                    "class": "kc-mobile-miscellaneous-timeline__entry"
+                  },
+                  "children": [
+                    "\n        ",
+                    {
+                      "tag": "span",
+                      "attributes": {
+                        "class": "kc-mobile-miscellaneous-timeline__rail"
+                      },
+                      "children": [
+                        "\n        "
+                      ]
+                    },
+                    "\n        ",
+                    {
+                      "tag": "div",
+                      "attributes": {
+                        "class": "kc-mobile-miscellaneous-timeline__content"
+                      },
+                      "children": [
+                        "\n          ",
+                        {
+                          "tag": "strong",
+                          "attributes": {
+                            "class": "kc-mobile-miscellaneous-timeline__year"
+                          },
+                          "children": [
+                            "1903"
+                          ]
+                        },
+                        "\n          ",
+                        {
+                          "tag": "p",
+                          "attributes": {
+                            "class": "kc-mobile-miscellaneous-timeline__quote"
+                          },
+                          "children": [
+                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."
+                          ]
+                        },
+                        "\n        "
+                      ]
+                    },
+                    "\n      "
+                  ]
+                },
+                "\n      ",
+                {
+                  "tag": "li",
+                  "attributes": {
+                    "class": "kc-mobile-miscellaneous-timeline__entry"
+                  },
+                  "children": [
+                    "\n        ",
+                    {
+                      "tag": "span",
+                      "attributes": {
+                        "class": "kc-mobile-miscellaneous-timeline__rail"
+                      },
+                      "children": [
+                        "\n        "
+                      ]
+                    },
+                    "\n        ",
+                    {
+                      "tag": "div",
+                      "attributes": {
+                        "class": "kc-mobile-miscellaneous-timeline__content"
+                      },
+                      "children": [
+                        "\n          ",
+                        {
+                          "tag": "strong",
+                          "attributes": {
+                            "class": "kc-mobile-miscellaneous-timeline__year"
+                          },
+                          "children": [
+                            "1904"
+                          ]
+                        },
+                        "\n          ",
+                        {
+                          "tag": "p",
+                          "attributes": {
+                            "class": "kc-mobile-miscellaneous-timeline__quote"
+                          },
+                          "children": [
+                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."
+                          ]
+                        },
+                        "\n        "
+                      ]
+                    },
+                    "\n      "
+                  ]
+                },
+                "\n      ",
+                {
+                  "tag": "li",
+                  "attributes": {
+                    "class": "kc-mobile-miscellaneous-timeline__entry"
+                  },
+                  "children": [
+                    "\n        ",
+                    {
+                      "tag": "span",
+                      "attributes": {
+                        "class": "kc-mobile-miscellaneous-timeline__rail"
+                      },
+                      "children": [
+                        "\n        "
+                      ]
+                    },
+                    "\n        ",
+                    {
+                      "tag": "div",
+                      "attributes": {
+                        "class": "kc-mobile-miscellaneous-timeline__content"
+                      },
+                      "children": [
+                        "\n          ",
+                        {
+                          "tag": "strong",
+                          "attributes": {
+                            "class": "kc-mobile-miscellaneous-timeline__year"
+                          },
+                          "children": [
+                            "1905"
+                          ]
+                        },
+                        "\n          ",
+                        {
+                          "tag": "p",
+                          "attributes": {
+                            "class": "kc-mobile-miscellaneous-timeline__quote"
+                          },
+                          "children": [
+                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."
+                          ]
+                        },
+                        "\n        "
+                      ]
+                    },
+                    "\n      "
+                  ]
+                },
+                "\n    "
+              ]
+            },
+            "\n  "
+          ]
+        }
+      },
+      "modules-mobile-serving-size": {
+        "type": "serving-size",
+        "platform": "mobile",
+        "render": {
+          "root": {
+            "tag": "section",
+            "attributes": {
+              "class": "kc-module kc-module--mobile kc-mobile-miscellaneous-serving-size",
+              "data-kc": "Mobile / Miscellaneous / Serving Size"
+            }
+          },
+          "content": [
+            "\n    ",
+            {
+              "tag": "div",
+              "attributes": {
+                "class": "kc-module-title"
+              },
+              "children": [
+                "\n      ",
+                {
+                  "tag": "h3",
+                  "attributes": {},
+                  "children": [
+                    "Serving Size: Food (100g)"
+                  ]
+                },
+                "\n    "
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "div",
+              "attributes": {
+                "class": "kc-mobile-miscellaneous-serving-size__content"
+              },
+              "children": [
+                "\n      ",
+                {
+                  "tag": "div",
+                  "attributes": {
+                    "class": "kc-mobile-miscellaneous-serving-size__circles"
+                  },
+                  "children": [
+                    "\n        ",
+                    {
+                      "tag": "div",
+                      "attributes": {
+                        "class": "kc-mobile-miscellaneous-serving-size__circle"
+                      },
+                      "children": [
+                        "\n          ",
+                        {
+                          "tag": "span",
+                          "attributes": {
+                            "class": "kc-m-bold"
+                          },
+                          "children": [
+                            "Calories"
+                          ]
+                        },
+                        "\n          ",
+                        {
+                          "tag": "strong",
+                          "attributes": {},
+                          "children": [
+                            "000"
+                          ]
+                        },
+                        "\n          ",
+                        {
+                          "tag": "span",
+                          "attributes": {
+                            "class": "kc-m-foot"
+                          },
+                          "children": [
+                            "XX%"
+                          ]
+                        },
+                        "\n        "
+                      ]
+                    },
+                    "\n        ",
+                    {
+                      "tag": "div",
+                      "attributes": {
+                        "class": "kc-mobile-miscellaneous-serving-size__circle"
+                      },
+                      "children": [
+                        "\n          ",
+                        {
+                          "tag": "span",
+                          "attributes": {
+                            "class": "kc-m-bold"
+                          },
+                          "children": [
+                            "Fat"
+                          ]
+                        },
+                        "\n          ",
+                        {
+                          "tag": "strong",
+                          "attributes": {},
+                          "children": [
+                            "000"
+                          ]
+                        },
+                        "\n          ",
+                        {
+                          "tag": "span",
+                          "attributes": {
+                            "class": "kc-m-foot"
+                          },
+                          "children": [
+                            "XX%"
+                          ]
+                        },
+                        "\n        "
+                      ]
+                    },
+                    "\n        ",
+                    {
+                      "tag": "div",
+                      "attributes": {
+                        "class": "kc-mobile-miscellaneous-serving-size__circle"
+                      },
+                      "children": [
+                        "\n          ",
+                        {
+                          "tag": "span",
+                          "attributes": {
+                            "class": "kc-m-bold"
+                          },
+                          "children": [
+                            "Carbs"
+                          ]
+                        },
+                        "\n          ",
+                        {
+                          "tag": "strong",
+                          "attributes": {},
+                          "children": [
+                            "000"
+                          ]
+                        },
+                        "\n          ",
+                        {
+                          "tag": "span",
+                          "attributes": {
+                            "class": "kc-m-foot"
+                          },
+                          "children": [
+                            "XX%"
+                          ]
+                        },
+                        "\n        "
+                      ]
+                    },
+                    "\n        ",
+                    {
+                      "tag": "div",
+                      "attributes": {
+                        "class": "kc-mobile-miscellaneous-serving-size__circle"
+                      },
+                      "children": [
+                        "\n          ",
+                        {
+                          "tag": "span",
+                          "attributes": {
+                            "class": "kc-m-bold"
+                          },
+                          "children": [
+                            "Sugar"
+                          ]
+                        },
+                        "\n          ",
+                        {
+                          "tag": "strong",
+                          "attributes": {},
+                          "children": [
+                            "000"
+                          ]
+                        },
+                        "\n          ",
+                        {
+                          "tag": "span",
+                          "attributes": {
+                            "class": "kc-m-foot"
+                          },
+                          "children": [
+                            "XX%"
+                          ]
+                        },
+                        "\n        "
+                      ]
+                    },
+                    "\n      "
+                  ]
+                },
+                "\n      ",
+                {
+                  "tag": "span",
+                  "attributes": {
+                    "class": "kc-mobile-miscellaneous-serving-size__foot"
+                  },
+                  "children": [
+                    "% Daily value*"
+                  ]
+                },
+                "\n    "
+              ]
+            },
+            "\n  "
+          ]
+        }
+      },
+      "modules-mobile-visit-times": {
+        "type": "visit-times",
+        "platform": "mobile",
+        "render": {
+          "root": {
+            "tag": "section",
+            "attributes": {
+              "class": "kc-module kc-module--mobile kc-mobile-miscellaneous-visit-times",
+              "data-kc": "Mobile / Miscellaneous / Visit Times"
+            }
+          },
+          "content": [
+            "\n    ",
+            {
+              "tag": "div",
+              "attributes": {
+                "class": "kc-module-title"
+              },
+              "children": [
+                "\n      ",
+                {
+                  "tag": "h3",
+                  "attributes": {},
+                  "children": [
+                    "Best Times to Visit"
+                  ]
+                },
+                "\n    "
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "div",
+              "attributes": {
+                "class": "kc-mobile-miscellaneous-visit-times__graph",
+                "role": "img",
+                "aria-label": "Visit times values: 52, 52, 79, 79, 79, 79, 52"
+              },
+              "children": [
+                "\n      ",
+                {
+                  "tag": "span",
+                  "attributes": {
+                    "class": "kc-mobile-miscellaneous-visit-times__grid",
+                    "style": "top:0"
+                  },
+                  "children": [
+                    "\n      "
+                  ]
+                },
+                "\n      ",
+                {
+                  "tag": "span",
+                  "attributes": {
+                    "class": "kc-mobile-miscellaneous-visit-times__grid",
+                    "style": "top:40px"
+                  },
+                  "children": [
+                    "\n      "
+                  ]
+                },
+                "\n      ",
+                {
+                  "tag": "span",
+                  "attributes": {
+                    "class": "kc-mobile-miscellaneous-visit-times__grid",
+                    "style": "top:80px"
+                  },
+                  "children": [
+                    "\n      "
+                  ]
+                },
+                "\n      ",
+                {
+                  "tag": "div",
+                  "attributes": {
+                    "class": "kc-mobile-miscellaneous-visit-times__bars"
+                  },
+                  "children": [
+                    "\n        ",
+                    {
+                      "tag": "span",
+                      "attributes": {
+                        "class": "kc-mobile-miscellaneous-visit-times__bar",
+                        "style": "height:52px"
+                      },
+                      "children": [
+                        "\n        "
+                      ]
+                    },
+                    "\n        ",
+                    {
+                      "tag": "span",
+                      "attributes": {
+                        "class": "kc-mobile-miscellaneous-visit-times__bar",
+                        "style": "height:52px"
+                      },
+                      "children": [
+                        "\n        "
+                      ]
+                    },
+                    "\n        ",
+                    {
+                      "tag": "span",
+                      "attributes": {
+                        "class": "kc-mobile-miscellaneous-visit-times__bar",
+                        "style": "height:79px"
+                      },
+                      "children": [
+                        "\n        "
+                      ]
+                    },
+                    "\n        ",
+                    {
+                      "tag": "span",
+                      "attributes": {
+                        "class": "kc-mobile-miscellaneous-visit-times__bar",
+                        "style": "height:79px"
+                      },
+                      "children": [
+                        "\n        "
+                      ]
+                    },
+                    "\n        ",
+                    {
+                      "tag": "span",
+                      "attributes": {
+                        "class": "kc-mobile-miscellaneous-visit-times__bar",
+                        "style": "height:79px"
+                      },
+                      "children": [
+                        "\n        "
+                      ]
+                    },
+                    "\n        ",
+                    {
+                      "tag": "span",
+                      "attributes": {
+                        "class": "kc-mobile-miscellaneous-visit-times__bar",
+                        "style": "height:79px"
+                      },
+                      "children": [
+                        "\n        "
+                      ]
+                    },
+                    "\n        ",
+                    {
+                      "tag": "span",
+                      "attributes": {
+                        "class": "kc-mobile-miscellaneous-visit-times__bar",
+                        "style": "height:52px"
+                      },
+                      "children": [
+                        "\n        "
+                      ]
+                    },
+                    "\n      "
+                  ]
+                },
+                "\n      ",
+                {
+                  "tag": "div",
+                  "attributes": {
+                    "class": "kc-mobile-miscellaneous-visit-times__years"
+                  },
+                  "children": [
+                    "\n        ",
+                    {
+                      "tag": "span",
+                      "attributes": {
+                        "class": "kc-mobile-miscellaneous-visit-times__year"
+                      },
+                      "children": [
+                        "2018"
+                      ]
+                    },
+                    "\n        ",
+                    {
+                      "tag": "span",
+                      "attributes": {
+                        "class": "kc-mobile-miscellaneous-visit-times__year"
+                      },
+                      "children": [
+                        "2019"
+                      ]
+                    },
+                    "\n        ",
+                    {
+                      "tag": "span",
+                      "attributes": {
+                        "class": "kc-mobile-miscellaneous-visit-times__year"
+                      },
+                      "children": [
+                        "2020"
+                      ]
+                    },
+                    "\n        ",
+                    {
+                      "tag": "span",
+                      "attributes": {
+                        "class": "kc-mobile-miscellaneous-visit-times__year"
+                      },
+                      "children": [
+                        "2021"
+                      ]
+                    },
+                    "\n        ",
+                    {
+                      "tag": "span",
+                      "attributes": {
+                        "class": "kc-mobile-miscellaneous-visit-times__year"
+                      },
+                      "children": [
+                        "2022"
+                      ]
+                    },
+                    "\n        ",
+                    {
+                      "tag": "span",
+                      "attributes": {
+                        "class": "kc-mobile-miscellaneous-visit-times__year"
+                      },
+                      "children": [
+                        "2023"
+                      ]
+                    },
+                    "\n        ",
+                    {
+                      "tag": "span",
+                      "attributes": {
+                        "class": "kc-mobile-miscellaneous-visit-times__year"
+                      },
+                      "children": [
+                        "2024"
+                      ]
+                    },
+                    "\n      "
+                  ]
+                },
+                "\n    "
+              ]
+            },
+            "\n  "
+          ]
+        }
+      },
+      "modules-mobile-travel": {
+        "type": "travel",
+        "platform": "mobile",
+        "render": {
+          "root": {
+            "tag": "section",
+            "attributes": {
+              "class": "kc-module kc-module--mobile kc-mobile-miscellaneous-travel",
+              "data-kc": "Mobile / Miscellaneous / Travel"
+            }
+          },
+          "content": [
+            "\n    ",
+            {
+              "tag": "a",
+              "attributes": {
+                "class": "kc-btn-outline kc-mobile-miscellaneous-travel__action",
+                "href": "#"
+              },
+              "children": [
+                "\n      ",
+                {
+                  "tag": "img",
+                  "attributes": {
+                    "src": "../assets/icons/ic_fluent_book_globe_20_regular.svg",
+                    "alt": true,
+                    "aria-hidden": "true"
+                  },
+                  "children": []
+                },
+                "\n      ",
+                {
+                  "tag": "span",
+                  "attributes": {},
+                  "children": [
+                    "Travel guide"
+                  ]
+                },
+                "\n    "
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "a",
+              "attributes": {
+                "class": "kc-btn-outline kc-mobile-miscellaneous-travel__action",
+                "href": "#"
+              },
+              "children": [
+                "\n      ",
+                {
+                  "tag": "img",
+                  "attributes": {
+                    "src": "../assets/icons/ic_fluent_airplane_20_regular.svg",
+                    "alt": true,
+                    "aria-hidden": "true"
+                  },
+                  "children": []
+                },
+                "\n      ",
+                {
+                  "tag": "span",
+                  "attributes": {},
+                  "children": [
+                    "Book flights"
+                  ]
+                },
+                "\n    "
+              ]
+            },
+            "\n    ",
+            {
+              "tag": "a",
+              "attributes": {
+                "class": "kc-btn-outline kc-mobile-miscellaneous-travel__action",
+                "href": "#"
+              },
+              "children": [
+                "\n      ",
+                {
+                  "tag": "img",
+                  "attributes": {
+                    "src": "../assets/icons/ic_fluent_bed_20_regular.svg",
+                    "alt": true,
+                    "aria-hidden": "true"
+                  },
+                  "children": []
+                },
+                "\n      ",
+                {
+                  "tag": "span",
+                  "attributes": {},
+                  "children": [
+                    "Book hotels"
+                  ]
+                },
+                "\n    "
+              ]
+            },
+            "\n  "
+          ]
+        }
+      },
+      "modules-mobile-map": {
+        "type": "map",
+        "platform": "mobile",
+        "render": {
+          "root": {
+            "tag": "section",
+            "attributes": {
+              "class": "kc-module kc-module--mobile kc-mobile-miscellaneous-map",
+              "data-kc": "Mobile / Miscellaneous / Map"
+            }
+          },
+          "content": [
+            "\n    ",
+            {
+              "tag": "div",
+              "attributes": {
+                "class": "kc-mobile-miscellaneous-map__frame"
+              },
+              "children": [
+                "\n      ",
+                {
+                  "tag": "img",
+                  "attributes": {
+                    "src": "../assets/images/kc/maps/new-delhi.png",
+                    "alt": "Map of New Delhi, India"
+                  },
+                  "children": []
+                },
+                "\n      ",
+                {
+                  "tag": "a",
+                  "attributes": {
+                    "class": "kc-btn-on-image kc-miscellaneous-map__expand",
+                    "href": "https://commons.wikimedia.org/wiki/File:New_Delhi_map_no_titles.png",
+                    "aria-label": "Open map of New Delhi"
+                  },
+                  "children": [
+                    {
+                      "tag": "img",
+                      "attributes": {
+                        "src": "../assets/icons/ic_fluent_arrow_maximize_20_regular.svg",
+                        "alt": true,
+                        "aria-hidden": "true"
+                      },
+                      "children": []
+                    }
+                  ]
+                },
+                "\n      ",
+                {
+                  "tag": "span",
+                  "attributes": {
+                    "class": "kc-miscellaneous-map__credit"
+                  },
+                  "children": [
+                    {
+                      "tag": "a",
+                      "attributes": {
+                        "href": "https://commons.wikimedia.org/wiki/File:New_Delhi_map_no_titles.png"
+                      },
+                      "children": [
+                        "Winston Samuel"
+                      ]
+                    },
+                    " · ",
+                    {
+                      "tag": "a",
+                      "attributes": {
+                        "href": "https://www.openstreetmap.org/copyright"
+                      },
+                      "children": [
+                        "© OpenStreetMap contributors"
+                      ]
+                    },
+                    " · ",
+                    {
+                      "tag": "a",
+                      "attributes": {
+                        "href": "https://creativecommons.org/licenses/by-sa/4.0/"
+                      },
+                      "children": [
+                        "CC BY-SA 4.0"
+                      ]
+                    }
+                  ]
+                },
+                "\n    "
+              ]
+            },
+            "\n  "
+          ]
+        }
+      },
+      "card-desktop-travel": {
+        "type": "travel",
+        "platform": "desktop",
+        "render": {
+          "root": {
+            "tag": "section",
+            "attributes": {
+              "class": "kc-module kc-miscellaneous-travel",
+              "id": "kc-mod-travel",
+              "data-kc": "Miscellaneous / Travel",
+              "aria-label": "Travel"
+            }
+          },
+          "content": [
+            "\n            ",
+            {
+              "tag": "a",
+              "attributes": {
+                "class": "kc-btn-outline kc-miscellaneous-travel__action",
+                "href": "#"
+              },
+              "children": [
+                {
+                  "tag": "img",
+                  "attributes": {
+                    "src": "../assets/icons/ic_fluent_book_globe_20_regular.svg",
+                    "alt": true,
+                    "aria-hidden": "true"
+                  },
+                  "children": []
+                },
+                {
+                  "tag": "span",
+                  "attributes": {},
+                  "children": [
+                    "Travel guide"
+                  ]
+                }
+              ]
+            },
+            "\n            ",
+            {
+              "tag": "a",
+              "attributes": {
+                "class": "kc-btn-outline kc-miscellaneous-travel__action",
+                "href": "#"
+              },
+              "children": [
+                {
+                  "tag": "img",
+                  "attributes": {
+                    "src": "../assets/icons/ic_fluent_airplane_20_regular.svg",
+                    "alt": true,
+                    "aria-hidden": "true"
+                  },
+                  "children": []
+                },
+                {
+                  "tag": "span",
+                  "attributes": {},
+                  "children": [
+                    "Book flights"
+                  ]
+                }
+              ]
+            },
+            "\n            ",
+            {
+              "tag": "a",
+              "attributes": {
+                "class": "kc-btn-outline kc-miscellaneous-travel__action",
+                "href": "#"
+              },
+              "children": [
+                {
+                  "tag": "img",
+                  "attributes": {
+                    "src": "../assets/icons/ic_fluent_bed_20_regular.svg",
+                    "alt": true,
+                    "aria-hidden": "true"
+                  },
+                  "children": []
+                },
+                {
+                  "tag": "span",
+                  "attributes": {},
+                  "children": [
+                    "Book hotels"
+                  ]
+                }
+              ]
+            },
+            "\n          "
+          ]
+        }
+      },
+      "card-mobile-travel": {
+        "type": "travel",
+        "platform": "mobile",
+        "render": {
+          "root": {
+            "tag": "section",
+            "attributes": {
+              "class": "kc-module kc-module--mobile kc-mobile-miscellaneous-travel",
+              "id": "kc-mobile-travel",
+              "data-kc": "Mobile / Miscellaneous / Travel"
+            }
+          },
+          "content": [
+            "\n            ",
+            {
+              "tag": "a",
+              "attributes": {
+                "class": "kc-btn-outline kc-mobile-miscellaneous-travel__action",
+                "href": "#"
+              },
+              "children": [
+                "\n              ",
+                {
+                  "tag": "img",
+                  "attributes": {
+                    "src": "../assets/icons/ic_fluent_book_globe_20_regular.svg",
+                    "alt": true,
+                    "aria-hidden": "true"
+                  },
+                  "children": []
+                },
+                "\n              ",
+                {
+                  "tag": "span",
+                  "attributes": {},
+                  "children": [
+                    "Travel guide"
+                  ]
+                },
+                "\n            "
+              ]
+            },
+            "\n            ",
+            {
+              "tag": "a",
+              "attributes": {
+                "class": "kc-btn-outline kc-mobile-miscellaneous-travel__action",
+                "href": "#"
+              },
+              "children": [
+                "\n              ",
+                {
+                  "tag": "img",
+                  "attributes": {
+                    "src": "../assets/icons/ic_fluent_airplane_20_regular.svg",
+                    "alt": true,
+                    "aria-hidden": "true"
+                  },
+                  "children": []
+                },
+                "\n              ",
+                {
+                  "tag": "span",
+                  "attributes": {},
+                  "children": [
+                    "Book flights"
+                  ]
+                },
+                "\n            "
+              ]
+            },
+            "\n            ",
+            {
+              "tag": "a",
+              "attributes": {
+                "class": "kc-btn-outline kc-mobile-miscellaneous-travel__action",
+                "href": "#"
+              },
+              "children": [
+                "\n              ",
+                {
+                  "tag": "img",
+                  "attributes": {
+                    "src": "../assets/icons/ic_fluent_bed_20_regular.svg",
+                    "alt": true,
+                    "aria-hidden": "true"
+                  },
+                  "children": []
+                },
+                "\n              ",
+                {
+                  "tag": "span",
+                  "attributes": {},
+                  "children": [
+                    "Book hotels"
+                  ]
+                },
+                "\n            "
+              ]
+            },
+            "\n          "
           ]
         }
       }

@@ -10,6 +10,7 @@
   <script src="../assets/js/components/kc-module.js"></script>
   <script src="../assets/js/components/kc-modules/text-list.js"></script>
   <script src="../assets/js/components/kc-modules/image-list.js"></script>
+  <script src="../assets/js/components/kc-modules/travel-map.js"></script>
   <script src="../assets/js/components/kc-modules/media.js"></script>
   <style>
     * { box-sizing:border-box; }
@@ -246,24 +247,19 @@
 
     add("Miscellaneous", "Miscellaneous / Donate", "kc-miscellaneous-donate",
       `<div class="kc-miscellaneous-donate__copy"><div class="kc-miscellaneous-donate__text"><strong>Donate with Contoso</strong><p>Your gift will support [company]</p></div><button class="kc-btn-outline kc-miscellaneous-donate__button" type="button">Donate</button></div><div class="kc-miscellaneous-donate__image">${mono("C", "Contoso", 104, 22)}</div>`, "Donate");
-    add("Miscellaneous", "Miscellaneous / Timeline", "kc-miscellaneous-timeline",
-      `${title("Timeline title", false)}<ol class="kc-miscellaneous-timeline__list" style="list-style:none;padding:0">${[1901, 1902, 1903, 1904, 1905].map(year => `<li class="kc-miscellaneous-timeline__entry"><span class="kc-miscellaneous-timeline__rail"></span><div class="kc-miscellaneous-timeline__content"><strong class="kc-miscellaneous-timeline__year">${year}</strong><p class="kc-miscellaneous-timeline__quote">${longCopy}</p></div></li>`).join("")}</ol>`);
+    modules.push({ section: "Miscellaneous", label: "Miscellaneous / Timeline", moduleSample: "modules-desktop-timeline" });
     add("Miscellaneous", "Miscellaneous / Quote", "kc-miscellaneous-quote",
       `<figure class="kc-miscellaneous-quote__frame"><img class="kc-miscellaneous-quote__glyph" src="../assets/icons/ic_fluent_text_quote_24_filled.svg" alt="" aria-hidden="true"><img class="kc-miscellaneous-quote__glyph kc-miscellaneous-quote__glyph--close" src="../assets/icons/ic_fluent_text_quote_24_filled.svg" alt="" aria-hidden="true"><blockquote class="kc-miscellaneous-quote__text">${longCopy}</blockquote></figure>`, "Quote");
-    add("Miscellaneous", "Miscellaneous / Serving Size", "kc-miscellaneous-serving-size",
-      `<strong class="kc-miscellaneous-serving-size__label">Serving Size: Food (size)</strong><div class="kc-miscellaneous-serving-size__content"><div class="kc-miscellaneous-serving-size__circles">${["Calories", "Fat", "Carbs", "Sugar"].map(name => `<div class="kc-miscellaneous-serving-size__circle"><span class="kc-copy-bold">${name}</span><strong>000</strong><span class="kc-copy-small">XX%</span></div>`).join("")}</div><span class="kc-miscellaneous-serving-size__foot">% Daily value*</span></div>`, "Serving size");
-    add("Miscellaneous", "Miscellaneous / Visit Times", "kc-miscellaneous-visit-times",
-      `${title("Best times to visit")}<div class="kc-miscellaneous-visit-times__graph" role="img" aria-label="Visitor numbers 2015–2026, highest 2020–2023">${[0, 40, 80].map(y => `<span class="kc-miscellaneous-visit-times__grid" style="top:${y}px"></span>`).join("")}${[29, 29, 29, 52, 52, 79, 79, 79, 79, 52, 19, 19].map((h, i) => `<span class="kc-miscellaneous-visit-times__bar" style="left:${[12, 48.01, 84.01, 120.01, 156.01, 192.01, 228.01, 264.01, 300.01, 336.01, 372.01, 408.01][i]}px;top:${79 - h}px;height:${h}px"></span>`).join("")}${Array.from({ length:12 }, (_, i) => `<span class="kc-miscellaneous-visit-times__year" style="left:${i * 35.97}px;top:${i > 7 ? 84 : 83}px">${2015 + i}</span>`).join("")}</div>`);
-    add("Miscellaneous", "Miscellaneous / Travel", "kc-miscellaneous-travel",
-      [["book_globe", "Travel guide"], ["airplane", "Book flights"], ["bed", "Book hotels"]].map(([icon, text]) => `<a class="kc-btn-outline kc-miscellaneous-travel__action" href="#"><img src="../assets/icons/ic_fluent_${icon}_20_regular.svg" alt="" aria-hidden="true"><span>${text}</span></a>`).join(""), "Travel");
+    modules.push({ section: "Miscellaneous", label: "Miscellaneous / Serving Size", moduleSample: "modules-desktop-serving-size" });
+    modules.push({ section: "Miscellaneous", label: "Miscellaneous / Visit Times", moduleSample: "modules-desktop-visit-times" });
+    modules.push({ section: "Miscellaneous", label: "Miscellaneous / Travel", moduleSample: "modules-desktop-travel" });
     add("Miscellaneous", "Miscellaneous / Listen", "kc-miscellaneous-listen",
       `<div class="kc-module-title kc-miscellaneous-listen__title"><h3>Listen</h3></div><div class="kc-miscellaneous-listen__row">${[["1", "Stream One", true], ["2", "Radio Two"], ["3", "Tune Three"], ["4", "Wave Four"]].map(([letter, name, round]) => `<a class="kc-btn-outline kc-miscellaneous-listen__service" href="#">${mono(letter, name, 32, 32, round)}<span class="kc-copy-bold">${name}</span></a>`).join("")}</div>`, "Listen");
     add("Miscellaneous", "Miscellaneous / Company Details", "kc-miscellaneous-company-details",
       [true, false].map(shadow => `<div class="kc-card kc-miscellaneous-company-details__card"><div class="kc-miscellaneous-company-details__inner${shadow ? " kc-miscellaneous-company-details__inner--shadow" : ""}">${image("miscellaneous-company-details", shadow ? 1 : 2, 24, 24, 100, "Company")}<div class="kc-miscellaneous-company-details__text"><span class="kc-copy-bold">Lorem ipsum</span><span class="kc-copy">Lorem ipsum</span></div></div></div>`).join(""), "Company details");
     add("Miscellaneous", "Miscellaneous / Social Media", "kc-miscellaneous-social-media",
       [["E", "Open Encyclopedia"], ["F", "Friends app"], ["M", "Movie DB"], ["P", "Photo app"], ["T", "Video app"]].map(([letter, text]) => `<a class="kc-btn-outline kc-miscellaneous-social-media__pill" href="#">${mono(letter, text, 28, 28, true)}<span class="kc-copy-small">${text}</span></a>`).join("") + `<button class="kc-btn-flipper kc-miscellaneous-social-media__next" type="button" aria-label="Next"><img src="../assets/icons/ic_fluent_chevron_right_16_regular.svg" alt="" aria-hidden="true"></button>`, "Social media");
-    add("Miscellaneous", "Miscellaneous / Map", "kc-miscellaneous-map",
-      `<div class="kc-miscellaneous-map__frame"><img src="../assets/images/kc/maps/new-delhi.png" alt="Map of New Delhi, India"><a class="kc-btn-on-image kc-miscellaneous-map__expand" href="https://commons.wikimedia.org/wiki/File:New_Delhi_map_no_titles.png" aria-label="Open map of New Delhi"><img src="../assets/icons/ic_fluent_arrow_maximize_20_regular.svg" alt="" aria-hidden="true"></a><span class="kc-miscellaneous-map__credit"><a href="https://commons.wikimedia.org/wiki/File:New_Delhi_map_no_titles.png">Winston Samuel</a> · <a href="https://www.openstreetmap.org/copyright">© OpenStreetMap contributors</a> · <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></span></div>`, "Map");
+    modules.push({ section: "Miscellaneous", label: "Miscellaneous / Map", moduleSample: "modules-desktop-map" });
     add("Miscellaneous", "Miscellaneous / Products", "kc-miscellaneous-products",
       `${title("Shop related products")}<div class="kc-miscellaneous-products__row">${[1, 2, 3].map(n => `<article class="kc-card kc-miscellaneous-products__card">${image("miscellaneous-products", n, 120, 120, 6, `Product ${n} image`)}<div class="kc-miscellaneous-products__text"><span class="kc-copy kc-no-ls">Product title</span><strong class="kc-copy-bold kc-no-ls">${n === 1 ? "$10.00 $100.00" : "$10.00"}</strong><span class="kc-copy kc-no-ls kc-miscellaneous-products__store">Store</span></div></article>`).join("")}</div>`);
 
@@ -283,7 +279,8 @@
         const sample = textListSamples.get(item.label);
         const imageListSample = item.imageListSample;
         const mediaSample = item.mediaSample;
-        const root = document.createElement(sample || imageListSample || mediaSample ? "kc-module" : "section");
+        const moduleSample = item.moduleSample;
+        const root = document.createElement(sample || imageListSample || mediaSample || moduleSample ? "kc-module" : "section");
         if (sample) {
           root.setAttribute("type", sample[0]);
           root.setAttribute("variant", sample[1]);
@@ -299,6 +296,12 @@
           root.setAttribute("type", sampleData.type);
           root.setAttribute("platform", "desktop");
           root.setAttribute("variant", mediaSample);
+        } else if (moduleSample) {
+          const sampleData = window.KC_ENTITIES._samples.modules[moduleSample];
+          if (!sampleData) throw new Error(`Missing KC travel-map sample "${moduleSample}".`);
+          root.setAttribute("type", sampleData.type);
+          root.setAttribute("platform", "desktop");
+          root.setAttribute("variant", moduleSample);
         } else {
           root.className = `kc-module ${item.cls}`;
           root.dataset.kc = item.label.split(" — ")[0];

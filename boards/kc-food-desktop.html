@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="../assets/css/kc-components.css"><script src="../assets/js/data/kc-entities.js"></script>  <script src="../assets/js/components/kc-module.js"></script>
   <script src="../assets/js/components/kc-modules/text-list.js"></script>
   <script src="../assets/js/components/kc-modules/image-list.js"></script>
+  <script src="../assets/js/components/kc-modules/travel-map.js"></script>
   <script src="../assets/js/components/kc-hero.js"></script>
   <style>
     * { box-sizing:border-box; }
@@ -70,18 +71,7 @@
         <article class="kc-card-stack kc-food-desktop kc-theme-red-2" data-kc="Segment / Food" aria-label="Pizza Margherita knowledge card">
           <kc-hero entity="food" platform="desktop"></kc-hero>
 
-          <section class="kc-module kc-miscellaneous-serving-size" id="kc-food-mod-1" data-kc="Miscellaneous / Serving Size" aria-label="Serving size">
-            <strong class="kc-miscellaneous-serving-size__label">Serving Size: Food (size)</strong>
-            <div class="kc-miscellaneous-serving-size__content">
-              <div class="kc-miscellaneous-serving-size__circles">
-                <div class="kc-miscellaneous-serving-size__circle"><span class="kc-copy-bold">Calories</span><strong>000</strong></div>
-                <div class="kc-miscellaneous-serving-size__circle"><span class="kc-copy-bold">Fat</span><strong>000</strong></div>
-                <div class="kc-miscellaneous-serving-size__circle"><span class="kc-copy-bold">Carbs</span><strong>000</strong><span class="kc-copy-small">XX%</span></div>
-                <div class="kc-miscellaneous-serving-size__circle"><span class="kc-copy-bold">Sugar</span><strong>000</strong><span class="kc-copy-small">XX%</span></div>
-              </div>
-              <span class="kc-miscellaneous-serving-size__foot">% Daily value*</span>
-            </div>
-          </section>
+          <kc-module entity="food" platform="desktop" index="0"></kc-module>
 
           <kc-module entity="food" platform="desktop" index="1"></kc-module>
 

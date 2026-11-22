@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="../assets/css/kc-components.css"><script src="../assets/js/data/kc-entities.js"></script>  <script src="../assets/js/components/kc-module.js"></script>
   <script src="../assets/js/components/kc-modules/text-list.js"></script>
   <script src="../assets/js/components/kc-modules/image-list.js"></script>
+  <script src="../assets/js/components/kc-modules/travel-map.js"></script>
   <script src="../assets/js/components/kc-hero.js"></script>
   <style>
     * { box-sizing:border-box; }
@@ -76,53 +77,11 @@
 
           <kc-module entity="city" platform="desktop" index="0"></kc-module>
 
-          <section class="kc-module kc-miscellaneous-map" id="kc-city-mod-2" data-kc="Miscellaneous / Map" aria-label="Map of San Francisco">
-            <div class="kc-miscellaneous-map__frame" style="background-color:var(--kc-placeholder)">
-              <img src="../assets/images/kc/modules/city/city-desktop-top-fact-map-01.png" alt="Map of San Francisco" onerror="this.style.display='none'">
-              <button class="kc-btn-on-image kc-miscellaneous-map__expand" type="button" aria-label="Expand map of San Francisco">
-                <img src="../assets/icons/ic_fluent_arrow_maximize_20_regular.svg" alt="" aria-hidden="true">
-              </button>
-            </div>
-          </section>
+          <kc-module entity="city" platform="desktop" index="1"></kc-module>
 
-          <section class="kc-module kc-miscellaneous-travel" id="kc-city-mod-3" data-kc="Miscellaneous / Travel" aria-label="Travel">
-            <a class="kc-btn-outline kc-miscellaneous-travel__action" href="#"><img src="../assets/icons/ic_fluent_book_globe_20_regular.svg" alt="" aria-hidden="true"><span>Travel guide</span></a>
-            <a class="kc-btn-outline kc-miscellaneous-travel__action" href="#"><img src="../assets/icons/ic_fluent_airplane_20_regular.svg" alt="" aria-hidden="true"><span>Book flights</span></a>
-            <a class="kc-btn-outline kc-miscellaneous-travel__action" href="#"><img src="../assets/icons/ic_fluent_bed_20_regular.svg" alt="" aria-hidden="true"><span>Book hotels</span></a>
-          </section>
+          <kc-module entity="city" platform="desktop" index="2"></kc-module>
 
-          <section class="kc-module kc-miscellaneous-visit-times" id="kc-city-mod-4" data-kc="Miscellaneous / Visit Times" aria-label="Best times to visit">
-            <div class="kc-module-title"><h3>Best times to visit</h3><a class="kc-link" href="#" aria-label="See all Best times to visit"><span class="kc-title-chevron"><img src="../assets/icons/ic_fluent_chevron_right_16_regular.svg" alt="" aria-hidden="true"></span></a></div>
-            <div class="kc-miscellaneous-visit-times__graph" role="img" aria-label="Visit times 2015–2026, highest 2020–2023">
-              <span class="kc-miscellaneous-visit-times__grid" style="top:0px"></span>
-              <span class="kc-miscellaneous-visit-times__grid" style="top:40px"></span>
-              <span class="kc-miscellaneous-visit-times__grid" style="top:80px"></span>
-              <span class="kc-miscellaneous-visit-times__bar" style="left:12px;top:50px;height:29px"></span>
-              <span class="kc-miscellaneous-visit-times__bar" style="left:48.01px;top:50px;height:29px"></span>
-              <span class="kc-miscellaneous-visit-times__bar" style="left:84.01px;top:50px;height:29px"></span>
-              <span class="kc-miscellaneous-visit-times__bar" style="left:120.01px;top:27px;height:52px"></span>
-              <span class="kc-miscellaneous-visit-times__bar" style="left:156.01px;top:27px;height:52px"></span>
-              <span class="kc-miscellaneous-visit-times__bar" style="left:192.01px;top:0px;height:79px"></span>
-              <span class="kc-miscellaneous-visit-times__bar" style="left:228.01px;top:0px;height:79px"></span>
-              <span class="kc-miscellaneous-visit-times__bar" style="left:264.01px;top:0px;height:79px"></span>
-              <span class="kc-miscellaneous-visit-times__bar" style="left:300.01px;top:0px;height:79px"></span>
-              <span class="kc-miscellaneous-visit-times__bar" style="left:336.01px;top:27px;height:52px"></span>
-              <span class="kc-miscellaneous-visit-times__bar" style="left:372.01px;top:60px;height:19px"></span>
-              <span class="kc-miscellaneous-visit-times__bar" style="left:408.01px;top:60px;height:19px"></span>
-              <span class="kc-miscellaneous-visit-times__year" style="left:0px;top:83px">2015</span>
-              <span class="kc-miscellaneous-visit-times__year" style="left:35.97px;top:83px">2016</span>
-              <span class="kc-miscellaneous-visit-times__year" style="left:71.94px;top:83px">2017</span>
-              <span class="kc-miscellaneous-visit-times__year" style="left:107.91px;top:83px">2018</span>
-              <span class="kc-miscellaneous-visit-times__year" style="left:143.88px;top:83px">2019</span>
-              <span class="kc-miscellaneous-visit-times__year" style="left:179.85px;top:83px">2020</span>
-              <span class="kc-miscellaneous-visit-times__year" style="left:215.82px;top:83px">2021</span>
-              <span class="kc-miscellaneous-visit-times__year" style="left:251.79px;top:83px">2022</span>
-              <span class="kc-miscellaneous-visit-times__year" style="left:287.76px;top:84px">2023</span>
-              <span class="kc-miscellaneous-visit-times__year" style="left:323.73px;top:84px">2024</span>
-              <span class="kc-miscellaneous-visit-times__year" style="left:359.7px;top:84px">2025</span>
-              <span class="kc-miscellaneous-visit-times__year" style="left:395.67px;top:84px">2026</span>
-            </div>
-          </section>
+          <kc-module entity="city" platform="desktop" index="3"></kc-module>
 
           <kc-module entity="city" platform="desktop" index="4"></kc-module>
 

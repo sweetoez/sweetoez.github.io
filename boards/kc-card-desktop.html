@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="../assets/css/kc-components.css"><script src="../assets/js/data/kc-entities.js"></script>  <script src="../assets/js/components/kc-module.js"></script>
   <script src="../assets/js/components/kc-modules/text-list.js"></script>
   <script src="../assets/js/components/kc-modules/image-list.js"></script>
+  <script src="../assets/js/components/kc-modules/travel-map.js"></script>
   <script src="../assets/js/components/kc-hero.js"></script>
   <style>
     * { box-sizing:border-box; }
@@ -27,11 +28,7 @@
         <article class="kc-card-stack" data-kc="Designer Card" aria-label="Riverside Old Town knowledge card">
           <kc-hero variant="cardDesktop"></kc-hero>
 
-          <section class="kc-module kc-miscellaneous-travel" id="kc-mod-travel" data-kc="Miscellaneous / Travel" aria-label="Travel">
-            <a class="kc-btn-outline kc-miscellaneous-travel__action" href="#"><img src="../assets/icons/ic_fluent_book_globe_20_regular.svg" alt="" aria-hidden="true"><span>Travel guide</span></a>
-            <a class="kc-btn-outline kc-miscellaneous-travel__action" href="#"><img src="../assets/icons/ic_fluent_airplane_20_regular.svg" alt="" aria-hidden="true"><span>Book flights</span></a>
-            <a class="kc-btn-outline kc-miscellaneous-travel__action" href="#"><img src="../assets/icons/ic_fluent_bed_20_regular.svg" alt="" aria-hidden="true"><span>Book hotels</span></a>
-          </section>
+          <kc-module type="travel" platform="desktop" variant="card-desktop-travel"></kc-module>
 
           <kc-module type="places-to-visit" platform="desktop" variant="card-desktop-places-to-visit"></kc-module>
 
