@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>MSN responsive NTP layout</title>
   <link rel="stylesheet" href="../assets/css/msn-components.css">
+  <script src="../assets/js/components/ntp-composer.js"></script>
 
   <style>
     .page-shell {
@@ -359,37 +360,6 @@
       padding: 32px;
     }
 
-    .ntp-search-slot {
-      display: flex;
-      width: 716px;
-      max-width: 100%;
-      height: 62px;
-      align-items: center;
-      gap: 8px;
-      padding: 6px;
-      border: 1px solid rgba(0, 0, 0, 0.08);
-      border-radius: 32px;
-      background: #FFFFFF;
-      box-shadow: 0 0 0 4px rgba(15, 108, 189, .08), 0 8px 32px rgba(15, 108, 189, .16);
-    }
-    .ntp-search-slot:hover { border-color: rgba(0, 0, 0, .16); }
-    .ntp-search-slot:focus-within { border-color: #0F6CBD; }
-    .ntp-search-icon { display: block; width: 20px; height: 20px; flex: none; margin-left: 9px; }
-    .ntp-search-slot input {
-      min-width: 0;
-      height: 100%;
-      flex: 1;
-      padding: 0;
-      border: 0;
-      background: transparent;
-      color: #242424;
-      font: 400 16px/24px "Segoe UI Variable Text", "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
-    }
-    .ntp-search-slot input::placeholder { color: #616161; opacity: 1; }
-    .ntp-search-submit { display: flex; width: 36px; height: 36px; flex: none; align-items: center; justify-content: center; padding: 0; border: 0; border-radius: 50%; background: #272320; }
-    .ntp-search-submit img { width: 20px; height: 20px; filter: brightness(0) invert(1); }
-    .ntp-search-submit:hover:not(:disabled) { background: #3B3633; }
-    .ntp-search-submit:active:not(:disabled) { background: #1A1715; }
 
     .ntp-shortcuts {
       display: flex;
@@ -482,8 +452,8 @@
     .feeds-button img { width: 20px; height: 20px; }
     .feeds-button:hover:not(:disabled) { background: #F5F5F5; }
     .feeds-button:active:not(:disabled) { background: #EBEBEB; }
-    .ntp-action:focus-visible, .ntp-search-submit:focus-visible, .ntp-search-slot input:focus-visible, .feeds-button:focus-visible { outline: 2px solid #000000; outline-offset: 1px; box-shadow: 0 0 0 1px #FFFFFF; }
-    .ntp-action:disabled, .ntp-search-submit:disabled, .feeds-button:disabled { opacity: .4; cursor: not-allowed; }
+    .ntp-action:focus-visible, .feeds-button:focus-visible { outline: 2px solid #000000; outline-offset: 1px; box-shadow: 0 0 0 1px #FFFFFF; }
+    .ntp-action:disabled, .feeds-button:disabled { opacity: .4; cursor: not-allowed; }
 
     html[data-embed="true"] body {
       overflow-x: hidden;
@@ -777,11 +747,7 @@
           </div>
         </nav>
         <section class="ntp-hero" aria-label="Search and shortcuts">
-          <form class="ntp-search-slot" role="search">
-            <img class="ntp-search-icon" src="../assets/icons/search_20_regular.svg" alt="" aria-hidden="true">
-            <input type="search" aria-label="Ask Copilot" placeholder="Ask Copilot">
-            <button class="ntp-search-submit" type="submit" aria-label="Submit search"><img src="../assets/icons/arrow_up_20_regular.svg" alt="" aria-hidden="true"></button>
-          </form>
+          <ntp-composer></ntp-composer>
           <div class="ntp-shortcuts" aria-label="Shortcuts">
             <div class="ntp-shortcut" aria-hidden="true"><span class="ntp-shortcut-icon"></span><span class="ntp-shortcut-label"></span></div>
             <div class="ntp-shortcut" aria-hidden="true"><span class="ntp-shortcut-icon"></span><span class="ntp-shortcut-label"></span></div>

@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="../assets/css/fluent-motion.css">
   <script src="../assets/js/components/msn-header-controls.js"></script>
   <script src="../assets/js/components/edge-chrome.js"></script>
+  <script src="../assets/js/components/ntp-composer.js"></script>
   <script defer src="../assets/js/fluent-motion.js"></script>
   <script defer src="../assets/js/edge-components.js"></script>
   <style>
@@ -164,13 +165,7 @@
               <msn-header-controls></msn-header-controls>
             </nav>
             <section class="ntp-hero" aria-label="Search and shortcuts">
-              <div class="ntp-search-shell">
-                <form class="ntp-search-slot" role="search">
-                  <button class="ntp-search-submit" type="submit" aria-label="Search"><span class="edge-icon" data-icon="search24" aria-hidden="true"></span></button>
-                  <input type="search" aria-label="Ask Copilot" placeholder="Ask Copilot">
-                  <button class="ntp-search-submit" type="button" aria-label="Copilot"><img src="../assets/images/windows/taskbar/copilot.svg" width="24" height="24" alt="" aria-hidden="true"></button>
-                </form>
-              </div>
+              <ntp-composer></ntp-composer>
               <nav class="ntp-shortcuts" aria-label="Shortcuts">
                 <button class="ntp-shortcut" type="button" aria-label="Office"><span class="ntp-shortcut-icon"><img src="../assets/images/windows/taskbar/office.svg" alt="" aria-hidden="true"></span><span class="ntp-shortcut-label">Office</span></button>
                 <button class="ntp-shortcut" type="button" aria-label="Outlook"><span class="ntp-shortcut-icon"><img src="../assets/images/windows/taskbar/outlook.svg" alt="" aria-hidden="true"></span><span class="ntp-shortcut-label">Outlook</span></button>
