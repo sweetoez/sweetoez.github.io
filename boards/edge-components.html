@@ -6,7 +6,11 @@
   <title>Edge components</title>
   <link rel="stylesheet" href="../css/site.css">
   <link rel="stylesheet" href="../assets/css/edge-chrome.css">
+  <link rel="stylesheet" href="../assets/css/msn-components.css">
+  <link rel="stylesheet" href="../assets/css/msn-shell.css">
+  <link rel="stylesheet" href="../assets/css/windows-shell.css">
   <link rel="stylesheet" href="../assets/css/fluent-motion.css">
+  <script src="../assets/js/components/msn-header-controls.js"></script>
   <script defer src="../assets/js/fluent-motion.js"></script>
   <script defer src="../assets/js/edge-components.js"></script>
   <style>
@@ -205,13 +209,7 @@
           <div class="edge-components-page">
             <nav class="ntp-topnav" aria-label="MSN navigation">
               <button class="ntp-launcher" type="button" aria-label="App launcher"><span class="edge-icon" data-icon="grid24" aria-hidden="true"></span></button>
-              <div class="p2-header__controls">
-                <label class="p2-header__toggle"><span class="ntp-toggle-label">Copilot Discover (Preview)</span><input type="checkbox" role="switch" checked aria-label="Copilot Discover (Preview)"></label>
-                <button class="p2-header__button" type="button" aria-label="Refresh"><span class="edge-icon" data-icon="refresh24" aria-hidden="true"></span></button>
-                <button class="p2-header__button" type="button" aria-label="Notifications"><span class="edge-icon" data-icon="alert24" aria-hidden="true"></span></button>
-                <button class="p2-header__button" type="button" aria-label="Feedback"><span class="edge-icon" data-icon="feedback24" aria-hidden="true"></span></button>
-                <button class="p2-header__profile" type="button" aria-label="Olivia profile"><span class="p2-header__avatar"><img src="../assets/images/windows/avatar.png" alt="" aria-hidden="true" onerror="this.remove()"><span>OL</span></span></button>
-              </div>
+              <msn-header-controls></msn-header-controls>
             </nav>
             <section class="ntp-hero" aria-label="Search and shortcuts">
               <div class="ntp-search-shell">

@@ -514,9 +514,7 @@ html[data-theme="dark"] .edge-amazon--dark {
   color: var(--edge-icon);
 }
 
-.ntp-launcher,
-.ntp-topnav .p2-header__button,
-.ntp-topnav .p2-header__profile {
+.ntp-launcher {
   display: inline-flex;
   width: 40px;
   min-width: 40px;
@@ -532,9 +530,7 @@ html[data-theme="dark"] .edge-amazon--dark {
   cursor: pointer;
 }
 
-.ntp-launcher .edge-icon,
-.ntp-topnav .p2-header__button .win-icon,
-.ntp-topnav .p2-header__button .edge-icon {
+.ntp-launcher .edge-icon {
   width: 24px;
   height: 24px;
 }
@@ -550,53 +546,6 @@ html[data-theme="dark"] .edge-amazon--dark {
   font-weight: 650;
 }
 
-.ntp-topnav .p2-header__controls {
-  display: flex;
-  min-width: 0;
-  align-items: center;
-  gap: 8px;
-}
-
-.ntp-topnav .p2-header__toggle {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  color: var(--edge-icon);
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 20px;
-  white-space: nowrap;
-}
-
-.ntp-topnav .p2-header__toggle input {
-  width: 40px;
-  height: 20px;
-  flex-basis: 40px;
-}
-
-.ntp-topnav .p2-header__avatar {
-  position: relative;
-  display: flex;
-  width: 32px;
-  height: 32px;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  border: 1px solid var(--edge-outline);
-  border-radius: 50%;
-  background: #D3D3D3;
-  color: #272320;
-  font-size: 9px;
-  line-height: 1;
-}
-
-.ntp-topnav .p2-header__avatar img {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
 
 .ntp-topnav button:hover:not(:disabled) {
   background: rgba(0, 0, 0, .06);

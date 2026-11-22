@@ -21,6 +21,9 @@ const iconPaths = {
   dismiss16: "../assets/icons/dismiss_16_regular.svg",
   back20: "../assets/icons/arrow_left_20_regular.svg",
   refresh16: "../assets/icons/arrow_clockwise_16_regular.svg",
+  refresh24: "../assets/icons/ic_fluent_arrow_clockwise_24_regular.svg",
+  alert24: "../assets/icons/ic_fluent_alert_24_regular.svg",
+  feedback24: "../assets/icons/ic_fluent_person_feedback_24_regular.svg",
   search16: "../assets/icons/ic_fluent_search_16_regular.svg",
   star20: "../assets/icons/star_20_regular.svg",
   more20: "../assets/icons/more_horizontal_20_regular.svg",
@@ -167,7 +170,7 @@ async function inlineIcon(slot) {
 }
 
 function hydrateIcons() {
-  document.querySelectorAll(".edge-window [data-icon]").forEach((slot) => {
+  document.querySelectorAll(".edge-window [data-icon], msn-header-controls [data-icon]").forEach((slot) => {
     inlineIcon(slot).catch((error) => {
       slot.dataset.iconError = "true";
       console.error(error);

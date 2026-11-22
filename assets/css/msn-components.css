@@ -197,6 +197,154 @@ html[data-theme="dark-navy"] {
   --dg-1u-meta: #C2CADF;
 }
 
+msn-header-controls {
+  display: contents;
+}
+
+.p2-header__controls {
+  display: flex;
+  height: 40px;
+  min-width: 0;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+  color: var(--w-ink);
+}
+
+.p2-header__toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--w-ink);
+  font: 410 14px/20px "Segoe UI Variable Text", "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.p2-header__toggle input {
+  position: relative;
+  width: 40px;
+  height: 20px;
+  flex: 0 0 40px;
+  appearance: none;
+  margin: 0;
+  padding: 0;
+  border: 1px solid #616161;
+  border-radius: 9999px;
+  background: transparent;
+  cursor: pointer;
+}
+
+.p2-header__toggle input::before {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #616161;
+  content: "";
+  transition: transform var(--fluent-dur-fast) var(--fluent-ease);
+}
+
+.p2-header__toggle input:checked {
+  border-color: transparent;
+  background: #32AD52;
+}
+
+.p2-header__toggle input:checked::before {
+  background: #FFFFFF;
+  transform: translateX(22px);
+}
+
+.p2-header__button,
+.p2-header__profile {
+  display: flex;
+  width: 40px;
+  min-width: 40px;
+  height: 40px;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  background: transparent;
+  color: var(--w-ink);
+  cursor: pointer;
+}
+
+.p2-header__button .win-icon,
+.p2-header__button .edge-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.p2-header__profile {
+  padding: 8px;
+}
+
+.p2-header__avatar {
+  display: flex;
+  position: relative;
+  width: 24px;
+  height: 24px;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, .0578);
+  border-radius: 50%;
+  background: #D3D3D3;
+  color: #272320;
+  font-size: 9px;
+  line-height: 1;
+}
+
+.p2-header__avatar img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.p2-header__button:hover:not(:disabled),
+.p2-header__profile:hover:not(:disabled) {
+  background: rgba(0, 0, 0, .04);
+}
+
+.p2-header__button:active:not(:disabled),
+.p2-header__profile:active:not(:disabled) {
+  background: rgba(0, 0, 0, .08);
+  transform: scale(.98);
+}
+
+.p2-header__button:focus-visible,
+.p2-header__profile:focus-visible,
+.p2-header__toggle input:focus-visible {
+  outline: 2px solid var(--w-ink);
+  outline-offset: 2px;
+}
+
+html[data-theme="dark"] .p2-header__button,
+html[data-theme="dark-navy"] .p2-header__button,
+html[data-theme="dark"] .p2-header__profile,
+html[data-theme="dark-navy"] .p2-header__profile,
+html[data-theme="dark"] .p2-header__toggle,
+html[data-theme="dark-navy"] .p2-header__toggle {
+  color: var(--w-ink);
+}
+
+html:is([data-theme="dark"], [data-theme="dark-navy"]) .p2-header__button:hover:not(:disabled),
+html:is([data-theme="dark"], [data-theme="dark-navy"]) .p2-header__profile:hover:not(:disabled) {
+  background: rgba(255, 255, 255, .06);
+}
+
+html:is([data-theme="dark"], [data-theme="dark-navy"]) .p2-header__button:active:not(:disabled),
+html:is([data-theme="dark"], [data-theme="dark-navy"]) .p2-header__profile:active:not(:disabled) {
+  background: rgba(255, 255, 255, .10);
+}
+
 .seg-widget{box-sizing:border-box;position:relative;display:flex;align-items:stretch;width:100%;min-height:368px;padding:12px;border-radius:24px;background:var(--w-surface);box-shadow:inset 0 0 0 1px var(--w-stroke);overflow:hidden;font-family:var(--w-font);color:var(--w-ink);}
 .seg-widget *{box-sizing:border-box;margin:0;}
 .seg-more{position:absolute;top:24px;right:24px;z-index:2;width:36px;height:36px;padding:0 6px;display:flex;align-items:center;justify-content:center;border-radius:12px;border:1px solid rgba(255,255,255,0);background:rgba(255,255,255,0.70);box-shadow:0 0 1px rgba(0,0,0,0.15);cursor:pointer;visibility:hidden;}
