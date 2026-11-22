@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Windows panel</title>
   <link rel="stylesheet" href="../css/site.css">
-  <link rel="stylesheet" href="../assets/css/msn-components.css">
+  <link rel="stylesheet" href="../assets/css/msn-components.css?v=4">
   <link rel="stylesheet" href="../assets/css/msn-shell.css">
   <link rel="stylesheet" href="../assets/css/windows-desktop.css">
   <link rel="stylesheet" href="../assets/css/windows-shell.css">
@@ -15,10 +15,11 @@
   <script src="../assets/js/components/windows-wallpaper.js"></script>
   <script src="../assets/js/components/msn-header-controls.js"></script>
   <script src="../assets/js/components/msn-card.js"></script>
-  <script defer src="../assets/js/windows-shell.js?v=133"></script>
-  <link rel="stylesheet" href="../assets/css/fluent-motion.css">
+  <script src="../assets/js/components/msn-widget-more.js"></script>
+  <script defer src="../assets/js/windows-shell.js?v=134"></script>
+  <link rel="stylesheet" href="../assets/css/fluent-motion.css?v=2">
   <script defer src="../assets/js/fluent-motion.js"></script>
-  <script defer src="../assets/js/digest.js"></script>
+  <script defer src="../assets/js/digest.js?v=3"></script>
 
 </head>
 <body class="win-page demo">
@@ -134,7 +135,7 @@
               </article>
 
                 <article class="card u1 seg-widget seg-weather prong-weather" aria-label="Weather, Seattle">
-                <button class="seg-more" type="button" aria-label="More options"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="12" r="1.75" fill="currentColor"/><circle cx="12" cy="12" r="1.75" fill="currentColor"/><circle cx="18" cy="12" r="1.75" fill="currentColor"/></svg></button>
+                <msn-widget-more></msn-widget-more>
                 <div class="wx-content">
                   <img class="wx-sun" src="../assets/images/msn/widgets/wx-sun.svg" alt="" aria-hidden="true" width="138" height="108">
                   <div class="wx-area">
@@ -155,6 +156,7 @@
               </article>
 
                 <article class="w05 w05-std prong-half-widget" aria-label="Local event">
+                <msn-widget-more></msn-widget-more>
                 <div class="w05-area">
                   <div class="w05-titlewrap"><h3 class="w05-title">Next week in Seattle</h3></div>
                   <div class="ev05-row">
@@ -171,6 +173,7 @@
               </article>
 
                 <article class="w05 w05-std prong-half-widget" aria-label="Sports score">
+                <msn-widget-more></msn-widget-more>
                 <div class="w05-area">
                   <div class="w05-titlewrap"><h3 class="w05-title">Coastal Soccer League</h3></div>
                   <div class="sp05-content">
@@ -192,6 +195,7 @@
               </article>
 
                 <article class="w05 w05-std prong-half-widget" aria-label="Stock market">
+                <msn-widget-more></msn-widget-more>
                 <div class="w05-area">
                   <div class="w05-titlewrap"><h3 class="w05-title">Market index</h3></div>
                   <div class="stk05-body">

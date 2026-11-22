@@ -5,11 +5,15 @@ document.querySelectorAll(".card-grid, .edge-card-grid").forEach((grid) => {
     if (!grid.getClientRects().length) return;
 
     const columns = getComputedStyle(grid).gridTemplateColumns.split(" ").length;
-    const cards = [...grid.children].filter((child) =>
-      !child.hasAttribute("data-feed-row-fill") &&
-      child.matches(".article-1u, .ad-card") &&
-      getComputedStyle(child).display !== "none"
-    );
+    const cards = [...grid.children].filter((child) => {
+      if (child.hasAttribute("data-feed-row-fill")) return false;
+      const card = child.matches("msn-card")
+        ? child.querySelector(".article-1u, .ad-card")
+        : child;
+      return card?.matches(".article-1u, .ad-card") &&
+        getComputedStyle(child).display !== "none" &&
+        getComputedStyle(card).display !== "none";
+    });
     const layout = `${columns}:${cards.map((card) => [...grid.children].indexOf(card)).join(",")}`;
     if (layout === previousLayout) return;
     previousLayout = layout;
@@ -29,6 +33,10 @@ document.querySelectorAll(".card-grid, .edge-card-grid").forEach((grid) => {
     }
   }
 
-  new ResizeObserver(fillRow).observe(grid);
+  const resizeObserver = new ResizeObserver(fillRow);
+  resizeObserver.observe(grid);
+  const stage = grid.closest(".stage");
+  if (stage) resizeObserver.observe(stage);
+  new MutationObserver(fillRow).observe(grid, { childList: true });
   fillRow();
 });

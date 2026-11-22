@@ -5,13 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Edge new tab page</title>
   <link rel="stylesheet" href="../css/site.css">
-  <link rel="stylesheet" href="../assets/css/msn-components.css?v=2">
+  <link rel="stylesheet" href="../assets/css/msn-components.css?v=4">
   <link rel="stylesheet" href="../assets/css/msn-shell.css">
   <link rel="stylesheet" href="../assets/css/windows-desktop.css">
   <link rel="stylesheet" href="../assets/css/windows-shell.css">
   <link rel="stylesheet" href="../assets/css/edge-chrome.css">
   <link rel="stylesheet" href="../assets/css/edge-ntp.css">
-  <link rel="stylesheet" href="../assets/css/fluent-motion.css">
+  <link rel="stylesheet" href="../assets/css/fluent-motion.css?v=2">
   <script src="../assets/js/data/msn-content.js"></script>
   <script src="../assets/js/components/msn-taskbar.js"></script>
   <script src="../assets/js/components/windows-wallpaper.js"></script>
@@ -20,8 +20,9 @@
   <script src="../assets/js/components/ntp-composer.js"></script>
   <script src="../assets/js/components/ntp-shortcuts.js"></script>
   <script src="../assets/js/components/msn-card.js"></script>
+  <script src="../assets/js/components/msn-widget-more.js"></script>
   <script defer src="../assets/js/fluent-motion.js"></script>
-  <script defer src="../assets/js/digest.js?v=2"></script>
+  <script defer src="../assets/js/digest.js?v=3"></script>
   <script defer src="../assets/js/edge-ntp.js"></script>
   <script defer src="../assets/js/msn-feed-rows.js?v=5"></script>
 </head>
@@ -93,7 +94,7 @@
                     </div>
                   </article>
                   <article class="card u1 seg-widget seg-sports span-1" aria-label="Coastal Soccer League scores">
-                    <button class="seg-more" type="button" aria-label="More options"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="12" r="1.75" fill="currentColor"></circle><circle cx="12" cy="12" r="1.75" fill="currentColor"></circle><circle cx="18" cy="12" r="1.75" fill="currentColor"></circle></svg></button>
+                    <msn-widget-more></msn-widget-more>
                     <div class="spt">
                       <h2 class="spt-title">Coastal Soccer League</h2>
                       <ul class="spt-list">
@@ -102,7 +103,7 @@
                     </div>
                   </article>
                   <article class="card u1 seg-widget seg-fin span-1" aria-label="Stock, Contoso Ltd">
-                    <button class="seg-more" type="button" aria-label="More options"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="12" r="1.75" fill="currentColor"/><circle cx="12" cy="12" r="1.75" fill="currentColor"/><circle cx="18" cy="12" r="1.75" fill="currentColor"/></svg></button>
+                    <msn-widget-more></msn-widget-more>
                     <div class="fin">
                       <div class="fin-body">
                         <div class="fin-title"><span class="fin-name">Contoso Ltd</span><span class="fin-tick">CNTS</span></div>

@@ -4,7 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>MSN widgets 0.5u</title>
-  <link rel="stylesheet" href="../assets/css/msn-components.css">
+  <link rel="stylesheet" href="../assets/css/msn-components.css?v=4">
+  <script src="../assets/js/components/msn-widget-more.js"></script>
   <style>
     @font-face {
       font-family: "Selawik";
@@ -90,12 +91,13 @@
     }
     .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
   </style>
-  <link rel="stylesheet" href="../assets/css/fluent-motion.css">
+  <link rel="stylesheet" href="../assets/css/fluent-motion.css?v=2">
   <script defer src="../assets/js/fluent-motion.js"></script>
 </head>
 <body class="demo">
   <main class="w05-board">
     <article class="w05 w05-wx" aria-label="Weather, Seattle">
+      <msn-widget-more></msn-widget-more>
       <img class="wx05-art" src="/assets/images/msn/widgets/wx-sun.svg" alt="" aria-hidden="true" width="138" height="108">
       <div class="wx05-area">
         <div class="wx05-loc"><h3 class="wx05-city">Seattle</h3></div>
@@ -112,6 +114,7 @@
       </div>
     </article>
     <article class="w05 w05-std w05-pod" aria-label="Podcast">
+      <msn-widget-more></msn-widget-more>
       <div class="pod05-row">
         <div class="pod05-text">
           <h3 class="pod05-title">Copilot Daily</h3>
@@ -138,6 +141,7 @@
       </div>
     </article>
     <article class="w05 w05-std" aria-label="Sports score">
+      <msn-widget-more></msn-widget-more>
       <div class="w05-area">
         <div class="w05-titlewrap"><h3 class="w05-title">Coastal Soccer League</h3></div>
         <div class="sp05-content">
@@ -158,6 +162,7 @@
       </div>
     </article>
     <article class="w05 w05-std" aria-label="Stock market">
+      <msn-widget-more></msn-widget-more>
       <div class="w05-area">
         <div class="w05-titlewrap"><h3 class="w05-title">Market index</h3></div>
         <div class="stk05-body">
@@ -178,6 +183,7 @@
       </div>
     </article>
     <article class="w05 w05-std" aria-label="Local event">
+      <msn-widget-more></msn-widget-more>
       <div class="w05-area">
         <div class="w05-titlewrap"><h3 class="w05-title">Next week in Seattle</h3></div>
         <div class="ev05-row">
@@ -193,6 +199,7 @@
       </div>
     </article>
     <article class="w05 w05-std" aria-label="Trending on Copilot">
+      <msn-widget-more></msn-widget-more>
       <div class="trd05-area">
         <div class="w05-titlewrap"><h3 class="w05-title">Trending on Copilot</h3></div>
         <div class="trd05-stage">
@@ -202,6 +209,7 @@
       </div>
     </article>
     <article class="w05 w05-std" aria-label="Creator spotlight">
+      <msn-widget-more></msn-widget-more>
       <div class="w05-area">
         <div class="cr05-creator">
           <div class="cr05-avatar"><img src="/assets/images/msn/widgets/crt-avatar.jpg" alt="" width="52" height="52"></div>
@@ -216,6 +224,7 @@
       </div>
     </article>
     <article class="w05 w05-std" aria-label="Recommended games">
+      <msn-widget-more></msn-widget-more>
       <div class="gm05-area">
         <div class="w05-titlewrap"><h3 class="w05-title">Recommended games</h3></div>
         <div class="gm05-row">

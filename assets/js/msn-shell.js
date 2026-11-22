@@ -41,10 +41,10 @@ function renderShell() {
 
   const iframeTheme = new URL(edgePage.src).searchParams.get("theme");
   if (iframeTheme !== theme) {
-    edgePage.src = `msn-ntp-layout.html?embed=1&theme=${theme}`;
+    edgePage.src = `msn-ntp-layout.html?embed=1&theme=${theme}&v=135`;
   }
   if (new URL(windowsPanel.src).searchParams.get("theme") !== theme) {
-    windowsPanel.src = `windows-panel-shell.html?embed=1&theme=${theme}&v=133`;
+    windowsPanel.src = `windows-panel-shell.html?embed=1&theme=${theme}&v=135`;
   }
   updateDesktopScale();
   updateUrl();

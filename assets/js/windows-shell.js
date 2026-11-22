@@ -72,15 +72,17 @@ function updateScale() {
 
 function populateStories() {
   const articles = window.MSN_CONTENT.articles;
+  const storyCount = storySections.reduce((total, section) => total + section.count, 0);
   let storyIndex = 0;
   storySections.forEach(({ gridId, count }) => {
     const cards = Array.from({ length: count }, () => {
-      const story = articles[storyIndex % articles.length];
+      const originalIndex = (storyIndex + 3) % storyCount;
+      const story = articles[originalIndex % articles.length];
       const card = document.createElement("msn-card");
       card.setAttribute("variant", "article");
       card.setAttribute("title", story.title);
       card.setAttribute("publisher", story.publisher);
-      card.setAttribute("time", storyTimes[storyIndex] || "1d");
+      card.setAttribute("time", storyTimes[originalIndex] || "1d");
       card.setAttribute("image", story.image);
       card.setAttribute("image-alt", story.alt);
       storyIndex += 1;

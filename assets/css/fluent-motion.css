@@ -53,8 +53,10 @@
 .demo .article-media:focus-within > .hover-actions,
 .demo .art05:hover .hover-actions,
 .demo .art05:focus-within .hover-actions,
-.demo .seg-widget:hover > .seg-more,
-.demo .seg-widget:focus-within > .seg-more {
+.demo .seg-widget:hover .seg-more,
+.demo .seg-widget:focus-within .seg-more,
+.demo .w05:hover .seg-more,
+.demo .w05:focus-within .seg-more {
   opacity: 1;
   pointer-events: auto;
   transition-duration: var(--fluent-dur-fast);

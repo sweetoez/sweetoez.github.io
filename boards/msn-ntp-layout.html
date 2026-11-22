@@ -4,7 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>MSN responsive NTP layout</title>
-  <link rel="stylesheet" href="../assets/css/msn-components.css">
+  <link rel="stylesheet" href="../assets/css/msn-components.css?v=4">
+  <script src="../assets/js/components/msn-widget-more.js"></script>
   <script src="../assets/js/data/msn-content.js"></script>
   <script src="../assets/js/components/ntp-composer.js"></script>
   <script src="../assets/js/components/ntp-shortcuts.js"></script>
@@ -505,22 +506,22 @@
 
       .widget-header .greeting {
         width: 100%;
+        display: -webkit-box;
         overflow: hidden;
-        white-space: nowrap;
+        white-space: normal;
         text-align: left;
-        text-overflow: ellipsis;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
       }
 
       .chip-list {
         width: 100%;
         max-width: none;
         justify-content: flex-start;
-        flex-wrap: nowrap;
-        overflow-x: auto;
-        scrollbar-width: none;
+        flex-wrap: wrap;
+        row-gap: 8px;
       }
 
-      .chip-list::-webkit-scrollbar { display: none; }
       .chip { flex: none; }
 
       .widget-grid > .digest {
@@ -549,22 +550,22 @@
 
       .widget-header .greeting {
         width: 100%;
+        display: -webkit-box;
         overflow: hidden;
-        white-space: nowrap;
+        white-space: normal;
         text-align: left;
-        text-overflow: ellipsis;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
       }
 
       .chip-list {
         width: 100%;
         max-width: none;
         justify-content: flex-start;
-        flex-wrap: nowrap;
-        overflow-x: auto;
-        scrollbar-width: none;
+        flex-wrap: wrap;
+        row-gap: 8px;
       }
 
-      .chip-list::-webkit-scrollbar { display: none; }
       .chip { flex: none; }
 
       .widget-grid,
@@ -693,9 +694,9 @@
       }
     }
   </style>
-  <link rel="stylesheet" href="../assets/css/fluent-motion.css">
+  <link rel="stylesheet" href="../assets/css/fluent-motion.css?v=2">
   <script defer src="../assets/js/fluent-motion.js"></script>
-  <script defer src="../assets/js/digest.js"></script>
+  <script defer src="../assets/js/digest.js?v=3"></script>
   <script defer src="../assets/js/msn-feed-rows.js?v=5"></script>
 
 </head>
@@ -820,7 +821,7 @@
             </article>
 
             <article class="card u1 seg-widget seg-sports span-1 widget-item" aria-label="Coastal Soccer League scores">
-              <button class="seg-more" type="button" aria-label="More options"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="12" r="1.75" fill="currentColor"/><circle cx="12" cy="12" r="1.75" fill="currentColor"/><circle cx="18" cy="12" r="1.75" fill="currentColor"/></svg></button>
+              <msn-widget-more></msn-widget-more>
               <div class="spt">
                 <h3 class="spt-title">Coastal Soccer League</h3>
                 <ul class="spt-list">
@@ -844,7 +845,7 @@
             </article>
 
             <article class="card u1 seg-widget seg-fin span-1 widget-item" aria-label="Stock, Contoso Ltd">
-              <button class="seg-more" type="button" aria-label="More options"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="12" r="1.75" fill="currentColor"/><circle cx="12" cy="12" r="1.75" fill="currentColor"/><circle cx="18" cy="12" r="1.75" fill="currentColor"/></svg></button>
+              <msn-widget-more></msn-widget-more>
               <div class="fin">
                 <div class="fin-body">
                   <div class="fin-title"><span class="fin-name">Contoso Ltd</span><span class="fin-tick">CNTS</span></div>
@@ -934,7 +935,7 @@
 
   <template id="podcast-template">
     <article class="card u1 seg-widget seg-pod widget-item span-1" data-state="rest" aria-label="Copilot Daily podcast">
-      <button class="seg-more" type="button" aria-label="More options"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="12" r="1.75" fill="currentColor"/><circle cx="12" cy="12" r="1.75" fill="currentColor"/><circle cx="18" cy="12" r="1.75" fill="currentColor"/></svg></button>
+      <msn-widget-more></msn-widget-more>
       <div class="pod">
         <img class="pod-img" src="../assets/images/msn/widgets/pod-1.jpg" alt="" onerror="this.style.visibility='hidden'">
         <div class="pod-area pod-rest">
@@ -997,6 +998,7 @@
   <template id="half-stack-template">
     <div class="half-stack widget-item span-1" aria-label="Stock and weather">
       <article class="w05 w05-std" aria-label="Stock, NVIDIA Corp">
+        <msn-widget-more></msn-widget-more>
         <div class="w05-area">
           <div class="w05-titlewrap"><h3 class="w05-title">NVIDIA Corp</h3></div>
           <div class="stk05-body">
@@ -1017,6 +1019,7 @@
         </div>
       </article>
       <article class="w05 w05-wx" aria-label="Weather, Seattle">
+        <msn-widget-more></msn-widget-more>
         <img class="wx05-art" src="../assets/images/msn/widgets/wx-sun.svg" alt="" aria-hidden="true" width="138" height="108" onerror="this.style.visibility='hidden'">
         <div class="wx05-area">
           <div class="wx05-loc"><h3 class="wx05-city">Seattle</h3></div>

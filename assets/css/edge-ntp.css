@@ -421,21 +421,21 @@ html[data-theme="dark"] .feeds-button:hover:not(:disabled) {
 
   .edge-greeting {
     width: 100%;
+    display: -webkit-box;
     overflow: hidden;
-    white-space: nowrap;
+    white-space: normal;
     text-align: left;
-    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
   }
 
   .edge-chip-list {
     width: 100%;
     justify-content: flex-start;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    scrollbar-width: none;
+    flex-wrap: wrap;
+    row-gap: 8px;
   }
 
-  .edge-chip-list::-webkit-scrollbar { display: none; }
   .edge-chip { flex: none; }
 }
 

@@ -4,7 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>MSN 1u segment widgets</title>
-  <link rel="stylesheet" href="../assets/css/msn-components.css">
+  <link rel="stylesheet" href="../assets/css/msn-components.css?v=4">
+  <script src="../assets/js/components/msn-widget-more.js"></script>
 
   <style>
     @font-face {
@@ -753,10 +754,10 @@
     }
 
   </style>
-  <link rel="stylesheet" href="../assets/css/fluent-motion.css">
+  <link rel="stylesheet" href="../assets/css/fluent-motion.css?v=2">
   <script defer src="../assets/js/fluent-motion.js"></script>
   <script src="../assets/js/data/msn-content.js"></script>
-  <script defer src="../assets/js/digest.js"></script>
+  <script defer src="../assets/js/digest.js?v=3"></script>
 
 </head>
 <body class="demo">
@@ -792,7 +793,7 @@
       <div class="stage">
         <div class="feed">
           <article class="card u1 seg-widget seg-weather" aria-label="Weather, Seattle">
-            <button class="seg-more" type="button" aria-label="More options"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="12" r="1.75" fill="currentColor"/><circle cx="12" cy="12" r="1.75" fill="currentColor"/><circle cx="18" cy="12" r="1.75" fill="currentColor"/></svg></button>
+            <msn-widget-more></msn-widget-more>
             <div class="wx-content">
               <img class="wx-sun" src="/assets/images/msn/widgets/wx-sun.svg" alt="" aria-hidden="true" width="138" height="108">
               <div class="wx-area">
@@ -812,7 +813,7 @@
             </div>
           </article>
           <article class="card u1 seg-widget seg-fin" aria-label="Stock, Contoso Ltd">
-            <button class="seg-more" type="button" aria-label="More options"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="12" r="1.75" fill="currentColor"/><circle cx="12" cy="12" r="1.75" fill="currentColor"/><circle cx="18" cy="12" r="1.75" fill="currentColor"/></svg></button>
+            <msn-widget-more></msn-widget-more>
             <div class="fin">
               <div class="fin-body">
                 <div class="fin-title"><span class="fin-name">Contoso Ltd</span><span class="fin-tick">CNTS</span></div>
@@ -851,7 +852,7 @@
             </div>
           </article>
           <article class="card u1 seg-widget seg-sports" aria-label="Coastal Soccer League scores">
-            <button class="seg-more" type="button" aria-label="More options"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="12" r="1.75" fill="currentColor"/><circle cx="12" cy="12" r="1.75" fill="currentColor"/><circle cx="18" cy="12" r="1.75" fill="currentColor"/></svg></button>
+            <msn-widget-more></msn-widget-more>
             <div class="spt">
               <h3 class="spt-title">Coastal Soccer League</h3>
               <ul class="spt-list">
@@ -888,7 +889,7 @@
             </div>
           </article>
           <article class="card u1 seg-widget seg-trend" aria-label="Trending on Copilot">
-            <button class="seg-more" type="button" aria-label="More options"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="12" r="1.75" fill="currentColor"/><circle cx="12" cy="12" r="1.75" fill="currentColor"/><circle cx="18" cy="12" r="1.75" fill="currentColor"/></svg></button>
+            <msn-widget-more></msn-widget-more>
             <div class="trd">
               <h3 class="trd-title">Trending on Copilot</h3>
               <div class="trd-stage">
@@ -902,7 +903,7 @@
             </div>
           </article>
           <article class="card u1 seg-widget seg-creator" aria-label="Creator spotlight, Alex Rivera">
-            <button class="seg-more" type="button" aria-label="More options"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="12" r="1.75" fill="currentColor"/><circle cx="12" cy="12" r="1.75" fill="currentColor"/><circle cx="18" cy="12" r="1.75" fill="currentColor"/></svg></button>
+            <msn-widget-more></msn-widget-more>
             <div class="crt">
               <div class="crt-media" style="background-image:url('/assets/images/msn/widgets/crt-video.jpg')">
                 <button class="crt-play" type="button" aria-label="Play video"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15a1 1 0 0 0 1.52.85l12-7.5a1 1 0 0 0 0-1.7l-12-7.5A1 1 0 0 0 7 4.5z" fill="currentColor"/></svg></button>
@@ -917,7 +918,7 @@
             </div>
           </article>
           <article class="card u1 seg-widget seg-games" aria-label="Recommended games">
-            <button class="seg-more" type="button" aria-label="More options"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="12" r="1.75" fill="currentColor"/><circle cx="12" cy="12" r="1.75" fill="currentColor"/><circle cx="18" cy="12" r="1.75" fill="currentColor"/></svg></button>
+            <msn-widget-more></msn-widget-more>
             <div class="gm">
               <h3 class="gm-title">Recommended games</h3>
               <ul class="gm-list">
@@ -928,7 +929,7 @@
             </div>
           </article>
           <article class="card u1 seg-widget seg-pod" data-state="rest" aria-label="Copilot Daily podcast">
-            <button class="seg-more" type="button" aria-label="More options"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="12" r="1.75" fill="currentColor"/><circle cx="12" cy="12" r="1.75" fill="currentColor"/><circle cx="18" cy="12" r="1.75" fill="currentColor"/></svg></button>
+            <msn-widget-more></msn-widget-more>
             <div class="pod">
               <img class="pod-img" src="/assets/images/msn/widgets/pod-1.jpg" alt="">
               <div class="pod-area pod-rest">
