@@ -11,6 +11,7 @@
   <script src="../assets/js/components/kc-modules/travel-map.js"></script>
   <script src="../assets/js/components/kc-modules/utility.js"></script>
   <script src="../assets/js/components/kc-hero.js"></script>
+  <script src="../assets/js/components/kc-card.js"></script>
   <style>
     * { box-sizing:border-box; }
     body { min-width:1344px; margin:0; padding:32px; background:var(--kc-gray-5); color:var(--kc-gray-1); font-family:var(--kc-font); }
@@ -73,148 +74,12 @@
     <div class="kc-card-board-item">
       <h1 class="kc-card-board-label">City — Desktop</h1>
       <div class="kc-full-knowledge-card kc-city-desktop-frame" data-kc="Full Knowledge Card">
-        <article class="kc-card-stack kc-city-desktop" data-kc="Segment / City" aria-label="San Francisco knowledge card">
-          <kc-hero entity="city" platform="desktop"></kc-hero>
+        <kc-card entity="city" platform="desktop"></kc-card>
 
-          <kc-module entity="city" platform="desktop" index="0"></kc-module>
 
-          <kc-module entity="city" platform="desktop" index="1"></kc-module>
-
-          <kc-module entity="city" platform="desktop" index="2"></kc-module>
-
-          <kc-module entity="city" platform="desktop" index="3"></kc-module>
-
-          <kc-module entity="city" platform="desktop" index="4"></kc-module>
-
-          <kc-module entity="city" platform="desktop" index="5"></kc-module>
-
-          <kc-module entity="city" platform="desktop" index="6"></kc-module>
-
-          <kc-module entity="city" platform="desktop" index="7"></kc-module>
-        </article>
-
-        <form class="kc-modules-panel" data-portfolio="Modules panel (not in Figma)" aria-label="Modules">
-          <h2>Modules</h2>
-          <p class="kc-modules-panel__hero">Designer (hero) — always on top</p>
-          <ol>
-            <li>
-              <input type="checkbox" checked id="kc-city-toggle-1" aria-controls="kc-city-mod-1">
-              <label for="kc-city-toggle-1">Text List / Top Fact — Quantity=3</label>
-              <button class="kc-btn-outline kc-btn-outline-icon" type="button" aria-label="Move Text List / Top Fact up" data-move="up"><img src="../assets/icons/ic_fluent_arrow_up_16_regular.svg" alt="" aria-hidden="true"></button>
-              <button class="kc-btn-outline kc-btn-outline-icon" type="button" aria-label="Move Text List / Top Fact down" data-move="down"><img src="../assets/icons/ic_fluent_arrow_down_16_regular.svg" alt="" aria-hidden="true"></button>
-            </li>
-            <li>
-              <input type="checkbox" checked id="kc-city-toggle-2" aria-controls="kc-city-mod-2">
-              <label for="kc-city-toggle-2">Miscellaneous / Map</label>
-              <button class="kc-btn-outline kc-btn-outline-icon" type="button" aria-label="Move Miscellaneous / Map up" data-move="up"><img src="../assets/icons/ic_fluent_arrow_up_16_regular.svg" alt="" aria-hidden="true"></button>
-              <button class="kc-btn-outline kc-btn-outline-icon" type="button" aria-label="Move Miscellaneous / Map down" data-move="down"><img src="../assets/icons/ic_fluent_arrow_down_16_regular.svg" alt="" aria-hidden="true"></button>
-            </li>
-            <li>
-              <input type="checkbox" checked id="kc-city-toggle-3" aria-controls="kc-city-mod-3">
-              <label for="kc-city-toggle-3">Miscellaneous / Travel</label>
-              <button class="kc-btn-outline kc-btn-outline-icon" type="button" aria-label="Move Miscellaneous / Travel up" data-move="up"><img src="../assets/icons/ic_fluent_arrow_up_16_regular.svg" alt="" aria-hidden="true"></button>
-              <button class="kc-btn-outline kc-btn-outline-icon" type="button" aria-label="Move Miscellaneous / Travel down" data-move="down"><img src="../assets/icons/ic_fluent_arrow_down_16_regular.svg" alt="" aria-hidden="true"></button>
-            </li>
-            <li>
-              <input type="checkbox" checked id="kc-city-toggle-4" aria-controls="kc-city-mod-4">
-              <label for="kc-city-toggle-4">Miscellaneous / Visit Times</label>
-              <button class="kc-btn-outline kc-btn-outline-icon" type="button" aria-label="Move Miscellaneous / Visit Times up" data-move="up"><img src="../assets/icons/ic_fluent_arrow_up_16_regular.svg" alt="" aria-hidden="true"></button>
-              <button class="kc-btn-outline kc-btn-outline-icon" type="button" aria-label="Move Miscellaneous / Visit Times down" data-move="down"><img src="../assets/icons/ic_fluent_arrow_down_16_regular.svg" alt="" aria-hidden="true"></button>
-            </li>
-            <li>
-              <input type="checkbox" checked id="kc-city-toggle-5" aria-controls="kc-city-mod-5">
-              <label for="kc-city-toggle-5">Image List / Places to Visit</label>
-              <button class="kc-btn-outline kc-btn-outline-icon" type="button" aria-label="Move Image List / Places to Visit up" data-move="up"><img src="../assets/icons/ic_fluent_arrow_up_16_regular.svg" alt="" aria-hidden="true"></button>
-              <button class="kc-btn-outline kc-btn-outline-icon" type="button" aria-label="Move Image List / Places to Visit down" data-move="down"><img src="../assets/icons/ic_fluent_arrow_down_16_regular.svg" alt="" aria-hidden="true"></button>
-            </li>
-            <li>
-              <input type="checkbox" checked id="kc-city-toggle-6" aria-controls="kc-city-mod-6">
-              <label for="kc-city-toggle-6">Image List / Interesting Facts</label>
-              <button class="kc-btn-outline kc-btn-outline-icon" type="button" aria-label="Move Image List / Interesting Facts up" data-move="up"><img src="../assets/icons/ic_fluent_arrow_up_16_regular.svg" alt="" aria-hidden="true"></button>
-              <button class="kc-btn-outline kc-btn-outline-icon" type="button" aria-label="Move Image List / Interesting Facts down" data-move="down"><img src="../assets/icons/ic_fluent_arrow_down_16_regular.svg" alt="" aria-hidden="true"></button>
-            </li>
-            <li>
-              <input type="checkbox" checked id="kc-city-toggle-7" aria-controls="kc-city-mod-7">
-              <label for="kc-city-toggle-7">Miscellaneous / Poll &amp; Trivia</label>
-              <button class="kc-btn-outline kc-btn-outline-icon" type="button" aria-label="Move Miscellaneous / Poll and Trivia up" data-move="up"><img src="../assets/icons/ic_fluent_arrow_up_16_regular.svg" alt="" aria-hidden="true"></button>
-              <button class="kc-btn-outline kc-btn-outline-icon" type="button" aria-label="Move Miscellaneous / Poll and Trivia down" data-move="down"><img src="../assets/icons/ic_fluent_arrow_down_16_regular.svg" alt="" aria-hidden="true"></button>
-            </li>
-            <li>
-              <input type="checkbox" checked id="kc-city-toggle-8" aria-controls="kc-city-mod-8">
-              <label for="kc-city-toggle-8">Text List / Top Fact/Text List/Attributions</label>
-              <button class="kc-btn-outline kc-btn-outline-icon" type="button" aria-label="Move Attributions up" data-move="up"><img src="../assets/icons/ic_fluent_arrow_up_16_regular.svg" alt="" aria-hidden="true"></button>
-              <button class="kc-btn-outline kc-btn-outline-icon" type="button" aria-label="Move Attributions down" data-move="down"><img src="../assets/icons/ic_fluent_arrow_down_16_regular.svg" alt="" aria-hidden="true"></button>
-            </li>
-          </ol>
-          <p class="kc-modules-panel__status" aria-live="polite"></p>
-        </form>
       </div>
     </div>
   </main>
-  <script>
-    const stack = document.querySelector(".kc-city-desktop");
-    const panel = document.querySelector(".kc-modules-panel");
-    const rows = Array.from(panel.querySelectorAll("li"));
-    const modules = new Map(rows.map(row => {
-      const checkbox = row.querySelector('input[type="checkbox"]');
-      return [row, document.getElementById(checkbox.getAttribute("aria-controls"))];
-    }));
-    const status = panel.querySelector(".kc-modules-panel__status");
-    const hero = stack.querySelector(".kc-hero-designer");
 
-    function sync() {
-      for (const [row, module] of modules) {
-        module.hidden = !row.querySelector('input[type="checkbox"]').checked;
-      }
-
-      const orderedRows = Array.from(panel.querySelectorAll("li"));
-      orderedRows.forEach((row, index) => {
-        row.querySelector('[data-move="up"]').disabled = index === 0;
-        row.querySelector('[data-move="down"]').disabled = index === orderedRows.length - 1;
-      });
-
-      const cardModules = Array.from(stack.querySelectorAll(":scope > .kc-module"));
-      cardModules.forEach(module => module.classList.remove("kc-module--card-last"));
-      const lastVisible = cardModules.filter(module => !module.hidden).at(-1);
-      hero.classList.toggle("kc-hero-designer--card-last", !lastVisible);
-      lastVisible?.classList.add("kc-module--card-last");
-    }
-
-    for (const row of rows) {
-      const checkbox = row.querySelector('input[type="checkbox"]');
-      const module = modules.get(row);
-      checkbox.addEventListener("change", sync);
-
-      row.querySelectorAll("[data-move]").forEach(button => {
-        button.addEventListener("click", event => {
-          const direction = button.dataset.move;
-          const neighbor = direction === "up" ? row.previousElementSibling : row.nextElementSibling;
-          if (!neighbor) return;
-
-          if (direction === "up") {
-            panel.querySelector("ol").insertBefore(row, neighbor);
-            stack.insertBefore(module, module.previousElementSibling);
-          } else {
-            panel.querySelector("ol").insertBefore(neighbor, row);
-            stack.insertBefore(modules.get(neighbor), module);
-          }
-
-          const orderedRows = Array.from(panel.querySelectorAll("li"));
-          const position = orderedRows.indexOf(row) + 1;
-          status.textContent = `${row.querySelector("label").textContent} moved to position ${position} of ${orderedRows.length}`;
-          sync();
-
-          const focusedButton = event.currentTarget;
-          if (focusedButton.disabled) {
-            row.querySelector(`[data-move="${direction === "up" ? "down" : "up"}"]:not(:disabled)`).focus();
-          } else {
-            focusedButton.focus();
-          }
-        });
-      });
-    }
-
-    sync();
-  </script>
 </body>
 </html>

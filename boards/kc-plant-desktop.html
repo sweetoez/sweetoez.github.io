@@ -9,6 +9,7 @@
   <script src="../assets/js/components/kc-modules/text-list.js"></script>
   <script src="../assets/js/components/kc-modules/image-list.js"></script>
   <script src="../assets/js/components/kc-hero.js"></script>
+  <script src="../assets/js/components/kc-card.js"></script>
   <style>
     * { box-sizing:border-box; }
     body { min-width:1344px; margin:0; padding:32px; background:var(--kc-gray-5); color:var(--kc-gray-1); font-family:var(--kc-font); }
@@ -25,19 +26,7 @@
     <div class="kc-card-board-item">
       <h1 class="kc-card-board-label">Plant — Desktop</h1>
       <div class="kc-full-knowledge-card kc-plant-desktop-frame" data-kc="Full Knowledge Card">
-        <article class="kc-card-stack kc-plant-desktop kc-theme-red-2" data-kc="Segment / Plant" aria-label="Dahlia knowledge card">
-          <kc-hero entity="plant" platform="desktop"></kc-hero>
-
-          <kc-module entity="plant" platform="desktop" index="0"></kc-module>
-
-          <kc-module entity="plant" platform="desktop" index="1"></kc-module>
-
-          <kc-module entity="plant" platform="desktop" index="2"></kc-module>
-
-          <kc-module entity="plant" platform="desktop" index="3"></kc-module>
-
-          <kc-module entity="plant" platform="desktop" index="4"></kc-module>
-        </article>
+        <kc-card entity="plant" platform="desktop"></kc-card>
 
         <svg class="kc-icon-defs" aria-hidden="true" focusable="false">
           <symbol id="kc-plant-desktop-arrow-left" viewBox="0 0 20 20"><path d="M9.15898 16.8666C9.36292 17.0528 9.67918 17.0384 9.86536 16.8345C10.0515 16.6305 10.0371 16.3143 9.8332 16.1281L3.66535 10.4974H17.4961C17.7722 10.4974 17.9961 10.2735 17.9961 9.99736C17.9961 9.72122 17.7722 9.49736 17.4961 9.49736H3.66824L9.8332 3.86927C10.0371 3.68309 10.0515 3.36684 9.86536 3.16289C9.67918 2.95895 9.36292 2.94456 9.15898 3.13074L2.24263 9.44478C2.10268 9.57254 2.02285 9.74008 2.00314 9.91323C1.99851 9.94058 1.99609 9.96869 1.99609 9.99736C1.99609 10.0242 1.99821 10.0506 2.00229 10.0763C2.02047 10.2522 2.10058 10.4229 2.24263 10.5526L9.15898 16.8666Z" fill="currentColor"/></symbol>
@@ -45,103 +34,10 @@
           <symbol id="kc-plant-desktop-arrow-up" viewBox="0 0 16 16"><path d="M7.5 13.5C7.5 13.7761 7.72386 14 8 14C8.27614 14 8.5 13.7761 8.5 13.5V3.80298L12.1283 7.83448C12.3131 8.03974 12.6292 8.05638 12.8345 7.87165C13.0397 7.68692 13.0564 7.37077 12.8716 7.16552L8.37165 2.16552C8.27683 2.06016 8.14174 2 8 2C7.85826 2 7.72317 2.06016 7.62835 2.16552L3.12836 7.16552C2.94363 7.37077 2.96027 7.68692 3.16552 7.87165C3.37078 8.05638 3.68692 8.05638 3.87165 7.83448L7.5 3.80298V13.5Z" fill="currentColor"/></symbol>
           <symbol id="kc-plant-desktop-arrow-down" viewBox="0 0 16 16"><path d="M8.5 2.5C8.5 2.22386 8.27615 2 8 2C7.72386 2 7.5 2.22386 7.5 2.5V12.197L3.87165 8.16552C3.68692 7.96026 3.37077 7.94362 3.16552 8.12835C2.96027 8.31308 2.94363 8.62923 3.12836 8.83448L7.62836 13.8345C7.72318 13.9398 7.85826 14 8 14C8.14175 14 8.27683 13.9398 8.37165 13.8345L12.8717 8.83448C13.0564 8.62923 13.0397 8.31308 12.8345 8.12835C12.6292 7.94362 12.3131 7.94362 12.1284 8.16552L8.5 12.197V2.5Z" fill="currentColor"/></symbol>
         </svg>
-        <form class="kc-modules-panel" aria-label="Modules">
-          <h2>Modules</h2>
-          <p class="kc-modules-panel__hero">Designer (hero) — always on top</p>
-          <ol>
-            <li><input type="checkbox" checked id="kc-plant-desktop-toggle-carousel" aria-controls="kc-plant-desktop-mod-carousel"><label for="kc-plant-desktop-toggle-carousel">Image List / Carousel</label><button class="kc-btn-outline kc-btn-outline-icon" type="button" aria-label="Move Carousel up" data-move="up"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><use href="#kc-plant-desktop-arrow-up"></use></svg></button><button class="kc-btn-outline kc-btn-outline-icon" type="button" aria-label="Move Carousel down" data-move="down"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><use href="#kc-plant-desktop-arrow-down"></use></svg></button></li>
-            <li><input type="checkbox" checked id="kc-plant-desktop-toggle-top-fact" aria-controls="kc-plant-desktop-mod-top-fact"><label for="kc-plant-desktop-toggle-top-fact">Text List / Top Fact</label><button class="kc-btn-outline kc-btn-outline-icon" type="button" aria-label="Move Top Fact up" data-move="up"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><use href="#kc-plant-desktop-arrow-up"></use></svg></button><button class="kc-btn-outline kc-btn-outline-icon" type="button" aria-label="Move Top Fact down" data-move="down"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><use href="#kc-plant-desktop-arrow-down"></use></svg></button></li>
-            <li><input type="checkbox" checked id="kc-plant-desktop-toggle-one-fact" aria-controls="kc-plant-desktop-mod-interesting-one"><label for="kc-plant-desktop-toggle-one-fact">Image List / Interesting Facts — 1 Image</label><button class="kc-btn-outline kc-btn-outline-icon" type="button" aria-label="Move 1-image facts up" data-move="up"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><use href="#kc-plant-desktop-arrow-up"></use></svg></button><button class="kc-btn-outline kc-btn-outline-icon" type="button" aria-label="Move 1-image facts down" data-move="down"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><use href="#kc-plant-desktop-arrow-down"></use></svg></button></li>
-            <li><input type="checkbox" checked id="kc-plant-desktop-toggle-three-facts" aria-controls="kc-plant-desktop-mod-interesting-three"><label for="kc-plant-desktop-toggle-three-facts">Image List / Interesting Facts — 3 Image</label><button class="kc-btn-outline kc-btn-outline-icon" type="button" aria-label="Move 3-image facts up" data-move="up"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><use href="#kc-plant-desktop-arrow-up"></use></svg></button><button class="kc-btn-outline kc-btn-outline-icon" type="button" aria-label="Move 3-image facts down" data-move="down"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><use href="#kc-plant-desktop-arrow-down"></use></svg></button></li>
-            <li><input type="checkbox" checked id="kc-plant-desktop-toggle-attributions" aria-controls="kc-plant-desktop-mod-attributions"><label for="kc-plant-desktop-toggle-attributions">Attributions</label><button class="kc-btn-outline kc-btn-outline-icon" type="button" aria-label="Move Attributions up" data-move="up"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><use href="#kc-plant-desktop-arrow-up"></use></svg></button><button class="kc-btn-outline kc-btn-outline-icon" type="button" aria-label="Move Attributions down" data-move="down"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><use href="#kc-plant-desktop-arrow-down"></use></svg></button></li>
-          </ol>
-          <p class="kc-modules-panel__status" aria-live="polite"></p>
-        </form>
+
       </div>
     </div>
   </main>
-  <script>
-    const stack = document.querySelector(".kc-plant-desktop");
-    const panel = document.querySelector(".kc-modules-panel");
-    const rows = Array.from(panel.querySelectorAll("li"));
-    const modules = new Map(rows.map(row => {
-      const checkbox = row.querySelector('input[type="checkbox"]');
-      return [row, document.getElementById(checkbox.getAttribute("aria-controls"))];
-    }));
-    const status = panel.querySelector(".kc-modules-panel__status");
-    const hero = stack.querySelector(".kc-hero-designer");
-    const carousel = stack.querySelector(".kc-image-list-carousel");
-    const previousCarousel = stack.querySelector(".kc-plant-desktop-carousel__previous");
-    const nextCarousel = stack.querySelector(".kc-plant-desktop-carousel__next");
 
-    function syncCarousel() {
-      previousCarousel.disabled = carousel.scrollLeft <= 0;
-      nextCarousel.disabled = carousel.scrollLeft + carousel.clientWidth >= carousel.scrollWidth - 1;
-    }
-
-    function scrollCarousel(direction) {
-      const behavior = window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "instant" : "smooth";
-      carousel.scrollBy({ left:direction * 140, behavior });
-    }
-
-    function sync() {
-      for (const [row, module] of modules) {
-        module.hidden = !row.querySelector('input[type="checkbox"]').checked;
-      }
-
-      const orderedRows = Array.from(panel.querySelectorAll("li"));
-      orderedRows.forEach((row, index) => {
-        row.querySelector('[data-move="up"]').disabled = index === 0;
-        row.querySelector('[data-move="down"]').disabled = index === orderedRows.length - 1;
-      });
-
-      const cardModules = Array.from(stack.querySelectorAll(":scope > .kc-module"));
-      cardModules.forEach(module => module.classList.remove("kc-module--card-last"));
-      const lastVisible = cardModules.filter(module => !module.hidden).at(-1);
-      hero.classList.toggle("kc-hero-designer--card-last", !lastVisible);
-      lastVisible?.classList.add("kc-module--card-last");
-      syncCarousel();
-    }
-
-    for (const row of rows) {
-      const checkbox = row.querySelector('input[type="checkbox"]');
-      const module = modules.get(row);
-      checkbox.addEventListener("change", sync);
-
-      row.querySelectorAll("[data-move]").forEach(button => {
-        button.addEventListener("click", event => {
-          const direction = button.dataset.move;
-          const neighbor = direction === "up" ? row.previousElementSibling : row.nextElementSibling;
-          if (!neighbor) return;
-
-          if (direction === "up") {
-            panel.querySelector("ol").insertBefore(row, neighbor);
-            stack.insertBefore(module, module.previousElementSibling);
-          } else {
-            panel.querySelector("ol").insertBefore(neighbor, row);
-            stack.insertBefore(modules.get(neighbor), module);
-          }
-
-          const orderedRows = Array.from(panel.querySelectorAll("li"));
-          const position = orderedRows.indexOf(row) + 1;
-          status.textContent = `${row.querySelector("label").textContent} moved to position ${position} of ${orderedRows.length}`;
-          sync();
-
-          const focusedButton = event.currentTarget;
-          if (focusedButton.disabled) {
-            row.querySelector(`[data-move="${direction === "up" ? "down" : "up"}"]:not(:disabled)`).focus();
-          } else {
-            focusedButton.focus();
-          }
-        });
-      });
-    }
-
-    previousCarousel.addEventListener("click", () => scrollCarousel(-1));
-    nextCarousel.addEventListener("click", () => scrollCarousel(1));
-    carousel.addEventListener("scroll", syncCarousel, { passive:true });
-    window.addEventListener("resize", syncCarousel);
-    sync();
-  </script>
 </body>
 </html>

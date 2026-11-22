@@ -12,13 +12,14 @@
   <script src="../assets/js/components/kc-modules/image-list.js"></script>
   <script src="../assets/js/components/kc-modules/travel-map.js"></script>
   <script src="../assets/js/components/kc-hero.js"></script>
+  <script src="../assets/js/components/kc-card.js"></script>
   <script src="../assets/js/kc-mobile-carousels.js" defer></script>
   <style>
     * { box-sizing:border-box; }
     body { min-width:1344px; margin:0; padding:32px; background:var(--kc-gray-5); color:var(--kc-gray-1); font-family:var(--kc-font); }
     main { width:max-content; }
     .kc-card-board-item { width:max-content; }
-    .kc-card-board-label { margin:0 0 8px; color:var(--kc-gray-2); font-size:12px; line-height:16px; }
+    .kc-card-board-label { margin:0 0 8px; color:var(--kc-gray-2); font-size:12px; font-weight:400; line-height:16px; }
   </style>
   <link rel="stylesheet" href="../assets/css/fluent-motion.css">
   <script defer src="../assets/js/fluent-motion.js"></script>
@@ -26,207 +27,14 @@
 <body class="demo">
   <main>
     <div class="kc-card-board-item">
-      <p class="kc-card-board-label">Country — Mobile</p>
+      <h1 class="kc-card-board-label">Country — Mobile</h1>
       <div class="kc-full-knowledge-card kc-country-mobile-frame" data-kc="Full Knowledge Card">
-        <article class="kc-card-stack kc-country-mobile kc-theme-orange" data-kc="Segment / Country" aria-label="India knowledge card">
-          <kc-hero entity="country" platform="mobile"></kc-hero>
+        <kc-card entity="country" platform="mobile"></kc-card>
 
-          <kc-module entity="country" platform="mobile" index="0"></kc-module>
 
-          <kc-module entity="country" platform="mobile" index="1"></kc-module>
-
-          <kc-module entity="country" platform="mobile" index="2"></kc-module>
-
-          <kc-module entity="country" platform="mobile" index="3"></kc-module>
-
-          <kc-module entity="country" platform="mobile" index="4"></kc-module>
-
-          <kc-module entity="country" platform="mobile" index="5"></kc-module>
-
-          <div class="kc-card-more" id="kc-country-mobile-more" hidden>
-            <kc-module entity="country" platform="mobile" index="6"></kc-module>
-
-            <kc-module entity="country" platform="mobile" index="7"></kc-module>
-          </div>
-
-          <button class="kc-mobile-expansion-see-more" type="button" data-kc="Mobile / Expansion / See more" aria-expanded="false" aria-controls="kc-country-mobile-more">
-            <span class="kc-mobile-expansion-see-more__line" aria-hidden="true"></span>
-            <span class="kc-mobile-expansion-see-more__circle" aria-hidden="true"><img src="../assets/icons/ic_fluent_chevron_down_16_regular.svg" alt=""></span>
-            <span class="kc-mobile-expansion-see-more__label">See more</span>
-          </button>
-        </article>
-
-        <form class="kc-modules-panel" data-portfolio="Modules panel (not in Figma)" aria-label="Modules">
-          <h2>Modules</h2>
-          <p class="kc-modules-panel__hero">Designer (hero) — always on top</p>
-          <p class="kc-modules-panel__hero">First 6 checked modules show before See more</p>
-          <ol>
-            <li>
-              <input type="checkbox" checked id="kc-country-mobile-toggle-1" aria-controls="kc-country-mobile-mod-1">
-              <label for="kc-country-mobile-toggle-1">Mobile/ Image List / Carousel</label>
-              <button class="kc-btn-outline kc-btn-outline-icon" type="button" aria-label="Move Mobile/ Image List / Carousel up" data-move="up"><img src="../assets/icons/ic_fluent_arrow_up_16_regular.svg" alt="" aria-hidden="true"></button>
-              <button class="kc-btn-outline kc-btn-outline-icon" type="button" aria-label="Move Mobile/ Image List / Carousel down" data-move="down"><img src="../assets/icons/ic_fluent_arrow_down_16_regular.svg" alt="" aria-hidden="true"></button>
-            </li>
-            <li>
-              <input type="checkbox" checked id="kc-country-mobile-toggle-2" aria-controls="kc-country-mobile-mod-2">
-              <label for="kc-country-mobile-toggle-2">Mobile / Text List / Top Fact — Quantity=2</label>
-              <button class="kc-btn-outline kc-btn-outline-icon" type="button" aria-label="Move Mobile / Text List / Top Fact up" data-move="up"><img src="../assets/icons/ic_fluent_arrow_up_16_regular.svg" alt="" aria-hidden="true"></button>
-              <button class="kc-btn-outline kc-btn-outline-icon" type="button" aria-label="Move Mobile / Text List / Top Fact down" data-move="down"><img src="../assets/icons/ic_fluent_arrow_down_16_regular.svg" alt="" aria-hidden="true"></button>
-            </li>
-            <li>
-              <input type="checkbox" checked id="kc-country-mobile-toggle-3" aria-controls="kc-country-mobile-mod-3">
-              <label for="kc-country-mobile-toggle-3">Mobile / Miscellaneous / Map</label>
-              <button class="kc-btn-outline kc-btn-outline-icon" type="button" aria-label="Move Mobile / Miscellaneous / Map up" data-move="up"><img src="../assets/icons/ic_fluent_arrow_up_16_regular.svg" alt="" aria-hidden="true"></button>
-              <button class="kc-btn-outline kc-btn-outline-icon" type="button" aria-label="Move Mobile / Miscellaneous / Map down" data-move="down"><img src="../assets/icons/ic_fluent_arrow_down_16_regular.svg" alt="" aria-hidden="true"></button>
-            </li>
-            <li>
-              <input type="checkbox" checked id="kc-country-mobile-toggle-4" aria-controls="kc-country-mobile-mod-4">
-              <label for="kc-country-mobile-toggle-4">Mobile / Image List / Places to Visit</label>
-              <button class="kc-btn-outline kc-btn-outline-icon" type="button" aria-label="Move Mobile / Image List / Places to Visit up" data-move="up"><img src="../assets/icons/ic_fluent_arrow_up_16_regular.svg" alt="" aria-hidden="true"></button>
-              <button class="kc-btn-outline kc-btn-outline-icon" type="button" aria-label="Move Mobile / Image List / Places to Visit down" data-move="down"><img src="../assets/icons/ic_fluent_arrow_down_16_regular.svg" alt="" aria-hidden="true"></button>
-            </li>
-            <li>
-              <input type="checkbox" checked id="kc-country-mobile-toggle-5" aria-controls="kc-country-mobile-mod-5">
-              <label for="kc-country-mobile-toggle-5">Mobile / Image List / Interesting Facts</label>
-              <button class="kc-btn-outline kc-btn-outline-icon" type="button" aria-label="Move Mobile / Image List / Interesting Facts up" data-move="up"><img src="../assets/icons/ic_fluent_arrow_up_16_regular.svg" alt="" aria-hidden="true"></button>
-              <button class="kc-btn-outline kc-btn-outline-icon" type="button" aria-label="Move Mobile / Image List / Interesting Facts down" data-move="down"><img src="../assets/icons/ic_fluent_arrow_down_16_regular.svg" alt="" aria-hidden="true"></button>
-            </li>
-            <li>
-              <input type="checkbox" checked id="kc-country-mobile-toggle-6" aria-controls="kc-country-mobile-mod-6">
-              <label for="kc-country-mobile-toggle-6">Mobile / Text List / Top Fact — Quantity=3</label>
-              <button class="kc-btn-outline kc-btn-outline-icon" type="button" aria-label="Move Mobile / Text List / Top Fact Quantity 3 up" data-move="up"><img src="../assets/icons/ic_fluent_arrow_up_16_regular.svg" alt="" aria-hidden="true"></button>
-              <button class="kc-btn-outline kc-btn-outline-icon" type="button" aria-label="Move Mobile / Text List / Top Fact Quantity 3 down" data-move="down"><img src="../assets/icons/ic_fluent_arrow_down_16_regular.svg" alt="" aria-hidden="true"></button>
-            </li>
-            <li>
-              <input type="checkbox" checked id="kc-country-mobile-toggle-7" aria-controls="kc-country-mobile-mod-7">
-              <label for="kc-country-mobile-toggle-7">Mobile / Miscellaneous / Timeline</label>
-              <button class="kc-btn-outline kc-btn-outline-icon" type="button" aria-label="Move Mobile / Miscellaneous / Timeline up" data-move="up"><img src="../assets/icons/ic_fluent_arrow_up_16_regular.svg" alt="" aria-hidden="true"></button>
-              <button class="kc-btn-outline kc-btn-outline-icon" type="button" aria-label="Move Mobile / Miscellaneous / Timeline down" data-move="down"><img src="../assets/icons/ic_fluent_arrow_down_16_regular.svg" alt="" aria-hidden="true"></button>
-            </li>
-            <li>
-              <input type="checkbox" checked id="kc-country-mobile-toggle-8" aria-controls="kc-country-mobile-mod-8">
-              <label for="kc-country-mobile-toggle-8">Mobile / Text List / Attribution</label>
-              <button class="kc-btn-outline kc-btn-outline-icon" type="button" aria-label="Move Mobile / Text List / Attribution up" data-move="up"><img src="../assets/icons/ic_fluent_arrow_up_16_regular.svg" alt="" aria-hidden="true"></button>
-              <button class="kc-btn-outline kc-btn-outline-icon" type="button" aria-label="Move Mobile / Text List / Attribution down" data-move="down"><img src="../assets/icons/ic_fluent_arrow_down_16_regular.svg" alt="" aria-hidden="true"></button>
-            </li>
-          </ol>
-          <p class="kc-modules-panel__status" aria-live="polite"></p>
-        </form>
       </div>
     </div>
   </main>
-  <script>
-    const stack = document.querySelector(".kc-country-mobile");
-    const panel = document.querySelector(".kc-modules-panel");
-    const rows = Array.from(panel.querySelectorAll("li"));
-    const modules = new Map(rows.map(row => {
-      const checkbox = row.querySelector('input[type="checkbox"]');
-      return [row, document.getElementById(checkbox.getAttribute("aria-controls"))];
-    }));
-    const status = panel.querySelector(".kc-modules-panel__status");
-    const expansion = stack.querySelector(".kc-mobile-expansion-see-more");
-    const more = document.getElementById("kc-country-mobile-more");
-    const expansionLabel = expansion.querySelector(".kc-mobile-expansion-see-more__label");
-    const hero = stack.querySelector(".kc-mobile-designer");
-    const carousel = stack.querySelector(".kc-mobile-image-list-carousel .kc-scroll-row");
-    const previousCarousel = stack.querySelector(".kc-country-carousel__previous");
-    const nextCarousel = stack.querySelector(".kc-country-carousel__next");
-    let expanded = false;
 
-    function syncCarousel() {
-      previousCarousel.disabled = carousel.scrollLeft <= 0;
-      nextCarousel.disabled = carousel.scrollLeft + carousel.clientWidth >= carousel.scrollWidth - 1;
-    }
-
-    function sync() {
-      const orderedRows = Array.from(panel.querySelectorAll("li"));
-      const orderedModules = orderedRows.map(row => modules.get(row));
-      const checkedModules = orderedRows
-        .filter(row => row.querySelector('input[type="checkbox"]').checked)
-        .map(row => modules.get(row));
-      const mainModules = checkedModules.slice(0, 6);
-      const moreModules = checkedModules.slice(6);
-
-      for (const [row, module] of modules) {
-        module.hidden = !row.querySelector('input[type="checkbox"]').checked;
-        module.classList.remove("kc-module--card-last");
-      }
-
-      for (const module of orderedModules.filter(item => !checkedModules.includes(item) || mainModules.includes(item))) {
-        stack.insertBefore(module, more);
-      }
-      for (const module of moreModules) more.append(module);
-
-      if (!moreModules.length) expanded = false;
-      more.hidden = !expanded || !moreModules.length;
-      expansion.hidden = !moreModules.length;
-      expansion.setAttribute("aria-expanded", String(expanded));
-      expansionLabel.textContent = expanded ? "See less" : "See more";
-
-      const visibleModules = expanded ? checkedModules : mainModules;
-      const lastVisible = visibleModules.at(-1);
-      if (!moreModules.length) lastVisible?.classList.add("kc-module--card-last");
-      hero.classList.toggle("kc-mobile-designer--card-last", !lastVisible && !moreModules.length);
-
-      orderedRows.forEach((row, index) => {
-        row.querySelector('[data-move="up"]').disabled = index === 0;
-        row.querySelector('[data-move="down"]').disabled = index === orderedRows.length - 1;
-      });
-    }
-
-    for (const row of rows) {
-      const checkbox = row.querySelector('input[type="checkbox"]');
-      checkbox.addEventListener("change", sync);
-
-      row.querySelectorAll("[data-move]").forEach(button => {
-        button.addEventListener("click", event => {
-          const direction = button.dataset.move;
-          const neighbor = direction === "up" ? row.previousElementSibling : row.nextElementSibling;
-          if (!neighbor) return;
-
-          if (direction === "up") {
-            panel.querySelector("ol").insertBefore(row, neighbor);
-          } else {
-            panel.querySelector("ol").insertBefore(neighbor, row);
-          }
-
-          const position = Array.from(panel.querySelectorAll("li")).indexOf(row) + 1;
-          status.textContent = `${row.querySelector("label").textContent} moved to position ${position} of ${rows.length}`;
-          sync();
-
-          const focusedButton = event.currentTarget;
-          if (focusedButton.disabled) {
-            row.querySelector(`[data-move="${direction === "up" ? "down" : "up"}"]:not(:disabled)`).focus();
-          } else {
-            focusedButton.focus();
-          }
-        });
-      });
-    }
-
-    expansion.addEventListener("click", () => {
-      expanded = !expanded;
-      sync();
-    });
-
-    carousel.addEventListener("scroll", syncCarousel, { passive:true });
-    previousCarousel.addEventListener("click", () => carousel.scrollBy({ left:-140, behavior:"smooth" }));
-    nextCarousel.addEventListener("click", () => carousel.scrollBy({ left:140, behavior:"smooth" }));
-
-    stack.querySelectorAll(".kc-mobile-hero-tabs-container").forEach(tablist => {
-      tablist.addEventListener("click", event => {
-        const tab = event.target.closest(".kc-mobile-hero-tab");
-        if (!tab || !tablist.contains(tab)) return;
-        tablist.querySelectorAll(".kc-mobile-hero-tab").forEach(item => {
-          const selected = item === tab;
-          item.classList.toggle("kc-mobile-hero-tab--selected", selected);
-          item.setAttribute("aria-selected", String(selected));
-        });
-      });
-    });
-
-    sync();
-    syncCarousel();
-  </script>
 </body>
 </html>

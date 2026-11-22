@@ -50863,3 +50863,303 @@ window.KC_ENTITIES = {
     }
   }
 };
+
+window.KC_ENTITIES._cards = {
+  "entities": {
+    "actor": {
+      "desktop": {
+        "classes": "kc-card-stack kc-actor-desktop kc-theme-purple-1",
+        "dataKC": "Segment / Actor",
+        "ariaLabel": "Pharrell Williams knowledge card"
+      },
+      "mobile": {
+        "classes": "kc-card-stack kc-mobile-designer-card kc-actor-mobile kc-theme-purple-1",
+        "dataKC": "Segment / Actor",
+        "ariaLabel": "Pharrell Williams knowledge card",
+        "visibleModules": 6,
+        "moreId": "kc-actor-mobile-more",
+        "moreBeforeButton": true,
+        "icon": { "kind": "inline" }
+      }
+    },
+    "animal": {
+      "desktop": {
+        "classes": "kc-card-stack kc-animal-desktop kc-theme-orange",
+        "dataKC": "Segment / Animal",
+        "ariaLabel": "Koi knowledge card"
+      },
+      "mobile": {
+        "classes": "kc-card-stack kc-animal-mobile kc-theme-orange",
+        "dataKC": "Segment / Animal",
+        "ariaLabel": "Koi knowledge card",
+        "visibleModules": 6,
+        "moreId": "kc-animal-mobile-more",
+        "buttonDataKC": "Mobile / Expansion / See more",
+        "moreBeforeButton": true,
+        "icon": { "kind": "inline" }
+      }
+    },
+    "artist": {
+      "desktop": {
+        "classes": "kc-card-stack kc-artist-desktop kc-theme-green",
+        "dataKC": "Segment / Artist",
+        "ariaLabel": "Janelle Monáe knowledge card"
+      },
+      "mobile": {
+        "classes": "kc-card-stack kc-mobile-designer-card kc-artist-mobile kc-theme-green",
+        "dataKC": "Segment / Artist",
+        "ariaLabel": "Janelle Monáe knowledge card",
+        "visibleModules": 6,
+        "moreId": "kc-artist-mobile-more",
+        "moreBeforeButton": true,
+        "icon": { "kind": "symbol", "viewBox": "0 0 16 16", "href": "#kc-artist-icon-chevron-down" },
+        "quickFactsExpandedClass": "kc-artist-mobile__quick-facts-expanded"
+      }
+    },
+    "band": {
+      "desktop": {
+        "classes": "kc-card-stack kc-band-desktop kc-theme-orange",
+        "dataKC": "Segment / Band",
+        "ariaLabel": "Red Hot Chili Peppers knowledge card"
+      },
+      "mobile": {
+        "classes": "kc-card-stack kc-mobile-designer-card kc-band-mobile",
+        "dataKC": "Segment / Band",
+        "ariaLabel": "Red Hot Chili Peppers knowledge card",
+        "visibleModules": 4,
+        "moreId": "kc-band-mobile-more",
+        "moreBeforeButton": true,
+        "lastModuleMode": "expanded",
+        "icon": { "kind": "symbol", "viewBox": "0 0 12 12", "href": "#kc-band-icon-chevron-down" }
+      }
+    },
+    "city": {
+      "desktop": {
+        "classes": "kc-card-stack kc-city-desktop",
+        "dataKC": "Segment / City",
+        "ariaLabel": "San Francisco knowledge card"
+      },
+      "mobile": {
+        "classes": "kc-card-stack kc-mobile-designer-card kc-city-mobile",
+        "dataKC": "Segment / City",
+        "ariaLabel": "San Francisco knowledge card",
+        "visibleModules": 5,
+        "moreId": "kc-city-mobile-more",
+        "buttonDataKC": "Mobile / Expansion / See more",
+        "moreBeforeButton": true,
+        "icon": { "kind": "inline" },
+        "linkQuickFactsToExpansion": true
+      }
+    },
+    "company": {
+      "desktop": {
+        "classes": "kc-card-stack kc-company-desktop",
+        "dataKC": "Segment / Company",
+        "ariaLabel": "Microsoft knowledge card"
+      },
+      "mobile": {
+        "classes": "kc-card-stack kc-mobile-designer-card kc-company-mobile",
+        "dataKC": "Segment / Company",
+        "ariaLabel": "Microsoft knowledge card",
+        "visibleModules": 2,
+        "moreId": "kc-company-mobile-more",
+        "buttonDataKC": "Mobile / Expansion / See more",
+        "moreBeforeButton": true,
+        "icon": { "kind": "inline" },
+        "linkQuickFactsToExpansion": true,
+        "quickFactsExpandedClass": "kc-company-mobile__expanded"
+      }
+    },
+    "country": {
+      "desktop": {
+        "classes": "kc-card-stack kc-country-desktop kc-theme-orange",
+        "dataKC": "Segment / Country",
+        "ariaLabel": "India knowledge card"
+      },
+      "mobile": {
+        "classes": "kc-card-stack kc-country-mobile kc-theme-orange",
+        "dataKC": "Segment / Country",
+        "ariaLabel": "India knowledge card",
+        "visibleModules": 6,
+        "moreId": "kc-country-mobile-more",
+        "buttonDataKC": "Mobile / Expansion / See more",
+        "moreBeforeButton": true,
+        "icon": { "kind": "image", "src": "../assets/icons/ic_fluent_chevron_down_16_regular.svg", "alt": "" }
+      }
+    },
+    "food": {
+      "desktop": {
+        "classes": "kc-card-stack kc-food-desktop kc-theme-red-2",
+        "dataKC": "Segment / Food",
+        "ariaLabel": "Pizza Margherita knowledge card"
+      },
+      "mobile": {
+        "classes": "kc-card-stack kc-mobile-designer-card kc-food-mobile kc-theme-orange",
+        "dataKC": "Segment / Food",
+        "ariaLabel": "Pizza Margherita knowledge card",
+        "visibleModules": 3,
+        "moreId": "kc-food-mobile-more",
+        "buttonDataKC": "Mobile / Expansion / See more",
+        "moreBeforeButton": true,
+        "icon": { "kind": "inline" }
+      }
+    },
+    "ingredient": {
+      "desktop": {
+        "classes": "kc-card-stack kc-ingredient-desktop kc-theme-green",
+        "dataKC": "Segment / Ingredient",
+        "ariaLabel": "Summer squash knowledge card"
+      },
+      "mobile": {
+        "classes": "kc-card-stack kc-mobile-designer-card kc-ingredient-mobile kc-theme-green",
+        "dataKC": "Segment / Ingredient",
+        "ariaLabel": "Summer squash knowledge card",
+        "visibleModules": 5,
+        "moreId": "kc-ingredient-mobile-more",
+        "buttonDataKC": "Mobile / Expansion / See more",
+        "moreBeforeButton": true,
+        "icon": { "kind": "inline" }
+      }
+    },
+    "planet": {
+      "desktop": {
+        "classes": "kc-card-stack kc-planet-desktop kc-theme-orange",
+        "dataKC": "Segment / Celestial Body",
+        "ariaLabel": "Jupiter knowledge card"
+      },
+      "mobile": {
+        "classes": "kc-card-stack kc-mobile-designer-card kc-planet-mobile kc-theme-orange",
+        "dataKC": "Segment / Celestial Body",
+        "ariaLabel": "Jupiter knowledge card",
+        "visibleModules": 6,
+        "moreId": "kc-planet-mobile-more",
+        "buttonDataKC": "Mobile / Expansion / See more",
+        "moreBeforeButton": true,
+        "icon": { "kind": "inline" },
+        "quickFactsExpandedClass": "kc-planet-mobile__quick-facts-expanded"
+      }
+    },
+    "plant": {
+      "desktop": {
+        "classes": "kc-card-stack kc-plant-desktop kc-theme-red-2",
+        "dataKC": "Segment / Plant",
+        "ariaLabel": "Dahlia knowledge card"
+      },
+      "mobile": {
+        "classes": "kc-card-stack kc-mobile-designer-card kc-plant-mobile kc-theme-orange",
+        "dataKC": "Segment / Plant",
+        "ariaLabel": "Dahlia knowledge card",
+        "visibleModules": 5,
+        "moreId": "kc-plant-mobile-more",
+        "moreBeforeButton": true,
+        "icon": { "kind": "symbol", "viewBox": "0 0 16 16", "href": "#kc-plant-chevron-down" }
+      }
+    },
+    "state": {
+      "desktop": {
+        "classes": "kc-card-stack kc-state-desktop kc-theme-purple-2",
+        "ariaLabel": "Idaho knowledge card"
+      },
+      "mobile": {
+        "classes": "kc-card-stack kc-mobile-designer-card kc-state-mobile kc-theme-purple-2",
+        "ariaLabel": "Idaho knowledge card",
+        "visibleModules": 5,
+        "moreId": "state-more",
+        "moreBeforeButton": false,
+        "icon": { "kind": "inline" }
+      }
+    },
+    "team": {
+      "desktop": {
+        "classes": "kc-card-stack kc-team-desktop kc-theme-purple-2",
+        "dataKC": "Segment / Team",
+        "ariaLabel": "Los Angeles Lakers knowledge card"
+      },
+      "mobile": {
+        "classes": "kc-card-stack kc-mobile-designer-card kc-team-mobile kc-theme-purple-2",
+        "dataKC": "Segment / Team",
+        "ariaLabel": "Los Angeles Lakers knowledge card",
+        "visibleModules": 6,
+        "moreId": "kc-team-mobile-more",
+        "moreBeforeButton": true,
+        "icon": { "kind": "symbol", "viewBox": "0 0 12 12", "href": "#kc-team-icon-chevron-down" }
+      }
+    }
+  },
+  "samples": {
+    "desktop": {
+      "classes": "kc-card-stack",
+      "dataKC": "Designer Card",
+      "ariaLabel": "Riverside Old Town knowledge card",
+      "modules": [
+        { "type": "travel", "platform": "desktop", "variant": "card-desktop-travel" },
+        { "type": "places-to-visit", "platform": "desktop", "variant": "card-desktop-places-to-visit" },
+        { "type": "main", "platform": "desktop", "variant": "card-desktop-main-square" },
+        { "type": "quote", "platform": "desktop", "variant": "card-desktop-quote" },
+        { "type": "reviews", "platform": "desktop" },
+        { "type": "attribution", "platform": "desktop", "variant": "card-desktop-attribution" }
+      ]
+    },
+    "mobile": {
+      "classes": "kc-card-stack kc-mobile-designer-card",
+      "dataKC": "Mobile Designer Card",
+      "ariaLabel": "Riverside Old Town knowledge card",
+      "visibleModules": 5,
+      "moreId": "kc-card-more-mobile",
+      "moreBeforeButton": true,
+      "buttonDataKC": "Mobile / Expansion / See more",
+      "showExpansion": true,
+      "lastModuleMode": "visible",
+      "icon": { "kind": "image", "src": "../assets/icons/ic_fluent_chevron_down_16_regular.svg", "alt": "" },
+      "modules": [
+        { "type": "travel", "platform": "mobile", "variant": "card-mobile-travel" },
+        { "type": "places-to-visit", "platform": "mobile", "variant": "card-mobile-places-to-visit" },
+        { "type": "main", "platform": "mobile", "variant": "card-mobile-main-square" },
+        { "type": "quote", "platform": "mobile", "variant": "card-mobile-quote" },
+        { "type": "reviews", "platform": "mobile" }
+      ]
+    },
+    "reviews": {
+      "desktop": [
+        {
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "reviewer": "Film Weekly",
+          "image": "../assets/images/kc/stock/cinema.jpg",
+          "alt": "Rows of red seats in a dark cinema"
+        },
+        {
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "reviewer": "Screen Notes",
+          "image": "../assets/images/kc/stock/city.jpg",
+          "alt": "City skyline at sunset"
+        },
+        {
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "reviewer": "The Daily Reel",
+          "image": "../assets/images/kc/stock/forest.jpg",
+          "alt": "Evergreen forest at sunset"
+        }
+      ],
+      "mobile": [
+        {
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna ...",
+          "reviewer": "Film Weekly",
+          "image": "../assets/images/kc/stock/cinema.jpg",
+          "alt": "Rows of red seats in a dark cinema"
+        },
+        {
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna ...",
+          "reviewer": "Screen Notes",
+          "image": "../assets/images/kc/stock/city.jpg",
+          "alt": "City skyline at sunset"
+        },
+        {
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna ...",
+          "reviewer": "The Daily Reel",
+          "image": "../assets/images/kc/stock/forest.jpg",
+          "alt": "Evergreen forest at sunset"
+        }
+      ]
+    }
+  }
+};

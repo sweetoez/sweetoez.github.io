@@ -12,12 +12,13 @@
   <script src="../assets/js/components/kc-modules/image-list.js"></script>
   <script src="../assets/js/components/kc-modules/travel-map.js"></script>
   <script src="../assets/js/components/kc-hero.js"></script>
+  <script src="../assets/js/components/kc-card.js"></script>
   <style>
     * { box-sizing:border-box; }
     body { min-width:1344px; margin:0; padding:32px; background:var(--kc-gray-5); color:var(--kc-gray-1); font-family:var(--kc-font); }
     main { width:max-content; }
     .kc-card-board-item { width:max-content; }
-    .kc-card-board-label { margin:0 0 8px; color:var(--kc-gray-2); font-size:12px; line-height:16px; }
+    .kc-card-board-label { margin:0 0 8px; color:var(--kc-gray-2); font-size:12px; font-weight:400; line-height:16px; }
   </style>
   <link rel="stylesheet" href="../assets/css/fluent-motion.css">
   <script defer src="../assets/js/fluent-motion.js"></script>
@@ -25,142 +26,14 @@
 <body class="demo">
   <main>
     <div class="kc-card-board-item">
-      <p class="kc-card-board-label">Country — Desktop</p>
+      <h1 class="kc-card-board-label">Country — Desktop</h1>
       <div class="kc-full-knowledge-card kc-country-desktop-frame" data-kc="Full Knowledge Card">
-        <article class="kc-card-stack kc-country-desktop kc-theme-orange" data-kc="Segment / Country" aria-label="India knowledge card">
-          <kc-hero entity="country" platform="desktop"></kc-hero>
+        <kc-card entity="country" platform="desktop"></kc-card>
 
-          <kc-module entity="country" platform="desktop" index="0"></kc-module>
 
-          <kc-module entity="country" platform="desktop" index="1"></kc-module>
-
-          <kc-module entity="country" platform="desktop" index="2"></kc-module>
-
-          <kc-module entity="country" platform="desktop" index="3"></kc-module>
-
-          <kc-module entity="country" platform="desktop" index="4"></kc-module>
-
-          <kc-module entity="country" platform="desktop" index="5"></kc-module>
-
-          <kc-module entity="country" platform="desktop" index="6"></kc-module>
-        </article>
-
-        <form class="kc-modules-panel" data-portfolio="Modules panel (not in Figma)" aria-label="Modules">
-          <h2>Modules</h2>
-          <p class="kc-modules-panel__hero">Designer (hero) — always on top</p>
-          <ol>
-            <li>
-              <input type="checkbox" checked id="kc-country-toggle-1" aria-controls="kc-country-mod-1">
-              <label for="kc-country-toggle-1">Text List / Top Fact</label>
-              <button class="kc-btn-outline kc-btn-outline-icon" type="button" aria-label="Move Text List / Top Fact up" data-move="up"><img src="../assets/icons/ic_fluent_arrow_up_16_regular.svg" alt="" aria-hidden="true"></button>
-              <button class="kc-btn-outline kc-btn-outline-icon" type="button" aria-label="Move Text List / Top Fact down" data-move="down"><img src="../assets/icons/ic_fluent_arrow_down_16_regular.svg" alt="" aria-hidden="true"></button>
-            </li>
-            <li>
-              <input type="checkbox" checked id="kc-country-toggle-2" aria-controls="kc-country-mod-2">
-              <label for="kc-country-toggle-2">Miscellaneous / Map</label>
-              <button class="kc-btn-outline kc-btn-outline-icon" type="button" aria-label="Move Miscellaneous / Map up" data-move="up"><img src="../assets/icons/ic_fluent_arrow_up_16_regular.svg" alt="" aria-hidden="true"></button>
-              <button class="kc-btn-outline kc-btn-outline-icon" type="button" aria-label="Move Miscellaneous / Map down" data-move="down"><img src="../assets/icons/ic_fluent_arrow_down_16_regular.svg" alt="" aria-hidden="true"></button>
-            </li>
-            <li>
-              <input type="checkbox" checked id="kc-country-toggle-3" aria-controls="kc-country-mod-3">
-              <label for="kc-country-toggle-3">Image List / Places to Visit</label>
-              <button class="kc-btn-outline kc-btn-outline-icon" type="button" aria-label="Move Image List / Places to Visit up" data-move="up"><img src="../assets/icons/ic_fluent_arrow_up_16_regular.svg" alt="" aria-hidden="true"></button>
-              <button class="kc-btn-outline kc-btn-outline-icon" type="button" aria-label="Move Image List / Places to Visit down" data-move="down"><img src="../assets/icons/ic_fluent_arrow_down_16_regular.svg" alt="" aria-hidden="true"></button>
-            </li>
-            <li>
-              <input type="checkbox" checked id="kc-country-toggle-4" aria-controls="kc-country-mod-4">
-              <label for="kc-country-toggle-4">Image List / Interesting Facts</label>
-              <button class="kc-btn-outline kc-btn-outline-icon" type="button" aria-label="Move Image List / Interesting Facts up" data-move="up"><img src="../assets/icons/ic_fluent_arrow_up_16_regular.svg" alt="" aria-hidden="true"></button>
-              <button class="kc-btn-outline kc-btn-outline-icon" type="button" aria-label="Move Image List / Interesting Facts down" data-move="down"><img src="../assets/icons/ic_fluent_arrow_down_16_regular.svg" alt="" aria-hidden="true"></button>
-            </li>
-            <li>
-              <input type="checkbox" checked id="kc-country-toggle-5" aria-controls="kc-country-mod-5">
-              <label for="kc-country-toggle-5">Text List / Top Fact — Quantity=3</label>
-              <button class="kc-btn-outline kc-btn-outline-icon" type="button" aria-label="Move Text List / Top Fact Quantity 3 up" data-move="up"><img src="../assets/icons/ic_fluent_arrow_up_16_regular.svg" alt="" aria-hidden="true"></button>
-              <button class="kc-btn-outline kc-btn-outline-icon" type="button" aria-label="Move Text List / Top Fact Quantity 3 down" data-move="down"><img src="../assets/icons/ic_fluent_arrow_down_16_regular.svg" alt="" aria-hidden="true"></button>
-            </li>
-            <li>
-              <input type="checkbox" checked id="kc-country-toggle-6" aria-controls="kc-country-mod-6">
-              <label for="kc-country-toggle-6">Miscellaneous / Timeline</label>
-              <button class="kc-btn-outline kc-btn-outline-icon" type="button" aria-label="Move Miscellaneous / Timeline up" data-move="up"><img src="../assets/icons/ic_fluent_arrow_up_16_regular.svg" alt="" aria-hidden="true"></button>
-              <button class="kc-btn-outline kc-btn-outline-icon" type="button" aria-label="Move Miscellaneous / Timeline down" data-move="down"><img src="../assets/icons/ic_fluent_arrow_down_16_regular.svg" alt="" aria-hidden="true"></button>
-            </li>
-            <li>
-              <input type="checkbox" checked id="kc-country-toggle-7" aria-controls="kc-country-mod-7">
-              <label for="kc-country-toggle-7">Text List / Top Fact/Text List/Attributions</label>
-              <button class="kc-btn-outline kc-btn-outline-icon" type="button" aria-label="Move Attributions up" data-move="up"><img src="../assets/icons/ic_fluent_arrow_up_16_regular.svg" alt="" aria-hidden="true"></button>
-              <button class="kc-btn-outline kc-btn-outline-icon" type="button" aria-label="Move Attributions down" data-move="down"><img src="../assets/icons/ic_fluent_arrow_down_16_regular.svg" alt="" aria-hidden="true"></button>
-            </li>
-          </ol>
-          <p class="kc-modules-panel__status" aria-live="polite"></p>
-        </form>
       </div>
     </div>
   </main>
-  <script>
-    const stack = document.querySelector(".kc-country-desktop");
-    const panel = document.querySelector(".kc-modules-panel");
-    const rows = Array.from(panel.querySelectorAll("li"));
-    const modules = new Map(rows.map(row => {
-      const checkbox = row.querySelector('input[type="checkbox"]');
-      return [row, document.getElementById(checkbox.getAttribute("aria-controls"))];
-    }));
-    const status = panel.querySelector(".kc-modules-panel__status");
-    const hero = stack.querySelector(".kc-hero-designer");
 
-    function sync() {
-      for (const [row, module] of modules) {
-        module.hidden = !row.querySelector('input[type="checkbox"]').checked;
-      }
-
-      const orderedRows = Array.from(panel.querySelectorAll("li"));
-      orderedRows.forEach((row, index) => {
-        row.querySelector('[data-move="up"]').disabled = index === 0;
-        row.querySelector('[data-move="down"]').disabled = index === orderedRows.length - 1;
-      });
-
-      const cardModules = Array.from(stack.querySelectorAll(":scope > .kc-module"));
-      cardModules.forEach(module => module.classList.remove("kc-module--card-last"));
-      const lastVisible = cardModules.filter(module => !module.hidden).at(-1);
-      hero.classList.toggle("kc-hero-designer--card-last", !lastVisible);
-      lastVisible?.classList.add("kc-module--card-last");
-    }
-
-    for (const row of rows) {
-      const checkbox = row.querySelector('input[type="checkbox"]');
-      const module = modules.get(row);
-      checkbox.addEventListener("change", sync);
-
-      row.querySelectorAll("[data-move]").forEach(button => {
-        button.addEventListener("click", event => {
-          const direction = button.dataset.move;
-          const neighbor = direction === "up" ? row.previousElementSibling : row.nextElementSibling;
-          if (!neighbor) return;
-
-          if (direction === "up") {
-            panel.querySelector("ol").insertBefore(row, neighbor);
-            stack.insertBefore(module, module.previousElementSibling);
-          } else {
-            panel.querySelector("ol").insertBefore(neighbor, row);
-            stack.insertBefore(modules.get(neighbor), module);
-          }
-
-          const orderedRows = Array.from(panel.querySelectorAll("li"));
-          const position = orderedRows.indexOf(row) + 1;
-          status.textContent = `${row.querySelector("label").textContent} moved to position ${position} of ${orderedRows.length}`;
-          sync();
-
-          const focusedButton = event.currentTarget;
-          if (focusedButton.disabled) {
-            row.querySelector(`[data-move="${direction === "up" ? "down" : "up"}"]:not(:disabled)`).focus();
-          } else {
-            focusedButton.focus();
-          }
-        });
-      });
-    }
-
-    sync();
-  </script>
 </body>
 </html>

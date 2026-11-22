@@ -10,6 +10,7 @@
   <script src="../assets/js/components/kc-modules/image-list.js"></script>
   <script src="../assets/js/components/kc-modules/media.js"></script>
   <script src="../assets/js/components/kc-hero.js"></script>
+  <script src="../assets/js/components/kc-card.js"></script>
   <style>
     * { box-sizing:border-box; }
     body { min-width:1344px; margin:0; padding:32px; background:var(--kc-gray-5); color:var(--kc-gray-1); font-family:var(--kc-font); }
@@ -71,57 +72,9 @@
     <div class="kc-card-board-item">
       <h1 class="kc-card-board-label">Band — Desktop</h1>
       <div class="kc-full-knowledge-card kc-band-desktop-frame" data-kc="Full Knowledge Card">
-        <article class="kc-card-stack kc-band-desktop kc-theme-orange" data-kc="Segment / Band" aria-label="Red Hot Chili Peppers knowledge card">
-          <kc-hero entity="band" platform="desktop"></kc-hero>
+        <kc-card entity="band" platform="desktop"></kc-card>
 
-          <kc-module entity="band" platform="desktop" index="0"></kc-module>
 
-          <kc-module entity="band" platform="desktop" index="1"></kc-module>
-
-          <kc-module entity="band" platform="desktop" index="2"></kc-module>
-
-          <kc-module entity="band" platform="desktop" index="3"></kc-module>
-
-          <kc-module entity="band" platform="desktop" index="4"></kc-module>
-        </article>
-
-        <form class="kc-modules-panel" data-portfolio="Modules panel (not in Figma)" aria-label="Modules">
-          <h2>Modules</h2>
-          <p class="kc-modules-panel__hero">Designer (hero) — always on top</p>
-          <ol>
-            <li>
-              <input type="checkbox" checked id="kc-band-desktop-toggle-main" aria-controls="kc-band-desktop-mod-main">
-              <label for="kc-band-desktop-toggle-main">Image List / Main</label>
-              <button class="kc-btn-outline kc-btn-outline-icon" type="button" aria-label="Move Image List / Main up" data-move="up"><img src="../assets/icons/ic_fluent_arrow_up_16_regular.svg" alt="" aria-hidden="true"></button>
-              <button class="kc-btn-outline kc-btn-outline-icon" type="button" aria-label="Move Image List / Main down" data-move="down"><img src="../assets/icons/ic_fluent_arrow_down_16_regular.svg" alt="" aria-hidden="true"></button>
-            </li>
-            <li>
-              <input type="checkbox" checked id="kc-band-desktop-toggle-listen" aria-controls="kc-band-desktop-mod-listen">
-              <label for="kc-band-desktop-toggle-listen">Miscellaneous / Listen</label>
-              <button class="kc-btn-outline kc-btn-outline-icon" type="button" aria-label="Move Miscellaneous / Listen up" data-move="up"><img src="../assets/icons/ic_fluent_arrow_up_16_regular.svg" alt="" aria-hidden="true"></button>
-              <button class="kc-btn-outline kc-btn-outline-icon" type="button" aria-label="Move Miscellaneous / Listen down" data-move="down"><img src="../assets/icons/ic_fluent_arrow_down_16_regular.svg" alt="" aria-hidden="true"></button>
-            </li>
-            <li>
-              <input type="checkbox" checked id="kc-band-desktop-toggle-facts" aria-controls="kc-band-desktop-mod-facts">
-              <label for="kc-band-desktop-toggle-facts">Image List / Interesting Facts</label>
-              <button class="kc-btn-outline kc-btn-outline-icon" type="button" aria-label="Move Image List / Interesting Facts up" data-move="up"><img src="../assets/icons/ic_fluent_arrow_up_16_regular.svg" alt="" aria-hidden="true"></button>
-              <button class="kc-btn-outline kc-btn-outline-icon" type="button" aria-label="Move Image List / Interesting Facts down" data-move="down"><img src="../assets/icons/ic_fluent_arrow_down_16_regular.svg" alt="" aria-hidden="true"></button>
-            </li>
-            <li>
-              <input type="checkbox" checked id="kc-band-desktop-toggle-awards" aria-controls="kc-band-desktop-mod-awards">
-              <label for="kc-band-desktop-toggle-awards">Text List / Awards</label>
-              <button class="kc-btn-outline kc-btn-outline-icon" type="button" aria-label="Move Text List / Awards up" data-move="up"><img src="../assets/icons/ic_fluent_arrow_up_16_regular.svg" alt="" aria-hidden="true"></button>
-              <button class="kc-btn-outline kc-btn-outline-icon" type="button" aria-label="Move Text List / Awards down" data-move="down"><img src="../assets/icons/ic_fluent_arrow_down_16_regular.svg" alt="" aria-hidden="true"></button>
-            </li>
-            <li>
-              <input type="checkbox" checked id="kc-band-desktop-toggle-attribution" aria-controls="kc-band-desktop-mod-attribution">
-              <label for="kc-band-desktop-toggle-attribution">Text List / Top Fact/Text List/Attributions</label>
-              <button class="kc-btn-outline kc-btn-outline-icon" type="button" aria-label="Move Attributions up" data-move="up"><img src="../assets/icons/ic_fluent_arrow_up_16_regular.svg" alt="" aria-hidden="true"></button>
-              <button class="kc-btn-outline kc-btn-outline-icon" type="button" aria-label="Move Attributions down" data-move="down"><img src="../assets/icons/ic_fluent_arrow_down_16_regular.svg" alt="" aria-hidden="true"></button>
-            </li>
-          </ol>
-          <p class="kc-modules-panel__status" aria-live="polite"></p>
-        </form>
 
         <svg class="kc-icon-defs" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
           <symbol id="kc-band-share" viewBox="0 0 16 16"><path d="M7.5 2C7.77614 2 8 2.22386 8 2.5C7.99992 2.77608 7.77609 3 7.5 3H4.5C3.67157 3 3 3.67157 3 4.5V11.5C3.00008 12.3284 3.67162 13 4.5 13H11.5C12.3284 13 12.9999 12.3284 13 11.5V9.5C13 9.22386 13.2239 9 13.5 9C13.7761 9 14 9.22386 14 9.5V11.5C13.9999 12.8806 12.8807 14 11.5 14H4.5C3.11934 14 2.00008 12.8806 2 11.5V4.5C2 3.11929 3.11929 2 4.5 2H7.5ZM10.7803 1.05078C10.9518 0.966903 11.1559 0.988317 11.3066 1.10547L15.8066 4.60547C15.9284 4.7002 16 4.84573 16 5C16 5.15424 15.9284 5.29983 15.8066 5.39453L11.3066 8.89453C11.1559 9.01162 10.9517 9.03305 10.7803 8.94922C10.6088 8.86533 10.5001 8.6909 10.5 8.5V7.02539C8.26802 7.25505 6.87621 8.99835 6.10352 10.4238L5.94727 10.7236C5.84354 10.931 5.6104 11.0396 5.38477 10.9863C5.15934 10.9329 5.00007 10.7317 5 10.5C5 8.42356 5.51823 6.55894 6.53711 5.20019C7.47545 3.94908 8.82277 3.15337 10.5 3.02148V1.5C10.5 1.30906 10.6088 1.13469 10.7803 1.05078ZM11.5 3.5C11.4999 3.77608 11.2761 4 11 4C9.41093 4 8.18302 4.67315 7.33789 5.7998C6.80109 6.51557 6.41018 7.42583 6.19434 8.47949C7.22177 7.19865 8.77537 6 11 6C11.2761 6 11.5 6.22386 11.5 6.5V7.47754L14.6855 5L11.5 2.52148V3.5Z" fill="currentColor"/></symbol>
@@ -131,62 +84,6 @@
       </div>
     </div>
   </main>
-  <script>
-    const stack = document.querySelector(".kc-band-desktop");
-    const panel = document.querySelector(".kc-modules-panel");
-    const rows = Array.from(panel.querySelectorAll("li"));
-    const modules = new Map(rows.map(row => {
-      const checkbox = row.querySelector('input[type="checkbox"]');
-      return [row, document.getElementById(checkbox.getAttribute("aria-controls"))];
-    }));
-    const status = panel.querySelector(".kc-modules-panel__status");
-    const hero = stack.querySelector(".kc-hero-designer");
 
-    function sync() {
-      for (const [row, module] of modules) {
-        module.hidden = !row.querySelector('input[type="checkbox"]').checked;
-      }
-      const orderedRows = Array.from(panel.querySelectorAll("li"));
-      orderedRows.forEach((row, index) => {
-        row.querySelector('[data-move="up"]').disabled = index === 0;
-        row.querySelector('[data-move="down"]').disabled = index === orderedRows.length - 1;
-      });
-      const cardModules = Array.from(stack.querySelectorAll(":scope > .kc-module"));
-      cardModules.forEach(module => module.classList.remove("kc-module--card-last"));
-      const lastVisible = cardModules.filter(module => !module.hidden).at(-1);
-      hero.classList.toggle("kc-hero-designer--card-last", !lastVisible);
-      lastVisible?.classList.add("kc-module--card-last");
-    }
-
-    for (const row of rows) {
-      const checkbox = row.querySelector('input[type="checkbox"]');
-      const module = modules.get(row);
-      checkbox.addEventListener("change", sync);
-      row.querySelectorAll("[data-move]").forEach(button => {
-        button.addEventListener("click", event => {
-          const direction = button.dataset.move;
-          const neighbor = direction === "up" ? row.previousElementSibling : row.nextElementSibling;
-          if (!neighbor) return;
-          if (direction === "up") {
-            panel.querySelector("ol").insertBefore(row, neighbor);
-            stack.insertBefore(module, module.previousElementSibling);
-          } else {
-            panel.querySelector("ol").insertBefore(neighbor, row);
-            stack.insertBefore(modules.get(neighbor), module);
-          }
-          const orderedRows = Array.from(panel.querySelectorAll("li"));
-          status.textContent = `${row.querySelector("label").textContent} moved to position ${orderedRows.indexOf(row) + 1} of ${orderedRows.length}`;
-          sync();
-          const focusedButton = event.currentTarget;
-          if (focusedButton.disabled) {
-            row.querySelector(`[data-move="${direction === "up" ? "down" : "up"}"]:not(:disabled)`).focus();
-          } else {
-            focusedButton.focus();
-          }
-        });
-      });
-    }
-    sync();
-  </script>
 </body>
 </html>

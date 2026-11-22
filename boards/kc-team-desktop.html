@@ -9,6 +9,7 @@
   <script src="../assets/js/components/kc-modules/text-list.js"></script>
   <script src="../assets/js/components/kc-modules/image-list.js"></script>
   <script src="../assets/js/components/kc-hero.js"></script>
+  <script src="../assets/js/components/kc-card.js"></script>
   <style>
     * { box-sizing:border-box; }
     body { min-width:1344px; margin:0; padding:32px; background:var(--kc-gray-5); color:var(--kc-gray-1); font-family:var(--kc-font); }
@@ -25,31 +26,9 @@
     <div class="kc-card-board-item">
       <h1 class="kc-card-board-label">Team — Desktop</h1>
       <div class="kc-full-knowledge-card kc-team-desktop-frame" data-kc="Full Knowledge Card">
-        <article class="kc-card-stack kc-team-desktop kc-theme-purple-2" data-kc="Segment / Team" aria-label="Los Angeles Lakers knowledge card">
-          <kc-hero entity="team" platform="desktop"></kc-hero>
+        <kc-card entity="team" platform="desktop"></kc-card>
 
-          <kc-module entity="team" platform="desktop" index="0"></kc-module>
 
-          <kc-module entity="team" platform="desktop" index="1"></kc-module>
-
-          <kc-module entity="team" platform="desktop" index="2"></kc-module>
-
-          <kc-module entity="team" platform="desktop" index="3"></kc-module>
-
-          <kc-module entity="team" platform="desktop" index="4"></kc-module>
-        </article>
-
-        <form class="kc-modules-panel" aria-label="Modules">
-          <h2>Modules</h2>
-          <p class="kc-modules-panel__hero">Designer (hero) — always on top</p>
-          <ol>
-            <li><input type="checkbox" checked id="kc-team-desktop-toggle-facts" aria-controls="kc-team-desktop-facts"><label for="kc-team-desktop-toggle-facts">Text List / Quick Facts</label></li>
-            <li><input type="checkbox" checked id="kc-team-desktop-toggle-players" aria-controls="kc-team-desktop-players"><label for="kc-team-desktop-toggle-players">Image List / Main</label></li>
-            <li><input type="checkbox" checked id="kc-team-desktop-toggle-interesting" aria-controls="kc-team-desktop-interesting"><label for="kc-team-desktop-toggle-interesting">Image List / Interesting Facts</label></li>
-            <li><input type="checkbox" checked id="kc-team-desktop-toggle-awards" aria-controls="kc-team-desktop-awards"><label for="kc-team-desktop-toggle-awards">Text List / Awards</label></li>
-            <li><input type="checkbox" checked id="kc-team-desktop-toggle-attribution" aria-controls="kc-team-desktop-attribution"><label for="kc-team-desktop-toggle-attribution">Text List / Attributions</label></li>
-          </ol>
-        </form>
 
         <svg class="kc-icon-defs" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
           <symbol id="kc-team-share" viewBox="0 0 16 16"><path d="M7.5 2C7.77614 2 8 2.22386 8 2.5C7.99992 2.77608 7.77609 3 7.5 3H4.5C3.67157 3 3 3.67157 3 4.5V11.5C3.00008 12.3284 3.67162 13 4.5 13H11.5C12.3284 13 12.9999 12.3284 13 11.5V9.5C13 9.22386 13.2239 9 13.5 9C13.7761 9 14 9.22386 14 9.5V11.5C13.9999 12.8806 12.8807 14 11.5 14H4.5C3.11934 14 2.00008 12.8806 2 11.5V4.5C2 3.11929 3.11929 2 4.5 2H7.5ZM10.7803 1.05078C10.9518 0.966903 11.1559 0.988317 11.3066 1.10547L15.8066 4.60547C15.9284 4.7002 16 4.84573 16 5C16 5.15424 15.9284 5.29983 15.8066 5.39453L11.3066 8.89453C11.1559 9.01162 10.9517 9.03305 10.7803 8.94922C10.6088 8.86533 10.5001 8.6909 10.5 8.5V7.02539C8.26802 7.25505 6.87621 8.99835 6.10352 10.4238L5.94727 10.7236C5.84354 10.931 5.6104 11.0396 5.38477 10.9863C5.15934 10.9329 5.00007 10.7317 5 10.5C5 8.42356 5.51823 6.55894 6.53711 5.20019C7.47545 3.94908 8.82277 3.15337 10.5 3.02148V1.5C10.5 1.30906 10.6088 1.13469 10.7803 1.05078ZM11.5 3.5C11.4999 3.77608 11.2761 4 11 4C9.41093 4 8.18302 4.67315 7.33789 5.7998C6.80109 6.51557 6.41018 7.42583 6.19434 8.47949C7.22177 7.19865 8.77537 6 11 6C11.2761 6 11.5 6.22386 11.5 6.5V7.47754L14.6855 5L11.5 2.52148V3.5Z" fill="currentColor"/></symbol>
@@ -58,13 +37,6 @@
       </div>
     </div>
   </main>
-  <script>
-    const panel = document.querySelector(".kc-modules-panel");
-    panel.querySelectorAll('input[type="checkbox"]').forEach(input => {
-      input.addEventListener("change", () => {
-        document.getElementById(input.getAttribute("aria-controls")).hidden = !input.checked;
-      });
-    });
-  </script>
+
 </body>
 </html>

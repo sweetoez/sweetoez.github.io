@@ -58,6 +58,7 @@ Controls are native HTML in plain CSS with Fluent states (rest, hover, pressed, 
 - media family done (#140).
 - travel-map family done (#141).
 - utility family done (#142).
+- <kc-card> done (#143): entity and sample cards render from `/assets/js/components/kc-card.js` using configuration in `/assets/js/data/kc-entities.js`.
 - Standing KC rules: widths 472 / 360; one 1px `#DDD` seam; last visible item radius `0 0 6 6`; Title Case; #059 logo rows centered on the image edge with real brand SVGs; #060 scroll rows edge to edge with a 16px inner start inset; the 20px Video + Image overhang; and #085 module images under `/assets/images/kc/modules/<slug>/`.
 
 ## KC hero + carousel rules (#059)

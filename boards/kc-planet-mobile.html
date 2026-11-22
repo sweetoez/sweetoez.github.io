@@ -10,6 +10,7 @@
   <script src="../assets/js/components/kc-modules/image-list.js"></script>
   <script src="../assets/js/components/kc-modules/travel-map.js"></script>
   <script src="../assets/js/components/kc-hero.js"></script>
+  <script src="../assets/js/components/kc-card.js"></script>
   <script src="../assets/js/kc-mobile-carousels.js" defer></script>
   <style>
     * { box-sizing:border-box; }
@@ -26,111 +27,11 @@
     <div class="kc-card-board-item">
       <h1 class="kc-card-board-label">Planet — Mobile</h1>
       <div class="kc-full-knowledge-card kc-planet-mobile-frame" data-kc="Full Knowledge Card">
-        <article class="kc-card-stack kc-mobile-designer-card kc-planet-mobile kc-theme-orange" data-kc="Segment / Celestial Body" aria-label="Jupiter knowledge card">
-          <kc-hero entity="planet" platform="mobile"></kc-hero>
-
-          <kc-module entity="planet" platform="mobile" index="0"></kc-module>
-
-          <kc-module entity="planet" platform="mobile" index="1"></kc-module>
-
-          <kc-module entity="planet" platform="mobile" index="2"></kc-module>
-
-          <kc-module entity="planet" platform="mobile" index="3"></kc-module>
-
-          <kc-module entity="planet" platform="mobile" index="4"></kc-module>
-
-          <kc-module entity="planet" platform="mobile" index="5"></kc-module>
-
-          <div class="kc-card-more" id="kc-planet-mobile-more" hidden>
-            <kc-module entity="planet" platform="mobile" index="6"></kc-module>
-          </div>
-          <button class="kc-mobile-expansion-see-more" type="button" data-kc="Mobile / Expansion / See more" aria-expanded="false" aria-controls="kc-planet-mobile-more">
-            <span class="kc-mobile-expansion-see-more__line" aria-hidden="true"></span>
-            <span class="kc-mobile-expansion-see-more__circle" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3.14645 5.14645C3.34171 4.95118 3.65829 4.95118 3.85355 5.14645L8 9.29289L12.1464 5.14645C12.3417 4.95118 12.6583 4.95118 12.8536 5.14645C13.0488 5.34171 13.0488 5.65829 12.8536 5.85355L8.35355 10.3536C8.15829 10.5488 7.84171 10.5488 7.64645 10.3536L3.14645 5.85355C2.95118 5.65829 2.95118 5.34171 3.14645 5.14645Z" fill="currentColor"/></svg></span>
-            <span class="kc-mobile-expansion-see-more__label">See more</span>
-          </button>
-        </article>
+        <kc-card entity="planet" platform="mobile"></kc-card>
 
       </div>
     </div>
   </main>
-  <script>
-    const stack = document.querySelector(".kc-planet-mobile");
-    const carousel = stack.querySelector("#kc-planet-mobile-carousel .kc-scroll-row");
-    const previousCarousel = stack.querySelector(".kc-planet-mobile-carousel__previous");
-    const nextCarousel = stack.querySelector(".kc-planet-mobile-carousel__next");
-    const quickFacts = stack.querySelector("#kc-planet-mobile-quick-facts");
-    const quickFactsButton = quickFacts.querySelector(".kc-mobile-text-list-quick-facts__more button");
-    const cardExpansion = stack.querySelector(".kc-mobile-expansion-see-more");
-    const cardMore = document.getElementById("kc-planet-mobile-more");
-    const cardExpansionLabel = cardExpansion.querySelector(".kc-mobile-expansion-see-more__label");
-    const tablist = stack.querySelector(".kc-mobile-hero-tabs-container");
 
-    function syncCarousel() {
-      previousCarousel.disabled = carousel.scrollLeft <= 0;
-      nextCarousel.disabled = carousel.scrollLeft + carousel.clientWidth >= carousel.scrollWidth - 1;
-    }
-
-    function scrollCarousel(direction) {
-      const behavior = window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "instant" : "smooth";
-      carousel.scrollBy({ left:direction * 140, behavior });
-    }
-
-    function selectTab(tab, focus = false) {
-      const tabs = Array.from(tablist.querySelectorAll('[role="tab"]'));
-      for (const item of tabs) {
-        const selected = item === tab;
-        item.classList.toggle("kc-mobile-hero-tab--selected", selected);
-        item.setAttribute("aria-selected", String(selected));
-        item.tabIndex = selected ? 0 : -1;
-      }
-      if (focus) tab.focus();
-    }
-
-    previousCarousel.addEventListener("click", () => scrollCarousel(-1));
-    nextCarousel.addEventListener("click", () => scrollCarousel(1));
-    carousel.addEventListener("scroll", syncCarousel, { passive:true });
-    carousel.addEventListener("keydown", event => {
-      if (event.key === "ArrowLeft" || event.key === "ArrowRight") {
-        event.preventDefault();
-        scrollCarousel(event.key === "ArrowLeft" ? -1 : 1);
-      }
-    });
-    window.addEventListener("resize", syncCarousel);
-
-    tablist.addEventListener("click", event => {
-      const tab = event.target.closest('[role="tab"]');
-      if (tab && tablist.contains(tab)) selectTab(tab);
-    });
-    tablist.addEventListener("keydown", event => {
-      const tabs = Array.from(tablist.querySelectorAll('[role="tab"]'));
-      const activeIndex = tabs.indexOf(document.activeElement);
-      const nextIndex = event.key === "ArrowRight" ? (activeIndex + 1) % tabs.length
-        : event.key === "ArrowLeft" ? (activeIndex - 1 + tabs.length) % tabs.length
-        : event.key === "Home" ? 0
-        : event.key === "End" ? tabs.length - 1
-        : -1;
-      if (nextIndex < 0) return;
-      event.preventDefault();
-      selectTab(tabs[nextIndex], true);
-    });
-
-    quickFactsButton.addEventListener("click", () => {
-      const showExtra = quickFactsButton.getAttribute("aria-expanded") !== "true";
-      quickFacts.querySelectorAll("[data-extra-fact]").forEach(item => { item.hidden = !showExtra; });
-      quickFactsButton.setAttribute("aria-expanded", String(showExtra));
-      quickFactsButton.textContent = showExtra ? "See less" : "See more";
-      quickFacts.classList.toggle("kc-planet-mobile__quick-facts-expanded", showExtra);
-    });
-
-    cardExpansion.addEventListener("click", () => {
-      const expanded = cardExpansion.getAttribute("aria-expanded") !== "true";
-      cardMore.hidden = !expanded;
-      cardExpansion.setAttribute("aria-expanded", String(expanded));
-      cardExpansionLabel.textContent = expanded ? "See less" : "See more";
-    });
-
-    syncCarousel();
-  </script>
 </body>
 </html>

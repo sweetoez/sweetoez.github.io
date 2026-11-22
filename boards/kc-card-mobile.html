@@ -10,13 +10,14 @@
   <script src="../assets/js/components/kc-modules/image-list.js"></script>
   <script src="../assets/js/components/kc-modules/travel-map.js"></script>
   <script src="../assets/js/components/kc-modules/utility.js"></script><script src="../assets/js/components/kc-hero.js"></script>
+  <script src="../assets/js/components/kc-card.js"></script>
   <script src="../assets/js/kc-mobile-carousels.js" defer></script>
   <style>
     * { box-sizing:border-box; }
     body { min-width:1344px; margin:0; padding:32px; background:var(--kc-gray-5); color:var(--kc-gray-1); font-family:var(--kc-font); }
     main { width:max-content; }
     .kc-card-board-item { width:max-content; }
-    .kc-card-board-label { margin:0 0 8px; color:var(--kc-gray-2); font-size:12px; line-height:16px; }
+    .kc-card-board-label { margin:0 0 8px; color:var(--kc-gray-2); font-size:12px; font-weight:400; line-height:16px; }
     .kc-mobile-card-label { position:absolute; top:256px; left:403px; }
   </style>
   <link rel="stylesheet" href="../assets/css/fluent-motion.css">
@@ -25,62 +26,10 @@
 <body class="demo">
   <main>
     <div class="kc-card-board-item">
-      <p class="kc-card-board-label">Full Knowledge Card</p>
+      <h1 class="kc-card-board-label">Full Knowledge Card</h1>
       <div class="kc-full-knowledge-card" data-kc="Full Knowledge Card">
         <p class="kc-card-board-label kc-mobile-card-label">Mobile Designer Card</p>
-        <article class="kc-card-stack kc-mobile-designer-card" data-kc="Mobile Designer Card" aria-label="Riverside Old Town knowledge card"> <!-- #053 -->
-          <kc-hero variant="cardMobile"></kc-hero>
-
-          <kc-module type="travel" platform="mobile" variant="card-mobile-travel"></kc-module>
-
-          <kc-module type="places-to-visit" platform="mobile" variant="card-mobile-places-to-visit"></kc-module>
-
-          <kc-module type="main" platform="mobile" variant="card-mobile-main-square"></kc-module>
-
-          <kc-module type="quote" platform="mobile" variant="card-mobile-quote"></kc-module>
-
-          <section class="kc-module kc-module--mobile kc-mobile-reviews-critics" id="kc-mobile-critics" data-kc="Mobile / Reviews / Critics">
-            <div class="kc-module-title">
-              <h3>Critic Reviews</h3>
-            </div>
-            <article class="kc-mobile-reviews-critics__review">
-              <div class="kc-mobile-reviews-critics__inner">
-                <p class="kc-m-reg kc-clamp-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna ... <a class="kc-m-text-button" href="#">Full review</a></p>
-                <div class="kc-mobile-reviews-critics__reviewer">
-                  <span class="kc-img" style="width:16px;height:16px;border-radius:2px"><img src="../assets/images/kc/stock/cinema.jpg" alt="Rows of red seats in a dark cinema" onerror="this.style.display='none'"></span>
-                  <span class="kc-m-reg">Film Weekly</span>
-                </div>
-              </div>
-              <span class="kc-m-divider"></span>
-            </article>
-            <article class="kc-mobile-reviews-critics__review">
-              <div class="kc-mobile-reviews-critics__inner">
-                <p class="kc-m-reg kc-clamp-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna ... <a class="kc-m-text-button" href="#">Full review</a></p>
-                <div class="kc-mobile-reviews-critics__reviewer">
-                  <span class="kc-img" style="width:16px;height:16px;border-radius:2px"><img src="../assets/images/kc/stock/city.jpg" alt="City skyline at sunset" onerror="this.style.display='none'"></span>
-                  <span class="kc-m-reg">Screen Notes</span>
-                </div>
-              </div>
-              <span class="kc-m-divider"></span>
-            </article>
-            <article class="kc-mobile-reviews-critics__review">
-              <div class="kc-mobile-reviews-critics__inner">
-                <p class="kc-m-reg kc-clamp-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna ... <a class="kc-m-text-button" href="#">Full review</a></p>
-                <div class="kc-mobile-reviews-critics__reviewer">
-                  <span class="kc-img" style="width:16px;height:16px;border-radius:2px"><img src="../assets/images/kc/stock/forest.jpg" alt="Evergreen forest at sunset" onerror="this.style.display='none'"></span>
-                  <span class="kc-m-reg">The Daily Reel</span>
-                </div>
-              </div>
-            </article>
-          </section>
-
-          <div class="kc-card-more" id="kc-card-more-mobile" hidden></div>
-          <button class="kc-mobile-expansion-see-more" type="button" data-kc="Mobile / Expansion / See more" aria-expanded="false" aria-controls="kc-card-more-mobile">
-            <span class="kc-mobile-expansion-see-more__line" aria-hidden="true"></span>
-            <span class="kc-mobile-expansion-see-more__circle" aria-hidden="true"><img src="../assets/icons/ic_fluent_chevron_down_16_regular.svg" alt=""></span>
-            <span class="kc-mobile-expansion-see-more__label">See more</span>
-          </button>
-        </article>
+        <kc-card variant="cardMobile"></kc-card>
 
         <form class="kc-modules-panel" data-portfolio="Modules panel (not in Figma)" aria-label="Modules">
           <h2>Modules</h2>
@@ -131,10 +80,6 @@
       return [row, document.getElementById(checkbox.getAttribute("aria-controls"))];
     }));
     const status = panel.querySelector(".kc-modules-panel__status");
-    const expansion = stack.querySelector(".kc-mobile-expansion-see-more");
-    const more = document.getElementById("kc-card-more-mobile");
-    const expansionLabel = expansion.querySelector(".kc-mobile-expansion-see-more__label");
-    const expansionIcon = expansion.querySelector(".kc-mobile-expansion-see-more__circle img");
 
     function sync() {
       for (const [row, module] of modules) {
@@ -186,14 +131,6 @@
         });
       });
     }
-
-    expansion.addEventListener("click", () => {
-      const expanded = expansion.getAttribute("aria-expanded") !== "true";
-      more.hidden = !expanded;
-      expansion.setAttribute("aria-expanded", String(expanded));
-      expansionLabel.textContent = expanded ? "See less" : "See more";
-      expansionIcon.style.transform = expanded ? "rotate(180deg)" : "rotate(0deg)";
-    });
 
     sync();
   </script>

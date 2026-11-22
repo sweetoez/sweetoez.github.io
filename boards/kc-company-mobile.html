@@ -11,6 +11,7 @@
   <script src="../assets/js/components/kc-modules/travel-map.js"></script>
   <script src="../assets/js/components/kc-modules/utility.js"></script>
   <script src="../assets/js/components/kc-hero.js"></script>
+  <script src="../assets/js/components/kc-card.js"></script>
   <style>
     * { box-sizing:border-box; }
     body { min-width:1344px; margin:0; padding:32px; background:var(--kc-gray-5); color:var(--kc-gray-1); font-family:var(--kc-font); }
@@ -105,79 +106,10 @@
     <div class="kc-card-board-item">
       <h1 class="kc-card-board-label">Company — Mobile</h1>
       <div class="kc-full-knowledge-card kc-company-mobile-frame" data-kc="Full Knowledge Card">
-        <article class="kc-card-stack kc-mobile-designer-card kc-company-mobile" data-kc="Segment / Company" aria-label="Microsoft knowledge card">
-          <kc-hero entity="company" platform="mobile"></kc-hero>
-
-          <kc-module entity="company" platform="mobile" index="0"></kc-module>
-
-          <kc-module entity="company" platform="mobile" index="1"></kc-module>
-
-          <div class="kc-card-more" id="kc-company-mobile-more" hidden>
-            <kc-module entity="company" platform="mobile" index="2"></kc-module>
-
-            <kc-module entity="company" platform="mobile" index="3"></kc-module>
-
-            <kc-module entity="company" platform="mobile" index="4"></kc-module>
-
-            <kc-module entity="company" platform="mobile" index="5"></kc-module>
-          </div>
-          <button class="kc-mobile-expansion-see-more" type="button" data-kc="Mobile / Expansion / See more" aria-expanded="false" aria-controls="kc-company-mobile-more">
-            <span class="kc-mobile-expansion-see-more__line" aria-hidden="true"></span>
-            <span class="kc-mobile-expansion-see-more__circle" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3.14645 5.14645C3.34171 4.95118 3.65829 4.95118 3.85355 5.14645L8 9.29289L12.1464 5.14645C12.3417 4.95118 12.6583 4.95118 12.8536 5.14645C13.0488 5.34171 13.0488 5.65829 12.8536 5.85355L8.35355 10.3536C8.15829 10.5488 7.84171 10.5488 7.64645 10.3536L3.14645 5.85355C2.95118 5.65829 2.95118 5.34171 3.14645 5.14645Z" fill="currentColor"/></svg></span>
-            <span class="kc-mobile-expansion-see-more__label">See more</span>
-          </button>
-        </article>
+        <kc-card entity="company" platform="mobile"></kc-card>
       </div>
     </div>
   </main>
-  <script>
-    const stack = document.querySelector(".kc-company-mobile");
-    const quickFacts = stack.querySelector("#kc-company-mobile-quick-facts");
-    const quickFactsButton = quickFacts.querySelector(".kc-mobile-text-list-quick-facts__more button");
-    const cardExpansion = stack.querySelector(".kc-mobile-expansion-see-more");
-    const cardMore = document.getElementById("kc-company-mobile-more");
-    const cardExpansionLabel = cardExpansion.querySelector(".kc-mobile-expansion-see-more__label");
-    const tablist = stack.querySelector(".kc-mobile-hero-tabs-container");
 
-    function selectTab(tab, focus = false) {
-      const tabs = Array.from(tablist.querySelectorAll('[role="tab"]'));
-      for (const item of tabs) {
-        const selected = item === tab;
-        item.classList.toggle("kc-mobile-hero-tab--selected", selected);
-        item.setAttribute("aria-selected", String(selected));
-        item.tabIndex = selected ? 0 : -1;
-      }
-      if (focus) tab.focus();
-    }
-
-    function setExpanded(expanded) {
-      cardMore.hidden = !expanded;
-      cardExpansion.setAttribute("aria-expanded", String(expanded));
-      cardExpansionLabel.textContent = expanded ? "See less" : "See more";
-      quickFactsButton.setAttribute("aria-expanded", String(expanded));
-      quickFactsButton.textContent = expanded ? "See less" : "See more";
-      quickFacts.classList.toggle("kc-company-mobile__expanded", expanded);
-    }
-
-    tablist.addEventListener("click", event => {
-      const tab = event.target.closest('[role="tab"]');
-      if (tab && tablist.contains(tab)) selectTab(tab);
-    });
-    tablist.addEventListener("keydown", event => {
-      const tabs = Array.from(tablist.querySelectorAll('[role="tab"]'));
-      const activeIndex = tabs.indexOf(document.activeElement);
-      const nextIndex = event.key === "ArrowRight" ? (activeIndex + 1) % tabs.length
-        : event.key === "ArrowLeft" ? (activeIndex - 1 + tabs.length) % tabs.length
-        : event.key === "Home" ? 0
-        : event.key === "End" ? tabs.length - 1
-        : -1;
-      if (nextIndex < 0) return;
-      event.preventDefault();
-      selectTab(tabs[nextIndex], true);
-    });
-
-    cardExpansion.addEventListener("click", () => setExpanded(cardExpansion.getAttribute("aria-expanded") !== "true"));
-    quickFactsButton.addEventListener("click", () => setExpanded(quickFactsButton.getAttribute("aria-expanded") !== "true"));
-  </script>
 </body>
 </html>

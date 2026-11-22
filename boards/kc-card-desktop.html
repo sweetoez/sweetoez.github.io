@@ -11,12 +11,13 @@
   <script src="../assets/js/components/kc-modules/travel-map.js"></script>
   <script src="../assets/js/components/kc-modules/utility.js"></script>
   <script src="../assets/js/components/kc-hero.js"></script>
+  <script src="../assets/js/components/kc-card.js"></script>
   <style>
     * { box-sizing:border-box; }
     body { min-width:1344px; margin:0; padding:32px; background:var(--kc-gray-5); color:var(--kc-gray-1); font-family:var(--kc-font); }
     main { width:max-content; }
     .kc-card-board-item { width:max-content; }
-    .kc-card-board-label { margin:0 0 8px; color:var(--kc-gray-2); font-size:12px; line-height:16px; }
+    .kc-card-board-label { margin:0 0 8px; color:var(--kc-gray-2); font-size:12px; font-weight:400; line-height:16px; }
   </style>
   <link rel="stylesheet" href="../assets/css/fluent-motion.css">
   <script defer src="../assets/js/fluent-motion.js"></script>
@@ -24,39 +25,9 @@
 <body class="demo">
   <main>
     <div class="kc-card-board-item">
-      <p class="kc-card-board-label">Full Knowledge Card</p>
+      <h1 class="kc-card-board-label">Full Knowledge Card</h1>
       <div class="kc-full-knowledge-card" data-kc="Full Knowledge Card">
-        <article class="kc-card-stack" data-kc="Designer Card" aria-label="Riverside Old Town knowledge card">
-          <kc-hero variant="cardDesktop"></kc-hero>
-
-          <kc-module type="travel" platform="desktop" variant="card-desktop-travel"></kc-module>
-
-          <kc-module type="places-to-visit" platform="desktop" variant="card-desktop-places-to-visit"></kc-module>
-
-          <kc-module type="main" platform="desktop" variant="card-desktop-main-square"></kc-module>
-
-          <kc-module type="quote" platform="desktop" variant="card-desktop-quote"></kc-module>
-
-          <section class="kc-module kc-reviews-critics" id="kc-mod-critics" data-kc="Reviews / Critics" aria-labelledby="kc-title-critics">
-            <div class="kc-module-title"><h3 id="kc-title-critics">Critic reviews</h3><a class="kc-link" href="#" aria-label="See all Critic reviews"><span class="kc-title-chevron"><img src="../assets/icons/ic_fluent_chevron_right_16_regular.svg" alt="" aria-hidden="true"></span></a></div>
-            <div class="kc-reviews-critics__review">
-              <p class="kc-copy kc-reviews-critics__copy kc-clamp-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <a class="kc-link" href="#">Full review</a></p>
-              <div class="kc-reviews-critics__reviewer"><span class="kc-img" style="width:16px;height:16px;border-radius:2px"><img src="../assets/images/kc/stock/cinema.jpg" alt="Rows of red seats in a dark cinema" onerror="this.style.display='none'"></span><span class="kc-copy">Film Weekly</span></div>
-              <span class="kc-divider"></span>
-            </div>
-            <div class="kc-reviews-critics__review">
-              <p class="kc-copy kc-reviews-critics__copy kc-clamp-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <a class="kc-link" href="#">Full review</a></p>
-              <div class="kc-reviews-critics__reviewer"><span class="kc-img" style="width:16px;height:16px;border-radius:2px"><img src="../assets/images/kc/stock/city.jpg" alt="City skyline at sunset" onerror="this.style.display='none'"></span><span class="kc-copy">Screen Notes</span></div>
-              <span class="kc-divider"></span>
-            </div>
-            <div class="kc-reviews-critics__review">
-              <p class="kc-copy kc-reviews-critics__copy kc-clamp-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <a class="kc-link" href="#">Full review</a></p>
-              <div class="kc-reviews-critics__reviewer"><span class="kc-img" style="width:16px;height:16px;border-radius:2px"><img src="../assets/images/kc/stock/forest.jpg" alt="Evergreen forest at sunset" onerror="this.style.display='none'"></span><span class="kc-copy">The Daily Reel</span></div>
-            </div>
-          </section>
-
-          <kc-module type="attribution" variant="card-desktop-attribution"></kc-module>
-        </article>
+        <kc-card variant="cardDesktop"></kc-card>
 
         <form class="kc-modules-panel" data-portfolio="Modules panel (not in Figma)" aria-label="Modules">
           <h2>Modules</h2>

@@ -10,6 +10,7 @@
   <script src="../assets/js/components/kc-modules/media.js"></script>
   <script src="../assets/js/components/kc-modules/travel-map.js"></script>
   <script src="../assets/js/components/kc-hero.js"></script>
+  <script src="../assets/js/components/kc-card.js"></script>
   <style>
     * { box-sizing:border-box; }
     body { min-width:1344px; margin:0; padding:32px; background:var(--kc-gray-5); color:var(--kc-gray-1); font-family:var(--kc-font); }
@@ -73,74 +74,10 @@
     <div class="kc-card-board-item">
       <h1 class="kc-card-board-label">City — Mobile</h1>
       <div class="kc-full-knowledge-card kc-city-mobile-frame" data-kc="Full Knowledge Card">
-        <article class="kc-card-stack kc-mobile-designer-card kc-city-mobile" data-kc="Segment / City" aria-label="San Francisco knowledge card">
-          <kc-hero entity="city" platform="mobile"></kc-hero>
-
-          <kc-module entity="city" platform="mobile" index="0"></kc-module>
-
-          <kc-module entity="city" platform="mobile" index="1"></kc-module>
-
-          <kc-module entity="city" platform="mobile" index="2"></kc-module>
-
-          <kc-module entity="city" platform="mobile" index="3"></kc-module>
-
-          <kc-module entity="city" platform="mobile" index="4"></kc-module>
-
-          <div class="kc-card-more" id="kc-city-mobile-more" hidden>
-            <kc-module entity="city" platform="mobile" index="5"></kc-module>
-          </div>
-
-          <button class="kc-mobile-expansion-see-more" type="button" data-kc="Mobile / Expansion / See more" aria-expanded="false" aria-controls="kc-city-mobile-more">
-            <span class="kc-mobile-expansion-see-more__line" aria-hidden="true"></span>
-            <span class="kc-mobile-expansion-see-more__circle" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.14645 5.14645C3.34171 4.95118 3.65829 4.95118 3.85355 5.14645L8 9.29289L12.1464 5.14645C12.3417 4.95118 12.6583 4.95118 12.8536 5.14645C13.0488 5.34171 13.0488 5.65829 12.8536 5.85355L8.35355 10.3536C8.15829 10.5488 7.84171 10.5488 7.64645 10.3536L3.14645 5.85355C2.95118 5.65829 2.95118 5.34171 3.14645 5.14645Z" fill="currentColor"/></svg></span>
-            <span class="kc-mobile-expansion-see-more__label">See more</span>
-          </button>
-        </article>
+        <kc-card entity="city" platform="mobile"></kc-card>
       </div>
     </div>
   </main>
-  <script>
-    const stack = document.querySelector(".kc-city-mobile");
-    const expansion = stack.querySelector(".kc-mobile-expansion-see-more");
-    const more = document.getElementById("kc-city-mobile-more");
-    const expansionLabel = expansion.querySelector(".kc-mobile-expansion-see-more__label");
-    const factsMore = stack.querySelector("[data-city-more]");
-    let expanded = false;
 
-    function setExpanded(value) {
-      expanded = value;
-      more.hidden = !expanded;
-      expansion.setAttribute("aria-expanded", String(expanded));
-      factsMore.setAttribute("aria-expanded", String(expanded));
-      expansionLabel.textContent = expanded ? "See less" : "See more";
-      factsMore.textContent = expanded ? "See less" : "See more";
-    }
-
-    function syncScroller(row, previous, next) {
-      previous.disabled = row.scrollLeft <= 0;
-      next.disabled = row.scrollLeft + row.clientWidth >= row.scrollWidth - 1;
-    }
-
-    function scrollRow(row, direction, distance) {
-      const behavior = window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "instant" : "smooth";
-      row.scrollBy({ left:direction * distance, behavior });
-    }
-
-    expansion.addEventListener("click", () => setExpanded(!expanded));
-    factsMore.addEventListener("click", () => setExpanded(!expanded));
-
-    const row = stack.querySelector("#kc-city-mobile-videos .kc-mobile-videos-landscape__row");
-    const previous = row.parentElement.querySelector("button[aria-label^='Previous']");
-    const next = row.parentElement.querySelector("button[aria-label^='Next']");
-    row.addEventListener("scroll", () => syncScroller(row, previous, next), { passive:true });
-    row.addEventListener("keydown", event => {
-      if (event.key !== "ArrowLeft" && event.key !== "ArrowRight") return;
-      event.preventDefault();
-      scrollRow(row, event.key === "ArrowLeft" ? -1 : 1, 248);
-    });
-    previous.addEventListener("click", () => scrollRow(row, -1, 248));
-    next.addEventListener("click", () => scrollRow(row, 1, 248));
-    syncScroller(row, previous, next);
-  </script>
 </body>
 </html>

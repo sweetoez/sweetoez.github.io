@@ -10,6 +10,7 @@
   <script src="../assets/js/components/kc-modules/image-list.js"></script>
   <script src="../assets/js/components/kc-modules/media.js"></script>
   <script src="../assets/js/components/kc-hero.js"></script>
+  <script src="../assets/js/components/kc-card.js"></script>
   <style>
     * { box-sizing:border-box; }
     body { min-width:1344px; margin:0; padding:32px; background:var(--kc-gray-5); color:var(--kc-gray-1); font-family:var(--kc-font); }
@@ -88,27 +89,7 @@
     <div class="kc-card-board-item">
       <h1 class="kc-card-board-label">Band — Mobile</h1>
       <div class="kc-full-knowledge-card kc-band-mobile-frame" data-kc="Full Knowledge Card">
-        <article class="kc-card-stack kc-mobile-designer-card kc-band-mobile" data-kc="Segment / Band" aria-label="Red Hot Chili Peppers knowledge card">
-          <kc-hero entity="band" platform="mobile"></kc-hero>
-
-          <kc-module entity="band" platform="mobile" index="0"></kc-module>
-
-          <kc-module entity="band" platform="mobile" index="1"></kc-module>
-
-          <kc-module entity="band" platform="mobile" index="2"></kc-module>
-
-          <kc-module entity="band" platform="mobile" index="3"></kc-module>
-
-          <div class="kc-card-more" id="kc-band-mobile-more" hidden>
-            <kc-module entity="band" platform="mobile" index="4"></kc-module>
-          </div>
-
-          <button class="kc-mobile-expansion-see-more" type="button" aria-expanded="false" aria-controls="kc-band-mobile-more">
-            <span class="kc-mobile-expansion-see-more__line" aria-hidden="true"></span>
-            <span class="kc-mobile-expansion-see-more__circle" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 12 12" aria-hidden="true" focusable="false"><use href="#kc-band-icon-chevron-down"></use></svg></span>
-            <span class="kc-mobile-expansion-see-more__label">See more</span>
-          </button>
-        </article>
+        <kc-card entity="band" platform="mobile"></kc-card>
         <svg class="kc-icon-defs" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
           <symbol id="kc-band-icon-share" viewBox="0 0 16 16"><path d="M7.5 2C7.77614 2 8 2.22386 8 2.5C7.99992 2.77608 7.77609 3 7.5 3H4.5C3.67157 3 3 3.67157 3 4.5V11.5C3.00008 12.3284 3.67162 13 4.5 13H11.5C12.3284 13 12.9999 12.3284 13 11.5V9.5C13 9.22386 13.2239 9 13.5 9C13.7761 9 14 9.22386 14 9.5V11.5C13.9999 12.8806 12.8807 14 11.5 14H4.5C3.11934 14 2.00008 12.8806 2 11.5V4.5C2 3.11929 3.11929 2 4.5 2H7.5ZM10.7803 1.05078C10.9518 0.966903 11.1559 0.988317 11.3066 1.10547L15.8066 4.60547C15.9284 4.7002 16 4.84573 16 5C16 5.15424 15.9284 5.29983 15.8066 5.39453L11.3066 8.89453C11.1559 9.01162 10.9517 9.03305 10.7803 8.94922C10.6088 8.86533 10.5001 8.6909 10.5 8.5V7.02539C8.26802 7.25505 6.87621 8.99835 6.10352 10.4238L5.94727 10.7236C5.84354 10.931 5.6104 11.0396 5.38477 10.9863C5.15934 10.9329 5.00007 10.7317 5 10.5C5 8.42356 5.51823 6.55894 6.53711 5.20019C7.47545 3.94908 8.82277 3.15337 10.5 3.02148V1.5C10.5 1.30906 10.6088 1.13469 10.7803 1.05078ZM11.5 3.5C11.4999 3.77608 11.2761 4 11 4C9.41093 4 8.18302 4.67315 7.33789 5.7998C6.80109 6.51557 6.41018 7.42583 6.19434 8.47949C7.22177 7.19865 8.77537 6 11 6C11.2761 6 11.5 6.22386 11.5 6.5V7.47754L14.6855 5L11.5 2.52148V3.5Z" fill="currentColor"/></symbol>
           <symbol id="kc-band-icon-images" viewBox="0 0 16 16"><path d="M10 5C10 5.55228 9.55228 6 9 6C8.44772 6 8 5.55228 8 5C8 4.44772 8.44772 4 9 4C9.55228 4 10 4.44772 10 5ZM4.5 2C3.11929 2 2 3.11929 2 4.5V9.5C2 10.8807 3.11929 12 4.5 12H9.5C10.8807 12 12 10.8807 12 9.5V4.5C12 3.11929 10.8807 2 9.5 2H4.5ZM3 4.5C3 3.67157 3.67157 3 4.5 3H9.5C10.3284 3 11 3.67157 11 4.5V9.5C11 9.73157 10.9475 9.95088 10.8538 10.1467L8.20919 7.50207C7.54139 6.83427 6.45868 6.83427 5.79089 7.50207L3.1462 10.1467C3.05248 9.95092 3 9.73159 3 9.5V4.5ZM3.85333 10.8538L6.49799 8.20917C6.77526 7.9319 7.22481 7.9319 7.50208 8.20918L10.1467 10.8538C9.9509 10.9475 9.73158 11 9.5 11H4.5C4.26844 11 4.04914 10.9475 3.85333 10.8538ZM6.99994 14C6.18203 14 5.45586 13.6072 4.99976 13H9.49994C11.4329 13 12.9999 11.433 12.9999 9.5V3.99982C13.6072 4.45592 13.9999 5.18209 13.9999 6V9.5C13.9999 11.9853 11.9852 14 9.49994 14H6.99994Z" fill="currentColor"/></symbol>
@@ -120,77 +101,6 @@
       </div>
     </div>
   </main>
-  <script>
-    const stack = document.querySelector(".kc-band-mobile");
-    const expansion = stack.querySelector(".kc-mobile-expansion-see-more");
-    const more = document.getElementById("kc-band-mobile-more");
-    const expansionLabel = expansion.querySelector(".kc-mobile-expansion-see-more__label");
-    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
-    let expanded = false;
 
-    function syncLast() {
-      const modules = Array.from(stack.querySelectorAll(":scope > .kc-module, :scope > .kc-card-more:not([hidden]) > .kc-module"));
-      modules.forEach(module => module.classList.remove("kc-module--card-last"));
-      if (expanded) modules.at(-1).classList.add("kc-module--card-last");
-    }
-
-    function syncScroller(row, previous, next) {
-      previous.disabled = row.scrollLeft <= 0;
-      next.disabled = row.scrollLeft + row.clientWidth >= row.scrollWidth - 1;
-    }
-
-    function scrollRow(row, direction, distance) {
-      row.scrollBy({ left:direction * distance, behavior:reduceMotion.matches ? "instant" : "smooth" });
-    }
-
-    expansion.addEventListener("click", () => {
-      expanded = !expanded;
-      more.hidden = !expanded;
-      expansion.setAttribute("aria-expanded", String(expanded));
-      expansionLabel.textContent = expanded ? "See less" : "See more";
-      syncLast();
-    });
-
-    for (const [selector, distance] of [
-      ["#kc-band-mobile-carousel .kc-scroll-row", 140],
-      ["#kc-band-mobile-videos .kc-mobile-videos-landscape__row", 248]
-    ]) {
-      const row = stack.querySelector(selector);
-      const previous = row.parentElement.querySelector("button[aria-label^='Previous']");
-      const next = row.parentElement.querySelector("button[aria-label^='Next']");
-      row.addEventListener("scroll", () => syncScroller(row, previous, next), { passive:true });
-      row.addEventListener("keydown", event => {
-        if (event.key !== "ArrowLeft" && event.key !== "ArrowRight") return;
-        event.preventDefault();
-        scrollRow(row, event.key === "ArrowLeft" ? -1 : 1, distance);
-      });
-      previous.addEventListener("click", () => scrollRow(row, -1, distance));
-      next.addEventListener("click", () => scrollRow(row, 1, distance));
-      syncScroller(row, previous, next);
-    }
-
-    const tabs = Array.from(stack.querySelectorAll(".kc-mobile-hero-tab"));
-    const tablist = stack.querySelector(".kc-mobile-hero-tabs-container");
-    tablist.addEventListener("click", event => {
-      const tab = event.target.closest(".kc-mobile-hero-tab");
-      if (!tab) return;
-      tabs.forEach(item => {
-        const selected = item === tab;
-        item.classList.toggle("kc-mobile-hero-tab--selected", selected);
-        item.setAttribute("aria-selected", String(selected));
-      });
-    });
-    tablist.addEventListener("keydown", event => {
-      if (!["ArrowLeft", "ArrowRight", "Home", "End"].includes(event.key)) return;
-      const currentIndex = tabs.indexOf(event.target.closest(".kc-mobile-hero-tab"));
-      if (currentIndex < 0) return;
-      event.preventDefault();
-      const nextIndex = event.key === "Home" ? 0
-        : event.key === "End" ? tabs.length - 1
-          : (currentIndex + (event.key === "ArrowRight" ? 1 : -1) + tabs.length) % tabs.length;
-      tabs[nextIndex].focus();
-      tabs[nextIndex].click();
-    });
-  </script>
 </body>
 </html>
