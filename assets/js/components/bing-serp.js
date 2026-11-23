@@ -122,9 +122,9 @@
     </section>`;
   }
 
-  function renderSimpleAlgo(content, index) {
-    const result = content.plainResults[index - 1];
-    return `<section class="bing-serp__algoblock bing-serp__algoblock--simple" aria-label="Search result">
+  function renderSimpleAlgo(content, index, suppliedResult, extra = false) {
+    const result = suppliedResult || content.plainResults[index - 1];
+    return `<section class="bing-serp__algoblock bing-serp__algoblock--simple${extra ? " bing-serp__extra-algo" : ""}" aria-label="Search result">
       ${renderAlgoHeader(result[1], result[2], content.slug)}
       <div class="bing-serp__algo-body bing-serp__algo-body--simple">
         <h2 class="bing-serp__algo-title"><a href="#">${escapeHTML(result[0])}</a></h2>
@@ -323,6 +323,33 @@
       </div>${renderFooter()}`;
 
       this.bindInteractions();
+      this.bindMainlineFill(content);
+    }
+
+    bindMainlineFill(content) {
+      if (this.getAttribute("platform") === "mobile") return;
+      const mainline = this.querySelector(".bing-serp__mainline");
+      const rail = this.querySelector(".bing-serp__rail");
+      const related = this.querySelector(".bing-serp__related");
+      if (!mainline || !rail || !related) return;
+      const refill = () => {
+        mainline.querySelectorAll(".bing-serp__extra-algo").forEach(block => block.remove());
+        let index = 0;
+        while (index < content.extraResults.length && mainline.getBoundingClientRect().bottom < rail.getBoundingClientRect().bottom) {
+          related.insertAdjacentHTML("beforebegin", renderSimpleAlgo(content, 0, content.extraResults[index], true));
+          index += 1;
+        }
+      };
+      let timeout;
+      const schedule = () => {
+        window.clearTimeout(timeout);
+        timeout = window.setTimeout(refill, 50);
+      };
+      this._mainlineObserver?.disconnect();
+      this._mainlineObserver = new ResizeObserver(schedule);
+      this._mainlineObserver.observe(rail);
+      window.addEventListener("resize", schedule, { passive: true });
+      refill();
     }
 
     renderMobile(entity, title, content) {

@@ -69,6 +69,16 @@
           [`${name}, explained in five minutes`, "Proseware", "proseware.com", `A quick, plain-language explainer on ${name} and why it matters.`],
           [`${name}: photos, videos and stories`, "Adventure Works", "adventure-works.com", `Browse photos, short videos and stories about ${name}.`]
         ],
+        extraResults: [
+          [`${name}: key dates and milestones`, "Relecloud", "relecloud.com", `A year-by-year look at the moments that defined ${name}.`],
+          [`Understanding ${name}: a beginner's guide`, "Litware", "litwareinc.com", `New to ${name}? Start here for a clear introduction and the basics.`],
+          [`${name} by the numbers`, "Woodgrove", "woodgrovebank.com", `Quick figures that put ${name} in context.`],
+          [`Common questions about ${name}, answered`, "Contoso", "contoso.com", `Short answers to the questions people ask most about ${name}.`],
+          [`${name}: then and now`, "Fourth Coffee", "fourthcoffee.com", `How ${name} has changed over time, side by side.`],
+          [`Books, courses and resources on ${name}`, "Lucerne Publishing", "lucernepublishing.com", `Where to keep learning about ${name}.`],
+          [`Related topics to explore after ${name}`, "Alpine Ski House", "alpineskihouse.com", `Ideas for what to read next if you're interested in ${name}.`],
+          [`${name}: myths and misconceptions`, "Wingtip Toys", "wingtiptoys.com", `Separating popular myths from facts about ${name}.`]
+        ],
         news: [
           ["Contoso News", "1d", `A closer look at ${name} and what makes it stand out`],
           ["Fabrikam Daily", "3h", `Five lesser-known facts about ${name}`],

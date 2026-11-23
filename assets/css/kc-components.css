@@ -1495,6 +1495,25 @@ html:is([data-theme="dark"], [data-theme="dark-navy"]) .kc-miscellaneous-product
   height:auto;
   overflow-wrap:anywhere;
 }
+
+.kc-miscellaneous-timeline__entry,
+.kc-mobile-miscellaneous-timeline__entry {
+  display: grid;
+  grid-template-columns: 12px minmax(0, 1fr);
+  width: 100%;
+}
+
+.kc-miscellaneous-timeline__content,
+.kc-mobile-miscellaneous-timeline__content {
+  width: auto;
+  min-width: 0;
+  height: auto;
+}
+
+.kc-miscellaneous-timeline__quote,
+.kc-mobile-miscellaneous-timeline__quote {
+  overflow-wrap: anywhere;
+}
 .kc-miscellaneous-timeline__quote,
 .kc-mobile-miscellaneous-timeline__quote {
   min-width:0;
