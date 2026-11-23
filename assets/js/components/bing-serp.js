@@ -23,8 +23,6 @@
   const chevronLeft16Icon = inlineIcon(16, "M10.3536 3.14645C10.5488 3.34171 10.5488 3.65829 10.3536 3.85355L6.20711 8L10.3536 12.1464C10.5488 12.3417 10.5488 12.6583 10.3536 12.8536C10.1583 13.0488 9.84171 13.0488 9.64645 12.8536L5.14645 8.35355C4.95118 8.15829 4.95118 7.84171 5.14645 7.64645L9.64645 3.14645C9.84171 2.95118 10.1583 2.95118 10.3536 3.14645Z");
   const chat16Icon = inlineIcon(16, "M7.99996 1C11.866 1 15 4.13401 15 8.00002C15 11.866 11.866 15 7.99996 15C6.70924 15 5.49994 14.6488 4.46187 14.0391L1.65816 14.9746C1.4786 15.0344 1.28028 14.9873 1.14644 14.8535C1.0127 14.7197 0.965574 14.5214 1.02534 14.3418L1.95894 11.5362C1.3501 10.4985 0.999952 9.28978 0.999952 8.00002C0.999952 4.13412 4.13412 1.00018 7.99996 1ZM7.99996 2C4.6864 2.00018 1.99995 4.68641 1.99995 8.00002C1.99995 9.18013 2.34144 10.2792 2.92964 11.2071C3.01008 11.3339 3.02986 11.4903 2.98238 11.6328L2.28999 13.708L4.36617 13.0166C4.51606 12.9842 4.65578 12.9831 4.79195 13.0694C5.7201 13.6581 6.81951 14 7.99996 14C11.3137 14 14 11.3137 14 8.00002C14 4.6863 11.3137 2 7.99996 2ZM8.49997 9.00002C8.77611 9.00002 8.99997 9.22388 8.99997 9.50002C8.99997 9.77616 8.77611 10 8.49997 10H5.49996C5.22396 9.99985 4.99996 9.77606 4.99996 9.50002C4.99996 9.22398 5.22396 9.00019 5.49996 9.00002H8.49997ZM10.5 6.00001C10.7761 6.00001 11 6.22387 11 6.50001C11 6.77616 10.7761 7.00001 10.5 7.00001H5.49996C5.22396 6.99984 4.99996 6.77605 4.99996 6.50001C4.99996 6.22398 5.22396 6.00018 5.49996 6.00001H10.5Z");
   const trophy20Icon = inlineIcon(20, "M2.99609 6.99804C2.99609 8.52171 4.13769 9.77722 5.60593 9.97185C6.01527 11.8314 7.5748 13.2597 9.50063 13.4726V14.9684H7.50426C6.39969 14.9684 5.50426 15.8638 5.50426 16.9684V17.4684C5.50426 17.7446 5.72811 17.9684 6.00426 17.9684H14.0043C14.2804 17.9684 14.5043 17.7446 14.5043 17.4684V16.9684C14.5043 15.8638 13.6088 14.9684 12.5043 14.9684H10.5006V13.4726C12.4257 13.2599 13.9848 11.8328 14.395 9.97434C15.8629 9.78134 16.9961 8.52535 16.9961 7.0047V5.50006C16.9961 4.67163 16.3245 4.00006 15.4961 4.00006H14.5007C14.4997 2.89636 13.6047 2.00195 12.5007 2.00195H7.50073C6.39679 2.00195 5.50176 2.89636 5.50073 4.00006H4.49609C3.66767 4.00006 2.99609 4.67163 2.99609 5.50006V6.99804ZM4.49609 5.00006H5.50073V8.93434C4.63664 8.71114 3.99609 7.92741 3.99609 6.99804V5.50006C3.99609 5.22392 4.21995 5.00006 4.49609 5.00006ZM14.5007 5.00006H15.4961C15.7722 5.00006 15.9961 5.22392 15.9961 5.50006V7.0047C15.9961 7.93404 15.3608 8.71499 14.5007 8.9369V5.00006ZM13.5007 4.00195V9.00006C13.5007 10.9331 11.9337 12.5001 10.0007 12.5001C8.12004 12.5001 6.5858 11.0167 6.50415 9.15614V4.00006H6.50073C6.50176 3.44865 6.94908 3.00195 7.50073 3.00195H12.5007C13.053 3.00195 13.5007 3.44967 13.5007 4.00195ZM6.50426 16.9684C6.50426 16.4161 6.95197 15.9684 7.50426 15.9684H12.5043C13.0565 15.9684 13.5043 16.4161 13.5043 16.9684H6.50426Z");
-  const loremSnippet = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vitae lectus ut orci tincidunt laoreet. Praesent commodo, justo a placerat feugiat, urna erat consequat est.";
-
   function escapeHTML(value) {
     return String(value ?? "").replace(/[&<>"']/g, character => ({
       "&": "&amp;",
@@ -41,91 +39,78 @@
     </button>`;
   }
 
-  function renderAlgoHeader() {
+  function renderAlgoHeader(site = "Lucerne Publishing", domain = "lucernepublishing.com", slug = "") {
     return `<div class="bing-serp__algo-header">
       <span class="bing-serp__favicon" aria-hidden="true"><span></span></span>
       <div class="bing-serp__site-attribution">
-        <span class="bing-serp__site-name">Site name</span>
-        <div class="bing-serp__site-url"><a href="#">www.example.com</a><span class="bing-serp__url-caret">${chevronDownIcon}</span></div>
+        <span class="bing-serp__site-name">${escapeHTML(site)}</span>
+        <div class="bing-serp__site-url"><a href="#">${escapeHTML(slug ? `${domain} › ${slug}` : domain)}</a><span class="bing-serp__url-caret">${chevronDownIcon}</span></div>
       </div>
     </div>`;
   }
 
-  function renderResultList() {
+  function renderResultList(links) {
     return `<div class="bing-serp__explore-list">
-      ${["Result Title", "Result Title", "Result Title"].map((label, index) => `<div class="bing-serp__explore-row">
+      ${links.map(([label, domain]) => `<div class="bing-serp__explore-row">
         <span class="bing-serp__small-favicon" aria-hidden="true"></span>
-        <a href="#">${label}</a>
-        <span class="bing-serp__explore-domain">example${index + 1}.com</span>
+        <a href="#">${escapeHTML(label)}</a>
+        <span class="bing-serp__explore-domain">${escapeHTML(domain)}</span>
       </div>`).join("")}
     </div>`;
   }
 
-  function renderRichAlgo() {
+  function renderRichAlgo(content) {
+    const tabs = content.tabs.slice(0, 3);
     return `<section class="bing-serp__algoblock bing-serp__algoblock--rich" aria-label="Search result">
-      ${renderAlgoHeader()}
+      ${renderAlgoHeader("Lucerne Publishing", "lucernepublishing.com", content.slug)}
       <div class="bing-serp__algo-body bing-serp__algo-body--rich">
-        <h2 class="bing-serp__algo-title"><a href="#">Title of a search result</a></h2>
+        <h2 class="bing-serp__algo-title"><a href="#">${escapeHTML(content.richTitle)}</a></h2>
         <div class="bing-serp__rich-snippet">
-          <div class="bing-serp__rich-meta"><span class="bing-serp__web-badge">Web</span><span>Oct 26, 2018</span><span aria-hidden="true">·</span></div>
-          <p>${loremSnippet}</p>
+          <div class="bing-serp__rich-meta"><span class="bing-serp__web-badge">Web</span><span>${content.date}</span><span aria-hidden="true">·</span></div>
+          <p>${escapeHTML(content.description)}</p>
         </div>
         <div class="bing-serp__algo-details">
           <div class="bing-serp__tabs-shell" aria-label="Result details">
             <button class="bing-serp__row-scroll bing-serp__row-scroll--left" type="button" aria-label="Scroll result tabs left" data-scroll-target=".bing-serp__body-tabs" data-scroll-direction="-1">${chevronLeft16Icon}</button>
-            <div class="bing-serp__body-tabs">
-              <button class="bing-serp__body-tab is-active" type="button" aria-current="page">Overview</button>
-              <button class="bing-serp__body-tab" type="button">History</button>
-              <button class="bing-serp__body-tab" type="button">Geography</button>
-              <button class="bing-serp__body-tab" type="button">Demographics</button>
-              <button class="bing-serp__body-tab" type="button">Economy</button>
-              <button class="bing-serp__body-tab" type="button">Culture</button>
+            <div class="bing-serp__body-tabs" role="tablist" aria-label="Result details">
+              ${tabs.map((tab, index) => `<button id="bing-tab-${tab.id}" class="bing-serp__body-tab${index === 0 ? " is-active" : ""}" type="button" role="tab" aria-selected="${index === 0}" aria-controls="bing-panel-${tab.id}" tabindex="${index === 0 ? "0" : "-1"}">${tab.label}</button>`).join("")}
             </div>
             <button class="bing-serp__row-scroll bing-serp__row-scroll--right" type="button" aria-label="Scroll result tabs right" data-scroll-target=".bing-serp__body-tabs" data-scroll-direction="1">${chevronRightIcon}</button>
           </div>
-          <div class="bing-serp__expanded-snippet">
-            <p>${loremSnippet}</p>
-            <a href="#">See more on example.com</a>
-          </div>
+          ${tabs.map((tab, index) => `<div id="bing-panel-${tab.id}" class="bing-serp__expanded-snippet${index === 0 ? " is-active" : ""}" role="tabpanel" aria-labelledby="bing-tab-${tab.id}"${index !== 0 ? " hidden" : ""}><p>${escapeHTML(content.description)}</p><a href="#">See more</a></div>`).join("")}
         </div>
       </div>
       <div class="bing-serp__algo-footer">
         <div class="bing-serp__explore-title">EXPLORE FURTHER</div>
-        ${renderResultList()}
+        ${renderResultList(tabs[0].links)}
         <div class="bing-serp__recommendation">Recommended to you based on what's popular · <a href="#">Feedback</a></div>
       </div>
     </section>`;
   }
 
-  function renderQuestionCard(index) {
-    const questions = [
-      "Question title lorem ipsum",
-      "How does this topic work?",
-      "What is a useful overview?",
-      "Where can I learn more?"
-    ];
+  function renderQuestionCard(question, content) {
     return `<article class="bing-serp__question-card">
       <div class="bing-serp__question-title">
-        <h3>${questions[index]}</h3>
+        <h3>${escapeHTML(question)}</h3>
         <span class="bing-serp__question-icon">${chatHelp20Icon}</span>
       </div>
       <div class="bing-serp__answer">
-        <p>${loremSnippet}</p>
+        <p>${escapeHTML(`${content.name} is widely recognized for its history and the milestones that shaped it. Here is a short summary of what people most often want to know.`)}</p>
         <div class="bing-serp__question-divider"></div>
         <div class="bing-serp__answer-link">
-          <a href="#">Title of a search result</a>
-          <a class="bing-serp__answer-attribution" href="#"><span class="bing-serp__small-favicon" aria-hidden="true"></span>example.com</a>
+          <a href="#">${escapeHTML(question)} | Trey Research</a>
+          <a class="bing-serp__answer-attribution" href="#"><span class="bing-serp__small-favicon" aria-hidden="true"></span>treyresearch.net</a>
         </div>
       </div>
     </article>`;
   }
 
-  function renderPeopleAlsoAsk() {
+  function renderPeopleAlsoAsk(content) {
     return `<section class="bing-serp__people" aria-labelledby="bing-people-heading">
       <div class="bing-serp__section-title bing-serp__section-title--people"><h2 id="bing-people-heading">People also ask</h2></div>
       <div class="bing-serp__people-carousel">
         <div class="bing-serp__people-track" aria-label="Questions">
-          ${[0, 1, 2, 3].map(renderQuestionCard).join("")}
+          ${content.questions.map(question => renderQuestionCard(question, content)).join("")}
         </div>
         <button class="bing-serp__carousel-next" type="button" aria-label="Next questions" data-scroll-target=".bing-serp__people-track" data-scroll-direction="1">${chevronRight20Icon}</button>
       </div>
@@ -137,48 +122,47 @@
     </section>`;
   }
 
-  function renderSimpleAlgo(index) {
+  function renderSimpleAlgo(content, index) {
+    const result = content.plainResults[index - 1];
     return `<section class="bing-serp__algoblock bing-serp__algoblock--simple" aria-label="Search result">
-      ${renderAlgoHeader()}
+      ${renderAlgoHeader(result[1], result[2], content.slug)}
       <div class="bing-serp__algo-body bing-serp__algo-body--simple">
-        <h2 class="bing-serp__algo-title"><a href="#">Title of a search result</a></h2>
-        <p class="bing-serp__simple-snippet">${index === 1 ? loremSnippet : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer at neque quis lorem volutpat tempus."}</p>
+        <h2 class="bing-serp__algo-title"><a href="#">${escapeHTML(result[0])}</a></h2>
+        <p class="bing-serp__simple-snippet">${escapeHTML(result[3])}</p>
       </div>
     </section>`;
   }
 
-  function renderNewsCard(index) {
+  function renderNewsCard([source, time, title], index) {
     return `<article class="bing-serp__news-card">
       <div class="bing-serp__news-copy">
-        <div class="bing-serp__news-meta"><span>News source</span><span aria-hidden="true">·</span><span>1d</span></div>
-        <a href="#">Title of a search result</a>
+        <div class="bing-serp__news-meta"><span>${source}</span><span aria-hidden="true">·</span><span>${time}</span></div>
+        <a href="#">${escapeHTML(title)}</a>
       </div>
       <span class="bing-serp__news-thumbnail" aria-hidden="true" data-news-image="${index}"></span>
     </article>`;
   }
 
-  function renderNews() {
+  function renderNews(content) {
     return `<section class="bing-serp__news" aria-labelledby="bing-news-heading">
       <div class="bing-serp__news-results">
         <div class="bing-serp__section-title bing-serp__section-title--news"><h2 id="bing-news-heading">News</h2></div>
-        <div class="bing-serp__news-grid">${[0, 1, 2, 3].map(renderNewsCard).join("")}</div>
+        <div class="bing-serp__news-grid">${content.news.map(renderNewsCard).join("")}</div>
       </div>
       <div class="bing-serp__explore-news">
-        <h2>Explore More News</h2>
+        <h2>Explore more news</h2>
         <div class="bing-serp__news-topics">
-          <button type="button"><span aria-hidden="true"></span>Topic one</button>
-          <button type="button"><span aria-hidden="true"></span>Topic two</button>
-          <button type="button"><span aria-hidden="true"></span>Topic three</button>
+        ${content.newsTopics.map(topic => `<button type="button"><span aria-hidden="true"></span>${topic}</button>`).join("")}
         </div>
       </div>
     </section>`;
   }
 
-  function renderRelatedSearches(title) {
+  function renderRelatedSearches(content) {
     return `<section class="bing-serp__related" aria-labelledby="bing-related-heading">
-      <h2 id="bing-related-heading">Related searches for ${title}</h2>
+      <h2 id="bing-related-heading">Related searches for ${escapeHTML(content.name)}</h2>
       <div class="bing-serp__related-grid">
-        ${Array.from({ length: 8 }, () => `<a href="#" class="bing-serp__related-item">${search16Icon}<span>Title of a search result</span></a>`).join("")}
+        ${content.related.map(item => `<a href="#" class="bing-serp__related-item">${search16Icon}<span>${escapeHTML(item)}</span></a>`).join("")}
       </div>
     </section>`;
   }
@@ -231,8 +215,13 @@
       }
 
       const title = escapeHTML(data.hero.title);
+      const content = window.BING_CONTENT?.forEntity(entity);
+      if (!content) {
+        console.error(`BING_CONTENT must load before <bing-serp> (${entity}).`);
+        return;
+      }
       if (platform === "mobile") {
-        this.renderMobile(entity, title);
+        this.renderMobile(entity, title, content);
         this.bindInteractions();
         return;
       }
@@ -288,20 +277,20 @@
         <div class="bing-serp__entity-row">
           <div class="bing-serp__entity-info">
             <h1>${title}</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <p>${escapeHTML(content.description)}</p>
           </div>
-          <div class="bing-serp__pills"><span>Lorem</span><span>Ipsum</span><span>Dolor</span><span>Sit amet</span><span>More</span></div>
+          <div class="bing-serp__pills">${content.tabs.map(tab => `<span>${tab.label}</span>`).join("")}<span>More</span></div>
         </div>
       </section>
       <div class="bing-serp__body">
         <main class="bing-serp__mainline" aria-label="Search results">
-          ${renderRichAlgo()}
-          ${renderPeopleAlsoAsk()}
-          ${renderSimpleAlgo(1)}
-          ${renderSimpleAlgo(2)}
-          ${renderNews()}
-          ${renderSimpleAlgo(3)}
-          ${renderRelatedSearches(title)}
+          ${renderRichAlgo(content)}
+          ${renderPeopleAlsoAsk(content)}
+          ${renderSimpleAlgo(content, 1)}
+          ${renderSimpleAlgo(content, 2)}
+          ${renderNews(content)}
+          ${renderSimpleAlgo(content, 3)}
+          ${renderRelatedSearches(content)}
         </main>
         <aside class="bing-serp__rail" aria-label="Knowledge card">
           <kc-card entity="${escapeHTML(entity)}" platform="desktop"></kc-card>
@@ -311,7 +300,7 @@
       this.bindInteractions();
     }
 
-    renderMobile(entity, title) {
+    renderMobile(entity, title, content) {
       const headerTabs = [
         renderHeaderTab("ALL", search16Icon, true),
         renderHeaderTab("COPILOT", chatSparkle16Icon),
@@ -349,18 +338,16 @@
         <main class="bing-serp__mobile-mainline" aria-label="Search results">
           <div class="bing-serp__mobile-card-wrap"><kc-card entity="${escapeHTML(entity)}" platform="mobile"></kc-card></div>
           <section class="bing-serp__mobile-algoblock" aria-label="Search answer">
-            ${renderAlgoHeader()}
-            <h2 class="bing-serp__mobile-result-title"><a href="#">Title of a search result</a></h2>
-            <div class="bing-serp__mobile-result-meta"><span class="bing-serp__web-badge">Web</span><span>·</span><span>Oct 26, 2018</span></div>
-            <p class="bing-serp__mobile-snippet">${loremSnippet}</p>
-            <nav class="bing-serp__mobile-answer-tabs" aria-label="Answer sections">
-              <button type="button" aria-pressed="true">Overview</button>
-              <button type="button" aria-pressed="false">History</button>
-              <button type="button" aria-pressed="false">Geography</button>
+            ${renderAlgoHeader("Lucerne Publishing", "lucernepublishing.com", content.slug)}
+            <h2 class="bing-serp__mobile-result-title"><a href="#">${escapeHTML(content.richTitle)}</a></h2>
+            <div class="bing-serp__mobile-result-meta"><span class="bing-serp__web-badge">Web</span><span>·</span><span>${content.date}</span></div>
+            <p class="bing-serp__mobile-snippet">${escapeHTML(content.description)}</p>
+            <nav class="bing-serp__mobile-answer-tabs" role="tablist" aria-label="Answer sections">
+              ${content.tabs.map((tab, index) => `<button id="bing-mobile-tab-${tab.id}" type="button" role="tab" aria-selected="${index === 0}" aria-controls="bing-mobile-panel-${tab.id}" tabindex="${index === 0 ? "0" : "-1"}">${tab.label}</button>`).join("")}
             </nav>
-            <div class="bing-serp__mobile-explore">
+            <div class="bing-serp__mobile-explore" role="tabpanel" aria-live="polite">
               <h3>Explore further</h3>
-              ${renderResultList()}
+              ${renderResultList(content.tabs[0].links)}
             </div>
             <button class="bing-serp__mobile-see-more" type="button">See more</button>
             <div class="bing-serp__mobile-feedback">
@@ -369,16 +356,58 @@
               <button type="button" aria-label="Not helpful">${thumbDislike16Icon}</button>
             </div>
           </section>
-          ${renderPeopleAlsoAsk()}
-          ${renderSimpleAlgo(1)}
-          ${renderNews()}
+          ${renderPeopleAlsoAsk(content)}
+          ${renderSimpleAlgo(content, 1)}
+          ${renderNews(content)}
           <button class="bing-serp__mobile-see-more-results" type="button">See more results</button>
-          ${renderRelatedSearches(title)}
+          ${renderRelatedSearches(content)}
         </main>
       </div>`;
     }
 
     bindInteractions() {
+      const activateTabs = (tabs, panels) => {
+        tabs.forEach((tab, index) => {
+          tab.addEventListener("click", () => {
+            tabs.forEach((candidate, candidateIndex) => {
+              const selected = candidateIndex === index;
+              candidate.classList.toggle("is-active", selected);
+              candidate.setAttribute("aria-selected", String(selected));
+              candidate.setAttribute("aria-current", selected ? "page" : "false");
+              candidate.tabIndex = selected ? 0 : -1;
+            });
+            panels.forEach((panel, panelIndex) => {
+              panel.hidden = panelIndex !== index;
+            });
+          });
+          tab.addEventListener("keydown", event => {
+            let nextIndex = index;
+            if (event.key === "ArrowRight") nextIndex = (index + 1) % tabs.length;
+            if (event.key === "ArrowLeft") nextIndex = (index - 1 + tabs.length) % tabs.length;
+            if (event.key === "Home") nextIndex = 0;
+            if (event.key === "End") nextIndex = tabs.length - 1;
+            if (nextIndex === index) return;
+            event.preventDefault();
+            tabs[nextIndex].focus();
+            tabs[nextIndex].click();
+          });
+        });
+      };
+      this.querySelectorAll(".bing-serp__tabs-shell").forEach(shell => {
+        activateTabs(
+          [...shell.querySelectorAll('[role="tab"]')],
+          [...shell.parentElement.querySelectorAll('[role="tabpanel"]')]
+        );
+      });
+      this.querySelectorAll(".bing-serp__mobile-answer-tabs").forEach(tablist => {
+        const tabs = [...tablist.querySelectorAll('[role="tab"]')];
+        const panel = tablist.nextElementSibling;
+        const content = window.BING_CONTENT?.forEntity(this.getAttribute("entity"));
+        activateTabs(tabs, tabs.map((tab, index) => ({
+          get hidden() { return index !== tabs.findIndex(candidate => candidate.getAttribute("aria-selected") === "true"); },
+          set hidden(value) { if (!value) panel.innerHTML = `<h3>Explore further</h3>${renderResultList(content.tabs[index].links)}`; }
+        })));
+      });
       this.querySelectorAll(".bing-serp__row-scroll, .bing-serp__carousel-next").forEach(button => {
         const scroller = this.querySelector(button.dataset.scrollTarget);
         if (!scroller) return;
@@ -393,6 +422,16 @@
 
       this.querySelectorAll('a[href="#"]').forEach(link => {
         link.addEventListener("click", event => event.preventDefault());
+      });
+      this.querySelectorAll(".bing-serp__page-number").forEach(button => {
+        button.addEventListener("click", () => {
+          this.querySelectorAll(".bing-serp__page-number").forEach(page => {
+            const selected = page === button;
+            page.classList.toggle("is-active", selected);
+            if (selected) page.setAttribute("aria-current", "page");
+            else page.removeAttribute("aria-current");
+          });
+        });
       });
     }
   }

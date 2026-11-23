@@ -1545,6 +1545,9 @@ bing-serp a:hover {
   color: var(--bing-text-subtle);
   font-size: 14px !important;
   line-height: 22px;
+  border-radius: 0;
+  box-shadow: none;
+  outline: 0;
 }
 
 .bing-serp__page-number:hover {
@@ -1554,6 +1557,19 @@ bing-serp a:hover {
 .bing-serp__page-number.is-active {
   border-bottom-color: var(--bing-blue-secondary);
   color: var(--bing-text);
+}
+
+.bing-serp__page-number::before,
+.bing-serp__page-number::after {
+  display: none;
+}
+
+.bing-serp__algoblock--rich .bing-serp__explore-title {
+  display: none;
+}
+
+.bing-serp__expanded-snippet[hidden] {
+  display: none;
 }
 
 .bing-serp__chat-button {
