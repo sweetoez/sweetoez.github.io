@@ -5,7 +5,7 @@
   const check = () => {
     const mobile = document.querySelector("bing-serp")?.getAttribute("platform") === "mobile";
     const names = mobile
-      ? ["m-rich", "m-people", "m-plain", "m-news", "m-related"]
+      ? ["m-rich", "m-people", "m-plain", "m-news", "m-related", "m-footer"]
       : ["d-rich", "d-people", "d-plain", "d-news", "d-extra", "d-related"];
     const results = names.map(name => {
       const node = document.querySelector(`[data-spec="${name}"]`);

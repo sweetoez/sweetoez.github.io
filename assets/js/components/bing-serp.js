@@ -193,7 +193,7 @@
   }
 
   function renderMobileFooter() {
-    return `<footer class="bing-serp__mobile-footer">
+    return `<footer class="bing-serp__mobile-footer" data-spec="m-footer">
       <div class="bing-serp__mobile-footer-promote">
         <span class="bing-serp__mobile-footer-promote-label"><img src="../assets/images/windows/copilot-toolbar.svg" alt="" width="24" height="24">Explore in Copilot</span>
         <button class="bing-serp__chat-button" type="button">${chat16Icon}<span>Chat</span></button>
