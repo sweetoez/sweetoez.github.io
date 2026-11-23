@@ -60,6 +60,33 @@
               [`${name} around the world`, "wideworldimporters.com"],
               [`Places connected to ${name}`, "alpineskihouse.com"]
             ]
+          },
+          {
+            id: "notable-facts",
+            label: "Notable facts",
+            links: [
+              [`Notable facts about ${name}`, "northwindtraders.com"],
+              [`${name}: facts and figures`, "woodgrovebank.com"],
+              [`What makes ${name} distinctive?`, "contoso.com"]
+            ]
+          },
+          {
+            id: "gallery",
+            label: "Gallery",
+            links: [
+              [`${name} photo gallery`, "adventure-works.com"],
+              [`${name} in pictures`, "fabrikam.com"],
+              [`Watch ${name}: videos and highlights`, "proseware.com"]
+            ]
+          },
+          {
+            id: "news",
+            label: "News",
+            links: [
+              [`Latest news about ${name}`, "contoso.com"],
+              [`${name} in the news`, "fabrikam.com"],
+              [`${name}: recent coverage`, "northwindtraders.com"]
+            ]
           }
         ],
         questions,

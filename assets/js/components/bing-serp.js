@@ -60,8 +60,8 @@
   }
 
   function renderRichAlgo(content) {
-    const tabs = content.tabs.slice(0, 3);
-    return `<section class="bing-serp__algoblock bing-serp__algoblock--rich" aria-label="Search result">
+    const tabs = content.tabs.slice(0, 6);
+    return `<section class="bing-serp__algoblock bing-serp__algoblock--rich" data-spec="d-rich" aria-label="Search result">
       ${renderAlgoHeader("Lucerne Publishing", "lucernepublishing.com", content.slug)}
       <div class="bing-serp__algo-body bing-serp__algo-body--rich">
         <h2 class="bing-serp__algo-title"><a href="#">${escapeHTML(content.richTitle)}</a></h2>
@@ -106,7 +106,7 @@
   }
 
   function renderPeopleAlsoAsk(content) {
-    return `<section class="bing-serp__people" aria-labelledby="bing-people-heading">
+    return `<section class="bing-serp__people" data-spec="d-people" aria-labelledby="bing-people-heading">
       <div class="bing-serp__section-title bing-serp__section-title--people"><h2 id="bing-people-heading">People also ask</h2></div>
       <div class="bing-serp__people-carousel">
         <div class="bing-serp__people-track" aria-label="Questions">
@@ -124,7 +124,7 @@
 
   function renderSimpleAlgo(content, index, suppliedResult, extra = false) {
     const result = suppliedResult || content.plainResults[index - 1];
-    return `<section class="bing-serp__algoblock bing-serp__algoblock--simple${extra ? " bing-serp__extra-algo" : ""}" aria-label="Search result">
+    return `<section class="bing-serp__algoblock bing-serp__algoblock--simple${extra ? " bing-serp__extra-algo" : ""}" data-spec="${extra ? "d-extra" : "d-plain"}" aria-label="Search result">
       ${renderAlgoHeader(result[1], result[2], content.slug)}
       <div class="bing-serp__algo-body bing-serp__algo-body--simple">
         <h2 class="bing-serp__algo-title"><a href="#">${escapeHTML(result[0])}</a></h2>
@@ -144,7 +144,7 @@
   }
 
   function renderNews(content) {
-    return `<section class="bing-serp__news" aria-labelledby="bing-news-heading">
+    return `<section class="bing-serp__news" data-spec="d-news" aria-labelledby="bing-news-heading">
       <div class="bing-serp__news-results">
         <div class="bing-serp__section-title bing-serp__section-title--news"><h2 id="bing-news-heading">News</h2></div>
         <div class="bing-serp__news-grid">${content.news.map(renderNewsCard).join("")}</div>
@@ -159,7 +159,7 @@
   }
 
   function renderRelatedSearches(content) {
-    return `<section class="bing-serp__related" aria-labelledby="bing-related-heading">
+    return `<section class="bing-serp__related" data-spec="d-related" aria-labelledby="bing-related-heading">
       <h2 id="bing-related-heading">Related searches for ${escapeHTML(content.name)}</h2>
       <div class="bing-serp__related-grid">
         ${content.related.map(item => `<a href="#" class="bing-serp__related-item">${search16Icon}<span>${escapeHTML(item)}</span></a>`).join("")}
@@ -248,6 +248,7 @@
       if (platform === "mobile") {
         this.renderMobile(entity, title, content);
         this.bindInteractions();
+        window.dispatchEvent(new Event("bing:rendered"));
         return;
       }
 
@@ -324,6 +325,7 @@
 
       this.bindInteractions();
       this.bindMainlineFill(content);
+      window.dispatchEvent(new Event("bing:rendered"));
     }
 
     bindMainlineFill(content) {
@@ -389,7 +391,7 @@
         </div>
         <main class="bing-serp__mobile-mainline" aria-label="Search results">
           <div class="bing-serp__mobile-card-wrap"><kc-card entity="${escapeHTML(entity)}" platform="mobile"></kc-card></div>
-          <section class="bing-serp__mobile-algoblock" aria-label="Search answer">
+          <section class="bing-serp__mobile-algoblock" data-spec="m-rich" aria-label="Search answer">
             ${renderAlgoHeader("Lucerne Publishing", "lucernepublishing.com", content.slug)}
             <h2 class="bing-serp__mobile-result-title"><a href="#">${escapeHTML(content.richTitle)}</a></h2>
             <div class="bing-serp__mobile-result-meta"><span class="bing-serp__web-badge">Web</span><span>·</span><span>${content.date}</span></div>
@@ -408,11 +410,11 @@
               <button type="button" aria-label="Not helpful">${thumbDislike16Icon}</button>
             </div>
           </section>
-          ${renderPeopleAlsoAsk(content)}
-          ${renderSimpleAlgo(content, 1)}
-          ${renderNews(content)}
+          ${renderPeopleAlsoAsk(content).replace('data-spec="d-people"', 'data-spec="m-people"')}
+          ${renderSimpleAlgo(content, 1).replace('data-spec="d-plain"', 'data-spec="m-plain"')}
+          ${renderNews(content).replace('data-spec="d-news"', 'data-spec="m-news"')}
           <button class="bing-serp__mobile-see-more-results" type="button">See more results</button>
-          ${renderRelatedSearches(content)}
+          ${renderRelatedSearches(content).replace('data-spec="d-related"', 'data-spec="m-related"')}
         </main>
         ${renderMobileFooter()}
       </div>`;
