@@ -192,6 +192,31 @@
     </footer>`;
   }
 
+  function renderMobileFooter() {
+    return `<footer class="bing-serp__mobile-footer">
+      <div class="bing-serp__mobile-footer-promote">
+        <span class="bing-serp__mobile-footer-promote-label"><img src="../assets/images/windows/copilot-toolbar.svg" alt="" width="24" height="24">Explore in Copilot</span>
+        <button class="bing-serp__chat-button" type="button">${chat16Icon}<span>Chat</span></button>
+      </div>
+      <nav class="bing-serp__mobile-footer-pagination" aria-label="Pagination">
+        <button type="button" aria-label="Previous page">${chevronLeft16Icon}</button>
+        <button type="button">Next</button>
+        <button type="button" aria-label="Next page">${chevronRightIcon}</button>
+      </nav>
+      <div class="bing-serp__mobile-footer-location">
+        <span class="bing-serp__location-icon">${location16Icon}</span>
+        <span>Results near City, State · Based on IP address · <a href="#">Change</a></span>
+      </div>
+      <div class="bing-serp__mobile-footer-divider"></div>
+      <div class="bing-serp__mobile-footer-bottom">
+        <nav aria-label="Footer links">
+          ${["Privacy and Cookies", "Legal", "Advertise", "About our ads", "Help"].map(link => `<a href="#">${link}</a>`).join("")}
+        </nav>
+        <span>© 2024 Microsoft</span>
+      </div>
+    </footer>`;
+  }
+
   class BingSerp extends HTMLElement {
     static get observedAttributes() {
       return ["entity", "platform"];
@@ -362,6 +387,7 @@
           <button class="bing-serp__mobile-see-more-results" type="button">See more results</button>
           ${renderRelatedSearches(content)}
         </main>
+        ${renderMobileFooter()}
       </div>`;
     }
 
