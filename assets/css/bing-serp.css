@@ -1,30 +1,68 @@
 html[data-theme="light"] {
+  --bing-layout-width: 1615px;
+  --bing-id-width: 675px;
   --bing-page-bg: #FFFFFF;
   --bing-header-bg: #FFFFFF;
-  --bing-divider: #D9D9D9;
-  --bing-text: #242424;
-  --bing-muted: #616161;
-  --bing-link: #0067B8;
   --bing-surface: #FFFFFF;
-  --bing-border: #8A8A8A;
+  --bing-surface-raised: #FFFFFF;
+  --bing-surface-muted: #F5F5F5;
+  --bing-pill-bg: #F9F9F9;
+  --bing-search-bg: #FFFFFF;
+  --bing-border: #DDDDDD;
+  --bing-border-soft: #ECECEC;
+  --bing-border-strong: #CCCCCC;
+  --bing-text: #111111;
+  --bing-text-secondary: #444444;
+  --bing-text-muted: #666666;
+  --bing-text-subtle: #767676;
+  --bing-text-placeholder: #919191;
+  --bing-link: #4007A2;
+  --bing-link-green: #006D21;
+  --bing-blue: #174AE4;
+  --bing-blue-secondary: #106EBE;
+  --bing-focus: #174AE4;
   --bing-hover: #F5F5F5;
+  --bing-pressed: #ECECEC;
+  --bing-favicon-bg: #F5F5F5;
   --bing-placeholder: #D3D3D3;
-  --bing-toggle: #616161;
+  --bing-thumb-bg: #D3D3D3;
+  --bing-shadow-search: 0 2px 4px 1px rgba(0, 0, 0, .1), 0 0 0 1px rgba(0, 0, 0, .05);
+  --bing-shadow-card: 0 0 0 1px rgba(0, 0, 0, .05);
+  --bing-shadow-arrow: drop-shadow(0 2px 3px rgba(0, 0, 0, .1));
 }
 
 html[data-theme="dark"],
 html[data-theme="dark-navy"] {
-  --bing-page-bg: #202124;
-  --bing-header-bg: #292A2D;
-  --bing-divider: #4A4B4F;
-  --bing-text: #F1F3F4;
-  --bing-muted: #BDC1C6;
-  --bing-link: #8AB4F8;
-  --bing-surface: #303134;
-  --bing-border: #777A80;
-  --bing-hover: #3C4043;
-  --bing-placeholder: #5F6368;
-  --bing-toggle: #9AA0A6;
+  --bing-layout-width: 1384px;
+  --bing-id-width: 444px;
+  --bing-page-bg: #1B1A19;
+  --bing-header-bg: #1B1A19;
+  --bing-surface: #323130;
+  --bing-surface-raised: #3B3A39;
+  --bing-surface-muted: #292827;
+  --bing-pill-bg: #292827;
+  --bing-search-bg: #3B3A39;
+  --bing-border: #545250;
+  --bing-border-soft: #605E5C;
+  --bing-border-strong: #605E5C;
+  --bing-text: #FAF9F8;
+  --bing-text-secondary: #EDEBE9;
+  --bing-text-muted: #D2D0CE;
+  --bing-text-subtle: #BEBBB8;
+  --bing-text-placeholder: #A19F9D;
+  --bing-link: #82C7FF;
+  --bing-link-green: #60BD84;
+  --bing-blue: #A2B7F4;
+  --bing-blue-secondary: #3AA0F3;
+  --bing-focus: #A2B7F4;
+  --bing-hover: #323130;
+  --bing-pressed: #484644;
+  --bing-favicon-bg: #605E5C;
+  --bing-placeholder: #484644;
+  --bing-thumb-bg: #484644;
+  --bing-shadow-search: 0 2px 4px 1px rgba(0, 0, 0, .1), 0 0 0 1px rgba(0, 0, 0, .05);
+  --bing-shadow-card: 0 0 0 1px rgba(0, 0, 0, .05);
+  --bing-shadow-arrow: drop-shadow(0 2px 3px rgba(0, 0, 0, .1));
 }
 
 bing-serp {
@@ -33,163 +71,515 @@ bing-serp {
   overflow: auto;
   background: var(--bing-page-bg);
   color: var(--bing-text);
-  font-family: var(--font-body, "Segoe UI", Selawik, system-ui, sans-serif);
+  font-family: "Roboto", "Segoe UI Variable Text", "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
   scrollbar-color: var(--bing-border) transparent;
   scrollbar-width: thin;
 }
 
 bing-serp *,
 bing-serp *::before,
-bing-serp *::after { box-sizing: border-box; }
+bing-serp *::after {
+  box-sizing: border-box;
+}
+
+bing-serp button {
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  transition:
+    background-color var(--fluent-dur-faster, 100ms) var(--fluent-ease, ease),
+    color var(--fluent-dur-faster, 100ms) var(--fluent-ease, ease);
+}
+
+bing-serp button:active {
+  transition-duration: var(--fluent-dur-ultrafast, 50ms);
+}
+
+bing-serp :is(button, a, input):focus-visible {
+  outline: 2px solid var(--bing-focus);
+  outline-offset: 2px;
+}
+
+bing-serp a {
+  color: var(--bing-link);
+  text-decoration: none;
+}
+
+bing-serp a:hover {
+  text-decoration: underline;
+}
 
 .bing-serp__header {
-  height: 108px;
-  padding: 18px 24px 0;
-  border-bottom: 1px solid var(--bing-divider);
+  width: var(--bing-layout-width);
+  height: 126px;
+  padding-top: 18px;
   background: var(--bing-header-bg);
+}
+
+.bing-serp__header-inner {
+  display: flex;
+  width: var(--bing-layout-width);
+  height: 108px;
+  flex-direction: column;
 }
 
 .bing-serp__topbar {
   display: flex;
-  height: 40px;
-  align-items: center;
-  gap: 28px;
-}
-
-.bing-serp__wordmark {
-  width: 170px;
-  flex: none;
-  color: var(--bing-text);
-  font-size: 20px;
-  font-weight: 650;
-  letter-spacing: -.4px;
-}
-
-.bing-serp__search {
-  display: flex;
-  width: 640px;
-  height: 40px;
+  width: var(--bing-layout-width);
+  height: 56px;
+  flex: 0 0 56px;
   align-items: center;
   gap: 16px;
-  padding: 0 12px 0 18px;
-  border: 1px solid var(--bing-border);
-  border-radius: 24px;
-  background: var(--bing-surface);
-  color: var(--bing-text);
+  padding: 4px 60px 4px 0;
 }
 
-.bing-serp__search-query { min-width: 0; flex: 1; }
-.bing-serp__search-icon,
-.bing-serp__tabs svg { display: inline-flex; width: 20px; height: 20px; color: var(--bing-muted); }
-.bing-serp__search-icon svg,
-.bing-serp__tabs svg { display: block; width: 100%; height: 100%; }
-.bing-serp__mic-fallback {
-  padding-left: 12px;
-  border-left: 1px solid var(--bing-divider);
-  color: var(--bing-muted);
-  font-size: 11px;
-}
-
-.demo .bing-serp__signin {
-  min-height: 32px;
-  margin-left: auto;
-  padding: 4px 12px;
-  border: 1px solid var(--bing-border);
-  border-radius: 4px;
-  background: var(--bing-surface);
-  color: var(--bing-text);
-  font: inherit;
-  cursor: pointer;
-  transition: background-color var(--fluent-dur-hover, 100ms) var(--fluent-ease, ease);
-}
-
-.bing-serp__tabs {
+.bing-serp__search-container {
   display: flex;
-  height: 49px;
-  align-items: flex-end;
-  gap: 28px;
-  padding-left: 198px;
-  color: var(--bing-muted);
-  font-size: 13px;
+  width: 864px;
+  height: 48px;
+  flex: 0 0 864px;
+  align-items: center;
+  gap: 16px;
 }
 
-.bing-serp__tabs > span {
-  display: inline-flex;
-  height: 38px;
+.bing-serp__search-form {
+  display: flex;
+  width: 814px;
+  height: 48px;
+  flex: 0 0 814px;
   align-items: center;
-  gap: 4px;
+  gap: 24px;
+  padding-left: 24px;
+}
+
+/* stand-in: the exported Bing logo is absent, so use the requested text wordmark. */
+.bing-serp__wordmark {
+  display: flex;
+  width: 116px;
+  height: 19px;
+  flex: 0 0 116px;
+  align-items: center;
+  color: var(--bing-text-subtle);
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: -.35px;
   white-space: nowrap;
 }
 
-.bing-serp__tabs > [aria-current="page"] {
-  border-bottom: 2px solid var(--bing-link);
+.bing-serp__search-box {
+  display: flex;
+  width: 650px;
+  height: 48px;
+  flex: 0 0 650px;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  border-radius: 9999px;
+  background: var(--bing-search-bg);
+  box-shadow: var(--bing-shadow-search);
+}
+
+.bing-serp__search-input {
+  display: flex;
+  min-width: 0;
+  height: 22px;
+  flex: 1 1 auto;
+  align-items: center;
+  gap: 8px;
+}
+
+.bing-serp__search-input > svg {
+  display: block;
+  width: 20px;
+  height: 20px;
+  flex: 0 0 20px;
+  color: var(--bing-text-subtle);
+}
+
+.bing-serp__search-input input {
+  width: 100%;
+  min-width: 0;
+  height: 22px;
+  padding: 0;
+  border: 0;
+  background: transparent;
   color: var(--bing-text);
+  font: inherit;
+  font-size: 14px;
+  line-height: 22px;
+  outline: 0;
+}
+
+.bing-serp__search-actions {
+  display: flex;
+  width: 56px;
+  height: 24px;
+  flex: 0 0 56px;
+  align-items: center;
+  gap: 8px;
+}
+
+.bing-serp__search-action {
+  display: flex;
+  width: 24px;
+  height: 24px;
+  flex: 0 0 24px;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  border-radius: 50%;
+  color: var(--bing-blue);
+  font-size: 10px !important;
+}
+
+.bing-serp__search-action:hover,
+.bing-serp__copilot-button:hover,
+.bing-serp__rewards:hover,
+.bing-serp__hamburger:hover,
+.bing-serp__header-tab:hover {
+  background: var(--bing-hover);
+}
+
+.bing-serp__search-action:active,
+.bing-serp__copilot-button:active,
+.bing-serp__rewards:active,
+.bing-serp__hamburger:active,
+.bing-serp__header-tab:active {
+  background: var(--bing-pressed);
+}
+
+/* stand-in: missing local Copilot art uses the specified neutral-circle fallback. */
+.bing-serp__copilot-button {
+  display: flex;
+  width: 34px;
+  height: 34px;
+  flex: 0 0 34px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.bing-serp__copilot-button > span {
+  width: 24px;
+  height: 24px;
+  border: 1px solid var(--bing-border-soft);
+  border-radius: 50%;
+  background: var(--bing-surface);
+}
+
+.bing-serp__identity {
+  display: flex;
+  width: var(--bing-id-width);
+  height: 32px;
+  flex: 0 0 var(--bing-id-width);
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.bing-serp__identity-controls {
+  display: flex;
+  width: 207px;
+  height: 32px;
+  flex: 0 0 207px;
+  align-items: center;
+  gap: 32px;
+}
+
+.bing-serp__signin {
+  display: flex;
+  width: 71px;
+  height: 32px;
+  flex: 0 0 71px;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 16px;
+  border: 1px solid var(--bing-border) !important;
+  border-radius: 4px;
+  background: var(--bing-surface-muted);
+  color: var(--bing-text-muted);
+  font-size: 13px !important;
+  line-height: 20px;
+}
+
+.bing-serp__signin:hover {
+  background: var(--bing-hover);
+}
+
+.bing-serp__rewards {
+  display: flex;
+  width: 48px;
+  height: 32px;
+  flex: 0 0 48px;
+  align-items: center;
+  gap: 8px;
+  padding: 0;
+  color: var(--bing-text-secondary);
+  font-size: 14px !important;
+}
+
+/* stand-in: the rewards medal export is absent, so retain a neutral outlined circle. */
+.bing-serp__rewards-icon {
+  display: block;
+  width: 32px;
+  height: 32px;
+  flex: 0 0 32px;
+  border: 2px solid var(--bing-blue);
+  border-radius: 50%;
+}
+
+.bing-serp__hamburger {
+  display: flex;
+  width: 24px;
+  height: 24px;
+  flex: 0 0 24px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+}
+
+/* stand-in: the navigation export is absent; these bars keep the menu control identifiable. */
+.bing-serp__hamburger span {
+  display: flex;
+  width: 16px;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.bing-serp__hamburger i {
+  display: block;
+  width: 16px;
+  height: 1px;
+  border-radius: 1px;
+  background: var(--bing-text-subtle);
+}
+
+.bing-serp__header-tabs {
+  display: flex;
+  width: var(--bing-layout-width);
+  height: 52px;
+  flex: 0 0 52px;
+  align-items: flex-end;
+  overflow-x: auto;
+  padding: 6px 0 0 160px;
+  border-bottom: 1px solid var(--bing-border);
+  scrollbar-width: none;
+}
+
+.bing-serp__header-tabs::-webkit-scrollbar,
+.bing-serp__body-tabs::-webkit-scrollbar,
+.bing-serp__people-track::-webkit-scrollbar {
+  display: none;
+}
+
+.bing-serp__header-tabs-track {
+  display: flex;
+  width: calc(var(--bing-layout-width) - 160px);
+  height: 46px;
+  flex: 0 0 auto;
+  align-items: flex-start;
+}
+
+.bing-serp__header-tab {
+  display: flex;
+  width: var(--tab-width);
+  height: 46px;
+  flex: 0 0 var(--tab-width);
+  align-items: center;
+  justify-content: center;
+  padding: 0 12px;
+  color: var(--bing-text-muted);
+}
+
+.bing-serp__header-tab:nth-child(1) { --tab-width: 82px; }
+.bing-serp__header-tab:nth-child(2) { --tab-width: 104px; }
+.bing-serp__header-tab:nth-child(3) { --tab-width: 81px; }
+.bing-serp__header-tab:nth-child(4) { --tab-width: 72px; }
+.bing-serp__header-tab:nth-child(5) { --tab-width: 71px; }
+.bing-serp__header-tab:nth-child(6) { --tab-width: 71px; }
+.bing-serp__header-tab:nth-child(7) { --tab-width: 101px; }
+.bing-serp__header-tab:nth-child(8) { --tab-width: 93px; }
+
+.bing-serp__header-tab-inner {
+  display: flex;
+  width: max-content;
+  height: 46px;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 8px;
+  border-bottom: 3px solid transparent;
+  font-size: 11px;
+  line-height: 30px;
+  white-space: nowrap;
+}
+
+.bing-serp__header-tab-inner > svg,
+.bing-serp__header-tab-inner > span:first-child {
+  display: inline-flex;
+  width: 16px;
+  height: 16px;
+  flex: 0 0 16px;
+  align-items: center;
+  justify-content: center;
+  color: var(--bing-text-muted);
+}
+
+.bing-serp__header-tab-inner > span:last-child {
+  text-transform: uppercase;
+}
+
+.bing-serp__header-tab.is-active {
+  color: var(--bing-text);
+  font-weight: 700;
+}
+
+.bing-serp__header-tab.is-active .bing-serp__header-tab-inner {
+  border-bottom-color: var(--bing-blue);
+  color: var(--bing-text);
+}
+
+.bing-serp__header-tab.is-active svg {
+  color: var(--bing-blue);
+}
+
+/* stand-in: local category icons are missing; initials preserve their reserved icon slots. */
+.bing-serp__tab-fallback,
+.bing-serp__copilot-tab-fallback {
+  font-size: 10px;
   font-weight: 600;
+}
+
+.bing-serp__copilot-tab-fallback {
+  border: 1px solid var(--bing-border-soft);
+  border-radius: 50%;
+}
+
+.bing-serp__more-fallback {
+  display: flex !important;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.bing-serp__more-fallback i {
+  display: block;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: currentColor;
 }
 
 .bing-serp__controls {
   display: flex;
+  width: var(--bing-layout-width);
   height: 124px;
   flex-direction: column;
-  justify-content: center;
   gap: 16px;
-  padding: 10px 24px 10px 160px;
-  border-bottom: 1px solid var(--bing-divider);
-  color: var(--bing-muted);
-  font-size: 13px;
+  padding-left: 160px;
+  color: var(--bing-text-muted);
 }
 
 .bing-serp__filter-row {
   display: flex;
-  height: 24px;
-  flex: none;
+  width: calc(var(--bing-layout-width) - 160px);
+  height: 54px;
+  flex: 0 0 54px;
   align-items: center;
   gap: 24px;
+  padding: 12px 20px;
+  font-size: 14px;
+  line-height: 22px;
   white-space: nowrap;
 }
 
-.demo .bing-serp__filter-row button {
-  padding: 0;
-  border: 0;
-  background: transparent;
-  color: var(--bing-muted);
-  font: inherit;
-  cursor: pointer;
-  transition: background-color var(--fluent-dur-hover, 100ms) var(--fluent-ease, ease);
+.bing-serp__result-count {
+  display: inline-flex;
+  gap: 4px;
+  align-items: center;
 }
 
-.bing-serp__location { display: inline-flex; align-items: center; gap: 4px; }
-.bing-serp__toggle-label { margin-left: auto; }
+.bing-serp__filter-button {
+  display: inline-flex;
+  height: 30px;
+  flex: 0 0 99px;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0 16px;
+  border-radius: 16px !important;
+  color: var(--bing-text-muted);
+  font-size: 13px !important;
+  line-height: 16px;
+}
+
+.bing-serp__filter-button > svg {
+  width: 12px;
+  height: 12px;
+  color: var(--bing-text-muted);
+}
+
+.bing-serp__location {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+}
+
+.bing-serp__location-fallback {
+  display: inline-flex;
+  width: 12px;
+  height: 12px;
+  align-items: center;
+  justify-content: center;
+  color: var(--bing-blue-secondary);
+  font-size: 16px;
+}
+
+.bing-serp__location a {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.bing-serp__toggle-label {
+  margin-left: auto;
+  color: var(--bing-text-muted);
+}
+
 .bing-serp__toggle {
   position: relative;
-  width: 40px;
-  height: 20px;
-  flex: none;
+  width: 36px;
+  height: 16px;
+  flex: 0 0 36px;
   margin: 0;
   appearance: none;
-  border: 1px solid var(--bing-toggle);
-  border-radius: 12px;
-  background: var(--bing-surface);
+  border: 0;
+  border-radius: 24px;
+  background: var(--bing-border);
   cursor: pointer;
+  transition: background-color var(--fluent-dur-faster, 100ms) var(--fluent-ease, ease);
 }
 
-.demo .bing-serp__toggle::before {
+.bing-serp__toggle::before {
   position: absolute;
   top: 3px;
   left: 3px;
-  width: 12px;
-  height: 12px;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
-  background: var(--bing-toggle);
+  background: var(--bing-surface-raised);
   content: "";
-  transition: transform var(--fluent-dur-hover, 100ms) var(--fluent-ease, ease);
+  transition: transform var(--fluent-dur-faster, 100ms) var(--fluent-ease, ease);
 }
 
-.bing-serp__toggle:checked { border-color: var(--bing-link); background: var(--bing-link); }
-.bing-serp__toggle:checked::before { background: var(--bing-surface); transform: translateX(20px); }
-.bing-serp__toggle:focus-visible,
-.bing-serp__filter-row button:focus-visible,
-.bing-serp__signin:focus-visible { outline: 2px solid var(--bing-link); outline-offset: 2px; }
+.bing-serp__toggle:checked {
+  background: var(--bing-blue-secondary);
+}
+
+.bing-serp__toggle:checked::before {
+  background: var(--bing-surface-muted);
+  transform: translateX(20px);
+}
 
 .bing-serp__entity-row {
   display: flex;
@@ -197,20 +587,14 @@ bing-serp *::after { box-sizing: border-box; }
   height: 40px;
   align-items: center;
   gap: 12px;
+  margin-left: 20px;
 }
 
-.bing-serp__entity-image {
-  display: block;
-  width: 40px;
-  height: 40px;
-  flex: none;
-  overflow: hidden;
-  border-radius: 4px;
-  background: var(--bing-placeholder);
+.bing-serp__entity-info {
+  min-width: 220px;
+  max-width: 440px;
 }
 
-.bing-serp__entity-image img { display: block; width: 100%; height: 100%; object-fit: cover; }
-.bing-serp__entity-info { min-width: 220px; max-width: 440px; }
 .bing-serp__entity-info h1 {
   overflow: hidden;
   margin: 0;
@@ -221,21 +605,29 @@ bing-serp *::after { box-sizing: border-box; }
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+
 .bing-serp__entity-info p {
   overflow: hidden;
   margin: 0;
-  color: var(--bing-muted);
+  color: var(--bing-text-muted);
   font-size: 12px;
   line-height: 16px;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
-.bing-serp__pills { display: flex; gap: 8px; margin-left: 8px; }
+/* stand-in: title-row pills retain the #144 sample labels because the source has no pill copy. */
+.bing-serp__pills {
+  display: flex;
+  gap: 8px;
+  margin-left: 8px;
+}
+
 .bing-serp__pills span {
   padding: 5px 12px;
   border: 1px solid var(--bing-border);
   border-radius: 18px;
+  background: var(--bing-surface);
   color: var(--bing-text);
   font-size: 12px;
   line-height: 16px;
@@ -244,9 +636,11 @@ bing-serp *::after { box-sizing: border-box; }
 
 .bing-serp__body {
   display: flex;
+  width: var(--bing-layout-width);
   align-items: flex-start;
   gap: 80px;
-  padding: 12px 0 12px 160px;
+  padding: 12px 0;
+  padding-left: 160px;
 }
 
 .bing-serp__mainline {
@@ -254,53 +648,8 @@ bing-serp *::after { box-sizing: border-box; }
   width: 648px;
   flex: 0 0 648px;
   flex-direction: column;
-  gap: 28px;
+  gap: 0;
 }
-
-.bing-serp__videos h2 {
-  margin: 0 0 8px;
-  color: var(--bing-text);
-  font-size: 18px;
-  font-weight: 600;
-  line-height: 24px;
-}
-
-.bing-serp__video {
-  display: flex;
-  min-height: 88px;
-  align-items: center;
-  gap: 12px;
-  padding: 8px 0;
-  border-bottom: 1px solid var(--bing-divider);
-}
-
-.bing-serp__thumbnail {
-  display: flex;
-  width: 128px;
-  height: 72px;
-  flex: none;
-  align-items: center;
-  justify-content: center;
-  border-radius: 4px;
-  background: var(--bing-placeholder);
-  color: var(--bing-text);
-}
-
-.bing-serp__thumbnail svg { width: 24px; height: 24px; }
-.bing-serp__result-copy { min-width: 0; }
-.bing-serp__result-title { color: var(--bing-link); font-size: 16px; line-height: 22px; text-decoration: none; }
-.bing-serp__video-title {
-  display: -webkit-box;
-  overflow: hidden;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
-}
-.bing-serp__result-title:hover { text-decoration: underline; }
-.bing-serp__result-copy p { margin: 4px 0 0; color: var(--bing-muted); font-size: 12px; line-height: 16px; }
-.bing-serp__web-results { display: flex; flex-direction: column; gap: 22px; }
-.bing-serp__web-result .bing-serp__site { margin: 0 0 3px; color: var(--bing-muted); font-size: 12px; line-height: 16px; }
-.bing-serp__web-result > .bing-serp__result-title { display: inline-block; margin-bottom: 4px; }
-.bing-serp__web-result .bing-serp__description { margin: 0; color: var(--bing-muted); font-size: 13px; line-height: 19px; }
 
 .bing-serp__rail {
   position: relative;
@@ -315,11 +664,823 @@ bing-serp *::after { box-sizing: border-box; }
   width: 472px;
 }
 
-.demo .bing-serp__signin:hover:not(:disabled),
-.demo .bing-serp__filter-row button:hover { background: var(--bing-hover); }
-.demo .bing-serp__signin:active:not(:disabled) { transform: scale(.98); }
+.bing-serp__algoblock {
+  display: flex;
+  width: 648px;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 4px;
+  padding: 16px 20px;
+  border-radius: 6px;
+}
+
+.bing-serp__algoblock--rich {
+  height: 456px;
+}
+
+.bing-serp__algoblock--simple {
+  height: 150px;
+}
+
+.bing-serp__algo-header {
+  display: flex;
+  width: 608px;
+  height: 38px;
+  flex: 0 0 38px;
+  align-items: center;
+  gap: 8px;
+}
+
+.bing-serp__favicon {
+  display: flex;
+  width: 26px;
+  height: 26px;
+  flex: 0 0 26px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--bing-border-soft);
+  border-radius: 50%;
+  background: var(--bing-favicon-bg);
+}
+
+.bing-serp__favicon > span {
+  display: block;
+  width: 14px;
+  height: 14px;
+  border-radius: 2px;
+  background: var(--bing-placeholder);
+}
+
+.bing-serp__site-attribution {
+  display: flex;
+  min-width: 0;
+  height: 38px;
+  flex: 1 1 auto;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.bing-serp__site-name {
+  color: var(--bing-text);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+.bing-serp__site-url {
+  display: flex;
+  min-width: 0;
+  height: 20px;
+  align-items: center;
+  gap: 4px;
+  font-size: 13px;
+  line-height: 20px;
+}
+
+.bing-serp__site-url a {
+  overflow: hidden;
+  color: var(--bing-text);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.bing-serp__url-caret,
+.bing-serp__url-caret svg {
+  display: block;
+  width: 12px;
+  height: 12px;
+  flex: 0 0 12px;
+  color: var(--bing-text-subtle);
+}
+
+.bing-serp__algo-body {
+  display: flex;
+  width: 608px;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.bing-serp__algo-body--rich {
+  height: 254px;
+  padding-bottom: 4px;
+}
+
+.bing-serp__algo-body--simple {
+  height: 76px;
+  padding-bottom: 4px;
+}
+
+.bing-serp__algo-title {
+  overflow: hidden;
+  width: 608px;
+  height: 24px;
+  flex: 0 0 24px;
+  margin: 0;
+  padding-right: 10px;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.bing-serp__algo-title a {
+  color: var(--bing-link);
+}
+
+.bing-serp__rich-snippet {
+  position: relative;
+  width: 608px;
+  height: 44px;
+  flex: 0 0 44px;
+}
+
+.bing-serp__rich-meta {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  height: 22px;
+  align-items: center;
+  gap: 4px;
+  padding-right: 4px;
+  color: var(--bing-text-muted);
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.bing-serp__web-badge {
+  display: inline-flex;
+  width: 30px;
+  height: 20px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--bing-border);
+  border-radius: 4px;
+  background: var(--bing-surface);
+  color: var(--bing-text-muted);
+  font-size: 11px;
+  line-height: 12px;
+}
+
+.bing-serp__rich-snippet p,
+.bing-serp__simple-snippet {
+  display: -webkit-box;
+  overflow: hidden;
+  margin: 0;
+  color: var(--bing-text-muted);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.bing-serp__rich-snippet p {
+  height: 44px;
+  text-indent: 122px;
+}
+
+.bing-serp__algo-details {
+  display: flex;
+  width: 608px;
+  height: 174px;
+  flex: 0 0 174px;
+  flex-direction: column;
+  gap: 8px;
+  padding-bottom: 12px;
+}
+
+.bing-serp__tabs-shell {
+  display: flex;
+  width: 608px;
+  height: 38px;
+  flex: 0 0 38px;
+  align-items: center;
+  border-bottom: 1px solid var(--bing-border);
+}
+
+.bing-serp__row-scroll {
+  display: flex;
+  width: 24px;
+  height: 38px;
+  flex: 0 0 24px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 4px;
+  color: var(--bing-text-subtle);
+}
+
+.bing-serp__row-scroll svg {
+  display: block;
+  width: 16px;
+  height: 16px;
+}
+
+.bing-serp__row-scroll--left span {
+  color: var(--bing-border-strong);
+  font-size: 22px;
+  line-height: 16px;
+}
+
+.bing-serp__body-tabs {
+  display: flex;
+  width: 560px;
+  height: 38px;
+  flex: 1 1 auto;
+  align-items: center;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.bing-serp__body-tab {
+  display: flex;
+  height: 38px;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--bing-border) !important;
+  color: var(--bing-text-muted);
+  font-size: 14px !important;
+  line-height: 22px;
+  white-space: nowrap;
+}
+
+.bing-serp__body-tab:nth-child(1) { width: 83px; }
+.bing-serp__body-tab:nth-child(2) { width: 70px; }
+.bing-serp__body-tab:nth-child(3) { width: 93px; }
+.bing-serp__body-tab:nth-child(4) { width: 115px; }
+.bing-serp__body-tab:nth-child(5) { width: 82px; }
+.bing-serp__body-tab:nth-child(6) { width: 70px; }
+
+.bing-serp__body-tab.is-active {
+  border-bottom: 3px solid var(--bing-text) !important;
+  color: var(--bing-text);
+}
+
+.bing-serp__expanded-snippet {
+  display: flex;
+  height: 116px;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.bing-serp__expanded-snippet p {
+  display: -webkit-box;
+  overflow: hidden;
+  height: 88px;
+  margin: 0;
+  color: var(--bing-text-muted);
+  font-size: 14px;
+  line-height: 22px;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+}
+
+.bing-serp__expanded-snippet a {
+  height: 20px;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.bing-serp__simple-snippet {
+  height: 44px;
+  flex: 0 0 44px;
+}
+
+.bing-serp__algo-footer {
+  display: flex;
+  width: 608px;
+  height: 124px;
+  flex: 0 0 124px;
+  flex-direction: column;
+  padding-bottom: 4px;
+}
+
+.bing-serp__explore-title {
+  height: 28px;
+  flex: 0 0 28px;
+  color: var(--bing-text-muted);
+  font-size: 13px;
+  line-height: 28px;
+  text-transform: uppercase;
+}
+
+.bing-serp__explore-list {
+  display: flex;
+  height: 76px;
+  flex: 0 0 76px;
+  flex-direction: column;
+  padding-top: 4px;
+}
+
+.bing-serp__explore-row {
+  display: flex;
+  height: 24px;
+  flex: 0 0 24px;
+  align-items: center;
+  gap: 8px;
+  padding: 2px 0;
+}
+
+.bing-serp__explore-row:not(:last-child) {
+  border-bottom: 1px solid var(--bing-border);
+}
+
+.bing-serp__small-favicon {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  flex: 0 0 16px;
+  border-radius: 2px;
+  background: var(--bing-placeholder);
+}
+
+.bing-serp__explore-row a {
+  overflow: hidden;
+  flex: 1 1 auto;
+  font-size: 14px;
+  line-height: 20px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.bing-serp__explore-domain {
+  width: 165px;
+  flex: 0 0 165px;
+  overflow: hidden;
+  color: var(--bing-text);
+  font-size: 14px;
+  line-height: 20px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.bing-serp__recommendation {
+  overflow: hidden;
+  height: 16px;
+  flex: 0 0 16px;
+  color: var(--bing-text-subtle);
+  font-size: 11px;
+  line-height: 16px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.bing-serp__recommendation a {
+  color: var(--bing-text-secondary);
+}
+
+.bing-serp__people {
+  display: flex;
+  width: 648px;
+  height: 337px;
+  flex: 0 0 337px;
+  flex-direction: column;
+  gap: 8px;
+  padding-top: 16px;
+}
+
+.bing-serp__section-title {
+  display: flex;
+  width: 608px;
+  height: 24px;
+  flex: 0 0 24px;
+  align-items: center;
+  margin: 0 20px;
+}
+
+.bing-serp__section-title h2 {
+  overflow: hidden;
+  margin: 0;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 22px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.bing-serp__section-title--people {
+  height: 26px;
+  flex-basis: 26px;
+}
+
+.bing-serp__section-title--people h2 {
+  color: var(--bing-blue-secondary);
+  font-size: 22px;
+  line-height: 26px;
+}
+
+.bing-serp__people-carousel {
+  position: relative;
+  width: 648px;
+  height: 267px;
+  flex: 0 0 267px;
+}
+
+.bing-serp__people-track {
+  display: flex;
+  width: 648px;
+  height: 267px;
+  align-items: flex-start;
+  gap: 8px;
+  overflow-x: auto;
+  padding: 2px 4px;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+.bing-serp__question-card {
+  display: flex;
+  width: 280px;
+  height: 263px;
+  flex: 0 0 280px;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 6px;
+  background: var(--bing-surface);
+  box-shadow: var(--bing-shadow-card);
+}
+
+.bing-serp__question-title {
+  display: flex;
+  width: 280px;
+  height: 64px;
+  flex: 0 0 64px;
+  align-items: flex-start;
+  gap: 4px;
+  padding: 16px 16px 4px;
+}
+
+.bing-serp__question-title h3 {
+  display: -webkit-box;
+  overflow: hidden;
+  flex: 1 1 auto;
+  margin: 0;
+  color: var(--bing-text);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 22px;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+/* stand-in: the chat-help export is missing; a question mark marks the icon slot. */
+.bing-serp__question-icon {
+  display: flex;
+  width: 24px;
+  height: 24px;
+  flex: 0 0 24px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--bing-blue);
+  border-radius: 50%;
+  color: var(--bing-blue);
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.bing-serp__answer {
+  display: flex;
+  width: 280px;
+  height: 199px;
+  flex: 0 0 199px;
+  flex-direction: column;
+  gap: 8px;
+  padding: 8px 16px 16px;
+}
+
+.bing-serp__answer > p {
+  display: -webkit-box;
+  overflow: hidden;
+  height: 114px;
+  flex: 0 0 114px;
+  margin: 0;
+  padding-bottom: 4px;
+  color: var(--bing-text-secondary);
+  font-size: 14px;
+  line-height: 22px;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+}
+
+.bing-serp__question-divider {
+  width: 248px;
+  height: 1px;
+  flex: 0 0 1px;
+  background: var(--bing-border);
+}
+
+.bing-serp__answer-link {
+  display: flex;
+  width: 248px;
+  height: 44px;
+  flex: 0 0 44px;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.bing-serp__answer-link > a:first-child {
+  overflow: hidden;
+  height: 22px;
+  color: var(--bing-link);
+  font-size: 16px;
+  line-height: 22px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.bing-serp__answer-attribution {
+  display: flex;
+  height: 20px;
+  align-items: center;
+  gap: 6px;
+  color: var(--bing-link-green) !important;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.bing-serp__carousel-next {
+  position: absolute;
+  top: 50%;
+  right: 2px;
+  display: flex;
+  width: 32px;
+  height: 32px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--bing-border) !important;
+  border-radius: 50%;
+  background: var(--bing-surface) !important;
+  box-shadow: var(--bing-shadow-arrow);
+  color: var(--bing-text-subtle);
+  transform: translateY(-50%);
+}
+
+.bing-serp__carousel-next svg {
+  display: block;
+  width: 14px;
+  height: 14px;
+}
+
+.bing-serp__people-feedback {
+  display: flex;
+  width: 648px;
+  height: 20px;
+  flex: 0 0 20px;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 2px;
+  padding-right: 20px;
+  color: var(--bing-text-secondary);
+  font-size: 11px;
+  line-height: 16px;
+}
+
+/* stand-in: thumbs-up/down exports are absent; small text controls retain their slots. */
+.bing-serp__people-feedback button {
+  display: flex;
+  width: 16px;
+  height: 16px;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  color: var(--bing-text-subtle);
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.bing-serp__carousel-next:hover {
+  background: var(--bing-hover) !important;
+}
+
+.bing-serp__news {
+  display: flex;
+  width: 648px;
+  height: 376px;
+  flex: 0 0 376px;
+  flex-direction: column;
+  padding-bottom: 8px;
+}
+
+.bing-serp__news-results {
+  display: flex;
+  width: 648px;
+  height: 282px;
+  flex: 0 0 282px;
+  flex-direction: column;
+  gap: 8px;
+  padding: 10px 20px 4px;
+}
+
+.bing-serp__section-title--news {
+  width: 608px;
+  height: 24px;
+  flex: 0 0 24px;
+  margin: 0;
+}
+
+.bing-serp__section-title--news h2 {
+  color: var(--bing-text);
+}
+
+.bing-serp__news-grid {
+  display: grid;
+  width: 608px;
+  height: 236px;
+  flex: 0 0 236px;
+  grid-template-columns: repeat(2, 300px);
+  grid-template-rows: repeat(2, 112px);
+  gap: 8px;
+}
+
+.bing-serp__news-card {
+  display: flex;
+  width: 300px;
+  height: 112px;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 16px;
+  border-radius: 6px;
+  background: var(--bing-surface);
+  box-shadow: var(--bing-shadow-card);
+}
+
+.bing-serp__news-copy {
+  display: flex;
+  width: 176px;
+  height: 96px;
+  flex: 1 1 auto;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.bing-serp__news-meta {
+  display: flex;
+  height: 20px;
+  flex: 0 0 20px;
+  align-items: flex-start;
+  gap: 2px;
+  color: var(--bing-text-muted);
+  font-size: 13px;
+  line-height: 20px;
+}
+
+.bing-serp__news-copy > a {
+  display: -webkit-box;
+  overflow: hidden;
+  height: 60px;
+  color: var(--bing-link);
+  font-size: 14px;
+  line-height: 20px;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
+/* stand-in: news thumbnails are neutral blocks because no source images are specified. */
+.bing-serp__news-thumbnail {
+  display: block;
+  width: 80px;
+  height: 80px;
+  flex: 0 0 80px;
+  border-radius: 4px;
+  background: var(--bing-thumb-bg);
+}
+
+.bing-serp__explore-news {
+  display: flex;
+  width: 648px;
+  height: 86px;
+  flex: 0 0 86px;
+  flex-direction: column;
+  gap: 8px;
+  padding: 10px 20px 4px;
+}
+
+.bing-serp__explore-news h2 {
+  overflow: hidden;
+  height: 24px;
+  flex: 0 0 24px;
+  margin: 0;
+  color: var(--bing-text);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 22px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.bing-serp__news-topics {
+  display: flex;
+  height: 40px;
+  flex: 0 0 40px;
+  gap: 8px;
+  overflow: hidden;
+}
+
+/* stand-in: the source has no topic labels, so use neutral generic category names. */
+.bing-serp__news-topics button {
+  display: flex;
+  width: 125px;
+  height: 32px;
+  flex: 0 0 125px;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 16px 4px 4px;
+  border-radius: 24px;
+  background: var(--bing-surface);
+  color: var(--bing-text);
+  font-size: 13px;
+  line-height: 16px;
+}
+
+.bing-serp__news-topics button:hover {
+  background: var(--bing-hover);
+}
+
+.bing-serp__news-topics button > span {
+  width: 24px;
+  height: 24px;
+  flex: 0 0 24px;
+  border-radius: 50%;
+  background: var(--bing-placeholder);
+}
+
+.bing-serp__related {
+  display: flex;
+  width: 648px;
+  height: 240px;
+  flex: 0 0 240px;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px 20px 0;
+}
+
+.bing-serp__related h2 {
+  overflow: hidden;
+  height: 24px;
+  flex: 0 0 24px;
+  margin: 0;
+  color: var(--bing-text-secondary);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.bing-serp__related-grid {
+  display: grid;
+  width: 608px;
+  height: 184px;
+  flex: 0 0 184px;
+  grid-template-columns: repeat(2, 300px);
+  grid-template-rows: repeat(4, 38px);
+  gap: 8px;
+}
+
+.bing-serp__related-item {
+  display: flex;
+  min-width: 0;
+  height: 38px;
+  align-items: center;
+  gap: 16px;
+  padding: 8px 16px;
+  border: 1px solid var(--bing-pill-bg);
+  border-radius: 24px;
+  background: var(--bing-pill-bg);
+  color: var(--bing-text) !important;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.bing-serp__related-item:hover {
+  background: var(--bing-hover);
+  text-decoration: none;
+}
+
+.bing-serp__related-item svg {
+  display: block;
+  width: 16px;
+  height: 16px;
+  flex: 0 0 16px;
+  color: var(--bing-text-muted);
+}
+
+.bing-serp__related-item span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 
 @media (prefers-reduced-motion: reduce) {
-  .demo .bing-serp__signin,
-  .demo .bing-serp__toggle::before { transition: none; }
+  bing-serp button,
+  .bing-serp__toggle,
+  .bing-serp__toggle::before,
+  .bing-serp__people-track {
+    transition: none;
+    scroll-behavior: auto;
+  }
 }
