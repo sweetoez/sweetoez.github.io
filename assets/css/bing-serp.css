@@ -20,6 +20,9 @@ html[data-theme="light"] {
   --bing-link-green: #006D21;
   --bing-blue: #174AE4;
   --bing-blue-secondary: #106EBE;
+  --bing-footer-bottom-bg: #F9F9F9;
+  --bing-footer-chat-background: linear-gradient(129.58deg, #2870EA 20.89%, #1B4AEF 77.37%);
+  --bing-footer-chat-text: #FFFFFF;
   --bing-focus: #174AE4;
   --bing-hover: #F5F5F5;
   --bing-pressed: #ECECEC;
@@ -54,6 +57,9 @@ html[data-theme="dark-navy"] {
   --bing-link-green: #60BD84;
   --bing-blue: #A2B7F4;
   --bing-blue-secondary: #3AA0F3;
+  --bing-footer-bottom-bg: #292827;
+  --bing-footer-chat-background: linear-gradient(129.58deg, #2870EA 20.89%, #1B4AEF 77.37%);
+  --bing-footer-chat-text: #FAF9F8;
   --bing-focus: #A2B7F4;
   --bing-hover: #323130;
   --bing-pressed: #484644;
@@ -154,18 +160,12 @@ bing-serp a:hover {
   padding-left: 24px;
 }
 
-/* stand-in: the exported Bing logo is absent, so use the requested text wordmark. */
 .bing-serp__wordmark {
-  display: flex;
+  display: block;
   width: 116px;
   height: 19px;
   flex: 0 0 116px;
-  align-items: center;
-  color: var(--bing-text-subtle);
-  font-size: 15px;
-  font-weight: 600;
-  letter-spacing: -.35px;
-  white-space: nowrap;
+  object-fit: contain;
 }
 
 .bing-serp__search-box {
@@ -228,10 +228,16 @@ bing-serp a:hover {
   flex: 0 0 24px;
   align-items: center;
   justify-content: center;
-  padding: 4px;
+  padding: 2px;
   border-radius: 50%;
   color: var(--bing-blue);
-  font-size: 10px !important;
+}
+
+.bing-serp__search-action svg {
+  display: block;
+  width: 20px;
+  height: 20px;
+  flex: 0 0 20px;
 }
 
 .bing-serp__search-action:hover,
@@ -250,7 +256,6 @@ bing-serp a:hover {
   background: var(--bing-pressed);
 }
 
-/* stand-in: missing local Copilot art uses the specified neutral-circle fallback. */
 .bing-serp__copilot-button {
   display: flex;
   width: 34px;
@@ -261,12 +266,10 @@ bing-serp a:hover {
   border-radius: 50%;
 }
 
-.bing-serp__copilot-button > span {
+.bing-serp__copilot-button > img {
+  display: block;
   width: 24px;
   height: 24px;
-  border: 1px solid var(--bing-border-soft);
-  border-radius: 50%;
-  background: var(--bing-surface);
 }
 
 .bing-serp__identity {
@@ -301,6 +304,7 @@ bing-serp a:hover {
   color: var(--bing-text-muted);
   font-size: 13px !important;
   line-height: 20px;
+  white-space: nowrap;
 }
 
 .bing-serp__signin:hover {
@@ -319,14 +323,23 @@ bing-serp a:hover {
   font-size: 14px !important;
 }
 
-/* stand-in: the rewards medal export is absent, so retain a neutral outlined circle. */
+/* stand-in: the rewards medal export is absent; use the specified Fluent trophy. */
 .bing-serp__rewards-icon {
-  display: block;
+  display: flex;
   width: 32px;
   height: 32px;
   flex: 0 0 32px;
+  align-items: center;
+  justify-content: center;
   border: 2px solid var(--bing-blue);
   border-radius: 50%;
+}
+
+.bing-serp__rewards-icon svg {
+  display: block;
+  width: 16px;
+  height: 16px;
+  color: var(--bing-blue);
 }
 
 .bing-serp__hamburger {
@@ -444,32 +457,6 @@ bing-serp a:hover {
   color: var(--bing-blue);
 }
 
-/* stand-in: local category icons are missing; initials preserve their reserved icon slots. */
-.bing-serp__tab-fallback,
-.bing-serp__copilot-tab-fallback {
-  font-size: 10px;
-  font-weight: 600;
-}
-
-.bing-serp__copilot-tab-fallback {
-  border: 1px solid var(--bing-border-soft);
-  border-radius: 50%;
-}
-
-.bing-serp__more-fallback {
-  display: flex !important;
-  flex-direction: column;
-  gap: 2px;
-}
-
-.bing-serp__more-fallback i {
-  display: block;
-  width: 3px;
-  height: 3px;
-  border-radius: 50%;
-  background: currentColor;
-}
-
 .bing-serp__controls {
   display: flex;
   width: var(--bing-layout-width);
@@ -526,14 +513,26 @@ bing-serp a:hover {
   font-size: 14px;
 }
 
-.bing-serp__location-fallback {
+.bing-serp__location-icon {
   display: inline-flex;
   width: 12px;
   height: 12px;
+  flex: 0 0 12px;
   align-items: center;
   justify-content: center;
   color: var(--bing-blue-secondary);
-  font-size: 16px;
+}
+
+.bing-serp__location-icon svg {
+  display: block;
+  width: 12px;
+  height: 12px;
+}
+
+.bing-serp__toggle-group {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
 }
 
 .bing-serp__location a {
@@ -542,7 +541,6 @@ bing-serp a:hover {
 }
 
 .bing-serp__toggle-label {
-  margin-left: auto;
   color: var(--bing-text-muted);
 }
 
@@ -654,6 +652,7 @@ bing-serp a:hover {
 .bing-serp__rail {
   position: relative;
   width: 472px;
+  min-width: 472px;
   flex: 0 0 472px;
 }
 
@@ -930,7 +929,8 @@ bing-serp a:hover {
 .bing-serp__expanded-snippet p {
   display: -webkit-box;
   overflow: hidden;
-  height: 88px;
+  max-height: 88px;
+  height: auto;
   margin: 0;
   color: var(--bing-text-muted);
   font-size: 14px;
@@ -1127,7 +1127,6 @@ bing-serp a:hover {
   -webkit-line-clamp: 2;
 }
 
-/* stand-in: the chat-help export is missing; a question mark marks the icon slot. */
 .bing-serp__question-icon {
   display: flex;
   width: 24px;
@@ -1135,11 +1134,13 @@ bing-serp a:hover {
   flex: 0 0 24px;
   align-items: center;
   justify-content: center;
-  border: 1px solid var(--bing-blue);
-  border-radius: 50%;
   color: var(--bing-blue);
-  font-size: 14px;
-  line-height: 24px;
+}
+
+.bing-serp__question-icon svg {
+  display: block;
+  width: 20px;
+  height: 20px;
 }
 
 .bing-serp__answer {
@@ -1204,8 +1205,8 @@ bing-serp a:hover {
 
 .bing-serp__carousel-next {
   position: absolute;
-  top: 50%;
-  right: 2px;
+  top: calc(50% + 0.5px);
+  right: -32px;
   display: flex;
   width: 32px;
   height: 32px;
@@ -1239,7 +1240,6 @@ bing-serp a:hover {
   line-height: 16px;
 }
 
-/* stand-in: thumbs-up/down exports are absent; small text controls retain their slots. */
 .bing-serp__people-feedback button {
   display: flex;
   width: 16px;
@@ -1248,8 +1248,12 @@ bing-serp a:hover {
   justify-content: center;
   padding: 0;
   color: var(--bing-text-subtle);
-  font-size: 12px;
-  line-height: 16px;
+}
+
+.bing-serp__people-feedback button svg {
+  display: block;
+  width: 16px;
+  height: 16px;
 }
 
 .bing-serp__carousel-next:hover {
@@ -1475,8 +1479,166 @@ bing-serp a:hover {
   white-space: nowrap;
 }
 
+.bing-serp__footer {
+  display: flex;
+  width: 1615px;
+  height: 162px;
+  flex: 0 0 162px;
+  flex-direction: column;
+  background: var(--bing-page-bg);
+}
+
+.bing-serp__footer-top {
+  display: flex;
+  width: 1615px;
+  height: 116px;
+  flex: 0 0 116px;
+  align-items: flex-start;
+  gap: 48px;
+  padding: 24px 160px 0;
+}
+
+.bing-serp__pagination {
+  display: flex;
+  height: 46px;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 16px;
+}
+
+.bing-serp__pagination-chevron {
+  display: flex;
+  width: 24px;
+  height: 46px;
+  flex: 0 0 24px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 4px;
+  border-radius: 4px;
+  color: var(--bing-text-subtle);
+}
+
+.bing-serp__pagination-chevron svg {
+  display: block;
+  width: 16px;
+  height: 16px;
+}
+
+.bing-serp__page-numbers {
+  display: flex;
+  height: 46px;
+  flex: 0 0 300px;
+  gap: 12px;
+}
+
+.bing-serp__page-number {
+  display: flex;
+  width: 40px;
+  height: 46px;
+  flex: 0 0 40px;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 16px;
+  border-bottom: 3px solid transparent;
+  color: var(--bing-text-subtle);
+  font-size: 14px !important;
+  line-height: 22px;
+}
+
+.bing-serp__page-number:hover {
+  background: var(--bing-hover);
+}
+
+.bing-serp__page-number.is-active {
+  border-bottom-color: var(--bing-blue-secondary);
+  color: var(--bing-text);
+}
+
+.bing-serp__chat-button {
+  display: flex;
+  width: 83px;
+  height: 32px;
+  flex: 0 0 83px;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 32px;
+  background: var(--bing-footer-chat-background);
+  color: var(--bing-footer-chat-text);
+  font-size: 13px !important;
+  line-height: 16px;
+  transition: filter var(--fluent-dur-faster, 100ms) var(--fluent-ease, ease);
+}
+
+.bing-serp__chat-button svg {
+  display: block;
+  width: 16px;
+  height: 16px;
+  flex: 0 0 16px;
+}
+
+.bing-serp__chat-button:hover {
+  filter: brightness(.96);
+}
+
+.bing-serp__chat-button:active {
+  filter: brightness(.92);
+}
+
+.bing-serp__footer-bottom {
+  display: flex;
+  width: 1615px;
+  height: 46px;
+  flex: 0 0 46px;
+  align-items: center;
+  gap: 24px;
+  padding: 12px 160px;
+  background: var(--bing-footer-bottom-bg);
+}
+
+.bing-serp__footer-links {
+  display: flex;
+  width: 757px;
+  height: 20px;
+  flex: 0 0 757px;
+  align-items: flex-start;
+  gap: 48px;
+  padding: 0 16px;
+}
+
+.bing-serp__footer-links a {
+  height: 20px;
+  flex: 0 0 auto;
+  color: var(--bing-text-subtle);
+  font-size: 14px;
+  line-height: 20px;
+  white-space: nowrap;
+}
+
+.bing-serp__footer-links a:nth-child(1) { width: 176px; }
+.bing-serp__footer-links a:nth-child(2) { width: 126px; }
+.bing-serp__footer-links a:nth-child(3) { width: 34px; }
+.bing-serp__footer-links a:nth-child(4) { width: 59px; }
+.bing-serp__footer-links a:nth-child(5) { width: 29px; }
+.bing-serp__footer-links a:nth-child(6) { width: 61px; }
+
+.bing-serp__copyright {
+  display: flex;
+  min-width: 110px;
+  height: 22px;
+  flex: 1 1 auto;
+  align-items: center;
+  justify-content: flex-end;
+  color: var(--bing-text-subtle);
+  font-size: 14px;
+  line-height: 22px;
+  white-space: nowrap;
+}
+
 @media (prefers-reduced-motion: reduce) {
   bing-serp button,
+  .bing-serp__chat-button,
   .bing-serp__toggle,
   .bing-serp__toggle::before,
   .bing-serp__people-track {
