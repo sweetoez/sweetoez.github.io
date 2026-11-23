@@ -85,7 +85,7 @@
     const dataKC = card.buttonDataKC == null ? "" : ` data-kc="${escapeHTML(card.buttonDataKC)}"`;
     return `<button class="kc-mobile-expansion-see-more" type="button"${dataKC} aria-expanded="false" aria-controls="${escapeHTML(card.moreId)}">
       <span class="kc-mobile-expansion-see-more__line" aria-hidden="true"></span>
-      <span class="kc-mobile-expansion-see-more__circle" aria-hidden="true">${expansionIcon(card.icon)}</span>
+      <span class="kc-mobile-expansion-see-more__circle" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" focusable="false"><path d="M3.14645 5.14645C3.34171 4.95118 3.65829 4.95118 3.85355 5.14645L8 9.29289L12.1464 5.14645C12.3417 4.95118 12.6583 4.95118 12.8536 5.14645C13.0488 5.34171 13.0488 5.65829 12.8536 5.85355L8.35355 10.3536C8.15829 10.5488 7.84171 10.5488 7.64645 10.3536L3.14645 5.85355C2.95118 5.65829 2.95118 5.34171 3.14645 5.14645Z" fill="currentColor"/></svg></span>
       <span class="kc-mobile-expansion-see-more__label">See more</span>
     </button>`;
   }
@@ -142,9 +142,18 @@
         button.addEventListener("click", () => {
           const expanded = button.getAttribute("aria-expanded") !== "true";
           button.setAttribute("aria-expanded", String(expanded));
+          const more = this.querySelector(`#${CSS.escape(button.getAttribute("aria-controls"))}`);
+          if (more) more.hidden = !expanded;
           button.querySelector(".kc-mobile-expansion-see-more__label").textContent = expanded ? "See less" : "See more";
+          button.querySelector(".kc-mobile-expansion-see-more__circle").innerHTML = expanded
+            ? '<svg width="16" height="16" viewBox="0 0 16 16" focusable="false"><path d="M3.14645 10.8536C3.34171 11.0488 3.65829 11.0488 3.85355 10.8536L8 6.70711L12.1464 10.8536C12.3417 11.0488 12.6583 11.0488 12.8536 10.8536C13.0488 10.6583 13.0488 10.3417 12.8536 10.1464L8.35355 5.64645C8.15829 5.45118 7.84171 5.45118 7.64645 5.64645L3.14645 10.1464C2.95118 10.3417 2.95118 10.6583 3.14645 10.8536Z" fill="currentColor"/></svg>'
+            : '<svg width="16" height="16" viewBox="0 0 16 16" focusable="false"><path d="M3.14645 5.14645C3.34171 4.95118 3.65829 4.95118 3.85355 5.14645L8 9.29289L12.1464 5.14645C12.3417 4.95118 12.6583 4.95118 12.8536 4.95118C13.0488 5.14645 13.0488 5.46298 12.8536 5.65829L8.35355 10.1464C8.15829 10.3417 7.84171 10.3417 7.64645 10.1464L3.14645 5.65829C2.95118 5.46298 2.95118 5.14645 3.14645 5.14645Z" fill="currentColor"/></svg>';
           this.syncCardLast();
           requestAnimationFrame(() => this.syncCardLast());
+          const rect = this.getBoundingClientRect();
+          if (!expanded && (rect.top < 0 || rect.bottom > window.innerHeight)) {
+            this.scrollIntoView({ block: "start" });
+          }
           this.dispatchEvent(new CustomEvent("kc-card-expansion-change", {
             bubbles: true,
             detail: { expanded }
