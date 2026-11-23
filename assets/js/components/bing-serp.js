@@ -210,7 +210,7 @@
 
   class BingSerp extends HTMLElement {
     static get observedAttributes() {
-      return ["entity"];
+      return ["entity", "platform"];
     }
 
     connectedCallback() {
@@ -218,18 +218,25 @@
     }
 
     attributeChangedCallback(name, oldValue, newValue) {
-      if (name === "entity" && oldValue !== newValue && this.isConnected) this.render();
+      if (["entity", "platform"].includes(name) && oldValue !== newValue && this.isConnected) this.render();
     }
 
     render() {
       const entity = this.getAttribute("entity") || "company";
-      const data = window.KC_ENTITIES?.[entity]?.desktop;
+      const platform = this.getAttribute("platform") === "mobile" ? "mobile" : "desktop";
+      const data = window.KC_ENTITIES?.[entity]?.[platform];
       if (!data) {
-        console.error(`No desktop KC entity data found for <bing-serp> (${entity}).`);
+        console.error(`No ${platform} KC entity data found for <bing-serp> (${entity}).`);
         return;
       }
 
       const title = escapeHTML(data.hero.title);
+      if (platform === "mobile") {
+        this.renderMobile(entity, title);
+        this.bindInteractions();
+        return;
+      }
+
       const headerTabs = [
         renderHeaderTab("ALL", search16Icon, true),
         renderHeaderTab("COPILOT", chatSparkle16Icon),
@@ -301,6 +308,77 @@
         </aside>
       </div>${renderFooter()}`;
 
+      this.bindInteractions();
+    }
+
+    renderMobile(entity, title) {
+      const headerTabs = [
+        renderHeaderTab("ALL", search16Icon, true),
+        renderHeaderTab("COPILOT", chatSparkle16Icon),
+        renderHeaderTab("IMAGES", image16Icon),
+        renderHeaderTab("VIDEOS", video16Icon),
+        renderHeaderTab("MAPS", map16Icon),
+        renderHeaderTab("NEWS", news16Icon),
+        renderHeaderTab("SHOPPING", shoppingBag16Icon),
+        renderHeaderTab("MORE", moreVertical16Icon)
+      ].join("");
+
+      this.innerHTML = `<div class="bing-serp__mobile-page">
+        <h1 class="bing-serp__visually-hidden">${title}</h1>
+        <header class="bing-serp__mobile-header">
+          <div class="bing-serp__mobile-brand-row">
+            <img class="bing-serp__wordmark" src="../assets/images/brand/microsoft-bing.svg" alt="Microsoft Bing">
+            <button class="bing-serp__hamburger" type="button" aria-label="Menu"><span aria-hidden="true"><i></i><i></i><i></i></span></button>
+          </div>
+          <div class="bing-serp__mobile-search">
+            <div class="bing-serp__mobile-search-field">${search20Icon}<input type="search" aria-label="Search" value="${title}" readonly></div>
+            <div class="bing-serp__search-actions">
+              <button class="bing-serp__search-action" type="button" aria-label="Microphone">${mic20Icon}</button>
+              <button class="bing-serp__search-action" type="button" aria-label="Visual search">${imageSearch20Icon}</button>
+            </div>
+          </div>
+          <nav class="bing-serp__mobile-tabs" aria-label="Search categories">${headerTabs}</nav>
+        </header>
+        <div class="bing-serp__mobile-location">
+          <span class="bing-serp__location-icon">${location16Icon}</span>
+          <span>Results near City, State</span>
+          <span aria-hidden="true">·</span>
+          <span>Based on IP address</span>
+          <a href="#">Change</a>
+        </div>
+        <main class="bing-serp__mobile-mainline" aria-label="Search results">
+          <div class="bing-serp__mobile-card-wrap"><kc-card entity="${escapeHTML(entity)}" platform="mobile"></kc-card></div>
+          <section class="bing-serp__mobile-algoblock" aria-label="Search answer">
+            ${renderAlgoHeader()}
+            <h2 class="bing-serp__mobile-result-title"><a href="#">Title of a search result</a></h2>
+            <div class="bing-serp__mobile-result-meta"><span class="bing-serp__web-badge">Web</span><span>·</span><span>Oct 26, 2018</span></div>
+            <p class="bing-serp__mobile-snippet">${loremSnippet}</p>
+            <nav class="bing-serp__mobile-answer-tabs" aria-label="Answer sections">
+              <button type="button" aria-pressed="true">Overview</button>
+              <button type="button" aria-pressed="false">History</button>
+              <button type="button" aria-pressed="false">Geography</button>
+            </nav>
+            <div class="bing-serp__mobile-explore">
+              <h3>Explore further</h3>
+              ${renderResultList()}
+            </div>
+            <button class="bing-serp__mobile-see-more" type="button">See more</button>
+            <div class="bing-serp__mobile-feedback">
+              <span>Was this helpful?</span>
+              <button type="button" aria-label="Helpful">${thumbLike16Icon}</button>
+              <button type="button" aria-label="Not helpful">${thumbDislike16Icon}</button>
+            </div>
+          </section>
+          ${renderPeopleAlsoAsk()}
+          ${renderSimpleAlgo(1)}
+          ${renderNews()}
+          <button class="bing-serp__mobile-see-more-results" type="button">See more results</button>
+          ${renderRelatedSearches(title)}
+        </main>
+      </div>`;
+    }
+
+    bindInteractions() {
       this.querySelectorAll(".bing-serp__row-scroll, .bing-serp__carousel-next").forEach(button => {
         const scroller = this.querySelector(button.dataset.scrollTarget);
         if (!scroller) return;

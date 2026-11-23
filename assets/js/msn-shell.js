@@ -1,6 +1,11 @@
 const shell = document.querySelector(".shell-app");
+const previewStage = document.querySelector(".preview-stage");
 const desktopFit = document.querySelector(".desktop-fit");
 const desktopCanvas = document.querySelector(".desktop-canvas");
+const mobileFit = document.querySelector(".mobile-fit");
+const mobileCanvas = document.querySelector(".mobile-canvas");
+const phoneFrame = document.querySelector("#bing-phone");
+const bingDesktopSlot = document.querySelector(".bing-desktop-slot");
 const edgeWindow = document.querySelector(".edge-window");
 const edgeChrome = document.querySelector("edge-chrome");
 const edgeWidth = document.querySelector("#edge-width");
@@ -12,9 +17,11 @@ const windowsPanel = document.querySelector(".windows-panel-preview");
 const widthPresets = [...document.querySelectorAll("[data-width]")];
 const scenarioButtons = [...document.querySelectorAll("[data-scenario]")];
 const themeButtons = [...document.querySelectorAll("[data-theme-choice]")];
+const platformButtons = [...document.querySelectorAll("[data-bing-platform]")];
 const entitySlugs = ["animal", "country", "state", "city", "artist", "actor", "band", "food", "ingredient", "planet", "plant", "team", "company"];
 const searchParams = new URLSearchParams(location.search);
-const hashEntity = location.hash.match(/^#bing\/([a-z-]+)$/)?.[1];
+const hashMatch = location.hash.match(/^#bing\/([a-z-]+)(?:\/(desktop|mobile))?$/);
+const hashEntity = hashMatch?.[1];
 const requestedScenario = searchParams.get("s");
 const initialScenario = hashEntity
   ? "bing"
@@ -29,6 +36,7 @@ let scenario = initialScenario;
 let theme = initialTheme;
 let width = initialWidth;
 let entity = entitySlugs.includes(hashEntity) ? hashEntity : "company";
+let platform = hashMatch?.[2] === "mobile" ? "mobile" : "desktop";
 
 entitySlugs.forEach((slug) => {
   const option = document.createElement("option");
@@ -38,7 +46,15 @@ entitySlugs.forEach((slug) => {
 });
 
 function renderShell() {
+  const activePlatform = scenario === "bing" ? platform : "desktop";
+  const entityData = window.KC_ENTITIES[entity]?.[activePlatform];
+  if (!entityData?.hero?.title) {
+    console.error(`No ${activePlatform} KC entity data found for <bing-serp> (${entity}).`);
+    return;
+  }
+
   shell.dataset.scenario = scenario;
+  shell.dataset.platform = activePlatform;
   document.documentElement.dataset.theme = theme;
   edgeWidth.value = String(width);
   edgeWindow.style.width = `${scenario === "bing" ? 1655 : width}px`;
@@ -49,6 +65,9 @@ function renderShell() {
   scenarioButtons.forEach((button) => {
     button.setAttribute("aria-pressed", String(button.dataset.scenario === scenario));
   });
+  platformButtons.forEach((button) => {
+    button.setAttribute("aria-pressed", String(button.dataset.bingPlatform === platform));
+  });
   themeButtons.forEach((button) => {
     button.setAttribute("aria-pressed", String(button.dataset.themeChoice === theme));
   });
@@ -57,9 +76,19 @@ function renderShell() {
   });
   bingEntity.value = entity;
   if (bingSerp.getAttribute("entity") !== entity) bingSerp.setAttribute("entity", entity);
+  if (bingSerp.getAttribute("platform") !== activePlatform) bingSerp.setAttribute("platform", activePlatform);
+  const bingMount = scenario === "bing" && platform === "mobile"
+    ? phoneFrame.querySelector(".phone-frame__viewport")
+    : bingDesktopSlot;
+  if (!bingMount) {
+    console.error(`Could not find the ${activePlatform} Bing mount point.`);
+    return;
+  }
+  if (bingSerp.parentElement !== bingMount) bingMount.append(bingSerp);
+  phoneFrame.setAttribute("url", `bing.com/search?q=${encodeURIComponent(entityData.hero.title)}`);
 
   if (scenario === "bing") {
-    const title = window.KC_ENTITIES[entity].desktop.hero.title;
+    const title = entityData.hero.title;
     edgeChrome.setAttribute("tab-title", `${title} - Search`);
     edgeChrome.setAttribute("url", `https://www.bing.com/search?q=${encodeURIComponent(title)}`);
   } else {
@@ -83,7 +112,27 @@ function updateDesktopScale() {
   const paddingLeft = Number.parseFloat(shellStyles.paddingLeft);
   const paddingRight = Number.parseFloat(shellStyles.paddingRight);
   const availableWidth = shell.clientWidth - paddingLeft - paddingRight;
+
+  if (scenario === "prong") {
+    previewStage.style.height = "0px";
+    return;
+  }
+
+  if (scenario === "bing" && platform === "mobile") {
+    const scale = Math.min(1, availableWidth / 450);
+    const scaledWidth = 450 * scale;
+    const scaledHeight = 920 * scale;
+    previewStage.style.height = `${scaledHeight}px`;
+    desktopFit.style.width = `${scaledWidth}px`;
+    desktopFit.style.height = `${scaledHeight}px`;
+    mobileFit.style.width = `${scaledWidth}px`;
+    mobileFit.style.height = `${scaledHeight}px`;
+    mobileCanvas.style.transform = `scale(${scale})`;
+    return;
+  }
+
   const scale = Math.min(1, availableWidth / 2222);
+  previewStage.style.height = `${1302 * scale}px`;
   desktopFit.style.width = `${2222 * scale}px`;
   desktopFit.style.height = `${1302 * scale}px`;
   desktopCanvas.style.transform = `scale(${scale})`;
@@ -91,7 +140,7 @@ function updateDesktopScale() {
 
 function updateUrl() {
   const params = new URLSearchParams({ s: scenario, theme, w: String(width) });
-  const hash = scenario === "bing" ? `#bing/${entity}` : "";
+  const hash = scenario === "bing" ? `#bing/${entity}${platform === "mobile" ? "/mobile" : ""}` : "";
   history.replaceState(null, "", `${location.pathname}?${params.toString()}${hash}`);
 }
 
@@ -105,6 +154,13 @@ scenarioButtons.forEach((button) => {
 bingEntity.addEventListener("change", () => {
   entity = bingEntity.value;
   renderShell();
+});
+
+platformButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    platform = button.dataset.bingPlatform;
+    renderShell();
+  });
 });
 
 themeButtons.forEach((button) => {

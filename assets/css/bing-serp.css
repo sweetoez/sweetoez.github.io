@@ -1,6 +1,7 @@
 html[data-theme="light"] {
   --bing-layout-width: 1615px;
   --bing-id-width: 675px;
+  --bing-mobile-page-bg: #F5F5F5;
   --bing-page-bg: #FFFFFF;
   --bing-header-bg: #FFFFFF;
   --bing-surface: #FFFFFF;
@@ -38,6 +39,7 @@ html[data-theme="dark"],
 html[data-theme="dark-navy"] {
   --bing-layout-width: 1384px;
   --bing-id-width: 444px;
+  --bing-mobile-page-bg: #11100F;
   --bing-page-bg: #1B1A19;
   --bing-header-bg: #1B1A19;
   --bing-surface: #323130;
@@ -1646,3 +1648,685 @@ bing-serp a:hover {
     scroll-behavior: auto;
   }
 }
+
+/* stand-in: The mobile Bing logo uses the available shared wordmark because theme exports are missing. */
+bing-serp[platform="mobile"] {
+  display: block;
+  width: 374px;
+  height: 780px;
+  flex: 0 0 780px;
+  margin: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background: var(--bing-mobile-page-bg);
+  font-family: var(--kc-font);
+}
+
+bing-serp[platform="mobile"] .bing-serp__mobile-page {
+  width: 374px;
+  min-height: 780px;
+  background: var(--bing-mobile-page-bg);
+  color: var(--bing-text);
+}
+
+bing-serp[platform="mobile"] .bing-serp__visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  clip-path: inset(50%);
+}
+
+bing-serp[platform="mobile"] .bing-serp__mobile-header {
+  width: 374px;
+  padding-top: 8px;
+  background: var(--bing-header-bg);
+}
+
+bing-serp[platform="mobile"] .bing-serp__mobile-brand-row {
+  display: flex;
+  width: 374px;
+  height: 36px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+}
+
+bing-serp[platform="mobile"] .bing-serp__mobile-brand-row .bing-serp__wordmark {
+  width: 104px;
+  height: 18px;
+  flex: 0 0 104px;
+}
+
+bing-serp[platform="mobile"] .bing-serp__mobile-brand-row .bing-serp__hamburger {
+  width: 36px;
+  height: 36px;
+  flex: 0 0 36px;
+  border-radius: 50%;
+}
+
+bing-serp[platform="mobile"] .bing-serp__mobile-search {
+  display: flex;
+  width: 342px;
+  height: 44px;
+  align-items: center;
+  gap: 4px;
+  margin: 8px 16px;
+  padding: 0 6px 0 12px;
+  border: 1px solid var(--bing-border);
+  border-radius: 999px;
+  background: var(--bing-search-bg);
+  box-shadow: var(--bing-shadow-search);
+}
+
+bing-serp[platform="mobile"] .bing-serp__mobile-search-field {
+  display: flex;
+  min-width: 0;
+  height: 40px;
+  flex: 1 1 auto;
+  align-items: center;
+  gap: 8px;
+  color: var(--bing-text-muted);
+}
+
+bing-serp[platform="mobile"] .bing-serp__mobile-search-field > svg {
+  display: block;
+  width: 20px;
+  height: 20px;
+  flex: 0 0 20px;
+}
+
+bing-serp[platform="mobile"] .bing-serp__mobile-search-field input {
+  width: 100%;
+  min-width: 0;
+  height: 36px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--bing-text);
+  font: inherit;
+  font-size: 14px;
+}
+
+bing-serp[platform="mobile"] .bing-serp__search-actions {
+  display: flex;
+  width: auto;
+  height: 36px;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 2px;
+}
+
+bing-serp[platform="mobile"] .bing-serp__search-action {
+  width: 34px;
+  height: 34px;
+  flex: 0 0 34px;
+  border-radius: 50%;
+}
+
+bing-serp[platform="mobile"] .bing-serp__search-action svg {
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin: auto;
+}
+
+bing-serp[platform="mobile"] .bing-serp__mobile-tabs {
+  display: flex;
+  width: 374px;
+  height: 42px;
+  overflow-x: auto;
+  padding: 0 8px;
+  border-bottom: 1px solid var(--bing-border);
+  scrollbar-width: none;
+}
+
+bing-serp[platform="mobile"] .bing-serp__mobile-tabs::-webkit-scrollbar { display: none; }
+
+bing-serp[platform="mobile"] .bing-serp__mobile-tabs .bing-serp__header-tab {
+  width: auto;
+  height: 42px;
+  flex: 0 0 auto;
+  padding: 0 8px;
+  font-size: 11px;
+}
+
+bing-serp[platform="mobile"] .bing-serp__mobile-tabs .bing-serp__header-tab-inner {
+  width: auto;
+  height: 42px;
+  gap: 4px;
+  padding: 6px;
+  font-size: 10px;
+  line-height: 26px;
+}
+
+bing-serp[platform="mobile"] .bing-serp__mobile-tabs .bing-serp__header-tab-inner > svg,
+bing-serp[platform="mobile"] .bing-serp__mobile-tabs .bing-serp__header-tab-inner > span:first-child {
+  width: 14px;
+  height: 14px;
+  flex-basis: 14px;
+}
+
+bing-serp[platform="mobile"] .bing-serp__mobile-location {
+  display: flex;
+  width: 374px;
+  height: 42px;
+  align-items: center;
+  gap: 4px;
+  overflow: hidden;
+  padding: 0 12px;
+  border-bottom: 1px solid var(--bing-border);
+  color: var(--bing-text-muted);
+  font-size: 11px;
+  white-space: nowrap;
+}
+
+bing-serp[platform="mobile"] .bing-serp__mobile-location .bing-serp__location-icon {
+  display: flex;
+  width: 16px;
+  height: 16px;
+  flex: 0 0 16px;
+}
+
+bing-serp[platform="mobile"] .bing-serp__mobile-location .bing-serp__location-icon svg {
+  width: 16px;
+  height: 16px;
+}
+
+bing-serp[platform="mobile"] .bing-serp__mobile-location a {
+  flex: 0 0 auto;
+  margin-left: auto;
+}
+
+bing-serp[platform="mobile"] .bing-serp__mobile-mainline {
+  display: flex;
+  width: 374px;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 8px;
+  padding: 8px 7px 24px;
+}
+
+bing-serp[platform="mobile"] .bing-serp__mobile-card-wrap,
+bing-serp[platform="mobile"] .bing-serp__mobile-card-wrap > kc-card {
+  display: block;
+  position: relative;
+  inset: auto;
+  width: 360px;
+  max-width: 360px;
+  flex: 0 0 auto;
+  margin: 0;
+  transform: none;
+}
+
+bing-serp[platform="mobile"] .bing-serp__mobile-algoblock,
+bing-serp[platform="mobile"] .bing-serp__people,
+bing-serp[platform="mobile"] .bing-serp__algoblock--simple,
+bing-serp[platform="mobile"] .bing-serp__news,
+bing-serp[platform="mobile"] .bing-serp__related {
+  width: 360px;
+  height: auto;
+  flex: 0 0 auto;
+  margin: 0;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--bing-border);
+}
+
+bing-serp[platform="mobile"] .bing-serp__mobile-algoblock {
+  padding-top: 16px;
+}
+
+bing-serp[platform="mobile"] .bing-serp__algo-header {
+  display: flex;
+  width: 360px;
+  height: 36px;
+  align-items: center;
+  gap: 8px;
+  padding: 0;
+}
+
+bing-serp[platform="mobile"] .bing-serp__favicon {
+  width: 24px;
+  height: 24px;
+  flex: 0 0 24px;
+}
+
+bing-serp[platform="mobile"] .bing-serp__site-attribution {
+  display: flex;
+  min-width: 0;
+  height: 36px;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1px;
+}
+
+bing-serp[platform="mobile"] .bing-serp__site-name,
+bing-serp[platform="mobile"] .bing-serp__site-url {
+  height: auto;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+bing-serp[platform="mobile"] .bing-serp__mobile-result-title {
+  width: 360px;
+  margin: 8px 0 4px;
+  color: var(--bing-link);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+bing-serp[platform="mobile"] .bing-serp__mobile-result-meta {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--bing-text-muted);
+  font-size: 12px;
+  line-height: 18px;
+}
+
+bing-serp[platform="mobile"] .bing-serp__mobile-result-meta .bing-serp__web-badge {
+  min-width: 32px;
+  height: 18px;
+  padding: 0 5px;
+  border-radius: 3px;
+  font-size: 10px;
+  line-height: 18px;
+}
+
+bing-serp[platform="mobile"] .bing-serp__mobile-snippet {
+  width: 360px;
+  margin: 10px 0;
+  color: var(--bing-text-secondary);
+  font-size: 14px;
+  line-height: 20px;
+}
+
+bing-serp[platform="mobile"] .bing-serp__mobile-answer-tabs {
+  display: flex;
+  width: 360px;
+  height: 40px;
+  overflow-x: auto;
+  border-bottom: 1px solid var(--bing-border);
+  scrollbar-width: none;
+}
+
+bing-serp[platform="mobile"] .bing-serp__mobile-answer-tabs button {
+  height: 40px;
+  flex: 0 0 auto;
+  padding: 0 12px;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  border-radius: 0;
+  background: transparent;
+  color: var(--bing-text-muted);
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+bing-serp[platform="mobile"] .bing-serp__mobile-answer-tabs button[aria-pressed="true"] {
+  border-bottom-color: var(--bing-blue);
+  background: transparent;
+  color: var(--bing-text);
+  font-weight: 600;
+}
+
+bing-serp[platform="mobile"] .bing-serp__mobile-explore {
+  width: 360px;
+  padding-top: 12px;
+}
+
+bing-serp[platform="mobile"] .bing-serp__mobile-explore h3 {
+  margin: 0 0 6px;
+  color: var(--bing-text-muted);
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 16px;
+  text-transform: uppercase;
+}
+
+bing-serp[platform="mobile"] .bing-serp__explore-list {
+  display: flex;
+  width: 360px;
+  height: auto;
+  flex-direction: column;
+  gap: 0;
+  padding: 0;
+}
+
+bing-serp[platform="mobile"] .bing-serp__explore-row {
+  display: grid;
+  width: 360px;
+  min-height: 48px;
+  grid-template-columns: 20px minmax(0, 1fr);
+  align-items: center;
+  column-gap: 8px;
+  padding: 6px 0;
+  border-bottom: 1px solid var(--bing-border-soft);
+}
+
+bing-serp[platform="mobile"] .bing-serp__explore-row a {
+  overflow: hidden;
+  font-size: 14px;
+  line-height: 20px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+bing-serp[platform="mobile"] .bing-serp__explore-domain {
+  grid-column: 2;
+  color: var(--bing-text-muted);
+  font-size: 11px;
+  line-height: 16px;
+}
+
+bing-serp[platform="mobile"] .bing-serp__mobile-see-more,
+bing-serp[platform="mobile"] .bing-serp__mobile-see-more-results {
+  display: flex;
+  width: 360px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  border: 1px solid var(--bing-border);
+  border-radius: 20px;
+  background: var(--bing-surface);
+  color: var(--bing-link);
+  font-size: 13px;
+}
+
+bing-serp[platform="mobile"] .bing-serp__mobile-feedback,
+bing-serp[platform="mobile"] .bing-serp__people-feedback {
+  display: flex;
+  width: 360px;
+  height: 36px;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 8px;
+  color: var(--bing-text-muted);
+  font-size: 12px;
+}
+
+bing-serp[platform="mobile"] .bing-serp__mobile-feedback button,
+bing-serp[platform="mobile"] .bing-serp__people-feedback button {
+  display: flex;
+  width: 32px;
+  height: 32px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+bing-serp[platform="mobile"] .bing-serp__mobile-feedback button svg,
+bing-serp[platform="mobile"] .bing-serp__people-feedback button svg {
+  width: 16px;
+  height: 16px;
+}
+
+bing-serp[platform="mobile"] .bing-serp__section-title,
+bing-serp[platform="mobile"] .bing-serp__section-title--people,
+bing-serp[platform="mobile"] .bing-serp__section-title--news {
+  display: flex;
+  width: 360px;
+  height: 32px;
+  align-items: center;
+  margin: 0 0 8px;
+}
+
+bing-serp[platform="mobile"] .bing-serp__section-title h2,
+bing-serp[platform="mobile"] .bing-serp__news h2,
+bing-serp[platform="mobile"] .bing-serp__related h2 {
+  margin: 0;
+  color: var(--bing-text);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+bing-serp[platform="mobile"] .bing-serp__people-carousel {
+  position: relative;
+  width: 328px;
+  height: 252px;
+  overflow: visible;
+}
+
+bing-serp[platform="mobile"] .bing-serp__people-track {
+  display: flex;
+  width: 328px;
+  height: 252px;
+  overflow-x: auto;
+  gap: 8px;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+
+bing-serp[platform="mobile"] .bing-serp__question-card {
+  display: flex;
+  width: 280px;
+  height: 236px;
+  flex: 0 0 280px;
+  flex-direction: column;
+  padding: 12px;
+  border: 1px solid var(--bing-border);
+  border-radius: 8px;
+  background: var(--bing-surface);
+  scroll-snap-align: start;
+}
+
+bing-serp[platform="mobile"] .bing-serp__question-title {
+  width: 254px;
+  height: auto;
+  min-height: 36px;
+  flex: 0 0 auto;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 0 0 8px;
+  border-bottom: 1px solid var(--bing-border-soft);
+}
+
+bing-serp[platform="mobile"] .bing-serp__question-title h3 {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+bing-serp[platform="mobile"] .bing-serp__answer {
+  display: flex;
+  width: 254px;
+  height: auto;
+  flex: 1 1 auto;
+  flex-direction: column;
+  gap: 8px;
+  padding: 8px 0 0;
+}
+
+bing-serp[platform="mobile"] .bing-serp__answer p {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  font-size: 12px;
+  line-height: 17px;
+}
+
+bing-serp[platform="mobile"] .bing-serp__answer-link {
+  display: flex;
+  width: 254px;
+  flex-direction: column;
+  gap: 2px;
+}
+
+bing-serp[platform="mobile"] .bing-serp__answer-link a {
+  overflow: hidden;
+  font-size: 12px;
+  line-height: 16px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+bing-serp[platform="mobile"] .bing-serp__carousel-next {
+  right: -32px;
+  width: 32px;
+  height: 32px;
+}
+
+bing-serp[platform="mobile"] .bing-serp__algoblock--simple {
+  padding-top: 12px;
+}
+
+bing-serp[platform="mobile"] .bing-serp__algo-body--simple {
+  width: 360px;
+  height: auto;
+  min-height: 0;
+  padding: 4px 0 0;
+}
+
+bing-serp[platform="mobile"] .bing-serp__algo-title {
+  width: 360px;
+  height: auto;
+  margin: 0 0 4px;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+bing-serp[platform="mobile"] .bing-serp__simple-snippet {
+  width: 360px;
+  height: auto;
+  margin: 0;
+  font-size: 13px;
+  line-height: 19px;
+}
+
+bing-serp[platform="mobile"] .bing-serp__news {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+bing-serp[platform="mobile"] .bing-serp__news-results,
+bing-serp[platform="mobile"] .bing-serp__news-grid {
+  display: flex;
+  width: 360px;
+  height: auto;
+  flex-direction: column;
+}
+
+bing-serp[platform="mobile"] .bing-serp__news-card {
+  display: flex;
+  width: 360px;
+  min-height: 72px;
+  height: auto;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--bing-border-soft);
+}
+
+bing-serp[platform="mobile"] .bing-serp__news-copy {
+  display: flex;
+  min-width: 0;
+  flex: 1 1 auto;
+  flex-direction: column;
+  gap: 4px;
+}
+
+bing-serp[platform="mobile"] .bing-serp__news-meta {
+  font-size: 11px;
+  line-height: 16px;
+}
+
+bing-serp[platform="mobile"] .bing-serp__news-copy > a {
+  overflow: hidden;
+  font-size: 13px;
+  line-height: 18px;
+  text-overflow: ellipsis;
+}
+
+bing-serp[platform="mobile"] .bing-serp__news-thumbnail {
+  width: 72px;
+  height: 52px;
+  flex: 0 0 72px;
+  border-radius: 4px;
+}
+
+bing-serp[platform="mobile"] .bing-serp__explore-news {
+  display: flex;
+  width: 360px;
+  height: auto;
+  flex-direction: column;
+  gap: 8px;
+  padding: 0;
+}
+
+bing-serp[platform="mobile"] .bing-serp__explore-news h2 {
+  font-size: 15px;
+  line-height: 20px;
+}
+
+bing-serp[platform="mobile"] .bing-serp__news-topics {
+  display: flex;
+  width: 360px;
+  height: auto;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+bing-serp[platform="mobile"] .bing-serp__news-topics button {
+  min-height: 32px;
+  padding: 6px 10px;
+  border: 1px solid var(--bing-border);
+  border-radius: 16px;
+  background: var(--bing-surface);
+  font-size: 12px;
+}
+
+bing-serp[platform="mobile"] .bing-serp__mobile-see-more-results {
+  margin: 0;
+}
+
+bing-serp[platform="mobile"] .bing-serp__related {
+  padding-top: 12px;
+}
+
+bing-serp[platform="mobile"] .bing-serp__related h2 {
+  margin-bottom: 10px;
+}
+
+bing-serp[platform="mobile"] .bing-serp__related-grid {
+  display: grid;
+  width: 360px;
+  height: auto;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+bing-serp[platform="mobile"] .bing-serp__related-item {
+  display: flex;
+  min-width: 0;
+  min-height: 44px;
+  align-items: center;
+  gap: 6px;
+  padding: 8px;
+  border: 1px solid var(--bing-border);
+  border-radius: 6px;
+  background: var(--bing-surface);
+  font-size: 12px;
+  line-height: 16px;
+}
+
+bing-serp[platform="mobile"] .bing-serp__related-item svg {
+  width: 16px;
+  height: 16px;
+  flex: 0 0 16px;
+}
+
+bing-serp[platform="mobile"] .bing-serp__related-item span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+bing-serp[platform="mobile"] .bing-serp__footer { display: none; }

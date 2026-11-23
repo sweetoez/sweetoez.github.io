@@ -2071,3 +2071,190 @@ html:is([data-theme="dark"], [data-theme="dark-navy"]) .msn-surface .p2-rail :fo
 html:is([data-theme="dark"], [data-theme="dark-navy"]) .msn-surface .p2-header :focus-visible {
   outline-color: var(--w-ink);
 }
+
+/* stand-in: The phone body, bezel, status values, and browser chrome are provisional. */
+phone-frame {
+  display: block;
+  width: 398px;
+  height: 884px;
+  color: var(--kc-white);
+  font-family: var(--kc-font);
+}
+
+.phone-frame__body {
+  display: flex;
+  width: 398px;
+  height: 884px;
+  flex-direction: column;
+  gap: 8px;
+  padding: 12px;
+  border-radius: 48px;
+  background: var(--kc-black);
+  box-shadow: inset 0 0 0 1px var(--kc-gray-1), 0 10px 24px rgba(0, 0, 0, .24);
+}
+
+.phone-frame__statusbar {
+  display: flex;
+  width: 374px;
+  height: 24px;
+  flex: 0 0 24px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 12px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 16px;
+}
+
+.phone-frame__status-icons {
+  display: flex;
+  height: 16px;
+  align-items: center;
+  gap: 5px;
+}
+
+.phone-frame__signal {
+  display: flex;
+  height: 12px;
+  align-items: flex-end;
+  gap: 2px;
+}
+
+.phone-frame__signal i {
+  display: block;
+  width: 3px;
+  border-radius: 1px;
+  background: currentColor;
+}
+
+.phone-frame__signal i:nth-child(1) { height: 4px; }
+.phone-frame__signal i:nth-child(2) { height: 6px; }
+.phone-frame__signal i:nth-child(3) { height: 9px; }
+.phone-frame__signal i:nth-child(4) { height: 12px; }
+
+.phone-frame__wifi {
+  position: relative;
+  display: block;
+  width: 16px;
+  height: 14px;
+}
+
+.phone-frame__wifi::before {
+  position: absolute;
+  top: 2px;
+  left: 3px;
+  width: 10px;
+  height: 8px;
+  border: 1.5px solid currentColor;
+  border-color: currentColor transparent transparent;
+  border-radius: 50% 50% 0 0;
+  content: "";
+}
+
+.phone-frame__wifi::after {
+  position: absolute;
+  bottom: 1px;
+  left: 7px;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: currentColor;
+  content: "";
+}
+
+.phone-frame__battery {
+  display: flex;
+  width: 17px;
+  height: 10px;
+  align-items: center;
+  padding: 1px;
+  border: 1px solid currentColor;
+  border-radius: 2px;
+}
+
+.phone-frame__battery::after {
+  width: 2px;
+  height: 4px;
+  margin-left: 1px;
+  border-radius: 0 1px 1px 0;
+  background: currentColor;
+  content: "";
+}
+
+.phone-frame__battery i {
+  display: block;
+  width: 8px;
+  height: 6px;
+  border-radius: 1px;
+  background: currentColor;
+}
+
+.phone-frame__browserbar {
+  display: flex;
+  width: 374px;
+  height: 40px;
+  flex: 0 0 40px;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 8px 4px 12px;
+  border-radius: 999px;
+  background: var(--kc-gray-1);
+}
+
+.phone-frame__address {
+  overflow: hidden;
+  min-width: 0;
+  height: 24px;
+  flex: 1 1 auto;
+  color: var(--kc-white);
+  font-size: 12px;
+  line-height: 24px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.phone-frame__browserbar button {
+  display: flex;
+  width: 24px;
+  height: 24px;
+  flex: 0 0 24px;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border-radius: 4px;
+  background: transparent;
+  color: var(--kc-white);
+  font: inherit;
+  font-size: 12px;
+  cursor: pointer;
+  transition: background-color var(--fluent-dur-faster, 100ms) var(--fluent-ease, ease);
+}
+
+.phone-frame__browserbar button:hover { background: rgba(255, 255, 255, .12); }
+.phone-frame__browserbar button:active { background: rgba(255, 255, 255, .2); }
+.phone-frame__browserbar button:focus-visible { outline: 2px solid var(--kc-white); outline-offset: 2px; }
+
+.phone-frame__more svg {
+  display: block;
+  width: 16px;
+  height: 16px;
+}
+
+.phone-frame__viewport {
+  display: block;
+  width: 374px;
+  height: 780px;
+  flex: 0 0 780px;
+  overflow: hidden;
+  background: var(--bing-mobile-page-bg);
+}
+
+.phone-frame__viewport > bing-serp {
+  display: block;
+  width: 374px;
+  height: 780px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .phone-frame__browserbar button { transition: none; }
+}

@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>MSN shell scenarios</title>
-  <link rel="stylesheet" href="../assets/css/msn-components.css?v=4">
+  <link rel="stylesheet" href="../assets/css/msn-components.css?v=5">
   <link rel="stylesheet" href="../assets/css/kc-components.css">
   <link rel="stylesheet" href="../assets/css/msn-shell.css">
   <link rel="stylesheet" href="../assets/css/edge-chrome.css">
@@ -26,6 +26,7 @@
   <script src="../assets/js/components/kc-hero.js"></script>
   <script src="../assets/js/components/kc-card.js"></script>
   <script src="../assets/js/components/bing-serp.js"></script>
+  <script src="../assets/js/components/phone-frame.js"></script>
   <script src="../assets/js/components/ntp-composer.js"></script>
   <script src="../assets/js/components/ntp-shortcuts.js"></script>
   <script src="../assets/js/components/msn-card.js"></script>
@@ -52,6 +53,14 @@
         <select id="bing-entity"></select>
       </div>
 
+      <div class="control-group bing-platform-control" role="group" aria-label="Bing platform">
+        <span class="control-label">View</span>
+        <div class="segmented-control">
+          <button type="button" data-bing-platform="desktop" aria-pressed="true">Desktop</button>
+          <button type="button" data-bing-platform="mobile" aria-pressed="false">Mobile</button>
+        </div>
+      </div>
+
       <div class="control-group" role="group" aria-label="Theme">
         <span class="control-label">Theme</span>
         <div class="segmented-control">
@@ -75,18 +84,27 @@
       </div>
     </header>
 
-    <div class="desktop-fit">
-      <section class="desktop-canvas win-desktop" aria-label="Windows desktop">
-        <windows-wallpaper></windows-wallpaper>
+    <div class="preview-stage">
+      <div class="desktop-fit">
+        <section class="desktop-canvas win-desktop" aria-label="Windows desktop">
+          <windows-wallpaper></windows-wallpaper>
 
-        <section class="edge-window" aria-label="Edge new tab page">
-          <edge-chrome></edge-chrome>
-          <iframe class="edge-page" src="msn-ntp-layout.html?embed=1&amp;theme=light&amp;v=135" title="Edge new tab page content"></iframe>
-          <bing-serp entity="company" platform="desktop"></bing-serp>
+          <section class="edge-window" aria-label="Edge new tab page">
+            <edge-chrome></edge-chrome>
+            <iframe class="edge-page" src="msn-ntp-layout.html?embed=1&amp;theme=light&amp;v=135" title="Edge new tab page content"></iframe>
+            <div class="bing-desktop-slot">
+              <bing-serp entity="company" platform="desktop"></bing-serp>
+            </div>
+          </section>
+
+          <msn-taskbar></msn-taskbar>
         </section>
-
-        <msn-taskbar></msn-taskbar>
-      </section>
+      </div>
+      <div class="mobile-fit">
+        <div class="mobile-canvas">
+          <phone-frame id="bing-phone" url="bing.com"></phone-frame>
+        </div>
+      </div>
     </div>
     <iframe class="windows-panel-preview" src="windows-panel-shell.html?embed=1&amp;theme=light&amp;v=135" title="Windows panel"></iframe>
   </main>
