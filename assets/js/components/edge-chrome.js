@@ -1,6 +1,13 @@
 class EdgeChrome extends HTMLElement {
+  static get observedAttributes() {
+    return ["tab-title", "url"];
+  }
+
   connectedCallback() {
-    if (this.childElementCount > 0) return;
+    if (this.childElementCount > 0) {
+      this.updateAddress();
+      return;
+    }
 
     this.innerHTML = `<div class="edge-chrome-row edge-tab-row">
   <div class="edge-tab-tools">
@@ -73,6 +80,18 @@ class EdgeChrome extends HTMLElement {
     this.querySelectorAll("[data-edge-icon]").forEach((slot) => {
       slot.innerHTML = icons[slot.dataset.edgeIcon] || "";
     });
+    this.updateAddress();
+  }
+
+  attributeChangedCallback() {
+    this.updateAddress();
+  }
+
+  updateAddress() {
+    const title = this.querySelector(".edge-active-tab__title");
+    const address = this.querySelector(".edge-address__hint");
+    if (title) title.textContent = this.getAttribute("tab-title") || "New Tab";
+    if (address) address.textContent = this.getAttribute("url") || "Search or enter web address";
   }
 }
 

@@ -88,6 +88,18 @@ html:is([data-theme="dark"], [data-theme="dark-navy"]) .shell-app {
 .shell-controls button:focus-visible { outline: 2px solid #272320; outline-offset: 2px; }
 .shell-controls button:disabled { opacity: .4; cursor: not-allowed; }
 
+.bing-entity-control select {
+  min-height: 36px;
+  padding: 5px 32px 5px 12px;
+  border: 1px solid #D9D9D5;
+  border-radius: 18px;
+  background: #FFFFFF;
+  color: #333333;
+  font: inherit;
+  font-size: 13px;
+}
+.bing-entity-control select:focus-visible { outline: 2px solid #272320; outline-offset: 2px; }
+
 .edge-width-controls { flex-basis: 100%; gap: 12px; }
 .width-presets { max-width: 100%; flex-wrap: wrap; }
 .width-slider { gap: 8px; }
@@ -351,8 +363,18 @@ html:is([data-theme="dark"], [data-theme="dark-navy"]) .shell-app {
 }
 
 .shell-app[data-scenario="prong"] .edge-window { display: none; }
+.shell-app:not([data-scenario="bing"]) .bing-entity-control { display: none; }
+.shell-app[data-scenario="bing"] .edge-window { height: 954px; }
+.shell-app[data-scenario="bing"] .edge-page { display: none; }
+.shell-app[data-scenario="bing"] bing-serp {
+  display: block;
+  width: 1615px;
+  height: 842px;
+  flex: 0 0 842px;
+  margin: 0 auto;
+}
 .shell-app[data-scenario="edge"] .prong-panel { display: none; }
-.shell-app[data-scenario="prong"] .edge-width-controls { display: none; }
+.shell-app:is([data-scenario="prong"], [data-scenario="bing"]) .edge-width-controls { display: none; }
 .shell-app[data-scenario="prong"] .desktop-fit { display: none; }
 .windows-panel-preview {
   display: block;

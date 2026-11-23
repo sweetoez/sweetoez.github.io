@@ -5,8 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>MSN shell scenarios</title>
   <link rel="stylesheet" href="../assets/css/msn-components.css?v=4">
+  <link rel="stylesheet" href="../assets/css/kc-components.css">
   <link rel="stylesheet" href="../assets/css/msn-shell.css">
   <link rel="stylesheet" href="../assets/css/edge-chrome.css">
+  <link rel="stylesheet" href="../assets/css/bing-serp.css">
   <link rel="stylesheet" href="../assets/css/windows-desktop.css">
   <link rel="stylesheet" href="../assets/css/windows-shell.css">
 
@@ -14,6 +16,16 @@
   <script src="../assets/js/components/msn-taskbar.js"></script>
   <script src="../assets/js/components/windows-wallpaper.js"></script>
   <script src="../assets/js/components/edge-chrome.js"></script>
+  <script src="../assets/js/data/kc-entities.js"></script>
+  <script src="../assets/js/components/kc-module.js"></script>
+  <script src="../assets/js/components/kc-modules/text-list.js"></script>
+  <script src="../assets/js/components/kc-modules/image-list.js"></script>
+  <script src="../assets/js/components/kc-modules/travel-map.js"></script>
+  <script src="../assets/js/components/kc-modules/media.js"></script>
+  <script src="../assets/js/components/kc-modules/utility.js"></script>
+  <script src="../assets/js/components/kc-hero.js"></script>
+  <script src="../assets/js/components/kc-card.js"></script>
+  <script src="../assets/js/components/bing-serp.js"></script>
   <script src="../assets/js/components/ntp-composer.js"></script>
   <script src="../assets/js/components/ntp-shortcuts.js"></script>
   <script src="../assets/js/components/msn-card.js"></script>
@@ -30,8 +42,14 @@
         <span class="control-label">Scenario</span>
         <div class="segmented-control">
           <button type="button" data-scenario="edge" aria-pressed="true">Edge new tab page</button>
+          <button type="button" data-scenario="bing" aria-pressed="false">Bing</button>
           <button type="button" data-scenario="prong" aria-pressed="false">Windows panel (Prong 2)</button>
         </div>
+      </div>
+
+      <div class="control-group bing-entity-control" role="group" aria-label="Knowledge card entity">
+        <label class="control-label" for="bing-entity">Entity</label>
+        <select id="bing-entity"></select>
       </div>
 
       <div class="control-group" role="group" aria-label="Theme">
@@ -64,6 +82,7 @@
         <section class="edge-window" aria-label="Edge new tab page">
           <edge-chrome></edge-chrome>
           <iframe class="edge-page" src="msn-ntp-layout.html?embed=1&amp;theme=light&amp;v=135" title="Edge new tab page content"></iframe>
+          <bing-serp entity="company" platform="desktop"></bing-serp>
         </section>
 
         <msn-taskbar></msn-taskbar>
