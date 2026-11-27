@@ -21,7 +21,7 @@
     .kc-icon-defs { position:absolute; width:0; height:0; overflow:hidden; }
 
     .kc-company-desktop-frame { height:auto; min-height:2500px; }
-    .kc-company-desktop { --kc-accent:#1B6AC7; --kc-accent-soft:#F5F9FD; position:relative; top:auto; left:auto; width:472px; margin:280px 0 0 403px; }
+    .kc-company-desktop { position:relative; top:auto; left:auto; width:472px; margin:280px 0 0 403px; }
     .kc-company-desktop > .kc-module { margin-top:-1px; }
     .kc-company-desktop .kc-module[hidden] { display:none !important; }
     .kc-company-desktop > .kc-hero-designer--top-to-bottom.kc-hero-designer--website { height:426px; z-index:1; }
@@ -30,7 +30,7 @@
     .kc-company-desktop .kc-hero-designer__social { z-index:2; visibility:visible; }
     .kc-company-desktop .kc-hero-designer__actions svg { display:block; width:16px; height:16px; flex:none; color:var(--kc-white); }
     .kc-company-desktop .kc-hero-website__globe { background-color:var(--kc-accent); }
-    .kc-company-desktop .kc-hero-website a { color:var(--kc-accent); }
+    .kc-company-desktop .kc-hero-website a { color:var(--kc-accent-foreground, var(--kc-accent)); }
     .kc-company-desktop .kc-modules-panel .kc-btn-outline-icon svg { display:block; width:16px; height:16px; color:var(--kc-gray-1); }
 
     .kc-company-desktop > .kc-text-list-top-fact { height:100px; }
@@ -41,7 +41,7 @@
     .kc-company-desktop .kc-company-top-fact__value--two-line { min-height:48px; }
     .kc-company-desktop .kc-text-list-quick-facts__list { gap:12px; }
     .kc-company-desktop .kc-text-list-quick-facts__fact:nth-child(1) dd,
-    .kc-company-desktop .kc-text-list-quick-facts__fact:nth-child(4) dd { color:var(--kc-accent); }
+    .kc-company-desktop .kc-text-list-quick-facts__fact:nth-child(4) dd { color:var(--kc-accent-foreground, var(--kc-accent)); }
     .kc-company-desktop .kc-miscellaneous-quote__glyph { filter:none; opacity:1; color:var(--kc-accent-soft); }
 
     .kc-company-desktop.kc-card-stack > .kc-module.kc-image-list-interesting-facts--2-image { height:402px; gap:16px; background:var(--kc-accent-soft); }
@@ -77,7 +77,7 @@
     .kc-company-desktop .kc-miscellaneous-timeline__rail::after { top:0; border-color:var(--kc-accent); }
     .kc-company-desktop .kc-miscellaneous-timeline__entry:last-child .kc-miscellaneous-timeline__rail::before { display:none; }
     .kc-company-desktop .kc-miscellaneous-timeline__content { height:auto; }
-    .kc-company-desktop .kc-miscellaneous-timeline__year { color:var(--kc-accent); font-weight:700; }
+    .kc-company-desktop .kc-miscellaneous-timeline__year { color:var(--kc-accent-foreground, var(--kc-accent)); font-weight:700; }
     .kc-company-desktop .kc-miscellaneous-timeline__quote { font-weight:400; }
 
     .kc-company-desktop .kc-text-list-top-fact-text-list-attributions { height:92px; }

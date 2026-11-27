@@ -25,7 +25,7 @@
     .kc-company-mobile .kc-mobile-hero-text-list { height:150px; }
     .kc-company-mobile .kc-mobile-hero-tabs { border-radius:100px 0 0 100px; }
     .kc-company-mobile .kc-mobile-hero-tabs-container { width:max-content; }
-    .kc-company-mobile .kc-mobile-hero-tab { background:var(--kc-accent-soft); color:var(--kc-accent); }
+    .kc-company-mobile .kc-mobile-hero-tab { background:var(--kc-accent-soft); color:var(--kc-accent-foreground, var(--kc-accent)); }
     .kc-company-mobile .kc-mobile-hero-tab--selected { background:var(--kc-accent); color:var(--kc-white); }
     .kc-company-mobile .kc-mobile-hero-tab:not(.kc-mobile-hero-tab--selected):hover { background:var(--kc-accent-soft); filter:brightness(.96); }
     .kc-company-mobile .kc-mobile-hero-tab:not(.kc-mobile-hero-tab--selected):active { background:var(--kc-accent-soft); filter:brightness(.92); }
@@ -33,7 +33,7 @@
     .kc-company-mobile .kc-mobile-hero-tab--selected:active { background:var(--kc-accent); filter:brightness(.92); }
     .kc-company-mobile .kc-mobile-hero-text p { width:319px; height:54px; margin:0; }
     .kc-company-mobile .kc-mobile-text-list-quick-facts { height:186px; }
-    .kc-company-mobile .kc-mobile-text-list-quick-facts__fact:nth-child(3) > span:last-child { color:var(--kc-accent); }
+    .kc-company-mobile .kc-mobile-text-list-quick-facts__fact:nth-child(3) > span:last-child { color:var(--kc-accent-foreground, var(--kc-accent)); }
     .kc-company-mobile .kc-mobile-text-list-quick-facts__fact[data-extra-fact] { height:18px; }
     .kc-company-mobile .kc-mobile-text-list-quick-facts__fact[hidden],
     .kc-company-mobile .kc-mobile-text-list-quick-facts__line[hidden] { display:none; }
@@ -50,7 +50,7 @@
     .kc-company-mobile .kc-mobile-miscellaneous-timeline__rail::before { height:calc(100% - 1px); background:var(--kc-accent); }
     .kc-company-mobile .kc-mobile-miscellaneous-timeline__rail::after { border-color:var(--kc-accent); }
     .kc-company-mobile .kc-mobile-miscellaneous-timeline__content { height:auto; }
-    .kc-company-mobile .kc-mobile-miscellaneous-timeline__year { color:var(--kc-accent); }
+    .kc-company-mobile .kc-mobile-miscellaneous-timeline__year { color:var(--kc-accent-foreground, var(--kc-accent)); }
     .kc-company-mobile .kc-mobile-miscellaneous-timeline__quote { font-weight:400; }
     .kc-company-mobile .kc-mobile-text-list-attribution { height:79px; }
     .kc-company-mobile > .kc-card-more .kc-module--mobile { margin-top:-1px; }
@@ -62,7 +62,6 @@
     .kc-company-mobile .kc-mobile-expansion-see-more__circle svg { position:absolute; top:13px; left:12px; display:block; width:16px; height:16px; }
     .kc-company-mobile .kc-mobile-expansion-see-more:active { transform:scale(.98); }
     .kc-company-mobile .kc-mobile-expansion-see-more:focus-visible { outline:2px solid #272320; outline-offset:2px; }
-    .kc-company-mobile { --kc-accent:#1B6AC7; --kc-accent-soft:#F5F9FD; }
     .kc-company-mobile .kc-mobile-designer--top-to-bottom { height:442px; }
     .kc-company-mobile .kc-mobile-hero-text-list { height:230px; }
     .kc-company-mobile .kc-mobile-hero-tab:first-child { width:auto; }
@@ -71,13 +70,13 @@
     .kc-company-mobile .kc-mobile-hero-text p { height:90px; -webkit-line-clamp:5; line-clamp:5; }
     .kc-company-mobile .kc-mobile-hero-website { width:327px; }
     .kc-company-mobile .kc-mobile-hero-website__globe { background-color:var(--kc-accent); }
-    .kc-company-mobile .kc-mobile-hero-website a { color:var(--kc-accent); }
+    .kc-company-mobile .kc-mobile-hero-website a { color:var(--kc-accent-foreground, var(--kc-accent)); }
     .kc-company-mobile .kc-mobile-text-list-top-fact--2 { height:100px; padding:0 16px; align-items:center; }
     .kc-company-mobile .kc-mobile-text-list-top-fact__item { height:auto; width:147px; flex:none; }
     .kc-company-mobile .kc-mobile-text-list-top-fact > .kc-divider--v { height:100px; align-self:center; }
     .kc-company-mobile .kc-company-mobile__value-tall { min-height:48px; }
     .kc-company-mobile .kc-mobile-text-list-quick-facts__fact:nth-child(1) > span:last-child,
-    .kc-company-mobile .kc-mobile-text-list-quick-facts__fact:nth-child(7) > span:last-child { color:var(--kc-accent); }
+    .kc-company-mobile .kc-mobile-text-list-quick-facts__fact:nth-child(7) > span:last-child { color:var(--kc-accent-foreground, var(--kc-accent)); }
     .kc-company-mobile .kc-mobile-text-list-quick-facts__fact:nth-child(3) > span:last-child { color:var(--kc-gray-1); }
     .kc-company-mobile .kc-mobile-text-list-quick-facts__more svg { transition:none; }
     .kc-company-mobile .kc-company-mobile__expanded .kc-mobile-text-list-quick-facts__more svg { transform:rotate(180deg); }

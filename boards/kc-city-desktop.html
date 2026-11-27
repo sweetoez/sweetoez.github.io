@@ -19,7 +19,7 @@
     .kc-card-board-item { width:max-content; }
     .kc-card-board-label { margin:0 0 8px; color:var(--kc-gray-2); font-size:12px; line-height:16px; }
     .kc-city-desktop-frame { height:auto; min-height:1849px; }
-    .kc-city-desktop { --kc-accent:#1358A9; --kc-accent-soft:#F5F9FD; position:relative; top:auto; left:auto; width:472px; margin:280px 0 0 403px; }
+    .kc-city-desktop { position:relative; top:auto; left:auto; width:472px; margin:280px 0 0 403px; }
     .kc-city-desktop .kc-module[hidden] { display:none !important; }
     .kc-city-desktop > .kc-module { padding:15px 19px; }
     .kc-city-desktop > .kc-text-list-top-fact { height:100px; padding:0 20px; }
@@ -31,24 +31,21 @@
     .kc-city-desktop > .kc-miscellaneous-poll-trivia { height:198px; }
     .kc-city-desktop > .kc-text-list-top-fact-text-list-attributions { height:66px; padding:19px; }
     .kc-city-desktop .kc-miscellaneous-travel__action { gap:4px; white-space:nowrap; }
-    .kc-city-desktop .kc-miscellaneous-poll-trivia fieldset { min-width:0; margin:0; padding:0; border:0; }
     .kc-city-desktop .kc-module--card-last { border-radius:0 0 6px 6px; }
     .kc-city-desktop > .kc-hero-designer--card-last .kc-text-list-website { border-radius:0 0 6px 6px; }
     .kc-city-desktop .kc-hero-designer__actions svg { display:block; width:16px; height:16px; flex:none; color:var(--kc-white); }
     .kc-city-desktop .kc-hero-website__globe { background-color:var(--kc-accent); }
-    .kc-city-desktop .kc-hero-website a { color:var(--kc-accent); }
+    .kc-city-desktop .kc-hero-website a { color:var(--kc-accent-foreground, var(--kc-accent)); }
     .kc-city-desktop .kc-text-list-top-fact--quantity-3 { gap:8px; }
     .kc-city-desktop .kc-text-list-top-fact--quantity-3 .kc-text-list-top-fact__item { width:140px; height:68px; flex:none; align-items:center; justify-content:center; }
     .kc-city-desktop .kc-text-list-top-fact--quantity-3 > .kc-divider--v { height:100px; }
     .kc-city-desktop .kc-miscellaneous-map__frame { overflow:hidden; }
     .kc-city-desktop .kc-miscellaneous-visit-times__bar { background:linear-gradient(180deg,#009BDE 0%,var(--kc-accent) 100%); }
-    .kc-city-desktop .kc-miscellaneous-poll-trivia__question { color:#1B6AC7; }
-    .kc-city-desktop .kc-miscellaneous-poll-trivia__options { gap:16px; }
-    .kc-city-desktop .kc-miscellaneous-poll-trivia legend { padding:0; }
+    .kc-city-desktop .kc-miscellaneous-poll-trivia__question { color:var(--kc-accent-foreground, var(--kc-accent)); }
     .kc-city-desktop .kc-image-list-places-to-visit { background:var(--kc-accent-soft); }
     .kc-city-desktop .kc-btn-outline:focus-visible,
     .kc-city-desktop .kc-btn-on-image:focus-visible,
-    .kc-city-desktop .kc-miscellaneous-poll-trivia__option:focus-visible { outline:2px solid #272320; outline-offset:2px; }
+    .kc-city-desktop .kc-miscellaneous-poll-trivia__option:focus-visible { outline:2px solid var(--kc-black); outline-offset:2px; }
     .kc-city-desktop .kc-btn-on-image:active,
     .kc-city-desktop .kc-btn-outline:active { transform:scale(.98); }
     .kc-city-desktop .kc-image-list-interesting-facts--2-image { gap:16px; }

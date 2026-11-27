@@ -23448,7 +23448,8 @@ window.KC_ENTITIES = {
           "kc-hero",
           "kc-hero-designer",
           "kc-hero-designer--non-cutout",
-          "kc-hero-designer--top-to-bottom"
+          "kc-hero-designer--top-to-bottom",
+          "kc-hero--title-gap-12"
         ],
         "name": "Jupiter",
         "category": "Fifth planet from the Sun",
@@ -23460,7 +23461,7 @@ window.KC_ENTITIES = {
         "type": "designer",
         "dataKC": "Designer",
         "nameTag": "h1",
-        "description": "Fifth planet from the Sun",
+        "description": "Jupiter is the largest planet in our solar system. This gas giant has a turbulent atmosphere, a Great Red Spot and many moons.",
         "website": null,
         "tabs": null,
         "tabsVisible": false,
@@ -24357,7 +24358,8 @@ window.KC_ENTITIES = {
         "variant": "designer",
         "classes": [
           "kc-mobile-designer",
-          "kc-mobile-designer--top-to-bottom"
+          "kc-mobile-designer--top-to-bottom",
+          "kc-hero--title-gap-12"
         ],
         "name": "Jupiter",
         "category": "Fifth planet from the Sun",
@@ -24369,7 +24371,7 @@ window.KC_ENTITIES = {
         "type": "designer",
         "dataKC": "Mobile / Designer / Gradient=Top to Bottom / Website=No",
         "nameTag": "h2",
-        "description": "Fifth planet from the Sun",
+        "description": "Jupiter is the largest planet in our solar system. This gas giant has a turbulent atmosphere, a Great Red Spot and many moons.",
         "website": null,
         "tabs": [
           {
@@ -24958,7 +24960,7 @@ window.KC_ENTITIES = {
           "images": [
             {
               "src": "../assets/images/kc/modules/planet/planet-mobile-facts-01.png",
-              "alt": "Jupiter's Great Red Spot"
+              "alt": "Illustration of Jupiter and a spacecraft"
             },
             {
               "src": "../assets/images/kc/modules/planet/planet-mobile-facts-02.png",
@@ -25051,7 +25053,7 @@ window.KC_ENTITIES = {
                         "image": {
                           "attributes": {
                             "src": "../assets/images/kc/modules/planet/planet-mobile-facts-01.png",
-                            "alt": "Jupiter's Great Red Spot",
+                            "alt": "Illustration of Jupiter and a spacecraft",
                             "onerror": "this.style.display='none'"
                           }
                         }
@@ -50923,7 +50925,7 @@ window.KC_ENTITIES._cards = {
         "ariaLabel": "Red Hot Chili Peppers knowledge card"
       },
       "mobile": {
-        "classes": "kc-card-stack kc-mobile-designer-card kc-band-mobile",
+        "classes": "kc-card-stack kc-mobile-designer-card kc-band-mobile kc-theme-blue-band",
         "dataKC": "Segment / Band",
         "ariaLabel": "Red Hot Chili Peppers knowledge card",
         "visibleModules": 4,
@@ -50935,12 +50937,12 @@ window.KC_ENTITIES._cards = {
     },
     "city": {
       "desktop": {
-        "classes": "kc-card-stack kc-city-desktop",
+        "classes": "kc-card-stack kc-city-desktop kc-theme-blue-city",
         "dataKC": "Segment / City",
         "ariaLabel": "San Francisco knowledge card"
       },
       "mobile": {
-        "classes": "kc-card-stack kc-mobile-designer-card kc-city-mobile",
+        "classes": "kc-card-stack kc-mobile-designer-card kc-city-mobile kc-theme-blue-city",
         "dataKC": "Segment / City",
         "ariaLabel": "San Francisco knowledge card",
         "visibleModules": 5,
@@ -50953,12 +50955,12 @@ window.KC_ENTITIES._cards = {
     },
     "company": {
       "desktop": {
-        "classes": "kc-card-stack kc-company-desktop",
+        "classes": "kc-card-stack kc-company-desktop kc-theme-blue-company",
         "dataKC": "Segment / Company",
         "ariaLabel": "Microsoft knowledge card"
       },
       "mobile": {
-        "classes": "kc-card-stack kc-mobile-designer-card kc-company-mobile",
+        "classes": "kc-card-stack kc-mobile-designer-card kc-company-mobile kc-theme-blue-company",
         "dataKC": "Segment / Company",
         "ariaLabel": "Microsoft knowledge card",
         "visibleModules": 2,
