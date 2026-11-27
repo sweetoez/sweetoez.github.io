@@ -2,14 +2,26 @@
    The repo is public. Only add a metric after Justin has cleared it. */
 window.PORTFOLIO_METRICS = [
   /* Knowledge Cards (Bing, 2021-2022). Team results; Justin contributed design. */
+  { id: "kc-revenue", caseStudy: "knowledge-cards", kind: "metric", rank: 1, home: true,
+    value: "$2.2M", label: "annual revenue from a shopping integration in Knowledge Cards" },
+  { id: "kc-dau-growth", caseStudy: "knowledge-cards", kind: "metric", rank: 2, home: true,
+    value: "5x", label: "year-over-year growth in Knowledge Card daily users (1M+ added)" },
   { id: "kc-languages", caseStudy: "knowledge-cards", kind: "metric", rank: 3, home: true,
     value: "100+", label: "languages: Knowledge Cards shipped on desktop and mobile" },
+  { id: "kc-refresh-dau", caseStudy: "knowledge-cards", kind: "metric", rank: 4, home: true,
+    value: "40%+", label: "lift in feature-card daily users after a UX refresh" },
+  { id: "kc-click-share", caseStudy: "knowledge-cards", kind: "metric", rank: 5, home: true,
+    value: "+31%", label: "Knowledge Card click share" },
   { id: "kc-features-quarter", caseStudy: "knowledge-cards", kind: "metric", rank: 6, home: true,
     value: "31", label: "Knowledge Card features shipped in a single quarter" },
   { id: "kc-design-system", caseStudy: "knowledge-cards", kind: "proof", rank: 20,
     text: "Rebuilt the Knowledge Card design system so other Bing teams could reuse its components without breaking the experience." },
 
   /* MSN ecosystem (2022-2026, including Microsoft Start, now MSN) */
+  { id: "msn-event-reach", caseStudy: "msn", kind: "metric", rank: 7, home: false,
+    value: "500K–700K", label: "impressions per top event card, with about 100K daily users (English markets)" },
+  { id: "msn-event-icons", caseStudy: "msn", kind: "metric", rank: 8, home: false,
+    value: "+7–10%", label: "header clicks from event icons, plus 2–4% more navigation clicks" },
   { id: "msn-sole-owner", caseStudy: "msn", kind: "metric", rank: 9, home: true,
     value: "4 → 1", label: "the core design team went from four people to one, and I owned MSN's design system" },
   { id: "msn-deliverables", caseStudy: "msn", kind: "metric", rank: 10, home: true,
