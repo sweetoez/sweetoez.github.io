@@ -82,3 +82,7 @@ Every card and widget exists once: markup pattern on its component board, styles
 
 ## Motion
 Two motion systems. Project demos (/boards/ and inline demos inside .demo) use only --fluent-* from /assets/css/fluent-motion.css: hover 100ms ease, press 50ms, appear 150-200ms decelerate, disappear 100ms accelerate, on-screen movement 200-400ms ease, timers linear. The portfolio site uses only --site-* from /assets/css/site-motion.css, which may be tuned independently. Never mix them. Both respect reduced motion. Auto-moving content needs a pause button unless the user explicitly requests autoplay without one.
+
+## Metrics
+- Every number on the site comes from /assets/js/data/portfolio-metrics.js. Never hard-code a metric in a page or component.
+- The repo is public. Only add metrics Justin has cleared. Never invent or round a number.
